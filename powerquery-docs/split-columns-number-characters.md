@@ -30,7 +30,7 @@ You can find the **Split Columns > By Number of Characters** option in three pla
 
 ## Split columns by number of characters into columns
 
-The initial table for this example will be the one below, with only one column for **Column1**.
+The following table is the initial table for this example, with only one column for **Column1**.
 
 :::image type="content" source="media/split-columns-number-characters/into-columns-split-column-initial.png" alt-text="Screenshot of the sample initial table.":::
 
@@ -49,12 +49,12 @@ To do this split, select the column and then select the option to split the colu
 
 :::image type="content" source="media/split-columns-number-characters/into-columns-split-column-window.png" alt-text="Screenshot of the split column into columns by number of characters window.":::
 
-The result of that operation will give you a table with two columns. One for the account name and the other one that contains the combined values for the date and units.
+The result of that operation gives you a table with two columns. One for the account name and the other one that contains the combined values for the date and units.
 
 :::image type="content" source="media/split-columns-number-characters/into-columns-split-column-first.png" alt-text="Screenshot of the sample transformed table after splitting column into columns by number of characters.":::
 
 > [!NOTE]
->Power Query will split the column into only two columns. The name of the new columns will contain the same name as the original column. A suffix containing a dot and a number that represents the split section of the column will be appended to the names of the new columns.
+>Power Query splits the column into only two columns. The name of the new columns contain the same name as the original column. A suffix containing a dot and a number that represents the split section of the column are appended to the names of the new columns.
 
 Now continue to do the same operation over the new Column1.2 column, but with the following configuration:
 
@@ -63,7 +63,7 @@ Now continue to do the same operation over the new Column1.2 column, but with th
 
 :::image type="content" source="media/split-columns-number-characters/into-columns-split-column-last.png" alt-text="Screenshot of the new split operation over the Column1.2 column.":::
 
-The result of that operation will yield a table with three columns. Notice the new names of the two columns on the far right. **Column1.2.1** and **Column1.2.2** were automatically created by the split column operation.
+The result of that operation yields a table with three columns. Notice the new names of the two columns on the far right. **Column1.2.1** and **Column1.2.2** were automatically created by the split column operation.
 
 :::image type="content" source="media/split-columns-number-characters/into-columns-split-column-pre-final.png" alt-text="Screenshot of the result of splitting the Column1.2 column.":::
 
@@ -75,13 +75,13 @@ Column1.1|Account Name|Text
 Column1.2.1|Date|Date
 Column1.2.2|Units|Whole Number
 
-Your final table will look like the one in the following image.
+Your final table looks like the one in the following image.
 
 :::image type="content" source="media/split-columns-number-characters/into-columns-split-column-final.png" alt-text="Screenshot of the final sample table after new column names.":::
 
 ## Split columns by number of characters into rows
 
-The initial table for this example will be the one below, with the columns **Group** and **Account**.
+The following table is the initial table for this example, with the columns **Group** and **Account**.
 
 :::image type="content" source="media/split-columns-number-characters/into-columns-split-rows-initial.png" alt-text="Screenshot of the sample initial table for split into rows.":::
 
@@ -95,6 +95,6 @@ To do that, select the **Account** column and then select the option to split th
 
 :::image type="content" source="media/split-columns-number-characters/into-columns-split-rows-window.png" alt-text="Screenshot of the split into rows by number of characters window.":::
 
-The result of that operation will give you a table with the same number of columns, but many more rows because the fragments inside the original cell values in the **Account** column are now split into multiple rows.
+The result of that operation gives you a table with the same number of columns, but many more rows because the fragments inside the original cell values in the **Account** column are now split into multiple rows.
 
 :::image type="content" source="media/split-columns-number-characters/into-columns-split-rows-final.png" alt-text="Screenshot of the final table after the split into rows operation.":::
