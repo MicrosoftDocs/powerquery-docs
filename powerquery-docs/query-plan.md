@@ -64,7 +64,7 @@ Use the following steps to create the query in your own Power Query Online envir
 
 After following these steps, your query will look like the one in the following image.
 
-:::image type="content" source="media/query-plan/sample-query.png" lightbox="media/query-plan/sample-query.png" alt-text="Screenshot of the sample query with query folding indicators enabled." lightbox="media/query-plan/sample-query.png":::
+:::image type="content" source="media/query-plan/sample-query.png" lightbox="media/query-plan/sample-query.png" alt-text="Screenshot of the sample query with query folding indicators enabled.":::
 
 This query connects to the SalesOrderHeader table, and selects a few columns from the last five orders with a **TotalDue** value above 1000.
 
