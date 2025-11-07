@@ -32,7 +32,7 @@ You can turn on schema view by selecting **Schema view** in the **View** tab. Wh
 
 One common task when working on your schema is reordering columns. In Schema View this can easily be done by dragging columns in the list and dropping in the right location until you achieve the desired column order.
 
-:::image type="content" source="media/schema-view/schema-view-drag.png" alt-text="Screenshot showing the columns in Schema view that can be reordered by dragging them and dropping them in the desired position.":::
+:::image type="content" source="media/schema-view/schema-view-drag.png" alt-text="Screenshot showing the columns in Schema view that can be reordered by dragging them and dropping them in the desired position." lightbox="media/schema-view/schema-view-drag.png":::
 
 ## Applying transforms
 

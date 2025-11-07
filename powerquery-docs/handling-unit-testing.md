@@ -11,13 +11,13 @@ ms.subservice: custom-connectors
 # Handling Unit Testing
 
 > [!NOTE]
-> This content is applicable to the legacy Power Query SDK in Visual Studio. Today the new Power Query SDK in Visual Studio Code contains a fully-featured [test framework](sdk-testframework/test-framework.md) which we encourage you to test and learn more.
+> This content is applicable to the legacy Power Query SDK in Visual Studio. Today the new Power Query SDK in Visual Studio Code contains a fully featured [test framework](sdk-testframework/test-framework.md) that we encourage you to test and learn more.
 
 For both simple and complex connectors, adding unit tests is a best practice and highly recommended.
 
-Unit testing is accomplished in the context of Visual Studio's Power Query SDK. Each test is defined as a `Fact` that has a name, an expected value, and an actual value. In most cases, the "actual value" will be an M expression that tests part of your expression.
+Unit testing is accomplished in the context of Visual Studio's Power Query SDK. Each test is defined as a `Fact` that has a name, an expected value, and an actual value. In most cases, the "actual value" is an M expression that tests part of your expression.
 
-Consider a simple extension that exports three functions:
+Consider an extension that exports three functions:
 
 ```powerquery-m
 section Unittesting;
@@ -94,6 +94,6 @@ Uri.GetHost = (url) =>
 
 :::image type="content" source="media/handling-unit-testing/unit-testing-failure.png" alt-text="Screenshot of the Visual Studio M query output where some tests fail.":::
 
-The [final version of the function](helper-functions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function don't accidentally remove any of its basic functionalities.
+The [final version of the function](helper-functions.md) should pass all unit tests. This version also makes it easy to ensure that future updates to the function don't accidentally remove any of its basic functionalities.
 
 :::image type="content" source="media/handling-unit-testing/unit-testing-pass.png" alt-text="Screenshot of the Visual Studio M query output where all tests pass.":::

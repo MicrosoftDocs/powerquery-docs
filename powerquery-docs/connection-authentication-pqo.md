@@ -23,7 +23,7 @@ There are two categories of connections:
 
 ## Creating a connection
 
-During the [get data experience in Power Query Online](get-data-experience.md#1-connection-settings), you'll find a dialog where you enter information to create and establish a connection to your data source. The process is standard for all connectors in Power Query, but some connectors might require more information in order to create a connection.
+During the [get data experience in Power Query Online](get-data-experience.md#1-connection-settings), you find a dialog where you enter information to create and establish a connection to your data source. The process is standard for all connectors in Power Query, but some connectors might require more information in order to create a connection.
 
 ### Creating a cloud connection
 
@@ -33,7 +33,7 @@ Using the Azure SQL Server database connector as an example, you can enter the c
 
 After entering the values for the connector settings in the *Connection settings* section, you can proceed with the **Connection credentials** section. In this section, you can create a connection specific to the connection settings you previously entered.
 
-:::image type="content" source="media/named-connections/connection-credentials-cloud-connection.png" alt-text="Connection credentials of the Azure SQL Database connector where the user has been authenticated using the auto sign in feature.":::
+:::image type="content" source="media/named-connections/connection-credentials-cloud-connection.png" alt-text="Connection credentials of the Azure SQL Database connector where the user is authenticated using the auto sign in feature.":::
 
 The following table contains the fields and values used in the **Connection settings** section.
 
@@ -41,8 +41,8 @@ The following table contains the fields and values used in the **Connection sett
 |-----|------|--------|
 | **Connection Name**| The name you can enter for your new connection.|Sample Connection|
 | **Data Gateway**| An optional field that lets you bind a gateway to your connection. For cloud connections, there's no gateway binding to the connection.| none|
-| **Authentication Kind**| The authentication kind you select to use that's supported by the connector.|Organizational account|
-| **Credentials**| Depending on the authentication kind you select, there will be available a contextual set of fields to input your credentials, a button to launch an OAuth2 flow, or even no fields at all for an authentication kind such as **Anonymous**.|Derived from OAuth2 flow, but is shown as a **Sign in** button in the image|
+| **Authentication Kind**| The authentication kind you select to use supported by the connector.|Organizational account|
+| **Credentials**| Depending on the authentication kind you select, a contextual set of fields is available to input your credentials, a button to launch an OAuth2 flow, or even no fields at all for an authentication kind such as **Anonymous**.|Derived from OAuth2 flow, but is shown as a **Sign in** button in the image|
 
 > [!NOTE]
 >By default, the field for the connection name tries to provide a default name when you create a connection using the information from the connection settings.
@@ -57,15 +57,15 @@ After finishing the **Connection settings** section, you select the **Next** but
 As an alternative, you can also bind a gateway to your connection, which converts your connection from a cloud connection to an on-premises connection.
 
 > [!NOTE]
-> To create a gateway you can read the article on [using an on-premises data gateway in dataflows](dataflows/using-dataflows-with-on-premises-data.md).
+> To create a gateway, you can read the article on [using an on-premises data gateway in dataflows](dataflows/using-dataflows-with-on-premises-data.md).
 
-Using a local SQL Server database as an example, you enter the connector settings to establish a connection. For the SQL Server connector, the required setting is just the server name, but you can also enter the name of the database and select any other advanced options available for the connector. For demonstration purposes, both the server name and database have been entered.
+Using a local SQL Server database as an example, you enter the connector settings to establish a connection. For the SQL Server connector, the required setting is just the server name, but you can also enter the name of the database and select any other advanced options available for the connector. For demonstration purposes, both the server name and database are entered.
 
-:::image type="content" source="media/named-connections/connection-settings-on-premises-connection.png" alt-text="Connection settings of the SQL Server database connector where the server and database settings have been entered.":::
+:::image type="content" source="media/named-connections/connection-settings-on-premises-connection.png" alt-text="Connection settings of the SQL Server database connector where the server and database settings are entered.":::
 
 After entering the values for the connector in **Connection settings**, you can proceed with the **Connection credentials** section. In this section, you can create a connection specific to the connection settings you previously entered.
 
-:::image type="content" source="media/named-connections/connection-credentials-on-premises-connection.png" alt-text="Screenshot of the connection credentials of the SQL Server database connector where the user has entered a data gateway, a new connection name, and the credentials using the Basic authentication kind.":::
+:::image type="content" source="media/named-connections/connection-credentials-on-premises-connection.png" alt-text="Screenshot of the connection credentials of the SQL Server database connector where the user entered a data gateway, a new connection name, and the credentials using the Basic authentication kind.":::
 
 The following table contains the fields and values used in the **Connection settings** section.
 
@@ -74,7 +74,7 @@ The following table contains the fields and values used in the **Connection sett
 | **Connection Name**| The name you can enter for your new connection|localhost;AdventureWorks2019|
 | **Data Gateway**| An optional field that lets you bind a gateway to your connection.| Mike Test|
 | **Authentication Kind**| The authentication kind you select to use that's supported by the connector.|Basic|
-| **Credentials**| Depending on the authentication kind selected, there will be available a contextual set of fields to input your credentials, a button to launch an OAuth2 flow, or even no fields at all for an authentication kind such as **Anonymous**.|Username and password|
+| **Credentials**| Depending on the authentication kind selected, a contextual set of fields is available to input your credentials, a button to launch an OAuth2 flow, or even no fields at all for an authentication kind such as **Anonymous**.|Username and password|
 
 After finishing the **Connection settings** section, you select the **Next** button to move forward within the [get data](get-data-experience.md) experience.
 
