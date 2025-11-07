@@ -2,7 +2,7 @@
 title: Connections and authentication in Power Query Online
 description: This article describes the process and specifics of the authentication process in Power Query Online.
 author: ptyx507x
-ms.date: 3/7/2024
+ms.date: 11/7/2025
 ms.author: miescobar
 ms.subservice: get-data
 ms.custom: sfi-image-nochange
@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 
 In Power Query Online, a connection refers to the unique identifier and associated credentials used to establish a connection to a particular data source. One convenient feature of connections in Power Query is that you can create multiple connections against the same data source with different credentials.
 
-![Example of setting a named connection for a Gateway data source, in this case a SQL Server.](media/named-connections/sql-server-named-connection.png)
+:::image type="content" source="media/named-connections/sql-server-named-connection.png" alt-text="Screenshot of the Connect to data source page with a named connection for a Gateway data source, in this case a SQL Server.":::
 
 There are two categories of connections:
 
@@ -65,7 +65,7 @@ Using a local SQL Server database as an example, you enter the connector setting
 
 After entering the values for the connector in **Connection settings**, you can proceed with the **Connection credentials** section. In this section, you can create a connection specific to the connection settings you previously entered.
 
-![Connection credentials of the SQL Server database connector where the user has entered a data gateway, a new connection name, and the credentials using the Basic authentication kind.](media/named-connections/connection-credentials-on-premises-connection.png)
+:::image type="content" source="media/named-connections/connection-credentials-on-premises-connection.png" alt-text="Screenshot of the connection credentials of the SQL Server database connector where the user has entered a data gateway, a new connection name, and the credentials using the Basic authentication kind.":::
 
 The following table contains the fields and values used in the **Connection settings** section.
 

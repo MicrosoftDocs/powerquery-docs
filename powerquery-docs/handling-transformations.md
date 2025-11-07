@@ -3,7 +3,7 @@ title: Handling transformations with Web.Contents for Power Query connectors
 description: Manage transformations with Web.Contents for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 11/7/2025
 ms.author: miescobar
 ms.subservice: custom-connectors
 ---
@@ -37,13 +37,13 @@ The transformations in this example are:
 
 At the end of the day you're left with data in a simple tabular format that Power BI can consume and easily render:
 
-![Data in tabular form.](samples/media/trippin2-airlines.png)
+:::image type="content" source="samples/media/trippin2-airlines.png" alt-text="Screenshot of the data in tabular form.":::
 
 It's important to note that a sequence of static transformations of this specificity are only applicable to a *single* endpoint. In the example above, this sequence of transformations will only work if `"AirlineCode"` and `"Name"` exist in the REST endpoint response, since they are hard-coded into the M code. Thus, this sequence of transformations may not work if you try to hit the `/Event` endpoint.
 
 This high level of specificity may be necessary for pushing data to a navigation table, but for more general data access functions it's recommended that you only perform transformations that are appropriate for all endpoints.
 
->[!Note]
+> [!NOTE]
 > Be sure to test transformations under a variety of data circumstances. If the user doesn't have any data at the `/airlines` endpoint, do your transformations result in an empty table with the correct schema? Or is an error encountered during evaluation? See [TripPin Part 7: Advanced Schema with M Types](samples/trippin/7-advancedschema/readme.md) for a discussion on unit testing.
 
 ## Dynamic Transformations

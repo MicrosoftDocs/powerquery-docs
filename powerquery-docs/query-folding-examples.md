@@ -2,7 +2,7 @@
 title: Query folding examples in Power Query
 description: Demonstrates the affect of query folding in Power Query. A comparison and analysis of multiple query examples with no folding, partial folding, and full query folding in Power Query.
 author: ptyx507x
-ms.date: 1/18/2024
+ms.date: 11/7/2025
 ms.author: miescobar
 ms.topic: conceptual
 ms.subservice: transform-data
@@ -27,7 +27,7 @@ Imagine a scenario where, using the [Wide World Importers database for Azure Syn
 >
 >While the results might not exactly match the results that you get by following the tutorial from the Azure Synapse Analytics documentation, the goal of this article is to showcase the core concepts and impact that query folding can have in your queries.
 
-![Sample output table derived from the fact_Sale table of the Wide World Importers Azure Synapse Analytics database.](media/query-folding-basics/sample-output.png)
+:::image type="content" source="media/query-folding-basics/sample-output.png" alt-text="Screenshot of the sample output table derived from the fact_Sale table of the Wide World Importers Azure Synapse Analytics database.":::
 
 This article showcases three ways to achieve the same output with different levels of query folding:
 
@@ -42,22 +42,22 @@ This article showcases three ways to achieve the same output with different leve
 
 After connecting to your database and navigating to the `fact_Sale` table, you select the **Keep bottom rows** transform found inside the **Reduce rows** group of the **Home** tab.
 
-:::image type="content" source="media/query-folding-basics/keep-bottom-rows-ui.png" alt-text="Keep bottom rows transform found inside the Reduce rows group of the home tab.":::
+:::image type="content" source="media/query-folding-basics/keep-bottom-rows-ui.png" alt-text="Screenshot of the Keep bottom rows transform found inside the Reduce rows group of the home tab.":::
 
 After selecting this transform, a new dialog appears. In this new dialog, you can enter the number of rows that you'd like to keep. For this case, enter the value 10, and then select **OK**.
 
-![Entering the value 10 inside the Keep bottom rows dialog.](media/query-folding-basics/keep-bottom-rows-dialog.png)
+:::image type="content" source="media/query-folding-basics/keep-bottom-rows-dialog.png" alt-text="Screenshot of the Keep bottom rows pane where you enter the value 10 inside the Keep bottom rows dialog.":::
 
 > [!TIP]
 >For this case, performing this operation yields the result of the last ten sales. In most scenarios, we recommend that you provide a more explicit logic that defines which rows are considered last by applying a sort operation on the table.
 
 Next, select the **Choose columns** transform found inside the **Manage columns** group of the **Home** tab. You can then select the columns you want to keep from your table and remove the rest.
 
-:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Selecting the Choose columns transform for the no query folding example.":::
+:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Screenshot of the Home ribbon where you elect the Choose columns transform for the no query folding example.":::
 
 Lastly, inside the **Choose columns** dialog, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns, and then select **OK**.
 
-![Selecting the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns for the no query folding example.](media/query-folding-basics/choose-columns-dialog.png)
+:::image type="content" source="media/query-folding-basics/choose-columns-dialog.png" alt-text="Screenshot of the Choose columns pane where you select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns.":::
 
 The following code sample is the full M script for the query you created:
 
@@ -79,13 +79,13 @@ Under **Applied steps** in the Power Query editor, you’ll notice that the quer
 
 You can right-click the last step of your query, the one named **Choose columns**, and select the option that reads **View Query plan**. The goal of the query plan is to provide you with a detailed view of how your query is run. To learn more about this feature, go to [Query plan](query-plan.md).
 
-![Query plan for the created query with multiple nodes, two of which are in a rectangle that represents the nodes that will be evaluated by the Power Query engine.](media/query-folding-basics/no-folding-query-plan.png)
+:::image type="content" source="media/query-folding-basics/no-folding-query-plan.png" alt-text="Screenshot of the Query plan for the created query with multiple nodes, two of which are in a rectangle that represents the nodes that will be evaluated by the Power Query engine.":::
 
 Each box in the previous image is called a *node*. A node represents the operation breakdown to fulfill this query. Nodes that represent data sources, such as SQL Server in the example above and the `Value.NativeQuery` node, represent which part of the query is offloaded to the data source. The rest of the nodes, in this case `Table.LastN` and `Table.SelectColumns` highlighted in the rectangle in the previous image, are evaluated by the Power Query engine. These two nodes represent the two transforms that you added, **Kept bottom rows** and **Choose columns**. The rest of the nodes represent operations that happen at your data source level.
 
 To see the exact request that is sent to your data source, select **View details** in the `Value.NativeQuery` node.
 
-![SQL Statement found inside `Value.NativeQuery` that represents a request of all fields and records from the `fact_Sale` table in the database.](media/query-folding-basics/no-folding-native-query.png)
+:::image type="content" source="media/query-folding-basics/no-folding-native-query.png" alt-text="Screenshot of the SQL Statement found inside `Value.NativeQuery` that represents a request of all fields and records from the `fact_Sale` table in the database." lightbox="media/query-folding-basics/no-folding-native-query.png":::
 
 This data source request is in the native language of your data source. For this case, that language is SQL and this statement represents a request for all the rows and fields from the `fact_Sale` table.
 
@@ -102,23 +102,23 @@ For its evaluation, this query had to download all rows and fields from the `fac
 
 After connecting to the database and navigating to the `fact_Sale` table, you start by selecting the columns that you want to keep from your table. Select the **Choose columns** transform found inside the **Manage columns** group from the **Home** tab. This transform helps you to explicitly select the columns that you want to keep from your table and remove the rest.
 
-:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Selecting the Choose columns transform for the partial query folding example.":::
+:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Screenshot of the Home ribbon where you select the Choose columns transform for the partial query folding example.":::
 
 Inside the **Choose columns** dialog, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns and then select **OK**.
 
-![Selecting the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns for the partial query folding example.](media/query-folding-basics/choose-columns-dialog.png)
+:::image type="content" source="media/query-folding-basics/choose-columns-dialog.png" alt-text="Screenshot of the Choose columns pane where you select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns for the partial query folding example.":::
 
 You now create logic that will sort the table to have the last sales at the bottom of the table. Select the `Sale Key` column, which is the primary key and incremental sequence or index of the table. Sort the table using only this field in ascending order from the context menu for the column.
 
-![Sort the `Sale Key` field of the table in ascending order using the auto-filter field contextual menu.](media/query-folding-basics/partial-folding-sort-ascending.png)
+:::image type="content" source="media/query-folding-basics/partial-folding-sort-ascending.png" alt-text="Screenshot of the contextual menu where you sort the `Sale Key` field of the table in ascending order.":::
 
 Next, select the table contextual menu and choose the **Keep bottom rows** transform.
 
-![Select the Keep bottom rows option inside the table's contextual menu.](media/query-folding-basics/partial-folding-keep-bottom-rows.png)
+:::image type="content" source="media/query-folding-basics/partial-folding-keep-bottom-rows.png" alt-text="Screenshot of the table's contextual menu where you select the Keep bottom rows option.":::
 
 In **Keep bottom rows**, enter the value 10, and then select **OK**.
 
-![Keep bottom rows dialog with the value of 10 entered as the input value to only keep the bottom ten rows of the table.](media/query-folding-basics/partial-folding-keep-bottom-rows-dialog.png)
+:::image type="content" source="media/query-folding-basics/partial-folding-keep-bottom-rows-dialog.png" alt-text="Screenshot of the Keep bottom rows dialog with the value of 10 entered as the input value to only keep the bottom ten rows of the table.":::
 
 The following code sample is the full M script for the query you created:
 
@@ -137,17 +137,17 @@ in
 
 Checking the applied steps pane, you notice that the query folding indicators are showing that the last transform that you added, `Kept bottom rows`, is marked as a step that will be evaluated outside the data source or, in other words, by the Power Query engine.
 
-:::image type="content" source="media/query-folding-basics/partial-folding-steps.png" alt-text="Applied steps pane for the query with the query folding indicators showcasing that the Kept bottom rows is marked as a step that will be evaluated outside the data source.":::
+:::image type="content" source="media/query-folding-basics/partial-folding-steps.png" alt-text="Screenshot of the Applied steps pane for the query with the query folding indicators showcasing that the Kept bottom rows is marked as a step that will be evaluated outside the data source.":::
 
 You can right-click the last step of your query, the one named `Kept bottom rows`, and select the **Query plan** option to better understand how your query might be evaluated.
 
-![Query plan showing multiple nodes where the `Table.LastN` node, shown inside a rectangle, is a node that will be evaluated by the Power Query engine and not by the data source.](media/query-folding-basics/partial-folding-query-plan.png)
+:::image type="content" source="media/query-folding-basics/partial-folding-query-plan.png" alt-text="Screenshot of the Query plan showing multiple nodes where the `Table.LastN` node, shown inside a rectangle, is a node that will be evaluated by the Power Query engine and not by the data source.":::
 
 Each box in the previous image is called a *node*. A node represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others, like the node for `Table.LastN`, represented by the **Kept bottom rows** step, are evaluated using the Power Query engine.
 
 To see the exact request that is sent to your data source, select **View details** in the `Value.NativeQuery` node.
 
-![SQL Statement inside `Value.NativeQuery` representing a request for all records, with only the requested fields from the `fact_Sales` table in the database sorted in ascending order by the `Sale Key` field.](media/query-folding-basics/partial-folding-native-query.png)
+:::image type="content" source="media/query-folding-basics/partial-folding-native-query.png" alt-text="Screenshot of the Query plan where you can select View details in `Value.NativeQuery` to see the exact request.":::
 
 This request is in the native language of your data source. For this case, that language is SQL and this statement represents a request for all the rows, with only the requested fields from the `fact_Sale` table ordered by the `Sale Key` field.
 
@@ -163,15 +163,15 @@ For its evaluation, this query had to download all rows and only the required fi
 
 After connecting to the database and navigating to the `fact_Sale` table, start by selecting the columns that you want to keep from your table. Select the **Choose columns** transform found inside the **Manage columns** group from the **Home** tab. This transform helps you to explicitly select the columns that you want to keep from your table and remove the rest.
 
-:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Selecting the Choose columns transform for the full query folding example.":::
+:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Screenshot of the Choose columns transform to use for the full query folding example.":::
 
 In **Choose columns**, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns, and then select **OK**.
 
-![Selecting the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns for the full query folding example.](media/query-folding-basics/choose-columns-dialog.png)
+:::image type="content" source="media/query-folding-basics/choose-columns-dialog.png" alt-text="Screenshot showing `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns selected for the full query folding example.":::
 
 You now create logic that will sort the table to have the last sales at the top of the table. Select the `Sale Key` column, which is the primary key and incremental sequence or index of the table. Sort the table only using this field in descending order from the context menu for the column.
 
-![Sort the `Sale Key` field of the table in descending order using the context menu.](media/query-folding-basics/full-folding-sort-descending.png)
+:::image type="content" source="media/query-folding-basics/full-folding-sort-descending.png" alt-text="Screenshot of the `Sale Key` field context menu with the Sort descending option emphasized.":::
 
 Next, select the table contextual menu and choose the **Keep top rows** transform.
 
@@ -179,7 +179,7 @@ Next, select the table contextual menu and choose the **Keep top rows** transfor
 
 In **Keep top rows**, enter the value 10, and then select **OK**.
 
-:::image type="content" source="media/query-folding-basics/full-folding-keep-top-rows-dialog.png" alt-text="Keep top rows dialog with the value of ten entered as the input value to only keep the top ten rows of the table.":::
+:::image type="content" source="media/query-folding-basics/full-folding-keep-top-rows-dialog.png" alt-text="Screenshot of the Keep top rows dialog with the value of ten entered as the input value to only keep the top ten rows of the table.":::
 
 The following code sample is the full M script for the query you created:
 
@@ -202,7 +202,9 @@ When checking the applied steps pane, you'll notice that the query folding indic
 
 You can right-click the last step of your query, the one named **Kept top rows**, and select the option that reads **Query plan**.
 
-![SQL Statement found inside `Value.NativeQuery` that represents a request of the top ten records of the `fact_Sale` table sorted using the `Sale Key` field and with only the fields `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity`.](media/query-folding-basics/full-folding-query-plan.png)
+:::image type="complex" source="media/query-folding-basics/full-folding-query-plan.png" alt-text="Screenshot of the query plan showing contents of Value.NativeQuery.":::
+   Screenshot of the query plan with the SQL Statement found inside `Value.NativeQuery` that represents a request of the top ten records of the `fact_Sale` table sorted using the `Sale Key` field and with only the fields `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity`.
+:::image-end:::
 
 This request is in the native language of your data source. For this case, that language is SQL and this statement represents a request for all the rows and fields from the `fact_Sale` table.
 
@@ -228,7 +230,7 @@ The refresh time for each query was as follows:
 |Partial query folding| Partial| 184|
 |Full query folding| Full| 31|
 
-![Chart that compares the refresh time of the no folding query with 361 seconds, the partial query folding with 184 seconds, and the fully folded query with 31 seconds.](media/query-folding-basics/outcome-timing.png)
+:::image type="content" source="media/query-folding-basics/outcome-timing.png" alt-text="Chart that compares the refresh time of the no folding query with 361 seconds, the partial query folding with 184 seconds, and the fully folded query with 31 seconds.":::
 
 It's often the case that a query that fully folds back to the data source outperforms similar queries that don't completely fold back to the data source. There could be many reasons why this is the case. These reasons range from the complexity of the transforms that your query performs, to the query optimizations implemented at your data source, such as indexes and dedicated computing, and network resources. Still, there are two specific key processes that query folding tries to use that minimizes the affect that both of these processes have with Power Query:
 
@@ -249,7 +251,7 @@ The following table lists the number of rows requested from the `fact_Sale` tabl
 |Partial query folding| Partial| 3644356|Request for all records, but only required fields from the `fact_Sale` table after it was sorted by the `Sale Key` field|
 |Full query folding| Full| 10| Request for only the required fields and the TOP 10 records of the `fact_Sale` table after being sorted in descending order by the `Sale Key` field|
 
-![Chart with the amount of rows collected from the database for no query folding, partial query folding, and full query folding.](media/query-folding-basics/data-in-transit.png)
+:::image type="content" source="media/query-folding-basics/data-in-transit.png" alt-text="Chart with the amount of rows collected from the database for no query folding, partial query folding, and full query folding.":::
 
 When requesting data from a data source, the data source needs to compute the results for the request and then send the data to the requestor. While the computing resources have already been mentioned, the network resources of moving the data from the data source to Power Query, and then have Power Query be able to effectively receive the data and prepare it for the transforms that will happen locally can take some time depending on the size of the data.
 
@@ -270,7 +272,7 @@ The following table showcases the nodes from the query plans of the previous que
 |Partial query folding| Partial| `Table.LastN` |
 |Full query folding| Full| &mdash;|
 
-![Chart with the total transforms run by the Power Query engine for no query folding, partial query folding, and full query folding.](media/query-folding-basics/total-local-transforms.png)
+:::image type="content" source="media/query-folding-basics/total-local-transforms.png" alt-text="Chart with the total transforms run by the Power Query engine for no query folding, partial query folding, and full query folding.":::
 
 For the examples showcased in this article, the full query folding example doesn't require any transforms to happen inside the Power Query engine as the required output table comes directly from the data source. In contrast, the other two queries required some computation to happen at the Power Query engine. Because of the amount of data that needs to be processed by these two queries, the process for these examples takes more time than the full query folding example.
 

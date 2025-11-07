@@ -3,14 +3,14 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
-ms.date: 8/1/2024
+ms.date: 11/7/2025
 ms.author: ehvonleh
 ms.subservice: transform-data
 ---
 
 # Behind the scenes of the Data Privacy Firewall
 
->[!NOTE]
+> [!NOTE]
 >Privacy levels are currently unavailable in Power Platform dataflows, but the product team is working towards enabling this functionality.
 
 If you've used Power Query for any length of time, you've likely experienced it. There you are, querying away, when you suddenly get an error that no amount of online searching, query tweaking, or keyboard bashing can remedy. An error like:
@@ -186,11 +186,32 @@ shared DbServer = "MySqlServer" meta [IsParameterQuery=true, Type="Text", IsPara
 ```powerquery-m
 shared Contacts = let
 
-    Source = Csv.Document(File.Contents("C:\contacts.txt"),[Delimiter="   ", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    Source = Csv.Document(File.Contents(
+        "C:\contacts.txt"),[Delimiter="   ", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.None]
+    ),
 
     #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 
-    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ContactID", Int64.Type}, {"NameStyle", type logical}, {"Title", type text}, {"FirstName", type text}, {"MiddleName", type text}, {"LastName", type text}, {"Suffix", type text}, {"EmailAddress", type text}, {"EmailPromotion", Int64.Type}, {"Phone", type text}, {"PasswordHash", type text}, {"PasswordSalt", type text}, {"AdditionalContactInfo", type text}, {"rowguid", type text}, {"ModifiedDate", type datetime}})
+    #"Changed Type" = Table.TransformColumnTypes(
+        #"Promoted Headers",
+        {
+            {"ContactID", Int64.Type}, 
+            {"NameStyle", type logical}, 
+            {"Title", type text}, 
+            {"FirstName", type text}, 
+            {"MiddleName", type text}, 
+            {"LastName", type text}, 
+            {"Suffix", type text}, 
+            {"EmailAddress", type text}, 
+            {"EmailPromotion", Int64.Type}, 
+            {"Phone", type text}, 
+            {"PasswordHash", type text}, 
+            {"PasswordSalt", type text}, 
+            {"AdditionalContactInfo", type text}, 
+            {"rowguid", type text}, 
+            {"ModifiedDate", type datetime}
+        }
+    )
 
 in
 
@@ -206,11 +227,36 @@ shared Employees = let
 
     HumanResources_Employee = AdventureWorks{[Schema="HumanResources",Item="Employee"]}[Data],
 
-    #"Removed Columns" = Table.RemoveColumns(HumanResources_Employee,{"HumanResources.Employee(EmployeeID)", "HumanResources.Employee(ManagerID)", "HumanResources.EmployeeAddress", "HumanResources.EmployeeDepartmentHistory", "HumanResources.EmployeePayHistory", "HumanResources.JobCandidate", "Person.Contact", "Purchasing.PurchaseOrderHeader", "Sales.SalesPerson"}),
+    #"Removed Columns" = Table.RemoveColumns(
+        HumanResources_Employee,
+        {
+            "HumanResources.Employee(EmployeeID)", 
+            "HumanResources.Employee(ManagerID)", 
+            "HumanResources.EmployeeAddress", 
+            "HumanResources.EmployeeDepartmentHistory", 
+            "HumanResources.EmployeePayHistory", 
+            "HumanResources.JobCandidate", 
+            "Person.Contact", 
+            "Purchasing.PurchaseOrderHeader", 
+            "Sales.SalesPerson"
+        }
+    ),
 
-    #"Merged Queries" = Table.NestedJoin(#"Removed Columns",{"ContactID"},Contacts,{"ContactID"},"Contacts",JoinKind.LeftOuter),
+    #"Merged Queries" = Table.NestedJoin(
+        #"Removed Columns",
+        {"ContactID"},
+        Contacts,
+        {"ContactID"},
+        "Contacts",
+        JoinKind.LeftOuter
+    ),
 
-    #"Expanded Contacts" = Table.ExpandTableColumn(#"Merged Queries", "Contacts", {"EmailAddress"}, {"EmailAddress"})
+    #"Expanded Contacts" = Table.ExpandTableColumn(
+        #"Merged Queries", 
+        "Contacts", 
+        {"EmailAddress"}, 
+        {"EmailAddress"}
+    )
 
 in
 
@@ -225,15 +271,15 @@ Here's a higher-level view, showing the dependencies.
 
 Let's zoom in a bit and include steps in the picture, and start walking through the partitioning logic. Here's a diagram of the three queries, showing the initial firewall partitions in green. Notice that each step starts in its own partition.
 
-![Initial firewall partitions.](media/data-privacy-firewall/firewall-steps-pane-1.png)
+:::image type="content" source="media/data-privacy-firewall/firewall-steps-pane-1.png" alt-text="Diagram showing the initial firewall partitions.":::
 
 Next, we trim parameter partitions. Thus, DbServer gets implicitly included in the Source partition.
 
-![Trimmed firewall partitions.](media/data-privacy-firewall/firewall-steps-pane-2.png)
+:::image type="content" source="media/data-privacy-firewall/firewall-steps-pane-2.png" alt-text="Diagram showing the trimmed firewall partitions.":::
 
 Now we perform the static grouping. This maintains separation between partitions in separate queries (note for instance that the last two steps of Employees don't get grouped with the steps of Contacts), and between partitions that reference other partitions (such as the last two steps of Employees) and those that don't (such as the first three steps of Employees).
 
-![Post static-grouping firewall partitions.](media/data-privacy-firewall/firewall-steps-pane-3.png)
+:::image type="content" source="media/data-privacy-firewall/firewall-steps-pane-3.png" alt-text="Diagram showing the post static-grouping firewall partitions.":::
 
 Now we enter the dynamic phase. In this phase, the above static partitions are evaluated. Partitions that don't access any data sources are trimmed. Partitions are then grouped to create source partitions that are as large as possible. However, in this sample scenario, all the remaining partitions access data sources, and there isn't any further grouping that can be done. The partitions in our sample thus won't change during this phase.
 
@@ -243,13 +289,13 @@ For the sake of illustration, though, let's look at what would happen if the Con
 
 In this case, the Contacts query wouldn't access any data sources. Thus, it would get trimmed during the first part of the dynamic phase.
 
-![Firewall partition after dynamic phase trimming.](media/data-privacy-firewall/firewall-steps-pane-4.png)
+:::image type="content" source="media/data-privacy-firewall/firewall-steps-pane-4.png" alt-text="Diagram showing the firewall partition after dynamic phase trimming.":::
 
 With the Contacts partition removed, the last two steps of Employees would no longer reference any partitions except the one containing the first three steps of Employees. Thus, the two partitions would be grouped.
 
 The resulting partition would look like this.
 
-![Final firewall partitions.](media/data-privacy-firewall/firewall-steps-pane-5.png)
+:::image type="content" source="media/data-privacy-firewall/firewall-steps-pane-5.png" alt-text="Diagram showing the final firewall partitions.":::
 
 ## Example: Passing data from one data source to another
 
@@ -261,7 +307,11 @@ First, you create a **Company** query to retrieve the company name.
 
 ```powerquery-m
 let
-    Source = OData.Feed("https://services.odata.org/V4/Northwind/Northwind.svc/", null, [Implementation="2.0"]),
+    Source = OData.Feed(
+        "https://services.odata.org/V4/Northwind/Northwind.svc/", 
+        null, 
+        [Implementation="2.0"]
+    ),
     Customers_table = Source{[Name="Customers",Signature="table"]}[Data],
     CHOPS = Customers_table{[CustomerID="CHOPS"]}[CompanyName]
 in
@@ -289,7 +339,11 @@ To resolve the error without disabling the Firewall, you can combine Company and
 
 ```powerquery-m
 let
-    Source = OData.Feed("https://services.odata.org/V4/Northwind/Northwind.svc/", null, [Implementation="2.0"]),
+    Source = OData.Feed(
+        "https://services.odata.org/V4/Northwind/Northwind.svc/", 
+        null, 
+        [Implementation="2.0"]
+    ),
     Customers_table = Source{[Name="Customers",Signature="table"]}[Data],
     CHOPS = Customers_table{[CustomerID="CHOPS"]}[CompanyName],
     Search = Text.FromBinary(Web.Contents("https://www.bing.com/search?q=" & CHOPS))
