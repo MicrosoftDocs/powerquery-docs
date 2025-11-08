@@ -3,7 +3,7 @@ title: Connect to data using generic interfaces
 description: Learn how to connect different data sources with generic interfaces.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 3/13/2024
+ms.date: 11/7/2025
 ms.author: miescobar
 ms.subservice: get-data
 ms.custom: sfi-image-nochange
@@ -13,9 +13,9 @@ ms.custom: sfi-image-nochange
 
 You can connect to a multitude of different data sources using built-in connectors that range from Access databases to Zendesk resources. You can also connect to all sorts of *other* data sources to further expand your connectivity options, by using the generic interfaces (such as ODBC or REST APIs) built into Power Query Desktop and Power Query Online.
 
-![Screenshot of the Power Query Desktop Get Data dialog, showing the O D B C selection.](media/connect-using-generic-interfaces/get-generic-data-1.png)
+:::image type="content" source="media/connect-using-generic-interfaces/get-generic-data-1.png" alt-text="Screenshot of the Power Query Desktop Get Data dialog, showing the O D B C selection.":::
 
-[![Screenshot of the Power Query Online Choose data source page, showing the O D B C selection.](media/connect-using-generic-interfaces/get-generic-data-2.png)](media/connect-using-generic-interfaces/get-generic-data-2.png#lightbox)
+:::image type="content" source="media/connect-using-generic-interfaces/get-generic-data-2.png" alt-text="Screenshot of the Power Query Online Choose data source page, showing the O D B C selection." lightbox="media/connect-using-generic-interfaces/get-generic-data-2.png":::
 
 ## Power Query data interfaces
 
@@ -37,13 +37,13 @@ In the following sections, you can find lists of data sources that can be access
 
 The [ODBC](connectors/odbc.md) connector in Power Query lets you import data from any third-party ODBC driver simply by specifying a Data Source Name (DSN) or a connection string. As an option, you can also specify a SQL statement to execute against the ODBC driver.
 
-![Screenshot of the O D B C connector dialog, showing the D S N and Advanced options.](media/connect-using-generic-interfaces/odbc-data-source.png)
+:::image type="content" source="media/connect-using-generic-interfaces/odbc-data-source.png" alt-text="Screenshot of the O D B C connector dialog, showing the D S N and Advanced options.":::
 
 ## Data sources accessible through OLE DB
 
 The OLE DB connector in Power Query lets you import data from any third-party OLE DB driver simply by specifying a connection string. As an option, you can also specify a SQL statement to execute against the OLE DB driver.
 
-![Screenshot of the O L E D B connector dialog, showing the Connection string and Advanced options.](media/connect-using-generic-interfaces/ole-db-data-source.png)
+:::image type="content" source="media/connect-using-generic-interfaces/ole-db-data-source.png" alt-text="Screenshot of the O L E D B connector dialog, showing the Connection string and Advanced options.":::
 
 The following list details a few examples of the data sources that Power Query can connect to using the generic OLE DB interface.
 
@@ -56,7 +56,7 @@ The following list details a few examples of the data sources that Power Query c
 
 The [OData feed](connectors/odata-feed.md) connector in Power Query lets you import data from any OData URL simply by typing in or pasting the OData URL. You can add multiple URL parts by typing or pasting those links in the text boxes provided in the **OData feed** window.
 
-![Screenshot of the OData Feed dialog, showing the U R L parts and preview fields.](media/connect-using-generic-interfaces/odata-data-source.png)
+:::image type="content" source="media/connect-using-generic-interfaces/odata-data-source.png" alt-text="Screenshot of the OData Feed dialog, showing the U R L parts and preview fields.":::
 
 The following list details a few examples of the data sources that Power Query can connect to using the generic OData interface.
 
@@ -68,7 +68,7 @@ The following list details a few examples of the data sources that Power Query c
 
 You can connect to data sources using the REST APIs and thereby use data from all sorts of data sources that support REST.
 
-![Screenshot of the Query dialog, showing the data sources.](media/connect-using-generic-interfaces/rest-api-data-source.png)
+:::image type="content" source="media/connect-using-generic-interfaces/rest-api-data-source.png" alt-text="Screenshot of the Query dialog, showing the data sources.":::
 
 The following list details a few examples of the data sources that Power BI Desktop can connect to using the generic REST APIs interface.
 
@@ -80,7 +80,7 @@ The following list details a few examples of the data sources that Power BI Desk
 
 You can use R scripts to access data sources, and use that data in Power BI Desktop.
 
-![Screenshot of the R Script dialog, showing the execution script.](media/connect-using-generic-interfaces/r-script-data-source.png)
+:::image type="content" source="media/connect-using-generic-interfaces/r-script-data-source.png" alt-text="Screenshot of the R Script dialog, showing the execution script.":::
 
 The following list details a few examples of the data sources that Power BI Desktop can connect to using the generic R scripts interface.
 

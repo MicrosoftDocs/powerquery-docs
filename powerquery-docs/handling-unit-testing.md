@@ -3,21 +3,21 @@ title: Handling unit testing for Power Query connectors
 description: Manage unit testing for Power Query connectors in Visual Studio
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 5/16/2024
+ms.date: 11/7/2025
 ms.author: miescobar
 ms.subservice: custom-connectors
 ---
 
 # Handling Unit Testing
 
->[!NOTE]
-> This content is applicable to the legacy Power Query SDK in Visual Studio. Today the new Power Query SDK in Visual Studio Code contains a fully-featured [test framework](sdk-testframework/test-framework.md) which we encourage you to test and learn more.
+> [!NOTE]
+> This content is applicable to the legacy Power Query SDK in Visual Studio. Today the new Power Query SDK in Visual Studio Code contains a fully featured [test framework](sdk-testframework/test-framework.md) that we encourage you to test and learn more.
 
 For both simple and complex connectors, adding unit tests is a best practice and highly recommended.
 
-Unit testing is accomplished in the context of Visual Studio's Power Query SDK. Each test is defined as a `Fact` that has a name, an expected value, and an actual value. In most cases, the "actual value" will be an M expression that tests part of your expression.
+Unit testing is accomplished in the context of Visual Studio's Power Query SDK. Each test is defined as a `Fact` that has a name, an expected value, and an actual value. In most cases, the "actual value" is an M expression that tests part of your expression.
 
-Consider a simple extension that exports three functions:
+Consider an extension that exports three functions:
 
 ```powerquery-m
 section Unittesting;
@@ -65,7 +65,7 @@ shared MyExtension.UnitTest =
 
 Running the sample in Visual Studio evaluates all of the Facts and give you a visual summary of the pass rates:
 
-![Example of pass rates.](media/handling-unit-testing/unit-testing-1.png)
+:::image type="content" source="media/handling-unit-testing/unit-testing-1.png" alt-text="Screenshot of the Visual Studio M query output showing an example of pass rates.":::
 
 Implementing unit testing early in the connector development process enables you to follow the principles of test-driven development. Imagine that you need to write a function called `Uri.GetHost` that returns only the host data from a URI. You might start by writing a test case to verify that the function appropriately performs the expected function:
 
@@ -92,8 +92,8 @@ Uri.GetHost = (url) =>
         parts[Scheme] & "://" & parts[Host]
 ```
 
-:::image type="content" source="media/handling-unit-testing/unit-testing-failure.png" alt-text="Some tests fail.":::
+:::image type="content" source="media/handling-unit-testing/unit-testing-failure.png" alt-text="Screenshot of the Visual Studio M query output where some tests fail.":::
 
-The [final version of the function](helper-functions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function don't accidentally remove any of its basic functionalities.
+The [final version of the function](helper-functions.md) should pass all unit tests. This version also makes it easy to ensure that future updates to the function don't accidentally remove any of its basic functionalities.
 
-:::image type="content" source="media/handling-unit-testing/unit-testing-pass.png" alt-text="All tests pass.":::
+:::image type="content" source="media/handling-unit-testing/unit-testing-pass.png" alt-text="Screenshot of the Visual Studio M query output where all tests pass.":::
