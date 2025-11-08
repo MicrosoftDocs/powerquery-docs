@@ -3,7 +3,7 @@ title: Handling transformations with Web.Contents for Power Query connectors
 description: Manage transformations with Web.Contents for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 11/7/2025
 ms.author: miescobar
 ms.subservice: custom-connectors
 ---
@@ -14,7 +14,7 @@ For situations where the data source response isn't presented in a format that P
 
 ## Static transformations
 
-In most cases, the data is presented in a consistent way by the data source: column names, data types, and hierarchical structure are consistent for a given endpoint. In this situation it's appropriate to always apply the same set of transformations to get the data in a format acceptable to Power BI.
+In most cases, the data source presents the data in a consistent way: column names, data types, and hierarchical structure are consistent for a given endpoint. In this situation, it's appropriate to always apply the same set of transformations to get the data in a format acceptable to Power BI.
 
 An example of static transformation can be found in the [TripPin Part 2 - Data Connector for a REST Service](samples/trippin/2-rest/readme.md) tutorial when the data source is treated as a standard REST service:
 
@@ -37,14 +37,14 @@ The transformations in this example are:
 
 At the end of the day you're left with data in a simple tabular format that Power BI can consume and easily render:
 
-![Data in tabular form.](samples/media/trippin2-airlines.png)
+:::image type="content" source="samples/media/trippin2-airlines.png" alt-text="Screenshot of the data in tabular form.":::
 
-It's important to note that a sequence of static transformations of this specificity are only applicable to a *single* endpoint. In the example above, this sequence of transformations will only work if `"AirlineCode"` and `"Name"` exist in the REST endpoint response, since they are hard-coded into the M code. Thus, this sequence of transformations may not work if you try to hit the `/Event` endpoint.
+It's important to note that a sequence of static transformations of this specificity is only applicable to a *single* endpoint. In the previous example, this sequence of transformations only work if `"AirlineCode"` and `"Name"` exist in the REST endpoint response, since they're hard-coded into the M code. Thus, this sequence of transformations might not work if you try to hit the `/Event` endpoint.
 
-This high level of specificity may be necessary for pushing data to a navigation table, but for more general data access functions it's recommended that you only perform transformations that are appropriate for all endpoints.
+This high level of specificity might be necessary for pushing data to a navigation table. But for more general data access functions, we recommend that you only perform transformations that are appropriate for all endpoints.
 
->[!Note]
-> Be sure to test transformations under a variety of data circumstances. If the user doesn't have any data at the `/airlines` endpoint, do your transformations result in an empty table with the correct schema? Or is an error encountered during evaluation? See [TripPin Part 7: Advanced Schema with M Types](samples/trippin/7-advancedschema/readme.md) for a discussion on unit testing.
+> [!NOTE]
+> Be sure to test transformations under various data circumstances. If the user doesn't have any data at the `/airlines` endpoint, do your transformations result in an empty table with the correct schema? Or is an error encountered during evaluation? See [TripPin Part 7: Advanced Schema with M Types](samples/trippin/7-advancedschema/readme.md) for a discussion on unit testing.
 
 ## Dynamic Transformations
 
@@ -52,7 +52,7 @@ More complex logic is sometimes needed to convert API responses into stable and 
 
 ### Inconsistent API Responses
 
-Basic M control flow (if statements, HTTP status codes, try...catch blocks, and so on) are typically sufficient to handle situations where there are a handful of ways in which the API responds.
+Basic M control flows (if statements, HTTP status codes, try...catch blocks, and so on) are typically sufficient to handle situations where there are a handful of ways in which the API responds.
 
 ### Determining Schema On-The-Fly
 
@@ -77,7 +77,7 @@ listOfRows = List.Transform(raw[rows], each RowAsList(_)),
 result = Table.FromRows(listOfRows, columnTitlesWithRowNumber)
 ```
 
-1. First deal with column header information. You can pull the `title` record of each column into a List, prepending with a `RowNumber` column that you know will always be represented as this first column.
+1. First deal with column header information. You can pull the `title` record of each column into a List, prepending with a `RowNumber` column that you know is always represented as this first column.
 2. Next you can define a function that allows you to parse a row into a List of cell `value`s. You can again prepend `rowNumber` information.
 3. Apply your `RowAsList()` function to each of the `row`s returned in the API response.
 4. Convert the List to a table, specifying the column headers.

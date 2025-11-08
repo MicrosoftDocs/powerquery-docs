@@ -3,7 +3,7 @@ title: "Using Schema view (Preview)"
 description: Schema view optimizes the experience when working on schema-related data operations
 author: ptyx507x
 ms.author: miescobar
-ms.date: 1/9/2023
+ms.date: 11/7/2025
 ms.subservice: transform-data
 ---
 
@@ -13,7 +13,7 @@ Schema view is designed to optimize your flow when working on schema level opera
 
 This article walks you through schema view and the capabilities it offers.
 
-![Schema view displays a list with your query's columns information including name, type, and a key decorator.](media/schema-view/schema-view-overview.png)
+:::image type="content" source="media/schema-view/schema-view-overview.png" alt-text="Screenshot of the Schema view that displays a list with your query's columns information, including name, type, and a key decorator." lightbox="media/schema-view/schema-view-overview.png":::
 
 > [!NOTE]
 > The Schema view feature is available only for Power Query Online.
@@ -26,16 +26,16 @@ In addition to an optimized column management experience, another key benefit of
 
 You can turn on schema view by selecting **Schema view** in the **View** tab. When you're ready to work on your data again, you can select **Data view** to go back.
 
-:::image type="content" source="media/schema-view/schema-view-entry-point.png" alt-text="Schema view entry point in the View tab.":::
+:::image type="content" source="media/schema-view/schema-view-entry-point.png" alt-text="Screenshot of the schema view entry point in the View tab.":::
 
 ## Reordering columns
 
 One common task when working on your schema is reordering columns. In Schema View this can easily be done by dragging columns in the list and dropping in the right location until you achieve the desired column order.
 
-:::image type="content" source="media/schema-view/schema-view-drag.png" alt-text="Columns in Schema view can be reordered by dragging them and dropping them in the desired position.":::
+:::image type="content" source="media/schema-view/schema-view-drag.png" alt-text="Screenshot showing the columns in Schema view that can be reordered by dragging them and dropping them in the desired position." lightbox="media/schema-view/schema-view-drag.png":::
 
 ## Applying transforms
 
 For more advanced changes to your schema, you can find the most used column-level transforms right at your fingertips directly in the list and in the Schema tools tab. Plus, you can also use transforms available in other tabs on the ribbon.
 
-![Schema Tools is a contextual tab in the ribbon that's available when in Schema view with the most used column-level transforms.](media/schema-view/schema-tools.png)
+:::image type="content" source="media/schema-view/schema-tools.png" alt-text="Screenshot of the schema tools tab in the ribbon that's available when in Schema view with the most used column-level transforms.":::
