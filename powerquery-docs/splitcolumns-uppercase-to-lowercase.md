@@ -18,11 +18,11 @@ You can find the **Split Columns > By Uppercase to Lowercase** option in three p
 
 * **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
 
-   :::image type="content" source="media/splitcolumns-uppercase-to-lowercase/sc-home-ul.png" alt-text="Screenshot showing the location of By Uppercase to Lowercase under the Home tab.":::
+   :::image type="content" source="media/splitcolumns-uppercase-to-lowercase/sc-home-ul.png" alt-text="Screenshot showing the location of By Uppercase to Lowercase under the Home tab." lightbox="media/splitcolumns-uppercase-to-lowercase/sc-home-ul.png":::
 
 * **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
 
-   :::image type="content" source="media/splitcolumns-uppercase-to-lowercase/sc-transform-ul.png" alt-text="Screenshot showing the location of By Uppercase to Lowercase under the Transform tab.":::
+   :::image type="content" source="media/splitcolumns-uppercase-to-lowercase/sc-transform-ul.png" alt-text="Screenshot showing the location of By Uppercase to Lowercase under the Transform tab." lightbox="media/splitcolumns-uppercase-to-lowercase/sc-transform-ul.png":::
 
 * **Right-click a column**&mdash;inside the **Split Column** option.
 

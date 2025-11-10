@@ -18,11 +18,11 @@ You can find the **Split Columns: By Digit to Non-Digit** option in three places
 
 * **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
 
-   :::image type="content" source="media/splitcolumns-digit-to-nondigit/sc-home-dtnd.png" alt-text="Screenshot showing the location of By Digit to Non-Digit under the Home tab.":::
+   :::image type="content" source="media/splitcolumns-digit-to-nondigit/sc-home-dtnd.png" alt-text="Screenshot showing the location of By Digit to Non-Digit under the Home tab." lightbox="media/splitcolumns-digit-to-nondigit/sc-home-dtnd.png":::
 
 * **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
 
-   :::image type="content" source="media/splitcolumns-digit-to-nondigit/sc-transform-dtnd.png" alt-text="Screenshot showing the location of By Digit to Non-Digit under the Transform tab.":::
+   :::image type="content" source="media/splitcolumns-digit-to-nondigit/sc-transform-dtnd.png" alt-text="Screenshot showing the location of By Digit to Non-Digit under the Transform tab." lightbox="media/splitcolumns-digit-to-nondigit/sc-transform-dtnd.png":::
 
 * **Right-click a column**&mdash;inside the **Split Column** option.
 
