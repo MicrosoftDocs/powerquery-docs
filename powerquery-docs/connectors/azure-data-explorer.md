@@ -3,7 +3,7 @@ title: Power Query Azure Data Explorer (Kusto) connector
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Explorer, along with a list of limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/7/2024
+ms.date: 11/10/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -61,7 +61,7 @@ To connect to Azure Data Explorer from Power Query Desktop:
 
 6. If you don't already have a connection to the cluster, select **Sign in**. Sign in with an organizational account, then select **Connect**.
 
-    :::image type="content" source="Screenshot of the sign in dialog for Azure Data Explorer, with organizational account ready to be signed in." alt-text="media/azure-data-explorer/sign-in-desktop.png":::
+    :::image type="content" source="media/azure-data-explorer/sign-in-desktop.png" alt-text="Screenshot of the sign in dialog for Azure Data Explorer, with organizational account ready to be signed in.":::
 
 7. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor. In this example, StormEvents was selected in the Samples database.
 
