@@ -3,7 +3,7 @@ title: Power Query Amazon Athena connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Athena
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 9/11/2025
+ms.date: 11/10/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -44,26 +44,26 @@ To connect to Athena data:
 
 4. Select **Amazon Athena**, and then select **Connect**.
 
-    ![Select Amazon Athena](./media/amazon-athena/amazon-athena-1.png)
+    :::image type="content" source="./media/amazon-athena/amazon-athena-1.png" alt-text="Screenshot of the Get data dialog where you select Amazon Athena.":::
 
 5. On the **Amazon Athena** connection page, enter the following information:
 
     * For **DSN**, enter the name of the ODBC DSN that you want to use. For instructions on configuring your DSN, go to the [ODBC driver documentation](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html#connect-with-odbc-driver-documentation).
     * For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
-        * For smaller data sets, choose **Import**. When using import mode, Power BI works with Athena to import the contents of the entire data set for use in your visualizations.
-        * For larger data sets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Athena to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
+        * For smaller data sets, choose **Import**. When you use import mode, Power BI works with Athena to import the contents of the entire data set for use in your visualizations.
+        * For larger data sets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Athena to dynamically query the underlying data source so that you're always viewing current data. For more information, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
-    ![Enter connection information](./media/amazon-athena/amazon-athena-2.png)
+    :::image type="content" source="./media/amazon-athena/amazon-athena-2.png" alt-text="Screenshot of the Amazon Athena connector dialog where you enter the connection information.":::
 
 6. Select **OK**.
 
 7. At the prompt to configure data source authentication, select either **Use Data Source Configuration** or **AAD Authentication**. Enter any required sign-in information. Then select **Connect**.
 
-    ![Choose an authentication method](./media/amazon-athena/amazon-athena-3.png)
+    :::image type="content" source="./media/amazon-athena/amazon-athena-3.png" alt-text="Screenshot of the Amazon Athena authentication dialog where you choose an authentication method.":::
 
     Your data catalog, databases, and tables appear in the **Navigator** dialog box.
 
-    ![The Navigator dialog box shows your data](./media/amazon-athena/amazon-athena-4.png)
+    :::image type="content" source="./media/amazon-athena/amazon-athena-4.png" alt-text="Screenshot of the Navigator dialog that shows your data.":::
 
 8. In the **Display Options** pane, select the check box for the data set that you want to use.
 
@@ -71,7 +71,7 @@ To connect to Athena data:
 
 10. Otherwise, select **Load**. After the load is complete, you can create visualizations like the one in the following image. If you selected **DirectQuery**, Power BI issues a query to Athena for the visualization that you requested.
 
-    ![A sample data visualization](./media/amazon-athena/amazon-athena-5.png)
+    :::image type="content" source="./media/amazon-athena/amazon-athena-5.png" alt-text="Screenshot of a sample Amazon Athena data visualization.":::
 
 ## Limitations
 

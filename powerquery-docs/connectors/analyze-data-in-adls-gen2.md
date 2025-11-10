@@ -3,14 +3,14 @@ title: Analyze data in Azure Data Lake Storage Gen2 by using Power BI
 description: Use Power BI to analyze data stored in Azure Data Lake Storage Gen2
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 6/6/2024
+ms.date: 11/10/2025
 ms.author: jeluitwi
 ms.subservice: connectors
 ---
 
 # Analyze data in Azure Data Lake Storage Gen2 by using Power BI
 
-In this article, you'll learn how to use Power BI Desktop to analyze and visualize data that's stored in a storage account that has a hierarchical namespace (Azure Data Lake Storage Gen2).
+In this article, you learn how to use Power BI Desktop to analyze and visualize data stored in a storage account that has a hierarchical namespace (Azure Data Lake Storage Gen2).
 
 ## Prerequisites
 
@@ -28,66 +28,66 @@ Before you begin this tutorial, you must have the following prerequisites:
 
 1. Launch Power BI Desktop on your computer.
 
-2. Follow the instructions in the [Azure Data Lake Storage Gen2 connector article](data-lake-storage.md#connect-to-azure-data-lake-storage-gen2-from-power-query-desktop) to connect to the sample data.
+2. To connect to the sample data, follow the instructions in the [Azure Data Lake Storage Gen2 connector article](data-lake-storage.md#connect-to-azure-data-lake-storage-gen2-from-power-query-desktop).
 
 3. From the Power Query **Navigator**, select **Load**.
 
-    [![Screenshot of the Navigator, with data from the Drivers.txt file displayed.](media/data-lake-storage/file-systems.png)](media/azure-data-lake-storage-gen2/file-systems.png#lightbox)
+    :::image type="content" source="media/data-lake-storage/file-systems.png" alt-text="Screenshot of the Navigator, with data from the Drivers.txt file displayed." lightbox="media/azure-data-lake-storage-gen2/file-systems.png":::
 
-4. After the data has been successfully loaded into Power BI, the following fields are displayed in the **Fields** panel.
+4. After the data is successfully loaded into Power BI, the following fields are displayed in the **Fields** panel.
 
-    ![Screenshot of the Fields panel, showing Query1, which contains Date accessed, Date created, Date modified, Extension, Folder Path, and Name fields.](media/data-lake-storage/fields.png)
+    :::image type="content" source="media/data-lake-storage/fields.png" alt-text="Screenshot of the Fields panel, showing Query1, which contains Date accessed, Date created, Date modified, Extension, Folder Path, and Name fields.":::
 
     However, to visualize and analyze the data, you might prefer the data to be available using the following fields.
 
-    ![Screenshot of a data table, with names and addresses from the Content column in the original table displayed in rows.](media/data-lake-storage/preferred-fields.png)
+    :::image type="content" source="media/data-lake-storage/preferred-fields.png" alt-text="Screenshot of a data table, with names and addresses from the Content column in the original table displayed in rows.":::
 
-    In the next steps, you'll update the query to convert the imported data to the desired format.
+    In the next steps, you update the query to convert the imported data to the desired format.
 
 5. From the **Home** tab on the ribbon, select **Transform Data**. The Power Query editor then opens, displaying the contents of the file.
 
-    [![Screenshot of the Power Query editor, with the query created from the original Drivers.txt file.](media/data-lake-storage/queries.png)](media/data-lake-storage/queries.png#lightbox)
+    :::image type="content" source="media/data-lake-storage/queries.png" alt-text="Screenshot of the Power Query editor, with the query created from the original Drivers.txt file." lightbox="media/data-lake-storage/queries.png":::
 
-6. In the Power Query editor, under the **Content** column, select **Binary**. The file will automatically be detected as CSV and will contain the output as shown below. Your data is now available in a format that you can use to create visualizations.
+6. In the Power Query editor, under the **Content** column, select **Binary**. The file is automatically detected as CSV and contains the following output. Your data is now available in a format you can use to create visualizations.
 
-    [![Screenshot of the Power Query editor, showing the data from the Binary field expanded to a table with names and addresses, with Imported CSV and Changed Type added to the Applied Steps panel.](media/data-lake-storage/binary.png)](media/data-lake-storage/binary.png#lightbox)
+    :::image type="content" source="media/data-lake-storage/binary.png" alt-text="Screenshot of the Power Query editor, showing the data from the Binary field expanded to a table with names and addresses, with Imported CSV and Changed Type added to the Applied Steps panel." lightbox="media/data-lake-storage/binary.png":::
 
 7. From the **Home** tab on the ribbon, select **Close & Apply**.
 
-    ![Closeup screenshot of the Power Query editor, showing the Close & Apply option.](media/data-lake-storage/close-apply.png)
+    :::image type="content" source="media/data-lake-storage/close-apply.png" alt-text="Screenshot of the Power Query editor, showing the Close & Apply option.":::
 
 8. Once the query is updated, the **Fields** tab displays the new fields available for visualization.
 
-    ![Screenshot of the Fields pane in Power BI, with Query1 now displaying Column1 through Column8.](media/data-lake-storage/new-fields.png)
+    :::image type="content" source="media/data-lake-storage/new-fields.png" alt-text="Screenshot of the Fields pane in Power BI, with Query1 now displaying Column1 through Column8.":::
 
 9. Now you can create a pie chart to represent the drivers in each city for a given country/region. To do so, make the following selections.
 
     From the **Visualizations** tab, select the symbol for a pie chart.
 
-    ![Screenshot of the Visualizations pane, with the pie chart symbol emphasized.](media/data-lake-storage/visualizations.png)
+    :::image type="content" source="media/data-lake-storage/visualizations.png" alt-text="Screenshot of the Visualizations pane, with the pie chart symbol emphasized.":::
 
-    In this example, the columns you're going to use are Column 4 (name of the city) and Column 7 (name of the country/region). Drag these columns from the **Fields** tab to the **Visualizations** tab as shown below.
+    In this example, the columns you're going to use are Column 4 (name of the city) and Column 7 (name of the country/region). Drag these columns from the **Fields** tab to the **Visualizations** tab.
 
-    ![Screenshot with Column4 dragged and dropped in Details and Column7 dragged and dropped in Values in the Visualization pane, and Column7 also dragged and dropped into Filters on this page in the Filters pane.](media/data-lake-storage/visualizations-drag-fields.png)
+    :::image type="content" source="media/data-lake-storage/visualizations-drag-fields.png" alt-text="Screenshot with Column4 dragged and dropped in Details. Column7 is dragged and dropped in Values in the Visualization pane. Column7 is also dragged and dropped into Filters on this page in the Filters pane.":::
 
-    The pie chart should now resemble the one shown below.
+    The pie chart should now resemble the one in the following image.
 
-    ![Screenshot of pie chart showing the percentages of each slice of the pie, along with color coding of each of the locations, and a column containing all locations and their color code on the right side.](media/data-lake-storage/pie-chart.png)
+    :::image type="content" source="media/data-lake-storage/pie-chart.png" alt-text="Screenshot of pie chart showing the percentages of each slice of the pie, along with color coding of each of the locations, and a column containing all locations and their color code on the right side.":::
 
-10. If you select a specific country/region from the page level filters, the number of drivers in each city of the selected country/region will be displayed. For example, under the **Visualizations** tab, under **Page level filters**, select **Brazil**.
+10. If you select a specific country/region from the page level filters, the number of drivers in each city of the selected country/region is displayed. For example, under the **Visualizations** tab, under **Page level filters**, select **Brazil**.
 
-    ![Screenshot of the Filters on this page pane, with Brazil selected as the country/region to display.](media/data-lake-storage/page-filters.png)
+    :::image type="content" source="media/data-lake-storage/page-filters.png" alt-text="Screenshot of the Filters on this page pane, with Brazil selected as the country/region to display.":::
 
 11. The pie chart is automatically updated to display the drivers in the cities of Brazil.
 
-    ![Screenshot of pie chart with the percentages of each slice of the pie for locations in Brazil, along with a list of all locations in Brazil and their color code in a column on the right side.](media/data-lake-storage/pie-chart-updated.png)
+    :::image type="content" source="media/data-lake-storage/pie-chart-updated.png" alt-text="Screenshot of pie chart with the percentages of each slice of the pie for locations in Brazil, along with a list of all locations in Brazil and their color code in a column on the right side.":::
 
 12. From the **File** menu, select **Save** to save the visualization as a Power BI Desktop file.
 
 ## Publish report to Power BI service
 
-After you've created the visualizations in Power BI Desktop, you can share it with others by publishing it to the Power BI service. For instructions on how to do that, go to [Publish from Power BI Desktop](/power-bi/create-reports/desktop-upload-desktop-files).
+After you create the visualizations in Power BI Desktop, you can share it with others by publishing it to the Power BI service. For instructions on how to do that, go to [Publish from Power BI Desktop](/power-bi/create-reports/desktop-upload-desktop-files).
 
-## See also
+## Related content
 
 * [Azure Data Lake Storage Gen2](data-lake-storage.md)
