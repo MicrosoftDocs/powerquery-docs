@@ -17,7 +17,7 @@ ms.custom: sfi-image-nochange
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
-| Authentication Types Supported | Snowflake (Username/Password), Microsoft account (Microsoft Entra ID) , Key Pair Auth|
+| Authentication Types Supported | Snowflake (Username/Password), Microsoft account (Microsoft Entra ID), Key Pair Auth|
 | Function Reference Documentation | &mdash; |
 
 > [!NOTE]
