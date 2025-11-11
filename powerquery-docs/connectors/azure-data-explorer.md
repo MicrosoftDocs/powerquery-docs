@@ -3,7 +3,7 @@ title: Power Query Azure Data Explorer (Kusto) connector
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Explorer, along with a list of limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/7/2024
+ms.date: 11/10/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -46,7 +46,7 @@ To connect to Azure Data Explorer from Power Query Desktop:
 
 2. In **Azure Data Explorer (Kusto)**, provide the name of your Azure Data Explorer cluster. For this example, use `https://help.kusto.windows.net` to access the sample help cluster. For other clusters, the URL is in the form https://_\<ClusterName>_._\<Region>_.kusto.windows.net.
 
-    You can also select a database that's hosted on the cluster you're connecting to, and one of the tables in the database, or a query like `StormEvents | take 1000`.
+    You can also select a database hosted on the cluster you're connecting to, and one of the tables in the database, or a query like `StormEvents | take 1000`.
 
 3. If you want to use any advance options, select the option and enter the data to use with that option. More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -57,15 +57,16 @@ To connect to Azure Data Explorer from Power Query Desktop:
 
 5. Select **OK** to continue.
 
-    ![Screenshot of the Azure Data Explorer (Kusto) dialog box, with the URL for the cluster entered.](media/azure-data-explorer/ade-cluster.png)
+    :::image type="content" source="media/azure-data-explorer/ade-cluster.png" alt-text="Screenshot of the Azure Data Explorer (Kusto) dialog box, with the URL for the cluster entered.":::
 
 6. If you don't already have a connection to the cluster, select **Sign in**. Sign in with an organizational account, then select **Connect**.
 
-    ![Screenshot of the sign in dialog box for Azure Data Explorer, with organizational account ready to be signed in.](media/azure-data-explorer/sign-in-desktop.png)
+    :::image type="content" source="media/azure-data-explorer/sign-in-desktop.png" alt-text="Screenshot of the sign in dialog for Azure Data Explorer, with organizational account ready to be signed in.":::
 
 7. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor. In this example, StormEvents was selected in the Samples database.
 
     :::image type="content" source="media/azure-data-explorer/navigator-desktop.png" lightbox="media/azure-data-explorer/navigator-desktop.png" alt-text="Screenshot of the Navigator open and containing the data from StormEvents in the Samples database.":::
+
 ## Connect to Azure Data Explorer from Power Query Online
 
 To connect to Azure Data Explorer from Power Query Online:
@@ -76,9 +77,9 @@ To connect to Azure Data Explorer from Power Query Online:
 
 2. In **Connect to data source**, provide the name of your Azure Data Explorer cluster. For this example, use `https://help.kusto.windows.net` to access the sample help cluster. For other clusters, the URL is in the form https://_\<ClusterName>_._\<Region>_.kusto.windows.net.
 
-    You can also select a database that's hosted on the cluster you're connecting to, and one of the tables in the database, or a query like `StormEvents | take 1000`.
+    You can also select a database hosted on the cluster you're connecting to, and one of the tables in the database, or a query like `StormEvents | take 1000`.
 
-   ![Screenshot of the Choose data source page for Azure Data Explorer (Kusto), with the URL for the cluster entered.](media/azure-data-explorer/sign-in-online.png)
+   :::image type="content" source="media/azure-data-explorer/sign-in-online.png" alt-text="Screenshot of the Choose data source page for Azure Data Explorer (Kusto), with the URL for the cluster entered.":::
 
 3. If you want to use any advance options, select the option and enter the data to use with that option. More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -86,11 +87,11 @@ To connect to Azure Data Explorer from Power Query Online:
 
 5. If you don't already have a connection to the cluster, select **Sign in**. Sign in with an organizational account.
 
-6. After you've successfully signed in, select **Next**.
+6. After you successfully sign in, select **Next**.
 
 7. In the **Choose data** page, select the database information you want, then either select **Transform Data** or **Next** to continue transforming the data in the Power Query editor. In this example, StormEvents was selected in the Samples database.
 
-   [![Screenshot of the Choose data page, containing the data from StormEvents in the Samples database.](media/azure-data-explorer/navigator-online.png)](media/azure-data-explorer/navigator-online.png#lightbox)
+   :::image type="content" source="media/azure-data-explorer/navigator-online.png" alt-text="Screenshot of the Choose data page, containing the data from StormEvents in the Samples database." lightbox="media/azure-data-explorer/navigator-online.png":::
 
 ## Connect using advanced options
 
@@ -185,7 +186,7 @@ You can use any of the following options in your M query:
 
 Kusto queries return, by default, up to 500,000 rows or 64 MB, as described in [query limits](/azure/data-explorer/kusto/concepts/querylimits). You can override these defaults by using **Advanced options** in the  **Azure Data Explorer (Kusto)** connection window:
 
-:::image type="content" source="media/azure-data-explorer/advanced-options.png" alt-text="advanced options.":::
+:::image type="content" source="media/azure-data-explorer/advanced-options.png" alt-text="Screenshot of the Azure Data Explorer (Kusto) connection window with the optional advanced options emphasized.":::
 
 These options issue [set statements](/azure/data-explorer/kusto/query/setstatement) with your query to change the default query limits:
 
@@ -213,7 +214,7 @@ You can use [query parameters](/azure/data-explorer/kusto/query/queryparameterss
 
 You can use a query parameter in any query step that supports it. For example, filter the results based on the value of a parameter. In this example, select the drop-down menu on the right side of the `State` column in the Power Query editor, select **Text Filters** > **Equals**, then select **ALABAMA** under **Keep rows where 'State'**.
 
-:::image type="content" source="media/azure-data-explorer/filter-using-parameter.png" alt-text="Filter results using a parameter.":::
+:::image type="content" source="media/azure-data-explorer/filter-using-parameter.png" alt-text="Screenshot of the Filter rows dialog where you set the filter results using a parameter.":::
 
 #### Provide parameters to an Azure Data Explorer function
 
@@ -259,15 +260,15 @@ LargeOrSmallSales(20,"<")
 5. Once in the Power Query editor, create two parameters, one for the cutoff value and one for the operator.
 6. Go back to the `LargeOrSmallSales` query and replace the values with the query parameters in the formula bar.
 
-   ![Screenshot with the LargeOrSmallSales function, with emphasis on the Cutoff_Param and Op_Param parameters in the formula bar.](media/azure-data-explorer/query-parameters.png)
+   :::image type="content" source="media/azure-data-explorer/query-parameters.png" alt-text="Screenshot with the LargeOrSmallSales function, with emphasis on the Cutoff_Param and Op_Param parameters in the formula bar.":::
 
 7. From the editor, create two static tables (Enter Data) to provide options for the two parameters. For the cutoff, you can create a table with values like 10, 50, 100, 200, 500, 1000, 2000. For the `Op`, a table with two Text values `<` and `>`.
 
 8. The two columns in the tables need to be bound to the query parameters using the **Bind to parameter** selection.
 
-   ![Screenshot with Op being bound to the Op_Param parameter.](media/azure-data-explorer/bound-query-parameters.png)
+   :::image type="content" source="media/azure-data-explorer/bound-query-parameters.png" alt-text="Screenshot of Op being bound to the Op_Param parameter.":::
 
-The final report will include slicers for the two static tables and any visuals from the summary sales.
+The final report includes slicers for the two static tables and any visuals from the summary sales.
 
 :::image type="content" source="media/azure-data-explorer/slicers-visuals.png" alt-text="Screenshot in Power BI with the Cutoff and Op value selections displayed next to the table.":::
 
