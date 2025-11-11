@@ -3,7 +3,7 @@ title: Azure Cosmos DB for MongoDB vCore Data Connector
 description: Includes basic information and prerequisites, instructions on how to connect to your Azure Cosmos for Mongo vCore database, and information about advanced connection options.
 author: KazimMir
 ms.topic: conceptual
-ms.date: 3/10/2025
+ms.date: 11/10/2025
 ms.author: dougklo
 ---
 
@@ -35,19 +35,19 @@ To connect to an Azure Cosmos DB for MongoDB vCore from Power Query Desktop, tak
 
 1. In **Azure Cosmos DB for MongoDB vCore**, provide the Cosmos DB endpoint. Optionally provide a **Database Name** and a **Collection Name**. If a database name isn't provided, the upcoming **Navigator** screen shows all databases and their respective collections. Specifying both database and collection names only shows that collection. Specifying a collection name without a database name results in a connection error.
 
-   ![Screenshot showing Azure Cosmos DB for MongoDB vCore database connection.](./media/azure-cosmos-db-for-mongodb-vcore/sign-in.png).
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/sign-in.png" alt-text="Screenshot showing Azure Cosmos DB for MongoDB vCore database connection.":::
 
 1. Select either the **Import** or **DirectQuery** data connectivity mode.
 
 1. Select **OK**.
 
-1. If it's the first time you're connecting to this database, input your username and password before selecting **Connect**.
+1. If you're connecting to this database for the first time, input your username and password before selecting **Connect**.
 
-   ![Screenshot showing Azure Cosmos DB for MongoDB vCore database authentication.](./media/azure-cosmos-db-for-mongodb-vcore/enter-credentials.png)
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/enter-credentials.png" alt-text="Screenshot showing Azure Cosmos DB for MongoDB vCore database authentication.":::
 
 1. In **Navigator**, select the database information you want. A list of collections appear under each database. Select one or more collections and then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor. The list of databases and collections are affected if the optional **Database Name** and **Collection Name** were previously supplied.
 
-   ![Screenshot showing Azure Cosmos DB for MongoDB vCore load or transform.](./media/azure-cosmos-db-for-mongodb-vcore/navigator-desktop.png)
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/navigator-desktop.png" alt-text="Screenshot showing Azure Cosmos DB for MongoDB vCore load or transform." lightbox="./media/azure-cosmos-db-for-mongodb-vcore/navigator-desktop.png":::
 
 ## Connect to Azure Cosmos DB for MongoDB vCore database from Power Query Online
 
@@ -55,11 +55,11 @@ To connect to Azure Cosmos DB for MongoDB vCore database from Power Query Online
 
 1. Select the **Azure Cosmos DB for MongoDB vCore** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-   ![Screenshot showing Azure Cosmos DB for MongoDB vCore icon in Power Query online.](./media/azure-cosmos-db-for-mongodb-vcore/online-select-mongodb-vcore.png)   
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/online-select-mongodb-vcore.png" alt-text="Screenshot showing Azure Cosmos DB for MongoDB vCore icon in Power Query online.":::
 
 1. In the **Azure Cosmos DB for MongoDB vCore** dialog that appears, enter the Cosmos DB endpoint. Optionally provide a **Database Name** and a **Collection Name**. If a database name isn't provided, the upcoming **Navigator** screen shows all databases and their respective collections. Specifying both database and collection names only shows that collection. Specifying a collection name without a database name results in a connection error.
 
-   ![Screenshot showing Azure Cosmos DB for MongoDB vCore Connection dialog in Power Query online.](./media/azure-cosmos-db-for-mongodb-vcore/online-connect-endpoint-sign-in.png)   
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/online-connect-endpoint-sign-in.png" alt-text="Screenshot showing Azure Cosmos DB for MongoDB vCore Connection dialog in Power Query online." lightbox="./media/azure-cosmos-db-for-mongodb-vcore/online-connect-endpoint-sign-in.png":::
 
 1. You can select an existing a connection or a data gateway. You can connect by specifying  the basic authentication kind specifying the username and password associated with the endpoint in the  **connection credentials** section and select **Next**.
 
@@ -73,27 +73,27 @@ The custom `Value.NativeQuery` function allows native MongoDB queries to be sent
 
 1. Using the Navigator, select at least one collection and choosing **Transform Data**.
 
-   ![Screenshot showing Native Mongo Query Transform Data.](./media/azure-cosmos-db-for-mongodb-vcore/transform-data-on-load.png)
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/transform-data-on-load.png" alt-text="Screenshot showing Native Mongo Query navigator with Transform data emphasized." lightbox="./media/azure-cosmos-db-for-mongodb-vcore/transform-data-on-load.png":::
 
 1. Choose **Advanced Editor**. The **Advanced Editor** dialog appears to show the initial query that would be used to fetch all the data in the selected collection.
 
-   ![Screenshot showing Native Mongo Query Initial Advanced Editor before.](./media/azure-cosmos-db-for-mongodb-vcore/native-query-advanced-editor-before.png)
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/native-query-advanced-editor-before.png" alt-text="Screenshot showing Native Mongo Query initial advanced editor before changes." lightbox="./media/azure-cosmos-db-for-mongodb-vcore/native-query-advanced-editor-before.png":::
 
-1. The `Value.NativeQuery` function takes two arguments: a Source, and the query itself. The Source variable is populated with all the information needed to connect to the database. If desired, update the name of the collection that the query runs against. The collection doesn't have to be the same as the one selected in the **Navigator**.
+1. The [Value.NativeQuery](/powerquery-m/value-nativequery) function takes two arguments: a source, and the query itself. The `source` variable is populated with all the information needed to connect to the database. If desired, update the name of the collection that the query runs against. The collection doesn't have to be the same as the one selected in the **Navigator**.
 
-   ![Screenshot showing Native Mongo Query Initial Advanced Editor after.](./media/azure-cosmos-db-for-mongodb-vcore/native-query-advanced-editor-after.png)
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/native-query-advanced-editor-after.png" alt-text="Screenshot showing Native Mongo Query initial advanced editor after changes." lightbox="./media/azure-cosmos-db-for-mongodb-vcore/native-query-advanced-editor-after.png":::
 
 1. The second argument is a valid MongoDB query, enclosed in double-quotation marks. Quotation marks within the query are escaped with another quotation mark, for example, `"num1"` to `""$num1""`
 
 1. Choose **Done** to transform the data.
 
-1. As no schema information is returned from Cosmos DB after the query is executed, the resultant table will identify all column types as _any_. Either transform the columns using **Detect Data Type** or manually change the data type for columns of interest. Update the name of the resultant table if desired.
+1. As no schema information is returned from Cosmos DB after the query is executed, the resultant table identifies all column types as _any_. Either transform the columns using **Detect Data Type** or manually change the data type for columns of interest. Update the name of the resultant table if desired.
 
-   ![Screenshot showing Native Mongo Query Transform Data Type.](./media/azure-cosmos-db-for-mongodb-vcore/native-query-transform-data-type.png)
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/native-query-transform-data-type.png" alt-text="Screenshot showing Native Mongo Query transform data type." lightbox="./media/azure-cosmos-db-for-mongodb-vcore/native-query-transform-data-type.png":::
 
 1. Once the **Power Query Editor** is closed and the changes applied, the resultant table appears in the **Data** pane.
 
-   ![Screenshot showing Native Mongo Query Transform Data Type final result.](./media/azure-cosmos-db-for-mongodb-vcore/native-query-final-result.png)
+   :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/native-query-final-result.png" alt-text="Screenshot showing Native Mongo Query transform data type final result.":::
 
 Refer to [Troubleshooting & Limitations](#troubleshooting--limitations) for limitations of the `Value.NativeQuery` function.
 
@@ -139,4 +139,4 @@ Refer to [Troubleshooting & Limitations](#troubleshooting--limitations) for limi
   - regularExpression
   - timestamp
 
-- The recommendation for any field you wish to use in Power BI is to ensure that field is in every document within your collection. It ensures it always shows up in Power BI.
+- The recommendation for any field you want to use in Power BI is to ensure that field is in every document within your collection. It ensures it always shows up in Power BI.
