@@ -63,7 +63,7 @@ ms.custom: sfi-image-nochange
 
 4. The **Navigator** dialog box shows all files under the URL you provided. Verify the information and then select either **Transform Data** to transform the data in Power Query or **Load** to load the data.
 
-    :::image type="content" source="media/azure-data-lake-storage-gen2/file-systems.png" alt-text="Screenshot of the open Navigator dialog containing the data from the Drivers.text file." lightbox="media/azure-data-lake-storage-gen2/file-systems.png":::
+    :::image type="content" source="media/azure-data-lake-storage-gen2/file-systems.png" alt-text="Screenshot of the open Navigator dialog containing the data from the Drivers.txt file." lightbox="media/azure-data-lake-storage-gen2/file-systems.png":::
 
 ## Connect to Azure Data Lake Storage Gen2 from Power Query Online
 
@@ -85,7 +85,7 @@ ms.custom: sfi-image-nochange
 
 7. The **Choose data** page shows all files under the URL you provided. Verify the information and then select **Transform Data** to transform the data in Power Query.
 
-   :::image type="content" source="media/azure-data-lake-storage-gen2/file-systems-online.png" alt-text="Screenshot of the Choose data page, containing the data from the Drivers.text file." lightbox="media/azure-data-lake-storage-gen2/file-systems-online.png":::
+   :::image type="content" source="media/azure-data-lake-storage-gen2/file-systems-online.png" alt-text="Screenshot of the Choose data page, containing the data from the Drivers.txt file." lightbox="media/azure-data-lake-storage-gen2/file-systems-online.png":::
 
 ## Limitations
 

@@ -44,7 +44,7 @@ ms.subservice: connectors
 
 1. Select the **Azure Data Lake Storage Gen1** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
 
-   :::image type="content" source="./media/azure-data-lake-storage-gen1/get-data-lake-store-account.png" alt-text="Screenshot of the Get Data dialog with the Azure Data Lake Store option highlighted and the Connect option called out.":::
+   :::image type="content" source="./media/azure-data-lake-storage-gen1/get-data-lake-store-account.png" alt-text="Screenshot of the Get Data dialog with the Azure Data Lake Storage Gen1 option highlighted and the Connect option called out.":::
 
 2. In the **Azure Data Lake Store** dialog box, provide the URL to your Data Lake Storage Gen1 account. Optionally, enter a value in [Page Size in Bytes](#connect-using-advanced-options). Then select **OK**.
 
@@ -60,7 +60,7 @@ ms.subservice: connectors
 
 5. The **Navigator** dialog box shows the file that you uploaded to your Azure Data Lake Storage Gen1 account. Verify the information and then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
 
-   :::image type="content" source="./media/azure-data-lake-storage-gen1/get-data-lake-store-account-load.png" alt-text="Screenshot of the Navigator open and containing the data from the Drivers.text file.":::
+   :::image type="content" source="./media/azure-data-lake-storage-gen1/get-data-lake-store-account-load.png" alt-text="Screenshot of the Navigator open and containing the data from the Drivers.txt file.":::
 
 ## Connect using advanced options
 

@@ -15,7 +15,7 @@ This article describes how to submit feedback for Power Query connectors. It's i
 
 To confirm whether a connector is Microsoft-owned, visit the [connector reference](index.md). Only connectors marked as "By Microsoft" are Microsoft-owned connectors.
 
-:::image type="content" source="./media/connector-feedback/microsoft-owned-connector.png" alt-text="Image from the list of connectors reference with an arrow pointing to the 'By Microsoft' label.":::
+:::image type="content" source="./media/connector-feedback/microsoft-owned-connector.png" alt-text="Screenshot from the list of connectors reference with an arrow pointing to the 'By Microsoft' label.":::
 
 ## Microsoft-owned connectors
 

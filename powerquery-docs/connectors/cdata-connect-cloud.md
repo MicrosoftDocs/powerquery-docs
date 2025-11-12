@@ -54,7 +54,7 @@ Follow these steps to connect to your CData Connect Cloud account:
 
 6. Select **Connect** in the connection window.
 
-    :::image type="content" source="./media/cdata-connect-cloud/cdata-4.png" alt-text="Screenshot of the authentication dialog where the connection is finalized":::
+    :::image type="content" source="./media/cdata-connect-cloud/cdata-4.png" alt-text="Screenshot of the authentication dialog where the connection is finalized.":::
 
 The **Navigator** window appears and allows you to import your data.
 
