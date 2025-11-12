@@ -3,14 +3,14 @@ title: EarthSoft's EQuIS Power Query Data Connector
 description: Provides basic information and connection instructions for the EQuIS connector.
 author: mathew-weaver
 ms.topic: conceptual
-ms.date: 9/11/2025
+ms.date: 11/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # EQuIS
 
->[!Note]
+> [!NOTE]
 >This connector is owned and provided by EarthSoft.
 
 ## Summary
@@ -37,20 +37,20 @@ To connect to an EQuIS Enterprise site from Power BI Desktop, take the following
 1. Select the EQuIS connector in the connector list, then select **Connect**.
 2. Enter the URL of the EQuIS Enterprise site you're connecting to, then select **OK**.
 
-   ![Enter URL of EQuIS Enterprise site.](./media/equis/enterprise_connection-ok.png)
+   :::image type="content" source="./media/equis/enterprise_connection-ok.png" alt-text="Screenshot of the From EQuiS dialog where you enter the URL of the EQuIS Enterprise site.":::
 
 3. Select the appropriate type of authentication:
    * **Basic**: Enter your EQuIS username and password for the given EQuIS Enterprise site.
    * **API Token**: Enter an API Token that you generated in EQuIS Enterprise (visit [User Profile](https://help.earthsoft.com/index.htm?ent-user_profile_editor.htm)).
-   * **Organizational Account**: If your EQuIS Enterprise site is appropriately configured, you may authenticate with Microsoft Entra ID.
+   * **Organizational Account**: If your EQuIS Enterprise site is appropriately configured, you can authenticate with Microsoft Entra ID.
 4. In **Navigator**, browse to the data set or report you want to load, then select **Load** or **Transform Data**. Visit [Using EQuIS Data](https://help.earthsoft.com/index.htm?pbi-power-bi-adding-datasets.htm) for more information about available data sets.
 
-![Select data set in Navigator.](./media/equis/navigator_cropped.png)
+:::image type="content" source="./media/equis/navigator_cropped.png" alt-text="Screenshot of the Navigator dialog where you select the data set.":::
 
 ## Additional Information
 
 * For best functionality and performance, EarthSoft recommends that you use the EQuIS connector with the latest build of EQuIS Enterprise.
-* When using reports in a facility group, non-administrator users must have permission to all facilities contained in the facility group.
+* When you use reports in a facility group, nonadministrator users must have permission to all facilities contained in the facility group.
 * Only "grid" reports are available in the **Navigator**.
 * All data sets consumed by the EQuIS connector use camelCase for column names.
 * The current version of the EQuIS connector retrieves a data set in a single API request (this logic might be optimized in a future version of the connector).

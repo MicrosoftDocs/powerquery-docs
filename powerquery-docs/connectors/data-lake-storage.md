@@ -3,7 +3,7 @@ title: Azure Data Lake Storage Gen2
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen2, along with a list of limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 10/22/2025
+ms.date: 11/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -27,7 +27,7 @@ ms.custom: sfi-image-nochange
 
 * An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
 
-* A storage account that has a hierarchical namespace. Follow the instructions at [Create a storage account](/azure/storage/common/storage-account-create) to create one. This article assumes that you've created a storage account named `myadlsg2`.
+* A storage account that has a hierarchical namespace. To create one, follow the instructions at [Create a storage account](/azure/storage/common/storage-account-create). This article assumes that you created a storage account named `myadlsg2`.
 
 * Ensure you're granted one of the following roles for the storage account: **Blob Data Reader**, **Blob Data Contributor**, or **Blob Data Owner**.
 
@@ -45,25 +45,25 @@ ms.custom: sfi-image-nochange
 
 2. In the **Azure Data Lake Storage Gen2** dialog box, provide the URL to your Azure Data Lake Storage Gen2 account, container, or subfolder using the container endpoint format. URLs for Data Lake Storage Gen2 have the following pattern:
 
-    https://\<_accountname_>.dfs.core.windows.net/\<_container_>/\<_subfolder_>
+   https://\<_accountname_>.dfs.core.windows.net/\<_container_>/\<_subfolder_>
 
-    You can also select whether you want to use the file system view or the Common Data Model folder view.
+   You can also select whether you want to use the file system view or the Common Data Model folder view.
 
     Select **OK** to continue.
 
-    ![Screenshot of the Azure Data Lake Storage Gen2 dialog box, with the URL entered.](media/azure-data-lake-storage-gen2/adls-url.png)
+   :::image type="content" source="media/azure-data-lake-storage-gen2/adls-url.png" alt-text="Screenshot of the Azure Data Lake Storage Gen2 dialog box, with the URL entered.":::
 
-3. If this is the first time you're using this URL address, you'll be asked to select the authentication method.
+3. If you're using this URL address for the first time, you're asked to select the authentication method.
 
-   If you select the Organizational account method, select **Sign in** to sign into your storage account. You'll be redirected to your organization's sign-in page. Follow the prompts to sign into the account. After you've successfully signed in, select **Connect**.
+   If you select the Organizational account method, select **Sign in** to sign into your storage account. You're redirected to your organization's sign-in page. Follow the prompts to sign into the account. After you successfully sign in, select **Connect**.
 
    If you select the Account key method, enter your account key and then select **Connect**.
 
-    ![Screenshot of the sign in dialog box for Azure Data Lake Storage Gen2, with organizational account selected, and ready to be signed in.](media/azure-data-lake-storage-gen2/sign-in.png)
+   :::image type="content" source="media/azure-data-lake-storage-gen2/sign-in.png" alt-text="Screenshot of the sign in dialog box for Azure Data Lake Storage Gen2, with organizational account selected, and ready to be signed in.":::
 
 4. The **Navigator** dialog box shows all files under the URL you provided. Verify the information and then select either **Transform Data** to transform the data in Power Query or **Load** to load the data.
 
-    [![Screenshot of the Navigator open and containing the data from the Drivers.text file.](media/azure-data-lake-storage-gen2/file-systems.png)](media/azure-data-lake-storage-gen2/file-systems.png#lightbox)
+    :::image type="content" source="media/azure-data-lake-storage-gen2/file-systems.png" alt-text="Screenshot of the open Navigator dialog containing the data from the Drivers.text file." lightbox="media/azure-data-lake-storage-gen2/file-systems.png":::
 
 ## Connect to Azure Data Lake Storage Gen2 from Power Query Online
 
@@ -73,19 +73,19 @@ ms.custom: sfi-image-nochange
 
 2. In **Connect to data source**, enter the URL to your Azure Data Lake Storage Gen2 account. Refer to [Limitations](#limitations) to determine the URL to use.
 
-   ![Screenshot of the Connect to data source page for Azure Data Lake Storage Gen2, with the URL entered.](media/azure-data-lake-storage-gen2/adls-url-online.png)
+   :::image type="content" source="media/azure-data-lake-storage-gen2/adls-url-online.png" alt-text="Screenshot of the Connect to data source page for Azure Data Lake Storage Gen2, with the URL entered.":::
 
 3. Select whether you want to use the file system view or the Common Data Model folder view.
 
 4. If needed, select the on-premises data gateway in **Data gateway**.
 
-5. Select **Sign in** to sign into the Azure Data Lake Storage Gen2 account. You'll be redirected to your organization's sign-in page. Follow the prompts to sign in to the account.
+5. Select **Sign in** to sign into the Azure Data Lake Storage Gen2 account. You're redirected to your organization's sign-in page. Follow the prompts to sign in to the account.
 
-6. After you've successfully signed in, select **Next**.
+6. After you successfully sign in, select **Next**.
 
 7. The **Choose data** page shows all files under the URL you provided. Verify the information and then select **Transform Data** to transform the data in Power Query.
 
-   [![Screenshot of the Choose data page, containing the data from the Drivers.text file.](media/azure-data-lake-storage-gen2/file-systems-online.png)](media/azure-data-lake-storage-gen2/file-systems-online.png#lightbox)
+   :::image type="content" source="media/azure-data-lake-storage-gen2/file-systems-online.png" alt-text="Screenshot of the Choose data page, containing the data from the Drivers.text file." lightbox="media/azure-data-lake-storage-gen2/file-systems-online.png":::
 
 ## Limitations
 
@@ -95,7 +95,7 @@ Currently, in Power Query Online and in Power BI Desktop, the Azure Data Lake St
 
 ### Refresh authentication
 
-Microsoft doesn't support dataflow or semantic model refresh using OAuth2 authentication when the Azure Data Lake Storage Gen2 (ADLS) account is in a different tenant. This limitation only applies to ADLS when the authentication method is OAuth2, that is, when you attempt to connect to a cross-tenant ADLS using an Microsoft Entra ID account. In this case, we recommend that you use a different authentication method that isn't OAuth2/Microsoft Entra ID, such as the Key authentication method.
+Microsoft doesn't support dataflow or semantic model refresh using OAuth2 authentication when the Azure Data Lake Storage Gen2 (ADLS) account is in a different tenant. This limitation only applies to ADLS when the authentication method is OAuth2, that is, when you attempt to connect to a cross-tenant ADLS using a Microsoft Entra ID account. In this case, we recommend that you use a different authentication method that isn't OAuth2/Microsoft Entra ID, such as the Key authentication method.
 
 ### Proxy and firewall requirements
 
@@ -103,13 +103,13 @@ When you create a dataflow using a gateway, you might need to change some of you
 
 If you're using a proxy with your gateway, you might need to configure the Microsoft.Mashup.Container.NetFX45.exe.config file in the on-premises data gateway. More information: [Configure proxy settings for the on-premises data gateway](/data-integration/gateway/service-gateway-proxy).
 
-To enable connectivity from your network to the Azure data lake, you might need to enable list specific IP addresses on the gateway machine. For example, if your network has any firewall rules in place that might block these attempts, you'll need to unblock the outbound network connections for your Azure data lake. To enable list the required outbound addresses, use the **AzureDataLake** service tag. More information: [Virtual network service tags](/azure/virtual-network/service-tags-overview)
+To enable connectivity from your network to the Azure data lake, you might need to enable list specific IP addresses on the gateway machine. For example, if your network has any firewall rules in place that might block these attempts, you need to unblock the outbound network connections for your Azure data lake. To enable list the required outbound addresses, use the **AzureDataLake** service tag. More information: [Virtual network service tags](/azure/virtual-network/service-tags-overview)
 
 Dataflows also support the "Bring Your Own" data lake option, which means you create your own data lake, manage your permissions, and you explicitly connect it to your dataflow. In this case, when you're connecting to your development or production environment using an Organizational account, you must enable one of the following roles for the storage account: Blob Data Reader, Blob Data Contributor, or Blob Data Owner.
 
 ### Power Query Online and Azure Storage are in the same region
 
-Direct access to an Azure Storage account with the firewall enabled and in the same region as Power Query Online isn't supported. This limitation arises because Power Query services, when deployed in the same region as the Azure storage account, use private Azure IP addresses for communication. For further details, refer to the [Azure documentation on storage network security](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-an-internet-ip-range).
+Direct access to an Azure Storage account with the firewall enabled and in the same region as Power Query Online isn't supported. This limitation arises because Power Query services, when deployed in the same region as the Azure storage account, use private Azure IP addresses for communication. For more information, see the [Azure documentation on storage network security](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-an-internet-ip-range).
 
 To work around this limitation and enable access to Azure Storage from Power Query Online in the same region, use one of the following methods:
 
@@ -120,7 +120,7 @@ To work around this limitation and enable access to Azure Storage from Power Que
 
 Role-based access control (RBAC) is required for Power BI to work correctly. Access Control List (ACL) isn't supported for Power BI access.
 
-## See also
+## Related content
 
 * [Analyze data in Azure Data Lake Storage Gen2 by using Power BI](analyze-data-in-adls-gen2.md)
 * [Introduction to Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
