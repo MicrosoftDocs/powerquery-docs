@@ -163,7 +163,7 @@ Users should be aware of the following limitations and issues associated with ac
 
 * There's no limit on the number of users who can pull data. But if they aren't using incremental refresh and try to import data from a range larger than one year, each user can refresh only once every 24 hours.
 
-* The fields that are imported are limited. For more fields, submit a feature request in [THWACK](https://thwack.solarwinds.com/products/solarwinds-service-desk-swsd/i/feature-requests/create). For feedback or support, reach out to [SolarWinds support](https://www.solarwinds.com/company/contact-us).
+* The fields that are imported are limited. For more fields, submit a feature request in [THWACK](https://thwack.solarwinds.com/kb/articles/20027-how-to-create-a-feature-request). For feedback or support, reach out to [SolarWinds support](https://www.solarwinds.com/company/contact-us).
 
 ### Credential error in the navigator
 
