@@ -88,7 +88,7 @@ To connect to CloudBluePSA:
 
    :::image type="content" source="./media/cloudbluepsa/power-query-expand-1-1.png" alt-text="Screenshot showing how to expand the Column1.1 Column.":::
 
-## Additional Resources
+## Related content
 
 You might also find the following CloudBluePSA information useful:
 

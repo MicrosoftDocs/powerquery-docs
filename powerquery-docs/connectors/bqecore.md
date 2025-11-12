@@ -52,7 +52,7 @@ To connect to BQE Core data:
    1. (Optional) If you select **Remember my consent**, the next time you connect to this Core company file you won't need to grant permission again.
    1. Select **Grant Permission**.
 
-   :::image type="content" source="media/bqe-core/core-bi-13.png" alt-text="Screenshot emphasizing the Core company file, the Remember my sonsent option, and the Grant permissions button.":::
+   :::image type="content" source="media/bqe-core/core-bi-13.png" alt-text="Screenshot emphasizing the Core company file, the Remember my consent option, and the Grant permissions button.":::
 
 6. Select **Connect**, and then select a module. For reference, review the API Reference under the [Core API Documentation](https://api-explorer.bqecore.com/).
 
