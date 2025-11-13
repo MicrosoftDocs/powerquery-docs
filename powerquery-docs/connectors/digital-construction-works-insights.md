@@ -3,14 +3,14 @@ title: Power Query Digital Construction Works Insights Connector
 description: Provides basic information and prerequisites for the Digital Construction Works Insights connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 9/11/2025
+ms.date: 11/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # Digital Construction Works Insights
 
->[!Note]
+> [!NOTE]
 >This connector is owned and provided by Digital Construction Works.
 
 ## Summary
@@ -38,26 +38,26 @@ To connect to a DCW Insights project, take the following steps:
 
 1. Under **Get Data** in Power BI Desktop, choose the **Digital Construction Works Insights** connector from the **Online Services**.
 
-    ![Image with DCW Integrations Platform Insights dialog box before the API URL is entered.](./media/dcw-insights-connector/step1.png)
+   :::image type="content" source="./media/dcw-insights-connector/step1.png" alt-text="Screenshot of the DCW Integrations Platform Insights dialog before the API URL is entered.":::
 
 2. In **Insights Api Url**, provide the URL to the OData API you want to connect to. You need to use `https`, and you need your full project URL and product name included in the URL. You can also enter in query string parameters if the URL calls for it.
 
-   ![Image with DCW Integrations Platform Insights dialog box with an API URL entered.](./media/dcw-insights-connector/step2.png)
+   :::image type="content" source="./media/dcw-insights-connector/step2.png" alt-text="Screenshot of the DCW Integrations Platform Insights dialog with an API URL entered.":::
 
 3. Select **OK**.
 
-4. If this is the first time you're connecting to this endpoint, you'll be asked to enter in the [JWT](#prerequisites) used to authorize you for this project. Then select **Connect**.
+4. If you're connecting to this endpoint for the first time, you're asked to enter in the [JWT](#prerequisites) used to authorize you for this project. Then select **Connect**.
 
-   ![Image of DCW Insights JWT authentication dialog with blank Account key in which to enter the JWT.](./media/dcw-insights-connector/step3.png)
+   :::image type="content" source="./media/dcw-insights-connector/step3.png" alt-text="Screenshot of the DCW Insights JWT authentication dialog with blank Account key in which to enter the JWT.":::
 
    For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
-   >[!Note]
-   >  If the connection isn't specified to use `https`, you'll be prompted to update your URL.
+   > [!NOTE]
+   > If the connection isn't specified to use `https`, you're prompted to update your URL.
 
 5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query editor.
 
-   ![Power Query Desktop Navigator showing specific product data.](./media/dcw-insights-connector/step4.png)
+   :::image type="content" source="./media/dcw-insights-connector/step4.png" alt-text="Screenshot of the Power Query Desktop Navigator showing specific product data.":::
 
 ## Troubleshooting
 

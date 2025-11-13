@@ -4,7 +4,7 @@ description: This article describes where users can receive support and share fe
 author: ptyx507x
 
 ms.reviewer: dougklo
-ms.date: 1/8/2024
+ms.date: 11/11/2025
 ms.author: miescobar
 ms.subservice: user-assistance
 ---
@@ -15,7 +15,7 @@ This article describes how to submit feedback for Power Query connectors. It's i
 
 To confirm whether a connector is Microsoft-owned, visit the [connector reference](index.md). Only connectors marked as "By Microsoft" are Microsoft-owned connectors.
 
-![Image from connector reference with arrow pointing to "By Microsoft"](./media/connector-feedback/microsoft-owned-connector.png)
+:::image type="content" source="./media/connector-feedback/microsoft-owned-connector.png" alt-text="Screenshot from the list of connectors reference with an arrow pointing to the 'By Microsoft' label.":::
 
 ## Microsoft-owned connectors
 
@@ -42,8 +42,8 @@ This section outlines instructions to receive support or submit feedback on non-
 
 For non-Microsoft-owned connectors, support and troubleshooting questions should go to the connector owner through their support channels. For example, for a Contoso-owned connector, you should submit a request through the Contoso support channels.
 
-You can also engage the Power Query community resources indicated above for Microsoft-owned connectors, in case a member of the community can assist.
+You can also engage the Power Query community resources previously indicated for Microsoft-owned connectors, in case a member of the community can assist.
 
 ### Submitting feedback
 
-As non-Microsoft-owned connectors are managed and updated by the respective connector owner, feedback should be sent directly to the connector owner. For example, to submit feedback about a Contoso-owned connector, you should directly submit feedback to Contoso.
+The respective connector owner manages and updates non-Microsoft-owned connectors, so feedback must be sent directly to them. For example, to submit feedback about a Contoso-owned connector, you should directly submit feedback to Contoso.

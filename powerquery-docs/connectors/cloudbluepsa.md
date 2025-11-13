@@ -1,9 +1,9 @@
 ---
 title: Power Query CloudBluePSA connector
-description: Provides basic information and prerequisites for the operation of the CloudBluePSA connector in conjunction with the API.
+description: Provides basic information and prerequisites for the operation of the CloudBluePSA connector with the API.
 author: mohsad06
 ms.topic: conceptual
-ms.date: 9/11/2025
+ms.date: 11/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -58,12 +58,11 @@ To connect to CloudBluePSA data:
 
 1. Expand the **Data** column, then select **OK**.
 
-   ![Screenshot of the Expand Data Column dialog.](./media/cloudbluepsa/expand-1.png)
+   :::image type="content" source="./media/cloudbluepsa/expand-1.png" alt-text="Screenshot of the Expand Data Column dialog.":::
 
-1. Expand the **Column1.1** column. This time, on the list of columns, all the grid columns included in the filter are displayed. Select as many columns as required, and then select **OK**. 
-All the selected data is now displayed, and can be reshaped and used to create reports as required.
+1. Expand the **Column1.1** column. This time, on the list of columns, all the grid columns included in the filter are displayed. Select as many columns as required, and then select **OK**. All the selected data is now displayed, and can be reshaped and used to create reports as required.
 
-   ![Screenshot showing the expanded Data Column1.1.](./media/cloudbluepsa/expand-1-1.png)
+   :::image type="content" source="./media/cloudbluepsa/expand-1-1.png" alt-text="Screenshot showing the expanded Data Column1.1.":::
 
 1. Select **Close & Apply**. You can now start using your data.
 
@@ -83,13 +82,13 @@ To connect to CloudBluePSA:
 
 1. In the **Navigator** screen, select the **Expand** button next to the **Data** column, and then select **OK**.
 
-   ![Screenshot showing how to expand the Data Column.](./media/cloudbluepsa/power-query-expand-1.png)
+   :::image type="content" source="./media/cloudbluepsa/power-query-expand-1.png" alt-text="Screenshot showing how to expand the Data Column.":::
 
 1. Two new columns now appear. Select the **Expand** button next to the **Column1.1** column and then select **OK**. You can now start using your data.
 
-   ![Screenshot showing how to expand the Column1.1 Column.](./media/cloudbluepsa/power-query-expand-1-1.png)
+   :::image type="content" source="./media/cloudbluepsa/power-query-expand-1-1.png" alt-text="Screenshot showing how to expand the Column1.1 Column.":::
 
-## Additional Resources
+## Related content
 
 You might also find the following CloudBluePSA information useful:
 

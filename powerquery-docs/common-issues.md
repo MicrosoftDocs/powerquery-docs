@@ -131,6 +131,12 @@ Here are some common ways to resolve a stack overflow in your M code.
 
 To resolve out of memory errors, optimize memory intensive operations like sorts, joins, grouping, and distincts by ensuring they fold to the source, or by removing them altogether where possible. Sorts, for example, are often unnecessary.
 
+### Power Query Online cannot connect via public endpoint when a private endpoint is configured to a Storage
+When a private endpoint to a Storage Account is configured, Power Query Online will always resolve the private link address and cannot connect via the public internet—even if public access is set to “Allowed” in the private endpoint configuration.
+
+This behavior occurs because the private endpoint takes precedence over public connectivity. As a result, any attempt to connect without a gateway will fail.
+
+
 ## Dataflows
 
 ### Cancel dataflow refresh
