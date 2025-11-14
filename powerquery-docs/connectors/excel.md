@@ -68,7 +68,7 @@ To make the connection from Power Query Online:
 
 5. In **Navigator**, select the workbook information you want, and then  **Transform Data** to continue transforming the data in Power Query Editor.
 
-   :::image type="content" source="./media/excel/online-navigator-view.png" alt-text="Screenshot of the Excel workbook imported into the Power Query online Navigator.":::
+   :::image type="content" source="./media/excel/online-navigator-view.png" alt-text="Screenshot of the Excel workbook imported into the Power Query online Navigator." lightbox="./media/excel/online-navigator-view.png":::
 
 ## Suggested tables
 
@@ -80,7 +80,8 @@ When you connect to the data in Power Query, the Power Query navigator creates t
 
 If you select the entire sheet in the navigator, the workbook is displayed as it appeared in Excel, with all of the blank cells filled with **null**.
 
-:::image type="content" source="./media/excel/entire-workbook-sheet.png" lightbox="./media/excel/entire-workbook-sheet.png" alt-text="Screenshot of the navigator with single sheet displayed with nulls in empty cells.":::
+:::image type="content" source="./media/excel/entire-workbook-sheet.png" alt-text="Screenshot of the navigator with single sheet displayed with nulls in empty cells." lightbox="./media/excel/entire-workbook-sheet.png":::
+
 If you select one of the suggested tables, each individual table that Power Query was able to determine from the layout of the workbook is displayed in the navigator. For example, if you select **Table 3**, the data that originally appeared in cells C13 to F16 is displayed.
 
 :::image type="content" source="./media/excel/table-three-only.png" alt-text="Screenshot of the navigator with table 3 under Suggested tables selected, and the contents of table 3 displayed." lightbox="./media/excel/table-three-only.png":::
