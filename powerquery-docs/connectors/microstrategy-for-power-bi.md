@@ -3,7 +3,7 @@ title: Power Query MicroStrategy for Power BI connector
 description: Provides basic information about products that use the MicroStrategy for Power BI connector, supported authentication types, prerequisites, and connection instructions.
 author: pawjastrzebski
 ms.topic: conceptual
-ms.date: 9/11/2025
+ms.date: 11/12/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -11,7 +11,7 @@ ms.custom: sfi-image-nochange
 
 # MicroStrategy for Power BI
 
->[!Note]
+> [!NOTE]
 >This connector is owned and provided by Microstrategy.
 
 ## Summary
@@ -39,18 +39,18 @@ To connect to MicroStrategy using Power BI Desktop:
 
 2. From the categories on the left, select **Other** > **MicroStrategy for Power BI**. Then select **Connect**.
 
-3. If this is the first time you're connecting to the MicroStrategy for Power BI connector, a third-party notice appears. Select **Don't warn me again with this connector**, and then select **Continue**.
+3. If you're connecting to the MicroStrategy for Power BI connector for the first time, a third-party notice appears. Select **Don't warn me again with this connector**, and then select **Continue**.
 
 4. Enter a valid MicroStrategy Library URL, for example, `https://.../MicroStrategyLibrary`.
 
-   :::image type="content" source="./media/micro-strategy-for-power-bi/pbi-standard-login.png" alt-text="Standard environment URL example.":::
+   :::image type="content" source="./media/micro-strategy-for-power-bi/pbi-standard-login.png" alt-text="Screenshot of the connection dialog with the standard environment URL example.":::
 
    > [!NOTE]
    >If you want to utilize OIDC authentication, you must add a **#OIDCMode** string to the end of the URL.
    >
    >OIDC authentication is available starting in version 2.4.5 of the connector.
 
-   :::image type="content" source="./media/micro-strategy-for-power-bi/pbi-oidc-login.png" alt-text="OIDC environment URL example.":::
+   :::image type="content" source="./media/micro-strategy-for-power-bi/pbi-oidc-login.png" alt-text="Screenshot of the connection dialog with the OIDC environment URL example.":::
 
 5. (optional) Select the authentication mode. This option only affects basic authentication.
 
@@ -60,7 +60,7 @@ To connect to MicroStrategy using Power BI Desktop:
 
 8. Select the authentication mode you want to use.
 
-   ![Authentication method selection window.](./media/micro-strategy-for-power-bi/pbi-login-screen-2.png)
+   :::image type="content" source="./media/micro-strategy-for-power-bi/pbi-login-screen-2.png" alt-text="Screenshot of the Microstrategy authentication method selection dialog.":::
 
    1. Standard/LDAP
 
@@ -92,7 +92,7 @@ To refresh MicroStrategy data using Power BI Online:
 
 2. Open the **Settings** page for the published semantic model.
 
-3. If this is the first time you're connecting to this database, select the authentication type and enter your credentials.
+3. If you're connecting to this database for the first time, select the authentication type and enter your credentials.
 
 4. If necessary, select the name of your on-premises data gateway.
 

@@ -3,7 +3,7 @@ title: Power Query Hive LLAP connector
 description: Provides basic information and prerequisites for the Hive LLAP connector, along with how to connect to your Hive LLAP data.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024 
+ms.date: 11/12/2025 
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -43,28 +43,28 @@ To connect to an Apache Hive LLAP server:
    - The `hostname` (for example, `hivellaphttp.southcentralus.contoso.com`) is the hostname or IP address of the Apache Hive server.
    - The `port number` (for example, 10500) is the port number for the Apache Hive server. If the `port number` isn't specified, the default value is 10501 for the HTTP transport protocol and 10500 for the standard transport protocol.
 
-   :::image type="content" source="./media/hive-llap/server-selection.png" alt-text="Hive LLAP connection builder.":::
+   :::image type="content" source="./media/hive-llap/server-selection.png" alt-text="Screenshot of the Hive LLAP connection builder.":::
 
 3. In **Thrift Transport Protocol**, select either **Standard** for TCP mode, or **HTTP** for HTTP mode.
 
-4. Select either the **Import** or **DirectQuery** data connectivity mode. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
+4. Select either the **Import** or **DirectQuery** data connectivity mode. For more information, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
 5. Select **OK** to continue.
 
-6. The first time you connect to a data source (identified by each unique URL), you'll be prompted to enter account credentials. Select the appropriate type of authentication and enter your credentials for the connection.
+6. The first time you connect to a data source (identified by each unique URL), you're prompted to enter account credentials. Select the appropriate type of authentication and enter your credentials for the connection.
 
    - **Windows**: Select this authentication type if you want to connect using Windows authentication.
    - **Basic**: Select this authentication type if you want to connect using Apache Hive LLAP authentication. Enter your Apache Hive LLAP **User name** and **Password**.
 
-   More information: [Authentication with a data source.](../ConnectorAuthentication.md)
+   For more information, go to [Authentication with a data source.](../ConnectorAuthentication.md).
 
-   ![Image of the Basic authentication screen for the Apache Hive LLAP connection, with username and password entries](./media/hive-llap/authentication.png)
+   :::image type="content" source="./media/hive-llap/authentication.png" alt-text="Screenshot of the Basic authentication screen for the Apache Hive LLAP connection, with username and password entries.":::
 
 7. Select **Connect** to connect to the Apache Hive LLAP data.
 
 8. In **Navigator**, select the data you require. Then select either **Transform data** to transform the data in Power Query Editor or **Load** to load the data in Power BI Desktop.
 
-   :::image type="content" source="./media/hive-llap/navigator.png" alt-text="Apache Hive LLAP import data navigator.":::
+   :::image type="content" source="./media/hive-llap/navigator.png" alt-text="Screenshot of the Apache Hive LLAP import data navigator." lightbox="./media/hive-llap/navigator.png":::
 
 ## Connect to Hive LLAP data from Power Query Online
 
@@ -109,9 +109,9 @@ To use this feature:
 
 5. Select the option to **Use SSO via Kerberos for DirectQuery queries** or **Use SSO via Kerberos for DirectQuery and Import queries**.
 
-   :::image type="content" source="./media/hive-llap/kerberos-sso.png" alt-text="Add data source dialog showing the Kerberos advanced settings.":::
+   :::image type="content" source="./media/hive-llap/kerberos-sso.png" alt-text="Screenshot of the Add data source dialog showing the Kerberos advanced settings." lightbox="./media/hive-llap/kerberos-sso.png":::
 
-More information, [Configure Kerberos-based SSO from Power BI service to on-premises data sources](/power-bi/connect-data/service-gateway-sso-kerberos)
+For more information, go to [Configure Kerberos-based SSO from Power BI service to on-premises data sources](/power-bi/connect-data/service-gateway-sso-kerberos).
 
 ## Troubleshooting
 
@@ -127,11 +127,11 @@ If this error occurs:
 
 2. In **Data source settings**, select the Hive LLAP source you created, and then select **Edit Permissions**.
 
-   :::image type="content" source="./media/hive-llap/data-source-settings.png" alt-text="Select the Hive LLAP source.":::
+   :::image type="content" source="./media/hive-llap/data-source-settings.png" alt-text="Screenshot of the Data source settings dialog where you select the Hive LLAP source and edit permissions.":::
 
 3. In **Edit Permissions**, under **Encryption**, clear the **Encrypt connections** check box.
 
-   :::image type="content" source="./media/hive-llap/encryption-off.png" alt-text="Clear the Encrypt connections box.":::
+   :::image type="content" source="./media/hive-llap/encryption-off.png" alt-text="Screenshot of the Edit permissions dialog with the Encrypt connections box cleared.":::
 
 4. Select **OK**, and then in **Data source settings**, select **Close**.
 
@@ -141,9 +141,9 @@ If this error occurs:
 
 After publishing a report in Power BI service, you need to update the credentials to the Hive data source in the cloud to refresh in Power BI service. After filling in the credentials, you might get the error:
 
-:::image type="content" source="media/hive-llap/image.png" alt-text="Screenshot of Credential Error.":::
+:::image type="content" source="media/hive-llap/image.png" alt-text="Screenshot of data source credentials error.":::
 
-If you get this error and you see the following message in Fiddler trace, this is an SSL issue.
+If you get this error and you see the following message in a Fiddler trace, this problem is an SSL issue.
 
 ```
 ODBC: ERROR [HY000] [Microsoft][ThriftExtension] (14) Unexpected response from server during a HTTP connection: Could not refill buffer
