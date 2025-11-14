@@ -4,14 +4,14 @@ description: Provides basic information, prerequisites, and instructions for usi
 author: bucaojit  
 ms.author: dougklo
 ms.topic: conceptual  
-ms.date: 9/11/2025  
+ms.date: 11/12/2025  
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
 
 # MongoDB Atlas SQL interface
 
->[!Note]
+> [!NOTE]
 >This connector is owned and provided by MongoDB.
 
 ## Summary
@@ -23,7 +23,7 @@ ms.custom: sfi-image-nochange
 | Authentication Types Supported | Database (Username/Password)<br/>X.509 Certificates<br/>OAuth (OIDC)<br/>AWS Identity and Access Management |
 
 > [!NOTE]
-> When using authentication mechanisms other than Username/Password (such as X.509 Certificates, OAuth (OIDC), or AWS IAM), you can leave the username and password fields blank in the connection dialogue. The appropriate credentials will be handled through the chosen authentication method.
+> When using authentication mechanisms other than Username/Password (such as X.509 Certificates, OAuth (OIDC), or AWS IAM), you can leave the username and password fields blank in the connection dialogue. The appropriate credentials are handled through the chosen authentication method.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ To use the MongoDB Atlas SQL connector, you must have an [Atlas federated databa
 2. Select **Connect** to open the federated database instance connection modal.
 3. Select **Connect using the Atlas SQL Interface**.
 4. Select **Power BI Connector**.
-5. Copy your federated database name and MongoDB URI. You'll need them in a later step.
+5. Copy your federated database name and MongoDB URI. You need them in a later step.
 
 > [!NOTE]
 > If some or all of your data comes from an Atlas cluster, you must use MongoDB version 5.0 or greater for that cluster to take advantage of Atlas SQL.
@@ -55,33 +55,39 @@ To connect using the Atlas SQL interface:
 
 2. Select **Database** from the categories on the left, select **MongoDB Atlas SQL**, and then select **Connect**.  
 
-   ![Get Data from MongoDB Atlas SQL](./media/mongodb/mongodb_get_data.png)
+   :::image type="content" source="./media/mongodb/mongodb_get_data.png" alt-text="Screenshot of the Get data dialog with the MongoDB Atlas SQL connector selected.":::
 
-3. If you're connecting to the MongoDB Atlas SQL connector for the first time, a third-party notice is displayed. 
+3. If you're connecting to the MongoDB Atlas SQL connector for the first time, a third-party notice is displayed.
    Select **"Don't warn me again with this connector"** if you don't want this message to be displayed again.
 
    Select **Continue**.
 
 4. In the MongoDB Atlas SQL window that appears, fill in the following values:
 
-   - The **MongoDB URI**. _Required_.
-     Use the MongoDB URI obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).  Make sure that it doesn't contain your username and password. URIs containing username and/or passwords are rejected.
+   - The **MongoDB URI**. _Required_
+
+     Use the MongoDB URI obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance). Make sure that it doesn't contain your username and password. URIs containing username and/or passwords are rejected.
+
    - Your federated **Database** name. _Required_  
+
      Use the name of the federated database obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).
-   - A SQL query. _Optional_ \
-     Enter a native Atlas SQL query to execute immediately. If the **Database** is the same as above, you may omit it from the query.
-     ```
+   - A SQL query. _Optional_
+
+     To execute immediately, enter a native Atlas SQL query. If the **Database** is the same as previously used, you can omit it from the query.
+
+     ```sql
      SELECT * FROM orders
      ```
-   - Select either Import or DirectQuery for your desired Data Connectivity mode
+
+   - Select either Import or DirectQuery for your desired Data Connectivity mode.
 
    Select **OK**.  
 
-   ![Atlas SQL connection dialogue](./media/mongodb/mongodb_connection_dialogue.png)
+   :::image type="content" source="./media/mongodb/mongodb_connection_dialogue.png" alt-text="Screenshot of the MongoDB Atlas SQL connection dialog where you enter the connection information.":::
 
 5. Enter your Atlas MongoDB Database access username and password and select **Connect**.  
 
-   ![Authentication](./media/mongodb/mongodb_authentication.png)  
+   :::image type="content" source="./media/mongodb/mongodb_authentication.png" alt-text="Screenshot of the MongoDB Atlas SQL authentication dialog where you enter your credentials.":::
 
    > [!NOTE]
    > Once you enter your username and password for a particular Atlas federated database, Power BI Desktop uses those same credentials in subsequent connection attempts. You can modify those credentials by going to **File** > **Options and settings** > **Data source settings**.  
@@ -98,24 +104,28 @@ To connect using the Atlas SQL interface:
 1. Select **MongoDB Atlas SQL** from the **Power Query - Choose data source** page.
 2. On the **Connection settings** page, fill in the following values:
     - The **MongoDB URI**. _Required_.
-      Use the MongoDB URI obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).  Make sure that it doesn't contain your username and password. URIs containing username and/or passwords are rejected.
+
+      Use the MongoDB URI obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance). Make sure that it doesn't contain your username and password. URIs containing username and/or passwords are rejected.
+
     - Your federated **Database** name. _Required_  
+
       Use the name of the federated database obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).
+
     - Enter a **Connection name**.
     - Choose a **Data gateway**.
     - Enter your Atlas MongoDB Database access username and password and select **Next**.
 
-   ![Connection Settings](./media/mongodb/mongodb_connect_to_data_source.png)
+   :::image type="content" source="./media/mongodb/mongodb_connect_to_data_source.png" alt-text="Screenshot of the online Connect to data source dialog where you enter the connection settings.":::
 
 3. In the **Navigator** screen, select the data you require, and then select **Transform data**. This selection opens the Power Query editor so that you can filter and refine the set of data you want to use.  
 
-   ![Navigator](./media/mongodb/mongodb_choose_data.png)
+   :::image type="content" source="./media/mongodb/mongodb_choose_data.png" alt-text="Screenshot of the online Navigator where you choose the data you want to transform.":::
 
 ## Troubleshooting
 
 When the connection can't be established successfully, the generic error message `The driver returned invalid (or failed to return) SQL_DRIVER_ODBC_VER: 03.80` is displayed. Start by checking your credentials and that you have no network issues accessing your federated database.
 
-## Next steps
+## Related content
 
 You might also find the following information useful:
 

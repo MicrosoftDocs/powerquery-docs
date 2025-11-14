@@ -3,7 +3,7 @@ title: Power Query Funnel connector
 description: Provides basic information, prerequisites, and information on how to connect to your data using the Funnel connector, along with a list of known issues and limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 9/11/2025
+ms.date: 11/12/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -26,7 +26,7 @@ ms.custom: sfi-image-nochange
 
 To use the Funnel connector, you need a Funnel subscription. Funnel helps you collect data from all your marketing platforms, transform it, and send it to the destinations you want, like Power BI (<https://funnel.io/>).
 
-In the Funnel App, go to your Workspace, navigate to the Microsoft Power BI page in the left navigation (if you can't see it, please contact us). Follow the instructions on the page. You need to create a "Data Share" that contains the fields you want to expose in Power BI.
+In the Funnel App, go to your Workspace and navigate to the Microsoft Power BI page in the left navigation (if you can't see it, contact us). Follow the instructions on the page. You need to create a "Data Share" that contains the fields you want to expose in Power BI.
 
 ## Capabilities Supported
 
@@ -38,33 +38,33 @@ To connect to Funnel:
 
 1. Select Online Services, find **Funnel** from the product-specific data connector list, and then select **Connect**.
 
-   ![Select Funnel Connector.](./media/funnel/funnel-connector.png#lightbox)
+   :::image type="content" source="./media/funnel/funnel-connector.png" alt-text="Screenshot of the Get data dialog with the Funnel connector selected.":::
 
 1. Select **Sign in** to sign in to your Funnel Workspace.
 
-   ![Sign in to your Funnel Workspace.](media/funnel/funnel-sign-in-1.png)
+   :::image type="content" source="media/funnel/funnel-sign-in-1.png" alt-text="Screenshot of the authentication dialog where you sign in to your Funnel Workspace.":::
 
 1. Sign in with your Google user connected to Funnel or use your Funnel credentials.
 
-   ![Sign in to your Funnel Workspace step 2.](media/funnel/funnel-sign-in-2.png)
+   :::image type="content" source="media/funnel/funnel-sign-in-2.png" alt-text="Screenshot of the sign in dialog where you again sign in to your Funnel Workspace.":::
 
-1. Once you've successfully signed in select **Connect** to continue.
+1. Once you successfully sign in, select **Connect** to continue.
 
-   ![Successfully signed in to your Funnel Workspace.](media/funnel/funnel-sign-in-3.png)
+   :::image type="content" source="media/funnel/funnel-sign-in-3.png" alt-text="Screenshot of the authentication dialog after you successfully signed in to your Funnel Workspace.":::
 
-1. In the **Navigator** dialog box, choose one or more **Data Shares** from your **Workspaces** to import your data.
+1. In the **Navigator** dialog, choose one or more **Data Shares** from your **Workspaces** to import your data.
 
-   ![Choose "Data Shares" from Workspaces.](media/funnel/funnel-navigation-table.png)
+   :::image type="content" source="media/funnel/funnel-navigation-table.png" alt-text="Screenshot of the Navigator dialog where you can choose Data Shares from the workspaces." lightbox="media/funnel/funnel-navigation-table.png":::
 
-   For each Data Share you can enter number of rolling months of data you want.
+   For each Data Share, you can enter the number of rolling months of data you want.
 
    > [!NOTE]
-   > The default number of months is 12. If today is 22.03.2022, then you'll get data for the period 01.04.2021 - 22.03.2022.
+   > The default number of months is 12. If today is 22.03.2022, then you get data for the period 01.04.2021 - 22.03.2022.
 
    You can then either select **Load** to load the data or select **Transform Data** to transform the data.
 
 ## Known issues and limitations
 
-* If a Data Share contains too much data for one month, the connector will get a TOO_MANY_ROWS error.
+* If a Data Share contains too much data for one month, the connector gets a TOO_MANY_ROWS error.
 
 For more information, read our [Power BI knowledge base articles](https://help.funnel.io/en/?q=powerbi).
