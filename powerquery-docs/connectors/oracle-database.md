@@ -64,7 +64,7 @@ To make the connection, take the following steps:
 
 2. Specify the Oracle net service name/TNS alias or Easy Connect (Plus) connection string to connect to in **Server**. Easy Connect is the simplest to use by setting the **Server** value to your Oracle Database server *Hostname/ServiceName*, where *ServiceName* is the global database name. The following screenshot uses a net service name.
 
-   :::image type="content" source="./media/oracle-database/select-database.png" alt-text="Screenshot of the Oracle database connection dialog where you enter you Oracle database connection information.":::
+   :::image type="content" source="./media/oracle-database/select-database.png" alt-text="Screenshot of the Oracle database connection dialog where you enter your Oracle database connection information.":::
 
 3. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode. The rest of these example steps use the Import data connectivity mode. To learn more about DirectQuery, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
