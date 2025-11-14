@@ -154,7 +154,7 @@ You can fix issues caused by incorrect dimensions by doing one of the following 
 
 ### Sluggish or slow performance when loading Excel data
 
-Incorrect dimenstions can also cause slow loading of Excel data. However, in this case, the dimensions being much larger than they need to be is causing the slowness, rather than being too small. Overly large dimensions cause Power Query to read a much larger amount of data from the Workbook than is needed.
+Incorrect dimensions can also cause slow loading of Excel data. However, in this case, the dimensions being much larger than they need to be is causing the slowness, rather than being too small. Overly large dimensions cause Power Query to read a much larger amount of data from the Workbook than is needed.
 
 To fix this issue, you can refer to [Locate and reset the last cell on a worksheet](https://support.office.com/en-us/article/locate-and-reset-the-last-cell-on-a-worksheet-c9e468a8-0fc3-4f69-8038-b3c1d86e99e9) for detailed instructions.
 
