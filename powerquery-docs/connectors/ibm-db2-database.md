@@ -251,7 +251,7 @@ To find for certain what port the DRDA service is running on:
 
 3. To confirm that the DRDA service is up and listening on that port, run `NETSTAT`.
 
-   :::image type="content" source="./media/ibm-db2/drda-listening.png" alt-text="Screenshot of the NETSTAT options for you to select":::
+   :::image type="content" source="./media/ibm-db2/drda-listening.png" alt-text="Screenshot of the NETSTAT options for you to select.":::
 
 4. Choose either option 3 (for IPv4) or option 6 (for IPv6).
 
