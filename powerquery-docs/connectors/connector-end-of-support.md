@@ -3,7 +3,7 @@ title: Power Query connector end of support
 description: Provides information about Power Query connectors that are no longer supported, their sunset date, and any additional information.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 10/31/2025
+ms.date: 11/14/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
