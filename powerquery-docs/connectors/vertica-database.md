@@ -14,10 +14,13 @@ ms.subservice: connectors
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | General Availability |
+| Release State | Deprecating |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Database |
 | Function Reference Documentation | &mdash; |
+
+> [!NOTE] 
+> We are beginning the deprecating process for the Vertica connector starting April 2026. Instead, we will be supporting “Customer Bring Your Own Driver (BYOD)”; Customers will need to supply their own Vertica driver.    
 
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
