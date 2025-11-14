@@ -24,6 +24,9 @@ ms.custom: sfi-image-nochange
 > The Snowflake connector implementation 2.0 has been generally available since July 2025. Learn more about [this feature](#snowflake-connector-implementation-20).
 
 > [!NOTE]
+> The passphrase input field automatically appears only if required, based on the type of certificate uploaded. After the user uploads a certificate, the system detects whether it's encrypted or unencrypted and conditionally displays the passphrase dialog. Both encrypted and unencrypted keys are supported.
+
+> [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
