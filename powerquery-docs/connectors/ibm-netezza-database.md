@@ -3,7 +3,7 @@ title: Power Query Netezza database connector
 description: Provides basic information for the Netezza database connector, along with how to connect to your Netezza data.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 07/01/2025
+ms.date: 11/19/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -20,7 +20,7 @@ ms.subservice: connectors
 | Function Reference Documentation | &mdash; |
 
 > [!IMPORTANT] 
-> We are beginning the deprecation process for the Netezza Connector starting March 2026. Instead, we will be supporting “Customer Bring Your Own Driver (BYOD)”; customers will need to supply their own Netezza driver.    
+> We're beginning the deprecation process for the Netezza Connector starting March 2026. Instead, we'll be supporting "Customer Bring Your Own Driver (BYOD)"; customers will need to supply their own Netezza driver.    
 
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
