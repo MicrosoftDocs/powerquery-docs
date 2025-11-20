@@ -61,9 +61,10 @@ We suggest not having more than 100 dataflows (Gen1 or Gen2) per workspace.
 
 ## Mashup script limits
 
-The size limit for the mashup script is 512KB. An error may occur when trying to open or edit dataflows with queries that exceed this size limit.
+The size limit for the mashup script is 512KB. An error might occur when trying to open or edit dataflows with queries that exceed this size limit.
 
-If you encounter such error:
-1. Simplify queries by removing unused steps
-2. Consider breaking large dataflows into smaller, linked dataflows
-3. Use parameters to optimize query performance
+If you encounter such an error:
+
+- Simplify queries by removing unused steps.
+- Consider breaking large dataflows into smaller, linked dataflows.
+- Use parameters to optimize query performance.
