@@ -103,7 +103,7 @@ in
 
 You need to add the key in to access the typed date. For example, if there's a dimension attribute called [0CALDAY], you need to add the key [20CALDAY] to get the typed value.
 
-In the previous example , this means that:
+In the previous example, this means that:
 
 * Calendar day.Calendar day Level 01 [0CALDAY] is text (a caption). (Added by default when the dimension is added.)
 * Calendar day.Calendar day Level 01.Key [20CALDAY] is a date (must be manually selected).
