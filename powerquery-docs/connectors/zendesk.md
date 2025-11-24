@@ -2,7 +2,7 @@
 title: Power Query Zendesk (Beta) connector
 description: Provides basic information and prerequisites for the connector, describes the connection process, and discusses limitations and issues you might encounter.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/24/2025
 ms.author: dougklo
 ms.subservice: connectors

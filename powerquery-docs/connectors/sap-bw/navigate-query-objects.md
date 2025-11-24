@@ -2,7 +2,7 @@
 title: Navigate the query objects
 description: Describes how to navigate the query objects in the Navigator dialog box of the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/24/2025
 ms.author: dougklo
 ms.subservice: connectors
@@ -90,7 +90,7 @@ Queries in SAP BW can have dynamic filters defined that allow you to restrict th
 
 When you select an SAP BW query with characteristic restrictions in the Power Query navigator, the variables are displayed as parameters above the data preview area.
 
-:::image type="content" source="variables-as-parameters.png" alt-text="Screenshot showing the variables displayed as parameters above the data preview area." lightbox="variables-as-parameters.png":::
+:::image type="content" source="variables-as-parameters.png" alt-text="Screenshot showing the variables displayed as parameters above the data preview area.":::
 
 Using the **Show** selector, you can display all parameters that are defined on the query, or just the required ones.
 

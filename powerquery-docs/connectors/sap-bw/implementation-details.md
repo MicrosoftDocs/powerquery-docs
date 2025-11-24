@@ -2,7 +2,7 @@
 title: Implementation details
 description: Describes conversion information and specific features available in Implementation 2 of the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/24/2025
 ms.author: dougklo
 ms.subservice: connectors
