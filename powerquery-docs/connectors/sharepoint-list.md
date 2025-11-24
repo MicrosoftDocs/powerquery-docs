@@ -57,7 +57,7 @@ To connect to a SharePoint list:
 
 4. From the **Navigator**, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   :::image type="content" source="./media/sharepoint-list/sharepoint-list-navigator.png" alt-text="Screenshot of the Navigator dialog where you select the items you want to use.":::
+   :::image type="content" source="./media/sharepoint-list/sharepoint-list-navigator.png" alt-text="Screenshot of the Navigator dialog where you select the items you want to use." lightbox="./media/sharepoint-list/sharepoint-list-navigator.png":::
 
 ## Connect to a SharePoint list from Power Query Online
 
@@ -77,7 +77,7 @@ To connect to a SharePoint list:
 
 6. From the **Navigator**, you can select a location, then transform the data in the Power Query editor by selecting **Next**.
 
-   :::image type="content" source="./media/sharepoint-list/sharepoint-list-navigator-online.png" alt-text="Screenshot of the online Navigator where you select the items you want to use.":::
+   :::image type="content" source="./media/sharepoint-list/sharepoint-list-navigator-online.png" alt-text="Screenshot of the online Navigator where you select the items you want to use." lightbox="./media/sharepoint-list/sharepoint-list-navigator-online.png":::
 
 ## Troubleshooting
 
@@ -93,13 +93,13 @@ This issue only happens when the **Data Type** isn't explicitly set for a column
 
 :::image type="content" source="./media/sharepoint-list/boolean-any.png" alt-text="Screenshot of the data type any on a boolean column.":::
 
-The user can force the interpretation to be consistent by explicitly setting the data type for the column through the Power Query Editor. For example, the following image shows the column with an explicit Boolean type.
+The user can force the interpretation to be consistent by explicitly setting the data type for the column through the Power Query editor. For example, the following image shows the column with an explicit Boolean type.
 
 :::image type="content" source="./media/sharepoint-list/boolean-explicit.png" alt-text="Screenshot of the same column with the explicit boolean type set.":::
 
 ### Using OData to access a SharePoint List
 
-If you use an OData feed to access a SharePoint List, there's an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](odata-feed.md#maximum-url-length)
+If you use an OData feed to access a SharePoint List, there's an approximately 2100 character limitation to the URL you use to connect. For more information, go to [Maximum URL length](odata-feed.md#maximum-url-length).
 
 ### Microsoft Entra ID authentication
 
