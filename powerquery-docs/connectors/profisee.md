@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Profisee conne
 author: DougKlopfenstein
 ms.author: dougklo
 ms.service: powerquery
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/21/2025
 LocalizationGroup: reference
 ms.subservice: connectors
