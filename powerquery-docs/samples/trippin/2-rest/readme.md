@@ -20,7 +20,7 @@ In this lesson, you:
 > * Learn how to set request headers and process a JSON response
 > * Use Power BI Desktop to wrangle the response into a user friendly format
 
-This lesson converts the OData based connector for the [TripPin service](https://services.odata.org/v4/TripPinService/) (created in the [previous lesson](../1-odata/readme.md)) to a connector that resembles something you would create for any RESTful API. OData is a RESTful API, but one with a fixed set of conventions. The advantage of OData is that it provides a schema, data retrieval protocol, and standard query language. Taking away the use of [OData.Feed](/powerquery-m/odata-feed) require you to build these capabilities into the connector yourself.
+This lesson converts the OData based connector for the [TripPin service](https://services.odata.org/v4/TripPinService/) (created in the [previous lesson](../1-odata/readme.md)) to a connector that resembles something you would create for any RESTful API. OData is a RESTful API, but one with a fixed set of conventions. The advantage of OData is that it provides a schema, data retrieval protocol, and standard query language. Taking away the use of [OData.Feed](/powerquery-m/odata-feed) requires you to build these capabilities into the connector yourself.
 
 ## Recap of the OData connector
 
@@ -190,7 +190,7 @@ If you didn't set your Privacy Levels setting to "Always ignore Privacy level se
 
 :::image type="content" source="../../media/trippin2-firewall.png" alt-text="Screenshot of the Power Query privacy prompt.":::
 
-Privacy prompts appear when you're combining data from multiple sources and didn't a privacy level for one or more sources. Select the **Continue** button and set the privacy level of the top source to **Public**.
+Privacy prompts appear when you're combining data from multiple sources and didn't specify a privacy level for one or more sources. Select the **Continue** button and set the privacy level of the top source to **Public**.
 
 :::image type="content" source="../../media/trippin2-privacy.png" alt-text="Screenshot of the Privacy levels dialog where you set the privacy level of the top source to Public.":::
 

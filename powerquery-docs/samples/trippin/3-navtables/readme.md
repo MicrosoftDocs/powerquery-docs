@@ -125,7 +125,7 @@ If you right select the root of the navigation tree and select **Edit**, the sam
 
 ## Conclusion
 
-In this tutorial, you added a [Navigation Table](../../../handlingnavigationtables.md) to your extension. Navigation Tables are a key feature that makes connectors easier to use. In this example, your navigation table only has a single level, but the Power Query UI supports displaying navigation tables that have multiple dimensions (even when they're ragged).
+In this tutorial, you added a [Navigation Table](../../../handlingnavigationtables.md) to your extension. Navigation Tables is a key feature that makes connectors easier to use. In this example, your navigation table only has a single level, but the Power Query UI supports displaying navigation tables that have multiple dimensions (even when they're ragged).
 
 ## Next steps
 
