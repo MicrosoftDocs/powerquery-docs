@@ -65,11 +65,11 @@ Ask the Power BI tenant administrator to enable access for you by following thes
 
 When creating a dataflow, sometimes you don't see all the options that are available. For example, you might see only the options shown in the following image.
 
-:::image type="content" source="media/troubleshooting-dataflows-issues-creating-dataflow/dataflow-creation-limited.png" alt-text="Screenshot of the create dataflow menu where only the "Define new entities" and "Import model" options appear.":::
+:::image type="content" source="media/troubleshooting-dataflows-issues-creating-dataflow/dataflow-creation-limited.png" alt-text="Screenshot of the create dataflow menu where only the Define new entities and Import model options appear.":::
 
 However, more options are actually available, as shown in the following image.
 
-:::image type="content" source="media/troubleshooting-dataflows-issues-creating-dataflow/dataflow-creation-full.png" alt-text="Screenshot of the create dataflow menu where "Define new tables", "Link tables from other dataflows", "Import model", and "Attach a Common Data Model folder" options appear.":::
+:::image type="content" source="media/troubleshooting-dataflows-issues-creating-dataflow/dataflow-creation-full.png" alt-text="Screenshot of the create dataflow menu where Define new tables, Link tables from other dataflows, Import model, and Attach a Common Data Model folder options appear.":::
 
 **Reason:**
 
