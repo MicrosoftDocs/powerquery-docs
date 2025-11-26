@@ -3,8 +3,8 @@ title: Field mapping considerations for standard dataflows
 description: Learn how to get the best outcomes when you create dataflows that write their output to Dataverse.
 author: Luitwieler
 ms.reviewer: dougklo
-ms.topic: conceptual
-ms.date: 1/6/2023
+ms.topic: concept-article
+ms.date: 11/26/2025
 ms.author: jeluitwi
 ms.subservice: dataflows
 ---
@@ -97,6 +97,6 @@ The option means that if there's a data row in the table that doesn't exist in t
 * Mapping to a multi-level lookup field, a lookup that points to another table's lookup field, is currently not supported.
 * Mapping to **Status** and **Status Reason** [fields](/powerapps/developer/data-platform/define-custom-state-model-transitions#what-is-the-state-model) is currently not supported.
 * Mapping data into multi-line text that includes line break characters isn't supported and the line breaks get removed. Instead, you could use the line break tag `<br>` to load and preserve multi-line text.
-* Mapping to **Choice** fields configured with the multiple select option enabled is only supported under certain conditions. The dataflow only loads data to **Choice** fields with the multiple select option enabled, and a comma-separated list of values (integers) of the labels are used. For example, if the labels are "Choice1, Choice2, Choice3" with corresponding integer values of "1, 2, 3", then the column values should be "1,3" to select the first and last choices.
+* Configuring both single-select and multi-select **Choice** fields in the same table, while specifying more than one value for the multi-select field, isn't supported.
 * Standard V2 dataflows rely on the `createdon` and `modifiedon` fields in order to remove rows that don't exist in the dataflows output, from the destination table. If those columns don't exist in the destination table, records aren't deleted.
 * Mapping to fields whose **IsValidForCreate** property is set to `false` is unsupported (for example, the Account field of Contact entity).
