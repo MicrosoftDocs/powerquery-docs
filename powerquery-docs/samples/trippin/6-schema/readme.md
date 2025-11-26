@@ -3,7 +3,7 @@ title: TripPin 6 - Schema
 description: Adding a schema with enforcement to your TripPin REST connector.
 author: ptyx507x
 ms.topic: tutorial
-ms.date: 5/17/2023
+ms.date: 11/25/2024
 ms.author: miescobar
 ms.subservice: custom-connectors
 ms.custom: sfi-image-nochange
@@ -13,7 +13,7 @@ ms.custom: sfi-image-nochange
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
-In this lesson, you will:
+In this lesson, you:
 
 > [!div class="checklist"]
 > * Define a fixed schema for a REST API
@@ -21,22 +21,22 @@ In this lesson, you will:
 > * Enforce a table structure to avoid transformation errors due to missing columns
 > * Hide columns from the result set
 
-One of the large advantages of an OData service over a standard REST API is its [$metadata definition](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html). The $metadata document describes the data found on this service, including the schema for all of its Entities (Tables) and Fields (Columns). The `OData.Feed` function uses this schema definition to automatically set data type information&mdash;so instead of getting all text and number fields (like you would from `Json.Document`), end users get dates, whole numbers, times, and so on, providing a better overall user experience.
+One of the large advantages of an OData service over a standard REST API is its [$metadata definition](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html). The $metadata document describes the data found on this service, including the schema for all of its Entities (Tables) and Fields (Columns). The `OData.Feed` function uses this schema definition to automatically set data type information. So instead of getting all text and number fields (like you would from `Json.Document`), end users get dates, whole numbers, times, and so on, providing a better overall user experience.
 
-Many REST APIs don't have a way to programmatically determine their schema. In these cases, you'll need to include schema definitions within your connector. In this lesson you'll define a simple, hardcoded schema for each of your tables, and enforce the schema on the data you read from the service.
+Many REST APIs don't have a way to programmatically determine their schema. In these cases, you need to include schema definitions within your connector. In this lesson, you define a simple, hardcoded schema for each of your tables, and enforce the schema on the data you read from the service.
 
->[!Note]
-> The approach described here should work for many REST services. [Future lessons](../7-advancedschema/readme.md) will build upon this approach by recursively enforcing schemas on structured columns (record, list, table), and provide sample implementations that can programmatically generate a schema table from CSDL or [JSON Schema](https://json-schema.org/) documents.
+> [!NOTE]
+> The approach described here should work for many REST services. [Future lessons](../7-advancedschema/readme.md) build upon this approach by recursively enforcing schemas on structured columns (record, list, table). They also provide sample implementations that can programmatically generate a schema table from CSDL or [JSON Schema](https://json-schema.org/) documents.
 
 Overall, enforcing a schema on the data returned by your connector has multiple benefits, such as:
 
 * Setting the correct data types
 * Removing columns that don't need to be shown to end users (such as internal IDs or state information)
-* Ensuring that each page of data has the same shape by adding any columns that might be missing from a response (a common way for REST APIs to indicate a field should be null)
+* Ensuring that each page of data has the same shape by adding any columns that might be missing from a response (a common way for REST APIs to indicate a field should be `null`)
 
 ## Viewing the existing schema with Table.Schema
 
-The connector created in the [previous lesson](../5-paging/readme.md) displays three tables from the TripPin service&mdash;`Airlines`, `Airports`, and `People`. Run the following query to view the `Airlines` table:
+The connector created in the [previous lesson](../5-paging/readme.md) displays three tables from the TripPin service: `Airlines`, `Airports`, and `People`. Run the following query to view the `Airlines` table:
 
 ```powerquery-m
 let
@@ -46,16 +46,16 @@ in
     data
 ```
 
-In the results you'll see four columns returned:
+In the results, four columns are returned:
 
 * @odata.id
 * @odata.editLink
 * AirlineCode
 * Name
 
-![Airlines no schema.](../../media/trippin6-airline-no-schema.png)
+:::image type="content" source="../../media/trippin6-airline-no-schema.png" alt-text="Screenshot of the Output tab of the PQTest results with the four columns and their data displayed.":::
 
-The "@odata.*" columns are part of OData protocol, and not something you'd want or need to show to the end users of your connector. `AirlineCode` and `Name` are the two columns you'll want to keep. If you look at the schema of the table (using the handy [Table.Schema](/powerquery-m/table-schema) function), you can see that all of the columns in the table have a data type of `Any.Type`.
+The "@odata.*" columns are part of OData protocol, and not something you want or need to show to the end users of your connector. `AirlineCode` and `Name` are the two columns you want to keep. If you look at the schema of the table (using the handy [Table.Schema](/powerquery-m/table-schema) function), all of the columns in the table have a data type of `Any.Type`.
 
 ```powerquery-m
 let
@@ -65,19 +65,18 @@ in
     Table.Schema(data)
 ```
 
-![Airlines Table.Schema.](../../media/trippin6-airline-table-schema.png)
+:::image type="content" source="../../media/trippin6-airline-table-schema.png" alt-text="Screenshot of the Output tab of the PQTest results showing all of the columns with an Any type." lightbox="../../media/trippin6-airline-table-schema.png":::
 
-[Table.Schema](/powerquery-m/table-schema) returns many metadata about the columns in a table, including names, positions, type information, and many advanced properties, such as Precision, Scale, and MaxLength.
-Future lessons will provide design patterns for setting these advanced properties, but for now you need only concern yourself with the ascribed type (`TypeName`), primitive type (`Kind`), and whether the column value might be null (`IsNullable`).
+[Table.Schema](/powerquery-m/table-schema) returns many metadata about the columns in a table, including names, positions, type information, and many advanced properties, such as Precision, Scale, and MaxLength. Future lessons provide design patterns for setting these advanced properties, but for now you need only concern yourself with the ascribed type (`TypeName`), primitive type (`Kind`), and whether the column value might be `null` (`IsNullable`).
 
 ## Defining a simple schema table
 
-Your schema table will be composed of two columns:
+Your schema table is going to be composed of two columns:
 
 |Column|Details|
 |------|-------|
-|Name  |The name of the column. This must match the name in the results returned by the service.|
-|Type  |The M data type you're going to set. This can be a primitive type (`text`, `number`, `datetime`, and so on), or an ascribed type (`Int64.Type`, `Currency.Type`, and so on).|
+|Name  |The name of the column. This name must match the name in the results returned by the service.|
+|Type  |The M data type you're going to set. This type can be a primitive type (`text`, `number`, `datetime`, and so on), or an ascribed type (`Int64.Type`, `Currency.Type`, and so on).|
 
 The hardcoded schema table for the `Airlines` table sets its `AirlineCode` and `Name` columns to `text`, and looks like this:
 
@@ -88,7 +87,7 @@ Airlines = #table({"Name", "Type"}, {
     });
 ```
 
-The `Airports` table has four fields you'll want to keep (including one of type `record`):
+The `Airports` table has four fields you want to keep (including one of type `record`):
 
 ```powerquery-m
 Airports = #table({"Name", "Type"}, {
@@ -115,13 +114,13 @@ People = #table({"Name", "Type"}, {
 
 ## The SchemaTransformTable helper function
 
-The `SchemaTransformTable` helper function described below will be used to enforce schemas on your data. It takes the following parameters:
+The `SchemaTransformTable` helper function described in this section is used to enforce schemas on your data. It takes the following parameters:
 
 |Parameter    |Type  |Description|
 |:------------|:-----|:----------|
-|table        |table |The table of data you'll want to enforce your schema on.|
+|table        |table |The table of data you want to enforce your schema on.|
 |schema       |table |The schema table to read column information from, with the following type: `type table [Name = text, Type = type]`.|
-|enforceSchema|number|(*optional*) An enum that controls behavior of the function.<br>The default value (`EnforceSchema.Strict = 1`) ensures that the output table will match the schema table that was provided by adding any missing columns, and removing extra columns. <br>The `EnforceSchema.IgnoreExtraColumns = 2` option can be used to preserve extra columns in the result. <br>When `EnforceSchema.IgnoreMissingColumns = 3` is used, both missing columns and extra columns will be ignored.|
+|enforceSchema|number|(*optional*) An enum that controls behavior of the function.<br>The default value (`EnforceSchema.Strict = 1`) ensures that the output table matches the provided schema table by adding any missing columns, and removing extra columns. <br>The `EnforceSchema.IgnoreExtraColumns = 2` option can be used to preserve extra columns in the result. <br>When `EnforceSchema.IgnoreMissingColumns = 3` is used, both missing columns and extra columns are ignored.|
 
 The logic for this function looks something like this:
 
@@ -132,8 +131,8 @@ The logic for this function looks something like this:
 5. Reorder columns based on the order they appear in the schema table.
 6. Set the type on the table itself using [Value.ReplaceType](/powerquery-m/value-replacetype).
 
->[!Note]
-> The last step to set the table type will remove the need for the Power Query UI to infer type information when viewing the results in the query editor. This removes the double request issue you saw at the [end of the previous tutorial](../5-paging/readme.md#putting-it-all-together).
+> [!NOTE]
+> The last step to set the table type removes the need for the Power Query UI to infer type information when viewing the results in the query editor. This setting removes the double request issue you saw at the [end of the previous tutorial](../5-paging/readme.md#putting-it-all-together).
 
 The following helper code can be copy and pasted into your extension:
 
@@ -198,16 +197,16 @@ SchemaTransformTable = (table as table, schema as table, optional enforceSchema 
 
 ## Updating the TripPin connector
 
-You'll now make the following changes to your connector to make use of the new schema enforcement code.
+To make use of the new schema enforcement code, make the following changes to your connector.
 
 1. Define a master schema table (`SchemaTable`) that holds all of your schema definitions.
 2. Update the `TripPin.Feed`, `GetPage`, and `GetAllPagesByNextLink` to accept a `schema` parameter.
 3. Enforce your schema in `GetPage`.
-4. Update your navigation table code to wrap each table with a call to a new function (`GetEntity`)&mdash;this will give you more flexibility to manipulate the table definitions in the future.
+4. Update your navigation table code to wrap each table with a call to a new function (`GetEntity`). This function gives you more flexibility to manipulate the table definitions in the future.
 
 ### Master schema table
 
-You'll now consolidate your schema definitions into a single table, and add a helper function (`GetSchemaForEntity`) that lets you look up the definition based on an entity name (for example, `GetSchemaForEntity("Airlines")`).
+Now consolidate your schema definitions into a single table, and add a helper function (`GetSchemaForEntity`) that lets you look up the definition based on an entity name (for example, `GetSchemaForEntity("Airlines")`).
 
 ```powerquery-m
 SchemaTable = #table({"Entity", "SchemaTable"}, {
@@ -239,8 +238,8 @@ GetSchemaForEntity = (entity as text) as table => try SchemaTable{[Entity=entity
 
 ### Adding schema support to data functions
 
-You'll now add an optional `schema` parameter to the `TripPin.Feed`, `GetPage`, and `GetAllPagesByNextLink` functions.
-This will allow you to pass down the schema (when you want to) to the paging functions, where it will be applied to the results you get back from the service.
+Now add an optional `schema` parameter to the `TripPin.Feed`, `GetPage`, and `GetAllPagesByNextLink` functions.
+This parameter allows you to pass down the schema (when you want to) to the paging functions, where it's applied to the results you get back from the service.
 
 ```powerquery-m
 TripPin.Feed = (url as text, optional schema as table) as table => ...
@@ -248,11 +247,11 @@ GetPage = (url as text, optional schema as table) as table => ...
 GetAllPagesByNextLink = (url as text, optional schema as table) as table => ...
 ```
 
-You'll also update all of the calls to these functions to make sure that you pass the schema through correctly.
+You also need to update all of the calls to these functions to make sure that you pass the schema through correctly.
 
 ### Enforcing the schema
 
-The actual schema enforcement will be done in your `GetPage` function.
+The actual schema enforcement is done in your `GetPage` function.
 
 ```powerquery-m
 GetPage = (url as text, optional schema as table) as table =>
@@ -268,16 +267,13 @@ GetPage = (url as text, optional schema as table) as table =>
 ```
 
 > [!NOTE]
-> This `GetPage` implementation uses [Table.FromRecords](/powerquery-m/table-fromrecords) to convert the list of records in the JSON response to a table.
-> A major downside to using [Table.FromRecords](/powerquery-m/table-fromrecords) is that it assumes all records in the list have the same set of fields.
-> This works for the TripPin service, since the OData records are guarenteed to contain the same fields, but this might not be the case for all REST APIs. 
-> A more robust implementation would use a combination of [Table.FromList](/powerquery-m/table-fromlist) and [Table.ExpandRecordColumn](/powerquery-m/table-expandrecordcolumn).
-> Later tutorials will change the implementation to get the column list from the schema table, ensuring that no columns are lost or missing during the JSON to M translation. 
+> This `GetPage` implementation uses [Table.FromRecords](/powerquery-m/table-fromrecords) to convert the list of records in the JSON response to a table. A major downside to using [Table.FromRecords](/powerquery-m/table-fromrecords) is that it assumes all records in the list have the same set of fields. This behavior works for the TripPin service, since the OData records are guaranteed to contain the same fields, but might not be the case for all REST APIs.
+>
+> A more robust implementation would use a combination of [Table.FromList](/powerquery-m/table-fromlist) and [Table.ExpandRecordColumn](/powerquery-m/table-expandrecordcolumn). Later tutorials demonstrate how to change the implementation to get the column list from the schema table, ensuring that no columns are lost or missing during the JSON to M translation.
 
 ### Adding the GetEntity function
 
-The `GetEntity` function will wrap your call to TripPin.Feed.
-It will look up a schema definition based on the entity name, and build the full request URL.
+The `GetEntity` function wraps your call to `TripPin.Feed`. It looks up a schema definition based on the entity name, and builds the full request URL.
 
 ```powerquery-m
 GetEntity = (url as text, entity as text) as table => 
@@ -289,8 +285,8 @@ GetEntity = (url as text, entity as text) as table =>
         result;
 ```
 
-You'll then update your `TripPinNavTable` function to call `GetEntity`, rather than making all of the calls inline.
-The main advantage to this is that it will let you continue modifying your entity building code, without having to touch your nav table logic.
+You then update your `TripPinNavTable` function to call `GetEntity`, rather than making all of the calls inline.
+The main advantage to this update is that it lets you continue modifying your entity building code, without having to touch your nav table logic.
 
 ```powerquery-m
 TripPinNavTable = (url as text) as table =>
@@ -322,9 +318,9 @@ in
     Table.Schema(data)
 ```
 
-You now see that your Airlines table only has the two columns you defined in its schema:
+Your Airlines table now only has the two columns you defined in its schema:
 
-![Airlines With Schema.](../../media/trippin6-airline-with-schema.png)
+:::image type="content" source="../../media/trippin6-airline-with-schema.png" alt-text="Screenshot of the Output tab of the PQTest results showing the Airlines table with schema." lightbox="../../media/trippin6-airline-with-schema.png":::
 
 If you run the same code against the People table...
 
@@ -336,28 +332,25 @@ in
     Table.Schema(data)
 ```
 
-You'll see that the ascribed type you used (`Int64.Type`) was also set correctly.
+Note that the ascribed type you used (`Int64.Type`) was also set correctly.
 
-![People With Schema.](../../media/trippin6-people-with-schema.png)
+:::image type="content" source="../../media/trippin6-people-with-schema.png" alt-text="Screenshot of the Output tab of the PQTest results showing the proper type set.":::
 
-An important thing to note is that this implementation of `SchemaTransformTable` doesn't modify the types of `list` and `record` columns,
-but the `Emails` and `AddressInfo` columns are still typed as `list`. This is because `Json.Document` will correctly map JSON arrays to M lists, and JSON objects to M records. If you were to expand the list or record column in Power Query, you'd see that all of the expanded columns will be of type any. Future tutorials will improve the implementation to recursively set type information for nested complex types.
+An important thing to note is that this implementation of `SchemaTransformTable` doesn't modify the types of `list` and `record` columns, but the `Emails` and `AddressInfo` columns are still typed as `list`. This behavior occurs because `Json.Document` correctly maps JSON arrays to M lists, and JSON objects to M records. If you expand the list or record column in Power Query, all of the expanded columns are of type `any`. Future tutorials improve the implementation to recursively set type information for nested complex types.
 
 ## Conclusion
 
-This tutorial provided a sample implementation for enforcing a schema on JSON data returned from a REST service.
-While this sample uses a simple hardcoded schema table format, the approach could be expanded upon by dynamically
-building a schema table definition from another source, such as a JSON schema file, or metadata service/endpoint exposed by the data source.
+This tutorial provided a sample implementation for enforcing a schema on JSON data returned from a REST service. While this sample uses a simple hardcoded schema table format, the approach could be expanded upon by dynamically building a schema table definition from another source, such as a JSON schema file, or metadata service/endpoint exposed by the data source.
 
 In addition to modifying column types (and values), your code is also setting the correct type information on the table itself. Setting this type information benefits performance when running inside of Power Query, as the user experience always attempts to infer type information to display the right UI queues to the end user, and the inference calls can end up triggering other calls to the underlying data APIs.
 
-If you view the People table using the [TripPin connector from the previous lesson](../5-paging/readme.md), you'll see that all of the columns have a 'type any' icon (even the columns that contain lists):
+If you view the People table using the [TripPin connector from the previous lesson](../5-paging/readme.md), all of the columns have a 'type any' icon (even the columns that contain lists):
 
-![People without Schema.](../../media/trippin6-qp-no-schema.png)
+:::image type="content" source="../../media/trippin6-qp-no-schema.png" alt-text="Screenshot of the TripPin data in the People table in Power Query without the schema." lightbox="../../media/trippin6-qp-no-schema.png":::
 
-Running the same query with the TripPin connector from this lesson, you'll now see that the type information is displayed correctly.
+If you run the same query with the TripPin connector from this lesson, the type information is now displayed correctly.
 
-![People with Schema.](../../media/trippin6-pq-with-schema.png)
+:::image type="content" source="../../media/trippin6-pq-with-schema.png" alt-text="Screenshot of the TripPin data in the People table in Power Query with the schema.":::
 
 ## Next steps
 
