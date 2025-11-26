@@ -3,19 +3,19 @@ title: TripPin 10 - Basic Query Folding
 description: Initial support for query folding for your TripPin REST connector.
 author: ptyx507x
 ms.topic: tutorial
-ms.date: 5/17/2024
+ms.date: 11/26/2025
 ms.author: miescobar
 ms.subservice: custom-connectors
 ---
 
 # TripPin part 10 - Basic query folding
 
->[!NOTE]
+> [!NOTE]
 >This content currently references content from a legacy implementation for logs in Visual Studio. The content will be updated in the near future to cover the new Power Query SDK in Visual Studio Code.
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
-In this lesson, you will:
+In this lesson, you:
 
 > [!div class="checklist"]
 > * Learn the basics of query folding 
@@ -32,19 +32,18 @@ One of the powerful features of the M language is its ability to push transforma
 
 When creating a custom connector that uses an M function with built-in query folding capabilities, such as [OData.Feed](/powerquery-m/odata-feed) or [Odbc.DataSource](/powerquery-m/odbc-datasource), your connector automatically inherits this capability for free.
 
-This tutorial replicates the built-in query folding behavior for OData by implementing function handlers for the **Table.View** function.
-This part of the tutorial implements some of the _easier_ handlers to implement (that is, ones that don't require expression parsing and state tracking).
+This tutorial replicates the built-in query folding behavior for OData by implementing function handlers for the **Table.View** function. This part of the tutorial implements some of the _easier_ handlers to implement (that is, ones that don't require expression parsing and state tracking).
 
 To understand more about the query capabilities that an OData service might offer, go to [OData v4 URL Conventions](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752357).
 
->[!Note]
->As stated previously, the **OData.Feed** function automatically provides query folding capabilities. Since the TripPin series is treating the OData service as a regular REST API, using [Web.Contents](/powerquery-m/web-contents) rather than **OData.Feed**, you'll need to implement the query folding handlers yourself. For real world usage, we recommend that you use **OData.Feed** whenever possible.
+> [!NOTE]
+>As stated previously, the **OData.Feed** function automatically provides query folding capabilities. Since the TripPin series is treating the OData service as a regular REST API, using [Web.Contents](/powerquery-m/web-contents) rather than **OData.Feed**, you need to implement the query folding handlers yourself. For real-world usage, we recommend that you use **OData.Feed** whenever possible.
 
 Go to [Overview of query evaluation and query folding in Power Query](../../../query-folding-basics.md) for more information about query folding.
 
 ## Using Table.View
 
-The [Table.View](/powerquery-m/table-view) function allows a custom connector to override default transformation handlers for your data source. An implementation of **Table.View** will provide a function for one or more of the supported handlers. If a handler is unimplemented, or returns an `error` during evaluation, the M engine falls back to its default handler.
+The [Table.View](/powerquery-m/table-view) function allows a custom connector to override default transformation handlers for your data source. An implementation of **Table.View** provides a function for one or more of the supported handlers. If a handler is unimplemented, or returns an `error` during evaluation, the M engine falls back to its default handler.
 
 When a custom connector uses a function that doesn't support implicit query folding, such as **Web.Contents**, default transformation handlers are always performed locally. If the REST API you're connecting to supports query parameters as part of the query, **Table.View** lets you add optimizations that allow transformation work to be pushed to the service.
 
@@ -56,8 +55,8 @@ Table.View(table as nullable table, handlers as record) as table
 
 Your implementation wraps your main data source function. There are two required handlers for **Table.View**:
 
-* `GetType`&mdash;returns the expected `table type` of the query result
-* `GetRows`&mdash;returns the actual `table` result of your data source function
+* `GetType`: Returns the expected `table type` of the query result.
+* `GetRows`: Returns the actual `table` result of your data source function.
 
 The simplest implementation would be similar to the following example:
 
@@ -75,13 +74,11 @@ Update the `TripPinNavTable` function to call `TripPin.SuperSimpleView` rather t
 withData = Table.AddColumn(rename, "Data", each TripPin.SuperSimpleView(url, [Name]), type table),
 ```
 
-If you rerun the unit tests, you see that the behavior of your function isn't changed. In this case,
-your **Table.View** implementation is simply passing through the call to `GetEntity`. Since you haven't implemented
-any transformation handlers (yet), the original `url` parameter remains untouched.
+If you rerun the unit tests, the behavior of your function isn't changed. In this case, your **Table.View** implementation is simply passing through the call to `GetEntity`. Since you haven't implemented any transformation handlers (yet), the original `url` parameter remains untouched.
 
 ## Initial implementation of Table.View
 
-The above implementation of **Table.View** is simple, but not very useful. The following implementation is used as
+The previous implementation of **Table.View** is simple, but not very useful. The following implementation is used as
 your baseline&mdash;it doesn't implement any folding functionality, but has the scaffolding you need to do it.
 
 ```powerquery-m
@@ -130,15 +127,13 @@ TripPin.View = (baseUrl as text, entity as text) as table =>
         View([Url = baseUrl, Entity = entity]);
 ```
 
-If you look at the call to **Table.View**, you see an extra wrapper function around the `handlers` record&mdash;`Diagnostics.WrapHandlers`. This helper function is found in the Diagnostics module (that was introduced in the [adding diagnostics](/power-query/samples/trippin/8-diagnostics/readme) lesson), and provides you with a useful way to automatically trace any errors raised by individual handlers.
+If you look at the call to **Table.View**, there's an extra wrapper function around the `handlers` record&mdash;`Diagnostics.WrapHandlers`. This helper function is found in the Diagnostics module (introduced in the [adding diagnostics](/power-query/samples/trippin/8-diagnostics/readme) lesson), and provides you with a useful way to automatically trace any errors raised by individual handlers.
 
-The `GetType` and `GetRows` functions are updated to make use of two new helper functions&mdash;`CalculateSchema` and `CalculateUrl`. Right now, the implementations of those functions are fairly straightforward&mdash;notice that they contain parts of what was previously done by the `GetEntity` function.
+The `GetType` and `GetRows` functions are updated to make use of two new helper functions&mdash;`CalculateSchema` and `CalculateUrl`. Right now, the implementations of those functions are fairly straightforward. Notice that they contain parts of what was previously done by the `GetEntity` function.
 
-Finally, notice that you're defining an internal function (`View`) that accepts a `state` parameter.
-As you implement more handlers, they'll recursively call the internal `View` function, updating and
-passing along `state` as they go.
+Finally, notice that you're defining an internal function (`View`) that accepts a `state` parameter. As you implement more handlers, they recursively call the internal `View` function, updating and passing along `state` as they go.
 
-Update the `TripPinNavTable` function once again, replacing the call to `TripPin.SuperSimpleView` with a call to the new `TripPin.View` function, and rerun the unit tests. You won't see any new functionality yet, but you now have a solid baseline for testing.
+Update the `TripPinNavTable` function once again, replacing the call to `TripPin.SuperSimpleView` with a call to the new `TripPin.View` function, and rerun the unit tests. There isn't any new functionality yet, but you now have a solid baseline for testing.
 
 ## Implementing query folding
 
@@ -146,11 +141,11 @@ Since the M engine automatically falls back to local processing when a query can
 
 The manual way to validate folding behavior is to watch the URL requests your unit tests make using a tool like Fiddler. Alternatively, the diagnostic logging you added to `TripPin.Feed` emits the full URL being run, which _should_ include the OData query string parameters your handlers add.
 
-An automated way to validate query folding is to force your unit test execution to fail if a query doesn't fully fold. You can do this by opening the project properties, and setting **Error on Folding Failure** to **True**. With this setting enabled, any query that requires local processing results in the following error:
+An automated way to validate query folding is to force your unit test execution to fail if a query doesn't fully fold. To make the unit test fail when a query doesn't fully fold, open the project properties and set **Error on Folding Failure** to **True**. With this setting enabled, any query that requires local processing results in the following error:
 
-**We couldn't fold the expression to the source. Please try a simpler expression.**
+`We couldn't fold the expression to the source. Please try a simpler expression.`
 
-You can test this out by adding a new `Fact` to your unit test file that contains one or more table transformations.
+You can test this change out by adding a new `Fact` to your unit test file that contains one or more table transformations.
 
 ```powerquery-m
 // Query folding tests
@@ -160,8 +155,8 @@ Fact("Fold $top 1 on Airlines",
 )
 ```
 
->[!Note]
-> The **Error on Folding Failure** setting is an "all or nothing" approach. If you want to test queries that aren't designed to fold as part of your unit tests, you'll need to add some conditional logic to enable/disable tests accordingly.
+> [!NOTE]
+> The **Error on Folding Failure** setting is an "all or nothing" approach. If you want to test queries that aren't designed to fold as part of your unit tests, you need to add some conditional logic to enable/disable tests accordingly.
 
 The remaining sections of this tutorial each add a new **Table.View** handler. You're taking a [Test Driven Development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development) approach, where you first add failing unit tests, and then implement the M code to resolve them.
 
@@ -172,8 +167,7 @@ The following handler sections describe the functionality provided by the handle
 
 ### Handling Table.FirstN with OnTake
 
-The `OnTake` handler receives a `count` parameter, which is the maximum number of rows to take from `GetRows`.
-In OData terms, you can translate this to the [$top](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752362) query parameter.
+The `OnTake` handler receives a `count` parameter, which is the maximum number of rows to take from `GetRows`. In OData terms, you can translate this to the [$top](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752362) query parameter.
 
 You use the following unit tests:
 
@@ -191,7 +185,7 @@ Fact("Fold $top 0 on Airports",
 
 These tests both use [Table.FirstN](/powerquery-m/table-firstn) to filter to the result set to the first X number of rows. If you run these tests with **Error on Folding Failure** set to `False` (the default), the tests should succeed, but if you run Fiddler (or check the trace logs), notice that the request you send doesn't contain any OData query parameters.
 
-![Diagnostics trace.](../../media/trippin10-unit-test-log-1.png)
+:::image type="content" source="../../media/trippin10-unit-test-log-1.png" alt-text="Screenshot of the Log tab of the M query output displaying the send request with no query parameters.":::
 
 If you set **Error on Folding Failure** to `True`, the tests fail with the `Please try a simpler expression.` error. To fix this error, you need to define your first **Table.View** handler for `OnTake`.
 
@@ -233,9 +227,9 @@ CalculateUrl = (state) as text =>
         finalUrl
 ```
 
-Rerunning the unit tests, notice that the URL you're accessing now contains the `$top` parameter. Due to URL encoding, `$top` appears as `%24top`, but the OData service is smart enough to convert it automatically.
+When you rerun the unit tests, notice that the URL you're accessing now contains the `$top` parameter. Due to URL encoding, `$top` appears as `%24top`, but the OData service is smart enough to convert it automatically.
 
-![Diagnostics trace with top.](../../media/trippin10-unit-test-log-2.png)
+:::image type="content" source="../../media/trippin10-unit-test-log-2.png" alt-text="Screenshot of the Log tab of the M Query Output displaying the send request containing the $top parameter.":::
 
 ### Handling Table.Skip with OnSkip
 
@@ -277,7 +271,7 @@ qsWithSkip =
         qsWithTop,
 ```
 
-More information: [Table.Skip](/powerquery-m/table-skip)
+For more information, go to [Table.Skip](/powerquery-m/table-skip).
 
 ### Handling Table.SelectColumns with OnSelectColumns
 
@@ -307,13 +301,13 @@ Fact("Fold $select with ignore column",
 
 The first two tests select different numbers of columns with [Table.SelectColumns](/powerquery-m/table-selectcolumns), and include a [Table.FirstN](/powerquery-m/table-firstn) call to simplify the test case.
 
->[!Note]
-> If the test were to simply return the column names (using [Table.ColumnNames](/powerquery-m/table-columnnames) and not any data, the request to the OData service will never actually be sent. This is because the call to `GetType` will return the schema, which contains all of the information the M engine needs to calculate the result.
+> [!NOTE]
+> If the tests were to simply return the column names (using [Table.ColumnNames](/powerquery-m/table-columnnames)) and not any data, the request to the OData service is never actually sent. This behavior occurs because the call to `GetType` returns the schema, which contains all of the information the M engine needs to calculate the result.
 
 The third test uses the [MissingField.Ignore](/powerquery-m/missingfield-type) option, which tells the M engine to ignore any selected columns that don't exist in the result set. The `OnSelectColumns` handler doesn't need to worry about this option&mdash;the M engine handles it automatically (that is, missing columns aren't included in the `columns` list).
 
->[!Note]
-> The other option for **Table.SelectColumns**, [MissingField.UseNull](/powerquery-m/missingfield-type), requires a connector to implement the `OnAddColumn` handler. This will be done in a subsequent lesson.
+> [!NOTE]
+> The other option for **Table.SelectColumns**, [MissingField.UseNull](/powerquery-m/missingfield-type), requires a connector to implement the `OnAddColumn` handler.
 
 The implementation for `OnSelectColumns` does two things:
 
@@ -362,8 +356,7 @@ type [ Name = text, Order = Int16.Type ]
 
 Each record contains a `Name` field, indicating the name of the column, and an `Order` field that's equal to [Order.Ascending](/powerquery-m/order-type) or [Order.Descending](/powerquery-m/order-type).
 
-In OData terms, this operation maps to the [$orderby](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752361) query option.
-The `$orderby` syntax has the column name followed by `asc` or `desc` to indicate ascending or descending order. When you sort on multiple columns, the values are separated with a comma. If the `columns` parameter contains more than one item, it's important to maintain the order in which they appear.
+In OData terms, this operation maps to the [$orderby](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752361) query option. The `$orderby` syntax has the column name followed by `asc` or `desc` to indicate ascending or descending order. When you sort on multiple columns, the values are separated with a comma. If the `columns` parameter contains more than one item, it's important to maintain the order in which they appear.
 
 Unit tests:
 
@@ -428,9 +421,9 @@ You have a few different options on how to handle this value as part of an OData
 
 The downside to the query parameter approach is that you still need to send the entire query to the OData service. Since the count comes back inline as part of the result set, you have to process the first page of data from the result set. While this process is still more efficient than reading the entire result set and counting the rows, it's probably still more work than you want to do.
 
-The advantage of the path segment approach is that you only receive a single scalar value in the result. This approach makes the entire operation a lot more efficient. However, as described in the OData specification, the /$count path segment returns an error if you include other query parameters, such as `$top` or `$skip`, which limits its usefulness.
+The advantage of the path segment approach is that you only receive a single scalar value in the result. This approach makes the entire operation a lot more efficient. However, as described in the OData specification, the `/$count` path segment returns an error if you include other query parameters, such as `$top` or `$skip`, which limits its usefulness.
 
-In this tutorial, you implemented the `GetRowCount` handler using the path segment approach. To avoid the errors you'd get if other query parameters are included, you checked for other state values, and returned an "unimplemented error" (`...`) if you found any. Returning any error from a **Table.View** handler tells the M engine that the operation can't be folded, and it should fall back to the default handler instead (which in this case would be counting the total number of rows).
+In this tutorial, you implemented the `GetRowCount` handler using the path segment approach. To avoid the errors you get if other query parameters are included, you checked for other state values, and returned an "unimplemented error" (`...`) if you found any. Returning any error from a **Table.View** handler tells the M engine that the operation can't be folded, and it should fall back to the default handler instead (which in this case would be counting the total number of rows).
 
 First, add a unit test:
 
