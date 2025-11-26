@@ -146,7 +146,7 @@ Give the query a name ("Airlines").
 
 Create a new Blank Query. This time, use the `TripPin.Feed` function to access the /Airports entity. Apply transforms until you get something similar to the following table. The matching query follows the table&mdash;give this query a name ("Airports") as well.
 
-:::image type="content" source="../../media/trippin2-airports.png" alt-text="Screenshot of a Power Query table containing the transformed table.":::
+:::image type="content" source="../../media/trippin2-airports.png" alt-text="Screenshot of a Power Query table containing the transformed table." lightbox="../../media/trippin2-airports.png":::
 
 ```powerquery-m
 let

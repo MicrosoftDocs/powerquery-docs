@@ -334,7 +334,7 @@ in
 
 Note that the ascribed type you used (`Int64.Type`) was also set correctly.
 
-:::image type="content" source="../../media/trippin6-people-with-schema.png" alt-text="Screenshot of the Output tab of the PQTest results showing the proper type set.":::
+:::image type="content" source="../../media/trippin6-people-with-schema.png" alt-text="Screenshot of the Output tab of the PQTest results showing the proper type set." lightbox="../../media/trippin6-people-with-schema.png":::
 
 An important thing to note is that this implementation of `SchemaTransformTable` doesn't modify the types of `list` and `record` columns, but the `Emails` and `AddressInfo` columns are still typed as `list`. This behavior occurs because `Json.Document` correctly maps JSON arrays to M lists, and JSON objects to M records. If you expand the list or record column in Power Query, all of the expanded columns are of type `any`. Future tutorials improve the implementation to recursively set type information for nested complex types.
 
