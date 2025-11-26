@@ -102,7 +102,7 @@ TripPinNavTable = (url as text) as table =>
 
 [Enable tracing](#enabling-diagnostics) for your project, and run your test queries. On the `Errors` tab you should see the text of the error you raised:
 
-:::image type="content" source="../../media/trippin8-error.png" alt-text="Screenshot of the M query output with the "does not exist" error displayed.":::
+:::image type="content" source="../../media/trippin8-error.png" alt-text="Screenshot of the M query output with the does not exist error displayed.":::
 
 Also, on the `Log` tab, you should see the same message. If you use different values for the `message` and `value` parameters, these values would be different.
 
