@@ -2,7 +2,7 @@
 title: What licenses do you need to use dataflows
 description: Describes the various licenses you need for various apps for you to use either analytical or standard dataflows.
 author: Luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 7/24/2024
 ms.author: jeluitwi
 ms.subservice: dataflows

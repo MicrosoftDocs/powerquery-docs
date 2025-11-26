@@ -3,7 +3,7 @@ title: Keyboard Shortcuts in Power Query Online
 description: This article provides information about global keyboard shortcuts in Power Query Online.
 author: ptyx507x
 ms.author: miescobar
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 8/16/2024
 ms.subservice: transform-data
 ---

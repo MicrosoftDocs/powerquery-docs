@@ -2,7 +2,7 @@
 title: Power Query PDF connector
 description: Provides basic information and prerequisites for the connector, along with information on how to connect to PDF files.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/24/2024
 ms.author: dougklo
 ms.subservice: connectors

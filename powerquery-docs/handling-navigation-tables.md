@@ -2,7 +2,7 @@
 title: Handling navigation for Power Query connectors
 description: Manage navigation for Power Query connectors
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 4/11/2024
 ms.author: miescobar
 ms.subservice: custom-connectors

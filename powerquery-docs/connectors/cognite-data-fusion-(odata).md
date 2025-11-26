@@ -2,7 +2,7 @@
 title: Power Query Cognite Data Fusion (OData) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to and use the Cognite Data Fusion (OData) connector.
 author: evertoncolling
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors

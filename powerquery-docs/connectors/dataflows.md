@@ -2,7 +2,7 @@
 title: Power Query Dataflow connector
 description: Provides basic information and connection instructions for connecting to a Dataflow.
 author: Luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 2/6/2024
 ms.author: jeluitwi
 ms.subservice: connectors

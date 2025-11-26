@@ -3,7 +3,7 @@ title: Dataflows in solutions
 description: Provides an overview of dataflows in solutions, and includes special considerations and limitations.
 author: Luitwieler
 ms.author: jeluitwi
-ms.topic: conceptual 
+ms.topic: concept-article 
 ms.date: 4/2/2025 
 ms.subservice: dataflows
 ---

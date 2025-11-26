@@ -2,7 +2,7 @@
 title: Creating computed tables in dataflows
 description: Learn how to create computed tables in dataflows
 author: Luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 6/13/2023
 ms.author: jeluitwi
 ms.subservice: dataflows

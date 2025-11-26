@@ -2,7 +2,7 @@
 title: Power Query Impala database connector
 description: Provides basic information for the Impala database connector, along with how to connect to your Impala data.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/12/2025
 ms.author: dougklo
 ms.subservice: connectors

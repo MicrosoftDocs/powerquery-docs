@@ -2,7 +2,7 @@
 title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/7/2025
 ms.author: ehvonleh
 ms.subservice: transform-data

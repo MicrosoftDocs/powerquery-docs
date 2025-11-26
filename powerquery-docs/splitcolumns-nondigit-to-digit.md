@@ -2,7 +2,7 @@
 title: Split columns by non-digit to digit
 description: Split columns by non-digit to digit
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/10/2025
 ms.author: miescobar
 ms.subservice: transform-data

@@ -2,7 +2,7 @@
 title: Wolters Kluwer CCH Tagetik connector
 description: Provides prerequisites, capabilities supported, and connection instructions to your Wolters Kluwer CCH Tagetik data.
 author: innovation-team
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 09/11/2025
 ms.author: dougklo
 ms.subservice: connectors

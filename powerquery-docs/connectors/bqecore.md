@@ -2,7 +2,7 @@
 title: Power Query BQE Core connector
 description: Provides basic information, prerequisites, and instructions on how to connect to BQE Core.
 author: cruzgreg
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/11/2025
 ms.author: dougklo
 ms.subservice: connectors

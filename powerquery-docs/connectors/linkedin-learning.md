@@ -2,7 +2,7 @@
 title: Configure LinkedIn Learning Power BI connector
 description: Describes how to configure LinkedIn Learning Power BI connector. 
 author: lmasterson
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 09/11/2025
 ms.author: dougklo
 ms.subservice: connectors

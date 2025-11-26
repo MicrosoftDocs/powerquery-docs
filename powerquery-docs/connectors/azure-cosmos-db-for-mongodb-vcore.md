@@ -2,7 +2,7 @@
 title: Azure Cosmos DB for MongoDB vCore Data Connector
 description: Includes basic information and prerequisites, instructions on how to connect to your Azure Cosmos for Mongo vCore database, and information about advanced connection options.
 author: KazimMir
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/10/2025
 ms.author: dougklo
 ---

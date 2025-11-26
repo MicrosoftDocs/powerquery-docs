@@ -2,7 +2,7 @@
 title: Power Query LEAP (Beta) connector
 description: Includes basic information, prerequisites and instructions on how to connect to your LEAP data.
 author: appintbot-leapdev
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors

@@ -2,7 +2,7 @@
 title: Troubleshooting dataflow issue - get data from dataflow
 description: Troubleshooting dataflow issue - get data from dataflow.
 author: Luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/6/2023
 ms.author: jeluitwi
 ms.subservice: dataflows

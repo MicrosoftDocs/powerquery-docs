@@ -2,7 +2,7 @@
 title: Adding function documentation
 description: Add function documentation for Power Query connectors
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/9/2023
 ms.author: miescobar
 ms.subservice: custom-connectors

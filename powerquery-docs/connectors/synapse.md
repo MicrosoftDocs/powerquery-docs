@@ -2,7 +2,7 @@
 title: Power Query Azure Synapse Analytics workspace connector
 description: Provides basic information and connection instructions for the Azure Synapse Analytics Workspace connector.
 author: miquelladeboer
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/24/2024
 ms.author: mideboer
 ms.subservice: connectors

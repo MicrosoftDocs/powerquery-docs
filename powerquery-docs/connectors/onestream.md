@@ -4,7 +4,7 @@ description: Provides support, prerequisites, and instructions on how to connect
 author: os-mik
 ms.author: dougklo
 ms.date: 09/11/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
