@@ -3,31 +3,28 @@ title: TripPin 7 - Advanced Schema
 description: Adding an advanced schema with typing to your TripPin REST connector.
 author: ptyx507x
 ms.topic: tutorial
-ms.date: 5/17/2023
+ms.date: 11/25/2025
 ms.author: miescobar
 ms.subservice: custom-connectors
 ---
 
 # TripPin part 7 - Advanced schema with M types
 
->[!NOTE]
->This content currently references content from a legacy implementation for unit testing in Visual Studio. The content will be updated in the near future to cover the new [Power Query SDK test framework](../../../sdk-testframework/test-framework.md).
+> [!NOTE]
+>This content currently references content from a legacy implementation for unit testing in Visual Studio. The content will be updated in the future to cover the new [Power Query SDK test framework](../../../sdk-testframework/test-framework.md).
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
-In this lesson, you will:
+In this lesson, you:
 
 > [!div class="checklist"]
 > * Enforce a table schema using [M Types](/powerquery-m/power-query-m-type-system)
 > * Set types for nested records and lists
 > * Refactor code for reuse and unit testing
 
-In the previous lesson you defined your table schemas using a simple "Schema Table" system.
-This schema table approach works for many REST APIs/Data Connectors, but services that return complete
-or deeply nested data sets might benefit from the approach in this tutorial, which leverages
-the [M type system](/powerquery-m/power-query-m-type-system).
+In the previous lesson, you defined your table schemas using a simple "Schema Table" system. This schema table approach works for many REST APIs/Data Connectors. But services that return complete or deeply nested data sets might benefit from the approach in this tutorial, which uses the [M type system](/powerquery-m/power-query-m-type-system).
 
-This lesson will guide you through the following steps:
+This lesson guides you through the following steps:
 
 1. Adding unit tests.
 2. Defining custom M types.
@@ -36,8 +33,7 @@ This lesson will guide you through the following steps:
 
 ## Adding unit tests
 
-Before you start making use of the advanced schema logic, you'll add a set of unit tests to your connector
-to reduce the chance of inadvertently breaking something. Unit testing works like this:
+Before you start making use of the advanced schema logic, you need to add a set of unit tests to your connector to reduce the chance of inadvertently breaking something. Unit testing works like this:
 
 1. Copy the common code from the [UnitTest sample](../../../HandlingUnitTesting.md) into your `TripPin.query.pq` file.
 2. Add a section declaration to the top of your `TripPin.query.pq` file.
@@ -76,13 +72,11 @@ shared TripPin.UnitTest =
 ][report];
 ```
 
-Selecting run on the project will evaluate all of the Facts, and give you a report output that looks like this:
+Selecting run on the project evaluates all of the Facts, and gives you a report output that looks like this:
 
-![Initial Unit Test.](../../media/trippin7-unit-test-1.png)
+:::image type="content" source="../../media/trippin7-unit-test-1.png" alt-text="Screenshot of the Output tab of the M query output showing you the successful report output.":::
 
-Using some principles from [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development),
-you'll now add a test that currently fails, but will soon be reimplemented and fixed (by the end of this tutorial).
-Specifically, you'll add a test that checks one of the nested records (Emails) you get back in the People entity.
+Using some principles from [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development), you now add a test that currently fails, but can soon be reimplemented and fixed (by the end of this tutorial). Specifically, you add a test that checks one of the nested records (Emails) you get back in the People entity.
 
 ```powerquery-m
 Fact("Emails is properly typed", type text, Type.ListItem(Value.Type(People{0}[Emails])))
@@ -90,27 +84,27 @@ Fact("Emails is properly typed", type text, Type.ListItem(Value.Type(People{0}[E
 
 If you run the code again, you should now see that you have a failing test.
 
-![Unit test with failure.](../../media/trippin7-unit-test-2.png)
+:::image type="content" source="../../media/trippin7-unit-test-2.png" alt-text="Screenshot of the Output tab of the M query output showing you the tests that failed.":::
 
 Now you just need to implement the functionality to make this work.
 
 ## Defining custom M types
 
-The schema enforcement approach in the [previous lesson](../6-schema/readme.md) used "schema tables" defined as Name/Type pairs. It works well when working with flattened/relational data, but didn't support setting types on nested records/tables/lists, or allow you to reuse type definitions across tables/entities.
+The schema enforcement approach in the [previous lesson](../6-schema/readme.md) used "schema tables" defined as Name/Type pairs. It works well when working with flattened/relational data, but doesn't support setting types on nested records/tables/lists, or allow you to reuse type definitions across tables/entities.
 
-In the TripPin case, the data in the People and Airports entities contain structured columns, and even share a type (`Location`) for representing address information. Rather than defining Name/Type pairs in a schema table, you'll define each of these entities using custom M type declarations.
+In the TripPin case, the data in the People and Airports entities contain structured columns, and even share a type (`Location`) for representing address information. Rather than defining Name/Type pairs in a schema table, you need to define each of these entities using custom M type declarations.
 
-Here is a quick refresher about types in the M language from the [Language Specification](/powerquery-m/power-query-m-type-system):
+Here's a quick refresher about types in the M language from the [Language Specification](/powerquery-m/power-query-m-type-system).
 
->A **type value** is a value that **classifies** other values. A value that is classified by a type is said to **conform** to that type. The M type system consists of the following kinds of types:
->
->* Primitive types, which classify primitive values (`binary`, `date`, `datetime`, `datetimezone`, `duration`, `list`, `logical`, `null`, `number`, `record`, `text`, `time`, `type`) and also include a number of abstract types (`function`, `table`, `any`, and `none`)
->* Record types, which classify record values based on field names and value types
->* List types, which classify lists using a single item base type
->* Function types, which classify function values based on the types of their parameters and return values
->* Table types, which classify table values based on column names, column types, and keys
->* Nullable types, which classifies the value null in addition to all the values classified by a base type
->* Type types, which classify values that are types
+A **type value** is a value that **classifies** other values. A value that is classified by a type is said to **conform** to that type. The M type system consists of the following kinds of types:
+
+* Primitive types, which classify primitive values (`binary`, `date`, `datetime`, `datetimezone`, `duration`, `list`, `logical`, `null`, `number`, `record`, `text`, `time`, `type`) and also include a number of abstract types (`function`, `table`, `any`, and `none`)
+* Record types, which classify record values based on field names and value types
+* List types, which classify lists using a single item base type
+* Function types, which classify function values based on the types of their parameters and return values
+* Table types, which classify table values based on column names, column types, and keys
+* Nullable types, which classify the value null in addition to all the values classified by a base type
+* Type types, which classify values that are types
 
 Using the raw JSON output you get (and/or looking up the definitions in the [service's $metadata](https://services.odata.org/v4/TripPinService/$metadata)), you can define the following record types to represent OData complex types:
 
@@ -178,8 +172,7 @@ SchemaTable = #table({"Entity", "Type"}, {
 
 ## Enforcing a schema using types
 
-You'll rely on a common function (`Table.ChangeType`) to enforce a schema on your data, much like you used `SchemaTransformTable` in the [previous lesson](../6-schema/readme.md).
-Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and will apply your schema _recursively_ for all nested types. Its signature looks like this:
+You rely on a common function (`Table.ChangeType`) to enforce a schema on your data, much like you used `SchemaTransformTable` in the [previous lesson](../6-schema/readme.md). Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and applies your schema *recursively* for all nested types. Its signature looks like this:
 
 ```powerquery-m
 Table.ChangeType = (table, tableType as type) as nullable table => ...
@@ -187,7 +180,7 @@ Table.ChangeType = (table, tableType as type) as nullable table => ...
 
 The full code listing for the `Table.ChangeType` function can be found in the [Table.ChangeType.pqm](https://raw.githubusercontent.com/Microsoft/DataConnectors/master/samples/TripPin/7-AdvancedSchema/Table.ChangeType.pqm) file.
 
->[!Note]
+> [!NOTE]
 > For flexibility, the function can be used on tables, as well as lists of records (which is how tables would be represented in a JSON document).
 
 You then need to update the connector code to change the `schema` parameter from a `table` to a `type`, and add a call to `Table.ChangeType` in `GetEntity`.
@@ -232,16 +225,15 @@ GetPage = (url as text, optional schema as type) as table =>
 
 ### Confirming that nested types are being set
 
-The definition for your `PeopleType` now sets the `Emails` field to a list of text (`{text}`).
-If you're applying the types correctly, the call to [Type.ListItem](/powerquery-m/type-listitem) in your unit test should now be returning `type text` rather than `type any`.
+The definition for your `PeopleType` now sets the `Emails` field to a list of text (`{text}`). If you're applying the types correctly, the call to [Type.ListItem](/powerquery-m/type-listitem) in your unit test should now be returning `type text` rather than `type any`.
 
-Running your unit tests again show that they are now all passing.
+Running your unit tests again show that they're now all passing.
 
-![Unit test with success.](../../media/trippin7-unit-test-3.png)
+:::image type="content" source="../../media/trippin7-unit-test-3.png" alt-text="Screenshot of the Output tab of the M query output showing the unit tests succeeding.":::
 
 ## Refactoring common code into separate files
 
->[!Note]
+> [!NOTE]
 > The M engine will have improved support for referencing external modules/common code in the future, but this approach should carry you through until then.
 
 At this point, your extension almost has as much "common" code as TripPin connector code. In the future these [common functions](../../../helper-functions.md) will either be part of the built-in standard function library, or you'll be able to reference them from another extension. For now, you refactor your code in the following way:
@@ -251,7 +243,7 @@ At this point, your extension almost has as much "common" code as TripPin connec
 3. Define a function to load the code using [Expression.Evaluate](/powerquery-m/expression-evaluate).
 4. Load each of the common functions you want to use.
 
-The code to do this is included in the snippet below:
+The code to do this refactoring is included in the following snippet:
 
 ```powerquery-m
 Extension.LoadFunction = (fileName as text) =>
@@ -276,8 +268,7 @@ Table.ToNavigationTable = Extension.LoadFunction("Table.ToNavigationTable.pqm");
 
 ## Conclusion
 
-This tutorial made a number of improvements to the way you enforce a schema on the data you get from a REST API.
-The connector is currently hard coding its schema information, which has a performance benefit at runtime, but is unable to adapt to changes in the service's metadata overtime. Future tutorials will move to a purely dynamic approach that will infer the schema from the service's $metadata document.
+This tutorial made a number of improvements to the way you enforce a schema on the data you get from a REST API. The connector is currently hard coding its schema information, which has a performance benefit at runtime, but is unable to adapt to changes in the service's metadata overtime. Future tutorials will move to a purely dynamic approach that will infer the schema from the service's $metadata document.
 
 In addition to the schema changes, this tutorial added Unit Tests for your code, and refactored the common helper functions into separate files to improve overall readability.
 

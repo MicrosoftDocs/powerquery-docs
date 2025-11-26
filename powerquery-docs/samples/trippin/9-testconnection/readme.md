@@ -3,7 +3,7 @@ title: TripPin 9 - Test Connection
 description: Adding a test connection handler for gateway support to your TripPin REST connector.
 author: ptyx507x
 ms.topic: tutorial
-ms.date: 5/17/2024
+ms.date: 11/25/2025
 ms.author: miescobar
 ms.subservice: custom-connectors
 ms.custom: sfi-image-nochange
@@ -13,7 +13,7 @@ ms.custom: sfi-image-nochange
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
-In this lesson, you'll:
+In this lesson, you:
 
 > [!div class="checklist"]
 > * Add a TestConnection handler
@@ -23,7 +23,7 @@ In this lesson, you'll:
 Custom connector support was added to the April 2018 release of the [personal on-premises data gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-personal-mode-gateway).
 This new (preview) functionality allows for Scheduled Refresh of reports that make use of your custom connector.
 
-This tutorial covers the process of enabling your connector for refresh, and provides a quick walkthrough of the steps to configure the gateway. Specifically you'll:
+This tutorial covers the process of enabling your connector for refresh, and provides a quick walkthrough of the steps to configure the gateway. Specifically you:
 
 1. Add a TestConnection handler to your connector.
 2. Install the on-premises Data Gateway in Personal mode.
@@ -31,28 +31,23 @@ This tutorial covers the process of enabling your connector for refresh, and pro
 4. Publish a workbook that uses your connector to PowerBI.com.
 5. Configure scheduled refresh to test your connector.
 
-Go to [Handling Gateway Support](../../../HandlingGatewaySupport.md) for more information on the TestConnection handler.
+Go to [Handling gateway support](../../../HandlingGatewaySupport.md) for more information on the TestConnection handler.
 
 ## Background
 
 There are three prerequisites for configuring a data source for scheduled refresh using PowerBI.com:
 
-* **The data source is supported:** This means that the target gateway environment is aware of all of the functions contained in the query you want to refresh.
+* **The data source is supported:** The target gateway environment is aware of all of the functions contained in the query you want to refresh.
 * **Credentials are provided:** To present the right credential entry dialog, Power BI needs to know the support authentication mechanism for a given data source.
 * **The credentials are valid:** After the user provides credentials, they're validated by calling the data source's `TestConnection` handler.
 
-The first two items are handled by registering your connector with the gateway.
-When the user attempts to configure scheduled refresh in PowerBI.com, the query information is sent to your personal gateway to determine if any data sources that aren't recognized by the Power BI service (that is, custom ones that you created) are available there.
-The third item is handled by invoking the TestConnection handler defined for your data source.
+The first two items are handled by registering your connector with the gateway. When the user attempts to configure scheduled refresh in PowerBI.com, the query information is sent to your personal gateway to determine if any data sources in the Power BI service aren't recognized (that is, custom ones that you created) are available there. The third item is handled by invoking the TestConnection handler defined for your data source.
 
 ## Adding a TestConnection handler
 
-The TestConnection handler is added to the Data Source Kind declaration record (the same place you declare its supported authentication types).
-The handler is a `function` with a single parameter of type `any`, which returns a `list`.
-The first value in the list is the function that will be called to actually test the connection. This is generally the same as your main data source function.
-In some cases you may need to expose a separate `shared` function to provide an efficient connection test, however, this should generally be avoided.
+The TestConnection handler is added to the Data Source Kind declaration record (the same place you declare its supported authentication types). The handler is a `function` with a single parameter of type `any`, which returns a `list`. The first value in the list is the function that's called to actually test the connection. This function is generally the same as your main data source function. In some cases, you might need to expose a separate `shared` function to provide an efficient connection test, however, this should generally be avoided.
 
-Since the TripPin data source function has no required arguments, the implementation for TestConnection is fairly simple:
+Since the TripPin data source function doesn't have any required arguments, the implementation for TestConnection is fairly simple:
 
 ```powerquery-m
 // Data Source Kind description
@@ -73,14 +68,14 @@ TripPin = [
 
 Download and install the [on-premises data gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-personal-mode-gateway). When you run the installer, select the personal mode.
 
-After installation is complete, launch the gateway and sign into Power BI. The sign-in process will automatically register your gateway with the Power BI services. Once signed in, perform the following steps:
+After installation is complete, launch the gateway and sign into Power BI. The sign-in process automatically registers your gateway with the Power BI services. Once signed in, perform the following steps:
 
 1. Select the **Connectors** tab.
 2. Select the switch to enable support for **Custom data connectors**.
-3. Select the directory you want to load custom connectors from. This will usually be the same directory that you'd use for Power BI Desktop, but the value is configurable.
+3. Select the directory you want to load custom connectors from. This selection is usually the same directory that you use for Power BI Desktop, but the value is configurable.
 4. The page should now list all extension files in your target directory.
 
-![Gateway connector configuration.](../../media/trippin9-gateway.png)
+   :::image type="content" source="../../media/trippin9-gateway.png" alt-text="Screenshot of the gateway showing the gateway connector configuration dialog.":::
 
 Go to the [online documentation](/data-integration/gateway/) for more information about the gateway.
 
@@ -88,27 +83,27 @@ Go to the [online documentation](/data-integration/gateway/) for more informatio
 
 Open Power BI Desktop and create a report that imports data using the TripPin connector.
 
-![TripPin Navigator.](../../media/trippin9-navigator.png)
+:::image type="content" source="../../media/trippin9-navigator.png" alt-text="Screenshot of the Navigator showing the TripPin data.":::
 
 Add one or more visuals to your report page (optional), and then publish the report to PowerBI.com.
 
 After publishing, go to PowerBI.com and find the semantic model for the report you published. Select the ellipses, and then select **Schedule Refresh**. Expand the **Gateway connection** and **Data source credentials** sections.
 
-![Data source settings.](../../media/trippin9-settings-1.png)
+:::image type="content" source="../../media/trippin9-settings-1.png" alt-text="Screenshot of the Settings for TripPin dialog where you make your selections.":::
 
 > [!NOTE]
-> If the semantic model configuration page says that the report contains unknown data sources, your gateway/custom connector might not be configured properly. Go to the personal gateway configuration UI and make sure that there are no errors next to the TripPin connector. You may need to restart the gateway (on the **Service Settings** tab) to pick up the latest configuration.
+> If the semantic model configuration page says that the report contains unknown data sources, your gateway/custom connector might not be configured properly. Go to the personal gateway configuration UI and make sure that there are no errors next to the TripPin connector. You might need to restart the gateway (on the **Service Settings** tab) to pick up the latest configuration.
 
 Select the **Edit credentials** link to bring up the authentication dialog, and then select sign-in.
 
 > [!NOTE]
-> If you receive an error similar to the one below ("Failed to update data source credentials"), you most likely have an issue with your TestConnection handler.
+> If you receive an error similar to "Failed to update data source credentials", you most likely have an issue with your TestConnection handler.
 
-![TestConnection error.](../../media/trippin9-testconnection.png)
+:::image type="content" source="../../media/trippin9-testconnection.png" alt-text="Screenshot of the Configure TripPin dialog with the data source credentials error displayed.":::
 
-After a successful call to TestConnection, the credentials will be accepted. You can now schedule refresh, or select the semantic model ellipse and then select **Refresh Now**. You can select the **Refresh history** link to view the status of the refresh (which generally takes a few minutes to get kicked off).
+After a successful call to TestConnection, the credentials are accepted. You can now schedule refresh, or select the semantic model ellipse and then select **Refresh Now**. You can select the **Refresh history** link to view the status of the refresh (which generally takes a few minutes to get kicked off).
 
-![Successful configuration.](../../media/trippin9-settings-2.png)
+:::image type="content" source="../../media/trippin9-settings-2.png" alt-text="Screenshot of the settings for TripPin with the successful configuration message displayed.":::
 
 ## Conclusion
 
