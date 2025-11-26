@@ -2,7 +2,7 @@
 title: Power Query KQL database connector
 description: Includes basic information, prerequisites, and information on how to connect to a KQL database, along with a list of limitations.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/24/2024
 ms.author: dougklo
 ms.subservice: connectors

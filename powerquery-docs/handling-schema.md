@@ -2,7 +2,7 @@
 title: Handling schema for Power Query connectors
 description: Manage schema for Power Query connectors
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/9/2023
 ms.author: miescobar
 ms.subservice: custom-connectors

@@ -4,7 +4,7 @@ description: Learn how to secure Power Query, with best practices for protecting
 author: DougKlopfenstein
 ms.author: dougklo
 ms.service: powerquery
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: horz-security
 ms.date: 9/24/2025
 ai-usage: ai-assisted

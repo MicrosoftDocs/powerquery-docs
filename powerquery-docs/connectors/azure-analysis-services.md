@@ -2,7 +2,7 @@
 title: Power Query Azure Analysis Services database connector
 description: Includes basic information about products that use the Azure Analysis Services database connector, supported authentication types, prerequisites, and connection instructions.
 author: dougklopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/18/2024
 ms.author: dougklo
 LocalizationGroup: reference

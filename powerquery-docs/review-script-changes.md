@@ -2,7 +2,7 @@
 title: Review script changes in Power Query Online
 description: Understanding the 'Review Script Changes' modal in Power Query Online
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/9/2023
 ms.author: miescobar
 ms.subservice: user-assistance

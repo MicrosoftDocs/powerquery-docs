@@ -2,7 +2,7 @@
 title: Sync your Excel data source with Dataverse using a dataflow
 description: Describes how to keep data loaded into Dataverse synchronized with the data source using dataflows.
 author: Luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/6/2023
 ms.author: jeluitwi
 ms.subservice: dataflows

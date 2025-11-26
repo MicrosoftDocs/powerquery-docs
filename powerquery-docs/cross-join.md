@@ -4,7 +4,7 @@ description: Describes how to perform a cross-join operation in Power Query usin
 author: ptyx507
 ms.date: 5/16/2024
 ms.author: miescobar
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: transform-data
 ---
 

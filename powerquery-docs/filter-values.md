@@ -4,7 +4,7 @@ description: In Power Query, you can include or exclude rows according to a spec
 author: ptyx507
 ms.date: 5/20/2024
 ms.author: miescobar
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: transform-data
 ---
 

@@ -2,7 +2,7 @@
 title: Power Query Smartsheet connector
 description: Provides basic information, prerequisites, and connection instructions, along with troubleshooting information for the Smartsheet connector.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors

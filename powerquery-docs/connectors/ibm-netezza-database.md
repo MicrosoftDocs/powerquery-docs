@@ -2,7 +2,7 @@
 title: Power Query Netezza database connector
 description: Provides basic information for the Netezza database connector, along with how to connect to your Netezza data.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 07/01/2025
 ms.author: dougklo
 ms.subservice: connectors

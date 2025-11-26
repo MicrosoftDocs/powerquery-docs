@@ -2,7 +2,7 @@
 title: Troubleshoot dataflow issues - creating dataflows
 description: Troubleshoot dataflow issues - creating dataflows
 author: luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 01/25/2023
 ms.author: jeluitwi
 ms.subservice: dataflows

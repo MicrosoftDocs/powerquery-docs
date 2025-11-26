@@ -2,7 +2,7 @@
 title: Link tables between dataflows
 description: Learn how to link tables in dataflows
 author: Luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 6/14/2023
 ms.author: jeluitwi
 ms.subservice: dataflows

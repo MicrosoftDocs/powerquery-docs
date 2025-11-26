@@ -2,7 +2,7 @@
 title: Power Query SQL Server Analysis Services database connector
 description: Includes basic information about products that use the SQL Server Analysis Services database connector, supported authentication types, prerequisites, and connection instructions.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/24/2024
 ms.author: dougklo
 ms.subservice: connectors

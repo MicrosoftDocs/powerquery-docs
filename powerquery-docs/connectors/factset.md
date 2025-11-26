@@ -3,7 +3,7 @@ title: Power Query FactSet Enterprise connector
 description: Provides basic information and prerequisites for the FactSet Enterprise connector, and includes descriptions of the optional input parameters.
 author: eschmidtfds
 ms.service: powerquery
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors

@@ -2,7 +2,7 @@
 title: Power Query Azure HDInsight on AKS Trino connector
 description: Provides instructions for using the Azure HDInsight on AKS Trino connector, including descriptions of the optional input parameters, and connector limitations.
 author: georgewfisher
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 10/24/2024
 ms.author: gefisher
 ms.subservice: connectors
