@@ -2,7 +2,7 @@
 title: Power Query connector for FHIR
 description: Power Query connector for FHIR reference
 author: hansenms
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/24/2024
 ms.author: mihansen
 ms.subservice: connectors

@@ -4,7 +4,7 @@ description: Demonstrates the effect of query folding in Power Query. A comparis
 author: ptyx507x
 ms.date: 11/7/2025
 ms.author: miescobar
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: transform-data
 ---
 

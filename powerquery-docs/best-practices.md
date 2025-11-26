@@ -4,7 +4,7 @@ description: Best practices when working with Power Query
 author: ptyx507
 ms.date: 7/9/2025
 ms.author: miescobar
-ms.topic: conceptual
+ms.topic: concept-article
 ms.search.form: DataflowGen2 Overview
 ms.subservice: transform-data
 ---

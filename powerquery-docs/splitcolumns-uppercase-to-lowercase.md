@@ -2,7 +2,7 @@
 title: Split columns by uppercase to lowercase
 description: Split columns by uppercase to lowercase
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/10/2025
 ms.author: miescobar
 ms.subservice: transform-data

@@ -3,7 +3,7 @@ title: Azure Blob Storage
 description: Includes basic information, prerequisites, and information on how to connect to Azure Blob Storage.
 
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 10/4/2024
 ms.author: dougklo
 ms.subservice: connectors

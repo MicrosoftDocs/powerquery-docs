@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Denodo connect
 author: denodo-research-labs
 ms.author: dougklo
 ms.service: powerquery
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 9/11/2025
 ms.subservice: connectors
 ms.custom: sfi-image-nochange

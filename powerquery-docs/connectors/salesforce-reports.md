@@ -2,7 +2,7 @@
 title: Power Query Salesforce Reports connector.
 description: Includes basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 7/22/2025
 ms.author: dougklo
 ms.subservice: connectors

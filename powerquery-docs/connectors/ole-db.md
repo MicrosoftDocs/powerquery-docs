@@ -2,7 +2,7 @@
 title: OLE DB Power Query Data Connector
 description: Provides basic information and connection instructions for the OLE DB connector.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/24/2024
 ms.author: dougklo
 ms.subservice: connectors

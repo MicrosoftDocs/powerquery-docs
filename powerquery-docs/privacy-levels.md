@@ -3,7 +3,7 @@ title: Privacy levels in Power Query
 description: Describes what privacy levels and privacy level options are and how they're used in Power Query Online and Power Query Desktop.
 author: ptyx507x
 ms.author: miescobar
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 6/26/2024
 ms.subservice: transform-data
 ---

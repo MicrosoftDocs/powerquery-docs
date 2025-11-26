@@ -2,7 +2,7 @@
 title: Power Query Active Directory connector
 description: Provides basic information, prerequisites, and connection instructions, along with troubleshooting information for the Active Directory connector.
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/31/2024
 ms.author: dougklo
 ms.subservice: connectors

@@ -2,7 +2,7 @@
 title: Power Query Online Usage Limits
 description: Authoring and refresh limits for Power Query Online in its various product integrations.
 author: Luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 3/22/2024
 ms.author: jeluitwi
 ms.subservice: user-assistance

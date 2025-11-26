@@ -2,7 +2,7 @@
 title: FHIR Power Query folding
 description: Power Query connector for FHIR query folding.
 author: hansenms
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 3/13/2024
 ms.author: mihansen
 ms.subservice: connectors
