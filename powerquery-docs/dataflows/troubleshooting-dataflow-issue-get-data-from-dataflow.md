@@ -26,9 +26,9 @@ In the desktop tools, such as Power Query in Excel and Power Query in Power BI D
 
 You have to set up a scheduled refresh for a dataflow, or&mdash;if you want to just have a single refresh&mdash;use the manual refresh option.
 
-:::image type="content" source="media/troubleshoot-dataflow-issue-get-data-from-dataflow/dataflows-create-use_13.png" alt-text="Screenshot of the Power BI dataflows indicating where to refresh.":::
+:::image type="content" source="media/troubleshoot-dataflow-issue-get-data-from-dataflow/dataflows-create-use-13.png" alt-text="Screenshot of the Power BI dataflows indicating where to refresh.":::
 
-:::image type="content" source="media/troubleshoot-dataflow-issue-get-data-from-dataflow/dataflows-create-use_14.png" alt-text="Screenshot of the scheduled refresh information for dataflows.":::
+:::image type="content" source="media/troubleshoot-dataflow-issue-get-data-from-dataflow/dataflows-create-use-14.png" alt-text="Screenshot of the scheduled refresh information for dataflows.":::
 
 After a dataflow is refreshed, the data in tables is visible in the **Navigator** window of other tools and services.
 
