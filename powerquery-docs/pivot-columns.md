@@ -4,7 +4,7 @@ description: Describes how to use an aggregation calculation on table column val
 author: ptyx507
 ms.date: 7/21/2025
 ms.author: miescobar
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: transform-data
 ---
 

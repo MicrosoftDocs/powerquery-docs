@@ -2,7 +2,7 @@
 title: FHIR Power Query authentication
 description: FHIR Power Query authentication
 author: hansenms
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 7/16/2025
 ms.author: mihansen
 ms.subservice: connectors

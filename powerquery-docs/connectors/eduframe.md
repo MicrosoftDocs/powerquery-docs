@@ -2,7 +2,7 @@
 title: Power Query Eduframe Reporting (Beta) connector
 description: Provides basic information and prerequisites for the Eduframe Reporting connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: StijnKing
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/11/2025
 ms.author: dougklo
 ms.subservice: connectors

@@ -2,7 +2,7 @@
 title: FHIR Power Query Relationships
 description: Power Query connector for FHIR table relationships
 author: hansenms
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 7/25/2023
 ms.author: mihansen
 ms.subservice: connectors

@@ -2,7 +2,7 @@
 title: Handling status codes with Web.Contents for Power Query connectors
 description: Manage status codes with Web.Contents for Power Query connectors
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 10/16/2022
 ms.author: miescobar
 ms.subservice: custom-connectors

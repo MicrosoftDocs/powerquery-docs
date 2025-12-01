@@ -3,7 +3,7 @@ title: TripPin 3 - Navigation Tables
 description: Adding navigation tables to the TripPin REST connector.
 author: ptyx507x
 ms.topic: tutorial
-ms.date: 5/16/2024
+ms.date: 11/25/2025
 ms.author: miescobar
 ms.subservice: custom-connectors
 ---
@@ -12,19 +12,19 @@ ms.subservice: custom-connectors
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
-In this lesson, you will:
+In this lesson, you:
 
 > [!div class="checklist"]
 > * Create a navigation table for a fixed set of queries
 > * Test the navigation table in Power BI Desktop
 
-This lesson adds a navigation table to the TripPin connector created in the [previous lesson](../2-rest/readme.md). When your connector used the `OData.Feed` function ([Part 1](../1-odata/readme.md)), you received the navigation table “for free”, as derived from the OData service’s $metadata document. When you moved to the `Web.Contents` function ([Part 2](../2-rest/readme.md)), you lost the built-in navigation table. In this lesson, you take a set of fixed queries you created in Power BI Desktop and add the appropriate metadata for Power Query to popup the **Navigator** dialog for your data source function.
+This lesson adds a navigation table to the TripPin connector created in the [previous lesson](../2-rest/readme.md). When your connector used the `OData.Feed` function ([Part 1](../1-odata/readme.md)), you received the navigation table "for free," as derived from the OData service’s $metadata document. When you moved to the `Web.Contents` function ([Part 2](../2-rest/readme.md)), you lost the built-in navigation table. In this lesson, you take a set of fixed queries you created in Power BI Desktop and add the appropriate metadata for Power Query to popup the **Navigator** dialog for your data source function.
 
-See the [Navigation Table documentation](../../../handling-navigation-tables.md) for more information about using navigation tables.
+Go to the [Navigation Table documentation](../../../handling-navigation-tables.md) for more information about using navigation tables.
 
 ## Defining fixed queries in the connector
 
-A simple connector for a REST API can be thought of as a fixed set of queries, each returning a table. These tables are made discoverable through the connector’s navigation table. Essentially, each item in the navigator is associated with a specific URL and set of transformations.
+A simple connector for a REST API can be thought of as a fixed set of queries, each returning a table. These tables are made discoverable through the connector's navigation table. Essentially, each item in the navigator is associated with a specific URL and set of transformations.
 
 You start by copying the queries you wrote in Power BI Desktop (in the previous lesson) into your connector file. Open the TripPin project in Visual Studio Code, and paste the Airlines and Airports queries into the TripPin.pq file. You can then turn those queries into functions that take a single text parameter:
 
@@ -56,7 +56,7 @@ GetAirportsTable = (url as text) as table =>
         #"Changed Type";
 ```
 
-Next you'll import the mock navigation table query you wrote that creates a fixed table linking to these data set queries. Call it `TripPinNavTable`:
+Next you need to import the mock navigation table query you wrote that creates a fixed table linking to these data set queries. Call it `TripPinNavTable`:
 
 ```powerquery-m
 TripPinNavTable = (url as text) as table =>
@@ -80,7 +80,7 @@ shared TripPin.Contents =  Value.ReplaceType(TripPinNavTable, type function (url
 ```
 
 > [!NOTE]
-> Your extension can mark multiple functions as `shared`, with or without associating them with a `DataSource.Kind`. However, when you associate a function with a specific `DataSource.Kind`, each function **must** have the same set of *required* parameters, with the same name and type. This is because the data source function parameters are combined to make a 'key' used for looking up cached credentials.
+> Your extension can mark multiple functions as `shared`, with or without associating them with a `DataSource.Kind`. However, when you associate a function with a specific `DataSource.Kind`, each function **must** have the same set of *required* parameters, with the same name and type. This requirement exists because the data source function parameters are combined to make a 'key' used for looking up cached credentials.
 
 Build your connector after finalizing all the changes and test your `TripPin.Contents` function using the TripPin.query.pq file. You can continue to use the previously created credential or you can set a new one and then evaluate your current Power Query file.
 
@@ -88,7 +88,7 @@ Build your connector after finalizing all the changes and test your `TripPin.Con
 TripPin.Contents("https://services.odata.org/v4/TripPinService/")
 ```
 
-![TripPin Table.](../../media/trippin3-table.png)
+:::image type="content" source="../../media/trippin3-table.png" alt-text="Screenshot of the PQTest result with the output of the modified connector.":::
 
 ## Creating a navigation table
 
@@ -109,22 +109,23 @@ TripPinNavTable = (url as text) as table =>
 ```
 
 Running your test query again, after building your connector again, gives you a similar result as last time&mdash;with a few more columns added.
-![TripPin Table2.](../../media/trippin3-table2.png)
+
+:::image type="content" source="../../media/trippin3-table2.png" alt-text="Screenshot of the PQTest result with the output containing a number of new rows.":::
 
 > [!NOTE]
 > You don't see the **Navigator** window appear in the PQTest result window of Visual Studio Code. The **M Query Output** window always displays the underlying table.
 
 If you copy your extension over to your Power BI Desktop custom connector and invoke the new function from the **Get Data** dialog, your navigator appears.
 
-![TripPin Navigator.](../../media/trippin3-nav.png)
+:::image type="content" source="../../media/trippin3-nav.png" alt-text="Screenshot of the Navigator dialog with the results of the new function displayed.":::
 
-If you right select on the root of the navigation tree and select **Edit**, you see the same table as you did within Visual Studio.
+If you right select the root of the navigation tree and select **Edit**, the same table as appeared in Visual Studio is displayed.
 
-![TripPin Query.](../../media/trippin3-query.png)
+:::image type="content" source="../../media/trippin3-query.png" alt-text="Screenshot of the Power Query editor displaying the same table as in the previous PQTest result.":::
 
 ## Conclusion
 
-In this tutorial, you added a [Navigation Table](../../../handlingnavigationtables.md) to your extension. Navigation Tables are a key feature that makes connectors easier to use. In this example your navigation table only has a single level, but the Power Query UI supports displaying navigation tables that have multiple dimensions (even when they're ragged).
+In this tutorial, you added a [Navigation Table](../../../handlingnavigationtables.md) to your extension. Navigation Tables is a key feature that makes connectors easier to use. In this example, your navigation table only has a single level, but the Power Query UI supports displaying navigation tables that have multiple dimensions (even when they're ragged).
 
 ## Next steps
 

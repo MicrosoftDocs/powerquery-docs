@@ -2,8 +2,8 @@
 title: Security roles and permission levels in standard dataflows
 description: Describes the security roles and permission levels used in standard dataflows.
 author: Luitwieler
-ms.topic: conceptual
-ms.date: 6/14/2023
+ms.topic: concept-article
+ms.date: 12/1/2025
 ms.author: jeluitwi
 ms.subservice: dataflows
 ---
@@ -18,8 +18,8 @@ Some roles are needed to create dataflows, and others are required to control wh
 
 | Security role              | Privileges                     | Description                                                  |
 | -------------------------- | ------------------------------ | ------------------------------------------------------------ |
-| Environment Maker          | Create dataflows  | Required to create any dataflow. Standard dataflows require additional roles depending on Dataverse tables permissions.   |
-| Basic User   | Write to non-custom tables | Has all the rights to work with non-custom tables.         |
+| Environment Maker          | Create dataflows  | Required to create any dataflow. Standard dataflows require more roles depending on Dataverse tables permissions.   |
+| Basic User   | Write to noncustom tables | Has all the rights to work with noncustom tables.         |
 | System Customizer          | Create custom tables         | Custom tables this user creates are visible to this user only. |
 
 ## Steps to assign roles
@@ -38,15 +38,15 @@ To add a security role to a user who is already present in an environment:
 
 3. Select **Manage users in Dynamics 365**.
 
-   ![Select Manage users in Dynamics 365.](/power-platform/admin/media/manage-users-dynamics-365.png)
+   :::image type="content" source="/power-platform/admin/media/manage-users-dynamics-365.png" alt-text="Screenshot of the Power Platform admin center with the Manage users in Dynamics 365 option emphasized.":::
 
 4. Select the user from the list of users in the environment, and then select **Manage roles**.
 
-   :::image type="content" source="/power-platform/admin/media/select-manage-roles.png" alt-text="Select Manage roles.":::
+   :::image type="content" source="/power-platform/admin/media/select-manage-roles.png" alt-text="Screenshot of the list of users in the environment with the Manage roles option emphasized.":::
 
 5. Assign one or more security roles to the user.
 
-   :::image type="content" source="/power-platform/admin/media/manage-user-roles.png" alt-text="Manage user roles.":::
+   :::image type="content" source="/power-platform/admin/media/manage-user-roles.png" alt-text="Screenshot of the Manage user roles dialog where you assign one or more security roles to the user.":::
 
 6. Select **OK**.
 
@@ -59,4 +59,3 @@ If you haven't heard of row-level security before, here's a quick introduction. 
 ## Sharing or coauthoring dataflows
 
 Currently, it's not possible for two different users to collaborate on the same dataflow. Only the creator (owner) of the dataflow can edit it. In the event a dataflow needs to be transferred to a different user, an environment administrator can change the owner of the dataflow from one user to another, as long as the current owner is still a member of the organization. For security reasons, transferring ownership removes the connection associated with the dataflow and requires the new owner to update the credentials used by the dataflow.
-

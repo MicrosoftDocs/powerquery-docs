@@ -2,7 +2,7 @@
 title: General usage
 description: Using PQTest with your extension
 author: ryan-syed
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 02/14/2024
 ms.author: dougklo
 ms.subservice: custom-connectors

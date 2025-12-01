@@ -2,7 +2,7 @@
 title: Handling transformations with Web.Contents for Power Query connectors
 description: Manage transformations with Web.Contents for Power Query connectors
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/7/2025
 ms.author: miescobar
 ms.subservice: custom-connectors

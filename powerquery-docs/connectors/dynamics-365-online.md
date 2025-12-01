@@ -2,7 +2,7 @@
 title: Power Query Dynamics 365 Online (legacy) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Dynamics 365 Online (legacy).
 author: DougKlopfenstein
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/24/2024
 ms.author: dougklo
 ms.subservice: connectors

@@ -2,8 +2,8 @@
 title: Troubleshooting the Power Query Web connector
 description: Provides troubleshooting tips for errors that might occur when using the Power Query Web connector to connect to a web site.
 author: DougKlopfenstein
-ms.topic: conceptual
-ms.date: 2/14/2024
+ms.topic: concept-article
+ms.date: 12/1/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -22,7 +22,7 @@ ms.custom: sfi-image-nochange
 [Web.Page](/powerquery-m/web-page)
 
 * `Web.Page` is a legacy function for retrieving web content that needs to be accessed through a browser, such as HTML pages.
-* It's built on Internet Explorer. Because of this requirement, it's being replaced in the UI with `Web.BrowserContents`. However, `Web.Page` will continue to be available at the engine level for backward compatibility.
+* It's built on Internet Explorer. Because of this requirement, it's being replaced in the UI with `Web.BrowserContents`. However, `Web.Page` continues to be available at the engine level for backward compatibility.
 * A gateway is required to use it in cloud environments, such as Power Query Online.
 
 [Web.BrowserContents](/powerquery-m/web-browsercontents)
@@ -48,7 +48,7 @@ The following table summarizes the differences.
 
 ## "This browser is no longer supported" warnings in the Web View
 
-When importing a web page, you can view a preview of the page using the **Web View** tab in Power Query's navigator dialog. This preview may sometimes display a warning such as "This browser is no longer supported". When this happens, it's usually because the Web View currently renders the Web View preview using Internet Explorer, which is no longer supported by some websites. However, this only affects the Web View and doesn't affect the web connector itself. As long as you're using the connectors based on [Web.Contents](/powerquery-m/web-contents) or [Web.BrowserContents](/powerquery-m/web-browsercontents) (and not [Web.Page](/powerquery-m/web-page)), you can safely ignore such warnings. Refer to [What's the difference between Web.Contents, Web.BrowserContents, and Web.Page?](#whats-the-difference-between-webcontents-webbrowsercontents-and-webpage) for more information on the different web connectors and their underlying technologies.
+When importing a web page, you can view a preview of the page using the **Web View** tab in Power Query's navigator dialog. This preview might sometimes display a warning such as "This browser is no longer supported." When this warning occurs, it's usually because the Web View currently renders the Web View preview using Internet Explorer, which is no longer supported by some websites. However, this warning only affects the Web View and doesn't affect the web connector itself. As long as you're using the connectors based on [Web.Contents](/powerquery-m/web-contents) or [Web.BrowserContents](/powerquery-m/web-browsercontents) (and not [Web.Page](/powerquery-m/web-page)), you can safely ignore such warnings. For more information on the different web connectors and their underlying technologies, go to [What's the difference between Web.Contents, Web.BrowserContents, and Web.Page?](#whats-the-difference-between-webcontents-webbrowsercontents-and-webpage).
 
 ## Handling dynamic web pages
 
@@ -59,7 +59,7 @@ Web pages that load their content dynamically might require special handling. If
 3. You refresh the query again.
 4. No error occurs.
 
-These kinds of issues are usually due to timing. Pages that load their content dynamically can sometimes be inconsistent since the content can change after the browser considers loading complete. Sometimes the web connector downloads the HTML after all the dynamic content has loaded. Other times the changes are still in progress when it downloads the HTML, leading to sporadic errors.
+These kinds of issues are usually due to timing. Pages that load their content dynamically can sometimes be inconsistent since the content can change after the browser considers loading complete. Sometimes the web connector downloads the HTML after all the dynamic content is loaded. Other times the changes are still in progress when it downloads the HTML, leading to sporadic errors.
 
 The solution is to use the `WaitFor` option of [Web.BrowserContents](/powerquery-m/web-browsercontents), which indicates either a selector or a length of time that should be waited for before downloading the HTML.
 
@@ -71,7 +71,7 @@ Both [Web.BrowserContents](/powerquery-m/web-browsercontents) and [Web.Page](/po
 
 If you're using [Web.Page](/powerquery-m/web-page) and receive a `Please specify how to connect` error, ensure that you have Internet Explorer 10 or later installed on the machine that hosts your on-premises data gateway.
 
-If you're using [Web.BrowserContents](/powerquery-m/web-browsercontents) and receive a `We were unable to find the WebView2 runtime` error, ensure that you have the WebView2 runtime installed on the machine that hosts your on-premises data gateway. The error message should provide a link to the WebView2 runtime installer. If you've installed the runtime but are still seeing the error, ensure that the gateway service account (usually PBIEgwService) has access to the install location of the WebView2 runtime (for example, C:\Program Files (x86)\Microsoft\EdgeWebView).
+If you're using [Web.BrowserContents](/powerquery-m/web-browsercontents) and receive a `We were unable to find the WebView2 runtime` error, ensure that you have the WebView2 runtime installed on the machine that hosts your on-premises data gateway. The error message should provide a link to the WebView2 runtime installer. If you installed the runtime but are still seeing the error, ensure that the gateway service account (usually PBIEgwService) has access to the install location of the WebView2 runtime (for example, C:\Program Files (x86)\Microsoft\EdgeWebView).
 
 ## "We encountered an error when initializing the web browser" errors when using Web.BrowserContents
 
@@ -119,7 +119,7 @@ in
 
 ## Capturing web requests and certificate revocation
 
-We've strengthened the security of web connections to protect your data. However, this means that certain scenarios, like capturing web requests with Fiddler, will no longer work by default. To enable those scenarios:
+We strengthened the security of web connections to protect your data. However, this update means that certain scenarios, like capturing web requests with Fiddler, no longer works by default. To enable those scenarios:
 
 1. Open Power BI Desktop.
 2. Under the **File** tab, select **Options and settings** > **Options**.
@@ -131,23 +131,23 @@ We've strengthened the security of web connections to protect your data. However
 5. Restart Power BI Desktop.
 
 > [!IMPORTANT]
->Be aware that unchecking **Enable certificate revocation check** will make web connections less secure.
+>Unchecking **Enable certificate revocation check** makes web connections less secure.
 
-To set this scenario in Group Policy, use the "DisableCertificateRevocationCheck" key under the registry path "Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Power BI Desktop". Setting "DisableCertificateRevocationCheck" to 0 will always enable the check (stopping Fiddler and similar software from working) and setting "DisableCertificateRevocationCheck" to 1 will always disable the check (enabling Fiddler and similar software).
+To set this scenario in Group Policy, use the "DisableCertificateRevocationCheck" key under the registry path "Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Power BI Desktop". Setting "DisableCertificateRevocationCheck" to 0 always enables the check (stopping Fiddler and similar software from working) and setting "DisableCertificateRevocationCheck" to 1 always disables the check (enabling Fiddler and similar software).
 
 ## Changing the authentication method
 
-In some cases, you may need to change the authentication method you use to access a particular site. If this change is necessary, go to [Change the authentication method](../../connectorauthentication.md#change-the-authentication-method).
+In some cases, you might need to change the authentication method you use to access a particular site. If this change is necessary, go to [Change the authentication method](../../connectorauthentication.md#change-the-authentication-method).
 
 ## Authenticating to arbitrary services
 
-Some services support the ability for the Web connector to authenticate with OAuth/Microsoft Entra ID authentication out of the box. However, this won't work in most cases.
+Some services support the ability for the Web connector to authenticate with OAuth/Microsoft Entra ID authentication out of the box. However, this authentication doesn't work in most cases.
 
-When attempting to authenticate, if you see the following error:
+When attempting to authenticate, if the following error occurs:
 
 `We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.`
 
-   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](./credential-type-not-supported.png)
+   :::image type="content" source="./credential-type-not-supported.png" alt-text="Screenshot of the authentication dialog displaying an error from connecting to an endpoint that doesn't support OAuth with the web connector.":::
 
 Contact the service owner. They either need to change the authentication configuration or build a custom connector.
 
@@ -161,7 +161,7 @@ It's not possible to switch Power Query to use HTTP 1.0. Power Query always send
 
 Power Query currently doesn't support connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.microsoft.com). More information: [Lack of Support for Microsoft Graph in Power Query](../../connecting-to-graph.md)
 
-### See also
+### Related content
 
 * [Power Query Web connector](web.md)
 * [Get webpage data by providing examples](web-by-example.md)

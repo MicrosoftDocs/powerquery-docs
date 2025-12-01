@@ -2,8 +2,8 @@
 title: Using incremental refresh with dataflows
 description: Learn how to configure incremental refresh for dataflows
 author: Luitwieler
-ms.topic: conceptual
-ms.date: 1/26/2024
+ms.topic: concept-article
+ms.date: 11/26/2025
 ms.author: jeluitwi
 ms.subservice: dataflows
 ---
@@ -21,9 +21,9 @@ Incremental refresh is available in dataflows created in Power BI and dataflows 
 > [!NOTE]
 > When the schema for a table in an analytical dataflow changes, a full refresh takes place to ensure that all the resulting data matches the new schema. As a result, any data stored incrementally is refreshed and in some cases, if the source system doesn't retain historic data, is lost.
 
-![Incremental refresh for dataflows.](media/incremental-refresh/dataflows-incremental-refresh-03.png)
+:::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-03.png" alt-text="Screenshot of the incremental refresh settings dialog used to refresh dataflows.":::
 
-Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](/power-bi/service-premium-what-is). Incremental refresh in Power Apps requires Power Apps per-app or per-user plans, and is only available for dataflows with Azure Data Lake Storage as the destination. 
+Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](/power-bi/service-premium-what-is). Incremental refresh in Power Apps requires Power Apps per-app or per-user plans, and is only available for dataflows with Azure Data Lake Storage as the destination.
 
 In either Power BI or Power Apps, using incremental refresh requires that source data ingested into the dataflow have a DateTime field on which incremental refresh can filter.
 
@@ -33,20 +33,20 @@ A dataflow can contain many tables. Incremental refresh is set up at the table l
 
 To set up an incremental-refreshed table, start by configuring your table as you would any other table.
 
-After the dataflow is created and saved, select **Incremental refresh** :::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-icon.png" alt-text="Incremental refresh."::: in the table view, as shown in the following image.
+After the dataflow is created and saved, select **Incremental refresh** :::image type="icon" source="media/incremental-refresh/dataflows-incremental-refresh-icon.png"::: in the table view, as shown in the following image.
 
-![Incremental refresh icon for dataflows.](media/incremental-refresh/dataflows-incremental-refresh-01.png)
+:::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-01.png" alt-text="Screenshot of Power BI with the incremental refresh icon for dataflows emphasized.":::
 
 When you select the icon, the **Incremental refresh settings** window appears. Turn on incremental refresh.
 
-![Incremental refresh for dataflows.](media/incremental-refresh/dataflows-incremental-refresh-03.png)
+:::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-03.png" alt-text="Screenshot of the incremental refresh settings dialog with incremental refresh turned on.":::
 
 The following list explains the settings in the **Incremental refresh settings** window.
 
 * **Incremental refresh on/off toggle**: Turns the incremental refresh policy on or off for the table.
 * **Filter field drop-down**: Selects the query field on which the table should be filtered for increments. This field only contains DateTime fields. You can't use incremental refresh if your table doesn't contain a DateTime field.
   > [!IMPORTANT]
-  > Choose an unchanging date field for the incremental refresh filter. If the field value changes (for example, with a _date modified_ field), this can lead to [refresh failures because of duplicate values](/power-bi/connect-data/incremental-refresh-troubleshoot#problem-refresh-fails-because-of-duplicate-values) in the data.
+  > Choose an unchanging date field for the incremental refresh filter. If the field value changes (for example, with a *date modified* field), this change can lead to [refresh failures because of duplicate values](/power-bi/connect-data/incremental-refresh-troubleshoot#problem-refresh-fails-because-of-duplicate-values) in the data.
 * **Store/refresh rows from the past**: The example in the previous image illustrates these next few settings.
 
    In this example, we define a refresh policy to store five years of data in total and incrementally refresh 10 days of data. Assuming that the table is refreshed daily, the following actions are carried out for each refresh operation:
@@ -59,7 +59,7 @@ The following list explains the settings in the **Incremental refresh settings**
 
    The first dataflow refresh might take a while to import all five years, but subsequent refreshes are likely to be completed much more quickly.
 
-* **Detect data changes**: An incremental refresh of 10 days is much more efficient than a full refresh of five years, but you might be able to do even better. When you select the **Detect data changes** check box, you can select a date/time column to identify and refresh only the days where the data has changed. This assumes such a column exists in the source system, which is typically for auditing purposes. The maximum value of this column is evaluated for each of the periods in the incremental range. If that data hasn't changed since the last refresh, there's no need to refresh the period. In the example, this might further reduce the days incrementally refreshed from 10 to perhaps 2.
+* **Detect data changes**: An incremental refresh of 10 days is much more efficient than a full refresh of five years, but you might be able to do even better. When you select the **Detect data changes** check box, you can select a date/time column to identify and refresh only the days where the data changed. This assumes such a column exists in the source system, which is typically for auditing purposes. The maximum value of this column is evaluated for each of the periods in the incremental range. If that data hasn't changed since the last refresh, there's no need to refresh the period. In the example, this might further reduce the days incrementally refreshed from 10 to perhaps 2.
 
   > [!TIP]
   > The current design requires that the column used to detect data changes be persisted and cached into memory. You might want to consider one of the following techniques to reduce cardinality and memory consumption:
@@ -77,7 +77,7 @@ The following list explains the settings in the **Incremental refresh settings**
 After incremental refresh is configured, the dataflow automatically alters your query to include filtering by date. If the dataflow was created in Power BI, you can also edit the automatically generated query by using the advanced editor in Power Query to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
 
 > [!NOTE]
-> When you edit the dataflow, the Power Query editor connects to the data source directly and doesn't show the data cached/filtered in the dataflow after being processed by the incremental refresh policy.
+> When you edit the dataflow, the Power Query editor connects to the data source directly and doesn't show the cached or filtered data in the dataflow after the incremental refresh policy processes it.
 > To check the data cached inside the dataflow, connect from Power BI Desktop to the dataflow after configuring the incremental refresh policy and refreshing the dataflow.
 
 ## Incremental refresh and linked tables vs. computed tables
@@ -92,17 +92,17 @@ Because computed tables and linked tables behave similarly, the requirements and
 
 Dataflows support changing the refresh policy between incremental and full refresh. When a change occurs in either direction (full to incremental or incremental to full), the change affects the dataflow after the next refresh.
 
-When moving a dataflow from full refresh to incremental, the new refresh logic updates the dataflow by adhering to the refresh window and increment as defined in the incremental refresh settings.
+When you move a dataflow from full refresh to incremental, the new refresh logic updates the dataflow by adhering to the refresh window and increment as defined in the incremental refresh settings.
 
-When moving a dataflow from incremental to full refresh, all data accumulated in the incremental refresh is overwritten by the policy defined in the full refresh. You must approve this action.
+When you move a dataflow from incremental to full refresh, all the data accumulated in the incremental refresh overwrites the policy defined in the full refresh. You must approve this action.
 
 ## Time zone support in incremental refresh
 
-Dataflow incremental refresh is dependent on the time at which it's run. The filtering of the query is dependent on the day on which it's run.
+Dataflow incremental refresh depends on the time it runs. The filtering of the query is dependent on the day it runs.
 
 To accommodate those dependencies and to ensure data consistency, incremental refresh for dataflows implements the following heuristic for *refresh now* scenarios:
 
-* In the case where a scheduled refresh is defined in the system, incremental refresh uses the time-zone settings from the scheduled refresh section. This ensures that whatever time zone the person refreshing the dataflow is in, it will always be consistent with the system's definition.
+* In the case where a scheduled refresh is defined in the system, incremental refresh uses the time-zone settings from the scheduled refresh section. This process ensures that whatever time zone the person refreshing the dataflow is in, it's always consistent with the system's definition.
 
 * If no scheduled refresh is defined, dataflows use the time zone from the computer of the user who's performing the refresh.
 
@@ -110,7 +110,7 @@ Incremental refresh can also be invoked by using APIs. In this case, the API cal
 
 ## Incremental refresh implementation details
 
-Dataflows use partitioning for incremental refresh. Incremental refresh in dataflows keeps the minimum number of partitions to meet refresh policy requirements. Old partitions that go out of range are dropped, which maintains a rolling window. Partitions are opportunistically merged, reducing the total number of partitions required. This improves compression and, in some cases, can improve query performance.
+Dataflows use partitioning for incremental refresh. Incremental refresh in dataflows keeps the minimum number of partitions to meet refresh policy requirements. Old partitions that go out of range are dropped, which maintains a rolling window. Partitions are opportunistically merged, reducing the total number of partitions required. This minimum number of partitions improves compression and, in some cases, can improve query performance.
 
 The examples in this section share the following refresh policy:
 
@@ -124,13 +124,13 @@ The examples in this section share the following refresh policy:
 In this example, day partitions are automatically merged to the month level after they go outside the incremental range. Partitions in the incremental range need to be maintained at daily granularity to allow only those days to be refreshed.
 The refresh operation with *Run Date 12/11/2016* merges the days in November, because they fall outside the incremental range.
 
-![Merge partitions in dataflows.](media/incremental-refresh/dataflows-incremental-refresh-04.png)
+:::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-04.png" alt-text="Diagram showing the merge partitions in dataflows.":::
 
 ### Drop old partitions
 
 Old partitions that fall outside the total range are removed. The refresh operation with *Run Date 1/2/2017* drops the partition for Q3 of 2016 because it falls outside the total range.
 
-![Drop old partitions in dataflows.](media/incremental-refresh/dataflows-incremental-refresh-05.png)
+:::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-05.png" alt-text="Diagram showing the old partitions being dropped in dataflows.":::
 
 ### Recovery from prolonged failure
 
@@ -140,7 +140,7 @@ The next successful refresh operation, with *Run Date 1/15/2017*, needs to backf
 
 The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to merge the days in December and the months in Q4 of 2016.
 
-![Recovery from prolonged failure in dataflows.](media/incremental-refresh/dataflows-incremental-refresh-06.png)
+:::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-06.png" alt-text="Diagram showing the recovery from prolonged failure in dataflows.":::
 
 ## Dataflow incremental refresh and data sets
 
@@ -148,7 +148,7 @@ Dataflow incremental refresh and data set incremental refresh are designed to wo
 
 Both approaches work according to your specified definitions in the refresh settings. More information: [Incremental refresh in Power BI Premium](/power-bi/service-premium-incremental-refresh)
 
-### See also
+### Related content
 
 This article described incremental refresh for dataflows. Here are some more articles that might be useful:
 

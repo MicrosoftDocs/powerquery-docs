@@ -2,7 +2,7 @@
 title: Authentication in desktop apps
 description: How to select credentials for a connector in Power Query Desktop to authenticate a connection with a data source, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 12/5/2024
 ms.author: miescobar
 ms.subservice: get-data

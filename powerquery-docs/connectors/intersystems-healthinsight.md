@@ -2,7 +2,7 @@
 title: Intersystems Health Insight
 description: Provides basic details about using the Intersystems Health Insight connector.
 author: jbolinsky
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors

@@ -2,7 +2,7 @@
 title: Understanding the differences between dataflow types
 description: Understanding the differences between standard and analytical dataflows.
 author: Luitwieler
-ms.topic: conceptual 
+ms.topic: concept-article 
 ms.date: 7/8/2025 
 ms.author: jeluitwi 
 ms.subservice: dataflows

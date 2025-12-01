@@ -2,7 +2,7 @@
 title: Alternatives to out-of-box connectivity in Power Query Desktop
 description: Provides users alternatives to connect to their data when no out-of-box connector is available
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 9/11/2025
 ms.author: miescobar
 ms.subservice: get-data

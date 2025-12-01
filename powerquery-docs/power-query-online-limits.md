@@ -2,7 +2,7 @@
 title: Power Query Online Usage Limits
 description: Authoring and refresh limits for Power Query Online in its various product integrations.
 author: Luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 3/22/2024
 ms.author: jeluitwi
 ms.subservice: user-assistance
@@ -58,3 +58,13 @@ A single dataflow has a limit of 50 tables. If you need more than 50 tables, you
 There is no maximum size limit for a single dataflow table. However, when a table gets too big, a possible timeout could occur when accessing the table. In this case, use the Table.*xxx*N functions (such as [Table.FirstN](/powerquery-m/table-firstn), [Table.LastN](/powerquery-m/table-lastn), [Table.RemoveFirstN](/powerquery-m/table-removefirstn), [Table.RemoveLastN](/powerquery-m/table-removelastn), and so on) or other filters to reduce the scope and size of the data.
 
 We suggest not having more than 100 dataflows (Gen1 or Gen2) per workspace.
+
+## Mashup script limits
+
+The size limit for the mashup script is 512KB. An error might occur when trying to open or edit dataflows with queries that exceed this size limit.
+
+If you encounter such an error:
+
+- Simplify queries by removing unused steps.
+- Consider breaking large dataflows into smaller, linked dataflows.
+- Use parameters to optimize query performance.

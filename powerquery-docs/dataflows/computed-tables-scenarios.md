@@ -2,7 +2,7 @@
 title: Computed table scenarios and use cases
 description: Computed table scenarios and use cases.
 author: Luitwieler
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 6/13/2023
 ms.author: jeluitwi
 ms.subservice: dataflows
