@@ -22,7 +22,7 @@ Power Platform dataflows are data transformation services empowered by the Power
 
 Data Factory is a cloud-based extract, transform, load (ETL) service that supports many different sources and destinations. There are two types of dataflows under this technology: mapping dataflows and wrangling dataflows. The Power Query engine empowers wrangling dataflows for data transformation.
 
-:::image type="content" source="/azure/data-factory/media/wrangling-data-flow/tutorial6.png" alt-text="Screenshot of Azure Data Factory demonstrating a wrangling dataflow.":::
+:::image type="content" source="/azure/data-factory/media/wrangling-data-flow/tutorial6.png" alt-text="Screenshot of Azure Data Factory demonstrating a wrangling dataflow." lightbox="/azure/data-factory/media/wrangling-data-flow/tutorial6.png":::
 
 ## What do they have in common?
 
