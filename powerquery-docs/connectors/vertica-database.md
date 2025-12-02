@@ -3,7 +3,7 @@ title: Power Query Vertica database connector
 description: Provides basic information for the Vertica database connector, along with how to connect to your Vertica data.
 author: DougKlopfenstein
 ms.topic: concept-article
-ms.date: 05/31/2025
+ms.date: 11/19/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -14,10 +14,13 @@ ms.subservice: connectors
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | General Availability |
+| Release State | Deprecating |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Database |
 | Function Reference Documentation | &mdash; |
+
+> [!NOTE] 
+> We're beginning the deprecating process for the Vertica connector starting April 2026. Instead, we'll be supporting "Customer Bring Your Own Driver (BYOD)"; Customers will need to supply their own Vertica driver.    
 
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
