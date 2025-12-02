@@ -191,6 +191,8 @@ items:
         href: dataflows/how-to-migrate-queries-from-power-query-desktop-to-dataflows.md
       - name: "Use an on-premises data gateway"
         href: dataflows/using-dataflows-with-on-premises-data.md
+      - name: "Use Excel as an output destination"
+        href: dataflows/dataflow-output-excel-advanced.md
       - name: Analytical dataflows
         items:
         - name: "Create computed tables"
