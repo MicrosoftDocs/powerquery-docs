@@ -20,7 +20,7 @@ ms.subservice: connectors
 | Function Reference Documentation | &mdash; |
 
 > [!IMPORTANT] 
-> We're beginning the deprecation process for the Netezza Connector starting March, 2026. Instead, we'll be supporting the IBM Netezza ODBC Driver; customers will need to supply their own Netezza driver.    
+> We're beginning the deprecation process for the Simba Netezza ODBC Driver for the Netezza Connector starting March, 2026. Instead, we'll be supporting the IBM Netezza ODBC Driver.    
 
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.

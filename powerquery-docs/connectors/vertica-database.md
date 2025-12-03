@@ -20,7 +20,7 @@ ms.subservice: connectors
 | Function Reference Documentation | &mdash; |
 
 > [!NOTE] 
-> We're beginning the deprecating process for the Vertica connector starting February 2026. Instead, we'll be supporting the Vertica ODBC Driver; Customers will need to supply their own Vertica driver.    
+> We're beginning the deprecating process for the Simba Vertica ODBC driver for the Vertica Connector starting February 2026. Instead, we'll be supporting the Vertica ODBC Driver.    
 
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
