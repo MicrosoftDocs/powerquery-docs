@@ -120,6 +120,7 @@ Stack overflow errors can be caused by a bug in your M code. For example, the fo
 `let f = (x) => @f(x + 1) in f(0)`
 
 Here are some common ways to resolve a stack overflow in your M code.
+
 * Ensure that your recursive functions actually terminate when the expected end condition is reached.
 * Replace recursion with iteration (for example, by using functions such as [List.Transform](/powerquery-m/list-transform), [List.Generate](/powerquery-m/list-generate), or [List.Accumulate](/powerquery-m/list-accumulate)).
 
@@ -132,10 +133,16 @@ Here are some common ways to resolve a stack overflow in your M code.
 To resolve out of memory errors, optimize memory intensive operations like sorts, joins, grouping, and distincts by ensuring they fold to the source, or by removing them altogether where possible. Sorts, for example, are often unnecessary.
 
 ### Power Query Online cannot connect via public endpoint when a private endpoint is configured to a Storage
+
 When a private endpoint to a Storage Account is configured, Power Query Online will always resolve the private link address and cannot connect via the public internet—even if public access is set to “Allowed” in the private endpoint configuration.
 
 This behavior occurs because the private endpoint takes precedence over public connectivity. As a result, any attempt to connect without a gateway will fail.
 
+### Error dialog when performing certain special character operations
+
+When using the Korean IME keyboard in Power Query, an error dialog might appear when you enter certain special characters in the Advanced Editor, Custom Column dialog, or Formula Bar.
+
+To workaround this issue, please disable M Intellisense in the Power Query editor options.
 
 ## Dataflows
 
