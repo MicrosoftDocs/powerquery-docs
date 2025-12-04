@@ -14,13 +14,13 @@ ms.subservice: connectors
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Deprecating |
+| Release State | Deprecating (Simba ODBC Driver), GA (Vertica ODBC Driver) |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Database |
 | Function Reference Documentation | &mdash; |
 
 > [!NOTE] 
-> We're beginning the deprecating process for the Vertica connector starting April 2026. Instead, we'll be supporting "Customer Bring Your Own Driver (BYOD)"; Customers will need to supply their own Vertica driver.    
+> We're beginning the deprecating process for the Simba Vertica ODBC driver for the Vertica Connector starting February 2026. Instead, we'll be supporting the Vertica ODBC Driver; customers will need to install their own Vertica ODBC driver.    
 
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
