@@ -509,11 +509,6 @@
       "source_path": "powerquery-docs/connectors/quickbooks-online.md",
       "redirect_url": "/power-query/connectors/",
       "redirect_document_id": "false"
-    },
-    {
-      "source_path": "powerquery-docs/connectors/azure-cosmos-db-for-mongodb-vcore.md",
-      "redirect_url": "/power-query/connectors/azure-documentdb",
-      "redirect_document_id": "true"
     }
   ]
 }
