@@ -343,8 +343,8 @@ items:
         href: connectors/azure-analysis-services.md
       - name: "Azure Blob Storage"
         href: connectors/azure-blob-storage.md
-      - name: "Azure DocumentDB"
-        href: connectors/azure-documentdb.md
+      - name: "Azure Cosmos DB for MongoDB vCore"
+        href: connectors/azure-cosmos-db-for-mongodb-vcore.md
       - name: "Azure Cosmos DB v2"
         href: connectors/azure-cosmos-db-v2.md
       - name: "Azure Cost Management"
