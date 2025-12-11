@@ -475,17 +475,17 @@ items:
         href: connectors/kyvos-odbc.md
       - name: "Lakehouse (Beta)"
         href: connectors/lakehouse.md
-      - name: LinkedIn Learning
-        href: connectors/linkedin-learning.md
-      - name: LEAP (Beta)
+      - name: "LEAP (Beta)"
         href: connectors/leap.md
-      - name: LinkedIn Sales Navigator (Beta)
+      - name: "LinkedIn Learning"
+        href: connectors/linkedin-learning.md
+      - name: "LinkedIn Sales Navigator (Beta)"
         href: connectors/linkedin-sales-navigator.md
       - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
         href: connectors/microsoft-azure-consumption-insights.md
-      - name: Microsoft Exchange
+      - name: "Microsoft Exchange"
         href: connectors/microsoft-exchange.md
-      - name: Microsoft Exchange Online
+      - name: "Microsoft Exchange Online"
         href: connectors/microsoft-exchange-online.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: connectors/microsoft-graph-security.md
