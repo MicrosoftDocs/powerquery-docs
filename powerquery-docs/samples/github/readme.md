@@ -9,7 +9,7 @@ ms.subservice: custom-connectors
 ---
 
 # GitHub Connector Sample
-The GitHub M extension shows how to add support for an OAuth 2.0 protocol authentication flow. You can learn more about the specifics of GitHub's authentication flow on the [GitHub Developer site](https://developer.github.com/guides/basics-of-authentication/).
+The GitHub M extension shows how to add support for an OAuth 2.0 protocol authentication flow. You can learn more about the specifics of GitHub's authentication flow on the [GitHub Docs site](https://docs.github.com/authentication).
 
 Before you get started creating an M extension, you need to register a new app on GitHub, and replace the `client_id` and `client_secret` files with the appropriate values for your app.
 
