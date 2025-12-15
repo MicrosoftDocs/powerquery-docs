@@ -1,10 +1,10 @@
 ---
 title: Power Query Exact Online Premium connector
 description: Provides basic information and prerequisites for the Exact Online Premium connector, supported authentication types, outlines limitations and issues.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 09/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

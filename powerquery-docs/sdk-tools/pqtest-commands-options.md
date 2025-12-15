@@ -4,7 +4,7 @@ description: Provides a list of commands and options in the test harness
 author: ryan-syed
 ms.topic: concept-article
 ms.date: 02/14/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: custom-connectors
 ms.custom: sfi-ropc-nochange
 ---

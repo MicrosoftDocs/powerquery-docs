@@ -1,10 +1,10 @@
 ---
 title: Power Query Access database connector
 description: Provides basic information, prerequisites, and connection instructions, along with tips about using the on-premises data gateway and fixing mismatched bit versions.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 10/28/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

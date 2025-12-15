@@ -2,7 +2,7 @@
 title: MongoDB Atlas SQL interface connector
 description: Provides basic information, prerequisites, and instructions for using the MongoDB Atlas SQL interface connector.  
 author: bucaojit  
-ms.author: dougklo
+ms.author: whhender
 ms.topic: concept-article  
 ms.date: 11/12/2025  
 ms.subservice: connectors

@@ -1,10 +1,10 @@
 ---
 title: Power Query Warehouse (Beta) connector
 description: Provides basic information and connection instructions for connecting to a Warehouse.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 1/24/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

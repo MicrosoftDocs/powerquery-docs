@@ -1,10 +1,10 @@
 ---
 title: Power Query CData Connect Cloud connector
 description: Provides basic information, prerequisites, and connection steps for CData Connect Cloud.
-author: DougKlopfenstein
+author: whhender
 
 ms.date: 11/11/2025 
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

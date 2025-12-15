@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the operation of t
 author: mohsad06
 ms.topic: concept-article
 ms.date: 11/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

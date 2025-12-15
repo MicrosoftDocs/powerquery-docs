@@ -4,7 +4,7 @@ description: Overview of PQTest test harness
 author: ryan-syed
 ms.topic: overview
 ms.date: 02/14/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: custom-connectors
 ---
 

@@ -4,7 +4,7 @@ description: This article provides information for the SoftOne BI connector and 
 author: basilrormose
 ms.topic: concept-article
 ms.date: 9/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

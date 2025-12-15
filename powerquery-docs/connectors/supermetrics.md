@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Supermetrics c
 author: diegomotasuper
 ms.topic: concept-article
 ms.date: 09/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

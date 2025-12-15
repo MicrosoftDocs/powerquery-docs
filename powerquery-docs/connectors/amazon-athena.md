@@ -1,10 +1,10 @@
 ---
 title: Power Query Amazon Athena connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Athena
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 11/10/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

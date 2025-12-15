@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Automy Data An
 author: cquintero89
 ms.topic: concept-article
 ms.date: 9/15/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

@@ -6,7 +6,7 @@ author: revinjchalil
 ms.topic: concept-article
 ms.date: 7/7/2025
 ms.author: rechalil
-ms.reviewer: dougklo
+ms.reviewer: whhender
 ms.subservice: connectors
 ---
 

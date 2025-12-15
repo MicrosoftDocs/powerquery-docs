@@ -4,7 +4,7 @@ description: Describes the new modern UI of the Power Query Online get data expe
 author: TauseefSiddique
 ms.topic: concept-article
 ms.date: 7/17/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: get-data
 ---
 

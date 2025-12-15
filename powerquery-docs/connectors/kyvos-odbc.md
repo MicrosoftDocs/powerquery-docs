@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: kyvosdevelopers
 ms.topic: concept-article
 ms.date: 11/12/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

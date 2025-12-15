@@ -1,10 +1,10 @@
 ---
 title: Google BigQuery (Microsoft Entra ID)
 description: Provides basic information and prerequisites for the Google BigQuery (Microsoft Entra ID) connector for Power Query.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 07/01/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

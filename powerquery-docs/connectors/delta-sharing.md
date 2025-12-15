@@ -1,10 +1,10 @@
 ---
 title: Delta Sharing connector
 description: Provides basic information and prerequisites for the Delta Sharing connector for Power Query.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 9/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

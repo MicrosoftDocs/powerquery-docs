@@ -1,10 +1,10 @@
 ---
 title: Windows authentication and single sign-on
 description: Describes how to set up, configure, and use single sign-on for Windows authentication in the SAP BW connector.
-author: dougklopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 1/8/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

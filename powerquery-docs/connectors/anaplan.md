@@ -1,10 +1,10 @@
 ---
 title: Power Query Anaplan connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your Anaplan data, and troubleshooting tips.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 11/10/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
