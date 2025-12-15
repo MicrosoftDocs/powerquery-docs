@@ -13,7 +13,7 @@ The GitHub M extension shows how to add support for an OAuth 2.0 protocol authen
 
 Before you get started creating an M extension, you need to register a new app on GitHub, and replace the `client_id` and `client_secret` files with the appropriate values for your app.
 
-**Note about compatibility issues in Visual Studio:** _The Power Query SDK uses an Internet Explorer based control to popup OAuth dialogs. GitHub has deprecated its support for the version of IE used by this control, which will prevent you from completing the permission grant for you app if run from within Visual Studio. An alternative is to load the extension with Power BI  Desktop and complete the first OAuth flow there. After your application has been granted access to your account, subsequent logins will work fine from Visual Studio._
+**Note about compatibility issues in Visual Studio:** _The Power Query SDK uses an Internet Explorer based control to popup OAuth dialogs. GitHub has deprecated its support for the version of IE used by this control, which will prevent you from completing the permission grant for your app if run from within Visual Studio. An alternative is to load the extension with Power BI  Desktop and complete the first OAuth flow there. After your application has been granted access to your account, subsequent logins will work fine from Visual Studio._
 
 ## OAuth and Power BI
 OAuth is a form of credentials delegation. By logging in to GitHub and authorizing the "application" you create for GitHub, the user is allowing your "application" to login on their behalf to retrieve data into Power BI.
@@ -24,7 +24,7 @@ Power BI stores and manages the access_token and refresh_token on your behalf.
 >[!Note]
 > To allow Power BI to obtain and use the access_token, you must specify the redirect url as https://oauth.powerbi.com/views/oauthredirect.html.
 
-When you specify this URL and GitHub successfully authenticates and grants permissions, GitHub will redirect to PowerBI's oauthredirect endpoint so that Power BI can retrieve the access_token and refresh_token.
+When you specify this URL and GitHub successfully authenticates and grants permissions, GitHub will redirect to Power BI's oauthredirect endpoint so that Power BI can retrieve the access_token and refresh_token.
 
 ## How to register a GitHub app
 
@@ -73,7 +73,7 @@ For the user to login, you need to specify a number of query parameters:
 |Name       |Type   |Description|
 |:----------|:------|:----------|
 |client_id|string|**Required**. The client ID you received from GitHub when you registered.|
-|redirect_uri|string|The URL in your app where users will be sent after authorization. See details below about redirect urls. For M extensions, the `redirect_uri` must be "https://oauth.powerbi.com/views/oauthredirect.html". |
+|redirect_uri|string|The URL in your app where users will be sent after authorization. See details following about redirect urls. For M extensions, the `redirect_uri` must be "https://oauth.powerbi.com/views/oauthredirect.html". |
 |scope|string|A comma separated list of scopes. If not provided, scope defaults to an empty list of scopes for users that don't have a valid token for the app. For users who do already have a valid token for the app, the user won't be shown the OAuth authorization page with the list of scopes. Instead, this step of the flow will automatically complete with the same scopes that were used last time the user completed the flow.| 
 |state|string|An un-guessable random string. It's used to protect against cross-site request forgery attacks.| 
 
@@ -104,7 +104,7 @@ StartLogin = (resourceUrl, state, display) =>
             ];
 ```
 
-If this is the first time the user is logging in with your app (identified by its `client_id` value), they'll see a page that asks them to grant access to your app. Subsequent login attempts will simply ask for their credentials.
+If this is the first time the user is logging in with your app (identified by its `client_id` value), they'll see a page that asks them to grant access to your app. Subsequent login attempts will ask for their credentials.
 
 ### Step 3 - Convert the code received from GitHub into an access_token
 
@@ -126,7 +126,7 @@ The following parameters are required for the GitHub endpoint:
 |client_id    |string|**Required**. The client ID you received from GitHub when you registered.|
 |client_secret|string|**Required**. The client secret you received from GitHub when you registered.|
 |code         |string|**Required**. The code you received in `FinishLogin`.|
-|redirect_uri |string|The URL in your app where users will be sent after authorization. See details below about redirect URLs.|
+|redirect_uri |string|The URL in your app where users will be sent after authorization. See details following about redirect URLs.|
 
 Here are the details used parameters for the [Web.Contents](/powerquery-m/web-contents) call.
 
