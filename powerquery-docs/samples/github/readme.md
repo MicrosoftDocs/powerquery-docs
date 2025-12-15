@@ -39,7 +39,7 @@ Your Power BI extension needs to login to GitHub. To enable this, you register a
 
 ## How to implement GitHub OAuth
 
-This sample will walk you through the following steps:
+This sample walks you through the following steps:
 
 1. Create a Data Source Kind definition that declares it supports OAuth.
 2. Provide details so the M engine can start the OAuth flow (`StartLogin`).
@@ -47,7 +47,7 @@ This sample will walk you through the following steps:
 4. Define functions that access the GitHub API (`GithubSample.Contents`).
 
 ### Step 1 - Create a Data Source definition
-A Data Connector starts with a [record](/powerquery-m/expressions-values-and-let-expression#record) that describes the extension, including its unique name (which is the name of the record), supported authentication type(s), and a friendly display name (label) for the data source.
+A Data Connector starts with a [record](/powerquery-m/expressions-values-and-let-expression#record) that describes the extension, including its unique name (which is the name of the record), supported authentication types, and a friendly display name (label) for the data source.
 When supporting OAuth, the definition contains the functions that implement the OAuth contract&mdash;in this case, `StartLogin` and `FinishLogin`.
 
 ```
@@ -75,7 +75,7 @@ For the user to login, you need to specify a number of query parameters:
 |client_id|string|**Required**. The client ID you received from GitHub when you registered.|
 |redirect_uri|string|The URL in your app where users will be sent after authorization. See details following about redirect urls. For M extensions, the `redirect_uri` must be "https://oauth.powerbi.com/views/oauthredirect.html". |
 |scope|string|A comma separated list of scopes. If not provided, scope defaults to an empty list of scopes for users that don't have a valid token for the app. For users who do already have a valid token for the app, the user won't be shown the OAuth authorization page with the list of scopes. Instead, this step of the flow will automatically complete with the same scopes that were used last time the user completed the flow.| 
-|state|string|An un-guessable random string. It's used to protect against cross-site request forgery attacks.| 
+|state|string|An unguessable random string. It's used to protect against cross-site request forgery attacks.| 
 
 The following code snippet describes how to implement a `StartLogin` function to start the login flow.
 A `StartLogin` function takes a `resourceUrl`, `state`, and `display` value.
