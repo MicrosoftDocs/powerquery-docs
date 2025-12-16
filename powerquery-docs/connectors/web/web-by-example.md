@@ -1,10 +1,10 @@
 ---
 title: Extract data from a Web page by example
 description: Extract data from a Web page by providing an example of what you want to pull
-author: DougKlopfenstein
+author: whhender
 ms.topic: how-to
 ms.date: 11/26/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 # Get webpage data by providing examples

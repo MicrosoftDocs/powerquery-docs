@@ -1,10 +1,10 @@
 ---
 title: Power Query Amazon OpenSearch Service connector
 description: Provides basic information and prerequisites for the Amazon OpenSearch Service connector, includes descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 9/27/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

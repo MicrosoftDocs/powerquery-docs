@@ -1,8 +1,8 @@
 ---
 title: Security best practices for Power Query
 description: Learn how to secure Power Query, with best practices for protecting your data, connections, and transformations.
-author: DougKlopfenstein
-ms.author: dougklo
+author: whhender
+ms.author: whhender
 ms.service: powerquery
 ms.topic: concept-article
 ms.custom: horz-security

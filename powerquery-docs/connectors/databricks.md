@@ -1,11 +1,11 @@
 ---
 title: Databricks Power Query Connector
 description: Provides basic information and prerequisites for using the Power Query Databricks connector.
-author: DougKlopfenstein
+author: whhender
 
 ms.topic: concept-article
 ms.date: 10/29/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

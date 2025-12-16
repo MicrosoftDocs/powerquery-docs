@@ -1,11 +1,11 @@
 ---
 title: Power Query Parquet connector
 description: Includes basic information and prerequisites, instructions on how to connect using the Parquet connector, and information about advanced connection options.
-author: DougKlopfenstein
+author: whhender
 
 ms.topic: concept-article
 ms.date: 2/7/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

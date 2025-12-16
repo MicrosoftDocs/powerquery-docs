@@ -4,7 +4,7 @@ description: Includes basic information and prerequisites, instructions on how t
 author: KazimMir
 ms.topic: concept-article
 ms.date: 11/10/2025
-ms.author: dougklo
+ms.author: whhender
 ---
 
 # Azure Cosmos DB for MongoDB vCore

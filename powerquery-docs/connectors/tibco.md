@@ -1,10 +1,10 @@
 ---
 title: TIBCO(R) Data Virtualization connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your TIBCO(R) Data Virtualization Server.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 11/24/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

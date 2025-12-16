@@ -1,10 +1,10 @@
 ---
 title: Power Query Lakehouse (Beta) connector
 description: Provides basic information and connection instructions for connecting to a Lakehouse.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 2/7/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

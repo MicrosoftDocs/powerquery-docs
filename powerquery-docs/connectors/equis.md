@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions for the EQuI
 author: mathew-weaver
 ms.topic: concept-article
 ms.date: 11/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

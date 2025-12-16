@@ -2,7 +2,7 @@
 title: Monitor your dataflow refreshes with Power BI
 description: How to monitor dataflow refreshes with Power BI.
 author: luitwieler
-ms.reviewer: dougklo
+ms.reviewer: whhender
 ms.topic: concept-article
 ms.date: 12/1/2025
 ms.author: jeluitwi

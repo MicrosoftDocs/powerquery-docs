@@ -2,7 +2,7 @@
 title: Rename columns
 description: Within Power Query, you can rename your column given certain conditions.
 author: ptyx507x
-ms.reviewer: dougklo
+ms.reviewer: whhender
 ms.date: 8/27/2024
 ms.author: miescobar
 ms.subservice: transform-data

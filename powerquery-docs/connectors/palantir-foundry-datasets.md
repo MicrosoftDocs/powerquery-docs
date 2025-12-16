@@ -3,7 +3,7 @@ title: Palantir Foundry Power Query connector
 description: Provides basic information and prerequisites for using the Palantir Foundry Power Query connector.
 author: mshafer
 ms.date: 9/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: Where to get data
 description: Describes the process of getting data for Power Query from various Microsoft products.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 1/9/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: get-data
 ms.custom: sfi-image-nochange
 ---

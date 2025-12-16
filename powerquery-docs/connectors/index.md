@@ -1,9 +1,9 @@
 ---
 title: List of all Power Query connectors
 description: List of all currently available Power Query connectors
-author: DougKlopfenstein
+author: whhender
 ms.date: 09/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.custom: intro-internal
 ms.subservice: connectors
 ---
