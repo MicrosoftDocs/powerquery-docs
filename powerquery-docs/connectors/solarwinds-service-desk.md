@@ -2,7 +2,7 @@
 title: SolarWinds Service Desktop
 description: Provides basic information, prerequisites, and instructions on how to connect to the SolarWinds Service Desktop connector.
 author: giladsmg
-ms.author: dougklo
+ms.author: whhender
 ms.topic: concept-article
 ms.date: 9/11/2025
 ms.subservice: connectors

@@ -2,7 +2,7 @@
 title: Power Query Denodo connector
 description: Provides basic information and prerequisites for the Denodo connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: denodo-research-labs
-ms.author: dougklo
+ms.author: whhender
 ms.service: powerquery
 ms.topic: concept-article
 ms.date: 9/11/2025

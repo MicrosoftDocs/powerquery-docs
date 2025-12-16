@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 author: joefields
 ms.topic: concept-article
 ms.date: 9/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

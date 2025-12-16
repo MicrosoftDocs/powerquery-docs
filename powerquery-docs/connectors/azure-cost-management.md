@@ -1,10 +1,10 @@
 ---
 title: Azure Cost Management connector
 description: Includes basic information, prerequisites, and information on how to connect to Azure Cost Management.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 1/24/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

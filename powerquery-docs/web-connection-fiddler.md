@@ -1,9 +1,9 @@
 ---
 title: Capture web requests with Fiddler
 description: Describes how to set up Fiddler to capture secure HTTP addresses and monitor web traffic when troubleshooting Power Query communications issues.
-author: DougKlopfenstein
+author: whhender
 ms.date: 8/28/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: user-assistance
 ms.custom: sfi-image-nochange
 ---

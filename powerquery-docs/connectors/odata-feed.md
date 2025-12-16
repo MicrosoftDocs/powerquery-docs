@@ -1,10 +1,10 @@
 ---
 title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 11/13/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

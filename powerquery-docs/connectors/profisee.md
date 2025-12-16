@@ -1,8 +1,8 @@
 ---
 title: Power Query Profisee connector
 description: Provides basic information and prerequisites for the Profisee connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
-author: DougKlopfenstein
-ms.author: dougklo
+author: whhender
+ms.author: whhender
 ms.service: powerquery
 ms.topic: concept-article
 ms.date: 11/21/2025

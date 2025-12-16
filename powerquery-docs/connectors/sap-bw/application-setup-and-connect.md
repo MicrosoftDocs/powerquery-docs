@@ -1,10 +1,10 @@
 ---
 title: Power Query SAP Business Warehouse Application Server connector
 description: Power Query SAP Business Warehouse Application Server connector reference
-author: dougklopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 1/24/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

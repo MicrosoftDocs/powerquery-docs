@@ -1,10 +1,10 @@
 ---
 title: Use advanced options
 description: Describes how to use the Power Query SAP Business Warehouse connector advanced sign-in options.
-author: dougklopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 12/1/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

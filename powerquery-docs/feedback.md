@@ -3,7 +3,7 @@ title: Power Query feedback
 description: This article describes where users can receive support and share feedback for Power Query. 
 author: ptyx507x
 ms.author: miescobar
-ms.reviewer: dougklo
+ms.reviewer: whhender
 ms.date: 1/16/2024
 ms.subservice: user-assistance
 ---

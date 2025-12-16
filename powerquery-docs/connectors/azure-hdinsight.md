@@ -1,10 +1,10 @@
 ---
 title: Power Query Azure HDInsight (HDFS) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Azure HDInsight, along with native query folding instructions and troubleshooting tips.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 2/1/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

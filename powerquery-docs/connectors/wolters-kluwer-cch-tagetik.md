@@ -4,7 +4,7 @@ description: Provides prerequisites, capabilities supported, and connection inst
 author: innovation-team
 ms.topic: concept-article
 ms.date: 09/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

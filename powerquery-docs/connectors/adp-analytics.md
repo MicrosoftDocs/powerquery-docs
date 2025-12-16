@@ -3,7 +3,7 @@ title: Power Query ADP Analytics connector
 description: Provides basic information and connection instructions to get analytics data.
 author: Upendra
 ms.date: 9/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

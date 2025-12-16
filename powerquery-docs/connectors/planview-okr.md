@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for Planview OKR conne
 author: jsilva
 ms.topic: concept-article
 ms.date: 9/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

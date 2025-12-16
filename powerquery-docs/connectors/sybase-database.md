@@ -1,10 +1,10 @@
 ---
 title: Power Query Sybase database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Sybase database.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 1/24/2024
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

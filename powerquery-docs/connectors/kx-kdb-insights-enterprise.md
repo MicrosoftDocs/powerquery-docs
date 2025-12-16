@@ -3,7 +3,7 @@ title: KX kdb Insights Enterprise Power Query Connector (Beta)
 description: Provides basic information, prerequisites, and instructions on how to connect to kdb Insights Enterprise
 author: liznorris
 ms.date: 9/11/2025
-ms.author: dougklo
+ms.author: whhender
 ---
 
 # KX kdb Insights Enterprise Power Query Connector (Beta)

@@ -5,7 +5,7 @@ author: eschmidtfds
 ms.service: powerquery
 ms.topic: concept-article
 ms.date: 9/11/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 12/1/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---

@@ -1,10 +1,10 @@
 ---
 title: Power Query Vertica database connector
 description: Provides basic information for the Vertica database connector, along with how to connect to your Vertica data.
-author: DougKlopfenstein
+author: whhender
 ms.topic: concept-article
 ms.date: 11/19/2025
-ms.author: dougklo
+ms.author: whhender
 ms.subservice: connectors
 ---
 
