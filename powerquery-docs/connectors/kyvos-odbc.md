@@ -9,7 +9,7 @@ ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
 
-# Kyvos ODBC Connector (Beta)
+# Kyvos ODBC Connector
 
 > [!NOTE]
 >This connector is owned and provided by Kyvos.
@@ -18,7 +18,7 @@ ms.custom: sfi-image-nochange
 
 | Item | Description |
 | ------ | ------ |
-|Release State | Beta |
+|Release State | General Availability |
 |Products| Power BI (Semantic models), Power BI (Dataflows) |
 |Authentication Types Supported| Username and Password OAuth (OIDC) |
 
@@ -99,3 +99,4 @@ To connect to Kyvos from Power BI service, perform the following steps.
    7. Now open the published Power BI workbook.
 
       :::image type="content" source="./media/kyvos-odbc/workbook.png" alt-text="Screenshot of the Workbook, showing the Kyvos ODBC Connector selection.":::
+
