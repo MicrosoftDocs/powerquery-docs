@@ -188,7 +188,7 @@ The full code listing for the `Table.ChangeType` function can be found in the [T
 >[!Note]
 > For flexibility, the function can be used on tables, as well as lists of records (which is how tables would be represented in a JSON document).
 
-You will then need to update the `schema` parameter on `TripPin.Feed` from a `table` to a `type`.
+You then need to update the `schema` parameter on `TripPin.Feed` from a `table` to a `type`.
 
 ```powerquery-m
 TripPin.Feed = (url as text, optional schema as type) as table => GetAllPagesByNextLink(url, schema);
