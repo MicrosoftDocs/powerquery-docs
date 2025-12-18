@@ -263,7 +263,7 @@ To use this built-in driver in the on-premises data gateway, change the gateway 
 The remaining configurations to connect to an Oracle database from Power Query Desktop are the same as described in the previous sections.
 
 > [!NOTE]
-> Semantic Model DirectQuery can't us the built-in Oracle managed ODP.NET driver for connectivity. `MashupFlight_EnableOracleBundledOdacProvider` isn.t applicable on Semantic Model DirectQuery.
+> Semantic Model DirectQuery can't us the built-in Oracle managed ODP.NET driver for connectivity. `MashupFlight_EnableOracleBundledOdacProvider` isn't applicable on Semantic Model DirectQuery.
 
 
 ## Known issues and limitations
