@@ -365,8 +365,6 @@ items:
         href: connectors/azure-device-registry.md
       - name: Azure HDInsight
         href: connectors/azure-hdinsight.md
-      - name: Azure HDInsight on AKS Trino (Beta) (Deprecated)
-        href: connectors/azure-hdinsight-on-aks-trino.md
       - name: "Azure SQL database"
         href: connectors/azure-sql-database.md
       - name: "Azure Resource Graph"
@@ -481,14 +479,10 @@ items:
         href: connectors/linkedin-learning.md
       - name: "LinkedIn Sales Navigator (Beta)"
         href: connectors/linkedin-sales-navigator.md
-      - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
-        href: connectors/microsoft-azure-consumption-insights.md
       - name: "Microsoft Exchange"
         href: connectors/microsoft-exchange.md
       - name: "Microsoft Exchange Online"
         href: connectors/microsoft-exchange-online.md
-      - name: "Microsoft Graph Security (Deprecated)"
-        href: connectors/microsoft-graph-security.md
       - name: "MicroStrategy for Power BI"
         href: connectors/microstrategy-for-power-bi.md
       - name: "MongoDB Atlas SQL interface"
