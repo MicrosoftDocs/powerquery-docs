@@ -140,11 +140,11 @@ This behavior occurs because the private endpoint takes precedence over public c
 
 ### Error dialog when performing certain special character operations
 
-When using the Korean IME keyboard in Power Query, an error dialog might appear when you enter certain special characters in the Advanced Editor, Custom Column dialog, or Formula Bar.
+When using the Korean IME keyboard in Power Query, an error dialog might appear when you enter certain special characters in the advanced editor, Custom Column dialog, or formula bar.
 
-This issue impacts the Power Query editor in Power BI Desktop and Excel. It does not impact Power Query Online (Dataflows).
+This issue impacts the Power Query editor in Power BI Desktop and Excel. It doesn't impact Power Query Online (Dataflows).
 
-To workaround this issue, please disable M Intellisense in the Power Query editor options.
+To workaround this issue, disable M Intellisense in the Power Query editor options.
 
 ## Dataflows
 
