@@ -1,38 +1,53 @@
 {
   "redirections": [
     {
+      "source_path": "powerquery-docs/connectors/azure-hdinsight-on-aks-trino.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerquery-docs/connectors/emplifi-metrics.md",
-      "redirect_url": "/power-query/connectors/",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerquery-docs/connectors/factset-rms.md",
-      "redirect_url": "/power-query/connectors/",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerquery-docs/connectors/mailchimp.md",
-      "redirect_url": "/power-query/connectors/",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/microsoft-azure-consumption-insights.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/microsoft-graph-security.md",
+      "redirect_url": "/power-query/connecting-to-graph",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerquery-docs/connectors/socialbakers.md",
-      "redirect_url": "/power-query/connectors/",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerquery-docs/connectors/stripe.md",
-      "redirect_url": "/power-query/connectors/",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerquery-docs/connectors/twilio.md",
-      "redirect_url": "/power-query/connectors/",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerquery-docs/connectors/workforce-dimensions.md",
-      "redirect_url": "/power-query/connectors/",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
       "redirect_document_id": "false"
     },
     {
