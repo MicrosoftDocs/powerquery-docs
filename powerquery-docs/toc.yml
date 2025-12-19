@@ -565,7 +565,7 @@ items:
         href: connectors/singlestore.md
       - name: "SIS-CC SDMX (Beta)"
         href: connectors/sis-cc-sdmx.md
-      - name: "Smartsheet (Beta)"
+      - name: "Smartsheet"
         href: connectors/smartsheet.md
       - name: "Snowflake"
         href: connectors/snowflake.md
