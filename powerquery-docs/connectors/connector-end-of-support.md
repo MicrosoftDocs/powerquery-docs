@@ -19,7 +19,7 @@ The following Power Query connectors are no longer supported and no longer appea
 | FactSet RMS | July 15, 2025 | The functionality of this connector is integrated into the new [FactSet Enterprise](factset.md) connector. Contact your FactSet representative for more information. |
 | InterSystems IRIS (Beta) | June 2024 | The [InterSystems Health Insight](intersystems-healthinsight.md) connector replaces this connector. |
 | Mailchimp | April 8, 2021 | |
-| Microsoft Azure Consumption Insights (Beta) | December 2021 | Use the certified [Microsoft Cost Management](azure-cost-management.md) connector as a replacement. |
+| Microsoft Azure Consumption Insights (Beta) | December 2021 | Use the certified [Azure Cost Management](azure-cost-management.md) connector as a replacement. |
 | Microsoft Graph Security | April 2021 | For more information, go to [Lack of Support for Microsoft Graph in Power Query](../connecting-to-graph.md). |
 | Microsoft Teams Personal Analytics | | |
 | Quickbooks Online (Beta) | August 2025 | |
