@@ -7,7 +7,7 @@ ms.author: miescobar
 ms.subservice: get-data
 ---
 
-# SharePoint and OneDrive for for work or school files import
+# SharePoint and OneDrive for work or school files import
 
 Power Query offers a series of ways to gain access to files that are hosted on either SharePoint or Microsoft OneDrive for work or school.
 

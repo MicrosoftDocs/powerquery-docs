@@ -8,16 +8,16 @@ ms.author: whhender
 ms.subservice: connectors
 ---
 
-# Smartsheet (Beta)
+# Smartsheet
 
->[!Note]
+> [!NOTE]
 >This connector is owned and provided by Smartsheet.
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Smartsheet account |
 
@@ -40,7 +40,7 @@ The Smartsheet connector supports the Smartsheet US region (https://app.smartshe
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop.
 
-2. In the search box, enter **Smartsheet**, select **Smartsheet (Beta)**, and then select **Connect**.
+2. In the search box, enter **Smartsheet**, select **Smartsheet**, and then select **Connect**.
 
    :::image type="content" source="./media/smartsheet/get-data.png" alt-text="Screenshot of the Get Data dialog for Smartsheet.":::
 
