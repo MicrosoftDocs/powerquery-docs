@@ -17,7 +17,7 @@ The following Power Query connectors are no longer supported and no longer appea
 | Azure HDInsight on AKS Trino (Beta) | January 31, 2025 | |
 | Emplifi Metrics | August 1, 2024 | Contact your Emplifi representative for more information. |
 | FactSet RMS | July 15, 2025 | The functionality of this connector is integrated into the new [FactSet Enterprise](factset.md) connector. Contact your FactSet representative for more information. |
-| InterSystems IRIS (Beta) | June 2024 | This connector was replaced by the [InterSystems Health Insight](intersystems-healthinsight.md) connector. |
+| InterSystems IRIS (Beta) | June 2024 | The [InterSystems Health Insight](intersystems-healthinsight.md) connector replaces this connector. |
 | Mailchimp | April 8, 2021 | |
 | Microsoft Azure Consumption Insights (Beta) | December 2021 | Use the certified [Microsoft Azure Cost Management](azure-cost-management.md) connector as a replacement. |
 | Microsoft Graph Security | April 2021 | For more information, go to [Lack of Support for Microsoft Graph in Power Query](../connecting-to-graph.md). |
