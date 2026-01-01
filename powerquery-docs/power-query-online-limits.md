@@ -45,7 +45,8 @@ During refresh (either scheduled or on-demand), query evaluations return complet
 | Dataflows in PowerApps.com (Trial)| 500 | 2 | 8 |
 | Dataflows in PowerApps.com (Production) | 1000 | 8 | 20 |
 | Data Integration in PowerApps.com Admin Portal | 1000 | 24 | 20 |
-| Power BI Dataflows in PowerBI.com | 1000 | 100 | 20 |
+| Power BI Premium Dataflows in PowerBI.com | 1000 | 100 | 20 |
+| Power BI Pro Dataflows in PowerBI.com | 1000 | 8 | 20 |
 | Data Factory Dataflow Gen2 in Microsoft Fabric | 5000 | 100 | [SKU Limits](/power-bi/enterprise/service-premium-what-is#dataflows-gen1) |
 | Dataflows in Dynamics 365 Customer Insights | 1000 | 100 | 20 |
 
