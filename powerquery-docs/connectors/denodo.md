@@ -133,7 +133,7 @@ To make the connection, take the following steps:
         :::image type="content" source="./media/denodo/denodo-entra-id-authentication3.png" alt-text="Denodo organizational account connect.":::
 
         > [!NOTE]
-        > In order to access VDP databases, a user must be created in Denodo whose name is the same as the email used in Power BI when signing in to the organizational account. When creating the user in Denodo, EXTERNAL must be selected as authentication type. The permissions given to this user on the denodo databases determines which databases can be accessed from Power BI Desktop.
+        > In order to access VDP databases, a user must be created in Denodo whose name is the same as the email used in Power BI when signing in to the organizational account. When creating the user in Denodo, EXTERNAL must be selected as authentication type. The permissions given to this user on the Denodo databases determines which databases can be accessed from Power BI Desktop.
 
 8. Once you're done, select **Connect**.
 
@@ -174,7 +174,7 @@ To make the connection, take the following steps:
       * **Oauth**: This authentication type allows you to create a data source in Power BI service to connect to your Virtual DataPort data using Microsoft credentials.
 
         > [!NOTE]
-        > In order to access the VDP databases, a user must be created in Denodo whose name is the same as the email used in Power BI when logging into the organizational account. When creating the user in Denodo, EXTERNAL must be selected as authentication type. The permissions given to this user on the denodo databases determines which databases can be accessed from Power BI.
+        > In order to access the VDP databases, a user must be created in Denodo whose name is the same as the email used in Power BI when logging into the organizational account. When creating the user in Denodo, EXTERNAL must be selected as authentication type. The permissions given to this user on the Denodo databases determines which databases can be accessed from Power BI.
         
 4. If you use Windows authentication, under **Advanced settings** for the data source you can enable the single sign-on (SSO) authentication schema in order to use the same credentials of the user accessing your reports in Power BI for accessing the required data in Denodo.
 
