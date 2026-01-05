@@ -262,6 +262,10 @@ To use this built-in driver in the on-premises data gateway, change the gateway 
 
 The remaining configurations to connect to an Oracle database from Power Query Desktop are the same as described in the previous sections.
 
+> [!NOTE]
+> Semantic model DirectQuery can't use the built-in Oracle managed ODP.NET driver for connectivity. `MashupFlight_EnableOracleBundledOdacProvider` isn't applicable on semantic model DirectQuery.
+
+
 ## Known issues and limitations
 
 Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a semantic model refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
