@@ -209,7 +209,7 @@ This parameter can only be used from the advanced editor. To do so, the `Connect
 
 > Learn more about the `duration` type [here](/powerquery-m/sharpduration).
 
-   :::image type="content" source="./media/denodo/denodo-connectiontimeout.png" alt-text="Screenshot of the advanced editor showing how to use of the ConnectionTimeout parameter.":::
+   :::image type="content" source="./media/denodo/denodo-connectiontimeout.png" alt-text="Screenshot of the advanced editor showing how to use the ConnectionTimeout parameter.":::
 
 ### Use of the QueryTimeout parameter
 
@@ -217,7 +217,7 @@ If you want to control how long to wait before abandoning an attempt to make the
 
 This parameter can only be used from the advanced editor. To do so, the `QueryTimeout` parameter must be added in the record options, associating a value of type `number` to it. This numeric value is represented in milliseconds, for example 10000 equals 10s.
 
-   :::image type="content" source="./media/denodo/denodo-querytimeout.png" alt-text="Screenshot of the advanced editor showing how to use of the QueryTimeout parameter.":::
+   :::image type="content" source="./media/denodo/denodo-querytimeout.png" alt-text="Screenshot of the advanced editor showing how to use the QueryTimeout parameter.":::
 
 ### Use of the UserAgent parameter
 
@@ -225,7 +225,7 @@ If you want to specify the name of the client application, you can use the `User
 
 This parameter can only be used from the advanced editor. To do so, the `UserAgent` parameter must be added in the record options, associating a value of type `text`.
 
-   :::image type="content" source="./media/denodo/denodo-useragent.png" alt-text="Screenshot of the advanced editor showing how to use of the UserAgent parameter.":::
+   :::image type="content" source="./media/denodo/denodo-useragent.png" alt-text="Screenshot of the advanced editor showing how to use the UserAgent parameter.":::
 
 ### Use of the Compression parameter
 
@@ -233,7 +233,7 @@ We recommend that you activate this setting when the client application and the 
 
 This parameter can only be used from the advanced editor. To do so, the `Compression` parameter must be added in the record options, associating a value of type `number` (0 or 1).
 
-   :::image type="content" source="./media/denodo/denodo-compression.png" alt-text="Screenshot of the advanced editor showing how to use of the Compression parameter.":::
+   :::image type="content" source="./media/denodo/denodo-compression.png" alt-text="Screenshot of the advanced editor showing how to use the Compression parameter.":::
 
 ## Troubleshooting
 
