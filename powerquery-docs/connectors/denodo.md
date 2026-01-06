@@ -5,7 +5,7 @@ author: denodo-research-labs
 ms.author: whhender
 ms.service: powerquery
 ms.topic: concept-article
-ms.date: 9/11/2025
+ms.date: 1/6/2026
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
