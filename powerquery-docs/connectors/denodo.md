@@ -121,6 +121,21 @@ To make the connection, take the following steps:
         > [!NOTE]
         > Older versions of the Denodo connector required the escaping of certain password characters. As of version 1.0.8 this is no longer needed.
 
+   * **Organizational Account**: This authentication type allows you to connect Power BI Desktop to your Virtual DataPort data using a specific set of Microsoft crendentials. This authentication kind is a specialized version of OAuth for Microsoft Entra ID. 
+  
+        :::image type="content" source="./media/denodo/denodo-entra-id-authentication.png" alt-text="Denodo organizational account authentication in Power BI Desktop.":::
+    
+        When you select **Sign in**, a sign-in tab opens. Enter the Microsoft credentials to be used for this data source.
+
+        :::image type="content" source="./media/denodo/denodo-entra-id-authentication2.png" alt-text="Denodo organizational account sign in.":::
+
+        Once you're signed in, select **Connect** and the navigator screen for table selection should load.
+     
+        :::image type="content" source="./media/denodo/denodo-entra-id-authentication3.png" alt-text="Denodo organizational account connect.":::
+
+        > [!NOTE]
+        > In order to access VDP databases, a user must be created in Denodo whose name is the same as the email used in Power BI when signing in to the organizational account. When creating the user in Denodo, EXTERNAL must be selected as authentication type. The permissions given to this user on the Denodo databases determines which databases can be accessed from Power BI Desktop.
+
 8. Once you're done, select **Connect**.
 
 9. In **Navigator**, select the data you need from the database you want and choose **Load**, or choose **Transform Data** if you're going to modify the incoming data.
@@ -157,7 +172,11 @@ To make the connection, take the following steps:
            :::image type="content" source="./media/denodo/denodo-advanced-options-dsn.png" alt-text="Advanced Options page at the Denodo DSN configuration.":::
 
       * **Basic**: This authentication type allows you to create a data source in Power BI service to connect to your Virtual DataPort data using your Virtual DataPort server credentials.
+      * **Oauth**: This authentication type allows you to create a data source in Power BI service to connect to your Virtual DataPort data using Microsoft credentials.
 
+        > [!NOTE]
+        > In order to access the VDP databases, a user must be created in Denodo whose name is the same as the email used in Power BI when logging into the organizational account. When creating the user in Denodo, EXTERNAL must be selected as authentication type. The permissions given to this user on the Denodo databases determines which databases can be accessed from Power BI.
+        
 4. If you use Windows authentication, under **Advanced settings** for the data source you can enable the single sign-on (SSO) authentication schema in order to use the same credentials of the user accessing your reports in Power BI for accessing the required data in Denodo.
 
    :::image type="content" source="./media/denodo/denodo-sso.png" alt-text="Denodo SSO using Kerberos.":::
