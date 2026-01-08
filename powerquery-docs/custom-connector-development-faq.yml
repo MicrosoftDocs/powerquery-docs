@@ -128,4 +128,4 @@ additionalContent: |
   ## Additional information
 
     >[!Note]
-    >Issues developing custom connectors fall ouside Microsoft Support scope and expertize. If you need help developing your custom connector or have any feedback, suggestions, or bugs that you'd like to report, please visit our [official public repository on GitHub](https://github.com/microsoft/vscode-powerquery-sdk), or reach out to your Microsoft contact if you are interested in engaging a recommended 3rd party custom connector developer consultant.  
+    >Issues developing custom connectors fall outside Microsoft Support scope and expertize. If you need help developing your custom connector or have any feedback, suggestions, or bugs that you'd like to report, please visit our [official public repository on GitHub](https://github.com/microsoft/vscode-powerquery-sdk), or reach out to your Microsoft contact if you are interested in engaging a recommended 3rd party custom connector developer consultant.  

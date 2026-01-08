@@ -21,7 +21,7 @@ The list of examples in this document isn't exhaustive and doesn't cover all the
 * An array of primitive types, which would be a list in Power Query (like `Patient.meta.profile`)
 * An array of complex types, which would be a table in Power Query (like `Observation.code.coding`, which has a number of columns)
 
-And then consult the following list of examples. There are also examples of combining these types of filtering patters in multi-level, nested filtering statements. Finally, this article provides more complicated filtering expressions that fold to [composite search parameters](https://www.hl7.org/fhir/search.html#combining).
+And then consult the following list of examples. There are also examples of combining these types of filtering patterns in multi-level, nested filtering statements. Finally, this article provides more complicated filtering expressions that fold to [composite search parameters](https://www.hl7.org/fhir/search.html#combining).
 
 In each example, you find a filtering expression (`Table.SelectRows`) and right above each filtering statement a comment `// Fold: ...` explaining what search parameters and values the expression folds to.
 

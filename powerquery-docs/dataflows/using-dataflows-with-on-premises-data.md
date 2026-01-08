@@ -45,7 +45,7 @@ You can install an on-premises data gateway directly from the online service.
 > [!NOTE]
 >
 >- It's a good general practice to make sure you're using a supported version of the on-premises data gateway. We release a new update of the on-premises data gateway every month. Currently, Microsoft actively supports only the last six releases of the on-premises data gateway.
->- Starting April 2022, the minimum required gateway version will be Feburary 2021. Dataflows that refresh using an earlier version of the gateway might stop refreshing.
+>- Starting April 2022, the minimum required gateway version will be February 2021. Dataflows that refresh using an earlier version of the gateway might stop refreshing.
 
 ### Install a gateway from Power BI service
 
