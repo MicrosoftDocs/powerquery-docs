@@ -35,7 +35,7 @@ You can use the auto filter menu that displays a distinct list of the values fou
 
 You can also take advantage of the type-specific filters such as **In the previous** for a date, datetime, or even date timezone column.
 
-:::image type="content" source="media/best-practices-power-query/filter-values-date-column.png" alt-text="Sceenshot of a sample type specific filter for a date column with the previous option emphasized.":::
+:::image type="content" source="media/best-practices-power-query/filter-values-date-column.png" alt-text="Screenshot of a sample type specific filter for a date column with the previous option emphasized.":::
 
 These type-specific filters can help you create a dynamic filter that always retrieves data that's in the previous *x* number of seconds, minutes, hours, days, weeks, months, quarters, or years.
 
