@@ -4,7 +4,7 @@
 // OAuth configuration settings
 //
 
-// TODO: set Microsft Entra ID client ID value in the client_id file
+// TODO: set Microsoft Entra ID client ID value in the client_id file
 client_id = Text.FromBinary(Extension.Contents("client_id")); 
 redirect_uri = "https://oauth.powerbi.com/views/oauthredirect.html";
 token_uri = "https://login.microsoftonline.com/organizations/oauth2/v2.0/token";

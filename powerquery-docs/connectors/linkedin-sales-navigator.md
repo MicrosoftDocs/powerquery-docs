@@ -57,7 +57,7 @@ To connect to LinkedIn Sales Navigator data:
 
    :::image type="content" source="media/linkedin-sales-navigator/navigator.png" lightbox="media/linkedin-sales-navigator/navigator.png" alt-text="Select data with Navigator":::
    
-   Once you've selected the data you require, either select **Transform Data** to continue tranforming the data in the Power Query editor, or select **Load** to load the data into Power BI Desktop. Once in Power BI Desktop, you can create whatever reports you like with your LinkedIn Sales Navigator data.
+   Once you've selected the data you require, either select **Transform Data** to continue transforming the data in the Power Query editor, or select **Load** to load the data into Power BI Desktop. Once in Power BI Desktop, you can create whatever reports you like with your LinkedIn Sales Navigator data.
 
 ## Getting help
 

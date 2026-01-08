@@ -254,7 +254,7 @@ If you're using Power BI Desktop and encounter errors while navigating tables:
 1. Go to **File** > **Options and settings** > **Options**
 2. Under **Preview features**, uncheck the option **Use new Google BigQuery connector implementation**.
 
-If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.
+If you receive this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.
 
 ### Permission issues connecting with ADBC
 
@@ -262,4 +262,4 @@ Some environments might require additional permissions to connect using `Impleme
 
 ### Unable to refresh partitioned models with ADBC
 
-A known issue in the Google BigQuery connector is that partitioned semantic models might not refresh correctly. This often shows with the `Cannot execute <ReadChunkWithRetries>b__0 after 5 tries` error. A recent fix was published for this issue and should be deployed in October 2025. If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.
+A known issue in the Google BigQuery connector is that partitioned semantic models might not refresh correctly. This often shows with the `Cannot execute <ReadChunkWithRetries>b__0 after 5 tries` error. A recent fix was published for this issue and should be deployed in October 2025. If you receive this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.

@@ -146,7 +146,7 @@ Because so much of the implementation of paging and navigation tables is context
 
 ## Sophisticated approach
 
-The hardcoded implementation discussed above does a good job of making sure that schemas remain consistent for simple JSON repsonses, but it's limited to parsing the first level of the response. Deeply nested data sets would benefit from the following approach, which takes advantage of M Types.
+The hardcoded implementation discussed above does a good job of making sure that schemas remain consistent for simple JSON responses, but it's limited to parsing the first level of the response. Deeply nested data sets would benefit from the following approach, which takes advantage of M Types.
 
 Here is a quick refresh about types in the M language from the [Language Specification](/powerquery-m/power-query-m-type-system):
 
