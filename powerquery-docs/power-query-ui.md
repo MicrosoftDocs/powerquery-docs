@@ -63,6 +63,8 @@ The experience of connecting to your data, specifying the authentication method,
 
 >[!TIP]
 >To find the Power Query editor in Power BI, under Queries select **Transform data**.
+>
+> :::image type="content" source="media/power-query-ui/transform-data.png" alt-text="Screenshot of the Home bar in Power BI with the Transform data button highlighted.":::
 
 The Power Query editor represents the Power Query user interface. In this user interface, you can add or modify queries, manage queries by grouping or adding descriptions to query steps, or visualize your queries and their structure with different views. The Power Query user interface has five distinct components.
 
