@@ -48,8 +48,6 @@ Once you select this connector, the screen displays the connection settings and 
 
 Select the **Next** button.
 
-:::image type="content" source="media/power-query-ui/pqui-connect-odata.png" alt-text="Screenshot of the OData Connect to data source page with the Northwind URI entered in the URL section.":::
-
 The **Navigator** now opens, where you select the tables you want to connect to from the data source. Select the **Customers** table to load a preview of the data, and then select **Transform data**.
 
 :::image type="content" source="media/power-query-ui/pqui-navigator.png" alt-text="Screenshot of the Power Query Navigator page with the Customers table emphasized." lightbox="media/power-query-ui/pqui-navigator.png":::
@@ -62,6 +60,9 @@ The experience of connecting to your data, specifying the authentication method,
 > To learn more about the OData feed connector, go to [OData feed](connectors/odata-feed.md).
 
 ## The Power Query editor user experience
+
+>[!TIP]
+>To find the Power Query editor in Power BI, under Queries select **Transform data**.
 
 The Power Query editor represents the Power Query user interface. In this user interface, you can add or modify queries, manage queries by grouping or adding descriptions to query steps, or visualize your queries and their structure with different views. The Power Query user interface has five distinct components.
 
