@@ -187,7 +187,7 @@ Instead of using these connectors to access large amounts of Dataverse data, we 
 Preview errors can occur due to a known limitation when the **Navigation Properties** feature is enabled in Dataverse.
 
 You could see a message like this one, for example:
-`Preview.Error: The type of the current preview value is too complex to display.'
+`Preview.Error: The type of the current preview value is too complex to display.`
 
 To resolve this issue, similar to the SQL Server connector, there's an option available to disable navigation properties (relationship columns) in the Dataverse connector to improve performance. This option can be set in the [advanced options](#connect-using-advanced-options) available in Power Query Online, or it can be set using the `CreateNavigationProperties=false` parameter in the Dataverse connector function.
 
