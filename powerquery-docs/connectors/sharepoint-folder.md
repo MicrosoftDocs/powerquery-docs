@@ -64,23 +64,23 @@ To connect to a SharePoint folder:
 
 1. From **Get Data**, select **SharePoint folder**. More information: [Where to get data](../where-to-get-data.md)
 
-2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`. If the site URL you enter is invalid, a :::image type="icon" source="./media/sharepoint-folder/warning.png"::: warning icon appears next to the URL text box.
+1. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`. If the site URL you enter is invalid, a :::image type="icon" source="./media/sharepoint-folder/warning.png"::: warning icon appears next to the URL text box.
 
    :::image type="content" source="./media/sharepoint-folder/url-select.png" alt-text="Screenshot of the SharePoint folder dialog with the URL entered in Site URL.":::
 
    Select **OK** to continue.
 
-3. If you're visiting this site address for the first time, select the appropriate authentication method. Enter your credentials and choose which level to apply these settings to. Then select **Connect**.
+1. If you're visiting this site address for the first time, select the appropriate authentication method. Enter your credentials and choose which level to apply these settings to. Then select **Connect**.
 
    :::image type="content" source="./media/sharepoint-folder/signin.png" alt-text="SharePoint folder desktop authentication.":::
 
    For more information about authentication methods and level settings, go to [Authentication in desktop apps](../connectorauthentication.md).
 
-4. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
+1. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
    :::image type="content" source="./media/sharepoint-folder/folder-info.png" alt-text="Screenshot of the Navigator showing the folder information." lightbox="./media/sharepoint-folder/folder-info.png":::
 
-5. Select **Combine & Transform Data** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query editor for editing. Or select **Combine & Load** to load the data from all of the files in the SharePoint folder directly into your app.
+1. Select **Combine & Transform Data** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query editor for editing. Or select **Combine & Load** to load the data from all of the files in the SharePoint folder directly into your app.
 
    :::image type="content" source="./media/sharepoint-folder/combine-folder-files.png" alt-text="Screenshot of the Navigator with the combine options under the Combine button." lightbox="./media/sharepoint-folder/combine-folder-files.png":::
 
