@@ -35,6 +35,21 @@ When you're connecting to a SharePoint site, you're asked to enter the site URL.
 
 :::image type="content" source="./media/sharepoint-list/sharepoint-address.png" alt-text="Screenshot showing the locations of Home in the SharePoint navigation pane, the icon at the top of the site, and the resulting URL address.":::
 
+## SharePoint site picker
+
+SharePoint Site picker empowers you to quickly find and select the correct SharePoint site during connection creation, without navigating to separate pages to locate and copy URLs manually.
+
+**Simplified site selection**: Instead of copying URLs manually, use the Site URL dropdown to choose from your Recent sites, Favorite sites and all sites you can access.
+ :::image type="content" source="../media/sharepoint-list/site-selection-sharepoint-list.jpg" alt-text="Screenshot of slelecting sharepoint site from SharePoint Site Picker":::
+
+**Quick search experience**: Type keywords in the dropdown search box to quickly locate relevant sites. After selecting a site, you can immediately proceed to load data for analysis.
+ :::image type="content" source="./media/sharepoint-list/site-search-sharepoint-list.jpg" alt-text="Screenshot of searching SharePoint site.":::
+
+[!NOTE]
+> 1.	SharePoint Site Picker currently is  available in some products, e.g. Dataflow gen2, Dataflow gen1, Power BI web modeling, etc.
+>2.	The first time you use the SharePoint site picker, an authentication window will appear. Select the same account you are currently signed in with. If you close or ignore the window, the site picker will not work—but you can still manually paste SharePoint site URLs as before.
+>3.	When using the SharePoint site picker, you may encounter issues searching for sites hosted in regions outside your own geography.
+
 ## Connect to a SharePoint list from Power Query Desktop
 
 To connect to a SharePoint list:
@@ -65,7 +80,7 @@ To connect to a SharePoint list:
 
 1. From the **Data sources** page, select **SharePoint list**. For more information, go to [Where to get data](../where-to-get-data.md).
 
-2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
+2. If you have access to the [SharePoint Site Picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, copy the SharePoint site URL from [Determine the site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint folder** dialog box.
 
    :::image type="content" source="./media/sharepoint-list/sharepoint-list-url-online.png" alt-text="Screenshot of the online SharePoint list page with the Site URL information filled in.":::
 
