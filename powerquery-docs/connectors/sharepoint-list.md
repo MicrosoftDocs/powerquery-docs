@@ -45,7 +45,7 @@ SharePoint Site picker empowers you to quickly find and select the correct Share
 **Quick search experience**: Type keywords in the dropdown search box to quickly locate relevant sites. After selecting a site, you can immediately proceed to load data for analysis.
  :::image type="content" source="./media/sharepoint-list/site-search-sharepoint-list.jpg" alt-text="Screenshot of searching SharePoint site.":::
 
-[!NOTE]
+> [!NOTE]
 > 1.	SharePoint Site Picker currently is  available in some products, e.g. Dataflow gen2, Dataflow gen1, Power BI web modeling, etc.
 >2.	The first time you use the SharePoint site picker, an authentication window will appear. Select the same account you are currently signed in with. If you close or ignore the window, the site picker will not work—but you can still manually paste SharePoint site URLs as before.
 >3.	When using the SharePoint site picker, you may encounter issues searching for sites hosted in regions outside your own geography.
