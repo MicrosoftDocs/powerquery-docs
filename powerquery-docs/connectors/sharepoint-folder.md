@@ -42,7 +42,7 @@ When you're connecting to the document library in a SharePoint site, you're aske
 > [!NOTE]
 > A classic SharePoint URL page isn't supported and will fail to connect. Only a modern Sharepoint home page is supported.
 
-## SharePoint Site Picker
+## SharePoint site picker
 
 SharePoint Site picker empowers you to quickly find and select the correct SharePoint site during connection creation, without navigating to separate pages to locate and copy URLs manually.
 
@@ -93,7 +93,7 @@ To connect to a SharePoint folder:
 
 1. From the **Data sources** page, select **SharePoint folder**.
 
-2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`.
+2. If you have access to the [SharePoint Site Picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, copy the SharePoint site URL from [Determine the site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`.
 
    :::image type="content" source="./media/sharepoint-folder/online-signin.png" alt-text="Screenshot of the online folder selection and sign in.":::
 

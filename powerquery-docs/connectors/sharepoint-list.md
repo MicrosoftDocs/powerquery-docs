@@ -40,7 +40,7 @@ When you're connecting to a SharePoint site, you're asked to enter the site URL.
 SharePoint Site picker empowers you to quickly find and select the correct SharePoint site during connection creation, without navigating to separate pages to locate and copy URLs manually.
 
 **Simplified site selection**: Instead of copying URLs manually, use the Site URL dropdown to choose from your Recent sites, Favorite sites and all sites you can access.
- :::image type="content" source="../media/sharepoint-list/site-selection-sharepoint-list.jpg" alt-text="Screenshot of slelecting sharepoint site from SharePoint Site Picker":::
+ :::image type="content" source="./media/sharepoint-list/site-selection-sharepoint-list.jpg" alt-text="Screenshot of slelecting sharepoint site from SharePoint Site Picker":::
 
 **Quick search experience**: Type keywords in the dropdown search box to quickly locate relevant sites. After selecting a site, you can immediately proceed to load data for analysis.
  :::image type="content" source="./media/sharepoint-list/site-search-sharepoint-list.jpg" alt-text="Screenshot of searching SharePoint site.":::
@@ -80,7 +80,7 @@ To connect to a SharePoint list:
 
 1. From the **Data sources** page, select **SharePoint list**. For more information, go to [Where to get data](../where-to-get-data.md).
 
-2. If you have access to the [SharePoint Site Picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, copy the SharePoint site URL from [Determine the site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint folder** dialog box.
+2. If you have access to the [SharePoint Site Picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, copy the SharePoint site URL from [Determine the site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint list** dialog box.
 
    :::image type="content" source="./media/sharepoint-list/sharepoint-list-url-online.png" alt-text="Screenshot of the online SharePoint list page with the Site URL information filled in.":::
 

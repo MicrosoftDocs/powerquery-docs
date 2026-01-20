@@ -85,7 +85,7 @@ To connect to a SharePoint Online list:
 
    :::image type="content" source="./media/sharepoint-online-list/get-data-online.png" alt-text="Screenshot of the get data window with SharePoint Online list emphasized.":::
 
-2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
+2. If you have access to the [SharePoint Site Picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, copy the SharePoint site URL from [Determine the site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint Online list** dialog box.
 
    :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-url-online.png" alt-text="Screenshot of the SharePoint Online Lists window with an example Site URL entered.":::
 
