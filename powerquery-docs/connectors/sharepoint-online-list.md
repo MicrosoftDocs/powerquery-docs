@@ -38,18 +38,7 @@ When you're connecting to a SharePoint site, you're asked to enter the site URL.
 
 ## SharePoint site picker
 
-SharePoint Site picker empowers you to quickly find and select the correct SharePoint site during connection creation, without navigating to separate pages to locate and copy URLs manually.
-
-**Simplified site selection**: Instead of copying URLs manually, use the Site URL dropdown to choose from your Recent sites, Favorite sites and all sites you can access.
- :::image type="content" source="./media/sharepoint-online-list/site-selection-sharepoint-online-list.jpg" alt-text="Screenshot of slelecting sharepoint site from SharePoint Site Picker":::
-
-**Quick search experience**: Type keywords in the dropdown search box to quickly locate relevant sites. After selecting a site, you can immediately proceed to load data for analysis.
- :::image type="content" source="./media/sharepoint-online-list/site-search-sharepoint-online-list.jpg" alt-text="Screenshot of searching SharePoint site.":::
-
-> [!NOTE]
-> 1.	SharePoint Site Picker currently is  available in some products, e.g. Dataflow gen2, Dataflow gen1, Power BI web modeling, etc.
->2.	The first time you use the SharePoint site picker, an authentication window will appear. Select the same account you are currently signed in with. If you close or ignore the window, the site picker will not work—but you can still manually paste SharePoint site URLs as before.
->3.	When using the SharePoint site picker, you may encounter issues searching for sites hosted in regions outside your own geography.
+[!INCLUDE [sharepoint-site-picker](includes/sharepoint-site-picker.md)]
 
 ## Connect to a SharePoint Online list from Power Query Desktop
 
@@ -57,7 +46,7 @@ To connect to a SharePoint Online list:
 
 1. Select **SharePoint Online list** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
-2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the SharePoint Online Lists dialog.
+1. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the SharePoint Online Lists dialog.
 
    :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-url.png" alt-text="Screenshot of the SharePoint Online Lists dialog with an example Site URL entered.":::
 
@@ -67,13 +56,13 @@ To connect to a SharePoint Online list:
 
    Select **OK** to continue.
 
-3. If you're visiting this site address for the first time, select the appropriate authentication method. Enter your credentials and chose which level to apply these settings to. Then select **Connect**.
+1. If you're visiting this site address for the first time, select the appropriate authentication method. Enter your credentials and chose which level to apply these settings to. Then select **Connect**.
 
    :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-sign-in.png" alt-text="Screenshot of the authentication dialog where you enter your credentials.":::
 
     For more information about authentication methods and level settings, go to [Authentication with a data source](../connectorauthentication.md).
 
-4. From the **Navigator**, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
+1. From the **Navigator**, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
    :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-navigator.png" alt-text="Screenshot of the Navigator dialog with the marketing data checkbox selected and displayed.":::
 
@@ -85,17 +74,17 @@ To connect to a SharePoint Online list:
 
    :::image type="content" source="./media/sharepoint-online-list/get-data-online.png" alt-text="Screenshot of the get data window with SharePoint Online list emphasized.":::
 
-2. If you have access to the [SharePoint Site Picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, copy the SharePoint site URL from [Determine the site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint Online list** dialog box.
+1. If you have access to the [SharePoint site picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, [copy the SharePoint site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint Online list** dialog box.
 
    :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-url-online.png" alt-text="Screenshot of the SharePoint Online Lists window with an example Site URL entered.":::
 
-3. Enter the name of an on-premises data gateway if needed.
+1. Enter the name of an on-premises data gateway if needed.
 
-4. Select the authentication kind, and enter any required credentials.
+1. Select the authentication kind, and enter any required credentials.
 
-5. Select **Next**.
+1. Select **Next**.
 
-6. From the **Navigator**, you can select a location, then transform the data in the Power Query editor by selecting **Transform data**.
+1. From the **Navigator**, you can select a location, then transform the data in the Power Query editor by selecting **Transform data**.
 
    :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-navigator-online.png" alt-text="Screenshot of the online Navigator with marketing data selected and the data displayed.":::
 
