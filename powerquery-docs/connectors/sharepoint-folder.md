@@ -44,19 +44,7 @@ When you're connecting to the document library in a SharePoint site, you're aske
 
 ## SharePoint site picker
 
-SharePoint Site picker empowers you to quickly find and select the correct SharePoint site during connection creation, without navigating to separate pages to locate and copy URLs manually.
-
-**Simplified site selection**: Instead of copying URLs manually, use the Site URL dropdown to choose from your Recent sites, Favorite sites and all sites you can access.
- :::image type="content" source="./media/sharepoint-folder/simplified-site-selection.jpg" alt-text="Screenshot of slelecting sharepoint site from SharePoint Site Picker":::
-
-**Quick search experience**: Type keywords in the dropdown search box to quickly locate relevant sites. After selecting a site, you can immediately proceed to load data for analysis.
- :::image type="content" source="./media/sharepoint-folder/search-site.jpg" alt-text="Screenshot of searching SharePoint site.":::
-
-> [!NOTE]
-> 1.	SharePoint Site Picker currently is  available in some products, e.g. Dataflow gen2, Dataflow gen1, Power BI web modeling, etc.
->2.	The first time you use the SharePoint site picker, an authentication window will appear. Select the same account you are currently signed in with. If you close or ignore the window, the site picker will not work—but you can still manually paste SharePoint site URLs as before.
->3.	When using the SharePoint site picker, you may encounter issues searching for sites hosted in regions outside your own geography.
-
+[!INCLUDE [sharepoint-site-picker](includes/sharepoint-site-picker.md)]
 
 ## Connect to a SharePoint folder from Power Query Desktop
 
@@ -93,21 +81,21 @@ To connect to a SharePoint folder:
 
 1. From the **Data sources** page, select **SharePoint folder**.
 
-2. If you have access to the [SharePoint Site Picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, copy the SharePoint site URL from [Determine the site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`.
+1. If you have access to the [SharePoint site picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, [copy the SharePoint site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint Folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`.
 
    :::image type="content" source="./media/sharepoint-folder/online-signin.png" alt-text="Screenshot of the online folder selection and sign in.":::
 
-3. If the SharePoint folder is on-premises, enter the name of an on-premises data gateway.
+1. If the SharePoint folder is on-premises, enter the name of an on-premises data gateway.
 
-4. Select the authentication kind, and enter any credentials that are required.
+1. Select the authentication kind, and enter any credentials that are required.
 
-5. Select **Next**.
+1. Select **Next**.
 
-6. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
+1. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
    :::image type="content" source="./media/sharepoint-folder/folder-info-online.png" alt-text="Screenshot of the online Navigator showing the folder information." lightbox="./media/sharepoint-folder/folder-info-online.png":::
 
-7. Select **Combine** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query editor for editing.
+1. Select **Combine** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query editor for editing.
 
    > [!NOTE]
    >The **Combine** button is the easiest way to combine data found in the files of the SharePoint folder you specify. You could also use the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
@@ -124,15 +112,15 @@ In some cases, you might have multiple folders on your SharePoint site containin
 
    :::image type="content" source="./media/sharepoint-folder/list-folder-files.png" alt-text="Screenshot of the sample list of SharePoint folder files." lightbox="./media/sharepoint-folder/list-folder-files.png":::
 
-2. In the Power Query editor, scroll down to find the files you want to keep.  
+1. In the Power Query editor, scroll down to find the files you want to keep.  
 
    :::image type="content" source="./media/sharepoint-folder/transform-file-table.png" alt-text="Screenshot of the Power Query editor where you find the files to keep." lightbox="./media/sharepoint-folder/transform-file-table.png":::
 
-3. In this example, the required files are the last rows in the table. Select **Remove Rows** > **Remove Top Rows**, enter the value of the last row before the files to keep (in this case 909), and select **OK**.
+1. In this example, the required files are the last rows in the table. Select **Remove Rows** > **Remove Top Rows**, enter the value of the last row before the files to keep (in this case 909), and select **OK**.
 
    :::image type="content" source="./media/sharepoint-folder/remove-rows.png" alt-text="Screenshot of the Power Query editor with the Remove rows option emphasized." lightbox="./media/sharepoint-folder/remove-rows.png":::
 
-4. Once you remove all the unnecessary files, select **Combine Files** from the **Home** ribbon to combine the data from all of the remaining files.
+1. Once you remove all the unnecessary files, select **Combine Files** from the **Home** ribbon to combine the data from all of the remaining files.
 
 For more information about combining files, go to [Combine files in Power Query](../combine-files-overview.md).
 
