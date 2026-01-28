@@ -4,13 +4,18 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: revinjchalil
 
 ms.topic: concept-article
-ms.date: 7/7/2025
+ms.date: 01/28/2026
 ms.author: rechalil
 ms.reviewer: whhender
 ms.subservice: connectors
 ---
 
 # Azure Cosmos DB v2
+
+> [!IMPORTANT]
+>  Azure Cosmos DB v2 connector for Power Query is no longer supported for new projects. Don't use this feature.
+>
+> Please use Azure Cosmos DB Mirroring for Microsoft Fabric which is now GA. Mirroring provides the same zero-ETL benefits and is fully integrated with Microsoft Fabric. Learn more at [Cosmos DB Mirroring Overview](/fabric/database/mirrored-database/azure-cosmos-db).
 
 ## Summary
 
