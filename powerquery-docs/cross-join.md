@@ -39,14 +39,14 @@ To do a cross-join operation in Power Query, follow these steps:
 
    :::image type="content" source="media/cross-join/add-column-icon.png" alt-text="Screenshot of the Power Query Add column tab with the Custom column option emphasized.":::
 
-1.  In the **Custom column** dialog box, enter whatever name you like in the **New column name** box, and enter the name of your colors table or query in the **Custom column formula** box. In our example the name of our custom column is `Custom` and the name of our table/query is `Colors`.
+1. In the **Custom column** dialog box, enter whatever name you like in the **New column name** box, and enter the name of your colors table or query in the **Custom column formula** box. In our example the name of our custom column is `Custom` and the name of our table/query is `Colors`.
 
-   :::image type="content" source="media/cross-join/add-column-window.png" alt-text="Screenshot of the custom column dialog for cross-join with Custom column formula filled in Color.":::
+    :::image type="content" source="media/cross-join/add-column-window.png" alt-text="Screenshot of the custom column dialog for cross-join with Custom column formula filled in Color.":::
 
-   > [!IMPORTANT]
-   >If your query name has spaces in it, such as **Product Colors**, the text that you need to enter in the **Custom column formula** section has to follow the syntax `#"Query name"`. For **Product Colors**, you need to enter `#"Product Colors"`.
-   >
-   >You can check the name of your queries in either the **Query settings** pane or in the **Queries** pane in Power Query.
+    > [!IMPORTANT]
+    >If your query name has spaces in it, such as **Product Colors**, the text that you need to enter in the **Custom column formula** section has to follow the syntax `#"Query name"`. For **Product Colors**, you need to enter `#"Product Colors"`.
+    >
+    >You can check the name of your queries in either the **Query settings** pane or in the **Queries** pane in Power Query.
 
 1. Select **OK** in the **Custom column** dialog box.
 1. In the new column heading, select **Expand** ( :::image type="icon" source="media/cross-join/expand-icon.png"::: ) to expand the contents of this newly created column, and then select **OK**.
