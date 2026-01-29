@@ -1,6 +1,6 @@
 ---
 title: Power Query Denodo Connector
-description: Learn basic information and prerequisites for the Denodo connector, descriptions of the optional input parameters, and limitations and issues you might encounter.
+description: Learn about prerequisites for the Denodo connector, descriptions of the optional input parameters, and limitations and issues you might encounter.
 author: denodo-research-labs
 ms.author: whhender
 ms.service: powerquery
@@ -69,7 +69,7 @@ To make the connection, take the following steps:
     Omit authentication parameters. You configure authentication in later steps.
 
    > [!NOTE]
-   > When you write the connection string, be aware of the following:
+   > When you write the connection string, be aware of the following requirements:
    >
    > * The connection string must keep the correct order of its parameters: SERVER, PORT, DATABASE, and SSLMode.
    > * The name of these parameters must always be written in the same way. For example, if you choose to write them in uppercase, they must always be written in uppercase. If you decide to write them with the first letter of a word in uppercase and the rest of the letters in lowercase, they must always be written that way.
@@ -96,7 +96,7 @@ To make the connection, take the following steps:
 
 6. When you're done, select **OK**.
 
-7. Now you're asked for authentication. The Denodo Power BI custom connector supports three authentication types: Windows, Basic, and Organzational account.
+7. Now you're asked for authentication. The Denodo Power BI custom connector supports three authentication types: Windows, Basic, and Organizational account.
 
    * **Windows**: When you choose to use Windows authentication, Power BI Desktop connects to Virtual DataPort through Kerberos authentication.
 
@@ -119,7 +119,7 @@ To make the connection, take the following steps:
       :::image type="content" source="./media/denodo/denodo-basic-authentication.png" alt-text="Screenshot of the Denodo basic authentication in Power BI Desktop.":::
 
         > [!NOTE]
-        > Older versions of the Denodo connector required you to escape certain password characters. As of version 1.0.8, this is no longer required.
+        > Older versions of the Denodo connector required you to escape certain password characters. As of version 1.0.8, this rule is no longer required.
 
    * **Organizational account**: This authentication type connects Power BI Desktop to your Virtual DataPort data through a specific set of Microsoft credentials. This option is a specialized version of OAuth for Microsoft Entra ID.
   
@@ -163,7 +163,7 @@ For this connection method, you use the on-premises data gateway. Follow these s
       > DSN is recommended. It provides many configuration options that might not be directly available when you use a connection string.
 
    You also have to specify the authentication mode. The available authentication methods are:
-      * **Windows**: The Power BI service connects to Virtual DataPort through Kerberos authentication. You need the following:
+      * **Windows**: The Power BI service connects to Virtual DataPort through Kerberos authentication.
          * In **Data Source Settings**, enter the user name and password to create the Kerberos ticket.
          * Kerberos authentication must be enabled in the Virtual DataPort server.
          * The Denodo Virtual DataPort database that the data source connects to must be configured with the option **ODBC/ADO.net authentication type** set to **Kerberos**.
@@ -189,9 +189,9 @@ For this connection method, you use the on-premises data gateway. Follow these s
 
      By default, the Power BI gateway sends the user principal name (UPN) when it performs an SSO authentication operation. Therefore, you need to review the attribute that you use as a login identifier in Denodo Kerberos authentication. If it's different from `userPrincipalName`, adjust the gateway settings according to this value.
 
-   * The Power BI gateway configuration file is called `Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config`, and it's stored at `\Program Files\On-premises data gateway`. This file has two properties, called `ADUserNameLookupProperty` and `ADUserNameReplacementProperty`, that allow the gateway to perform local Microsoft Entra ID lookups at runtime. `ADUserNameLookupProperty` must specify against which attribute of the local Active Directory it must map the user principal name that comes from Microsoft Entra ID. So, in this scenario, `ADUserNameLookupProperty` should be `userPrincipalName`. Then, when the user is found, the `ADUserNameReplacementProperty` value indicates the attribute that should be used to authenticate the impersonated user (the attribute that you use as the login identifier in Denodo).
+   * The Power BI gateway configuration file is `Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config`, located in `\Program Files\On-premises data gateway`. This file has two properties, called `ADUserNameLookupProperty` and `ADUserNameReplacementProperty`, that allow the gateway to perform local Microsoft Entra ID lookups at runtime. `ADUserNameLookupProperty` must specify against which attribute of the local Active Directory it must map the user principal name that comes from Microsoft Entra ID. So, in this scenario, `ADUserNameLookupProperty` should be `userPrincipalName`. Then, when the user is found, the `ADUserNameReplacementProperty` value indicates the attribute that should be used to authenticate the impersonated user (the attribute that you use as the login identifier in Denodo).
 
-     You should also take into account that changes in this configuration file are at the gateway level, and therefore affects any source with which SSO authentication is done through the Power BI gateway.
+     Changes in this configuration file are at the gateway level, and therefore affect any source with which SSO authentication is done through the Power BI gateway.
 
 5. After you create a data source for the Denodo connector, you can refresh Power BI reports. To publish a report on powerbi.com, you need to:
    * Open the report in Power BI Desktop.
@@ -229,7 +229,7 @@ This parameter can only be used from the advanced editor. To do so, the `UserAge
 
 ### Use of the Compression parameter
 
-We recommend that you activate this setting when the client application and the Denodo server are connected through a WAN. In these cases, you can expect significant performance improvements when the client application reads moderate or large data volumes. For this, you can use the `Compression` parameter.
+We recommend that you activate this setting when the client application and the Denodo server are connected through a WAN. In these cases, you can expect significant performance improvements when the client application reads moderate or large data volumes.
 
 This parameter can only be used from the advanced editor. To do so, the `Compression` parameter must be added in the record options, associating a value of type `number` (0 or 1).
 
