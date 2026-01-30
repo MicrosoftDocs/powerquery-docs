@@ -1,6 +1,6 @@
 ---
 title: Power Query Denodo Connector
-description: Learn about prerequisites for the Denodo connector, descriptions of the optional input parameters, and limitations and issues you might encounter.
+description: Learn about prerequisites for the Denodo connector, descriptions of the optional input parameters, and issues you might encounter.
 author: denodo-research-labs
 ms.author: whhender
 ms.service: powerquery
@@ -13,7 +13,7 @@ ms.custom: sfi-image-nochange
 # Denodo
 
 > [!NOTE]
->This connector is owned and provided by Denodo.
+> Denodo owns and provides this connector.
 
 ## Summary
 
@@ -28,7 +28,7 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-The Denodo platform must be installed and configured, and its service started, to use this connector. If you have a connection that uses an ODBC data source name (DSN), you must correctly configure the connection in the ODBC data source administrator.
+To use this connector, install and configure the Denodo platform, and start its service. If you have a connection that uses an ODBC data source name (DSN), you must correctly configure the connection in the ODBC data source administrator.
 
 ## Capabilities supported
 
@@ -45,16 +45,16 @@ To make the connection, take the following steps:
 
 2. There are two ways to connect to the data source of your choice:
 
-    * Through DSN (ODBC data source name)
-    * Use a connection string
+    * DSN (ODBC data source name)
+    * Connection string
 
-   On the **Denodo Connector** dialog, in the **DSN or Connection String** section, provide the **Data source name (DSN)** or the **Connection String**, depending on the type of connection you prefer.
+   In the **Denodo Connector** dialog, in the **DSN or Connection String** section, provide the **Data source name (DSN)** or the **Connection String**, depending on the type of connection you prefer.
 
    :::image type="content" source="./media/denodo/denodo-connector.png" alt-text="Screenshot of the Denodo connector dialog.":::
 
     When you're creating a Denodo-compatible connection string, you must omit the **Driver** field, because this field is transparently set at connection time by the connector itself.
 
-    The connection string must contain three mandatory parameters: **SERVER**, **PORT**, and **DATABASE**.
+    The connection string must contain three mandatory parameters: `SERVER`, `PORT`, and `DATABASE`.
 
     ```http
     SERVER=<Server name>;PORT=<Port number>;DATABASE=<Database name>
@@ -76,11 +76,11 @@ To make the connection, take the following steps:
    >
    > Otherwise, Power BI might not recognize different Denodo datasets in a report as belonging to the same Denodo data source. As a result, Power BI might request separate authentication credentials for each of them.
 
-3. The second section, **Enable debug mode**, is an optional field that allows you to add trace information to log files. Power BI Desktop creates these files when you enable tracing in the application, by using the **Diagnostics** tab in the **Options** menu. The default value for **Enable debug mode** is false, and in this scenario, there's no trace data in the log files from the Denodo Power BI custom connector.
+3. The second section, **Enable debug mode**, is an optional field that allows you to add trace information to log files. Power BI Desktop creates these files when you enable tracing in the application, by using the **Diagnostics** tab on the **Options** menu. The default value for **Enable debug mode** is false, and in this scenario, there's no trace data in the log files from the Denodo Power BI custom connector.
 
 4. The third section, **Native Query**, is an optional field where you can enter a query. If you use this query field, the resulting dataset is the result of the query instead of a table or a set of tables.
 
-    You can write a query that queries only one of the databases that the datasource is associated with.
+    You can write a query that queries only one of the databases that the data source is associated with.
 
     ``` sql
     SELECT title, name FROM film JOIN language ON film.language_id = language.language_id WHERE film.language_id = 1
@@ -94,9 +94,9 @@ To make the connection, take the following steps:
 
 5. The last section in **Denodo Connector** is **Data connectivity mode**, where you can choose between Import mode or DirectQuery mode.
 
-6. When you're done, select **OK**.
+6. When you finish, select **OK**.
 
-7. Now you're asked for authentication. The Denodo Power BI custom connector supports three authentication types: Windows, Basic, and Organizational account.
+7. Now you're asked for authentication. The Denodo Power BI custom connector supports three authentication types:
 
    * **Windows**: When you choose to use Windows authentication, Power BI Desktop connects to Virtual DataPort through Kerberos authentication.
 
@@ -134,11 +134,11 @@ To make the connection, take the following steps:
         :::image type="content" source="./media/denodo/denodo-entra-id-authentication3.png" alt-text="Screenshot of the Denodo organizational account connect.":::
 
         > [!NOTE]
-        > To access Virtual DataPort databases, you must create a user in Denodo whose name is the same as the email used in Power BI when signing in to the organizational account. When you create the user in Denodo, you must select **EXTERNAL** as the authentication type. The permissions given to this user on the Denodo databases determine which databases can be accessed from Power BI Desktop.
+        > To access Virtual DataPort databases, you must create a user in Denodo. The user's name must be the same as the email used in Power BI when the user signs in to the organizational account. When you create the user in Denodo, you must select **EXTERNAL** as the authentication type. The permissions given to this user on the Denodo databases determine which databases can be accessed from Power BI Desktop.
 
-8. When you're done, select **Connect**.
+8. When you finish, select **Connect**.
 
-9. In **Navigator**, select the database and data you want, and choose **Load**. Alternatively, if you're going to modify the incoming data, choose **Transform Data**.
+9. In **Navigator**, select the database and data you want, and then select **Load**. Alternatively, if you're going to modify the incoming data, select **Transform Data**.
 
    :::image type="content" source="./media/denodo/denodo-navigator.png" alt-text="Screenshot of the Denodo navigator.":::
 
@@ -157,19 +157,19 @@ For this connection method, you use the on-premises data gateway. Follow these s
    :::image type="content" source="./media/denodo/data-source-settings-select-denodo.png" alt-text="Screenshot of the Data Source Settings dialog where you add the Denodo data source.":::
 
    To create the data source, you have to specify the way to connect to the data source of your choice:
-      * Through DSN
-      * Use a connection string
+      * DSN
+      * Connection string
       > [!NOTE]
-      > DSN is recommended. It provides many configuration options that might not be directly available when you use a connection string.
+      > We recommend DSN. It provides many configuration options that might not be directly available when you use a connection string.
 
    You also have to specify the authentication mode. The available authentication methods are:
       * **Windows**: The Power BI service connects to Virtual DataPort through Kerberos authentication.
-         * In **Data Source Settings**, enter the user name and password to create the Kerberos ticket.
-         * Kerberos authentication must be enabled in the Virtual DataPort server.
+         * In **Data Source Settings**, enter the username and password to create the Kerberos ticket.
+         * In the Virtual DataPort server, enable Kerberos authentication.
          * The Denodo Virtual DataPort database that the data source connects to must be configured with the option **ODBC/ADO.net authentication type** set to **Kerberos**.
          * Make sure the **Advanced Options** page of the DSN configuration contains all the needed configuration for using Kerberos as an authentication method.
 
-           :::image type="content" source="./media/denodo/denodo-advanced-options-dsn.png" alt-text="Screenshot of the Advanced Options page at the Denodo DSN configuration.":::
+         :::image type="content" source="./media/denodo/denodo-advanced-options-dsn.png" alt-text="Screenshot of the Advanced Options page at the Denodo DSN configuration.":::
 
       * **Basic**: You can create a data source in the Power BI service to connect to your Virtual DataPort data, through your Virtual DataPort server credentials.
       * **Oauth**: You can create a data source in the Power BI service to connect to your Virtual DataPort data, through Microsoft credentials.
@@ -193,7 +193,7 @@ For this connection method, you use the on-premises data gateway. Follow these s
 
      Changes in this configuration file are at the gateway level, and therefore affect any source with which SSO authentication is done through the Power BI gateway.
 
-5. After you create a data source for the Denodo connector, you can refresh Power BI reports. To publish a report on powerbi.com, you need to:
+5. After you create a data source for the Denodo connector, you can refresh Power BI reports. To publish a report on powerbi.com:
    * Open the report in Power BI Desktop.
    * Select **File** > **Publish** > **Publish to Power BI**.
    * Save the report on the computer.
@@ -205,35 +205,35 @@ For this connection method, you use the on-premises data gateway. Follow these s
 
 If you want to control how long to wait before abandoning an attempt to make a connection to a server, you can use the `ConnectionTimeout` parameter.
 
-This parameter can only be used from the advanced editor. To do so, the `ConnectionTimeout` parameter must be added in the record options, associating a value of type `duration` to it.
+Use this parameter only from the advanced editor. To do so, the `ConnectionTimeout` parameter must be added in the record options, associating a value of type `duration` to it.
 
-> Learn more about the `duration` type [here](/powerquery-m/sharpduration).
+Learn more about the `duration` type in [this article](/powerquery-m/sharpduration).
 
-   :::image type="content" source="./media/denodo/denodo-connectiontimeout.png" alt-text="Screenshot of the advanced editor showing how to use the ConnectionTimeout parameter.":::
+:::image type="content" source="./media/denodo/denodo-connectiontimeout.png" alt-text="Screenshot of the advanced editor showing how to use the ConnectionTimeout parameter.":::
 
 ### Use of the QueryTimeout parameter
 
 If you want to control how long to wait before abandoning an attempt to make the execution of a query, you can use the `QueryTimeout` parameter.
 
-This parameter can only be used from the advanced editor. To do so, the `QueryTimeout` parameter must be added in the record options, associating a value of type `number` to it. This numeric value is represented in milliseconds (for example, 10000 equals 10 seconds).
+Use this parameter only from the advanced editor. To do so, the `QueryTimeout` parameter must be added in the record options, associating a value of type `number` to it. This numeric value is represented in milliseconds (for example, `10000` equals 10 seconds).
 
-   :::image type="content" source="./media/denodo/denodo-querytimeout.png" alt-text="Screenshot of the advanced editor showing how to use the QueryTimeout parameter.":::
+:::image type="content" source="./media/denodo/denodo-querytimeout.png" alt-text="Screenshot of the advanced editor showing how to use the QueryTimeout parameter.":::
 
 ### Use of the UserAgent parameter
 
 If you want to specify the name of the client application, you can use the `UserAgent` parameter.
 
-This parameter can only be used from the advanced editor. To do so, the `UserAgent` parameter must be added in the record options, associating a value of type `text`.
+Use this parameter only from the advanced editor. To do so, the `UserAgent` parameter must be added in the record options, associating a value of type `text`.
 
-   :::image type="content" source="./media/denodo/denodo-useragent.png" alt-text="Screenshot of the advanced editor showing how to use the UserAgent parameter.":::
+:::image type="content" source="./media/denodo/denodo-useragent.png" alt-text="Screenshot of the advanced editor showing how to use the UserAgent parameter.":::
 
 ### Use of the Compression parameter
 
 We recommend that you activate this setting when the client application and the Denodo server are connected through a WAN. In these cases, you can expect significant performance improvements when the client application reads moderate or large data volumes.
 
-This parameter can only be used from the advanced editor. To do so, the `Compression` parameter must be added in the record options, associating a value of type `number` (0 or 1).
+Use this parameter only from the advanced editor. To do so, the `Compression` parameter must be added in the record options, associating a value of type `number` (0 or 1).
 
-   :::image type="content" source="./media/denodo/denodo-compression.png" alt-text="Screenshot of the advanced editor showing how to use the Compression parameter.":::
+:::image type="content" source="./media/denodo/denodo-compression.png" alt-text="Screenshot of the advanced editor showing how to use the Compression parameter.":::
 
 ## Troubleshooting
 
@@ -253,4 +253,4 @@ So your call would look similar to:
   Source = Denodo.Contents(<dsn>, null, [CreateNavigationProperties=false])
 ```
 
-This property instructs Power BI not to try to generate navigation properties from the relationships registered for the Denodo view accessed in this data source. If you need some of these relationships to be present in your Power BI data model, you must manually register them afterwards.
+This property instructs Power BI not to try to generate navigation properties from the relationships registered for the Denodo view accessed in this data source. If you need some of these relationships to be present in your Power BI data model, you must manually register them afterward.
