@@ -48,7 +48,7 @@ To make the connection, take the following steps:
     * DSN (ODBC data source name)
     * Connection string
 
-   In the **Denodo Connector** dialog, in the **DSN or Connection String** section, provide the **Data source name (DSN)** or the **Connection String**, depending on the type of connection you prefer.
+   In the **Denodo Connector** dialog, in the **DSN or Connection String** section, provide the data source name or the connection string, depending on the type of connection you prefer.
 
    :::image type="content" source="./media/denodo/denodo-connector.png" alt-text="Screenshot of the Denodo connector dialog.":::
 
@@ -187,11 +187,11 @@ For this connection method, you use the on-premises data gateway. Follow these s
 
    * You must enable Kerberos constrained delegation for the Windows user running the Power BI gateway. Also, configure both the local Active Directory and Microsoft Entra ID environments according to the instructions offered by Microsoft for this purpose.
 
-     By default, the Power BI gateway sends the user principal name (UPN) when it performs an SSO authentication operation. Therefore, you need to review the attribute that you use as a login identifier in Denodo Kerberos authentication. If it's different from `userPrincipalName`, adjust the gateway settings according to this value.
+     By default, the Power BI gateway sends the user principal name (UPN) when it performs an SSO authentication operation. You need to review the attribute that you use as a login identifier in Denodo Kerberos authentication. If it's different from `userPrincipalName`, adjust the gateway settings according to this value.
 
    * The Power BI gateway configuration file is `Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config`, located in `\Program Files\On-premises data gateway`. This file has two properties, called `ADUserNameLookupProperty` and `ADUserNameReplacementProperty`, that allow the gateway to perform local Microsoft Entra ID lookups at runtime. `ADUserNameLookupProperty` must specify against which attribute of the local Active Directory it must map the user principal name that comes from Microsoft Entra ID. So, in this scenario, `ADUserNameLookupProperty` should be `userPrincipalName`. Then, when the user is found, the `ADUserNameReplacementProperty` value indicates the attribute that should be used to authenticate the impersonated user (the attribute that you use as the login identifier in Denodo).
 
-     Changes in this configuration file are at the gateway level, and therefore affect any source with which SSO authentication is done through the Power BI gateway.
+     Changes in this configuration file are at the gateway level, and these changes affect any source with which SSO authentication is done through the Power BI gateway.
 
 5. After you create a data source for the Denodo connector, you can refresh Power BI reports. To publish a report on powerbi.com:
    * Open the report in Power BI Desktop.
