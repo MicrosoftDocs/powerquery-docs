@@ -20,7 +20,7 @@ ms.custom: sfi-image-nochange
 | Item | Description |
 | ---- | ----------- |
 | Release state | General availability |
-| Products | Power BI (semantic models)<br/>Power BI (dataflows)<br/>Fabric (dataflow) |
+| Products | Power BI (semantic models)<br/>Power BI (Dataflow)<br/>Fabric (Dataflow Gen2) |
 | Authentication types supported | Basic <br/>Windows<br/>Organizational account |
 
 > [!NOTE]
@@ -43,7 +43,7 @@ To make the connection, take the following steps:
 
    :::image type="content" source="./media/denodo/select-denodo.png" alt-text="Screenshot of the Denodo connector in Power Query Desktop.":::
 
-2. There are two ways to connect to the data source of your choice:
+1. There are two ways to connect to the data source of your choice:
 
     * DSN (ODBC data source name)
     * Connection string
@@ -76,9 +76,9 @@ To make the connection, take the following steps:
    >
    > Otherwise, Power BI might not recognize different Denodo datasets in a report as belonging to the same Denodo data source. As a result, Power BI might request separate authentication credentials for each of them.
 
-3. The second section, **Enable debug mode**, is an optional field that allows you to add trace information to log files. Power BI Desktop creates these files when you enable tracing in the application, by using the **Diagnostics** tab on the **Options** menu. The default value for **Enable debug mode** is false, and in this scenario, there's no trace data in the log files from the Denodo Power BI custom connector.
+1. The second section, **Enable debug mode**, is an optional field that allows you to add trace information to log files. Power BI Desktop creates these files when you enable tracing in the application, by using the **Diagnostics** tab on the **Options** menu. The default value for **Enable debug mode** is false, and in this scenario, there's no trace data in the log files from the Denodo Power BI custom connector.
 
-4. The third section, **Native Query**, is an optional field where you can enter a query. If you use this query field, the resulting dataset is the result of the query instead of a table or a set of tables.
+1. The third section, **Native Query**, is an optional field where you can enter a query. If you use this query field, the dataset is the result of the query instead of a table or a set of tables.
 
     You can write a query that queries only one of the databases that the data source is associated with.
 
@@ -92,11 +92,11 @@ To make the connection, take the following steps:
     SELECT i_item_sk, country FROM sakila.country, ewd.item
     ```
 
-5. The last section in **Denodo Connector** is **Data connectivity mode**, where you can choose between Import mode or DirectQuery mode.
+1. The last section in **Denodo Connector** is **Data connectivity mode**, where you can choose between Import mode or DirectQuery mode.
 
-6. When you finish, select **OK**.
+1. When you finish, select **OK**.
 
-7. Now you're asked for authentication. The Denodo Power BI custom connector supports three authentication types:
+1. Now you're asked for authentication. The Denodo Power BI custom connector supports three authentication types:
 
    * **Windows**: When you choose to use Windows authentication, Power BI Desktop connects to Virtual DataPort through Kerberos authentication.
 
@@ -136,9 +136,9 @@ To make the connection, take the following steps:
         > [!NOTE]
         > To access Virtual DataPort databases, you must create a user in Denodo. The user's name must be the same as the email used in Power BI when the user signs in to the organizational account. When you create the user in Denodo, you must select **EXTERNAL** as the authentication type. The permissions given to this user on the Denodo databases determine which databases can be accessed from Power BI Desktop.
 
-8. When you finish, select **Connect**.
+1. When you finish, select **Connect**.
 
-9. In **Navigator**, select the database and data you want, and then select **Load**. Alternatively, if you're going to modify the incoming data, select **Transform Data**.
+1. In **Navigator**, select the database and data you want, and then select **Load**. Alternatively, if you're going to modify the incoming data, select **Transform Data**.
 
    :::image type="content" source="./media/denodo/denodo-navigator.png" alt-text="Screenshot of the Denodo navigator.":::
 
@@ -148,11 +148,11 @@ For this connection method, you use the on-premises data gateway. Follow these s
 
 1. Configure the on-premises data gateway (enterprise gateway). This gateway provides quick and secure data transfer between on-premises data (data in your Power BI Desktop application, not in the cloud) and the Power BI service.
 
-2. Sign in and register your gateway. In the on-premises data gateway app, select the **Status** tab to verify that your gateway is online and ready to be used.
+1. Sign in and register your gateway. In the on-premises data gateway app, select the **Status** tab to verify that your gateway is online and ready to be used.
 
    :::image type="content" source="./media/denodo/on-premises-data-gateway.png" alt-text="Screenshot of the on-premises data gateway with status tab open.":::
 
-3. In the Power BI service, on **Data Source Settings**, create a data source for the Denodo Power BI custom connector.
+1. In the Power BI service, on **Data Source Settings**, create a data source for the Denodo Power BI custom connector.
 
    :::image type="content" source="./media/denodo/data-source-settings-select-denodo.png" alt-text="Screenshot of the Data Source Settings dialog where you add the Denodo data source.":::
 
@@ -177,7 +177,7 @@ For this connection method, you use the on-premises data gateway. Follow these s
         > [!NOTE]
         > To access Virtual DataPort databases, you must create a user in Denodo whose name is the same as the email used in Power BI when signing in to the organizational account. When you create the user in Denodo, you must select **EXTERNAL** as the authentication type. The permissions given to this user on the Denodo databases determine which databases can be accessed from Power BI.
 
-4. If you use Windows authentication, under **Advanced settings** for the data source, you can enable the single sign-on (SSO) authentication schema. You can then use the same credentials of the user accessing your reports in Power BI for accessing the required data in Denodo.
+1. If you use Windows authentication, under **Advanced settings** for the data source, you can enable the single sign-on (SSO) authentication schema. You can then use the same credentials of the user accessing your reports in Power BI for accessing the required data in Denodo.
 
    :::image type="content" source="./media/denodo/denodo-sso.png" alt-text="Screenshot of the Data Source Settings dialog where you set Denodo SSO using Kerberos.":::
 
@@ -193,7 +193,7 @@ For this connection method, you use the on-premises data gateway. Follow these s
 
      Changes in this configuration file are at the gateway level, and these changes affect any source with which SSO authentication is done through the Power BI gateway.
 
-5. After you create a data source for the Denodo connector, you can refresh Power BI reports. To publish a report on powerbi.com:
+1. After you create a data source for the Denodo connector, you can refresh Power BI reports. To publish a report on powerbi.com:
    * Open the report in Power BI Desktop.
    * Select **File** > **Publish** > **Publish to Power BI**.
    * Save the report on the computer.
