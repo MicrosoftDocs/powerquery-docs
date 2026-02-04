@@ -60,7 +60,7 @@ To make the connection, take the following steps:
     SERVER=<Server name>;PORT=<Port number>;DATABASE=<Database name>
     ```
 
-    Additionally, it can contain an optional parameter: **SSLmode**.
+    Additionally, it can contain an optional parameter: `SSLmode`.
 
     ```http
     SERVER=<Server name>;PORT=<Port number>;DATABASE=<Database name>;SSLmode=<SSL mode>
@@ -71,7 +71,7 @@ To make the connection, take the following steps:
    > [!NOTE]
    > When you write the connection string, be aware of the following requirements:
    >
-   > * The connection string must keep the correct order of its parameters: SERVER, PORT, DATABASE, and SSLMode.
+   > * The connection string must keep the correct order of its parameters: `SERVER`, `PORT`, `DATABASE`, and `SSLMode`.
    > * The name of these parameters must always be written in the same way. For example, if you choose to write them in uppercase, they must always be written in uppercase. If you decide to write them with the first letter of a word in uppercase and the rest of the letters in lowercase, they must always be written that way.
    >
    > Otherwise, Power BI might not recognize different Denodo datasets in a report as belonging to the same Denodo data source. As a result, Power BI might request separate authentication credentials for each of them.
