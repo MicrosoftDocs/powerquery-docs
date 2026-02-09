@@ -26,6 +26,16 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 >The Azure Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver. This feature is available in preview. Learn more [here](#arrow-database-connectivity-driver-connector-implementation-preview).
 
+## Network prerequisites
+
+For private networks, you'll need to implement the following network settings:
+
+- `*.blob.core.windows.net*` and `*.store.core.windows.net` need to be open in your network environment.
+- [This list of certificate downloads and revocations](/azure/security/fundamentals/azure-certificate-authority-details#certificate-downloads-and-revocation-lists) also need to be added to your allow list.
+- If firewall support is enabled on your Databricks workspace storage account, you must configure either a virtual network data gateway or an on-premises data gateway to allow private access to the storage account. This ensures that the Fabric Power BI service can continue to access the workspace storage account and that CloudFetch continues to function correctly. Alternatively, you can disable CloudFetch with the configuration `EnableQueryResultDownload=0`.
+
+This requirement does not apply to Power BI Desktop.
+
 ## Capabilities supported
 
 * Import
