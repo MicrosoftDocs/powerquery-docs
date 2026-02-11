@@ -2,9 +2,8 @@
 title: Azure Databricks Power Query connector
 description: Provides basic information and prerequisites for using Power Query's Azure Databricks connector.
 author: whhender
-
 ms.topic: concept-article
-ms.date: 9/11/2025
+ms.date: 2/11/2026
 ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -33,8 +32,6 @@ For private networks, you'll need to implement the following network settings:
 - `*.blob.core.windows.net*` and `*.store.core.windows.net` need to be open in your network environment.
 - [This list of certificate downloads and revocations](/azure/security/fundamentals/azure-certificate-authority-details#certificate-downloads-and-revocation-lists) also need to be added to your allow list.
 - If firewall support is enabled on your Databricks workspace storage account, you must configure either a virtual network data gateway or an on-premises data gateway to allow private access to the storage account. This ensures that the Fabric Power BI service can continue to access the workspace storage account and that CloudFetch continues to function correctly. Alternatively, you can disable CloudFetch with the configuration `EnableQueryResultDownload=0`.
-
-This requirement does not apply to Power BI Desktop.
 
 ## Capabilities supported
 
