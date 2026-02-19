@@ -32,6 +32,9 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 > Username/password authentication mode will be deprecated by Snowflake (read [more here](https://www.snowflake.com/en/blog/blocking-single-factor-password-authentification/)). More information can be found under Connectivity on our [Fabric roadmap](https://roadmap.fabric.microsoft.com/?product=datafactory).
 
+> [!NOTE]
+> Key Pair Auth is not supported for Dataflows Gen1, and there are no plans to change this in the future.
+
 ## Capabilities Supported
 
 - Import
