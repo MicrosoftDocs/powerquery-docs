@@ -41,11 +41,11 @@ To connect to a Usercube server:
 
    :::image type="content" source="media/usercube/usercube-get-data.png" alt-text="Get Data.":::
 
-3. You'll be prompted to specify your Usercube server's URL.
+3. You're prompted to specify your Usercube server's URL.
 
    :::image type="content" source="media/usercube/usercube-server.png" alt-text="Usercube Server.":::
 
-4. Enter the client credentials. The *Client Id* must be built from the *Identifier* of an *OpenIdClient* element. This element is defined in the configuration of your Usercube instance. To this identifier, you must concatenate the `@` character and the domain name of the Usercube instance.
+4. Enter the client credentials. The *Client ID* must be built from the *Identifier* of an *OpenIdClient* element. This element is defined in the configuration of your Usercube instance. To this identifier, you must concatenate the `@` character and the domain name of the Usercube instance.
 
    :::image type="content" source="media/usercube/usercube-client-credentials.png" alt-text="Client credentials.":::
 
