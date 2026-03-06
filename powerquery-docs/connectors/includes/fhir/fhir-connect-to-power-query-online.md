@@ -37,5 +37,5 @@ To make a connection to a FHIR server, take the following steps:
    :::image type="content" source="./fhir-savequery-online.png" alt-text="Screenshot of the Power Query editor with the Save & Close button emphasized." lightbox="./fhir-savequery-online.png":::
 
    > [!NOTE]
-   > In some cases, query folding can't be obtained purely through data shaping with the graphical user interface (GUI), as shown in the previous image. To learn more about query folding when using the FHIR connector, see [FHIR query folding](../../fhir-queryfolding.md).
+   > In some cases, query folding can't be obtained purely through data shaping with the graphical user interface (GUI), as shown in the previous image. To learn more about query folding when using the FHIR connector, see [FHIR query folding](../../fhir/fhir-query-folding.md).
 
