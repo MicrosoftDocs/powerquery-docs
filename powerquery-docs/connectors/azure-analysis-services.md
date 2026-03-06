@@ -26,16 +26,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
-
-* An Azure Analysis Services server. Follow the instructions at [Quickstart: Create a server - Portal](/azure/analysis-services/analysis-services-create-server) for creating the server using the Azure portal. Other articles in this section also include information on creating a server using PowerShell, Bicep, or an Azure Resource Manager (ARM) template. This connector article assumes that you already created an Azure Analysis Services server and have an existing database on the server.
+[!INCLUDE [Includes_azure-analysis-services_prerequisites](includes/azure-analysis-services/azure-analysis-services-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Connect live (Power BI semantic models)
-* Advanced options
-  * MDX or DAX query
+[!INCLUDE [Includes_azure-analysis-services_capabilities-supported](includes/azure-analysis-services/azure-analysis-services-capabilities-supported.md)]
 
 ## Connect to Azure Analysis Services database from Power Query Desktop
 
@@ -61,23 +56,8 @@ To make the connection, take the following steps:
    :::image type="content" source="./media/azure-analysis-services/navigator-desktop.png" lightbox="./media/azure-analysis-services/navigator-desktop.png" alt-text="Power Query Navigator showing some of the Sales Targets data.":::
 ## Connect to Azure Analysis Services database from Power Query Online
 
-To make the connection, take the following steps:
+[!INCLUDE [Includes_azure-analysis-services_connect-to-power-query-online](includes/azure-analysis-services/azure-analysis-services-connect-to-power-query-online.md)]
 
-1. Select the **Azure Analysis Services database** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
-
-2. In the **Connect to data source** page, provide the name of the server and database (optional).
-
-   :::image type="content" source="./media/azure-analysis-services/connection-settings-credentials.png" alt-text="Azure Analysis Services database connection builder in Power Query Online.":::
-
-3. If needed, select an on-premises data gateway.
-
-4. If you're connecting to this database for the first time, select the authentication kind and input your credentials.
-
-5. Select **Next** to continue.
-
-6. In **Navigator**, select the data you require, and then select **Transform data**.
-
-   :::image type="content" source="./media/azure-analysis-services/navigator-online.png" lightbox="./media/sql-server-analysis-services/navigator-online.png" alt-text="Power Query Online Navigator showing the Human Resources employee data.":::
 ## Connect using advanced options
 
 Power Query provides an advanced option that you can add to your query if needed.
