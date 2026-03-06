@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Power Query Supermetrics connector connector documentation
+description: Include file for the Prerequisites section of the Power Query Supermetrics connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 Before using the connector, you need to create an account in the [Supermetrics Hub](https://hub.supermetrics.com)  and save at least one query.
 
