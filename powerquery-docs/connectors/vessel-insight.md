@@ -23,11 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you can sign in to Vessel Insight, you must have an organization account (username/password) connected to a tenant.
+[!INCLUDE [Includes_vessel-insight_prerequisites](includes/vessel-insight/vessel-insight-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_vessel-insight_capabilities-supported](includes/vessel-insight/vessel-insight-capabilities-supported.md)]
 
 ## Connect to Vessel Insight
 
