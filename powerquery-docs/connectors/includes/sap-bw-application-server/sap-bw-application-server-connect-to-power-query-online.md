@@ -16,7 +16,7 @@ To connect to an SAP BW Application Server from Power Query Online:
 
 4. Set **Authentication Kind** to **Basic**. Enter your user name and password.
 
-   :::image type="content" source="get-data-online-power-apps-app.png" alt-text="SAP BW Application Server online sign-in.":::
+   :::image type="content" source="../../sap-bw/get-data-online-power-apps-app.png" alt-text="SAP BW Application Server online sign-in.":::
 
 5. You can also select from a set of [advanced options](../../sap-bw/use-advanced-options.md) to fine-tune your query.
 
