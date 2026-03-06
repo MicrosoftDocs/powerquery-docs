@@ -24,13 +24,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Use of this connector requires a Digital Construction Works Integrations Platform subscription. To learn more, go to https://www.digitalconstructionworks.com/solutions/the-dcw-integrations-platform. Visit https://www.digitalconstructionworks.com for company information.
-
-Users of the Digital Construction Works (DCW) Integrations Platform can request a JSON Web Token (JWT) from their project administrator in order to access data using the DCW Insights connector. Users can then follow the documentation for the OData API to connect to the data sets they want to use in Power BI.
+[!INCLUDE [Includes_digital-construction-works-insights_prerequisites](includes/digital-construction-works-insights/digital-construction-works-insights-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_digital-construction-works-insights_capabilities-supported](includes/digital-construction-works-insights/digital-construction-works-insights-capabilities-supported.md)]
 
 ## Connect to DCW Insights OData API from Power Query Desktop
 

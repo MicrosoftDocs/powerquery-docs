@@ -22,7 +22,7 @@ This article provides basic information, prerequisites, and instructions on how 
 
 ## Capabilities supported
 
-- Import
+[!INCLUDE [Includes_dynamics-365-online_capabilities-supported](includes/dynamics-365-online-capabilities-supported.md)]
 
 ## Connect to Dynamics 365 Online (legacy) from Power Query Desktop
 
