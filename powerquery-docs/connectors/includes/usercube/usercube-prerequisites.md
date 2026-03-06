@@ -6,5 +6,5 @@ ms.date: 03/06/2026
 ms.topic: include
 ---
 
-You must have a Usercube instance with the *PowerBI* option.
+You must have a Usercube instance with the *Power BI* option.
 
