@@ -30,8 +30,7 @@ ms.subservice: connectors
 
 ## Capabilities Supported
 
-* Import
-* DirectQuery (Power BI semantic models)
+[!INCLUDE [Includes_vertica-database_capabilities-supported](includes/vertica-database/vertica-database-capabilities-supported.md)]
 
 ## Connect to a Vertica database from Power Query Desktop
 
@@ -61,24 +60,7 @@ To connect to an **Vertica** database, take the following steps:
 
 ## Connect to a Vertica database from Power Query Online
 
-> [!NOTE]
-> Since May 2025 version of on-premises data gateway, you need to [install the Vertica ODBC driver](#use-vertica-odbc-driver) on your gateway machine to use the Vertica database connector.
-
-To connect to an **Vertica** database, take the following steps:
-
-1. Select the **Vertica** option in the connector selection.
-
-2. In **Connect to data source**, provide the name of the server.
-
-   :::image type="content" source="./media/Vertica-database/service-signin.png" alt-text="Enter the Vertica database online connection.":::
-
-3. Select the name of your on-premises data gateway.
-
-4. If this is the first time you're connecting to this Vertica database, configure the user name and password for the Basic authentication.
-
-5. Select **Next** to continue.
-
-6. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
+[!INCLUDE [Includes_vertica-database_connect-to-power-query-online](includes/vertica-database/vertica-database-connect-to-power-query-online.md)]
 
 ## Use Vertica ODBC driver
 

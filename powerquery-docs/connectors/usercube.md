@@ -25,11 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-You must have a Usercube instance with the *PowerBI* option.
+[!INCLUDE [Includes_usercube_prerequisites](includes/usercube/usercube-prerequisites.md)]
 
 ## Capabilities supported
 
-- Import
+[!INCLUDE [Includes_usercube_capabilities-supported](includes/usercube/usercube-capabilities-supported.md)]
 
 ## Connect to Usercube from Power Query Desktop
 
