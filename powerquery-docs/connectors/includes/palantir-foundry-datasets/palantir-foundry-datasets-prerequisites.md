@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Palantir Foundry Power Query connector connector documentation
+description: Include file for the Prerequisites section of the Palantir Foundry Power Query connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 This connector works with any active Palantir Foundry environment. Ensure you've completed the following setup steps before using the connector:
 

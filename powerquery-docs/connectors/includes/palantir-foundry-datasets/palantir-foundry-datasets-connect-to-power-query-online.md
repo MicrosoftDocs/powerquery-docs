@@ -1,3 +1,10 @@
+---
+title: Include file for the Connect to Power Query Online section of the Palantir Foundry Power Query connector connector documentation
+description: Include file for the Connect to Power Query Online section of the Palantir Foundry Power Query connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 > [!NOTE]
 > Before you begin, ensure you have access to an on-premises gateway with an existing connection to Foundry.
