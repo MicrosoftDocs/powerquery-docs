@@ -1,7 +1,7 @@
 
 To connect to a KQL database from Power Query Online:
 
-1. In **Choose data source**, search for **KQL**, and then select **KQL Database**. More information: [Where to get data](../../where-to-get-data.md)
+1. In **Choose data source**, search for **KQL**, and then select **KQL Database**. More information: [Where to get data](../../../where-to-get-data.md)
 
 2. In **Connect to data source**, fill in the cluster and any optional fields, such as **Database**.
 
