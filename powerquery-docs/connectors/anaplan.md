@@ -24,16 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-There are [system requirements](https://www.microsoft.com/download/details.aspx?id=58494) to verify before you install Microsoft Power BI Desktop.
+[!INCLUDE [Includes_anaplan_prerequisites](includes/anaplan/anaplan-prerequisites.md)]
 
 ## Capabilities supported
 
-The Anaplan Connector enables access to your Anaplan model exports. It also:
-
-* Runs using Anaplan public data integration APIs.
-* Loads export actions saved in your Anaplan models, directly into Power BI.
-* Displays Anaplan models (those models not archived) in your default tenant.
-* Creates semantic models in Power BI Desktop and exports or refreshes them to the Power BI service (cloud).
+[!INCLUDE [Includes_anaplan_capabilities-supported](includes/anaplan/anaplan-capabilities-supported.md)]
 
 ## Connect to Anaplan from Power BI Desktop
 
