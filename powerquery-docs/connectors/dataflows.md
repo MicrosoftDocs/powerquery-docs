@@ -23,15 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-You must have an existing Dataflow with maker permissions to access the portal, and read permissions to access data from the dataflow.
+[!INCLUDE [Includes_dataflows_prerequisites](includes/dataflows/dataflows-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* DirectQuery (Power BI semantic models)
-
-> [!NOTE]
->DirectQuery requires Power BI premium. More information: [Premium features of dataflows](/power-bi/transform-model/dataflows/dataflows-premium-features)
+[!INCLUDE [Includes_dataflows_capabilities-supported](includes/dataflows/dataflows-capabilities-supported.md)]
 
 ## Get data from Dataflows in Power Query Desktop
 

@@ -31,12 +31,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-This connector is only for use with a Databricks SQL Warehouse running on AWS and using OAuth. If you're using Azure Databricks, use the [Azure Databricks](databricks-azure.md) connector. If you aren't using OAuth with your Databricks SQL Warehouse (on AWS or GCP), use the [Azure Databricks](databricks-azure.md) connector too. Databricks Community Edition isn't supported.
+[!INCLUDE [Includes_databricks_prerequisites](includes/databricks/databricks-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* DirectQuery (Power BI semantic models)
+[!INCLUDE [Includes_databricks_capabilities-supported](includes/databricks/databricks-capabilities-supported.md)]
 
 ## Connect to Databricks from Power Query Desktop
 
@@ -67,30 +66,7 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
 ## Connect to Databricks data from Power Query Online
 
-To connect to Databricks from Power Query Online, take the following steps:
-
-1. Select the **Databricks** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
-
-   Shortlist the available Databricks connector with the search box. Select the **Databricks** connector for your Databricks SQL Warehouse.
-
-   :::image type="content" source="./media/databricks/filtered-connectors.png" alt-text="Image of the Databricks connectors.":::
-
-2. Enter the **Server hostname** and **HTTP Path** for your Databricks SQL Warehouse. Refer to [Configure the Databricks ODBC and JDBC drivers](/azure/databricks/integrations/bi/jdbc-odbc-bi) for instructions to look up your "Server hostname" and "HTTP Path". You can optionally supply a default catalog and/or database under **Advanced options**.
-
-   :::image type="content" source="./media/databricks/connect-setting-cred.png" alt-text="Connection Settings and Credentials.":::
-
-3. Provide your credentials to authenticate with your Databricks SQL Warehouse. There are three options for credentials:
-
-    * Basic. Use this option when authenticating with a user name and password. This option isn't available if your organization/account uses 2FA/MFA.
-    * Account Key. Use this option when authenticating using a Personal Access Token. Refer to [Personal access tokens](/azure/databricks/sql/user/security/personal-access-tokens) for instructions on generating a Personal Access Token (PAT).
-    * Organizational account. Use this option when authenticating with OAuth. Sign in to your organizational account using the browser popup.
-
-4. Once you successfully connect, the **Navigator** appears and displays the data available on the server. Select your data in the navigator. Then select **Next** to transform the data in Power Query.
-
-    :::image type="content" source="./media/databricks/pq-choose-data.png" alt-text="Image of Power Query navigator loading Databricks Cloud data to online app.":::
-
-> [!NOTE]
->The Power BI service Databricks connector doesn't support native query.
+[!INCLUDE [Includes_databricks_connect-to-power-query-online](includes/databricks/databricks-connect-to-power-query-online.md)]
 
 ## Arrow Database Connectivity driver connector implementation (Preview)
 
