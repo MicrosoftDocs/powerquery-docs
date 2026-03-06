@@ -22,7 +22,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities Supported
 
-- Import
+[!INCLUDE [Includes_microsoft-exchange-online_capabilities-supported](includes/microsoft-exchange-online/microsoft-exchange-online-capabilities-supported.md)]
 
 ## Connect to Microsoft Exchange Online from Power Query Desktop
 
@@ -52,22 +52,5 @@ To make the connection to **Microsoft Exchange Online**, follow these steps:
 
 ## Connect to Microsoft Exchange Online from Power Query Online
 
-Power Query Online includes Power BI (Dataflows) and Customer Insights (Dataflows) as experiences.
+[!INCLUDE [Includes_microsoft-exchange-online_connect-to-power-query-online](includes/microsoft-exchange-online/microsoft-exchange-online-connect-to-power-query-online.md)]
 
-To make the connection, take the following steps:
-
-1. Select the **Microsoft Exchange Online** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
-
-   :::image type="content" source="./media/microsoft-exchange-online/get-data-online.png" alt-text="Screenshot of the choose data source window, with the Online services tab opened and Microsoft Exchange Online selected.":::
-
-1. Enter the mailbox address for the account you would like to access, and any other connection details if necessary. Select **Next**.
-
-   :::image type="content" source="./media/microsoft-exchange-online/connect-to-data-source.png" alt-text="Screenshot of the connect to data source page with the mailbox address user@domain added.":::
-
-1. Select the tables to import, then select **Transform Data**.
-
-   :::image type="content" source="./media/microsoft-exchange-online/choose-data.png" alt-text="Screenshot of the choose data page with the calendar, mail, and tasks tables selected.":::
-
-1. If you'd like, you can filter and refine your data set in this window before loading. When you're ready, select **Save & close**.
-
-   :::image type="content" source="./media/microsoft-exchange-online/transform-data.png" alt-text="Screenshot of the transform data page, with some data loaded.":::
