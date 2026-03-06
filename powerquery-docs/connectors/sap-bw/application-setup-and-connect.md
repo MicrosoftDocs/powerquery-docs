@@ -28,11 +28,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-[!INCLUDE [Includes_application-setup-and-connect_prerequisites](../includes/application-setup-and-connect/application-setup-and-connect-prerequisites.md)]
+[!INCLUDE [Includes_application-setup-and-connect_prerequisites](../includes/sap-bw-application-server/sap-bw-application-server-prerequisites.md)]
 
 ## Capabilities Supported
 
-[!INCLUDE [Includes_application-setup-and-connect_capabilities-supported](../includes/application-setup-and-connect/application-setup-and-connect-capabilities-supported.md)]
+[!INCLUDE [Includes_application-setup-and-connect_capabilities-supported](../includes/sap-bw-application-server/sap-bw-application-server-capabilities-supported.md)]
 
 ## Connect to an SAP BW Application Server from Power Query Desktop
 
@@ -65,7 +65,7 @@ To connect to an SAP BW Application Server:
 
 ## Connect to an SAP BW Application Server from Power Query Online
 
-[!INCLUDE [Includes_application-setup-and-connect_connect-to-power-query-online](../includes/application-setup-and-connect/application-setup-and-connect-connect-to-power-query-online.md)]
+[!INCLUDE [Includes_application-setup-and-connect_connect-to-power-query-online](../includes/sap-bw-application-server/sap-bw-application-server-connect-to-power-query-online.md)]
 
 ## Connect using router strings
 
