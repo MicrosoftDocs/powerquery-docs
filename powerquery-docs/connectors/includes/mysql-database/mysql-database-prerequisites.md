@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Power Query MySQL database connector connector documentation
+description: Include file for the Prerequisites section of the Power Query MySQL database connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 You need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package before using this connector in Power BI Desktop. For Power Query Online (dataflows) or Power BI service, if your MySQL server isn't cloud accessible and an on-premises data gateway is needed, the component Oracle MySQL Connector/NET must also be correctly installed on the machine running the on-premises data gateway. To determine if the package is installed correctly, open a PowerShell window and run the following command:
 
