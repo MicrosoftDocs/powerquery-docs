@@ -24,7 +24,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_xml_capabilities-supported](includes/xml-capabilities-supported.md)]
 
 ## Load a local XML file from Power Query Desktop
 
