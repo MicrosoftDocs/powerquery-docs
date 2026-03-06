@@ -25,14 +25,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities Supported
 
-* Import
-* DirectQuery (Power BI semantic models)
-* Advanced options
-  * Command timeout in minutes
-  * Native SQL statement
-  * Relationship columns
-  * Navigate using full hierarchy
-  * SQL Server failover support
+[!INCLUDE [Includes_sql-server_capabilities-supported](includes/sql-server/sql-server-capabilities-supported.md)]
 
 ## Connect to SQL Server database from Power Query Desktop
 
@@ -65,25 +58,7 @@ To make the connection, take the following steps:
 
 ## Connect to SQL Server database from Power Query Online
 
-To make the connection, take the following steps:
-
-1. Select the **SQL Server database** option in the connector selection. For more information, go to [Where to get data](../where-to-get-data.md).
-
-2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional).
-
-   :::image type="content" source="./media/sql-server-database/select-database-online.png" alt-text="Screenshot of the SQL Server database connection builder in Power Query Online.":::
-
-3. If the SQL server isn't online, select an on-premises data gateway. Additionally, if using the port with servername, use the value `servername*` as the server name in the connection settings.
-
-4. If you're connecting to this database for the first time, select the authentication kind and input your credentials.
-
-5. If the connection isn't encrypted, and the connection dialog contains a **Use Encrypted Connection** check box, clear the check box.
-
-6. Select **Next** to continue.
-
-7. In **Navigator**, select the data you require, and then select **Transform data**.
-
-   :::image type="content" source="./media/sql-server-database/navigator-online.png" alt-text="Screenshot of the Power Query Online Navigator showing the Human Resources employee data." lightbox="./media/sql-server-database/navigator-online.png":::
+[!INCLUDE [Includes_sql-server_connect-to-power-query-online](includes/sql-server/sql-server-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 
@@ -102,42 +77,7 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 ## Limitations
 
-### SQL Server certificate isn't trusted on the client (Power BI Desktop or on-premises data gateway)
-
-When establishing a connection to an on-premises SQL Server using the on-premises data gateway or Power BI Desktop and the SQL Server utilizes a self-signed certificate, it's possible that the refresh operation for a Fabric semantic model or dataflow can fail with the following error message:
-
-```Microsoft SQL: A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)```
-
-To troubleshoot this error when using on-premises data gateway, change the gateway configurations to update the `SqlTrustedServers` setting using the following steps:
-
-1. On the local machine where the on-premises data gateway is installed, navigate to **C:\Program Files\On-premises data gateway**.
-2. Make a backup of the configuration file named **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config**.
-3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `SqlTrustedServers` entry.
-4. Update the `SqlTrustedServers` value with the names of the SQL servers to trust and connect to.
-
-   The value contains a comma-delimited list of server names and supports **\*** as a wild card. So for instance in the following example:
-
-   `<setting name="SqlTrustedServers" serializeAs="String"> <value>contososql*,mysvr</value> </setting>`
-
-   the value `contososql*,mysvr` matches `contososql6`, `contososqlazure`, and `mysvr`, but doesn't match `mysvr.microsoft.com`.
-
-To troubleshoot this error when using Power BI Desktop, modify the value of the environment variable `PBI_SQL_TRUSTED_SERVERS` to include the SQL Servers. The supported values are the same as outlined for gateway configuration (as described in step 4 above).
-
-For connections to SQL Server from Power BI Desktop and on-premises data gateway versions starting with February 2025 or later, follow one of these options:
-
-* Follow the solution mentioned previously to add the environment variable `PBI_SQL_TRUSTED_SERVERS`.
-* Ask your SQL administrators to acquire a certificate from a well-known certificate authority.
-* Change the setting `SqlTrustedServers` on the gateway config file.
-
-### Always Encrypted columns
-
-Power Query doesn't support 'Always Encrypted' columns.
-
-### Microsoft Entra ID authentication
-
-Microsoft Entra ID (Organizational account) authentication is only supported in the SQL Server connector if the specified server also supports Microsoft Entra ID authentication. Otherwise, you might encounter a `The OAuth authentication method isn't supported in this data source` error.
-
-In Power BI service, the Microsoft Entra ID authentication method shows up as `OAuth2`.
+[!INCLUDE [Includes_sql-server_limitations](includes/sql-server/sql-server-limitations.md)]
 
 ## Related content
 

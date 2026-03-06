@@ -27,11 +27,11 @@ This connector lets you incrementally import incidents and different asset recor
 
 ## Prerequisites
 
-Before you can use this connector to get SolarWinds Service Desk data, you must have a SolarWinds Service Desk user who has set up [Token authentication for API integration](https://documentation.solarwinds.com/en/success_center/swsd/content/completeguidetoswsd/token-authentication-for-api-integration.htm).
+[!INCLUDE [Includes_solarwinds-service-desk_prerequisites](includes/solarwinds-service-desk/solarwinds-service-desk-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_solarwinds-service-desk_capabilities-supported](includes/solarwinds-service-desk/solarwinds-service-desk-capabilities-supported.md)]
 
 ## Connect to SolarWinds Service Desk
 
