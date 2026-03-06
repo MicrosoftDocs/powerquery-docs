@@ -1,7 +1,7 @@
 
 To connect to Cognite Data Fusion from Power Query Online, take the following steps:
 
-1. Select the **Cognite Data Fusion (REST API)** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../where-to-get-data.md).
+1. Select the **Cognite Data Fusion (REST API)** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
 
    :::image type="content" source="../../media/cognite-data-fusion-rest/online-get-data.png" alt-text="Screenshot of the get data window with Cognite Data Fusion (REST API) emphasized.":::
 
