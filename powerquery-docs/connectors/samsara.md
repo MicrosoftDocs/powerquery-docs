@@ -26,11 +26,11 @@ Some capabilities might be present in one product but not others due to deployme
 
 ## Prerequisites
 
-Before you can sign in to Samsara, you must have a Samsara account.
+[!INCLUDE [Includes_samsara_prerequisites](includes/samsara/samsara-prerequisites.md)]
 
 ## Capabilities supported
 
-- Import
+[!INCLUDE [Includes_samsara_capabilities-supported](includes/samsara/samsara-capabilities-supported.md)]
 
 ## Connect to Samsara data
 
