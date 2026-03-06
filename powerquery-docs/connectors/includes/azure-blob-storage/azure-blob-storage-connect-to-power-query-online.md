@@ -26,7 +26,7 @@ To connect to Azure Blob Storage:
    * **Shared Access Signature (SAS)**: To retrieve your SAS token, go to [portal.azure.com](https://portal.azure.com), navigate to your resource, and, under **Security + networking**, select **Shared access signature** and scroll down to view the SAS token. Paste the value into the **SAS token** box and select **Next**.
    * **Service principal**: Enter the tenant ID, service principal client ID, and service principal key, and then select **Next**.
 
-   For more information about using and managing authentication, go to [Connections and authentication in Power Query Online](../../connection-authentication-pqo.md).
+   For more information about using and managing authentication, go to [Connections and authentication in Power Query Online](../../../connection-authentication-pqo.md).
 
 5. Select **Next**.
 
