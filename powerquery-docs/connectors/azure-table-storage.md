@@ -22,7 +22,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities Supported
 
-- Import
+[!INCLUDE [Includes_azure-table-storage_capabilities-supported](includes/azure-table-storage/azure-table-storage-capabilities-supported.md)]
 
 ## Connect to Azure Table Storage from Power Query Desktop
 
@@ -52,21 +52,7 @@ To make the connection to **Azure Table Storage**, follow these steps:
 
 ## Connect to Azure Table Storage from Power Query Online
 
-Power Query Online includes Power BI (Dataflows), Power Apps (Dataflows), and Customer Insights (Dataflows) as experiences.
-
-To make the connection, take the following steps:
-
-1. Select the **Azure Table Storage** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
-
-1. In the **Azure Table Storage** dialog that appears, enter the name or URL of the Azure Storage account where the table is housed. Don't add the name of the table to the URL.
-
-   :::image type="content" source="./media/azure-table-storage/online-connect-to-azure-storage.png" alt-text="Screenshot of the Azure Table Storage window in Power Query online.":::
-
-1. Add your [Azure table storage account key](#copy-your-account-key-for-azure-table-storage), and then select **Next**.
-
-1. Select one or multiple tables to import and use, then select **Transform Data** to transform data in the Power Query editor.
-
-   :::image type="content" source="./media/azure-table-storage/online-choose-data.png" alt-text="Screenshot of the Azure Table Storage choose data window in Power Query online.":::
+[!INCLUDE [Includes_azure-table-storage_connect-to-power-query-online](includes/azure-table-storage/azure-table-storage-connect-to-power-query-online.md)]
 
 ## Copy your account key for Azure Table Storage
 
@@ -88,17 +74,5 @@ Your Azure Table Storage account key is the same as your Azure Blob storage acco
 
 ## Limitations
 
-The following limitations apply to the Power Query Azure Table Storage connector.
+[!INCLUDE [Includes_azure-table-storage_limitations](includes/azure-table-storage/azure-table-storage-limitations.md)]
 
-### Power Query Online and Azure Storage are in the same region
-
-Direct access to an Azure Storage account with the firewall enabled and in the same region as Power Query Online isn't supported. This limitation arises because Power Query services, when deployed in the same region as the Azure storage account, use private Azure IP addresses for communication. For more information, see the [Azure documentation on storage network security](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-an-internet-ip-range).
-
-To work around this limitation and enable access to Azure Storage from Power Query Online in the same region, use one of the following methods:
-
-- Utilize an [On-premises data gateway](/data-integration/gateway/), which serves as a bridge between Power Query Online and Azure Storage.
-- Use a [Virtual Network (VNet) data gateway](/data-integration/vnet/overview).
-
-### Mixed case support for names of Azure Tables
-
-In certain scenarios involving Microsoft Entra authentication, the connector might fail to access data in Azure Storage account tables when the table name contains mixed casing, resulting in the error: `DataFormat.Error: OData: The format isn't supported`. To work around this limitation, rename the table using all lowercase characters or switch to the account key authentication method.

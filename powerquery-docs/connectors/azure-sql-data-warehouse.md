@@ -28,15 +28,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities Supported
 
-* Import
-* DirectQuery (Power BI semantic models)
-* Advanced options
-  * Command timeout in minutes
-  * Native SQL statement
-  * Relationship columns
-  * Navigate using full hierarchy
-  * SQL Server failover support
-  * Enable cross database folding
+[!INCLUDE [Includes_azure-sql-data-warehouse_capabilities-supported](includes/azure-sql-data-warehouse/azure-sql-data-warehouse-capabilities-supported.md)]
 
 ## Connect to Azure Synapse Analytics (SQL DW) from Power Query Desktop
 
@@ -67,21 +59,7 @@ To make the connection from Power Query Desktop:
 
 ## Connect to Azure Synapse Analytics (SQL DW) from Power Query Online
 
-To make the connection from Power Query Online:
-
-1. Select the **Azure Synapse Analytics (SQL DW)** option in the connector selection.
-
-2. In the **Azure Synapse Analytics (SQL DW)** dialog that appears, provide the name of the server and database (optional). In this example, `testazuresqlserver` is the server name and `AdventureWorks2012` is the database.
-
-   :::image type="content" source="./media/azure-sql-database/dw-service-signin.png" alt-text="Screenshot of the Connect to data source page where you enter the online connection information.":::
-
-   You can also select and enter advanced options that modify the connection query, such as a command timeout or a native query (SQL statement). More information: [Connect using advanced options](#connect-using-advanced-options)
-
-3. If you're connecting to this database for the first time, select the authentication kind and input your credentials.
-
-4. Select **Next** to continue.
-
-5. In **Navigator**, select the data you require, and then select **Transform data**.
+[!INCLUDE [Includes_azure-sql-data-warehouse_connect-to-power-query-online](includes/azure-sql-data-warehouse/azure-sql-data-warehouse-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 

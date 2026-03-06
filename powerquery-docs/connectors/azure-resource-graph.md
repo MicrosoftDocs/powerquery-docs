@@ -25,18 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
-
-* You must have appropriate rights in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) with at least read access to the resources you want to query.
-
-> [!TIP]
-> If you participated in the private preview, be sure to delete the AzureResourceGraph.mez preview file. Failure to do so might result in your test custom connector being used by Power Query inadvertently instead of the newly certified connector.
+[!INCLUDE [Includes_azure-resource-graph_prerequisites](includes/azure-resource-graph/azure-resource-graph-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* Advanced options
-  * Scope by subscription(s) and/or management group(s)
+[!INCLUDE [Includes_azure-resource-graph_capabilities-supported](includes/azure-resource-graph/azure-resource-graph-capabilities-supported.md)]
 
 ## Connect to Azure Resource Graph from Power Query Desktop
 
@@ -59,20 +52,7 @@ To connect to Azure Resource Graph from Power Query Desktop:
 
 ## Connect to Azure Resource Graph from Power Query Online
 
-To connect to Azure Resource Graph from Power Query Online:
-
-1. In **Choose data source**, select Azure or search for **Azure Resource Graph**, and then select **Azure Resource Graph**. More information: [Where to get data](../where-to-get-data.md)
-
-2. In **Connect to data source**, fill in the query and any optional fields, such as **Scope**.
-
-3. Sign in to your organizational account.
-
-4. When you're successfully signed in, select **Next**.
-
-5. In **Choose data**, select the data you require, and then select **Transform Data**.
-
-> [!NOTE]
-> Expect longer wait times for large query results.
+[!INCLUDE [Includes_azure-resource-graph_connect-to-power-query-online](includes/azure-resource-graph/azure-resource-graph-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 
