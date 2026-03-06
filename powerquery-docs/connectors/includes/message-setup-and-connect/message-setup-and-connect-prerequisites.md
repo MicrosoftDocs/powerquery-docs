@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Power Query SAP Business Warehouse Message Server connector connector documentation
+description: Include file for the Prerequisites section of the Power Query SAP Business Warehouse Message Server connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 > [!IMPORTANT]
 > Version 1.0 of the SAP BW Message Server connector has been deprecated. New connections will use Implementation 2.0 of the SAP BW Message Server connector. All support for version 1.0 will be removed from the connector in the near future.
