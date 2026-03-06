@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the MongoDB Atlas SQL interface connector connector documentation
+description: Include file for the Prerequisites section of the MongoDB Atlas SQL interface connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 To use the MongoDB Atlas SQL connector, you must have an [Atlas federated database](https://www.mongodb.com/docs/atlas/data-federation/) setup.
 
