@@ -25,11 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-To use the BQE Core Power BI connector, you must have a BQE Core account with username and password.
+[!INCLUDE [Includes_bqecore_prerequisites](includes/bqecore/bqecore-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_bqecore_capabilities-supported](includes/bqecore/bqecore-capabilities-supported.md)]
 
 ## Connect to BQE Core from Power Query Desktop
 
