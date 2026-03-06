@@ -1,5 +1,5 @@
 
-1. Select the **Active Directory** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../where-to-get-data.md).
+1. Select the **Active Directory** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
 
     :::image type="content" source="../../media/active-directory/get-data-online.png" alt-text="Screenshot of the Choose data source window with Active Directory selected.":::
 
