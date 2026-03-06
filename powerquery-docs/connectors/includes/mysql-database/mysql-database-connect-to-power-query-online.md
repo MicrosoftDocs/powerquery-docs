@@ -1,7 +1,7 @@
 
 To make the connection, take the following steps:
 
-1. Select the **MySQL database** option in the connector selection. For more information, go to [Where to get data](../../where-to-get-data.md).
+1. Select the **MySQL database** option in the connector selection. For more information, go to [Where to get data](../../../where-to-get-data.md).
 
 2. In the **MySQL database** dialog, provide the name of the server and database.  
 
