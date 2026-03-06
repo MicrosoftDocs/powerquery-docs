@@ -1,7 +1,7 @@
 
 To connect to Salesforce Objects data:
 
-1. Select **Salesforce objects** from the product-specific data connector list, and then select **Connect**. For more information, go to [Where to get data](../../../where-to-get-data.md).
+1. Select **Salesforce objects** from the product-specific data connector list, and then select **Connect**. For more information, go to [Where to get data](../../../../where-to-get-data.md).
 
 2. In **Salesforce objects**, choose the URL you want to use to connect. Select the **Production** URL if you use the Salesforce production URL (`https://www.salesforce.com`) to sign in.
 
