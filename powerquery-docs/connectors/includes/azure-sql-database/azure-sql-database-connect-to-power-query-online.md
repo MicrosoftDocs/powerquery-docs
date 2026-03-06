@@ -14,7 +14,7 @@ To connect to an Azure SQL database from Power Query Online, take the following 
 
 2. In **Azure SQL database**, provide the name of the server and database.
 
-   :::image type="content" source="../../media/azure-sql-database/service-signin.png" alt-text="Enter the Azure SQL database online connection.":::
+   :::image type="content" source="../../media/azure-sql-database/service-signin.png" alt-text="Screenshot of entering the Azure SQL database online connection.":::
 
    You can also select and enter advanced options that will modify the connection query, such as a command timeout or a native query (SQL statement). More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -28,5 +28,5 @@ To connect to an Azure SQL database from Power Query Online, take the following 
 
 7. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   :::image type="content" source="../../media/azure-sql-database/navigator-online.png" alt-text="Power Query Online Navigator showing the Human Resources employee data.":::
+   :::image type="content" source="../../media/azure-sql-database/navigator-online.png" alt-text="Screenshot of Power Query Online Navigator showing the Human Resources employee data.":::
 
