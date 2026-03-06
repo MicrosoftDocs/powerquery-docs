@@ -1,3 +1,10 @@
+---
+title: Include file for the Capabilities supported section of the Configure LinkedIn Learning Power BI connector connector documentation
+description: Include file for the Capabilities supported section of the Configure LinkedIn Learning Power BI connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 * The Power BI Connector facilitates the extraction of learner engagement data and course information in a straightforward and practical manner.
 

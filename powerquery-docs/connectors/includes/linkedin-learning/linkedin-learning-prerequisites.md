@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Configure LinkedIn Learning Power BI connector connector documentation
+description: Include file for the Prerequisites section of the Configure LinkedIn Learning Power BI connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 The scenario outlined in this tutorial assumes that you already have the following prerequisites:
 
