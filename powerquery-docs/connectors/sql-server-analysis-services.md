@@ -28,14 +28,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Analysis Services must be installed along with your SQL Server. For information about installing Analysis Services on your SQL Server, go to [Install SQL Server Analysis Services](/analysis-services/instances/install-windows/install-analysis-services). This connector article assumes that you've already installed Analysis Services on your SQL server and have an existing database on the server instance.
+[!INCLUDE [Includes_sql-server-analysis-services_prerequisites](includes/sql-server-analysis-services/sql-server-analysis-services-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Connect live (Power BI semantic models)
-* Advanced options
-  * MDX or DAX query
+[!INCLUDE [Includes_sql-server-analysis-services_capabilities-supported](includes/sql-server-analysis-services/sql-server-analysis-services-capabilities-supported.md)]
 
 ## Connect to SQL Server Analysis Services database from Power Query Desktop
 
@@ -61,23 +58,7 @@ To make the connection, take the following steps:
    :::image type="content" source="./media/sql-server-analysis-services/navigator-desktop.png" lightbox="./media/sql-server-analysis-services/navigator-desktop.png" alt-text="Power Query Navigator showing some of the Sales Targets data.":::
 ## Connect to SQL Server Analysis Services database from Power Query Online
 
-To make the connection, take the following steps:
-
-1. Select the **SQL Server Analysis Services database** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
-
-2. In the **Connect to data source** page, provide the name of the server and database (optional).
-
-   :::image type="content" source="./media/sql-server-analysis-services/connection-settings-credentials.png" alt-text="SQL Server Analysis Services database connection builder in Power Query Online.":::
-
-3. If needed, select an on-premises data gateway.
-
-4. If you're connecting to this database for the first time, select the authentication kind and input your credentials.
-
-5. Select **Next** to continue.
-
-6. In **Navigator**, select the data you require, and then select **Transform data**.
-
-   :::image type="content" source="./media/sql-server-analysis-services/navigator-online.png" alt-text="Power Query Online Navigator showing some Financial Perspective data.":::
+[!INCLUDE [Includes_sql-server-analysis-services_connect-to-power-query-online](includes/sql-server-analysis-services/sql-server-analysis-services-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 
