@@ -1,7 +1,7 @@
 
 To connect to Azure Cosmos DB for MongoDB vCore database from Power Query Online:
 
-1. Select the **Azure Cosmos DB for MongoDB vCore** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
+1. Select the **Azure Cosmos DB for MongoDB vCore** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../../where-to-get-data.md).
 
    :::image type="content" source="../../media/azure-cosmos-db-for-mongodb-vcore/online-select-mongodb-vcore.png" alt-text="Screenshot showing Azure Cosmos DB for MongoDB vCore icon in Power Query online.":::
 
