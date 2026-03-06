@@ -24,13 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-To use the Intersystems Health Insight connector, you must have an IRIS account (user/password) and your user must have privileges to access the SQL tables, views, and cubes. You must also have the IRIS ODBC driver installed.
-The IRIS ODBC driver can be downloaded from the [WRC distributions page](https://wrc.intersystems.com/wrc/coDistGen.csp) and installed separately.
+[!INCLUDE [Includes_intersystems-healthinsight_prerequisites](includes/intersystems-healthinsight/intersystems-healthinsight-prerequisites.md)]
 
 ## Capabilities supported
 
-- Import
-- DirectQuery (Power BI semantic models)
+[!INCLUDE [Includes_intersystems-healthinsight_capabilities-supported](includes/intersystems-healthinsight/intersystems-healthinsight-capabilities-supported.md)]
 
 ## Connect to an Intersystems Health Insight database in Power BI Desktop
 
