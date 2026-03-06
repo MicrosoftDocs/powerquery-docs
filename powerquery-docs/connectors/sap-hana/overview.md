@@ -25,11 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-[!INCLUDE [Includes_overview_prerequisites](../includes/overview/overview-prerequisites.md)]
+[!INCLUDE [Includes_overview_prerequisites](../includes/sap-hana-database/sap-hana-database-prerequisites.md)]
 
 ## Capabilities Supported
 
-[!INCLUDE [Includes_overview_capabilities-supported](../includes/overview/overview-capabilities-supported.md)]
+[!INCLUDE [Includes_overview_capabilities-supported](../includes/sap-hana-database/sap-hana-database-capabilities-supported.md)]
 
 ## Connect to an SAP HANA database from Power Query Desktop
 
@@ -63,7 +63,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
 ## Connect to an SAP HANA database from Power Query Online
 
-[!INCLUDE [Includes_overview_connect-to-power-query-online](../includes/overview/overview-connect-to-power-query-online.md)]
+[!INCLUDE [Includes_overview_connect-to-power-query-online](../includes/sap-hana-database/sap-hana-database-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 
@@ -208,7 +208,7 @@ The following sample query takes advantage of this new capability. In the past, 
 
 ## Limitations
 
-[!INCLUDE [Includes_overview_limitations](../includes/overview/overview-limitations.md)]
+[!INCLUDE [Includes_overview_limitations](../includes/sap-hana-database/sap-hana-database-limitations.md)]
 
 ## Related content
 
