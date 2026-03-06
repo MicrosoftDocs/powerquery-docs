@@ -15,7 +15,7 @@ To use the SAP BW Message Server connector in Power BI Desktop or Power Query On
 
 When you install, in **Optional setup steps**, make sure you select **Install assemblies to GAC**.
 
-:::image type="content" source="install-to-gac.png" alt-text="Select to install assemblies to GAC.":::
+:::image type="content" source="../../sap-bw/install-to-gac.png" alt-text="Select to install assemblies to GAC.":::
 
 > [!NOTE]
 >As of late 2023, the SAP BW Application Server connector contains support for SAP .NET Connector 3.1.

@@ -16,7 +16,7 @@ To connect to an SAP BW Message Server from Power Query Online:
 
 4. Set **Authentication Kind** to **Basic**. Enter your user name and password.
 
-   :::image type="content" source="get-data-online-power-apps-message.png" alt-text="SAP BW Message Server online sign-in.":::
+   :::image type="content" source="../../sap-bw/get-data-online-power-apps-message.png" alt-text="SAP BW Message Server online sign-in.":::
 
 5. You can also select from a set of [advanced options](../../sap-bw/use-advanced-options.md) to fine-tune your query.
 
@@ -26,5 +26,5 @@ To connect to an SAP BW Message Server from Power Query Online:
 
 8. From the **Navigator** dialog box, you can transform the data in the Power Query Editor by selecting **Transform Data**.
 
-   :::image type="content" source="navigator-online.png" alt-text="SAP BW Message Server Navigator view from Power Query Online.":::
+   :::image type="content" source="../../sap-bw/navigator-online.png" alt-text="SAP BW Message Server Navigator view from Power Query Online.":::
 

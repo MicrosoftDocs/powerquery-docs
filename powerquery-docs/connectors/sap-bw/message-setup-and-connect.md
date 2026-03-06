@@ -28,11 +28,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-[!INCLUDE [Includes_message-setup-and-connect_prerequisites](../includes/message-setup-and-connect/message-setup-and-connect-prerequisites.md)]
+[!INCLUDE [Includes_message-setup-and-connect_prerequisites](../includes/sap-business-warehouse-message-server/sap-business-warehouse-message-server-prerequisites.md)]
 
 ## Capabilities Supported
 
-[!INCLUDE [Includes_message-setup-and-connect_capabilities-supported](../includes/message-setup-and-connect/message-setup-and-connect-capabilities-supported.md)]
+[!INCLUDE [Includes_message-setup-and-connect_capabilities-supported](../includes/sap-business-warehouse-message-server/sap-business-warehouse-message-server-capabilities-supported.md)]
 
 ## Connect to an SAP BW Message Server from Power Query Desktop
 
@@ -68,7 +68,7 @@ To connect to an SAP BW Message Server:
 
 ## Connect to an SAP BW Message Server from Power Query Online
 
-[!INCLUDE [Includes_message-setup-and-connect_connect-to-power-query-online](../includes/message-setup-and-connect/message-setup-and-connect-connect-to-power-query-online.md)]
+[!INCLUDE [Includes_message-setup-and-connect_connect-to-power-query-online](../includes/sap-business-warehouse-message-server/sap-business-warehouse-message-server-connect-to-power-query-online.md)]
 
 ## Connect using router strings
 
