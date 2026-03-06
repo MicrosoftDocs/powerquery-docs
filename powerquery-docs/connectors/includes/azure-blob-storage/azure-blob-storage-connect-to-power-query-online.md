@@ -1,7 +1,14 @@
+---
+title: Include file for the Connect to Power Query Online section of the Azure Blob Storage connector documentation
+description: Include file for the Connect to Power Query Online section of the Azure Blob Storage connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 To connect to Azure Blob Storage:
 
-1. Select the **Azure Blobs** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../../where-to-get-data.md).
+1. Select the **Azure Blobs** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
 
    :::image type="content" source="../../media/azure-blob-storage/choose-data-source.png" alt-text="Screenshot of the Choose data source page, with the Azure category selected, and Azure Blobs emphasized." lightbox="../../media/azure-blob-storage/choose-data-source.png":::
 
