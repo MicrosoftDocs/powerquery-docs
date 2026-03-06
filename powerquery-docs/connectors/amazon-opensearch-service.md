@@ -23,14 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-* Microsoft Power BI Desktop
-* [OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/)
-* [OpenSearch SQL ODBC driver](https://opensearch.org/docs/latest/search-plugins/sql/sql/odbc/)
+[!INCLUDE [Includes_amazon-opensearch-service_prerequisites](includes/amazon-opensearch-service/amazon-opensearch-service-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* DirectQuery (Power BI semantic models)
+[!INCLUDE [Includes_amazon-opensearch-service_capabilities-supported](includes/amazon-opensearch-service/amazon-opensearch-service-capabilities-supported.md)]
 
 ## Connect to OpenSearch Project
 
