@@ -1,3 +1,10 @@
+---
+title: Include file for the Connect to Power Query Online section of the Power Query Netezza database connector connector documentation
+description: Include file for the Connect to Power Query Online section of the Power Query Netezza database connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 To connect to an **IBM Netezza** database, take the following steps:
 
