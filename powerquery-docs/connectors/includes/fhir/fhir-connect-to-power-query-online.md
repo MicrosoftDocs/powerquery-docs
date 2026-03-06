@@ -1,7 +1,7 @@
 
 To make a connection to a FHIR server, take the following steps:
 
-1. In **Choose data source**, search for **FHIR**, and then select the **FHIR** connector. More information: [Where to get data](../../../where-to-get-data.md)
+1. In **Choose data source**, search for **FHIR**, and then select the **FHIR** connector. More information: [Where to get data](../../../../where-to-get-data.md)
 
 2. In the **FHIR** dialog, enter the URL for your FHIR server.  
 
