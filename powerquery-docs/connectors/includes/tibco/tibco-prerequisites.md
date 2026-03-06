@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the TIBCO(R) Data Virtualization connector connector documentation
+description: Include file for the Prerequisites section of the TIBCO(R) Data Virtualization connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 To access the TIBCO eDelivery site, you must purchase TIBCO software. There's no TIBCO license required for the TIBCO(R) Data Virtualization (TDV) software&mdash;a TIBCO customer only needs to have a valid contract in place. If you don't have access, then you need to contact the TIBCO admin in your organization.
 
