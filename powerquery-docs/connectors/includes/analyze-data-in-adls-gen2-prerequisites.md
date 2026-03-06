@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Analyze data in Azure Data Lake Storage Gen2 by using Power BI connector documentation
+description: Include file for the Prerequisites section of the Analyze data in Azure Data Lake Storage Gen2 by using Power BI connector documentation
+ms.reviewer: jeluitwi
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 Before you begin this tutorial, you must have the following prerequisites:
 
