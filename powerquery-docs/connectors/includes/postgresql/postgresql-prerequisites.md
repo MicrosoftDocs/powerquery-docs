@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Power Query PostgreSQL connector connector documentation
+description: Include file for the Prerequisites section of the Power Query PostgreSQL connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 Power BI Desktop has included the Npgsql provider for PostgreSQL connector since December 2019, eliminating the need for additional installation. Starting with the October 2024 version, it incorporates Npgsql version 4.0.17. Separate Npgsql GAC installation will override this default version.
 
