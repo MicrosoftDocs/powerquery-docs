@@ -1,7 +1,7 @@
 
 To connect to Google BigQuery (Microsoft Entra ID) from Power Query Online, take the following steps:
 
-1. In the Get Data experience, do a search for **Google**, and then select **Google BigQuery (Microsoft Entra ID)**. More information: [Where to get data](../../where-to-get-data.md)
+1. In the Get Data experience, do a search for **Google**, and then select **Google BigQuery (Microsoft Entra ID)**. More information: [Where to get data](../../../where-to-get-data.md)
 
    :::image type="content" source="../../media/google-bigquery-aad/choose-data-source.png" alt-text="Screenshot of the Choose data source dialog with the Google BigQuery (Microsoft Entra ID) connector emphasized.":::
 
