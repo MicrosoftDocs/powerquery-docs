@@ -1,7 +1,14 @@
+---
+title: Include file for the Connect to Power Query Online section of the Power Query connector for FHIR connector documentation
+description: Include file for the Connect to Power Query Online section of the Power Query connector for FHIR connector documentation
+ms.reviewer: mihansen
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 To make a connection to a FHIR server, take the following steps:
 
-1. In **Choose data source**, search for **FHIR**, and then select the **FHIR** connector. More information: [Where to get data](../../../../where-to-get-data.md)
+1. In **Choose data source**, search for **FHIR**, and then select the **FHIR** connector. More information: [Where to get data](../../../where-to-get-data.md)
 
 2. In the **FHIR** dialog, enter the URL for your FHIR server.  
 

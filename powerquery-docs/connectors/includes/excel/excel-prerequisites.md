@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Power Query Excel connector connector documentation
+description: Include file for the Prerequisites section of the Power Query Excel connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 To connect to a legacy workbook (such as .xls or .xlsb), the Access Database Engine OLEDB (or ACE) provider is required. To install this provider, go to the [download page](/power-bi/connect-data/desktop-access-database-errors) and install the relevant (32 bit or 64 bit) version. If it isn't installed, the following error is displayed when connecting to legacy workbooks:
 
