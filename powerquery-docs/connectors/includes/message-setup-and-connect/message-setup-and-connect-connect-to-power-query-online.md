@@ -18,11 +18,11 @@ To connect to an SAP BW Message Server from Power Query Online:
 
    :::image type="content" source="get-data-online-power-apps-message.png" alt-text="SAP BW Message Server online sign-in.":::
 
-5. You can also select from a set of [advanced options](../../use-advanced-options.md) to fine-tune your query.
+5. You can also select from a set of [advanced options](../../sap-bw/use-advanced-options.md) to fine-tune your query.
 
 6. Select **Next** to connect.
 
-7. From the **Navigator** dialog box, select the items you want to use. When you select one or more items from the server, the **Navigator** dialog box creates a preview of the output table. For more information about navigating the SAP BW Message Server query objects in Power Query, go to [Navigate the query objects](../../navigate-query-objects.md).
+7. From the **Navigator** dialog box, select the items you want to use. When you select one or more items from the server, the **Navigator** dialog box creates a preview of the output table. For more information about navigating the SAP BW Message Server query objects in Power Query, go to [Navigate the query objects](../../sap-bw/navigate-query-objects.md).
 
 8. From the **Navigator** dialog box, you can transform the data in the Power Query Editor by selecting **Transform Data**.
 
