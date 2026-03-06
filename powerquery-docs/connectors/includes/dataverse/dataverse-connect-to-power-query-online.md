@@ -1,7 +1,7 @@
 
 To connect to Dataverse from Power Query Online:
 
-1. Select the **Dataverse** option in the **Choose data source** page. More information: [Where to get data](../../../where-to-get-data.md)
+1. Select the **Dataverse** option in the **Choose data source** page. More information: [Where to get data](../../../../where-to-get-data.md)
 
 2. In the **Connect to data source** page, leave the server URL address blank. Leaving the address blank lists all of the available environments you have permission to use in the Power Query Navigator window.
 
