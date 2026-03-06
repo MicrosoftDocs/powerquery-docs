@@ -1,7 +1,7 @@
 ---
 title: Include file for the Connect to Power Query Online section of the Cognite Data Fusion Rest Api connector documentation
 description: Include file for the Connect to Power Query Online section of the Cognite Data Fusion Rest Api connector documentation
-ms.reviewer: <the username under ms.author on the original connector file.>
+ms.reviewer: whhender
 ms.date: 03/06/2026
 ms.topic: include
 ---
