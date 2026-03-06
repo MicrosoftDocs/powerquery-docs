@@ -24,12 +24,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-To use the Autodesk Construction Cloud connector, you must have an Autodesk account with a username and password and have access to the Executive Overview in a BIM360 or an ACC Account. You also need to run a Data Connector extraction manually or have the extractions scheduled to run in order to use this connector. The Connector pulls from the last ran extract.
+[!INCLUDE [Includes_autodesk-construction-cloud_prerequisites](includes/autodesk-construction-cloud/autodesk-construction-cloud-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Supports United States, Europe, and Australia Autodesk Construction Cloud servers
+[!INCLUDE [Includes_autodesk-construction-cloud_capabilities-supported](includes/autodesk-construction-cloud/autodesk-construction-cloud-capabilities-supported.md)]
 
 ## Connect to Autodesk Construction Cloud data
 

@@ -23,12 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you can sign in to Automy Data Analytics, you must have an Automy Report Token.
+[!INCLUDE [Includes_automy-data-analytics_prerequisites](includes/automy-data-analytics/automy-data-analytics-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Optional date range parameters for certain tables and functions
+[!INCLUDE [Includes_automy-data-analytics_capabilities-supported](includes/automy-data-analytics/automy-data-analytics-capabilities-supported.md)]
 
 ## New Features in Version 1.2.1
 

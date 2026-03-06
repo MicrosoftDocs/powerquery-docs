@@ -24,13 +24,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-To use the Assemble Views connector, you must have an Autodesk account with a username and password, and be a member of at least one project in Assemble.
-
-You also need at least one view associated with the Assemble project.
+[!INCLUDE [Includes_assemble-views_prerequisites](includes/assemble-views/assemble-views-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_assemble-views_capabilities-supported](includes/assemble-views/assemble-views-capabilities-supported.md)]
 
 ## Connect to Assemble Views from Power Query Desktop
 
