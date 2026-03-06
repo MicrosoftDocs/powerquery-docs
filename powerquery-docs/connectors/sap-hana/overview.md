@@ -25,22 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-You need an SAP account to sign in to the website and download the drivers. If you're unsure, contact the SAP administrator in your organization.
-
-To use SAP HANA in Power BI Desktop or Excel, you must have the SAP HANA ODBC driver installed on the local client computer for the SAP HANA data connection to work properly. You can download the SAP HANA Client tools from [SAP Development Tools](https://tools.hana.ondemand.com/#hanatools), which contains the necessary ODBC driver. Or you can get it from the [SAP Software Download Center](https://support.sap.com/en/my-support/software-downloads.html). In the Software portal, search for the SAP HANA CLIENT for Windows computers. Since the SAP Software Download Center changes its structure frequently, more specific guidance for navigating that site isn't available. For instructions about installing the SAP HANA ODBC driver, go to [Installing SAP HANA ODBC Driver on Windows 64 Bits](https://help.sap.com/viewer/e9146b36040844d0b1f309bc8c1ba6ab/3.2/en-US/734759c0c1c9440c857da0d366e47dda.html).
-
-To use SAP HANA in Excel, you must have either the 32-bit or 64-bit SAP HANA ODBC driver (depending on whether you're using the 32-bit or 64-bit version of Excel) installed on the local client computer.
-
-This feature is only available in Excel for Windows if you have Office 2019 or a [Microsoft 365 subscription](https://products.office.com/buy/compare-microsoft-office-products). If you're a Microsoft 365 subscriber, [make sure you have the latest version of Office](https://support.office.com/article/how-do-i-upgrade-office-ee68f6cf-422f-464a-82ec-385f65391350).
-
-HANA 1.0 SPS 12rev122.09, 2.0 SPS 3rev30, and BW/4HANA 2.0 is supported.
+[!INCLUDE [Includes_overview_prerequisites](../includes/overview/overview-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Direct Query (Power BI semantic models)
-* Advanced
-  * SQL Statement
+[!INCLUDE [Includes_overview_capabilities-supported](../includes/overview/overview-capabilities-supported.md)]
 
 ## Connect to an SAP HANA database from Power Query Desktop
 
@@ -74,31 +63,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
 ## Connect to an SAP HANA database from Power Query Online
 
-To connect to SAP HANA data from Power Query Online:
-
-1. From the **Data sources** page, select **SAP HANA database**.
-
-2. Enter the name and port of the SAP HANA server you want to connect to. The example in the following figure uses `SAPHANATestServer` on port `30015`.
-
-3. Optionally, enter a SQL statement from **Advanced options**. For more information, go to [Connect using advanced options](#connect-using-advanced-options).
-
-4. Select the name of the on-premises data gateway to use for accessing the database.
-
-   > [!NOTE]
-   > You must use an on-premises data gateway with this connector, whether your data is local or online.
-
-5. Choose the authentication kind you want to use to access your data. You also need to enter a username and password.
-
-   > [!NOTE]
-   > Currently, Power Query Online only supports Basic authentication.
-
-6. Select **Use Encrypted Connection** if you're using any encrypted connection, then choose the SSL crypto provider. If you're not using an encrypted connection, clear **Use Encrypted Connection**. More information: [Enable encryption for SAP HANA](sap-hana-encryption.md)
-
-   :::image type="content" source="sap-hana-online-signin.png" alt-text="Screenshot of the SAP HANA database online sign-in.":::
-
-7. Select **Next** to continue.
-
-8. From the **Navigator** dialog, you can either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
+[!INCLUDE [Includes_overview_connect-to-power-query-online](../includes/overview/overview-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 
@@ -243,11 +208,7 @@ The following sample query takes advantage of this new capability. In the past, 
 
 ## Limitations
 
-The following limitations apply to the Power Query SAP HANA database connector.
-
-### Connect to SAP HANA database over proxy
-
-The SAP HANA database connector doesn't support connecting to cloud database through proxy. To work around, use the [ODBC connector](../odbc.md) instead and specify the proxy settings in DSN or connection string.
+[!INCLUDE [Includes_overview_limitations](../includes/overview/overview-limitations.md)]
 
 ## Related content
 
