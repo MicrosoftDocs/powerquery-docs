@@ -1,7 +1,7 @@
 
 To connect to Common Data Service (Legacy) from Power Query Online:
 
-1. Select the **Common Data Service (Legacy)** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
+1. Select the **Common Data Service (Legacy)** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../../where-to-get-data.md).
 
    :::image type="content" source="../../media/common-data-service/get-data-online.png" alt-text="Screenshot of the get data choose data source window in Power Query Online.":::
 
