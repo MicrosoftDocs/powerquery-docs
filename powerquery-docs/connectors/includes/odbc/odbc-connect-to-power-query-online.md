@@ -16,7 +16,7 @@ To make the connection, take the following steps:
 
 3. If needed, select an on-premises data gateway in **Data gateway**.
 
-4. Choose the authentication kind to sign in, and then enter your credentials. For more information, go to [Authentication in Power Query Online](../../connection-authentication-pqo.md).
+4. Choose the authentication kind to sign in, and then enter your credentials. For more information, go to [Authentication in Power Query Online](../../../connection-authentication-pqo.md).
 
 5. Select **Next**.
 
