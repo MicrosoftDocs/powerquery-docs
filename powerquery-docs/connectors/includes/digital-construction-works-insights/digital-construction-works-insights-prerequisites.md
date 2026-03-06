@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Power Query Digital Construction Works Insights Connector connector documentation
+description: Include file for the Prerequisites section of the Power Query Digital Construction Works Insights Connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 Use of this connector requires a Digital Construction Works Integrations Platform subscription. To learn more, go to https://www.digitalconstructionworks.com/solutions/the-dcw-integrations-platform. Visit https://www.digitalconstructionworks.com for company information.
 
