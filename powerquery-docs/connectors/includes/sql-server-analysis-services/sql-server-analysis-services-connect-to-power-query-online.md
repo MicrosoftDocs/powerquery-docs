@@ -1,7 +1,7 @@
 
 To make the connection, take the following steps:
 
-1. Select the **SQL Server Analysis Services database** option in the connector selection. More information: [Where to get data](../../where-to-get-data.md)
+1. Select the **SQL Server Analysis Services database** option in the connector selection. More information: [Where to get data](../../../where-to-get-data.md)
 
 2. In the **Connect to data source** page, provide the name of the server and database (optional).
 

@@ -1,7 +1,7 @@
 
 To make the connection, take the following steps:
 
-1. Select the **SQL Server database** option in the connector selection. For more information, go to [Where to get data](../../where-to-get-data.md).
+1. Select the **SQL Server database** option in the connector selection. For more information, go to [Where to get data](../../../where-to-get-data.md).
 
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional).
 
