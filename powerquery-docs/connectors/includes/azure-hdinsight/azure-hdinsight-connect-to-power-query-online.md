@@ -3,7 +3,7 @@ Power Query Online includes Power BI (Dataflows) and Customer Insights (Dataflow
 
 To make the connection, take the following steps:
 
-1. Select the **Azure HDInsight (HDFS)** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../where-to-get-data.md).
+1. Select the **Azure HDInsight (HDFS)** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
 
    :::image type="content" source="../../media/azure-hdinsight/online-select-azure-hdinsight.png" alt-text="Screenshot of the Azure HDInsight icon in Power Query online.":::
 
