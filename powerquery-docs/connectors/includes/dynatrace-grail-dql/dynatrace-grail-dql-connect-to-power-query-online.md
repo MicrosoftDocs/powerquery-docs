@@ -1,7 +1,7 @@
 
 To connect to Dynatrace Grail DQL from Power Query Online:
 
-1. Select the **Dynatrace Grail DQL** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information, go to [Where to get data](../../where-to-get-data.md).
+1. Select the **Dynatrace Grail DQL** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information, go to [Where to get data](../../../where-to-get-data.md).
 
    :::image type="content" source="../../media/dynatrace-grail-dql/connector12-white.png" alt-text="Screenshot of the Get Data dialog in Power Query Online to connect to Dynatrace Grail.":::
 
