@@ -1,7 +1,14 @@
+---
+title: Include file for the Connect to Power Query Online section of the Power Query Warehouse (Beta) connector connector documentation
+description: Include file for the Connect to Power Query Online section of the Power Query Warehouse (Beta) connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 To get data from a Warehouse in Power Query Online:
 
-1. From the **New source** page, select **Microsoft Fabric** > **Warehouse**. More information: [Where to get data](../../../../where-to-get-data.md)
+1. From the **New source** page, select **Microsoft Fabric** > **Warehouse**. More information: [Where to get data](../../../where-to-get-data.md)
 
    :::image type="content" source="../../media/warehouse/select-data-source.png" alt-text="Screenshot of the new source page, with the Microsoft Fabric category selected, and the Warehouse connector emphasized." lightbox="../../media/warehouse/select-data-source.png":::
 

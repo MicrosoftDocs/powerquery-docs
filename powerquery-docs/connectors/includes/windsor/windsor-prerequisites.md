@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Power Query Windsor connector connector documentation
+description: Include file for the Prerequisites section of the Power Query Windsor connector connector documentation
+ms.reviewer: miescobar
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 Before using the connector, you need to create a [Windsor](https://onboard.windsor.ai/) account and save at least one query.
 
