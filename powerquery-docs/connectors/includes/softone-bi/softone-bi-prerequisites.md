@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the SoftOne BI connector connector documentation
+description: Include file for the Prerequisites section of the SoftOne BI connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 You must have the Soft1 ERP/CRM or Atlantis ERP product installed with a licensed SoftOne BI connector module. A web account must be configured in the application with access to the SoftOne BI Connector service. This account information and your installation serial number are validated during authentication by the SoftOne BI connector.
 

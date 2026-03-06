@@ -1,3 +1,10 @@
+---
+title: Include file for the Limitations section of the Power Query SQL Server connector connector documentation
+description: Include file for the Limitations section of the Power Query SQL Server connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 ### SQL Server certificate isn't trusted on the client (Power BI Desktop or on-premises data gateway)
 
