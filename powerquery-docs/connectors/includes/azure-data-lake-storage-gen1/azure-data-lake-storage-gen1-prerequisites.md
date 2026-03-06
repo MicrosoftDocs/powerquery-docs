@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Azure Data Lake Storage Gen1 connector documentation
+description: Include file for the Prerequisites section of the Azure Data Lake Storage Gen1 connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 * An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
 

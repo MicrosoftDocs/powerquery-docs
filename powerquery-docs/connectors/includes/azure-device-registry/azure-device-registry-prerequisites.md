@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Azure Device Registry connector connector documentation
+description: Include file for the Prerequisites section of the Azure Device Registry connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 * An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
 * You must have appropriate rights in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) with at least read access to the Azure Device Registry resources you want to query.
