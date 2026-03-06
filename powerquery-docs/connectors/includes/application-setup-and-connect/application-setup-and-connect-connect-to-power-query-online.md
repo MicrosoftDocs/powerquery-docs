@@ -1,3 +1,10 @@
+---
+title: Include file for the Connect to Power Query Online section of the Power Query SAP Business Warehouse Application Server connector connector documentation
+description: Include file for the Connect to Power Query Online section of the Power Query SAP Business Warehouse Application Server connector connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 To connect to an SAP BW Application Server from Power Query Online:
 
