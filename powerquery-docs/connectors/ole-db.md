@@ -25,7 +25,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities Supported
 
-- Import
+[!INCLUDE [Includes_ole-db_capabilities-supported](includes/ole-db-capabilities-supported.md)]
 
 ## Connect to OLE DB from Power Query Desktop
 

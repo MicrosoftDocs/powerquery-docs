@@ -24,17 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-OneStream platform version 8.2 or higher is required.
-There are [system requirements](https://www.microsoft.com/download/details.aspx?id=58494) to verify before you install Microsoft Power BI Desktop.
+[!INCLUDE [Includes_onestream_prerequisites](includes/onestream/onestream-prerequisites.md)]
 
 ## Capabilities supported
 
-The OneStream Connector enables secure access to your OneStream applications. With the connector you can:
-
-* Access cube and relational data from OneStream applications, directly into Power BI.
-* Access metadata members and all their OneStream properties.
-* Easily recreate your full hierarchy structures in Power BI.
-* Automate data loads to Power BI service.
+[!INCLUDE [Includes_onestream_capabilities-supported](includes/onestream/onestream-capabilities-supported.md)]
 
 ## Connect to OneStream from Power BI Desktop
 

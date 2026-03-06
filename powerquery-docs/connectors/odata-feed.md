@@ -24,14 +24,7 @@ ms.subservice: connectors
 
 ## Capabilities supported
 
-* Basic
-* Advanced
-  * URL parts
-  * Open type columns
-* Select related tables
-
-> [!NOTE]
-> Microsoft Graph isn't supported. More information: [Lack of Support for Microsoft Graph in Power Query](../connecting-to-graph.md)
+[!INCLUDE [Includes_odata-feed_capabilities-supported](includes/odata-feed-capabilities-supported.md)]
 
 ## Load data from an OData Feed in Power Query Desktop
 
