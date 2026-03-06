@@ -24,8 +24,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities supported
 
-* Import
-* DirectQuery (Power BI semantic models)
+[!INCLUDE [Includes_singlestore_capabilities-supported](includes/singlestore-capabilities-supported.md)]
 
 ## Connect to SingleStore
 
