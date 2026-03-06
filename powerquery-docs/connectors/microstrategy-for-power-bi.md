@@ -24,12 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Your organization must have a configured MicroStrategy environment. The user account on the MicroStrategy environment must have access to the Power BI connector.
+[!INCLUDE [Includes_microstrategy-for-power-bi_prerequisites](includes/microstrategy-for-power-bi/microstrategy-for-power-bi-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Data refresh
+[!INCLUDE [Includes_microstrategy-for-power-bi_capabilities-supported](includes/microstrategy-for-power-bi/microstrategy-for-power-bi-capabilities-supported.md)]
 
 ## Connect to MicroStrategy using Power BI Desktop
 

@@ -28,30 +28,11 @@ These insights can be aggregated, based on various entities, such as individuals
 
 ## Capabilities supported
 
-* The Power BI Connector facilitates the extraction of learner engagement data and course information in a straightforward and practical manner.
-
-> [!NOTE]
-> Some capabilities shown may not be present by default and may require additional support from LinkedIn to enable. Please reach out to your LinkedIn Learning account team.
-
-### Advantages
-
-* No need to download or receive CSV files.
-* Ability to query data periods greater than one year.
-* No requirement for coding solutions to connect to the LinkedIn Learning API for learner and asset data.
-
-### Limitations
-
-* Learner license status isn't accessible in our reporting API. So this data isn't available in the Power BI Connector.
+[!INCLUDE [Includes_linkedin-learning_capabilities-supported](includes/linkedin-learning/linkedin-learning-capabilities-supported.md)]
 
 ## Prerequisites
 
-The scenario outlined in this tutorial assumes that you already have the following prerequisites:
-
-* A Microsoft Windows PC
-* Microsoft Power BI Desktop: [Download here](https://powerbi.microsoft.com/downloads/)
-* LinkedIn Learning admin access
-
-We recommend that you use the latest version of Power BI to ensure that you have access to the latest version of the LinkedIn Learning Connector.
+[!INCLUDE [Includes_linkedin-learning_prerequisites](includes/linkedin-learning/linkedin-learning-prerequisites.md)]
 
 ## Steps to configure LinkedIn Learning Power BI connector
 
@@ -106,7 +87,7 @@ Once successfully connected, the data tables that are available to load into Pow
 
 To load data into tables, follow these steps:
 
-1. Select on **Get Data**
+1. Select **Get Data**
 2. Select the **LinkedIn Learning data connector**
 3. Then select the tables you would like to load or create
 
@@ -214,7 +195,7 @@ To set up the incremental refresh, follow these steps:
 
 4. After creating the parameters, move them to the top of the query section.
 
-5. Then, select on the table name and then within applied steps, select **"Source"**.
+5. Then, select the table name and then within applied steps, select **"Source"**.
 
    :::image type="content" source="./media/linkedin-learning/incremental-data-range-table-select.png" alt-text="Screenshot of the data tables and the source to be selected within the applied steps section.":::
 
@@ -289,7 +270,7 @@ Expanding the column **adds a step in the query settings.**
 
 If the data update fails when attempting to refresh data:
 
-1. Select on the warning sign to see the details of the error message to diagnose issue.
+1. Select the warning sign to see the details of the error message to diagnose issue.
 
 :::image type="content" source="./media/linkedin-learning/data-update-fail.png" alt-text="Screenshot of warning sign that can be used to review error messages.":::
 

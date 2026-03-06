@@ -23,11 +23,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-A LinkedIn Sales Navigator account. If you don't already have an account, sign up for [a free trial](https://business.linkedin.com/sales-solutions/cx/18/08/linkedin-sales-navigator).
+[!INCLUDE [Includes_linkedin-sales-navigator_prerequisites](includes/linkedin-sales-navigator/linkedin-sales-navigator-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_linkedin-sales-navigator_capabilities-supported](includes/linkedin-sales-navigator/linkedin-sales-navigator-capabilities-supported.md)]
 
 ## Connect to LinkedIn Sales Navigator
 

@@ -25,7 +25,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_json_capabilities-supported](includes/json-capabilities-supported.md)]
 
 ## Load a local JSON file from Power Query Desktop
 

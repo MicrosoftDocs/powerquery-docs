@@ -21,11 +21,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you can use the Google Sheets connector, you must have a Google account and have access to the Google Sheet you're trying to connect to.
+[!INCLUDE [Includes_google-sheets_prerequisites](includes/google-sheets/google-sheets-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_google-sheets_capabilities-supported](includes/google-sheets/google-sheets-capabilities-supported.md)]
 
 ## Connect to Google Sheets data from Power Query Desktop
 

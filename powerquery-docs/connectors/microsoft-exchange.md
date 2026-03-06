@@ -25,7 +25,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities Supported
 
-- Import
+[!INCLUDE [Includes_microsoft-exchange_capabilities-supported](includes/microsoft-exchange-capabilities-supported.md)]
 
 ## Connect to Microsoft Exchange from Power Query Desktop
 

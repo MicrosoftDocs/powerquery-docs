@@ -23,13 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-* [OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/)
-* [OpenSearch SQL ODBC driver](https://opensearch.org/docs/latest/search-plugins/sql/sql/odbc/)
+[!INCLUDE [Includes_opensearch-project_prerequisites](includes/opensearch-project/opensearch-project-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* DirectQuery (Power BI semantic models)
+[!INCLUDE [Includes_opensearch-project_capabilities-supported](includes/opensearch-project/opensearch-project-capabilities-supported.md)]
 
 ## Connect to OpenSearch Project
 

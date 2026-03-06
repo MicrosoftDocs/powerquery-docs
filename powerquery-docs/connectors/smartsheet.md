@@ -26,15 +26,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you can sign in to Smartsheet, you must have a Smartsheet account.
+[!INCLUDE [Includes_smartsheet_prerequisites](includes/smartsheet/smartsheet-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-
-### Supported Smartsheet Regions
-
-The Smartsheet connector supports the Smartsheet US region (https://app.smartsheet.com) and Smartsheet EU region (https://app.smartsheet.eu).
+[!INCLUDE [Includes_smartsheet_capabilities-supported](includes/smartsheet/smartsheet-capabilities-supported.md)]
 
 ## Connect to Smartsheet
 

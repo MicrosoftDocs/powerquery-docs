@@ -22,17 +22,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Essbase 11.1.2.x version is supported.
+[!INCLUDE [Includes_essbase_prerequisites](includes/essbase/essbase-prerequisites.md)]
 
 ## Capabilities Supported
 
-- Import
-- Direct Query (Power BI semantic models)
-- Advanced options
-  - Command timeout in minutes
-  - Server
-  - Application
-  - MDX statement
+[!INCLUDE [Includes_essbase_capabilities-supported](includes/essbase/essbase-capabilities-supported.md)]
 
 ## Connect to Essbase from Power Query Desktop
 

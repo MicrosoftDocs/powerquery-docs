@@ -24,11 +24,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you get started, make sure you've properly configured the URL from the service provider’s API. The exact process here will depend on the service provider.
+[!INCLUDE [Includes_sis-cc-sdmx_prerequisites](includes/sis-cc-sdmx/sis-cc-sdmx-prerequisites.md)]
 
 ## Capabilities supported
 
-Import of SDMX-CSV 2.1 format. Other formats aren't supported.
+[!INCLUDE [Includes_sis-cc-sdmx_capabilities-supported](includes/sis-cc-sdmx/sis-cc-sdmx-capabilities-supported.md)]
 
 ## Connection instructions
 

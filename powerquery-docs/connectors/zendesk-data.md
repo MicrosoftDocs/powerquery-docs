@@ -24,11 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Before you can sign in to Zendesk, you must have a Zendesk account (username/password).
+[!INCLUDE [Includes_zendesk-data_prerequisites](includes/zendesk-data/zendesk-data-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_zendesk-data_capabilities-supported](includes/zendesk-data/zendesk-data-capabilities-supported.md)]
 
 ## Connect to Zendesk data
 

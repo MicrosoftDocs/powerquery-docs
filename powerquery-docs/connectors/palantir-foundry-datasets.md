@@ -22,15 +22,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-This connector works with any active Palantir Foundry environment. Ensure you've completed the following setup steps before using the connector:
-
-1. Download and install the [Foundry datasets ODBC driver](https://www.palantir.com/docs/foundry/analytics-connectivity/downloads/#foundry-datasets-odbc-driver).
-2. If using OAuth authentication, ensure your Foundry administrators have enabled the "Power BI®" third-party application in Control Panel. See the [Foundry third-party apps](https://www.palantir.com/docs/foundry/platform-security-third-party/third-party-apps-overview/) documentation for more details. 
+[!INCLUDE [Includes_palantir-foundry-datasets_prerequisites](includes/palantir-foundry-datasets/palantir-foundry-datasets-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* DirectQuery (Power BI semantic models)
+[!INCLUDE [Includes_palantir-foundry-datasets_capabilities-supported](includes/palantir-foundry-datasets/palantir-foundry-datasets-capabilities-supported.md)]
 
 ## Connect to Palantir Foundry from Power Query Desktop
 
@@ -55,26 +51,5 @@ To connect to Palantir Foundry from Power Query Desktop, take the following step
 
 ## Connect to Palantir Foundry from Power Query Online
 
-> [!NOTE]
-> Before you begin, ensure you have access to an on-premises gateway with an existing connection to Foundry.
+[!INCLUDE [Includes_palantir-foundry-datasets_connect-to-power-query-online](includes/palantir-foundry-datasets/palantir-foundry-datasets-connect-to-power-query-online.md)]
 
-To connect to Palantir Foundry from Power Query Online, take the following steps:
-
-1. Select the **Palantir Foundry** option in the connector selection.
-2. In **Connection Settings**, provide the Base URL that matches a connection already configured on your on-premises data gateway. For example, `https://<subdomain>.palantirfoundry.com/`. Optionally, provide a **Dataset RID** and **Branch**.
-
-    :::image type="content" source="./media/palantir-foundry-datasets/online-connection-settings.png" alt-text="Screenshot of the Palantir Foundry connection settings in Power Query Online.":::
-
-    Ensure that the **Connection** dropdown shows the name of your on-premises gateway.
-
-3. Select **Next** to continue.
-4. In **Navigator**, select the data you require, and then select **Transform data**.
-
-   :::image type="content" source="./media/palantir-foundry-datasets/online-select-data.png" alt-text="Screenshot of the Power Query Online Navigator showing the selected data set.":::
-
-### Troubleshooting
-
-If you encounter issues connecting to Foundry, refer to the following resources in Palantir Foundry's documentation for troubleshooting steps:
-
-* [Power BI Connector: FAQs](https://www.palantir.com/docs/foundry/analytics-connectivity/power-bi-faqs/)
-* [Troubleshooting issues when configuring ODBC & JDBC Drivers](https://www.palantir.com/docs/foundry/analytics-connectivity/troubleshooting-odbc-jdbc/)

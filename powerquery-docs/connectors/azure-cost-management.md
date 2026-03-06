@@ -24,16 +24,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
-
-* A direct [Microsoft Customer Agreement](https://azure.microsoft.com/pricing/purchase-options/microsoft-customer-agreement/) or an [Enterprise Agreement (EA)](https://azure.microsoft.com/pricing/enterprise-agreement/).
+[!INCLUDE [Includes_azure-cost-management_prerequisites](includes/azure-cost-management/azure-cost-management-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* Advanced options
-  * Start Date
-  * End Date
+[!INCLUDE [Includes_azure-cost-management_capabilities-supported](includes/azure-cost-management/azure-cost-management-capabilities-supported.md)]
 
 ## Connect to Azure Cost Management from Power Query Desktop
 

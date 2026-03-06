@@ -22,11 +22,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Before you can sign in to Adobe Analytics, you must have an Adobe Analytics account (username/password).
+[!INCLUDE [Includes_adobe-analytics_prerequisites](includes/adobe-analytics/adobe-analytics-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_adobe-analytics_capabilities-supported](includes/adobe-analytics/adobe-analytics-capabilities-supported.md)]
 
 ## Connect to Adobe Analytics data
 

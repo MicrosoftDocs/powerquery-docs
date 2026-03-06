@@ -30,16 +30,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-* [Web.Page](/powerquery-m/web-page) requires Internet Explorer 10.
-* [Web.BrowserContents](/powerquery-m/web-browsercontents) requires Microsoft Edge's WebView2 runtime.
+[!INCLUDE [Includes_web_prerequisites](../includes/web/web-prerequisites.md)]
 
 ## Capabilities supported
 
-* Connecting to a URL
-* Advanced
-  * Using a combination of text constants and parameters to construct the URL
-  * Specifying a command time out
-  * Defining HTTP request header parameters ([Web.Contents](/powerquery-m/web-contents) only)
+[!INCLUDE [Includes_web_capabilities-supported](../includes/web/web-capabilities-supported.md)]
 
 ## Load Web data using Power Query Desktop
 

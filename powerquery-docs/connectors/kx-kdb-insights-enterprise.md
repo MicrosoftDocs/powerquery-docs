@@ -23,18 +23,11 @@ The connector enables Microsoft Power BI users to remotely connect, explore, que
 
 ## Prerequisites
 
-Ensure the following prerequisites are met before proceeding:
-
-* kdb Insights Enterprise 1.11.0 or above is [installed](https://code.kx.com/insights/enterprise/getting-started/index.html) and running at least one database.
-
-* Permissions to query data on the running databases.
+[!INCLUDE [Includes_kx-kdb-insights-enterprise_prerequisites](includes/kx-kdb-insights-enterprise/kx-kdb-insights-enterprise-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-  * Filtering
-  * Aggregation
-  * Group By
+[!INCLUDE [Includes_kx-kdb-insights-enterprise_capabilities-supported](includes/kx-kdb-insights-enterprise/kx-kdb-insights-enterprise-capabilities-supported.md)]
 
 ## Connect to kdb Insights Enterprise
 
