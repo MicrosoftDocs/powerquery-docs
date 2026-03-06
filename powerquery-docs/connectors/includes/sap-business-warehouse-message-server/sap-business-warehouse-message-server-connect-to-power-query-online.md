@@ -10,7 +10,7 @@ To connect to an SAP BW Message Server from Power Query Online:
 
 1. From the **Data sources** page, select **SAP BW Message Server**.
 
-2. Enter the server, system number, client ID, and logo group of the SAP BW Message Server you want to connect to. This example uses `SAPBWTestServer` as the server name, a system number of `100`, a client ID of `837`, and a logon group of `PURCHASING`.
+2. Enter the server, system number, client ID, and logo group of the SAP BW Message Server you want to connect to. This example uses `SAPBWTestServer` as the server name, a system number of `100`, a client ID of `837`, and a log-on group of `PURCHASING`.
 
 3. Select the [on-premises data gateway](/data-integration/gateway/service-gateway-onprem) you want to use to connect to the data.
 
