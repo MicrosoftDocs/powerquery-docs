@@ -1,3 +1,10 @@
+---
+title: Include file for the Prerequisites section of the Cognite Data Fusion Rest Api connector documentation
+description: Include file for the Prerequisites section of the Cognite Data Fusion Rest Api connector documentation
+ms.reviewer: <the username under ms.author on the original connector file.>
+ms.date: 03/06/2026
+ms.topic: include
+---
 
 This connector works with any valid Cognite Data Fusion (CDF) environment. To use this connector, you need:
 

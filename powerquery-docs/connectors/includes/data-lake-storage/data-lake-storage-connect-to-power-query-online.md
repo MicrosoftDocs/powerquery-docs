@@ -1,5 +1,12 @@
+---
+title: Include file for the Connect to Power Query Online section of the Azure Data Lake Storage Gen2 connector documentation
+description: Include file for the Connect to Power Query Online section of the Azure Data Lake Storage Gen2 connector documentation
+ms.reviewer: whhender
+ms.date: 03/06/2026
+ms.topic: include
+---
 
-1. Select the **Azure Data Lake Storage Gen2** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../../where-to-get-data.md).
+1. Select the **Azure Data Lake Storage Gen2** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
 
    :::image type="content" source="../../media/azure-data-lake-storage-gen2/get-data-online.png" alt-text="Screenshot of the get data window with Azure Data Lake Storage Gen2 emphasized.":::
 
