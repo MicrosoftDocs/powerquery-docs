@@ -1,6 +1,6 @@
 ---
-title: Include file for the Limitations section of the Power Query SAP HANA database connector connector documentation
-description: Include file for the Limitations section of the Power Query SAP HANA database connector connector documentation
+title: Include file for the Limitations section of the Power Query SAP HANA database connector documentation
+description: Include file for the Limitations section of the Power Query SAP HANA database connector documentation
 ms.reviewer: whhender
 ms.date: 03/06/2026
 ms.topic: include
