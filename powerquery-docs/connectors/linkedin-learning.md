@@ -87,7 +87,7 @@ Once successfully connected, the data tables that are available to load into Pow
 
 To load data into tables, follow these steps:
 
-1. Select on **Get Data**
+1. Select **Get Data**
 2. Select the **LinkedIn Learning data connector**
 3. Then select the tables you would like to load or create
 
@@ -195,7 +195,7 @@ To set up the incremental refresh, follow these steps:
 
 4. After creating the parameters, move them to the top of the query section.
 
-5. Then, select on the table name and then within applied steps, select **"Source"**.
+5. Then, select the table name and then within applied steps, select **"Source"**.
 
    :::image type="content" source="./media/linkedin-learning/incremental-data-range-table-select.png" alt-text="Screenshot of the data tables and the source to be selected within the applied steps section.":::
 
@@ -270,7 +270,7 @@ Expanding the column **adds a step in the query settings.**
 
 If the data update fails when attempting to refresh data:
 
-1. Select on the warning sign to see the details of the error message to diagnose issue.
+1. Select the warning sign to see the details of the error message to diagnose issue.
 
 :::image type="content" source="./media/linkedin-learning/data-update-fail.png" alt-text="Screenshot of warning sign that can be used to review error messages.":::
 
