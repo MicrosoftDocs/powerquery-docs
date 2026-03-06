@@ -27,16 +27,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-* An [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/#overview) account.
+[!INCLUDE [Includes_azure-cosmos-db-v2_prerequisites](includes/azure-cosmos-db-v2/azure-cosmos-db-v2-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* DirectQuery (Power BI semantic models)
-* Advanced options
-  * Number of Retries
-  * Enable "AVERAGE" function Passdown
-  * Enable "SORT" Passdown for multiple columns
+[!INCLUDE [Includes_azure-cosmos-db-v2_capabilities-supported](includes/azure-cosmos-db-v2/azure-cosmos-db-v2-capabilities-supported.md)]
 
 ## Connect to Azure Cosmos DB
 
