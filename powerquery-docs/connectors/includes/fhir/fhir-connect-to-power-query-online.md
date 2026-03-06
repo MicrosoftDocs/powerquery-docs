@@ -12,7 +12,7 @@ To make a connection to a FHIR server, take the following steps:
 
 2. In the **FHIR** dialog, enter the URL for your FHIR server.  
 
-   :::image type="content" source="./fhir-access-online.png" alt-text="Screenshot of the FHIR dialog with the FHIR URL filled in.":::
+   :::image type="content" source="../../fhir/fhir-access-online.png" alt-text="Screenshot of the FHIR dialog with the FHIR URL filled in.":::
 
    You can optionally enter an initial query for the FHIR server, if you know exactly what data you're looking for.
 
@@ -24,17 +24,17 @@ To make a connection to a FHIR server, take the following steps:
 
 6. Select the resources you're interested in.
 
-   :::image type="content" source="./fhir-navigator-online.png" alt-text="Screenshot of the Navigator with the FHIR Patient box filled in, and the patient records shown on the right hand side." lightbox="./fhir-navigator-online.png":::
+   :::image type="content" source="../../fhir/fhir-navigator-online.png" alt-text="Screenshot of the Navigator with the FHIR Patient box filled in, and the patient records shown on the right hand side." lightbox="../../fhir/fhir-navigator-online.png":::
 
    Select **Transform data** to shape the data.
 
 7. Shape the data as needed, for example, expand the postal code.
 
-   :::image type="content" source="./fhir-shapedata-online.png" alt-text="Screenshot of the Power Query editor with the address column selected, and the postal code selected for expansion." lightbox="./fhir-shapedata-online.png":::
+   :::image type="content" source="../../fhir/fhir-shapedata-online.png" alt-text="Screenshot of the Power Query editor with the address column selected, and the postal code selected for expansion." lightbox="../../fhir/fhir-shapedata-online.png":::
 
 8. Save the query when shaping is complete.
 
-   :::image type="content" source="./fhir-savequery-online.png" alt-text="Screenshot of the Power Query editor with the Save & Close button emphasized." lightbox="./fhir-savequery-online.png":::
+   :::image type="content" source="../../fhir/fhir-savequery-online.png" alt-text="Screenshot of the Power Query editor with the Save & Close button emphasized." lightbox="../../fhir/fhir-savequery-online.png":::
 
    > [!NOTE]
    > In some cases, query folding can't be obtained purely through data shaping with the graphical user interface (GUI), as shown in the previous image. To learn more about query folding when using the FHIR connector, see [FHIR query folding](../../fhir/fhir-query-folding.md).
