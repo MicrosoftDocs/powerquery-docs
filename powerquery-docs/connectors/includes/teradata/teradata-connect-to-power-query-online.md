@@ -1,7 +1,7 @@
 
 To make the connection, take the following steps:
 
-1. Select the **Teradata database** option in the **Choose data source** page. More information: [Where to get data](../../../where-to-get-data.md)
+1. Select the **Teradata database** option in the **Choose data source** page. More information: [Where to get data](../../../../where-to-get-data.md)
 
 2. Specify the Teradata server to connect to in **Server**.
 
