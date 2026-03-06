@@ -23,14 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-You must have a SumTotal hosted environment with standard permissions to access the portal, and read permissions to access data in tables.
+[!INCLUDE [Includes_sumtotal_prerequisites](includes/sumtotal/sumtotal-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* Query Multiple OData endpoints
-* Advanced
-  * Optionally filter records by RowVersionId parameter to get incremental data
+[!INCLUDE [Includes_sumtotal_capabilities-supported](includes/sumtotal/sumtotal-capabilities-supported.md)]
 
 ## Finding your SumTotal hosted URL
 
