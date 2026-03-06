@@ -25,12 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-* A [CData Connect Cloud](https://cloud.cdata.com/) account
-* At least one [connection](https://cloud.cdata.com/docs/Connections.html) configured in your CData Connect Cloud account
+[!INCLUDE [Includes_cdata-connect-cloud_prerequisites](includes/cdata-connect-cloud/cdata-connect-cloud-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_cdata-connect-cloud_capabilities-supported](includes/cdata-connect-cloud/cdata-connect-cloud-capabilities-supported.md)]
 
 ## Connect to CData Connect Cloud
 
