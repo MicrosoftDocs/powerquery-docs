@@ -1,7 +1,7 @@
 
 To connect to Azure Data Explorer from Power Query Online:
 
-1. Select the **Azure Data Explorer (Kusto)** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
+1. Select the **Azure Data Explorer (Kusto)** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../../where-to-get-data.md).
 
    :::image type="content" source="../../media/azure-data-explorer/get-data-online.png" alt-text="Screenshot of the get data window with Azure Data Explorer emphasized.":::
 
