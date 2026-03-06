@@ -3,7 +3,7 @@ Power Query Online includes Power BI (Dataflows) and Customer Insights (Dataflow
 
 To make the connection, take the following steps:
 
-1. Select the **Microsoft Exchange Online** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../where-to-get-data.md).
+1. Select the **Microsoft Exchange Online** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
 
    :::image type="content" source="../../media/microsoft-exchange-online/get-data-online.png" alt-text="Screenshot of the choose data source window, with the Online services tab opened and Microsoft Exchange Online selected.":::
 
