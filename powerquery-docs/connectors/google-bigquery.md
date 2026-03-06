@@ -209,7 +209,7 @@ A known issue is that the Google BigQuery connector doesn't currently support ma
 
 ### ExecuteQueryInternalAsync failure when using ADBC
 
-Some users mignt experience issues when connecting to BigQuery using the `Implementation="2.0"` path and receive the error `Cannot execute <ExecuteQueryInternalAsync>b__2 after 5 tries`. This issue could be due to a few factors:
+Some users might experience issues when connecting to BigQuery using the `Implementation="2.0"` path and receive the error `Cannot execute <ExecuteQueryInternalAsync>b__2 after 5 tries`. This issue could be due to a few factors:
 
 * The permission issue outlined in the following section.
 * If `LargeResultDataset` is passed, then the driver attempts to create the output dataset with the name provided. This creation requires the correct permissions to do so.
