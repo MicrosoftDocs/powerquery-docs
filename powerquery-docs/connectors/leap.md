@@ -24,11 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Before you can sign in to LEAP, you must have a LEAP Admin user account.
+[!INCLUDE [Includes_leap_prerequisites](includes/leap/leap-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_leap_capabilities-supported](includes/leap/leap-capabilities-supported.md)]
 
 ## Connect to LEAP data from Power Query Desktop
 

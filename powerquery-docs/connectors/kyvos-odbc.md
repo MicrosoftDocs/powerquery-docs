@@ -27,12 +27,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-This connector is designed for use with Microsoft Power BI and works most effectively when the [Kyvos ODBC Driver](https://www.kyvosinsights.com/kyvos-odbc-driver/) is installed on the machine running the Power BI application.
+[!INCLUDE [Includes_kyvos-odbc_prerequisites](includes/kyvos-odbc/kyvos-odbc-prerequisites.md)]
 
 ## Capabilities supported
 
-- DirectQuery (Power BI semantic models)
-- Import
+[!INCLUDE [Includes_kyvos-odbc_capabilities-supported](includes/kyvos-odbc/kyvos-odbc-capabilities-supported.md)]
 
 ## Connect to Kyvos from Power BI Desktop
 
