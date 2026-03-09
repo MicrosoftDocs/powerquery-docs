@@ -95,7 +95,7 @@ After selecting the function you want to use, follow through to [load the data](
 
 3. If you need to load other tables, repeat the previous steps of picking the function, providing the values, and loading or transforming the table.
 
-4. After you load the to the Power BI Desktop data model, you're able to create relationships between tables and create reports.
+4. After you load to the Power BI Desktop data model, you're able to create relationships between tables and create reports.
 
 ### Details on OneStream custom connector
 
