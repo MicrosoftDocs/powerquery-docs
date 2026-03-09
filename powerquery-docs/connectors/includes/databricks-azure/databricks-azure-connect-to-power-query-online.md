@@ -12,7 +12,7 @@ To connect to Databricks from Power Query Online, take the following steps:
 
     Shortlist the available Databricks connectors with the search box. Use the **Azure Databricks** connector for all Databricks SQL Warehouse data unless you've been instructed otherwise by your Databricks rep.  
 
-    :::image type="content" source="../../media/databricksazure/filtered-connectors.png" alt-text="Scresnhot of the Databricks connector options in Power Query.":::
+    :::image type="content" source="../../media/databricksazure/filtered-connectors.png" alt-text="Screenshot of the Databricks connector options in Power Query.":::
 
 2. Enter the **Server hostname** and **HTTP Path** for your Databricks SQL Warehouse. Refer to [Configure the Databricks ODBC and JDBC drivers](/azure/databricks/integrations/bi/jdbc-odbc-bi) for instructions to look up your "Server hostname" and "HTTP Path". You can optionally supply a default catalog and/or database under **Advanced options**.
 
