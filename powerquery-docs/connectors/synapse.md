@@ -26,11 +26,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you can sign in to Synapse workspaces, you must have access to [Azure Synapse Analytics Workspace](/azure/synapse-analytics/get-started-create-workspace).
+[!INCLUDE [Includes_synapse_prerequisites](includes/synapse/synapse-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_synapse_capabilities-supported](includes/synapse/synapse-capabilities-supported.md)]
 
 ## Connect to Synapse workspace data from Power Query Desktop
 
