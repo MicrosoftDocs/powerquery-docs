@@ -12,7 +12,7 @@ To connect to a folder from Power Query Online:
 
 2. Enter the path to the folder you want to load.
 
-   :::image type="content" source="../../media/folder/folder-browse-online.png" alt-text="Scresnhot of the connection settings for folder selection online.":::
+   :::image type="content" source="../../media/folder/folder-browse-online.png" alt-text="Screenshot of the connection settings for folder selection online.":::
 
 3. Enter the name of an on-premises data gateway that you'll use to access the folder.
 
