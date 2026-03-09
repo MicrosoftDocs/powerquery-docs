@@ -24,13 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-To use the Funnel connector, you need a Funnel subscription. Funnel helps you collect data from all your marketing platforms, transform it, and send it to the destinations you want, like Power BI (<https://funnel.io/>).
-
-In the Funnel App, go to your Workspace and navigate to the Microsoft Power BI page in the left navigation (if you can't see it, contact us). Follow the instructions on the page. You need to create a "Data Share" that contains the fields you want to expose in Power BI.
+[!INCLUDE [Includes_funnel_prerequisites](includes/funnel/funnel-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_funnel_capabilities-supported](includes/funnel/funnel-capabilities-supported.md)]
 
 ## Connect to Funnel from Power Query Desktop
 

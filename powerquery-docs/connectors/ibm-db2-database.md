@@ -25,19 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-By default, the IBM Db2 database connector uses the Microsoft driver to connect to your data. If you choose to use the IBM driver in the advanced options in Power Query Desktop, you must first install the IBM Db2 driver for .NET on the machine used to connect to the data. The name of this driver changes from time to time, so be sure to install the IBM Db2 driver that works with .NET. For instructions on how to download, install, and configure the IBM Db2 driver for .NET, go to [Download initial Version 11.5 clients and drivers](https://www.ibm.com/support/pages/download-initial-version-115-clients-and-drivers). More information: [Driver limitations](#driver-limitations), [Ensure the IBM Db2 driver is installed](#ensure-the-ibm-db2-driver-is-installed)
+[!INCLUDE [Includes_ibm-db2-database_prerequisites](includes/ibm-db2-database/ibm-db2-database-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* DirectQuery (Power BI semantic models)
-* Advanced options
-  * Driver (IBM or Microsoft)
-  * Command timeout in minutes
-  * Package collection
-  * SQL statement
-  * Include relationship columns
-  * Navigate using full hierarchy
+[!INCLUDE [Includes_ibm-db2-database_capabilities-supported](includes/ibm-db2-database/ibm-db2-database-capabilities-supported.md)]
 
 ## Connect to an IBM Db2 database from Power Query Desktop
 
@@ -72,30 +64,7 @@ To make the connection, take the following steps:
 
 ## Connect to an IBM Db2 database from Power Query Online
 
-To make the connection, take the following steps:
-
-1. Select the **IBM Db2 database** option in the **Power Query - Connect to data source** page.
-
-2. Specify the IBM Db2 server to connect to in **Server**. If a port is required, specify it by using the format *ServerName:Port*, where *Port* is the port number. Also, enter the IBM Db2 database you want to access in **Database**. In this example, the server name and port are `TestIBMDb2server.contoso.com:4000` and the IBM Db2 database being accessed is `NORTHWD2`
-
-3. Select the name of your on-premises data gateway.
-
-   > [!NOTE]
-   > You must select an on-premises data gateway for this connector, whether the IBM Db2 database is on your local network or online.
-
-4. If you're connecting to this IBM Db2 database for the first time, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account created in the IBM Db2 database instead of Windows authentication.
-
-5. Enter your credentials.
-
-6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
-
-   :::image type="content" source="./media/ibm-db2/sign-in-online.png" alt-text="Screenshot of the IBM Db2 database online connection settings with the required settings entered.":::
-
-7. Select **Next** to continue.
-
-8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
-
-   :::image type="content" source="./media/ibm-db2/navigator-online.png" alt-text="Screenshot of the online navigator where you select the data you want to transform." lightbox="./media/ibm-db2/navigator-online.png":::
+[!INCLUDE [Includes_ibm-db2-database_connect-to-power-query-online](includes/ibm-db2-database/ibm-db2-database-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 

@@ -24,15 +24,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-To connect to a legacy workbook (such as .xls or .xlsb), the Access Database Engine OLEDB (or ACE) provider is required. To install this provider, go to the [download page](/power-bi/connect-data/desktop-access-database-errors) and install the relevant (32 bit or 64 bit) version. If it isn't installed, the following error is displayed when connecting to legacy workbooks:
-
-```The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine. The 32-bit (or 64-bit) version of the Access Database Engine OLEDB provider may be required to read this type of file. To download the client software, visit the following site: https://go.microsoft.com/fwlink/?LinkID=285987.```
-
-ACE can't be installed in cloud service environments. So if you're seeing this error in a cloud host (such as Power Query Online), you must use a gateway that has ACE installed to connect to the legacy Excel files.
+[!INCLUDE [Includes_excel_prerequisites](includes/excel/excel-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_excel_capabilities-supported](includes/excel/excel-capabilities-supported.md)]
 
 ## Connect to an Excel workbook from Power Query Desktop
 
@@ -52,23 +48,7 @@ To make the connection from Power Query Desktop:
 
 ## Connect to an Excel workbook from Power Query Online
 
-To make the connection from Power Query Online:
-
-1. Select the **Excel workbook** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
-
-   :::image type="content" source="./media/excel/get-data-online.png" alt-text="Screenshot of the get data window with Excel workbook emphasized.":::
-
-2. In the Excel dialog box that appears, provide the path to the Excel workbook.
-
-   :::image type="content" source="./media/excel/connect-online.png" alt-text="Screenshot of the connection information to access the Excel workbook.":::
-
-3. If necessary, select an on-premises data gateway to access the Excel workbook.
-
-4. If you're accessing this Excel workbook for the first time, select the authentication kind and sign in to your account (if needed).
-
-5. In **Navigator**, select the workbook information you want, and then  **Transform Data** to continue transforming the data in Power Query Editor.
-
-   :::image type="content" source="./media/excel/online-navigator-view.png" alt-text="Screenshot of the Excel workbook imported into the Power Query online Navigator." lightbox="./media/excel/online-navigator-view.png":::
+[!INCLUDE [Includes_excel_connect-to-power-query-online](includes/excel/excel-connect-to-power-query-online.md)]
 
 ## Suggested tables
 
