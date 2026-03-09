@@ -23,7 +23,7 @@ To make the connection, take the following steps:
 
 6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
 
-   :::image type="content" source="../../media/sybase-database/data-source-online.png" lightbox="../../media/sybase-database/data-source-online.png" alt-text="Enter Sybase database online connection.":::
+   :::image type="content" source="../../media/sybase-database/data-source-online.png" lightbox="../../media/sybase-database/data-source-online.png" alt-text="Screenshot of the connect to data source page for the Sybase database online connection, showing a server value of test.corp.contoso.com.":::
 7. Select **Next** to continue.
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
