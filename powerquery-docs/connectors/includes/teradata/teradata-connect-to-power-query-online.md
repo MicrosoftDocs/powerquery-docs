@@ -23,10 +23,10 @@ To make the connection, take the following steps:
 
 6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
 
-   :::image type="content" source="../../media/teradata-database/data-source-online.png" alt-text="Enter Teradata database online connection.":::
+   :::image type="content" source="../../media/teradata-database/data-source-online.png" alt-text="Screenshot of the connect to data sources screen for a Teradata database online connection, showing contoso.teradata.ws as the example server.":::
 
 7. Select **Next** to continue.
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
 
-   :::image type="content" source="../../media/teradata-database/navigator-online.png" lightbox="../../media/teradata-database/navigator-online.png" alt-text="Select the data you want to transform in the Navigator":::
+   :::image type="content" source="../../media/teradata-database/navigator-online.png" lightbox="../../media/teradata-database/navigator-online.png" alt-text="Screenshot of the navigator, with a table selected as an example.":::

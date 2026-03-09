@@ -15,7 +15,7 @@ To connect to an **Vertica** database, take the following steps:
 
 2. In **Connect to data source**, provide the name of the server.
 
-   :::image type="content" source="../../media/Vertica-database/service-signin.png" alt-text="Enter the Vertica database online connection.":::
+   :::image type="content" source="../../media/Vertica-database/service-signin.png" alt-text="Screenshot of the connect to data source page for the Vertica database online connection.":::
 
 3. Select the name of your on-premises data gateway.
 
