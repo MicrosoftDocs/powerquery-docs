@@ -23,11 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you can sign in to Planview OKR, you must have a Planview Admin account.
+[!INCLUDE [Includes_planview-okr_prerequisites](includes/planview-okr/planview-okr-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_planview-okr_capabilities-supported](includes/planview-okr/planview-okr-capabilities-supported.md)]
 
 ## Connect to Planview OKR data
 
