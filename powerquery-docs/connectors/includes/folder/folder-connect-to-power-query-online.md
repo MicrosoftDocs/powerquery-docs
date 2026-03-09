@@ -12,7 +12,7 @@ To connect to a folder from Power Query Online:
 
 2. Enter the path to the folder you want to load.
 
-   :::image type="content" source="../../media/folder/folder-browse-online.png" alt-text="Folder selection online.":::
+   :::image type="content" source="../../media/folder/folder-browse-online.png" alt-text="Scresnhot of the connection settings for folder selection online.":::
 
 3. Enter the name of an on-premises data gateway that you'll use to access the folder.
 
@@ -22,5 +22,5 @@ To connect to a folder from Power Query Online:
 
 6. In the **Navigator** dialog box, select **Combine** to combine the data in the files of the selected folder and load the data into the Power Query Editor for editing. Or select **Transform data** to load the folder data as-is in the Power Query Editor.
 
-   :::image type="content" source="../../media/folder/navigator-online.png" alt-text="Select what to do with the data displayed in the Navigator.":::
+   :::image type="content" source="../../media/folder/navigator-online.png" alt-text="Screenshot of the folder data open in the nagivator diaglog box.":::
 
