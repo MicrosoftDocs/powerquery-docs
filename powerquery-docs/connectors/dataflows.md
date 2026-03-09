@@ -66,7 +66,7 @@ To get data from Dataflows in Power Query Online:
 ## Known issues and limitations
 
 - The Power Query Dataflows connector inside Excel doesn't currently support sovereign cloud clusters (for example, China, Germany, US).
-- Consuming data from a dataflow gen2 with the dataflow connector requires Admin, Member or Contributor permissions. Viewer permissions is not sufficient and is not supported for consuming data from the dataflow.
+- Consuming data from a dataflow gen2 with the dataflow connector requires Admin, Member, or Contributor permissions. Viewer permissions aren't sufficient and aren't supported for consuming data from the dataflow.
 
 ## Frequently asked questions
 
@@ -88,7 +88,7 @@ No, case insensitive search on columns isn't supported in DirectQuery mode. If y
 
 _**I'm getting data via the dataflow connector, but I'm receiving a 429 error code&mdash;how can I resolve this?**_
 
-When you are receiving an error code 429, it's possibly due to exceeding the limit of 1000 requests per minute. This error typically resolves by itself if you wait a minute or two after the cooldown period ended. This limit is in place to prevent dataflows and other Power BI functionality from having a degraded performance. Consequences due to the continued high load on the service might result in additional degraded performance, so we ask users to significantly reduce the number of requests to less than 1000 (limit) or fix your script/model to this specific limit (1000) to efficiently mitigate impact and avoid further issues. You should also avoid nested joins that re-request dataflow data; instead, stage data and perform merges within your dataflow instead of your semantic model.
+When you're receiving an error code 429, it's possibly due to exceeding the limit of 1,000 requests per minute. This error typically resolves by itself if you wait a minute or two after the cooldown period ended. This limit is in place to prevent dataflows and other Power BI functionality from having a degraded performance. Consequences due to the continued high load on the service might result in degraded performance, so we ask users to significantly reduce the number of requests to less than 1000 (limit) or fix your script/model to this specific limit (1000) to efficiently mitigate impact and avoid further issues. You should also avoid nested joins that re-request dataflow data; instead, stage data and perform merges within your dataflow instead of your semantic model.
 
 ### See also
 
