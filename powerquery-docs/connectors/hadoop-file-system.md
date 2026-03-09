@@ -24,7 +24,7 @@ ms.subservice: connectors
 
 ## Capabilities Supported
 
-- Import
+[!INCLUDE [Includes_hadoop-file-system_capabilities-supported](includes/hadoop-file-system-capabilities-supported.md)]
 
 ## Connect to Hadoop Files (HDFS) from Power Query Desktop
 
