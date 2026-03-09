@@ -14,7 +14,7 @@ To connect to Common Data Service (Legacy) from Power Query Online:
 
 2. Enter the server URL address of the data you want to load.
 
-   :::image type="content" source="../../media/common-data-service/enter-url-online.png" alt-text="Enter the server URL.":::
+   :::image type="content" source="../../media/common-data-service/enter-url-online.png" alt-text="Screenshot of the common data service connection settings page, showing an example server URL.":::
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataverse and an on-premises SQL Server database.
 
