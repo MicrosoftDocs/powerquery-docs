@@ -1,11 +1,10 @@
 ---
 title: Azure Resource Graph
 description: Includes basic information, prerequisites, and information on how to connect to Azure Resource Graph.
-
-author: ahudson8
+author: whhender
 ms.topic: concept-article
 ms.date: 7/29/2024
-ms.author: alhudso
+ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
