@@ -11,7 +11,7 @@ ms.subservice: connectors
 # Common Data Service (Legacy)
 
 > [!NOTE]
->The Common Data Service (Legacy) connector has be superseded by the Power Query [Dataverse](dataverse.md) connector. In most cases, we recommend that you use the Dataverse connector instead of the Common Data Service (Legacy) connector. However, there may be limited cases where it's necessary to choose the Common Data Service (Legacy) connector. These cases are described in [When to use the Common Data Service (Legacy) connector](#when-to-use-the-common-data-service-legacy-connector).
+>The Common Data Service (Legacy) connector has been superseded by the Power Query [Dataverse](dataverse.md) connector. In most cases, we recommend that you use the Dataverse connector instead of the Common Data Service (Legacy) connector. However, there could be limited cases where it's necessary to choose the Common Data Service (Legacy) connector. These cases are described in [When to use the Common Data Service (Legacy) connector](#when-to-use-the-common-data-service-legacy-connector).
 
 ## Summary
 
@@ -26,14 +26,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-You must have a Common Data Service (Legacy) environment with maker permissions to access the portal, and read permissions to access data within tables.
+[!INCLUDE [Includes_common-data-service-legacy_prerequisites](includes/common-data-service-legacy/common-data-service-legacy-prerequisites.md)]
 
 ## Capabilities supported
 
-* Server URL
-* Advanced
-  * Reorder columns
-  * Add display column
+[!INCLUDE [Includes_common-data-service-legacy_capabilities-supported](includes/common-data-service-legacy/common-data-service-legacy-capabilities-supported.md)]
 
 ## Connect to Common Data Service (Legacy) from Power Query Desktop
 
@@ -61,23 +58,7 @@ To connect to Common Data Service (Legacy) from Power Query Desktop:
 
 ## Connect to Common Data Service (Legacy) from Power Query Online
 
-To connect to Common Data Service (Legacy) from Power Query Online:
-
-1. Select the **Common Data Service (Legacy)** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
-
-   :::image type="content" source="media/common-data-service/get-data-online.png" alt-text="Screenshot of the get data choose data source window in Power Query Online.":::
-
-2. Enter the server URL address of the data you want to load.
-
-   :::image type="content" source="media/common-data-service/enter-url-online.png" alt-text="Enter the server URL.":::
-
-3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataverse and an on-premises SQL Server database.
-
-4. Sign in to your organizational account.
-
-5. When you've successfully signed in, select **Next**.
-
-6. In the navigation page, select the data you require, and then select **Transform Data**.
+[!INCLUDE [Includes_common-data-service-legacy_connect-to-power-query-online](includes/common-data-service-legacy/common-data-service-legacy-connect-to-power-query-online.md)]
 
 ## Finding your Common Data Service (Legacy) environment URL
 
@@ -89,7 +70,7 @@ In the new browser tab that opens, copy the root of the URL. This root URL is th
 
 ### When to use the Common Data Service (Legacy) connector
 
-Dataverse is the direct replacement for the Common Data Service connector. However, there may be times when it's necessary to choose the Common Data Service (Legacy) connector instead of the [Dataverse](dataverse.md) connector:
+Dataverse is the direct replacement for the Common Data Service connector. However, there could be times when it's necessary to choose the Common Data Service (Legacy) connector instead of the [Dataverse](dataverse.md) connector:
 
 There are certain Tabular Data Stream (TDS) data types that are supported in OData when using Common Data Service (Legacy) that aren't supported in Dataverse. The supported and unsupported data types are listed in [How Dataverse SQL differs from Transact-SQL](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported).
 
@@ -136,4 +117,4 @@ Power BI semantic models contained in Dataverse can be very large. If you're usi
 
 If you're using the Common Data Service (Legacy) connector, you can use a single query to access all of the data in the semantic model. This connector works differently and returns the result in “pages” of 5 K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
 
-Instead of using these connectors to access large semantic models, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large models. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and it is specifically designed around data integration scenarios.
+Instead of using these connectors to access large semantic models, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large models. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and it's specifically designed around data integration scenarios.
