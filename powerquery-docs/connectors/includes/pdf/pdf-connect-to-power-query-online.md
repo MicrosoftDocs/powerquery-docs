@@ -12,7 +12,7 @@ To make the connection from Power Query Online:
 
 2. In the PDF dialog box that appears, either provide the file path or the URL to the location of the PDF file. If you're loading a local file, you can also select **Upload file (Preview)** to browse to the local file or drag and drop the file.
 
-   :::image type="content" source="../../media/pdf/connect-online.png" alt-text="Connection information to access the PDF file.":::
+   :::image type="content" source="../../media/pdf/connect-online.png" alt-text="Screenshot of the connection settings page for the PDF online connection, showing the file path and connection credentials.":::
 
 3. If necessary, select an on-premises data gateway to access the PDF file.
 
@@ -20,5 +20,5 @@ To make the connection from Power Query Online:
 
 5. In **Navigator**, select the file information you want, and then select **Transform Data** to continue transforming the data in Power Query Editor.
 
-   :::image type="content" source="../../media/pdf/online-navigator-view.png" alt-text="PDF file imported into Power Query online Navigator.":::
+   :::image type="content" source="../../media/pdf/online-navigator-view.png" alt-text="Screenshot of the PDF file imported into Power Query online Navigator.":::
 
