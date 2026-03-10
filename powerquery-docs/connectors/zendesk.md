@@ -56,8 +56,6 @@ To connect to Zendesk data:
 
 8. In **Navigator**, select the information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-## Limitations and issues
+## Limitations and considerations
 
-You should be aware of the following limitations and issues associated with accessing Zendesk data.
-
-* Zendesk returns a 422 error status if the instance returns more than 1,000 rows.
+[!INCLUDE [Includes_zendesk_limitations-and-considerations](includes/zendesk/zendesk-limitations-and-considerations-include.md)]

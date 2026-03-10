@@ -117,19 +117,9 @@ These input parameters are:
 * **Start (Time: Period), e.g. 2019-10-08T00:00:00Z** (optional): Filter on range by inserting the start date and time here. Possible to set **yesterday** and **today**. Requires setting **Time: Period**.
 * **End (Time: Period), e.g. 2019-10-08T01:00:00Z** (optional): Filter on range by inserting the end date and time here. Possible to set **today** and **now**. Requires setting **Time: Period**.
 
-## Limitations and issues
+## Limitations and considerations
 
-You should be aware of the following limitations and issues associated with accessing Vessel Insight data.
-
-* There's a general limit of 1-GB data that's imported into Power BI, unless the workspace is in a Power BI Premium capacity. We recommend that you aggregate and choose a short date range when importing time series data, as it can become heavy.
-
-* Each time series tag with associated values is outputted in a separate table in Power BI. If it's necessary to combine tags and values into one table, the tags and their values need to be merged in the Power Query editor or with TQL queries.
-
-* The time series data is currently stored in Couchbase, which might have weaknesses that impact the Power BI connector.
-
-* The API request time-out is, by default, one minute.
-
-For more guidelines on accessing Vessel Insight data, go to [The Getting started guide](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.kongsberg.com%2Fglobalassets%2Fdigital%2Fsolutions%2Fvessel-insight%2Fpowerbi-gsx.pptx&wdOrigin=BROWSELINK).
+[!INCLUDE [Includes_vessel-insight_limitations-and-considerations](includes/vessel-insight/vessel-insight-limitations-and-considerations-include.md)]
 
 ## Recommended content
 
