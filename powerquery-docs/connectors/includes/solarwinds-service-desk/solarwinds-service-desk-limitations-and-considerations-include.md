@@ -18,7 +18,7 @@ If a credential error occurs in the navigator, clear your recent data source set
 
 1. In Power BI Desktop, select **File** > **Data source settings**.
 
-   :::image type="content" source="./media/solarwinds-service-desk/data-source-clear.png" alt-text="Screenshot of Select SolarWinds Service Desk datasource.":::
+   :::image type="content" source="../../media/solarwinds-service-desk/data-source-clear.png" alt-text="Screenshot of Select SolarWinds Service Desk datasource.":::
 
 2. Select the SWSD data source, and then select **Clear permissions**.
 3. Establish the connection to the navigator again.
