@@ -124,35 +124,6 @@ The following table lists all of the advanced options you can set in Power Query
 | Enable AVERAGE function Passdown | Specifies whether the connector allows pass-down of the AVG aggregate function to the Cosmos DB. The default value is 1 and the connector attempts to pass-down the AVG aggregate function down to Cosmos DB, by default. If the argument contains string, boolean, or null values for the AVG aggregate function, an undefined result set is returned by the Cosmos DB server. When set to value of 0, the AVG aggregate function isn't passed down to the Cosmos DB server, and the connector handles performing the AVG aggregation operation itself.|
 | Enable SORT Passdown for multiple columns | Specifies whether the connector allows multiple columns to be passed down to Cosmos DB when specified in the ORDER BY clause of the SQL query. The default value is 0. If more than one column is specified in the ORDER BY clause, the connector doesn't pass down the columns by default. Instead, it handles performing the order by itself. When set to value of 1, the connector attempts to pass-down multiple columns to Cosmos DB when specified in the ORDER BY clause of the SQL query. To allow multiple columns to be passed down to Cosmos DB, make sure to have composite indexes set on the columns in the respective collections. For partitioned collections, a SQL query with ORDER BY is passed down to Cosmos DB only if the query contains a filter on the partitioned key. Also, if there are more than eight columns specified in the ORDER BY clause, the connector doesn't pass down the ORDER BY clause and instead handles the ordering execution itself.|
 
-## Known issues and limitations
+## Limitations and considerations
 
-* For partitioned Cosmos DB containers, a SQL query with an aggregate function is passed down to Cosmos DB if the query also contains a filter (WHERE clause) on the Partition Key. If the aggregate query doesn't contain a filter on the Partition Key, the connector performs the aggregation.
-
-* The connector doesn't pass down an aggregate function if it's called upon after TOP or LIMIT is applied. Cosmos DB processes the TOP operation at the end
-when processing a query. For example, in the following query, TOP is applied in the subquery, while the aggregate function is applied on top of that result set:
-
-   `SELECT COUNT(1) FROM (SELECT TOP 4 * FROM EMP) E`
-
-* If DISTINCT is provided in an aggregate function, the connector doesn't pass the aggregate function down to Cosmos DB if a DISTINCT clause is provided in an aggregate function. When present in an aggregate function, the Cosmos DB SQL API doesn't support DISTINCT.
-
-* For the SUM aggregate function, Cosmos DB returns undefined as the result set if any of the arguments in SUM are string, boolean, or null. However, if there are null values, the connector passes the query to Cosmos DB in such a way that it asks the data source to replace a null value with zero as part of the SUM calculation.
-
-* For the AVG aggregate function, Cosmos DB returns undefined as result set if any of the arguments in SUM are string, boolean, or null. The connector exposes a connection property to disable passing down the AVG aggregate function to Cosmos DB in case this default Cosmos DB behavior needs to be overridden. When AVG passdown is disabled, it isn't passed down to Cosmos DB, and the connector handles performing the AVG aggregation operation itself. For more information, go to "Enable AVERAGE function Passdown" in [Advanced options](#advanced-options).
-
-* Azure Cosmos DB Containers with large partition key aren't currently supported in the Connector.
-
-* Aggregation passdown is disabled for the following syntax due to server limitations:
-
-  * When the query isn't filtering on a partition key or when the partition key filter uses the OR operator with another predicate at the top level in the WHERE clause.
-
-  * When the query has one or more partition keys appear in an IS NOT NULL clause in the WHERE clause.
-
-* The V2 connector doesn't support complex data types such as arrays, objects, and hierarchical structures. We recommend the [Fabric Mirroring for Azure Cosmos DB](/fabric/database/mirrored-database/azure-cosmos-db) feature for those scenarios.
-  
-* The V2 connector uses sampling of the first 1,000 documents to come up with the inferred schema. It's not recommended for schema evolution scenarios when only part of the documents are updated. As an example, a newly added property to one document in a container with thousands of documents might not be included in the inferred schema. We recommend the [Fabric Mirroring for Azure Cosmos DB](/fabric/database/mirrored-database/azure-cosmos-db) feature for those scenarios.
-  
-* Currently the V2 connector doesn't support non-string values in object properties.
-  
-* Filter passdown is disabled for the following syntax due to server limitations:
-
-  * When the query containing one or more aggregate columns is referenced in the WHERE clause.
+[!INCLUDE [Includes_azure-cosmos-db-v2_limitations-and-considerations](includes/azure-cosmos-db-v2/azure-cosmos-db-v2-limitations-and-considerations-include.md)]
