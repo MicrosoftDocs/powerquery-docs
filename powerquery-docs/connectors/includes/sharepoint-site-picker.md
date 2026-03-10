@@ -12,7 +12,7 @@ The SharePoint site picker allows you to find and select the correct SharePoint 
 
 **Simplified site selection**: Instead of copying URLs manually, use the Site URL dropdown to choose from your Recent sites, Favorite sites, and all sites you can access.
 
-:::image type="content" source="../media/sharepoint-folder/simplified-site-selection.jpg" alt-text="Screenshot of selecting SharePoint site from SharePoint Site Picker":::
+:::image type="content" source="../media/sharepoint-folder/simplified-site-selection.jpg" alt-text="Screenshot of selecting SharePoint site from SharePoint Site Picker.":::
 
 **Quick search experience**: Type keywords in the dropdown search box to quickly locate relevant sites. After selecting a site, you can immediately proceed to load data for analysis.
 
