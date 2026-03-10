@@ -24,7 +24,7 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-[!INCLUDE [Includes_inwink_prerequisites](includes/inwink-prerequisites.md)]
+[!INCLUDE [Includes_inwink_prerequisites](includes/inwink/inwink-prerequisites.md)]
 
 ## Connect to inwink data
 
@@ -52,6 +52,6 @@ Follow the next steps to connect to your data:
 
 You can select **Load** on the selected tables, which brings all the tables into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-## Limitations and issues
+## Limitations and considerations
 
-Power BI Desktop might automatically set table relationships during data load, which can lead to errors. To prevent such behavior, delete all relationships involving the *Status* column.
+[!INCLUDE [Includes_inwink_limitations-and-considerations](includes/inwink/inwink-limitations-and-considerations-include.md)]

@@ -106,10 +106,6 @@ To aid with diagnosing any potential issue, you can find the `Implementation` an
 
 To remain on the previous connector implementation temporarily (while troubleshooting), specify `Implementation="1.0"` in your queries.
 
-## Considerations and limitations
+## Limitations and considerations
 
-Here are a few considerations and limitations to keep in mind with the Impala connector:
-
-* The Impala connector is supported on the on-premises data gateway, using any of the three supported authentication mechanisms.
-* The Impala connector uses the Impala driver, which limits the size of string types to 32 K by default.
-* The Impala connector doesn't support overriding the **Realm** option for Kerberos authentication.
+[!INCLUDE [Includes_impala-database_limitations-and-considerations](includes/impala-database/impala-database-limitations-and-considerations-include.md)]
