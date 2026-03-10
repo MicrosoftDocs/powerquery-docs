@@ -1,6 +1,6 @@
 ---
-title: Include file for the Limitations and considerations section of the Power Query Odbc connector documentation
-description: Include file for the Limitations and considerations section of the Power Query Odbc connector documentation
+title: Include file for the Limitations and considerations section of the Power Query ODBC connector documentation
+description: Include file for the Limitations and considerations section of the Power Query ODBC connector documentation
 ms.reviewer: whhender
 ms.date: 03/10/2026
 ms.topic: include

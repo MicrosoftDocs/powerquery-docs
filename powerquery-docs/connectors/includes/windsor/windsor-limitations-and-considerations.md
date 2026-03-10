@@ -9,6 +9,8 @@ ms.topic: include
 * Windsor Onboard must be used to create and manage queries.
 * The timeout limit for polling the query results is 30 minutes.
 
+### Known issues
+
 *Expression.Error: Empty response, please check your query at onboard.windsor.ai/app/data-preview*
 
 Reason:
