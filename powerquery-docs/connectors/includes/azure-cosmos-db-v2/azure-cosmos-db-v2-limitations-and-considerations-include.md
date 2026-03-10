@@ -1,6 +1,6 @@
 ---
-title: Include file for the Limitations and considerations section of the Power Query Azure Cosmos Db V2 connector documentation
-description: Include file for the Limitations and considerations section of the Power Query Azure Cosmos Db V2 connector documentation
+title: Include file for the Limitations and considerations section of the Power Query Azure Cosmos DB V2 connector documentation
+description: Include file for the Limitations and considerations section of the Power Query Azure Cosmos DB V2 connector documentation
 ms.reviewer: whhender
 ms.date: 03/10/2026
 ms.topic: include
@@ -31,7 +31,7 @@ when processing a query. For example, in the following query, TOP is applied in 
   
 * The V2 connector uses sampling of the first 1,000 documents to come up with the inferred schema. It's not recommended for schema evolution scenarios when only part of the documents are updated. As an example, a newly added property to one document in a container with thousands of documents might not be included in the inferred schema. We recommend the [Fabric Mirroring for Azure Cosmos DB](/fabric/database/mirrored-database/azure-cosmos-db) feature for those scenarios.
   
-* Currently the V2 connector doesn't support non-string values in object properties.
+* Currently the V2 connector doesn't support nonstring values in object properties.
   
 * Filter passdown is disabled for the following syntax due to server limitations:
 

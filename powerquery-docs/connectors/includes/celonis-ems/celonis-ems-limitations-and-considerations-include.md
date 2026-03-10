@@ -1,12 +1,12 @@
 ---
-title: Include file for the Limitations and considerations section of the Power Query Celonis Ems connector documentation
-description: Include file for the Limitations and considerations section of the Power Query Celonis Ems connector documentation
+title: Include file for the Limitations and considerations section of the Power Query Celonis EMS connector documentation
+description: Include file for the Limitations and considerations section of the Power Query Celonis EMS connector documentation
 ms.reviewer: whhender
 ms.date: 03/10/2026
 ms.topic: include
 ---
 
-You should be aware of the following limitations and issues associated with accessing Celonis EMS 1 data (does not apply for Celonis OCPM):
+You should be aware of the following limitations and issues associated with accessing Celonis EMS 1 data (doesn't apply for Celonis OCPM):
 
 * Celonis EMS has a built-in limit of 200-K rows and 20 columns returned per record.
 
