@@ -348,7 +348,7 @@ Essbase Analytic Provider Services (APS) or Essbase server indicates a large num
 
 **Resolution**
 
-When the connectivity mode is DirectQuery, it's easy to select measures or dimension levels to add to the selected visualization. However, each new selection creates a new query and a new session to the Essbase Analytic Provider Services (APS)/Essbase server. There are a few ways to ensure a reduced number of queries or to reduce the size of each query result. Review [Performance Considerations](#performance-considerations) to reduce the number of times the server is queried and to also reduce the size of query results.
+When the connectivity mode is DirectQuery, it's easy to select measures or dimension levels to add to the selected visualization. However, each new selection creates a new query and a new session to the Essbase Analytic Provider Services (APS)/Essbase server. There are a few ways to ensure a reduced number of queries or to reduce the size of each query result. Review [Performance Considerations](#limitations-and-considerations) to reduce the number of times the server is queried and to also reduce the size of query results.
 
 **Validation**
 
