@@ -35,13 +35,17 @@ When you're connecting to a SharePoint site, you're asked to enter the site URL.
 
 :::image type="content" source="./media/sharepoint-list/sharepoint-address.png" alt-text="Screenshot showing the locations of Home in the SharePoint navigation pane, the icon at the top of the site, and the resulting URL address.":::
 
+## SharePoint site picker
+
+[!INCLUDE [sharepoint-site-picker](includes/sharepoint-site-picker.md)]
+
 ## Connect to a SharePoint list from Power Query Desktop
 
 To connect to a SharePoint list:
 
 1. From **Get Data**, select **SharePoint List**. For more information, go to [Where to get data](../where-to-get-data.md).
 
-2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
+1. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
    :::image type="content" source="./media/sharepoint-list/sharepoint-list-url.png" alt-text="Screenshot of the SharePoint lists dialog with the Site URL filled in.":::
 
@@ -49,13 +53,13 @@ To connect to a SharePoint list:
 
    Select **OK** to continue.
 
-3. If you're visiting this site address for the first time, select the appropriate authentication method. Enter your credentials and chose which level to apply these settings to. Then select **Connect**.
+1. If you're visiting this site address for the first time, select the appropriate authentication method. Enter your credentials and chose which level to apply these settings to. Then select **Connect**.
 
    :::image type="content" source="./media/sharepoint-list/sharepoint-list-sign-in.png" alt-text="Screenshot of the authentication dialog where you enter your credentials.":::
 
     For more information about authentication methods and level settings, go to [Authentication with a data source](../connectorauthentication.md).
 
-4. From the **Navigator**, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
+1. From the **Navigator**, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
    :::image type="content" source="./media/sharepoint-list/sharepoint-list-navigator.png" alt-text="Screenshot of the Navigator dialog where you select the items you want to use." lightbox="./media/sharepoint-list/sharepoint-list-navigator.png":::
 
