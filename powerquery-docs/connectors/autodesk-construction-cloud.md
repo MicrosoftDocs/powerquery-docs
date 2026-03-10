@@ -85,8 +85,6 @@ To use the Power BI Templates:
 
 3. If prompted, follow steps 4 through 6 in the previous procedure to sign-in and connect.
 
-## Limitations and issues
+## Limitations and considerations
 
-You should be aware of the following limitations and issues associated with accessing Autodesk data.
-
-* This connector pulls data from the last run Data Connector extract and not the live data from the account.
+[!INCLUDE [Includes_autodesk-construction-cloud_limitations-and-considerations](includes/autodesk-construction-cloud/autodesk-construction-cloud-limitations-and-considerations-include.md)]

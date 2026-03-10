@@ -106,10 +106,6 @@ To connect to Assemble data:
 
    :::image type="content" source="media/assemble-views/assemble-views-change-data-category.png" alt-text="Screenshot of the Data category drop-down with Image URL emphasized.":::
 
-## Known issues and limitations
+## Limitations and considerations
 
-* Views with greater than 100,000 rows might not load depending on the number of fields included in the view. To avoid this limitation, we suggest breaking large views into multiple smaller views and appending the queries in your report, or creating relationships in your data model.
-
-* The **view images** feature currently only supports thumbnail sized images because of a row size limitation in Power BI.
-
-* When you create a query using **Models** data, a maximum of 200 properties can be selected.
+[!INCLUDE [Includes_assemble-views_limitations-and-considerations](includes/assemble-views/assemble-views-limitations-and-considerations-include.md)]
