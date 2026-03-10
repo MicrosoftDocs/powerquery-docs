@@ -6,6 +6,7 @@ ms.author: whhender
 ms.reviewer: xupzhou
 ms.topic: include
 ms.date: 03/04/2026
+ms.service: powerquery
 ---
 The SharePoint site picker allows you to find and select the correct SharePoint site during connection creation, without navigating to separate pages to locate and copy URLs manually.
 
