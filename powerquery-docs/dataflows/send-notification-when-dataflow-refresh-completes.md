@@ -29,7 +29,7 @@ To set up a Power Automate notification to be sent when a dataflow fails:
 
    1. In the first cell, add **Refresh Status** from the dataflow connector.
    2. Leave the second cell as **is equal to**.
-   3. In the third cell, enter **False**.
+   3. In the third cell, enter **Failed**.
 
    :::image type="content" source="media/send-notification/email-yes-no-false.png" lightbox="media/send-notification/email-yes-no-false.png" alt-text="Screenshot of the condition connector with all the cells filled out.":::
 

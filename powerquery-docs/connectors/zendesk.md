@@ -20,11 +20,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you can sign in to Zendesk, you must have a Zendesk account (username/password).
+[!INCLUDE [Includes_zendesk_prerequisites](includes/zendesk/zendesk-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_zendesk_capabilities-supported](includes/zendesk/zendesk-capabilities-supported.md)]
 
 ## Connect to Zendesk data
 

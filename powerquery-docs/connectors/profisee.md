@@ -26,14 +26,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before using the Profisee connector, you must have:
-
-* A Profisee account (username and password)
-* A running Profisee instance (version 2022.R1 or higher)
+[!INCLUDE [Includes_profisee_prerequisites](includes/profisee/profisee-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_profisee_capabilities-supported](includes/profisee/profisee-capabilities-supported.md)]
 
 ## Connect to Profisee in Power BI Desktop
 

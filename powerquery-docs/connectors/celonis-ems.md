@@ -23,12 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you can sign in to [Celonis EMS](https://celon.is/EMS-Platform), you must have a Celonis EMS account (username/password).
+[!INCLUDE [Includes_celonis-ems_prerequisites](includes/celonis-ems/celonis-ems-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Navigate using full hierarchy
+[!INCLUDE [Includes_celonis-ems_capabilities-supported](includes/celonis-ems/celonis-ems-capabilities-supported.md)]
 
 ## Connect to Celonis EMS from Power Query Desktop
 

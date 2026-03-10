@@ -24,7 +24,7 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Before you can sign in to the connector, you must have an inwink account (username/password).
+[!INCLUDE [Includes_inwink_prerequisites](includes/inwink-prerequisites.md)]
 
 ## Connect to inwink data
 

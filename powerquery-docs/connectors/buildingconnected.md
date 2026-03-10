@@ -24,12 +24,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-To use the BuildingConnected connector, you must have a BuildingConnected account that has been linked to your AutodeskID. An active Bidboard Pro subscription is required to access Opportunity data and an active TradeTapp subscription is required for TradeTapp data.
+[!INCLUDE [Includes_buildingconnected_prerequisites](includes/buildingconnected/buildingconnected-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Supports BuildingConnected and TradeTapp accounts
+[!INCLUDE [Includes_buildingconnected_capabilities-supported](includes/buildingconnected/buildingconnected-capabilities-supported.md)]
 
 ## Connect to BuildingConnected data
 

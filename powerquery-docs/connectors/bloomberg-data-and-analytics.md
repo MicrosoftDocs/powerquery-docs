@@ -24,11 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Your organization must have a corresponding subscription to the Bloomberg product from which you wish to access data. You must also have a Bloomberg Anywhere license and either the Bloomberg B-Unit mobile app or a Bloomberg B-Unit device.
+[!INCLUDE [Includes_bloomberg-data-and-analytics_prerequisites](includes/bloomberg-data-and-analytics/bloomberg-data-and-analytics-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_bloomberg-data-and-analytics_capabilities-supported](includes/bloomberg-data-and-analytics/bloomberg-data-and-analytics-capabilities-supported.md)]
 
 ## Connect to Bloomberg Data and Analytics
 

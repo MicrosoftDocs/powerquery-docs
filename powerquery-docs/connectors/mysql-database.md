@@ -25,27 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-You need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package before using this connector in Power BI Desktop. For Power Query Online (dataflows) or Power BI service, if your MySQL server isn't cloud accessible and an on-premises data gateway is needed, the component Oracle MySQL Connector/NET must also be correctly installed on the machine running the on-premises data gateway. To determine if the package is installed correctly, open a PowerShell window and run the following command:
-
-`[System.Data.Common.DbProviderFactories]::GetFactoryClasses()|ogv`
-
-If the package is installed correctly, the MySQL Data Provider is displayed in the resulting dialog. For example:
-
-:::image type="content" source="./media/mysql-database/data-provider.png" alt-text="Screenshot of the data provider dialog with the MySQL data provider emphasized." lightbox="./media/mysql-database/data-provider.png":::
-
-If the package doesn't install correctly, work with your MySQL support team or reach out to MySQL.
-
-> [!NOTE]
-> The MySQL connector isn't supported on the **Personal Mode** of the on-premises data gateway. It's only supported on the on-premises data gateway **(standard mode)**
+[!INCLUDE [Includes_mysql-database_prerequisites](includes/mysql-database/mysql-database-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Advanced options
-  * Command timeout in minutes
-  * Native SQL statement
-  * Relationship columns
-  * Navigate using full hierarchy
+[!INCLUDE [Includes_mysql-database_capabilities-supported](includes/mysql-database/mysql-database-capabilities-supported.md)]
 
 ## Connect to MySQL database from Power Query Desktop
 
@@ -77,23 +61,7 @@ To make the connection, take the following steps:
 
 ## Connect to MySQL database from Power Query Online
 
-To make the connection, take the following steps:
-
-1. Select the **MySQL database** option in the connector selection. For more information, go to [Where to get data](../where-to-get-data.md).
-
-2. In the **MySQL database** dialog, provide the name of the server and database.  
-
-   :::image type="content" source="./media/mysql-database/service-signin.png" alt-text="Screenshot of the Connection settings dialog with server and database sample entries filled in.":::
-
-3. If the MySQL server isn't accessible from the cloud, include the name of your on-premises data gateway (personal mode isn't supported).
-
-4. Select the **Basic** authentication kind and input your MySQL credentials in the **Username** and **Password** boxes.
-
-5. If your connection isn't encrypted, clear **Use Encrypted Connection**.
-
-6. Select **Next** to connect to the database.
-
-7. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query editor.
+[!INCLUDE [Includes_mysql-database_connect-to-power-query-online](includes/mysql-database/mysql-database-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 
@@ -112,19 +80,5 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 ## Limitations
 
-The following limitations apply to the Power Query MySQL database connector.
+[!INCLUDE [Includes_mysql-database_limitations](includes/mysql-database/mysql-database-limitations.md)]
 
-### MySQL connections can't be used with personal gateways
-
-If the MySQL database isn't accessible from the cloud, configure MySQL on-premises connections by upgrading to a standard mode on-premises data gateway instead of using a personal on-premises data gateway. For cloud-based MySQL servers, a gateway isn't required.
-
-### It isn't possible to mashup MySQL on-premises data with R and Python
-
-For cases where Python or R is used with a MySQL database on-premises connection, use one of the following methods:
-
-* Make the MySQL server database accessible from the cloud.
-* Move the MySQL on-premises data to a different dataset and use the Enterprise Gateway exclusively for that purpose. 
-
-### Unsupported regions
-
-The MySQL connector doesn't support China Cloud for Power Apps, Power Automate and Logic Apps. Refer to [MySQL connector](/connectors/mysql) for those products.

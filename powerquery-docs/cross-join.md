@@ -2,7 +2,7 @@
 title: "Cross join feature description"
 description: Describes how to perform a cross-join operation in Power Query using sample product and color tables. 
 author: ptyx507
-ms.date: 5/16/2024
+ms.date: 1/29/2026
 ms.author: miescobar
 ms.topic: concept-article
 ms.subservice: transform-data
@@ -32,23 +32,27 @@ The goal is to perform a cross-join operation with these two tables to create a 
 
 ## Perform a cross join
 
-To do a cross-join operation in Power Query, first go to the **Product** table. From the **Add column** tab on the ribbon, select **Custom column**. For more information, go to [Add a custom column](add-custom-column.md).
+To do a cross-join operation in Power Query, follow these steps:
 
-:::image type="content" source="media/cross-join/add-column-icon.png" alt-text="Screenshot of the Power Query Add column tab with the Custom column option emphasized.":::
+1. Select the **Product** table.
+1. From the **Add column** tab on the ribbon, select **Custom column**. For more information about custom columns, go to [Add a custom column](add-custom-column.md).
 
-In the **Custom column** dialog box, enter whatever name you like in the **New column name** box, and enter `Colors` in the **Custom column formula** box.
+   :::image type="content" source="media/cross-join/add-column-icon.png" alt-text="Screenshot of the Power Query Add column tab with the Custom column option emphasized.":::
 
-:::image type="content" source="media/cross-join/add-column-window.png" alt-text="Screenshot of the custom column dialog for cross-join with Custom column formula filled in Color.":::
+1. In the **Custom column** dialog box, enter whatever name you like in the **New column name** box, and enter the name of your colors table or query in the **Custom column formula** box. In our example the name of our custom column is `Custom` and the name of our table/query is `Colors`.
 
-> [!IMPORTANT]
->If your query name has spaces in it, such as **Product Colors**, the text that you need to enter in the **Custom column formula** section has to follow the syntax `#"Query name"`. For **Product Colors**, you need to enter `#"Product Colors"`.
->
->You can check the name of your queries in either the **Query settings** pane or in the **Queries** pane in Power Query.
+    :::image type="content" source="media/cross-join/add-column-window.png" alt-text="Screenshot of the custom column dialog for cross-join with Custom column formula filled in Color.":::
 
-After you select **OK** in the **Custom column** dialog box, a new column is added to the table. In the new column heading, select **Expand** ( :::image type="icon" source="media/cross-join/expand-icon.png"::: ) to expand the contents of this newly created column, and then select **OK**.
+    > [!IMPORTANT]
+    >If your query name has spaces in it, such as **Product Colors**, the text that you need to enter in the **Custom column formula** section has to follow the syntax `#"Query name"`. For **Product Colors**, you need to enter `#"Product Colors"`.
+    >
+    >You can check the name of your queries in either the **Query settings** pane or in the **Queries** pane in Power Query.
 
-:::image type="content" source="media/cross-join/new-table-column.png" alt-text="Screenshot of the expanded cross-join custom column.":::
+1. Select **OK** in the **Custom column** dialog box.
+1. In the new column heading, select **Expand** ( :::image type="icon" source="media/cross-join/expand-icon.png"::: ) to expand the contents of this newly created column, and then select **OK**.
 
-After you select **OK**, you reached your goal of creating a table with all possible combinations of **Product** and **Colors**.
+   :::image type="content" source="media/cross-join/new-table-column.png" alt-text="Screenshot of the expanded cross-join custom column.":::
 
-:::image type="content" source="media/cross-join/cross-join-final-table-2.png" alt-text="Screenshot of the final table with the three products (shirt, jeans, and leggings) each listed with four colors (red, blue, black, and white).":::
+1. You can see your table of all possible combinations of **Product** and **Colors**.
+
+   :::image type="content" source="media/cross-join/cross-join-final-table-2.png" alt-text="Screenshot of the final table with the three products (shirt, jeans, and leggings) each listed with four colors (red, blue, black, and white).":::

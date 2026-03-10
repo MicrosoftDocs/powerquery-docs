@@ -16,7 +16,7 @@ ms.custom: sfi-image-nochange
 | Item | Description |
 | ------- | ---------- |
 | Release State | General Availability |
-| Products | Excel <br/> Power BI (Semantic modelss)<br/> Analysis Services |
+| Products | Excel <br/> Power BI (Semantic models)<br/> Analysis Services |
 | Authentication Types Supported | Exchange account<br/>Microsoft account |
 | Function Reference Documentation | [Exchange.Contents](/powerquery-m/exchange-contents) |
 
@@ -25,7 +25,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities Supported
 
-- Import
+[!INCLUDE [Includes_ole-db_capabilities-supported](includes/ole-db-capabilities-supported.md)]
 
 ## Connect to OLE DB from Power Query Desktop
 

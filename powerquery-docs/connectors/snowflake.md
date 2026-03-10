@@ -32,17 +32,12 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 > Username/password authentication mode will be deprecated by Snowflake (read [more here](https://www.snowflake.com/en/blog/blocking-single-factor-password-authentification/)). More information can be found under Connectivity on our [Fabric roadmap](https://roadmap.fabric.microsoft.com/?product=datafactory).
 
+> [!NOTE]
+> Key Pair Auth is not supported for Dataflows Gen1, and there are no plans to change this in the future.
+
 ## Capabilities Supported
 
-- Import
-- DirectQuery (Power BI semantic models)
-- Advanced options
-  - Specify a text value to use as Role name
-  - Relationship columns
-  - Connection timeout in seconds
-  - Command timeout in seconds
-  - Database
-  - Native SQL statement
+[!INCLUDE [Includes_snowflake_capabilities-supported](includes/snowflake/snowflake-capabilities-supported.md)]
 
 ## Connect to Snowflake data warehouse from Power Query Desktop
 
@@ -86,23 +81,7 @@ To make the connection to a **Snowflake** computing warehouse, take the followin
 
 ## Connect to a Snowflake database from Power Query Online
 
-To make the connection, take the following steps:
-
-1. Select the **Snowflake** option in the connector selection.
-
-2. In the **Snowflake** dialog that appears, enter the name of the server and warehouse.
-
-   :::image type="content" source="./media/snowflake/snowflake-pqo-advanced.png" alt-text="Screenshot of the Snowflake connection builder in Power Query Online.":::
-
-3. Enter any values in the advanced options you want to use. If there are any advanced options not represented in the UI, you can edit them in the **Advanced Editor** in Power Query later.
-
-4. Enter your connection credentials, including selecting or creating a new connection, which gateway you would like to use, and a username and password.
-
-5. Select **Next** to connect to the database.
-
-6. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
-
-   :::image type="content" source="./media/snowflake/navigator-online.png" alt-text="Screenshot of the online Navigator with the test schema database open and the DimProduct table selected.":::
+[!INCLUDE [Includes_snowflake_connect-to-power-query-online](includes/snowflake/snowflake-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 

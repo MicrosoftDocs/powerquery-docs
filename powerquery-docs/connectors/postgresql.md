@@ -25,23 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Power BI Desktop has included the Npgsql provider for PostgreSQL connector since December 2019, eliminating the need for additional installation. Starting with the October 2024 version, it incorporates Npgsql version 4.0.17. Separate Npgsql GAC installation will override this default version.
-
-The PostgreSQL connector is supported for cloud connection and via VNet data gateway or on-premises data gateway. Since the June 2025 release, the on-premises data gateway includes the Npgsql provider, so no extra installation is needed. Separate Npgsql GAC installation will override this default version.
-
-For Power BI Desktop versions released before December 2019 and on-premises data gateway released before June 2025, you must install the Npgsql provider on your local machine to use the PostgreSQL connector. To install the Npgsql provider, go to the [releases page](https://github.com/npgsql/npgsql/releases/tag/v4.0.17) for version 4.0.17, download and run the .msi file. The provider architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector. When installing, make sure that you select Npgsql GAC Installation to ensure Npgsql itself is added to your machine. Npgsql 4.1 and up are not supported due to .NET version incompatibilities.
-
-:::image type="content" source="media/postgresql/postgres-1.png" alt-text="Screenshot of the Npgsql installer with GAC Installation selected.":::
+[!INCLUDE [Includes_postgresql_prerequisites](includes/postgresql/postgresql-prerequisites.md)]
 
 ## Capabilities Supported
 
-- Import
-- DirectQuery (Power BI semantic models)
-- Advanced options
-  - Command timeout in minutes
-  - Native SQL statement
-  - Relationship columns
-  - Navigate using full hierarchy
+[!INCLUDE [Includes_postgresql_capabilities-supported](includes/postgresql/postgresql-capabilities-supported.md)]
 
 ## Connect to a PostgreSQL database from Power Query Desktop
 
@@ -76,23 +64,7 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
 ## Connect to a PostgreSQL database from Power Query Online
 
-To make the connection, take the following steps:
-
-1. Select the **PostgreSQL database** option in the connector selection. For more information, go to [Where to get data](../where-to-get-data.md).
-
-2. In the **PostgreSQL database** dialog that appears, provide the name of the server and database.
-
-   :::image type="content" source="./media/postgresql/server-name-online.png" alt-text="PostgreSQL connection builder in Power Query Online.":::
-
-3. Select the name of the on-premises data gateway you want to use.
-
-4. Select the **Basic** authentication kind and input your PostgreSQL credentials in the **Username** and **Password** boxes.
-
-5. If your connection isn't encrypted, clear **Use Encrypted Connection**.
-
-6. Select **Next** to connect to the database.
-
-7. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query editor.
+[!INCLUDE [Includes_postgresql_connect-to-power-query-online](includes/postgresql/postgresql-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 

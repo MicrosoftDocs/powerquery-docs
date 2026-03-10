@@ -4,7 +4,7 @@ description: "Learn how to use an on-premises data gateway in Power Platform dat
 ms.date: 1/17/2024
 ms.reviewer: whhender
 
-ms.topic: article
+ms.topic: how-to
 author: Luitwieler
 ms.author: jeluitwi
 ms.subservice: dataflows

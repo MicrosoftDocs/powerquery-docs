@@ -24,17 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-OneStream platform version 8.2 or higher is required.
-There are [system requirements](https://www.microsoft.com/download/details.aspx?id=58494) to verify before you install Microsoft Power BI Desktop.
+[!INCLUDE [Includes_onestream_prerequisites](includes/onestream/onestream-prerequisites.md)]
 
 ## Capabilities supported
 
-The OneStream Connector enables secure access to your OneStream applications. With the connector you can:
-
-* Access cube and relational data from OneStream applications, directly into Power BI.
-* Access metadata members and all their OneStream properties.
-* Easily recreate your full hierarchy structures in Power BI.
-* Automate data loads to Power BI service.
+[!INCLUDE [Includes_onestream_capabilities-supported](includes/onestream/onestream-capabilities-supported.md)]
 
 ## Connect to OneStream from Power BI Desktop
 
@@ -76,7 +70,7 @@ The OneStream Connector enables secure access to your OneStream applications. Wi
 
 ### OneStream navigator
 
-After successful login, the OneStream connector shows the navigator with 4 types of calls available:
+After successful login, the OneStream connector shows the navigator with four types of calls available:
 
 * [Get Cube](#get-cube)
 * [Get Custom Adapter](#get-custom-adapter)
@@ -85,7 +79,7 @@ After successful login, the OneStream connector shows the navigator with 4 types
 
 :::image type="content" source="./media/onestream/os-connector-get-dimension.png" alt-text="Screenshot of the navigator dialog with Get Dimension selected." lightbox="./media/onestream/os-connector-get-dimension.png":::
 
-Refer to the [best practices](#best-practices-and-functions-help) if you need help configuring the functions.
+Refer to the [best practices](#best-practices-and-functions-help) if you need help with configuring the functions.
 
 After selecting the function you want to use, follow through to [load the data](#load-data).
 
@@ -97,11 +91,11 @@ After selecting the function you want to use, follow through to [load the data](
 
    * Select **Load** to load the table into the internal Power BI Desktop data model.
    * Select **Transform data** to make changes in the table before loading it into the internal Power BI Desktop data model.
-     **Transform data** launchs the Power Query editor in a new window with a representative view of the table.
+     **Transform data** launches the Power Query editor in a new window with a representative view of the table.
 
-3. If you need to load additional tables, repeat the previous steps of picking the function, providing the values, and loading or transforming the table.
+3. If you need to load other tables, repeat the previous steps of picking the function, providing the values, and loading or transforming the table.
 
-4. After you load the to the Power BI Desktop data model, you're able to create relationships between tables as well as create reports.
+4. After you load to the Power BI Desktop data model, you're able to create relationships between tables and create reports.
 
 ### Details on OneStream custom connector
 
@@ -126,7 +120,7 @@ The OneStream connector has a limitation of 2 million rows per call. Executing a
 
    :::image type="content" source="./media/onestream/pbi-publish-success.png" alt-text="Screenshot of the publishing to Power BI dialog, with the success message and an emphasized link.":::
 
-4. Select the link to view all reports from Power BI Desktop in the Power BI service, as well as create dashboards in the Power BI service.
+4. Select the link to view all reports from Power BI Desktop in the Power BI service, and create dashboards in the Power BI service.
 
    :::image type="content" source="./media/onestream/pbi-publish-access.png" alt-text="Screenshot of the refresh data model on the service with the refresh icon emphasized." lightbox="./media/onestream/pbi-publish-access.png":::
 
@@ -138,19 +132,19 @@ The OneStream connector has a limitation of 2 million rows per call. Executing a
 
 * Limit the number of transformations you make. The more you complicate the query, the more chance there is for the query to fail.
 
-* Leverage OneStream's financial logic and Cube Views/Data Adapters to create the tables that are then loaded into Power BI.
+* Apply OneStream's financial logic and Cube Views/Data Adapters to create the tables that are then loaded into Power BI.
 
   Example: Consolidations involve the parent entity only taking 40% of one of the child entities' values. Ensure that this logic is done in OneStream, and you load the data adapter in Power BI, which already has the values populated.
 
-  Attempting to replicate the logic in Power BI would be extremely inefficient and is better performed in the source system.
+  Attempting to replicate the logic in Power BI would be inefficient and is better performed in the source system.
 
 ### Loading large dataset using loop on custom M queries
 
 When loading large amounts of data that could potentially fail due to the maximum row limit, we recommend that you create a custom query directly in Power BI to loop through a dimension, splitting the query into multiple queries and joining the data from the query results in Power BI directly.
   
-The following query example executes a CubeViewMD Data Adapter retrieval multiple times. The 3 main components are:
+The following query example executes a CubeViewMD Data Adapter retrieval multiple times. The three main components are:
 
-* **GetCubeViewColumns**: Returns a list of all the columns from the specified adapter you're trying to load. The columns are set manually to avoid having to dynamically parse them, which is expensive (requires one additional query execution).
+* **GetCubeViewColumns**: Returns a list of all the columns from the specified adapter you're trying to load. The columns are set manually to avoid having to dynamically parse them, which is expensive (requires one extra query execution).
 
 * **GetEntities**: Executes a DataAdapter configured as Method - Members (see following image) to retrieve all members needed for a dimension (in this case entity). You can change this to loop over any dimension / member script needed.
 
@@ -215,7 +209,7 @@ in
 
 This function retrieves data from a OneStream Cube.
 
-* All the parameters can be specified via OneStream Member Script (for example, 2023.Base for time), except View and Currency which require a single member.
+* All the parameters can be specified via OneStream Member Script (for example, 2023.Base for time), except View and Currency, which require a single member.
 * Currency refers to the Consolidation dimension in OneStream, so you can use Local or Aggregate for example.
 
 :::image type="content" source="./media/onestream/os-connector-get-cube.png" alt-text="Screenshot of the navigator dialog with a Get Cube Data function emphasized." lightbox="./media/onestream/os-connector-get-cube.png":::
@@ -224,7 +218,7 @@ This function retrieves data from a OneStream Cube.
 
 * Specify the Workspace and Adapter Name (mandatory parameters).
 * Table Name and Parameters are optional.
-* Refer to a configured dashboard adapter inside OneStream to make sure you are inserting the right values.
+* Refer to a configured dashboard adapter inside OneStream to make sure you're inserting the right values.
 
 :::image type="content" source="./media/onestream/os-connector-get-adapter.png" alt-text="Screenshot of the navigator dialog with a Get Custom Adapter Data function emphasized." lightbox="./media/onestream/os-connector-get-adapter.png":::
 

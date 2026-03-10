@@ -24,7 +24,7 @@ ms.custom: sfi-image-nochange
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_xml_capabilities-supported](includes/xml-capabilities-supported.md)]
 
 ## Load a local XML file from Power Query Desktop
 
@@ -32,13 +32,13 @@ To load a local XML file:
 
 1. Select the **XML** option in the **Get Data** selection. This action will launch a local file browser and allow you to select your XML file.
 
-   :::image type="content" source="./media/xml/xml-browse.png" alt-text="XML file selection.":::
+   :::image type="content" source="./media/xml/xml-browse.png" alt-text="Screenshot of XML file selection.":::
 
 2. Browse to the directory containing the local XMl file you want to load, and then select **Open**.
 
 3. In **Navigator**, select the data you want, and then either select **Load** to load the data, or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   :::image type="content" source="./media/xml/xml-navigator.png" alt-text="Loading data from a XML file in the Navigator.":::
+   :::image type="content" source="./media/xml/xml-navigator.png" alt-text="Screenshot of loading data from an XML file in the Navigator.":::
 
 ## Load a local XML file from Power Query Online
 
@@ -48,7 +48,7 @@ To load a local XML file:
 
 2. Enter the path to the local XML file.
 
-   :::image type="content" source="./media/xml/xml-connection-online.png" alt-text="XML file selection from an online service.":::
+   :::image type="content" source="./media/xml/xml-connection-online.png" alt-text="Screenshot of XML file selection from an online service.":::
 
 3. Select an on-premises data gateway from **Data gateway**.
 
@@ -58,7 +58,7 @@ To load a local XML file:
 
 Loading the XML file will automatically launch the Power Query Editor. From the editor, you can then transform the data if you want, or you can just save and close to load the data.
 
-:::image type="content" source="./media/xml/xml-power-query-online.png" alt-text="XML file loaded in the Power Query Editor.":::
+:::image type="content" source="./media/xml/xml-power-query-online.png" alt-text="Screenshot of XML file loaded in the Power Query Editor.":::
 
 ## Load an XML file from the web
 

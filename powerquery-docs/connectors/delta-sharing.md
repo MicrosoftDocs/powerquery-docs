@@ -23,17 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-If you use Power BI Desktop you need to install the November release of Power BI Desktop or later. [Download the latest version](https://www.microsoft.com/download/details.aspx?id=58494).
-
-The data provider sends an activation URL from which you can download a credentials file that grants you access to the shared data.
-
-After downloading the credentials file, open it with a text editor to retrieve the endpoint URL and the token.
-
-For detailed information about Delta Sharing, visit [Access data shared with you using Delta Sharing](https://docs.databricks.com/delta-sharing/recipient.html).
+[!INCLUDE [Includes_delta-sharing_prerequisites](includes/delta-sharing/delta-sharing-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_delta-sharing_capabilities-supported](includes/delta-sharing/delta-sharing-capabilities-supported.md)]
 
 ## Connect to Databricks Delta Sharing in Power BI Desktop
 

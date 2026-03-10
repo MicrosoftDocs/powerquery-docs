@@ -23,17 +23,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Before you can sign in to ADP Analytics, you must have an ADP account in:
-
-* ADP Workforce Now®
-* ADP Vantage HCM®
-* ADP Enterprise HR® V5 and V6
-
-You must have a subscription to ADP® DataCloud Enhanced Insights and Microsoft Power BI Connector for ADP® DataCloud Enhanced Insights in the ADP marketplace.
+[!INCLUDE [Includes_adp-analytics_prerequisites](includes/adp-analytics/adp-analytics-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_adp-analytics_capabilities-supported](includes/adp-analytics/adp-analytics-capabilities-supported.md)]
 
 ## Connect to ADP Analytics data
 

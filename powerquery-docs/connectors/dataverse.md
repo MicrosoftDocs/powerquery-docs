@@ -26,24 +26,11 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-You must have a Dataverse environment.
-
-You must have read permissions to access data within tables.
-
-To use the Dataverse connector, the **TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
-
-To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to connect. Port 1433 is used automatically. However, if port 1433 is blocked, you can use port 5558 instead. To enable port 5558, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com, 5558*. More information: [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports)
-
-> [!NOTE]
-> If you're using Power BI Desktop and need to use port 5558, you must create a source with the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com,5558*, in Power Query M. More information: [Finding your Dataverse environment URL](#finding-your-dataverse-environment-url)
+[!INCLUDE [Includes_dataverse_prerequisites](includes/dataverse/dataverse-prerequisites.md)]
 
 ## Capabilities supported
 
-* Server URL
-* Import
-* DirectQuery (Power BI semantic models)
-* Advanced
-  * Include relationship columns
+[!INCLUDE [Includes_dataverse_capabilities-supported](includes/dataverse/dataverse-capabilities-supported.md)]
 
 ## Connect to Dataverse from Power Query Desktop
 
@@ -68,26 +55,7 @@ To connect to Dataverse from Power Query Desktop:
 
 ## Connect to Dataverse from Power Query Online
 
-To connect to Dataverse from Power Query Online:
-
-1. Select the **Dataverse** option in the **Choose data source** page. More information: [Where to get data](../where-to-get-data.md)
-
-2. In the **Connect to data source** page, leave the server URL address blank. Leaving the address blank lists all of the available environments you have permission to use in the Power Query Navigator window.
-
-   :::image type="content" source="media/dataverse/enter-url-online.png" alt-text="Enter the server URL.":::
-
-   >[!Note]
-   >If you need to use port 5558 to access your data, you'll need to load a specific environment with port 5558 appended at the end in the server URL address. In this case, go to [Finding your Dataverse environment URL](#finding-your-dataverse-environment-url) for instructions on obtaining the correct server URL address.
-
-3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataverse and an on-premises SQL Server database.
-
-4. Sign in to your organizational account.
-
-5. When you've successfully signed in, select **Next**.
-
-6. In the navigation page, select the data you require, and then select **Transform Data**.
-
-   :::image type="content" source="media/dataverse/navigator-online.png" alt-text="Navigation page open with the Application User data selected.":::
+[!INCLUDE [Includes_dataverse_connect-to-power-query-online](includes/dataverse/dataverse-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 

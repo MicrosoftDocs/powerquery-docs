@@ -25,25 +25,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Supported Oracle versions:
-
-* Oracle Database Server 12c (12.1.0.2) and later
-* Oracle Autonomous Database - all versions
-
-Before you can connect to an Oracle database using Power Query, you need to install the Oracle Client for Microsoft Tools (OCMT). To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), 64-bit OCMT must be installed on the computer running the gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
-
-> [!NOTE]
-> Since the April 2025 version of Power BI Desktop and May 2025 version of on-premises data gateway, we provide a new option to use the built-in Oracle managed ODP.NET driver to connect to the Oracle database, currently available in preview. With the feature enabled, you don't need to install the OCMT manually. Learn more about [this feature](#use-the-built-in-oracle-driver-preview).
+[!INCLUDE [Includes_oracle-database_prerequisites](includes/oracle-database/oracle-database-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* DirectQuery (Power BI semantic models)
-* Advanced options
-  * Command timeout in minutes
-  * SQL statement
-  * Include relationship columns
-  * Navigate using full hierarchy
+[!INCLUDE [Includes_oracle-database_capabilities-supported](includes/oracle-database/oracle-database-capabilities-supported.md)]
 
 ## Download and install Oracle Client for Microsoft Tools
 
@@ -82,30 +68,7 @@ To make the connection, take the following steps:
 
 ## Connect to an on-premises Oracle database from Power Query Online
 
-To make the connection, take the following steps:
-
-1. [Install and setup an on-premises data gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway).
-
-2. From Power Query Online, select the **Oracle database** option in the data sources selection.
-
-3. In the **Oracle database** dialog that appears, specify the Oracle net service name/TNS alias, Easy Connect Plus connection string, or connect descriptor to connect to in **Server**.
-
-   :::image type="content" source="./media/oracle-database/select-database-online.png" alt-text="Screenshot of the Oracle database window where you enter your Oracle database online connection information.":::
-
-4. Provide a **Connection name**, such as "testoracleserver".
-
-5. Select the name of your on-premises data gateway.
-
-   > [!NOTE]
-   > You must select an on-premises data gateway for this connector, whether the Oracle database is on your local network or on a web site.
-
-6. If you're connecting to this Oracle database for the first time, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to sign in with an Oracle username and password. Choose **Windows** when using Windows operating system authentication and with both the Oracle client and server running on Windows.
-
-7. Enter your credentials.
-
-8. Select **Next** to continue.
-
-9. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
+[!INCLUDE [Includes_oracle-database_connect-to-power-query-online](includes/oracle-database/oracle-database-connect-to-power-query-online.md)]
 
 ## Connect to an Oracle Autonomous Database
 
