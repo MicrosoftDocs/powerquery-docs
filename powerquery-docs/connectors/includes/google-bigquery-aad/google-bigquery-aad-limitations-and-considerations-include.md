@@ -22,7 +22,7 @@ To optimize performance considerations, Google BigQuery does well with large dat
 
 The Google BigQuery (Microsoft Entra ID) connector supports nested fields, which are loaded as text columns in JSON format.
 
-:::image type="content" source="./media/google-bigquery/google-bigquery-nested-fields.png" alt-text="Screenshot of the Google BigQuery nested fields support." lightbox="./media/google-bigquery/google-bigquery-nested-fields.png":::
+:::image type="content" source="../../media/google-bigquery/google-bigquery-nested-fields.png" alt-text="Screenshot of the Google BigQuery nested fields support." lightbox="../../media/google-bigquery/google-bigquery-nested-fields.png":::
 
 Users should select **Transform Data** and then use the JSON parsing capabilities in the Power Query editor to extract the data.
 
