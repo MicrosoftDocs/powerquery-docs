@@ -63,10 +63,9 @@ To get data from Dataflows in Power Query Online:
 
 6. In the navigation page, select the data you require, and then select **Transform Data**.
 
-## Known issues and limitations
+## Limitations and considerations
 
-- The Power Query Dataflows connector inside Excel doesn't currently support sovereign cloud clusters (for example, China, Germany, US).
-- Consuming data from a dataflow gen2 with the dataflow connector requires Admin, Member, or Contributor permissions. Viewer permissions aren't sufficient and aren't supported for consuming data from the dataflow.
+[!INCLUDE [Includes_dataflows_limitations-and-considerations](includes/dataflows/dataflows-limitations-and-considerations-include.md)]
 
 ## Frequently asked questions
 

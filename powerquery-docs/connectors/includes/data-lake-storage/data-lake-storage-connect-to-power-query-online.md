@@ -10,7 +10,7 @@ ms.topic: include
 
    :::image type="content" source="../../media/azure-data-lake-storage-gen2/get-data-online.png" alt-text="Screenshot of the get data window with Azure Data Lake Storage Gen2 emphasized.":::
 
-2. In **Connect to data source**, enter the URL to your Azure Data Lake Storage Gen2 account. Refer to [Limitations](#limitations) to determine the URL to use.
+2. In **Connect to data source**, enter the URL to your Azure Data Lake Storage Gen2 account. Refer to limitations and considersations to determine the URL to use.
 
    :::image type="content" source="../../media/azure-data-lake-storage-gen2/adls-url-online.png" alt-text="Screenshot of the Connect to data source page for Azure Data Lake Storage Gen2, with the URL entered.":::
 
