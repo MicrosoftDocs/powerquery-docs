@@ -59,9 +59,9 @@ To connect to Exact Online Premium:
 
 1. Finally, select the data usage mode (import or direct query)
 
-## Limitations
+## Limitations and considerations
 
-[!INCLUDE [Includes_exact-online-premium_limitations](includes/exact-online-premium/exact-online-premium-limitations.md)]
+[!INCLUDE [Includes_exact-online-premium_limitations-and-considerations](includes/exact-online-premium/exact-online-premium-limitations-and-considerations.md)]
 
 ## Next steps
 
