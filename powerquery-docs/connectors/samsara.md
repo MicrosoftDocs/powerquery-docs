@@ -43,15 +43,9 @@ To connect to Samsara data:
 5. Once the connection is established, you can preview and select multiple tables available in the connector.
    1. You can Load the selected table, which brings the entire table into Power BI Desktop, or you can select Transform Data to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-## Limitations and known issues
+## Limitations and considerations
 
-You should be aware of the following limitations and issues associated with accessing Samsara data.
-
-- The initial data sync that grabs historical data might take some time to process.
-- The data tables are created using Samsara APIs behind the scenes. If one of the APIs returns a 5xx or 4xx error (except 429s) when the connector is trying to refresh the data tables, the matching table isn't created and is skipped.
-- Limit on how far back you can retrieve Samsara data in Power BI: last six months.
-
-For more guidelines on accessing Samsara data, see Samsara's [Developer Guide](https://developers.samsara.com/docs/rest-api-overview).
+[!INCLUDE [Includes_samsara_limitations-and-considerations](includes/samsara/samsara-limitations-and-considerations-include.md)]
 
 ## Additional information
 
