@@ -18,5 +18,5 @@ ms.topic: include
 
 1. In **Navigator**, review and/or select data from your database. Then select **OK**.
     > [!NOTE]
-    > The navigator doesn't load data for the configuration partition. More information: [Limitations and issues](#limitations-and-issues)
+    > The navigator doesn't load data for the configuration partition. More information: [Limitations and considerations](../../active-directory.md#limitations-and-considerations).
 
