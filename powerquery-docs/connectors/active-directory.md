@@ -54,8 +54,6 @@ ms.custom: sfi-image-nochange
 
 [!INCLUDE [Includes_active-directory_connect-to-power-query-online](includes/active-directory/active-directory-connect-to-power-query-online.md)]
 
-## Limitations and issues
+## Limitations and considerations
 
-### Some objects in the Navigator return empty tables
-
-The Power Query Active Directory connector supports search in the Schema and Domain partitions, but not in the Configuration partition. This limitation is the current design. So if there are any objects that reside in the Configuration partition, Power Query doesn't load data for those objects into the navigator.
+[!INCLUDE [Includes_active-directory_limitations-and-considerations](includes/active-directory/active-directory-limitations-and-considerations-include.md)]

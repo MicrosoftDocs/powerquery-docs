@@ -87,11 +87,6 @@ To connect to ADP Analytics data:
 
     :::image type="content" source="./media/adp-analytics/load.png" alt-text="Screenshot of the Navigator dialog with the Load button emphasized." lightbox="./media/adp-analytics/load.png":::
 
-## Limitations and issues
+## Limitations and considerations
 
-You should be aware of the following limitations and issues associated with accessing ADP Analytics data.
-
-* ADP Analytics has a built-in limit of 25 metrics that can be imported into Power BI in a single connection.
-* ADP Analytics has a built-in limit of 100k rows returned per API call.
-* ADP Analytics has daily maintenance between 6:00 and 6:15 AM EST. Ensure scheduled refreshes aren't set up at this time to avoid intermittent failures.
-* Signing into Power BI Desktop after scheduling an automatic refresh in Power BI cloud expires the session established at Power BI cloud, which requires the user to sign in again.
+[!INCLUDE [Includes_adp-analytics_limitations-and-considerations](includes/adp-analytics/adp-analytics-limitations-and-considerations-include.md)]
