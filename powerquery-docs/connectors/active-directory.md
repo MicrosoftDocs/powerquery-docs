@@ -48,7 +48,7 @@ ms.custom: sfi-image-nochange
 
 1. In **Navigator**, review and/or select data from your database. Then select **OK**.
     > [!NOTE]
-    > The navigator doesn't load data for the configuration partition. More information: [Limitations and issues](#limitations-and-issues)
+    > The navigator doesn't load data for the configuration partition. More information: [Limitations and considerations](#limitations-and-considerations).
 
 ## Connect to Active Directory from Power Query Online
 
