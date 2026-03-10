@@ -56,6 +56,4 @@ To connect to Databricks using the Delta Sharing connector, use the following st
 
 ## Limitations and considerations
 
-This section describes any limitations or considerations of the Delta Sharing connector.
-
-You need to make sure that the data loaded with the Delta Sharing connector fits in the memory of your machine. To ensure this, the connector limits the number of imported rows to the Row Limit set by the user.
+[!INCLUDE [Includes_delta-sharing_limitations-and-considerations](includes/delta-sharing/delta-sharing-limitations-and-considerations-include.md)]
