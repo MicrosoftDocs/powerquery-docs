@@ -1,6 +1,6 @@
 ---
-title: Include file for the Limitations section of the Power Query SQL Server connector documentation
-description: Include file for the Limitations section of the Power Query SQL Server connector documentation
+title: Include file for the Limitations and considerations section of the Power Query Sql Server connector documentation
+description: Include file for the Limitations and considerations section of the Power Query Sql Server connector documentation
 ms.reviewer: whhender
 ms.date: 03/06/2026
 ms.topic: include
@@ -42,4 +42,3 @@ Power Query doesn't support 'Always Encrypted' columns.
 Microsoft Entra ID (Organizational account) authentication is only supported in the SQL Server connector if the specified server also supports Microsoft Entra ID authentication. Otherwise, you might encounter a `The OAuth authentication method isn't supported in this data source` error.
 
 In Power BI service, the Microsoft Entra ID authentication method shows up as `OAuth2`.
-

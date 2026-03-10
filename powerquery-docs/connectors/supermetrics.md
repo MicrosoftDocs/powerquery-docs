@@ -73,17 +73,9 @@ To connect to Supermetrics:
 
     Once you see the dataset you’d like to use, select **Load** to use it in Power BI Desktop, or **Transform** to refine it in the Power Query Editor first.
 
-## Limitations
+## Limitations and considerations
 
-[!INCLUDE [Includes_supermetrics_limitations](includes/supermetrics/supermetrics-limitations.md)]
-
-## Known issues
-
-*Query authentication "email@domain.com" is no longer available.*
-
-Possible reasons:
-
-- The connection between Supermetrics and the data source expired. You need to reconnect in Supermetrics Hub.
+[!INCLUDE [Includes_supermetrics_limitations-and-considerations](includes/supermetrics/supermetrics-limitations-and-considerations.md)]
 
 ## Next steps
 
