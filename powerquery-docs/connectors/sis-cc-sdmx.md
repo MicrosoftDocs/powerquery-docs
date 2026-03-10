@@ -54,9 +54,9 @@ To connect to SDMX Web Service data:
 
 4. Select **Load** to import the data into Power BI, or **Transform Data** to edit the query in Power Query Editor where you can refine the query before loading into Power BI.
 
-## Limitations and issues
+## Limitations and considerations
 
-This version of the connector doesn't support importing data formats SDMX-ML or SDMX-JSON.
+[!INCLUDE [Includes_sis-cc-sdmx_limitations-and-considerations](includes/sis-cc-sdmx/sis-cc-sdmx-limitations-and-considerations-include.md)]
 
 ## Next steps
 
