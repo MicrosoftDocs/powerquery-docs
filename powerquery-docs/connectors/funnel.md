@@ -61,8 +61,6 @@ To connect to Funnel:
 
    You can then either select **Load** to load the data or select **Transform Data** to transform the data.
 
-## Known issues and limitations
+## Limitations and considerations
 
-* If a Data Share contains too much data for one month, the connector gets a TOO_MANY_ROWS error.
-
-For more information, read our [Power BI knowledge base articles](https://help.funnel.io/en/?q=powerbi).
+[!INCLUDE [Includes_funnel_limitations-and-considerations](includes/funnel/funnel-limitations-and-considerations-include.md)]

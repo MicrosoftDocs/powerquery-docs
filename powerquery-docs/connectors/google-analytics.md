@@ -79,16 +79,9 @@ You can **Load** the selected table, which brings the entire table into Power BI
 
 [!INCLUDE [Includes_google-analytics_connect-to-power-query-online](includes/google-analytics/google-analytics-connect-to-power-query-online.md)]
 
-## Limitations and issues
+## Limitations and considerations
 
-You should be aware of the following limitations and issues associated with accessing Google Analytics data.
-
-### Google Analytics quota limits for Power BI
-
-The standard limitations and quotas for Google Analytics API requests is documented in [Limits and Quotas on API Requests](https://developers.google.com/analytics/devguides/config/admin/v1/quotas). However, Power BI Desktop and Power BI service allow you to use the following enhanced number of queries.
-
-* Queries per day: 1,500,000
-* Queries per 100 seconds: 4,000
+[!INCLUDE [Includes_google-analytics_limitations-and-considerations](includes/google-analytics/google-analytics-limitations-and-considerations-include.md)]
 
 ## Troubleshooting
 
