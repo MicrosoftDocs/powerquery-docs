@@ -18,7 +18,7 @@ To resolve such an error:
 
 1. Select **Refresh** (top right).
 
-   :::image type="content" source="./media/anaplan/auth-cred-error.png" lightbox="./media/anaplan/auth-cred-error.png" alt-text="Screenshot of an authentication error with the refresh button highlighted.":::
+   :::image type="content" source="../../media/anaplan/auth-cred-error.png" lightbox="../../media/anaplan/auth-cred-error.png" alt-text="Screenshot of an authentication error with the refresh button highlighted.":::
 
 2. Select **File**.
 3. Select **Options and settings**.
@@ -31,11 +31,11 @@ These steps remove expired Anaplan API tokens. You must reauthenticate to procee
 
 ### Credential error in the Power Query editor
 
-You might experience a credential error in the [Power Query editor](../power-query-ui.md) when you reopen a Power BI report or when you edit a prior data set.
+You might experience a credential error in the [Power Query editor](../../../power-query-ui.md) when you reopen a Power BI report or when you edit a prior data set.
 
 To resolve this error, select either **Close & Apply** or **Refresh Preview**.
 
-:::image type="content" source="./media/anaplan/power-query-error.png" lightbox="./media/anaplan/power-query-error.png" alt-text="Screenshot of the Power Query error dialog.":::
+:::image type="content" source="../../media/anaplan/power-query-error.png" lightbox="../../media/anaplan/power-query-error.png" alt-text="Screenshot of the Power Query error dialog.":::
 
 Your data then refreshes.
 
@@ -50,7 +50,7 @@ You can also:
 
 1. Select **Recent sources**.
 
-   :::image type="content" source="./media/anaplan/recent-sources.png" alt-text="Screenshot of the Recent resources option and the dropdown list of most recent sources.":::
+   :::image type="content" source="../../media/anaplan/recent-sources.png" alt-text="Screenshot of the Recent resources option and the dropdown list of most recent sources.":::
 
 2. Select **More**.
 
@@ -58,11 +58,11 @@ You can also:
 
 4. Select **Remove from list**.
 
-   :::image type="content" source="./media/anaplan/remove-from-list.png" alt-text="Screenshot of recent source menu with Remove from list emphasized.":::
+   :::image type="content" source="../../media/anaplan/remove-from-list.png" alt-text="Screenshot of recent source menu with Remove from list emphasized.":::
 
 5. Connect to the export again. Your data then refreshes.
 
-   :::image type="content" source="./media/anaplan/power-query-solution.png" alt-text="Screenshot with the Close & Apply and Refresh Preview icons emphasized." lightbox="./media/anaplan/power-query-solution.png":::
+   :::image type="content" source="../../media/anaplan/power-query-solution.png" alt-text="Screenshot with the Close & Apply and Refresh Preview icons emphasized." lightbox="../../media/anaplan/power-query-solution.png":::
 
 ### Power Query expression error
 
@@ -70,11 +70,11 @@ You can also:
 
 Select **Refresh Preview**.
 
-:::image type="content" source="./media/anaplan/expression-error.png" lightbox="./media/anaplan/expression-error.png" alt-text="Screenshot of the Power Query error Key and Table.":::
+:::image type="content" source="../../media/anaplan/expression-error.png" lightbox="../../media/anaplan/expression-error.png" alt-text="Screenshot of the Power Query error Key and Table.":::
 
 The first [1,000 rows](https://community.powerbi.com/t5/Desktop/Limit-of-1000-value-reached/td-p/368850) of data then displays.
 
-:::image type="content" source="./media/anaplan/refresh-preview.png" lightbox="./media/anaplan/refresh-preview.png" alt-text="Screenshot of the Refresh preview.":::
+:::image type="content" source="../../media/anaplan/refresh-preview.png" lightbox="../../media/anaplan/refresh-preview.png" alt-text="Screenshot of the Refresh preview.":::
 
 For more information, go to [Power Query M expression functions](/powerquery-m/expression-functions).
 
@@ -84,6 +84,6 @@ If you go beyond the 5 gigabytes (GB) size limit, you get the following error.
 
 `Anaplan connector supports file downloads up to 5 GB in size.`
 
-:::image type="content" source="./media/anaplan/file-too-large.png" lightbox="./media/anaplan/file-too-large.png" alt-text="Screenshot of the Error message when a file is too large.":::
+:::image type="content" source="../../media/anaplan/file-too-large.png" lightbox="../../media/anaplan/file-too-large.png" alt-text="Screenshot of the Error message when a file is too large.":::
 
 Return to your Anaplan model, decrease the size of your file, and try again.
