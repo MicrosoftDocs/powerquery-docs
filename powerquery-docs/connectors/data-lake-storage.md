@@ -61,9 +61,9 @@ ms.custom: sfi-image-nochange
 
 [!INCLUDE [Includes_data-lake-storage_connect-to-power-query-online](includes/data-lake-storage/data-lake-storage-connect-to-power-query-online.md)]
 
-## Limitations
+## Limitations and considerations
 
-[!INCLUDE [Includes_data-lake-storage_limitations](includes/data-lake-storage/data-lake-storage-limitations.md)]
+[!INCLUDE [Includes_data-lake-storage_limitations-and-considerations](includes/data-lake-storage/data-lake-storage-limitations-and-considerations.md)]
 
 ## Related content
 

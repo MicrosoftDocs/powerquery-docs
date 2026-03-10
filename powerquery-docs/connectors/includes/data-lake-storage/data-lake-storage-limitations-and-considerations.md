@@ -1,6 +1,6 @@
 ---
-title: Include file for the Limitations section of the Azure Data Lake Storage Gen2 connector documentation
-description: Include file for the Limitations section of the Azure Data Lake Storage Gen2 connector documentation
+title: Include file for the Limitations and considerations section of the Power Query Data Lake Storage connector documentation
+description: Include file for the Limitations and considerations section of the Power Query Data Lake Storage connector documentation
 ms.reviewer: whhender
 ms.date: 03/06/2026
 ms.topic: include
@@ -36,4 +36,3 @@ To work around this limitation and enable access to Azure Storage from Power Que
 ### Role-based access control (RBAC) required
 
 Role-based access control (RBAC) is required for Power BI to work correctly. Access Control List (ACL) isn't supported for Power BI access.
-
