@@ -46,8 +46,6 @@ To connect to Bitsight:
 
 You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-## Limitations and issues
+## Limitations and considerations
 
-### Bitsight for Security Performance Management
-
-Can only view data on one company at a time, and assumes the parent company. The parent company can be changed.  
+[!INCLUDE [Includes_bitsight-security-ratings_limitations-and-considerations](includes/bitsight-security-ratings/bitsight-security-ratings-limitations-and-considerations-include.md)]
