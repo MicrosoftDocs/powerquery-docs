@@ -70,23 +70,9 @@ To connect to Windsor:
 
     Once you see the dataset you’d like to use, select **Load** to use it in Power Query, or **Transform Data** to refine it in the Power Query editor first.
 
-## Limitations
+## Limitations and considerations
 
-[!INCLUDE [Includes_windsor_limitations](includes/windsor/windsor-limitations.md)]
-
-## Known issues
-
-*Expression.Error: Empty response, please check your query at onboard.windsor.ai/app/data-preview*
-
-Reason:
-
-* The data is missing for selected query. Check that this query works and shows data in Windsor Onboard.
-
-*Expression.Error: Error*
-
-Possible reasons:
-
-& The data source was disconnected. Check that the data source is connected at `https://onboard.windsor.ai/`. Select **Show only connected** to show the data sources you have connected.
+[!INCLUDE [Includes_windsor_limitations-and-considerations](includes/windsor/windsor-limitations-and-considerations.md)]
 
 ## Related content
 

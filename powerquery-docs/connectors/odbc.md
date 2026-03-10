@@ -78,8 +78,6 @@ Power Query provides a set of advanced options that you can add to your query if
 | SQL statement | Provides a SQL statement, depending on the capabilities of the driver. Ask your vendor for more information, or go to [Import data from a database using native database query](../native-database-query.md). |
 | Supported row reduction clauses | Enables folding support for [Table.FirstN](/powerquery-m/table-firstn). Select **Detect** to find supported row reduction clauses, or select from one of the drop-down options (TOP, LIMIT and OFFSET, LIMIT, or ANSI SQL-compatible). This option isn't applicable when using a native SQL statement. Only available in Power Query Desktop. |
 
-## Known issues and limitations
+## Limitations and considerations
 
-### Connection string attributes
-
-If a DSN is specified in the ODBC connection string, the attributes after the DSN specification aren't included. If you want to use more attributes, update them in the DSN itself, as opposed to in the connection string.
+[!INCLUDE [Includes_odbc_limitations-and-considerations](includes/odbc/odbc-limitations-and-considerations-include.md)]

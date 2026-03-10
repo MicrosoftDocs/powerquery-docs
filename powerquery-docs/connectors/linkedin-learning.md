@@ -266,17 +266,9 @@ Expanding the column **adds a step in the query settings.**
 
 **Congratulations!** Your learning admins can now gain key insights and engagement metrics through their Microsoft Power BI application.
 
-## Common issues and troubleshooting tips
+## Limitations and considerations
 
-If the data update fails when attempting to refresh data:
-
-1. Select the warning sign to see the details of the error message to diagnose issue.
-
-:::image type="content" source="./media/linkedin-learning/data-update-fail.png" alt-text="Screenshot of warning sign that can be used to review error messages.":::
-
-2. Review the details of the error message. Reviewing this message helps identify and address any issues preventing the data refresh.
-
-:::image type="content" source="./media/linkedin-learning/data-update-error-message.png" alt-text="Screenshot of error message.":::
+[!INCLUDE [Includes_linkedin-learning_limitations-and-considerations](includes/linkedin-learning/linkedin-learning-limitations-and-considerations-include.md)]
 
 ## Frequently asked questions
 
