@@ -259,7 +259,7 @@ To use this built-in driver in the on-premises data gateway, change the gateway 
    ...
 </Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>    
 ```
-### Supported Ways to Specify TNS_ADMIN with the Built-in Oracle Driver (March 2026 version and Later)
+### Supported ways to specify TNS_ADMIN with the built-in Oracle driver (March 2026 version and later)
 There are three options to specify TNS_ADMIN:
 
 - [Configure the TNS_ADMIN in OADC.config](#configure-tns_admin-in-oadcconfig)
