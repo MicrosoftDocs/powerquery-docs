@@ -80,7 +80,7 @@ The custom `Value.NativeQuery` function allows native MongoDB queries to be sent
 
    :::image type="content" source="./media/azure-cosmos-db-for-mongodb-vcore/native-query-final-result.png" alt-text="Screenshot showing Native Mongo Query transform data type final result.":::
 
-Refer to [Troubleshooting & Limitations](#troubleshooting--limitations) for limitations of the `Value.NativeQuery` function.
+Refer to [Limitations and considerations](#limitations-and-considerations) for limitations of the `Value.NativeQuery` function.
 
 ## Direct Query Support
 
