@@ -260,6 +260,11 @@ To use this built-in driver in the on-premises data gateway, change the gateway 
 </Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>    
 ```
 ### Supported Ways to Specify TNS_ADMIN with the Built-in Oracle Driver (March 2026 version and Later)
+There are three options to specify TNS_ADMIN:
+
+- [Configure the TNS_ADMIN in OADC.config](#configure-tns_admin-in-oadcconfig)
+- [Use an environment variable](#use-an-environment-variable)
+- [Use settings from a previously installed OADC](#use-settings-from-a-previously-installed-OADC)
 
 Option 1: Configure TNS_ADMIN in ODAC.config
 If you are using the Built-in Oracle Driver and have access to modify program files, you can specify TNS_ADMIN in configuration file ODAC.config used by Built-in Oracle Driver.  The file is located in Power BI Desktop or On-Promise Gateway installed location under “ADO.NET Providers” subfolder.  Following is an example of specifying TNS_ADMIN path that is "C:\network\admin".
