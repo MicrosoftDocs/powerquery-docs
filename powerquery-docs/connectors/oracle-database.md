@@ -286,7 +286,7 @@ Example configuration
 </configuration>
 ```
 
-Option 2: Use an Environment Variable
+#### Use an environment variable
 If user does not have access to modify ODAC.config, they can specify TNS_ADMIN by adding a TNS_ADMIN environment variable.  The environment variable can be a system environment variable or a user environment variable for the user running Power BI Desktop or On-Promise Gateway.  Set the TNS_ADMIN value to "C:\network\admin", for example.
 
 Option 3: Use settings from previously Installed ODAC
