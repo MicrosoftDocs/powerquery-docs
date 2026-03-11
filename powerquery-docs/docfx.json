@@ -53,6 +53,12 @@
     "fileMetadata": {
       "ms.service": {
         "**.*": "powerquery"
+      },
+      "author": {
+        "**.*": "whhender"
+      },
+      "ms.author": {
+        "**.*": "whhender"
       }
     },
     "template": [],
