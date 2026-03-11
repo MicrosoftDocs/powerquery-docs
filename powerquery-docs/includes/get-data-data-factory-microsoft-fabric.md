@@ -4,6 +4,7 @@ description: Steps to get data in Data Factory using Power Query and connector s
 ms.reviewer: whhender
 ms.date: 03/11/2026
 ms.topic: include
+ms.service: powerquery
 ---
 
 To get data in Data Factory:
