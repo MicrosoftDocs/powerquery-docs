@@ -79,7 +79,6 @@ To retrieve your Azure Blob Storage account key to use while authenticating your
 
    :::image type="content" source="./media/azure-blob-storage/account-key-location.png" alt-text="Screenshot of the Access keys page, with the Key under key1 shown, and the Copy to clipboard icon emphasized.":::
 
-## Limitations
+## Limitations and considerations
 
-[!INCLUDE [Includes_azure-blob-storage_limitations](includes/azure-blob-storage/azure-blob-storage-limitations.md)]
-
+[!INCLUDE [Includes_azure-blob-storage_limitations-and-considerations](includes/azure-blob-storage/azure-blob-storage-limitations-and-considerations.md)]

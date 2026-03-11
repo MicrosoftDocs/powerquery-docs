@@ -54,7 +54,7 @@ Implementing network security controls helps protect your Power Query connection
 
 - **Enable TLS encryption for all connections**: Ensure that connections to data sources use Transport Layer Security (TLS) encryption with modern cipher suites. Outdated cipher suites might not be supported and could pose security risks. For more information, go to [Power Query cipher suites](common-issues.md#power-query).
 
-- **Configure firewalls for data source access**: When using Power Query Online with Azure Storage or other cloud services with firewall settings, ensure proper configuration to allow authenticated connections while blocking unauthorized access. For more information, go to [Azure Blob Storage limitations](connectors/azure-blob-storage.md#limitations).
+- **Configure firewalls for data source access**: When using Power Query Online with Azure Storage or other cloud services with firewall settings, ensure proper configuration to allow authenticated connections while blocking unauthorized access. For more information, go to [Azure Blob Storage limitations](connectors/azure-blob-storage.md#limitations-and-considerations).
 
 ## Logging and monitoring
 

@@ -1,6 +1,6 @@
 ---
-title: Include file for the Limitations section of the Azure Blob Storage connector documentation
-description: Include file for the Limitations section of the Azure Blob Storage connector documentation
+title: Include file for the Limitations and considerations section of the Power Query Azure Blob Storage connector documentation
+description: Include file for the Limitations and considerations section of the Power Query Azure Blob Storage connector documentation
 ms.reviewer: whhender
 ms.date: 03/06/2026
 ms.topic: include
