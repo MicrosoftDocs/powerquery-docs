@@ -70,7 +70,6 @@ To connect to Athena data:
 
     :::image type="content" source="./media/amazon-athena/amazon-athena-5.png" alt-text="Screenshot of a sample Amazon Athena data visualization.":::
 
-## Limitations
+## Limitations and considerations
 
-[!INCLUDE [Includes_amazon-athena_limitations](includes/amazon-athena/amazon-athena-limitations.md)]
-
+[!INCLUDE [Includes_amazon-athena_limitations-and-considerations](includes/amazon-athena/amazon-athena-limitations-and-considerations.md)]

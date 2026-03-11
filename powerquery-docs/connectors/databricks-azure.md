@@ -89,7 +89,6 @@ To switch to the ADBC driver:
         dashboard_data_Table
     ```
 
-## Limitations
+## Limitations and considerations
 
-[!INCLUDE [Includes_databricks-azure_limitations](includes/databricks-azure/databricks-azure-limitations.md)]
-
+[!INCLUDE [Includes_databricks-azure_limitations-and-considerations](includes/databricks-azure/databricks-azure-limitations-and-considerations.md)]

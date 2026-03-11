@@ -78,7 +78,6 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your MySQL database.
 
-## Limitations
+## Limitations and considerations
 
-[!INCLUDE [Includes_mysql-database_limitations](includes/mysql-database/mysql-database-limitations.md)]
-
+[!INCLUDE [Includes_mysql-database_limitations-and-considerations](includes/mysql-database/mysql-database-limitations-and-considerations.md)]

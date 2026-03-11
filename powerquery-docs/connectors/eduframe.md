@@ -58,8 +58,6 @@ To connect to Eduframe Reporting data:
 
 8. In **Navigator**, select the information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-## Limitations and issues
+## Limitations and considerations
 
-You should be aware of the following limitations and issues associated with accessing Eduframe data.
-
-* There's a throttling limit of 100 API calls per 60 seconds.
+[!INCLUDE [Includes_eduframe_limitations-and-considerations](includes/eduframe/eduframe-limitations-and-considerations-include.md)]

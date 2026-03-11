@@ -84,25 +84,9 @@ These input parameters are:
 
 * Dimension&mdash;filter the data based on the selected dimension. By default, all dimensions are selected. Custom Adobe dimension filters are not currently supported in the Power Query user interface, but can be defined by hand as M parameters in the query. For more information, see [Using Query Parameters in Power BI Desktop](../power-query-query-parameters.md).
 
-## Limitations and issues
+## Limitations and considerations
 
-You should be aware of the following limitations and issues associated with accessing Adobe Analytics data.
-
-* Adobe Analytics has a built-in limit of 50 K rows returned per API call. 
-
-* If the number of API calls exceeds four per second, a warning will be issued. If the number exceeds five per second, an error message will be returned. For more information about these limits and the associated messages, see [Web Services Error Codes](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/getting-started/c_Web_Services_Error_Codes.md#web-services-error-codes).
-
-* The API request timeout through adobe.io is currently 60 seconds.
-
-* The default rate limit for an Adobe Analytics Company is 120 requests per minute per user (the limit is enforced as 12 requests every 6 seconds).
-
-* This connector isn't supported with an on-premises data gateway. However it is supported when using the [VNet data gateway](/data-integration/vnet/use-data-gateways-sources-power-bi#supported-azure-data-services).
-
-Import from Adobe Analytics will stop and display an error message whenever the Adobe Analytics connector hits any of the API limits listed above.
-
-When accessing your data using the Adobe Analytics connector, follow the guidelines provided under the [Best Practices](https://developer.adobe.com/analytics-apis/docs/2.0/guides/faq/#what-are-some-best-practices-and-guidelines-when-using-the-apis) heading.
-
-For additional guidelines on accessing Adobe Analytics data, see [Recommended usage guidelines](https://experienceleague.adobe.com/en/docs/analytics/analyze/admin-overview/use-cases).
+[!INCLUDE [Includes_adobe-analytics_limitations-and-considerations](includes/adobe-analytics/adobe-analytics-limitations-and-considerations-include.md)]
 
 ## Next steps
 

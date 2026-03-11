@@ -72,7 +72,6 @@ Your Azure Table Storage account key is the same as your Azure Blob storage acco
 
    :::image type="content" source="./media/azure-table-storage/account-key-location.png" alt-text="Screenshot of the Access keys page, with the Key under key1 shown, and the Copy to clipboard icon emphasized.":::
 
-## Limitations
+## Limitations and considerations
 
-[!INCLUDE [Includes_azure-table-storage_limitations](includes/azure-table-storage/azure-table-storage-limitations.md)]
-
+[!INCLUDE [Includes_azure-table-storage_limitations-and-considerations](includes/azure-table-storage/azure-table-storage-limitations-and-considerations.md)]
