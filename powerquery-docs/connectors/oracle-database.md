@@ -297,7 +297,7 @@ The remaining configurations to connect to an Oracle database from Power Query D
 > [!NOTE]
 > Important limitations  
 > - Semantic model DirectQuery can't use the built-in Oracle managed ODP.NET driver for connectivity. `MashupFlight_EnableOracleBundledOdacProviderV2` isn't applicable on semantic model DirectQuery.  
->  •	The file ODAC.config may require administrator rights to edit and Power BI Store app does not allow modifying this file.  
+> - The file ODAC.config may require administrator rights to edit and Power BI Store app doesn't allow modifying this file.  
 >  •	Restart Power BI Desktop or On-premises Data Gateway service after applying config changes.
 
 ## Known issues and limitations
