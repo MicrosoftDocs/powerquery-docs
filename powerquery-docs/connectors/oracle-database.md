@@ -201,33 +201,67 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 Since the April 2025 version of Power BI Desktop and May 2025 version of on-premises data gateway, the Oracle connector includes a built-in Oracle managed ODP.NET driver for connectivity. This feature removes the necessity for users to install and manage the driver. You can enable this feature by using the following instructions.
 
-To use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider** option.
+To use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider for Import Mode** option.
 
 :::image type="content" source="./media/oracle-database/option-for-bundled-driver.png" alt-text="Screenshot of option to enable using bundled Oracle Managed ODP Provider in Power BI Desktop.":::
 
-To use this built-in driver in the on-premises data gateway, change the gateway configurations to update the `MashupFlight_EnableOracleBundledOdacProvider` setting using the following steps:
+To use this built-in driver in the on-premises data gateway, change the gateway configurations to update the `MashupFlight_EnableOracleBundledOdacProviderV2` setting using the following steps:
 
 1. On the local machine where the on-premises data gateway is installed, navigate to **C:\Program Files\On-premises data gateway**.
 2. Make a backup of the configuration file named **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config**.
-3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `MashupFlight_EnableOracleBundledOdacProvider` entry.
-4. Update the `MashupFlight_EnableOracleBundledOdacProvider` value as `True`.
+3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `MashupFlight_EnableOracleBundledOdacProviderV2` entry.
+4. Update the `MashupFlight_EnableOracleBundledOdacProviderV2` value as `True`.
 5. Restart your gateway.
 
 ```xml
 <Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>
    ...
-   <setting name="MashupFlight_EnableOracleBundledOdacProvider" serializeAs="String">
+   <setting name="MashupFlight_EnableOracleBundledOdacProviderV2" serializeAs="String">
       <value>True</value>
    </setting>
    ...
 </Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>    
 ```
+### Supported ways to specify TNS_ADMIN with the built-in Oracle driver (March 2026 version and later)
+There are three options to specify TNS_ADMIN:
+
+- [Configure the TNS_ADMIN in OADC.config](#configure-tns_admin-in-oadcconfig)
+- [Use an environment variable](#use-an-environment-variable)
+- [Use settings from a previously installed OADC](#use-settings-from-a-previously-installed-OADC)
+
+#### Configure TNS_ADMIN in ODAC.config
+If you are using the Built-in Oracle Driver and have access to modify program files, you can specify TNS_ADMIN in configuration file ODAC.config used by Built-in Oracle Driver.  The file is located in Power BI Desktop or On-Promise Gateway installed location under “ADO.NET Providers” subfolder.  Following is an example of specifying TNS_ADMIN path that is "C:\network\admin".
+
+This config value takes precedence over other options.
+
+Example configuration
+```xml
+<configuration>
+ ...
+ <oracle.manageddataaccess.client>
+  <version number="*">
+   <settings>
+    <setting name="TNS_ADMIN" value="C:\network\admin" />
+   </settings>
+  </version>
+ </oracle.manageddataaccess.client>
+ ...
+</configuration>
+```
+
+#### Use an environment variable
+If user does not have access to modify ODAC.config, they can specify TNS_ADMIN by adding a TNS_ADMIN environment variable.  The environment variable can be a system environment variable or a user environment variable for the user running Power BI Desktop or On-Promise Gateway.  Set the TNS_ADMIN value to "C:\network\admin", for example.
+
+#### Use settings from a previously installed ODAC
+If ODAC is installed previously and TNS_ADMIN is configured, Power BI will automatically discover TNS_ADMIN.
 
 The remaining configurations to connect to an Oracle database from Power Query Desktop are the same as described in the previous sections.
 
 > [!NOTE]
-> Semantic model DirectQuery can't use the built-in Oracle managed ODP.NET driver for connectivity. `MashupFlight_EnableOracleBundledOdacProvider` isn't applicable on semantic model DirectQuery.
-
+> Important limitations  
+> - Semantic model DirectQuery can't use the built-in Oracle managed ODP.NET driver for connectivity. `MashupFlight_EnableOracleBundledOdacProviderV2` isn't applicable on semantic model DirectQuery.  
+> - The file ODAC.config may require administrator rights to edit and Power BI Store app doesn't allow modifying this file.  
+> - Restart Power BI Desktop or the On-premises Data Gateway service after applying config changes.
 
 ## Limitations and considerations
 
