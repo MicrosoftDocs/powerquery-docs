@@ -24,6 +24,9 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+> [!NOTE]
+> Azure Analysis Services connections are currently not supported on the on-premises data gateway.
+
 ## Prerequisites
 
 [!INCLUDE [Includes_azure-analysis-services_prerequisites](includes/azure-analysis-services/azure-analysis-services-prerequisites.md)]
