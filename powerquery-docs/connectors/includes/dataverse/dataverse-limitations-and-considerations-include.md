@@ -1,8 +1,6 @@
 ---
 title: Include file for the Limitations and considerations section of the Power Query Dataverse connector documentation
 description: Include file for the Limitations and considerations section of the Power Query Dataverse connector documentation
-author: whhender
-ms.author: whhender
 ms.date: 03/10/2026
 ms.topic: include
 ---

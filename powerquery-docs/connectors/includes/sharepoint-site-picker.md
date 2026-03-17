@@ -1,8 +1,6 @@
 ---
 title: Sharepoint Site Picker
 description: SharePoint site picker empowers you to quickly find and select the correct SharePoint site during connection creation.
-author: xupzhou
-ms.author: whhender
 ms.reviewer: xupzhou
 ms.topic: include
 ms.date: 03/04/2026
