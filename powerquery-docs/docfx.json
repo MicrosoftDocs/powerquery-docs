@@ -52,13 +52,13 @@
     },
     "fileMetadata": {
       "ms.service": {
-        "**.*": "powerquery"
+        "**": "powerquery"
       },
       "author": {
-        "**.*": "whhender"
+        "**": "whhender"
       },
       "ms.author": {
-        "**.*": "whhender"
+        "**": "whhender"
       }
     },
     "template": [],
