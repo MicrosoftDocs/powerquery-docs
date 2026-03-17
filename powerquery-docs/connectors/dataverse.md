@@ -71,11 +71,7 @@ Once you select the advanced options you require, select **Next** to connect to 
 
 ## Finding your Dataverse environment URL
 
-If you need to use port 5558 to connect to Dataverse, you have to find your Dataverse environment URL. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the :::image type="content" source="media/common-data-service/settings-icon.png" alt-text="Settings icon."::: settings icon, and then select **Advanced settings**.
-
-In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL is in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. **Make sure you remove https:// and the trailing / from the URL before pasting it to connect to your environment.** Append port 5558 to the end of the environment URL, for example *yourenvironmentid.crm.dyamics.com,5558*.
-
-:::image type="content" source="media/dataverse/cds-env.png" alt-text="Location of the Dataverse environment URL.":::
+[!INCLUDE [Includes_dataverse_find-environment-url](includes/dataverse/dataverse-find-environment-url.md)]
 
 ## When to use the Common Data Service (Legacy) connector
 
