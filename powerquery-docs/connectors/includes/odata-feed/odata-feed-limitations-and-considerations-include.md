@@ -25,7 +25,7 @@ When attempting to authenticate, if the following error occurs:
 
 `We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.`
 
-:::image type="content" source="../../media/odata-feed/credential-type-not-supported.png" alt-text="Screenshot of the error from connecting to an endpoint that doesn't support OAuth with the web connector.":::
+:::image type="content" source="/power-query/connectors/media/odata-feed/credential-type-not-supported.png" alt-text="Screenshot of the error from connecting to an endpoint that doesn't support OAuth with the web connector.":::
 
 Contact the service owner. They either need to change the authentication configuration or build a custom connector.
 

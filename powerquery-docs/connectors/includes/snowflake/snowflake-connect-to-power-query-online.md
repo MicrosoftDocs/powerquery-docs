@@ -11,7 +11,7 @@ To make the connection, take the following steps:
 
 2. In the **Snowflake** dialog that appears, enter the name of the server and warehouse.
 
-   :::image type="content" source="../../media/snowflake/snowflake-pqo-advanced.png" alt-text="Screenshot of the Snowflake connection builder in Power Query Online.":::
+   :::image type="content" source="/power-query/connectors/media/snowflake/snowflake-pqo-advanced.png" alt-text="Screenshot of the Snowflake connection builder in Power Query Online.":::
 
 3. Enter any values in the advanced options you want to use. If there are any advanced options not represented in the UI, you can edit them in the **Advanced Editor** in Power Query later.
 
@@ -21,5 +21,5 @@ To make the connection, take the following steps:
 
 6. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
 
-   :::image type="content" source="../../media/snowflake/navigator-online.png" alt-text="Screenshot of the online Navigator with the test schema database open and the DimProduct table selected.":::
+   :::image type="content" source="/power-query/connectors/media/snowflake/navigator-online.png" alt-text="Screenshot of the online Navigator with the test schema database open and the DimProduct table selected.":::
 

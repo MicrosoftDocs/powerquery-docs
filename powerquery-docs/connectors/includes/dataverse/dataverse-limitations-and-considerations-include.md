@@ -11,11 +11,11 @@ The Power Query Dataverse connector inside Excel doesn't currently support sover
 
 ### Dataverse performance and throttling limits
 
-For information about performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Dataverse connector and the [OData Feed](../../odata-feed.md) connector when accessing the same endpoint.
+For information about performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Dataverse connector and the [OData Feed](/power-query/connectors/odata-feed) connector when accessing the same endpoint.
 
 ### Table retrieval rate
 
-As a guideline, most default tables are retrieved at a rate of approximately 500 rows per second using the Dataverse connector. Take this rate into account when deciding whether you want to connect to Dataverse or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. For more information, go to [Alternative Dataverse connections](#alternative-dataverse-connections).
+As a guideline, most default tables are retrieved at a rate of approximately 500 rows per second using the Dataverse connector. Take this rate into account when deciding whether you want to connect to Dataverse or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. For more information, go to [Alternative Dataverse connections](/power-query/connectors/dataverse#alternative-dataverse-connections).
 
 ### Alternative Dataverse connections
 
@@ -34,7 +34,7 @@ When connecting with the Dataverse connector, you might encounter an **Unable to
 
 ### Using native database queries with Dataverse
 
-You can connect to Dataverse using a custom SQL statement or a [native database query](../../../native-database-query.md). While there's no user interface for this experience, you can enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source.
+You can connect to Dataverse using a custom SQL statement or a [native database query](/power-query/native-database-query). While there's no user interface for this experience, you can enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source.
 
 ```powerquery-m
 Source = CommonDataService.Database([DATABASE URL])
@@ -62,7 +62,7 @@ Misspelling a column name might result in an error message about query folding i
 
 Queries on Dataverse tables can return large amounts of data. If you're using the Power Query Dataverse connector, any specific query that accesses the model has a fixed five (5) minute timeout irrespective of the size of the data. For more information, go to [limitations](/power-apps/developer/data-platform/dataverse-sql-query#limitations). So you might need to query the data multiple times to access all of the data in the model. Using multiple queries can take a considerable amount of time to return all the data.
 
-If you're using the [Common Data Service (Legacy)](../../common-data-service-legacy.md) connector, you can use a single query to access all of the data. This connector works differently and returns the result in "pages" of 5-K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
+If you're using the [Common Data Service (Legacy)](/power-query/connectors/common-data-service-legacy) connector, you can use a single query to access all of the data. This connector works differently and returns the result in "pages" of 5-K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
 
 Instead of using these connectors to access large amounts of Dataverse data, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large models. Using Azure Synapse Link is even more efficient than either the Power Query Dataverse or Common Data Service (Legacy) connectors, and is specifically designed around data integration scenarios.
 
@@ -73,7 +73,7 @@ Preview errors can occur due to a known limitation when the **Navigation Propert
 You could see a message like this one, for example:
 `Preview.Error: The type of the current preview value is too complex to display.`
 
-To resolve this issue, similar to the SQL Server connector, there's an option available to disable navigation properties (relationship columns) in the Dataverse connector to improve performance. This option can be set in the [advanced options](#connect-using-advanced-options) available in Power Query Online, or it can be set using the `CreateNavigationProperties=false` parameter in the Dataverse connector function.
+To resolve this issue, similar to the SQL Server connector, there's an option available to disable navigation properties (relationship columns) in the Dataverse connector to improve performance. This option can be set in the [advanced options](/power-query/connectors/dataverse#connect-using-advanced-options) available in Power Query Online, or it can be set using the `CreateNavigationProperties=false` parameter in the Dataverse connector function.
 
 ```powerquery-m
  Source = CommonDataService.Database("{crminstance}.crm.dynamics.com",[CreateNavigationProperties=false]),

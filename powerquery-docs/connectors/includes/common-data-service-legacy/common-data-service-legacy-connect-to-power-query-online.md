@@ -7,13 +7,13 @@ ms.topic: include
 
 To connect to Common Data Service (Legacy) from Power Query Online:
 
-1. Select the **Common Data Service (Legacy)** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
+1. Select the **Common Data Service (Legacy)** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](/power-query/where-to-get-data).
 
-   :::image type="content" source="../../media/common-data-service/get-data-online.png" alt-text="Screenshot of the get data choose data source window in Power Query Online.":::
+   :::image type="content" source="/power-query/connectors/media/common-data-service/get-data-online.png" alt-text="Screenshot of the get data choose data source window in Power Query Online.":::
 
 2. Enter the server URL address of the data you want to load.
 
-   :::image type="content" source="../../media/common-data-service/enter-url-online.png" alt-text="Screenshot of the common data service connection settings page, showing an example server URL.":::
+   :::image type="content" source="/power-query/connectors/media/common-data-service/enter-url-online.png" alt-text="Screenshot of the common data service connection settings page, showing an example server URL.":::
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataverse and an on-premises SQL Server database.
 

@@ -7,11 +7,11 @@ ms.topic: include
 
 To make the connection, take the following steps:
 
-1. Select the **MySQL database** option in the connector selection. For more information, go to [Where to get data](../../../where-to-get-data.md).
+1. Select the **MySQL database** option in the connector selection. For more information, go to [Where to get data](/power-query/where-to-get-data).
 
 2. In the **MySQL database** dialog, provide the name of the server and database.  
 
-   :::image type="content" source="../../media/mysql-database/service-signin.png" alt-text="Screenshot of the Connection settings dialog with server and database sample entries filled in.":::
+   :::image type="content" source="/power-query/connectors/media/mysql-database/service-signin.png" alt-text="Screenshot of the Connection settings dialog with server and database sample entries filled in.":::
 
 3. If the MySQL server isn't accessible from the cloud, include the name of your on-premises data gateway (personal mode isn't supported).
 

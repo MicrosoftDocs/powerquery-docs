@@ -6,7 +6,7 @@ ms.topic: include
 ---
 
 > [!NOTE]
-> Since May 2025 version of on-premises data gateway, you need to [install the Vertica ODBC driver](#use-vertica-odbc-driver) on your gateway machine to use the Vertica database connector.
+> Since May 2025 version of on-premises data gateway, you need to [install the Vertica ODBC driver](/power-query/connectors/vertica-database#use-vertica-odbc-driver) on your gateway machine to use the Vertica database connector.
 
 To connect to an **Vertica** database, take the following steps:
 
@@ -14,7 +14,7 @@ To connect to an **Vertica** database, take the following steps:
 
 2. In **Connect to data source**, provide the name of the server.
 
-   :::image type="content" source="../../media/Vertica-database/service-signin.png" alt-text="Screenshot of the connect to data source page for the Vertica database online connection.":::
+   :::image type="content" source="/power-query/connectors/media/Vertica-database/service-signin.png" alt-text="Screenshot of the connect to data source page for the Vertica database online connection.":::
 
 3. Select the name of your on-premises data gateway.
 

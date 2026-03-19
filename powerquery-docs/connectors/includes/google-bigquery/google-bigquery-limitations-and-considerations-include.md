@@ -37,7 +37,7 @@ To optimize performance considerations, Google BigQuery does well with large dat
 
 The Google BigQuery connector supports nested fields, which are loaded as text columns in JSON format.
 
-:::image type="content" source="../../media/google-bigquery/google-bigquery-nested-fields.png" alt-text="Screenshot of the Navigator showing Google BigQuery nested fields support." lightbox="../../media/google-bigquery/google-bigquery-nested-fields.png":::
+:::image type="content" source="/power-query/connectors/media/google-bigquery/google-bigquery-nested-fields.png" alt-text="Screenshot of the Navigator showing Google BigQuery nested fields support." lightbox="../../media/google-bigquery/google-bigquery-nested-fields.png":::
 
 Users should select **Transform Data** and then use the JSON parsing capabilities in the Power Query editor to extract the data.
 
@@ -59,7 +59,7 @@ When you authenticate through a Google service account in Power BI service or Po
 
 ### Unable to authenticate with Google BigQuery Storage API
 
-The Google BigQuery connector uses [Google BigQuery Storage API](https://cloud.google.com/bigquery/docs/reference/storage) by default. This feature is controlled by the advanced option called [UseStorageApi](#connect-using-advanced-options). You might encounter issues with this feature if you use granular permissions. In this scenario, you might see the following error message or fail to get any data from your query:
+The Google BigQuery connector uses [Google BigQuery Storage API](https://cloud.google.com/bigquery/docs/reference/storage) by default. This feature is controlled by the advanced option called [UseStorageApi](/power-query/connectors/google-bigquery#connect-using-advanced-options). You might encounter issues with this feature if you use granular permissions. In this scenario, you might see the following error message or fail to get any data from your query:
 
 `ERROR [HY000] [Microsoft][BigQuery] (131) Unable to authenticate with Google BigQuery Storage API. Check your account permissions`
 
