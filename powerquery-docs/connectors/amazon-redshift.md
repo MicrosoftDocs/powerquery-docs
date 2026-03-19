@@ -22,6 +22,9 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 >Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+> [!NOTE]
+> The Redshift connector implementation 2.0 is available in Desktop since March 2026. Learn more about [this feature](#redshift-connector-implementation-20).
+
 ## Prerequisites
 
 [!INCLUDE [Includes_amazon-redshift_prerequisites](includes/amazon-redshift/amazon-redshift-prerequisites.md)]
@@ -121,3 +124,50 @@ Once you enable Microsoft Entra ID SSO for all data sources, then enable Microso
    Also select **Use SSO via Azure AD for DirectQuery queries**.
 
    :::image type="content" source="./media/amazon-redshift/gateway-settings.png" alt-text="Screenshot of the Data Source Settings tab with the Provider Name and Use SSO via Azure AD for DirectQuery queries advanced settings emphasized.":::
+
+## Redshift connector implementation 2.0
+
+In March 2026, we introduced a new implementation for the Amazon Redshift connector to enhance the integration with Redshift. This connector is available as a preview in Desktop.
+
+The Redshift connector implementation 2.0 is built using the open-source [Amazon Redshift 2.x](https://github.com/aws/amazon-redshift-odbc-driver/) driver.  To enable this in Desktop, go to File > Options and settings > Options > Preview features
+Enable the *Use new Amazon Redshift connector implementation* feature:
+ 
+   :::image type="content" source="./media/amazon-redshift/enable-2x-preview-desktop.png" alt-text="Screenshot of the preview option dialog with Use new Amazon Redshift connector implementation checked.":::
+
+This will add the [Implementation=”2.0”] option to your connection, which tells Power BI to use the new driver.
+
+```powerquery-m
+let
+    Source = AmazonRedshift.Database("my.redshift.amazonaws.com","dev",[Implementation="2.0"]),
+    northwind = Source{[Name="northwind"]}[Data],
+    orders1 = northwind{[Name="orders"]}[Data]
+in
+    orders1
+```
+
+This will only be added for new Redshift connections after you enable the option in Desktop. You can add this option to any existing connection by adding the [Implementation="2.0"]) option as well.
+
+Using this new Implementation option enables users to trial and preview the Redshift V2 driver. All connections will be automatically migrated to the V2 driver in a future iteration.
+You can also see which version of the Redshift driver you are using in your Mashup logs:
+
+```json
+{
+   "Start":"2026-02-16T23:20:18.7947784Z",
+   "Action":"Engine/Module/AmazonRedshift/IO/AmazonRedshift/Version",
+   "ResourceKind":"AmazonRedshift",
+   "ResourcePath":"my.redshift.amazonaws.com;dev",
+   "HostProcessId":"36784",
+   "PartitionKey":"Section1/orders/orders1",
+   "Implementation":"2.0",
+   "DriverName":"Amazon Redshift ODBC Driver",
+   "UseV2Features":"True",
+   "ProductVersion":"2.153.0.0 (Main)+fdaf4307c2163bd9933182691631ca4d966ba1ac",
+   "ActivityId":"26731f64-bb59-4e1e-ac6d-394dd9e6a5ff",
+   "Process":"Microsoft.Mashup.Container.NetFX45",
+   "Pid":37024,
+   "Tid":1,
+   "Duration":"00:00:00.0000192"
+}
+```
+
+This will continue to roll out to all services where the connector is used and we will update this document as those products come online.
