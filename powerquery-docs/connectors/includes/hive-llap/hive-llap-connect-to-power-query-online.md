@@ -9,7 +9,7 @@ To connect to the Apache Hive LLAP server:
 
 1. Select the **Hive LLAP** option in the **Power Query - Choose data source** page.
 
-   :::image type="content" source="../../media/hive-llap/connect-online.png" alt-text="Screenshot of the connect to data source page with all of the selections not yet filled in.":::
+   :::image type="content" source="/power-query/connectors/media/hive-llap/connect-online.png" alt-text="Screenshot of the connect to data source page with all of the selections not yet filled in.":::
 
 2. Enter the **URL** to the Adobe Hive LLAP server. You can also enter an optional port number. Typically, the URL looks like `http://[hostname]:[port number]`. The components of the URL are:
 

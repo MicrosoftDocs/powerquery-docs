@@ -22,11 +22,11 @@ To make the connection, take the following steps:
 
 6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
 
-   :::image type="content" source="../../media/ibm-db2/sign-in-online.png" alt-text="Screenshot of the IBM Db2 database online connection settings with the required settings entered.":::
+   :::image type="content" source="/power-query/connectors/media/ibm-db2/sign-in-online.png" alt-text="Screenshot of the IBM Db2 database online connection settings with the required settings entered.":::
 
 7. Select **Next** to continue.
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
 
-   :::image type="content" source="../../media/ibm-db2/navigator-online.png" alt-text="Screenshot of the online navigator where you select the data you want to transform." lightbox="../../media/ibm-db2/navigator-online.png":::
+   :::image type="content" source="/power-query/connectors/media/ibm-db2/navigator-online.png" alt-text="Screenshot of the online navigator where you select the data you want to transform." lightbox="../../media/ibm-db2/navigator-online.png":::
 

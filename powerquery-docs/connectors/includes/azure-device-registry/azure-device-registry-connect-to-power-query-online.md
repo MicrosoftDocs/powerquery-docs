@@ -7,10 +7,10 @@ ms.topic: include
 
 To connect to Azure Device Registry from Power Query Online:
 
-1. In **Choose data source**, select Azure or search for **Azure Device Registry**, and then select **Azure Device Registry**. For more information, see [Where to get data in Power Query](../../../where-to-get-data.md).
+1. In **Choose data source**, select Azure or search for **Azure Device Registry**, and then select **Azure Device Registry**. For more information, see [Where to get data in Power Query](/power-query/where-to-get-data).
 1. In **Connect to data source**, select a scope and fill in any optional or advanced fields.
 
-   :::image type="content" source="../../media/azure-device-registry/enter-information-online.png" alt-text="Screenshot of Azure Device Registry dialog in Power Query Online." lightbox="../../media/azure-device-registry/enter-information-online.png":::
+   :::image type="content" source="/power-query/connectors/media/azure-device-registry/enter-information-online.png" alt-text="Screenshot of Azure Device Registry dialog in Power Query Online." lightbox="../../media/azure-device-registry/enter-information-online.png":::
 
     > [!NOTE]
     > You can scope your data to either tenant or subscription level. If neither option is chosen, the connector executes at the tenant level by default.
