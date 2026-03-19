@@ -15,7 +15,7 @@ ClickHouse connector integration with Power BI cloud service requires you to ini
 
 Steps required for the integration:
 
-1. Follow all steps listed in the [Power BI Desktop usage](#connect-to-clickhouse-from-power-query-desktop).
+1. Follow all steps listed in the [Power BI Desktop usage](/power-query/connectors/clickhouse#connect-to-clickhouse-from-power-query-desktop).
 2. Install the data gateway. Detailed instructions can be found in [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
 3. Follow [this Microsoft example on how to configure your Power BI service to work with the Gateway](/power-bi/connect-data/service-gateway-sql-tutorial#connect-the-dataset-to-the-sql-server-database).
 

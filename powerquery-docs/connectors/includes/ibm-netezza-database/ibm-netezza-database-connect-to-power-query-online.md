@@ -11,7 +11,7 @@ To connect to an **IBM Netezza** database, take the following steps:
 
 2. In **Connect to data source**, provide the name of the server and database.
 
-   :::image type="content" source="../../media/ibm-netezza-database/service-signin.png" alt-text="Screenshot of the connect to data source page for the Netezza database online connection.":::
+   :::image type="content" source="/power-query/connectors/media/ibm-netezza-database/service-signin.png" alt-text="Screenshot of the connect to data source page for the Netezza database online connection.":::
 
 3. Select the name of your on-premises data gateway.
 

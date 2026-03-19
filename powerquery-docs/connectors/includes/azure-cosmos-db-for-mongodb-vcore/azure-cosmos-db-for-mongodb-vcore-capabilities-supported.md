@@ -7,6 +7,6 @@ ms.topic: include
 
 - Import Mode
 - Direct Query Mode (Power BI semantic models)
-  - [Supported Power Query Functions](#direct-query-support)
-- [Native Mongo Queries](#native-mongo-queries)
+  - [Supported Power Query Functions](/power-query/connectors/azure-cosmos-db-for-mongodb-vcore#direct-query-support)
+- [Native Mongo Queries](/power-query/connectors/azure-cosmos-db-for-mongodb-vcore#native-mongo-queries)
 

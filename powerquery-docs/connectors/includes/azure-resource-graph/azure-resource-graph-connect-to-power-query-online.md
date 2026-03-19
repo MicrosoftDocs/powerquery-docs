@@ -8,7 +8,7 @@ ms.topic: include
 
 To connect to Azure Resource Graph from Power Query Online:
 
-1. In **Choose data source**, select Azure or search for **Azure Resource Graph**, and then select **Azure Resource Graph**. More information: [Where to get data](../../../where-to-get-data.md)
+1. In **Choose data source**, select Azure or search for **Azure Resource Graph**, and then select **Azure Resource Graph**. More information: [Where to get data](/power-query/where-to-get-data)
 
 2. In **Connect to data source**, fill in the query and any optional fields, such as **Scope**.
 

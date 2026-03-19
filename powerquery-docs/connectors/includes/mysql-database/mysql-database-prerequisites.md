@@ -11,7 +11,7 @@ You need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downl
 
 If the package is installed correctly, the MySQL Data Provider is displayed in the resulting dialog. For example:
 
-:::image type="content" source="../../media/mysql-database/data-provider.png" alt-text="Screenshot of the data provider dialog with the MySQL data provider emphasized." lightbox="../../media/mysql-database/data-provider.png":::
+:::image type="content" source="/power-query/connectors/media/mysql-database/data-provider.png" alt-text="Screenshot of the data provider dialog with the MySQL data provider emphasized." lightbox="../../media/mysql-database/data-provider.png":::
 
 If the package doesn't install correctly, work with your MySQL support team or reach out to MySQL.
 

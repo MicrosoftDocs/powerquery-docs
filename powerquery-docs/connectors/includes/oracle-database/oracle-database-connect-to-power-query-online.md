@@ -13,7 +13,7 @@ To make the connection, take the following steps:
 
 3. In the **Oracle database** dialog that appears, specify the Oracle net service name/TNS alias, Easy Connect Plus connection string, or connect descriptor to connect to in **Server**.
 
-   :::image type="content" source="../../media/oracle-database/select-database-online.png" alt-text="Screenshot of the Oracle database window where you enter your Oracle database online connection information.":::
+   :::image type="content" source="/power-query/connectors/media/oracle-database/select-database-online.png" alt-text="Screenshot of the Oracle database window where you enter your Oracle database online connection information.":::
 
 4. Provide a **Connection name**, such as "testoracleserver".
 
