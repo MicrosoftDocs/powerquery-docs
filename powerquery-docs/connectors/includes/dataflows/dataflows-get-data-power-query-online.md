@@ -8,13 +8,13 @@ ms.topic: include
 
 To get data from Dataflows in Power Query Online:
 
-1. Select the **Dataflows** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../../../where-to-get-data.md).
+1. Select the **Dataflows** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](/power-query/where-to-get-data).
 
-   :::image type="content" source="../../media/dataflows/pqo-select-datasource.png" alt-text="Get data from Power Query Online.":::
+   :::image type="content" source="/power-query/connectors/media/dataflows/pqo-select-datasource.png" alt-text="Get data from Power Query Online.":::
 
 2. Adjust the connection name.
 
-   :::image type="content" source="../../media/dataflows/pqo-sign-in.png" alt-text="Enter the server URL.":::
+   :::image type="content" source="/power-query/connectors/media/dataflows/pqo-sign-in.png" alt-text="Enter the server URL.":::
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataflows and an on-premises SQL Server database.
 

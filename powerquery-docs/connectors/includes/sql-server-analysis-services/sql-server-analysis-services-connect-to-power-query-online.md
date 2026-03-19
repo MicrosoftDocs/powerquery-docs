@@ -7,11 +7,11 @@ ms.topic: include
 
 To make the connection, take the following steps:
 
-1. Select the **SQL Server Analysis Services database** option in the connector selection. More information: [Where to get data](../../../where-to-get-data.md)
+1. Select the **SQL Server Analysis Services database** option in the connector selection. More information: [Where to get data](/power-query/where-to-get-data)
 
 2. In the **Connect to data source** page, provide the name of the server and database (optional).
 
-   :::image type="content" source="../../media/sql-server-analysis-services/connection-settings-credentials.png" alt-text="Screenshot of SQL Server Analysis Services database connection builder in Power Query Online.":::
+   :::image type="content" source="/power-query/connectors/media/sql-server-analysis-services/connection-settings-credentials.png" alt-text="Screenshot of SQL Server Analysis Services database connection builder in Power Query Online.":::
 
 3. If needed, select an on-premises data gateway.
 
@@ -21,5 +21,5 @@ To make the connection, take the following steps:
 
 6. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   :::image type="content" source="../../media/sql-server-analysis-services/navigator-online.png" alt-text="Screenshot of Power Query Online Navigator showing some Financial Perspective data.":::
+   :::image type="content" source="/power-query/connectors/media/sql-server-analysis-services/navigator-online.png" alt-text="Screenshot of Power Query Online Navigator showing some Financial Perspective data.":::
 

@@ -7,11 +7,11 @@ ms.topic: include
 
 To connect to Salesforce Reports data:
 
-1. Select **Salesforce reports** from the product-specific data connector list, and then select **Connect**. For more information, go to [Where to get data](../../../where-to-get-data.md).
+1. Select **Salesforce reports** from the product-specific data connector list, and then select **Connect**. For more information, go to [Where to get data](/power-query/where-to-get-data).
 
 2. In **Salesforce reports**, choose the URL you want to use to connect. Select the **Production** URL if you use the Salesforce production URL (`https://www.salesforce.com`) to sign in.
 
-   :::image type="content" source="../../media/salesforce-reports/sf-reports-url-online.png" alt-text="Screenshot of the Connect to data source window where you add Salesforce Reports connection information.":::
+   :::image type="content" source="/power-query/connectors/media/salesforce-reports/sf-reports-url-online.png" alt-text="Screenshot of the Connect to data source window where you add Salesforce Reports connection information.":::
 
    > [!NOTE]
    >Currently, you might need to select the **Custom** URL, enter **`https://www.salesforce.com`** in the text box, and then select **Production** to connect to your data.

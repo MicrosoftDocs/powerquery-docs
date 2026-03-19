@@ -11,5 +11,5 @@ The PostgreSQL connector is supported for cloud connection and via virtual netwo
 
 For Power BI Desktop versions released before December 2019 and on-premises data gateway released before June 2025, you must install the Npgsql provider on your local machine to use the PostgreSQL connector. To install the Npgsql provider, go to the [releases page](https://github.com/npgsql/npgsql/releases/tag/v4.0.17) for version 4.0.17, download, and run the .msi file. The provider architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector. When installing, make sure that you select Npgsql GAC Installation to ensure Npgsql itself is added to your machine. Npgsql 4.1 and up aren't supported due to .NET version incompatibilities.
 
-:::image type="content" source="../../media/postgresql/postgres-1.png" alt-text="Screenshot of the Npgsql installer with GAC Installation selected.":::
+:::image type="content" source="/power-query/connectors/media/postgresql/postgres-1.png" alt-text="Screenshot of the Npgsql installer with GAC Installation selected.":::
 

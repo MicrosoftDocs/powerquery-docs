@@ -9,9 +9,9 @@ To connect to a SharePoint folder:
 
 1. From the **Data sources** page, select **SharePoint folder**.
 
-1. If you have access to the [SharePoint site picker](#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, [copy the SharePoint site URL](#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint Folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`.
+1. If you have access to the [SharePoint site picker](/power-query/connectors/sharepoint-folder#sharepoint-site-picker), use it to locate and select the sites directly on the connection settings page. If not, [copy the SharePoint site URL](/power-query/connectors/sharepoint-folder#determine-the-site-url) and paste it into the **Site URL** text box in the **SharePoint Folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`.
 
-   :::image type="content" source="../../media/sharepoint-folder/online-signin.png" alt-text="Screenshot of the online folder selection and sign in.":::
+   :::image type="content" source="/power-query/connectors/media/sharepoint-folder/online-signin.png" alt-text="Screenshot of the online folder selection and sign in.":::
 
 1. If the SharePoint folder is on-premises, enter the name of an on-premises data gateway.
 
@@ -21,7 +21,7 @@ To connect to a SharePoint folder:
 
 1. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
-   :::image type="content" source="../../media/sharepoint-folder/folder-info-online.png" alt-text="Screenshot of the online Navigator showing the folder information." lightbox="../../media/sharepoint-folder/folder-info-online.png":::
+   :::image type="content" source="/power-query/connectors/media/sharepoint-folder/folder-info-online.png" alt-text="Screenshot of the online Navigator showing the folder information." lightbox="../../media/sharepoint-folder/folder-info-online.png":::
 
 1. Select **Combine** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query editor for editing.
 

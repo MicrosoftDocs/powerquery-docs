@@ -11,7 +11,7 @@ To connect to an **Impala** database, take the following steps:
 
 2. In **Connect to data source**, provide the name of the server and a port number if necessary.
 
-   :::image type="content" source="../../media/impala-database/service-signin.png" alt-text="Screenshot of the Connect to data source dialog where you enter the Impala database online connection.":::
+   :::image type="content" source="/power-query/connectors/media/impala-database/service-signin.png" alt-text="Screenshot of the Connect to data source dialog where you enter the Impala database online connection.":::
 
 3. If necessary, select the name of your on-premises data gateway.
 

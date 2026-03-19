@@ -21,6 +21,6 @@ If a credential error occurs in the Navigator, clear your recent data source set
 
 1. In Power BI Desktop, select **File** > **Data source settings**.
 
-   :::image type="content" source="../../media/automy-data-analytics/datasource-ada-clear.png" alt-text="Select Automy sources.":::
+   :::image type="content" source="/power-query/connectors/media/automy-data-analytics/datasource-ada-clear.png" alt-text="Select Automy sources.":::
 
 2. Select the data source, and then select **Clear permissions**. Establish the connection to the navigation again.

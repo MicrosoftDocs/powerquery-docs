@@ -11,7 +11,7 @@ To connect to SAP HANA data from Power Query Online:
 
 2. Enter the name and port of the SAP HANA server you want to connect to. The example in the following figure uses `SAPHANATestServer` on port `30015`.
 
-3. Optionally, enter a SQL statement from **Advanced options**. For more information, go to [Connect using advanced options](#connect-using-advanced-options).
+3. Optionally, enter a SQL statement from **Advanced options**. For more information, go to [Connect using advanced options](/power-query/connectors/sap-hana/overview#connect-using-advanced-options).
 
 4. Select the name of the on-premises data gateway to use for accessing the database.
 
@@ -23,9 +23,9 @@ To connect to SAP HANA data from Power Query Online:
    > [!NOTE]
    > Currently, Power Query Online only supports Basic authentication.
 
-6. Select **Use Encrypted Connection** if you're using any encrypted connection, then choose the SSL crypto provider. If you're not using an encrypted connection, clear **Use Encrypted Connection**. More information: [Enable encryption for SAP HANA](../../sap-hana/sap-hana-encryption.md)
+6. Select **Use Encrypted Connection** if you're using any encrypted connection, then choose the SSL crypto provider. If you're not using an encrypted connection, clear **Use Encrypted Connection**. More information: [Enable encryption for SAP HANA](/power-query/connectors/sap-hana/sap-hana-encryption)
 
-   :::image type="content" source="../../sap-hana/sap-hana-online-signin.png" alt-text="Screenshot of the SAP HANA database online sign-in.":::
+   :::image type="content" source="/power-query/connectors/sap-hana/sap-hana-online-signin.png" alt-text="Screenshot of the SAP HANA database online sign-in.":::
 
 7. Select **Next** to continue.
 

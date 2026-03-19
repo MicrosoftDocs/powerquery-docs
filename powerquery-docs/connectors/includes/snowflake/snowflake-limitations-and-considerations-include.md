@@ -7,7 +7,7 @@ ms.topic: include
 
 ### Known issues in Snowflake connector implementation 2.0
 
-Currently, the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) has the following known issues. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
+Currently, the [Snowflake connector implementation 2.0](/power-query/connectors/snowflake#snowflake-connector-implementation-20) has the following known issues. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
 
 - Snowflake query with `count distinct` logic returns incorrect result.
 - When creating relationships, encounter error `Object reference not set to an instance of an object`. The relationship can still be defined once you cancel the pop-up window.
@@ -25,12 +25,12 @@ The slicer visual for the Boolean data type isn't functioning as expected in the
 
 #### Views not visible with Implementation="2.0"
 
-In some version of the March 2025 release of Power BI Desktop, you might encounter an issue that views aren't visible when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). This issue is fixed since the latest March 2025 release of Power BI Desktop. To try again, upgrade your installation.
+In some version of the March 2025 release of Power BI Desktop, you might encounter an issue that views aren't visible when using the [Snowflake connector implementation 2.0](/power-query/connectors/snowflake#snowflake-connector-implementation-20) (`Implementation="2.0"`). This issue is fixed since the latest March 2025 release of Power BI Desktop. To try again, upgrade your installation.
 
 #### TIMESTAMP_NTZ values are UTC with Implementation="2.0"
 
-TIMESTAMP_LTZ types aren't being converted to the local time zone but are returning the UTC value when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. This issue is addressed in the July 2025 release.
+TIMESTAMP_LTZ types aren't being converted to the local time zone but are returning the UTC value when using the [Snowflake connector implementation 2.0](/power-query/connectors/snowflake#snowflake-connector-implementation-20) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. This issue is addressed in the July 2025 release.
 
 #### Index was outside the bounds of the array when using Implementation="2.0"
 
-In some scenarios, an error is thrown indicating the `Index was outside the bounds of the array` when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). This issue is addressed in the June 2025 release.
+In some scenarios, an error is thrown indicating the `Index was outside the bounds of the array` when using the [Snowflake connector implementation 2.0](/power-query/connectors/snowflake#snowflake-connector-implementation-20) (`Implementation="2.0"`). This issue is addressed in the June 2025 release.
