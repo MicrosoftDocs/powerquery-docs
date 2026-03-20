@@ -13,16 +13,16 @@ To get data in Data Factory:
 
 1. From your Data Factory workspace, select **New** > **Dataflow Gen2** to create a new dataflow.
 
-   :::image type="content" source="../media/where-to-get-data/select-open-dataflow.png" alt-text="Screenshot showing the workspace where you choose to create a new dataflow." lightbox="../media/where-to-get-data/select-open-dataflow.png":::
+   :::image type="content" source="/power-query/media/where-to-get-data/select-open-dataflow.png" alt-text="Screenshot showing the workspace where you choose to create a new dataflow." lightbox="/power-query/media/where-to-get-data/select-open-dataflow.png":::
 
 1. In Power Query, either select **Get data** in the ribbon or select **Get data from another source** in the current view.
 
-   :::image type="content" source="../media/where-to-get-data/get-data.png" alt-text="Screenshot showing the Power Query workspace with the Get data option emphasized." lightbox="../media/where-to-get-data/get-data.png":::
+   :::image type="content" source="/power-query/media/where-to-get-data/get-data.png" alt-text="Screenshot showing the Power Query workspace with the Get data option emphasized." lightbox="/power-query/media/where-to-get-data/get-data.png":::
 
 1. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
 
-   :::image type="content" source="../media/where-to-get-data/data-factory-search-view-more.png" alt-text="Screenshot of the Data Factory Choose data source page with the search box and the view more selection emphasized." lightbox="../media/where-to-get-data/data-factory-search-view-more.png":::
+   :::image type="content" source="/power-query/media/where-to-get-data/data-factory-search-view-more.png" alt-text="Screenshot of the Data Factory Choose data source page with the search box and the view more selection emphasized." lightbox="/power-query/media/where-to-get-data/data-factory-search-view-more.png":::
 
 1. If you choose to view more connectors, you can still use **Search** to search for the name of the connector, or choose a category to see a list of connectors associated with that category.
 
-   :::image type="content" source="../media/where-to-get-data/data-factory-view-more.png" alt-text="Screenshot of the Data Factory Choose data source page displayed after selecting view more, with the list of connectors." lightbox="../media/where-to-get-data/data-factory-view-more.png":::
+   :::image type="content" source="/power-query/media/where-to-get-data/data-factory-view-more.png" alt-text="Screenshot of the Data Factory Choose data source page displayed after selecting view more, with the list of connectors." lightbox="/power-query/media/where-to-get-data/data-factory-view-more.png":::
