@@ -42,7 +42,7 @@ As of December of 2020, Power BI Desktop uses [Microsoft Edge WebView2](https://
 * Salesforce Objects
 * Smartsheet
 * Twilio
-* Zendesk
+* Zendesk Data (Beta)
 
 On your Power BI Desktop machine, you can get WebView2 control either by installing the new Edge (Chromium) browser (at least beta) from [https://www.microsoftedgeinsider.com/download](https://www.microsoftedgeinsider.com/download), or by installing the [WebView2 redist package](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
 

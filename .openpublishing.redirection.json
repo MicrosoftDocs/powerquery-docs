@@ -46,6 +46,11 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerquery-docs/connectors/zendesk.md",
+      "redirect_url": "/power-query/connectors/zendesk-data",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerquery-docs/connectors/workforce-dimensions.md",
       "redirect_url": "/power-query/connectors/connector-end-of-support",
       "redirect_document_id": "false"

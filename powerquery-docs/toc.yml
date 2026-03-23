@@ -611,8 +611,6 @@ items:
         href: connectors/wolters-kluwer-cch-tagetik.md
       - name: "XML"
         href: connectors/xml.md
-      - name: "Zendesk (Beta)"
-        href: connectors/zendesk.md
       - name: "Zendesk Data (Beta)"
         href: connectors/zendesk-data.md
       - name: "Connector end of support"

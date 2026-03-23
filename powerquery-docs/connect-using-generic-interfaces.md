@@ -11,7 +11,7 @@ ms.custom: sfi-image-nochange
 
 # Connect to data using generic interfaces
 
-You can connect to a multitude of different data sources using built-in connectors that range from Access databases to Zendesk resources. You can also connect to all sorts of *other* data sources to further expand your connectivity options, by using the generic interfaces (such as ODBC or REST APIs) built into Power Query Desktop and Power Query Online.
+You can connect to a multitude of different data sources using built-in connectors that range from Access databases to Zendesk Data (Beta) resources. You can also connect to all sorts of *other* data sources to further expand your connectivity options, by using the generic interfaces (such as ODBC or REST APIs) built into Power Query Desktop and Power Query Online.
 
 :::image type="content" source="media/connect-using-generic-interfaces/get-generic-data-1.png" alt-text="Screenshot of the Power Query Desktop Get Data dialog, showing the O D B C selection.":::
 
