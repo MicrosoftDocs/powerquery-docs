@@ -26,6 +26,9 @@ ms.custom: sfi-image-nochange
 
 [!INCLUDE [Includes_singlestore_capabilities-supported](includes/singlestore-capabilities-supported.md)]
 
+> [!NOTE]
+> Existing reports created using the `SingleStoreODBC.Query` (CustomSQL functionality) function call continue to be supported. SingleStore recommends using native database queries for new reports.
+
 ## Connect to SingleStore
 
 To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
@@ -36,9 +39,12 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
 
     :::image type="content" source="./media/singlestore/ss-get-data-connector.png" alt-text="Locate the SingleStore Connectors in Get Data dialog.":::
 
-3. In the **SingleStore database** dialog box, enter the IP address or hostname of the SingleStore cluster in **Server**. In **Database**, enter the database name.
+3. In the connection configuration dialog, enter or select the following:
 
-    Under **Data Connectivity** mode, select the Import or DirectQuery mode, and then select **OK**.
+   * **Server**: Enter the IP address or the hostname of the SingleStore cluster.
+   * **Database**: Enter the name of the SingleStore database to connect with.
+   * **Data Connectivity mode**: Select **Import** or **DirectQuery**.
+   * (Optional) To ingest data using a native database query, enter the SQL query in the **Native query** box.
 
     :::image type="content" source="./media/singlestore/ss-db-select-mode.png" alt-text="Enter server IP / hostname and database and select the connectivity mode.":::
 
@@ -47,10 +53,10 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
     > [!NOTE]
     > SingleStoreDB Cloud users can only use **Basic** authentication.
 
-    * For **Windows** authentication, [set up a SingleStore server for Kerberos authentication](https://docs.singlestore.com/db/v7.3/en/security/authentication/kerberos-authentication.html). Then select the **Connect** button.
+    * For **Windows** authentication, [set up a SingleStore server for Kerberos authentication](https://docs.singlestore.com/db/v9.0/security/authentication/kerberos-authentication.html). Then select the **Connect** button.
 
        > [!NOTE]
-       > You need to run Power BI with the user account that maps to the SingleStore DB user.
+       > You need to run Power BI with the user account that maps to the SingleStore user. Therefore, if the Windows user is 'administrator'@domain, then the database user must be 'administrator'. You may need to create the database user.
 
        :::image type="content" source="./media/singlestore/ss-db-windows.png" alt-text="Select Windows authentication.":::
 
@@ -64,31 +70,13 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
 
 You can now use Power BI to explore SingleStore data.
 
-## Create a custom SQL report
+## Limitations of Native Database Queries
 
-> [!NOTE]
-> Any user that creates a custom SQL report must only have read-only access to the SingleStore databases.
+* To create a custom SQL report using the connector, the user must only have read-only access to the SingleStore databases.
+* DDL queries are not supported.
+* If the SQL query is specified outside the connector dialog (the connection configuration step), Power BI may prompt you to approve the query for your credentials.
 
-To create a new custom SQL report:
-
-1. Open Power BI Desktop.
-
-2. In the **Home** ribbon, from the **Get Data** list, select **Blank query**.
-
-3. In the **Power Query Editor** dialog, specify the query in the following format:
-
-    SingleStoreODBC.Query("\<_ip_address_or_hostname_>", "\<_database_>", "\<_query_>")
-
-    Submit the query.
-
-    > [!NOTE]
-    > If you're using the server for the first time, select **Edit Credentials** and enter the credentials. Go to **Step 4** in [Connect to SingleStore](#connect-to-singlestore) for more information.
-
-4. Verify the data to load, and select **Close & Apply**.
-
-5. If you've worked with the data set before and it's cached in memory, refresh the report to reset the local cache. On the **Home** ribbon, select **Refresh**.
-
-To update the existing custom SQL reports, select the **Refresh** button on the **Home** ribbon.
+Refer to [Limitations and issues](https://learn.microsoft.com/en-us/power-query/native-database-query#limitations-and-issues) for more information.
 
 ## Modify credentials
 
