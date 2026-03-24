@@ -61,7 +61,7 @@ To connect to a SharePoint folder:
 
    For more information about authentication methods and level settings, go to [Authentication in desktop apps](../connectorauthentication.md).
 
-1. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
+1. Once you have connected, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
    :::image type="content" source="./media/sharepoint-folder/folder-info.png" alt-text="Screenshot of the Navigator showing the folder information." lightbox="./media/sharepoint-folder/folder-info.png":::
 
