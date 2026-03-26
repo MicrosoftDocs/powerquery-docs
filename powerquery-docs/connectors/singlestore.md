@@ -53,7 +53,7 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
     > [!NOTE]
     > SingleStoreDB Cloud users can only use **Basic** authentication.
 
-    * For **Windows** authentication, [set up a SingleStore server for Kerberos authentication](https://docs.singlestore.com/db/v9.0/security/authentication/kerberos-authentication.html). Then select the **Connect** button.
+    * For **Windows** authentication, [set up a SingleStore server for Kerberos authentication](https://docs.singlestore.com/db/v9.0/security/authentication/kerberos-authentication). Then select the **Connect** button.
 
        > [!NOTE]
        > You need to run Power BI with the user account that maps to the SingleStore user. Therefore, if the Windows user is 'administrator'@domain, then the database user must be 'administrator'. You may need to create the database user.
@@ -72,7 +72,7 @@ You can now use Power BI to explore SingleStore data.
 
 ## Limitations of Native Database Queries
 
-* To create a custom SQL report using the connector, the user must only have read-only access to the SingleStore databases.
+* To run a native database query using the connector, the user must only have read-only access to the SingleStore databases.
 * DDL queries are not supported.
 * If the SQL query is specified outside the connector dialog (the connection configuration step), Power BI may prompt you to approve the query for your credentials.
 
