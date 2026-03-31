@@ -72,6 +72,9 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
 You can use the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver for the Azure Databricks connector in Power BI. As we continue to enhance and add new capabilities to this connector, we recommend that you to upgrade to the latest version to try it out and [submit product feedback](/azure/databricks/resources/ideas).
 
+> [!NOTE]
+> Since February 2026, new connections created in Power BI Desktop or Power BI Service will automatically use the [Arrow Database Connectivity (ADBC) driver by default](/azure/databricks/release-notes/whats-coming#adbc-will-become-the-default-driver-for-new-power-bi-connections). Existing connections will continue to use ODBC unless you [manually update them to ADBC](/azure/databricks/partners/bi/power-bi-adbc#adbc).
+
 To switch to the ADBC driver:
 
 1. Open your desired dashboard in Power BI.
