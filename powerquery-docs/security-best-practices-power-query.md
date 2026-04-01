@@ -68,7 +68,7 @@ Implementing comprehensive logging and monitoring helps detect suspicious activi
 
 - **Track data source connections**: Monitor which data sources are being accessed, how frequently, and by which users to identify unusual access patterns that might indicate security issues. For more information, go to [Performance monitoring](/power-bi/guidance/powerbi-implementation-planning-auditing-monitoring-overview#value-of-auditing-and-monitoring).
 
-- **Audit dataflow and datamart operations**: Track user activities for Power BI dataflows and datamarts using the Power BI activity log to maintain visibility into data transformation operations. For more information, go to [Dataflow monitoring](/power-bi/guidance/powerbi-implementation-planning-auditing-monitoring-data-level-auditing#dataflow-monitoring).
+- **Audit dataflow operations**: Track user activities for Power BI dataflows using the Power BI activity log to maintain visibility into data transformation operations. For more information, go to [Dataflow monitoring](/power-bi/guidance/powerbi-implementation-planning-auditing-monitoring-data-level-auditing#dataflow-monitoring).
 
 ## Service-specific security
 
