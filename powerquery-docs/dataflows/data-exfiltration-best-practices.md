@@ -57,7 +57,6 @@ The goal for isolating sensitive data store to selected networks is to force the
 * Power Platform dataflows
 * Azure Data Factory wrangling dataflows
 * Dataflows in Dynamics 365 (Customer Insights, Intelligent Order Management, and so on)
-* Power BI Datamart
 * Power BI Quick Import from SharePoint
 
 After application of the policy, all cloud-based execution fails with the following error: `Cloud evaluation request denied based on tenant policies. Please use a data gateway and try again.` This error effectively forces all query evaluations in the tenant to occur on gateways, without first rolling out a full network isolation solution. Note that the policy is applied to the entire tenant and not a subset of workloads. This policy means existing workloads fail immediately and require manual intervention to convert to run on gateways. Organizations applying this policy should also ensure that they have enough capacity in their gateway clusters to accommodate all their workloads.
