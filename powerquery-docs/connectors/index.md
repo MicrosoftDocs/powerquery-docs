@@ -20,7 +20,7 @@ The connectors are listed in alphabetical order in separate tables for each lett
 > The Excel column in the following table indicates all connectors that are available on at least one version of Excel. However, not all Excel versions support all of these indicated Power Query connectors. For a complete list of the Power Query connectors supported by all versions of Excel, go to [Power Query data sources in Excel versions](https://support.microsoft.com/office/power-query-data-sources-in-excel-versions-e9332067-8e49-46fc-97ff-f2e1bfa0cb16).
 
 > [!NOTE]
-> There's a known issue resulting in an `Expression.Error: The import [connector name] matches no exports` error where connectors requiring a gateway aren't working in dataflows and datamarts in Premium workspaces. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
+> There's a known issue resulting in an `Expression.Error: The import [connector name] matches no exports` error where connectors requiring a gateway aren't working in dataflows in Premium workspaces. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
 
 > [!NOTE]
 > Starting March 31, 2024, support for government cloud data sources using Organizational account will stop in non-governmental Power BI environments. To use government cloud data sources with organizational account, use the government Power BI environment.
