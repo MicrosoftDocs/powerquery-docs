@@ -14,7 +14,7 @@ To retrieve your Azure Blob Storage account key to use while authenticating your
 
 1. In the storage account menu pane, under **Security + networking**, select **Access keys**.
 
-   :::image type="content" source="/power-query/connectors/media/azure-blob-storage/access-key-location.png" alt-text="Screenshot of the example storage account in Azure, with Security + networking and Access keys emphasized." lightbox="../../media/azure-blob-storage/access-key-location.png":::
+   :::image type="content" source="/power-query/connectors/media/azure-blob-storage/access-key-location.png" alt-text="Screenshot of the example storage account in Azure, with Security + networking and Access keys emphasized." lightbox="/power-query/connectors/media/azure-blob-storage/access-key-location.png":::
 
 1. In the **key1** section, locate the **Key** value. Select **Show** next to the key value.
 

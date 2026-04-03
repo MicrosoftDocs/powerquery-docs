@@ -23,19 +23,19 @@ To connect to Dynatrace Grail DQL from Power Query Online:
 
 6. The Navigator screen shows the record types available to select from Dynatrace Grail.
 
-   :::image type="content" source="/power-query/connectors/media/dynatrace-grail-dql/connector14-white.png" alt-text="Sample screenshot of record types available in Power Query Online in Dynatrace Grail." lightbox="../../media/dynatrace-grail-dql/connector14-white.png":::
+   :::image type="content" source="/power-query/connectors/media/dynatrace-grail-dql/connector14-white.png" alt-text="Sample screenshot of record types available in Power Query Online in Dynatrace Grail." lightbox="/power-query/connectors/media/dynatrace-grail-dql/connector14-white.png":::
 
 7. Selecting one of the logs in this example runs a fetch logs DQL query with a default 1000 row limit. You require permissions on the Dynatrace environment in order to run this query successfully.
 
-   :::image type="content" source="/power-query/connectors/media/dynatrace-grail-dql/connector15-white.png" alt-text="Sample screenshot of a resultant DQL log query from Dynatrace Grail in Power Query Online." lightbox="../../media/dynatrace-grail-dql/connector15-white.png":::
+   :::image type="content" source="/power-query/connectors/media/dynatrace-grail-dql/connector15-white.png" alt-text="Sample screenshot of a resultant DQL log query from Dynatrace Grail in Power Query Online." lightbox="/power-query/connectors/media/dynatrace-grail-dql/connector15-white.png":::
 
 8. An optional step when connecting is to type in a DQL query directly. The following example fetches logs (default last 2 hours) with a limit of 50 rows.
 
-   :::image type="content" source="/power-query/connectors/media/dynatrace-grail-dql/connector16-white.png" alt-text="Screenshot of a sample DQL query that can be used in the connector in Power Query Online." lightbox="../../media/dynatrace-grail-dql/connector16-white.png":::
+   :::image type="content" source="/power-query/connectors/media/dynatrace-grail-dql/connector16-white.png" alt-text="Screenshot of a sample DQL query that can be used in the connector in Power Query Online." lightbox="/power-query/connectors/media/dynatrace-grail-dql/connector16-white.png":::
 
 9. The resulting import into Power BI looks similar to this example.
 
-   :::image type="content" source="/power-query/connectors/media/dynatrace-grail-dql/connector17-white.png" alt-text="Screenshot of a sample set of Log rows imported into Power Query Online." lightbox="../../media/dynatrace-grail-dql/connector17-white.png":::
+   :::image type="content" source="/power-query/connectors/media/dynatrace-grail-dql/connector17-white.png" alt-text="Screenshot of a sample set of Log rows imported into Power Query Online." lightbox="/power-query/connectors/media/dynatrace-grail-dql/connector17-white.png":::
 
 ### Connect using advanced options
 

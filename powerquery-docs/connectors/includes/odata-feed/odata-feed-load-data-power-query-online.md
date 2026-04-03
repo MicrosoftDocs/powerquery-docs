@@ -20,6 +20,6 @@ To load data from an OData Feed in Power Query Online:
 
 4. From the **Navigator** dialog, you can select a table, then transform the data in the Power Query editor by selecting **Transform Data**.
 
-   :::image type="content" source="/power-query/connectors/media/odata-feed/odata-navigator.png" alt-text="Screenshot of the online navigator with the alphabetical list of products selected and displayed." lightbox="../../media/odata-feed/odata-navigator.png":::
+   :::image type="content" source="/power-query/connectors/media/odata-feed/odata-navigator.png" alt-text="Screenshot of the online navigator with the alphabetical list of products selected and displayed." lightbox="/power-query/connectors/media/odata-feed/odata-navigator.png":::
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables are imported as well.

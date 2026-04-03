@@ -24,7 +24,7 @@ Follow these steps to create and save a query:
 
 5. When you are satisfied with the result, select the **Save Query** button, give your query a recognizable name, and select **Save**.
 
-    :::image type="content" source="/power-query/connectors/media/windsor/windsor-save-query.png" alt-text="Screenshot of the Save Query at Windsor Onboard." lightbox="../../media/windsor/windsor-save-query.png":::
+    :::image type="content" source="/power-query/connectors/media/windsor/windsor-save-query.png" alt-text="Screenshot of the Save Query at Windsor Onboard." lightbox="/power-query/connectors/media/windsor/windsor-save-query.png":::
 
     The queries you save here are available to you in Power BI Desktop once you sign in to the Windsor connector.
 

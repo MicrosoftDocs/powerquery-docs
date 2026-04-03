@@ -23,5 +23,5 @@ To make the connection, take the following steps:
 
 7. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   :::image type="content" source="/power-query/connectors/media/sql-server-database/navigator-online.png" alt-text="Screenshot of the Power Query Online Navigator showing the Human Resources employee data." lightbox="../../media/sql-server-database/navigator-online.png":::
+   :::image type="content" source="/power-query/connectors/media/sql-server-database/navigator-online.png" alt-text="Screenshot of the Power Query Online Navigator showing the Human Resources employee data." lightbox="/power-query/connectors/media/sql-server-database/navigator-online.png":::
 
