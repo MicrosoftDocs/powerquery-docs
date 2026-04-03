@@ -127,12 +127,13 @@ Once you enable Microsoft Entra ID SSO for all data sources, then enable Microso
 
 ## Redshift connector implementation 2.0
 
-In March 2026, we introduced a new implementation for the Amazon Redshift connector to enhance the integration with Redshift. This connector is available as a preview in Desktop.
+In March 2026, we introduced a new implementation for the Amazon Redshift connector to enhance the integration with Redshift. This connector is available as a preview in Power Query desktop.
 
-The Redshift connector implementation 2.0 is built using the open-source [Amazon Redshift 2.x](https://github.com/aws/amazon-redshift-odbc-driver/) driver.  To enable this in Desktop, go to File > Options and settings > Options > Preview features
-Enable the *Use new Amazon Redshift connector implementation* feature:
+The Redshift connector implementation 2.0 is built using the open-source [Amazon Redshift 2.x](https://github.com/aws/amazon-redshift-odbc-driver/) driver. To enable this in the desktop, go to **File** > **Options and settings** > **Options** > **Preview features**
+
+Enable the **Use new Amazon Redshift connector implementation** feature:
  
-   :::image type="content" source="./media/amazon-redshift/enable-2x-preview-desktop.png" alt-text="Screenshot of the preview option dialog with Use new Amazon Redshift connector implementation checked.":::
+:::image type="content" source="./media/amazon-redshift/enable-2x-preview-desktop.png" alt-text="Screenshot of the preview option dialog with Use new Amazon Redshift connector implementation checked.":::
 
 This will add the [Implementation=”2.0”] option to your connection, which tells Power BI to use the new driver.
 
@@ -145,9 +146,9 @@ in
     orders1
 ```
 
-This will only be added for new Redshift connections after you enable the option in Desktop. You can add this option to any existing connection by adding the [Implementation="2.0"]) option as well.
+This will only be added for new Redshift connections after you enable the option in Power Query desktop. You can add this option to any existing connection by adding the [Implementation="2.0"]) option as well.
 
-Using this new Implementation option enables users to trial and preview the Redshift V2 driver. All connections will be automatically migrated to the V2 driver in a future iteration.
+Using this new implementation option enables users to trial and preview the Redshift V2 driver. All connections will be automatically migrated to the V2 driver in a future iteration.
 You can also see which version of the Redshift driver you are using in your Mashup logs:
 
 ```json
