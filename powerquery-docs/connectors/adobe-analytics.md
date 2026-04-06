@@ -66,6 +66,10 @@ You can **Load** the selected table, which brings the entire table into Power BI
 
 :::image type="content" source="./media/adobe-analytics/button-select.png" alt-text="Load or transform data.":::
 
+## Connect to Adobe Analytics data from Power Query Online
+
+[!INCLUDE [Includes_adobe-analytics_connect-to-power-query-online](includes/adobe-analytics/adobe-analytics-connect-to-power-query-online.md)]
+
 ## Optional input parameters
 
 When you've selected the Adobe Analytics data you want to load or transform in the Power Query **Navigator** dialog box, you can also limit the amount of data by selecting a set of optional input parameters. 

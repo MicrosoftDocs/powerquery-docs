@@ -61,6 +61,10 @@ To connect to Funnel:
 
    You can then either select **Load** to load the data or select **Transform Data** to transform the data.
 
+## Connect to Funnel from Power Query Online
+
+[!INCLUDE [Includes_funnel_connect-to-power-query-online](includes/funnel/funnel-connect-to-power-query-online.md)]
+
 ## Limitations and considerations
 
 [!INCLUDE [Includes_funnel_limitations-and-considerations](includes/funnel/funnel-limitations-and-considerations-include.md)]
