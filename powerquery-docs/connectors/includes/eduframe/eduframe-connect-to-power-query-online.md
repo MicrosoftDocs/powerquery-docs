@@ -7,13 +7,12 @@ ms.topic: include
 
 To connect to Eduframe Reporting data:
 
-1. Select **Eduframe (Beta)** from the **Power Query - Choose data source** page.
+1. Select **Eduframe (Beta)** from the **Power Query Connect to data source** page.
 
-2. In the **Eduframe** dialog, enter your **Eduframe domain** (your organization name, without `.eduframe.nl`).
+1. In the **Eduframe** dialog, enter your **Eduframe domain** (your organization name, without `.eduframe.nl`).
 
-3. Select your authentication method, and either provide your credentials or sign in.
+1. Select your authentication method, and either provide your credentials or sign in.
 
+1. Once you successfully sign in, select **Next**.
 
-5. Once you successfully sign in, select **Next**.
-
-6. In the **Choose data** page, select the data you require, and then select **Transform data** to transform the data in Power Query Editor.
+1. In the **Choose data** page, select the data you require, and then select **Transform data** to transform the data in Power Query Editor.

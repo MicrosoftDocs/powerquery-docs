@@ -7,14 +7,14 @@ ms.topic: include
 
 To connect to Smartsheet data:
 
-1. Select **Smartsheet** from the **Power Query - Choose data source** page.
+1. Select **Smartsheet** from the **Power Query Connect to data source** page.
 
-2. In the **Smartsheet** dialog, select your **Region** (US or EU).
+1. In the **Smartsheet** dialog, select your **Region** (US or EU).
 
-3. Select **Sign in** to sign in with your Smartsheet account.
+1. Select **Sign in** to sign in with your Smartsheet account.
 
-4. In the Smartsheet sign-in window, enter your credentials and allow the connector to access your Smartsheet data.
+1. In the Smartsheet sign-in window, enter your credentials and allow the connector to access your Smartsheet data.
 
-5. Once you successfully sign in, select **Next**.
+1. Once you successfully sign in, select **Next**.
 
-6. In the **Choose data** page, select the sheets, folders, or workspaces you want to load, and then select **Transform data** to transform the data in Power Query Editor.
+1. In the **Choose data** page, select the sheets, folders, or workspaces you want to load, and then select **Transform data** to transform the data in Power Query Editor.

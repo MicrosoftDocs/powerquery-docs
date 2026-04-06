@@ -7,20 +7,22 @@ ms.topic: include
 
 To connect to Denodo data:
 
-1. Select **Denodo** from the **Power Query - Choose data source** page.
+1. Select **Denodo** from the **Power Query Connect to data source** page.
 
-2. In the **Denodo** dialog, enter the **DSN or Connection String** for your Denodo instance. For a connection string, you must specify the SERVER, PORT, and DATABASE parameters.
+1. In the **Denodo** dialog, enter the **DSN or Connection String** for your Denodo instance. For a connection string, you must specify the SERVER, PORT, and DATABASE parameters.
+
 1. Choose whether or not to engage debug mode.
-3. Include the name of your on-premises data gateway.
+
+1. Include the name of your on-premises data gateway.
 
    > [!NOTE]
    > An on-premises data gateway is required because the Denodo connector uses an ODBC driver that must be installed on the gateway machine.
 
-4. Select the authentication kind, and provide your credentials:
+1. Select the authentication kind, and provide your credentials:
 
    - **Basic**: Enter your Denodo username and password.
    - **Organizational account**: Sign in with your organizational account.
 
-5. Select **Next** to proceed.
+1. Select **Next** to proceed.
 
-6. In the **Choose data** page, select the views or tables you want to load, and then select **Transform data** to transform the data in Power Query Editor.
+1. In the **Choose data** page, select the views or tables you want to load, and then select **Transform data** to transform the data in Power Query Editor.
