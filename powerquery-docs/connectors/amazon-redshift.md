@@ -23,7 +23,7 @@ ms.custom: sfi-image-nochange
 >Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> The Redshift connector implementation 2.0 is available in Desktop since March 2026. Learn more about [this feature](#redshift-connector-implementation-20).
+> The Redshift connector implementation 2.0 is available in Desktop and Gateway since March 2026. Learn more about [this feature](#redshift-connector-implementation-20).
 
 ## Prerequisites
 
