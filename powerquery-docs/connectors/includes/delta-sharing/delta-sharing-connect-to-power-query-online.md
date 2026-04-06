@@ -13,7 +13,7 @@ To connect to Delta Sharing data:
 
 3. Select the authentication kind:
 
-   - **Key**: Enter the bearer token from your credentials file.
+   - **Authentication**: Enter the bearer token from your credentials file.
    - **OAuth (OIDC)**: Sign in with your organizational identity provider to use OpenID Connect authentication.
 
 4. Select **Next** to proceed.

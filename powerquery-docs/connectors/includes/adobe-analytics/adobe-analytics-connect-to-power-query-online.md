@@ -11,7 +11,7 @@ To connect to Adobe Analytics data:
 
 2. Select **Sign in** to sign in to your Adobe Analytics account.
 
-3. In the Adobe Analytics sign-in window that appears, provide your credentials. You can enter a username, or select **Continue with Google** or **Continue with Facebook**.
+3. In the Adobe Analytics sign-in window that appears, provide your credentials.
 
 4. Enter your password and select **Continue**.
 

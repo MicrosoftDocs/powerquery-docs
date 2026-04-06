@@ -9,11 +9,10 @@ To connect to Eduframe Reporting data:
 
 1. Select **Eduframe (Beta)** from the **Power Query - Choose data source** page.
 
-2. In the **Eduframe** dialog, enter your **Eduframe domain** (your organization name, without `.eduframe.nl`). Optionally, select the **Exclude personal info** toggle to exclude personal information from the data.
+2. In the **Eduframe** dialog, enter your **Eduframe domain** (your organization name, without `.eduframe.nl`).
 
-3. Select **Sign in** to sign in with your Eduframe credentials.
+3. Select your authentication method, and either provide your credentials or sign in.
 
-4. When prompted, approve the Power BI integration request.
 
 5. Once you successfully sign in, select **Next**.
 

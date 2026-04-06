@@ -10,7 +10,7 @@ To connect to Denodo data:
 1. Select **Denodo** from the **Power Query - Choose data source** page.
 
 2. In the **Denodo** dialog, enter the **DSN or Connection String** for your Denodo instance. For a connection string, you must specify the SERVER, PORT, and DATABASE parameters.
-
+1. Choose whether or not to engage debug mode.
 3. Include the name of your on-premises data gateway.
 
    > [!NOTE]
@@ -19,7 +19,6 @@ To connect to Denodo data:
 4. Select the authentication kind, and provide your credentials:
 
    - **Basic**: Enter your Denodo username and password.
-   - **Windows**: Use Windows authentication (Kerberos).
    - **Organizational account**: Sign in with your organizational account.
 
 5. Select **Next** to proceed.

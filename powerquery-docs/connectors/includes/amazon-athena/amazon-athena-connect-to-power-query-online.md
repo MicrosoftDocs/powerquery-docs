@@ -11,7 +11,7 @@ To connect to Amazon Athena data:
 
 2. In the **Amazon Athena** dialog, enter your **DSN** (Data Source Name) for the Athena ODBC connection.
 
-3. If necessary, include the name of your on-premises data gateway.
+3. Include the name of your on-premises data gateway.
 
    > [!NOTE]
    > An on-premises data gateway is required because the Amazon Athena connector uses an ODBC driver that must be installed on the gateway machine.
