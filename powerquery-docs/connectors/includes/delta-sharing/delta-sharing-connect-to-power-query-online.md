@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to Delta Sharing data:
 
-1. Select **Delta Sharing** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **Delta Sharing** from the **Power Query - Choose data source** page.
 
 2. In the **Delta Sharing** dialog, enter the **Server URL**. You can find this endpoint URL in the credentials file provided by the data provider.
 

@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to Anaplan data:
 
-1. Select **Anaplan Connector** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **Anaplan Connector** from the **Power Query - Choose data source** page.
 
 2. In the **Anaplan Connector** dialog, enter the **API URL** and **Authentication URL** for your Anaplan instance. The default API URL is `https://api.anaplan.com` and the default authentication URL is `https://auth.anaplan.com`.
 

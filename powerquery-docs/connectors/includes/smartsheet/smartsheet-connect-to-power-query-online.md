@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to Smartsheet data:
 
-1. Select **Smartsheet** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **Smartsheet** from the **Power Query - Choose data source** page.
 
 2. In the **Smartsheet** dialog, select your **Region** (US or EU).
 

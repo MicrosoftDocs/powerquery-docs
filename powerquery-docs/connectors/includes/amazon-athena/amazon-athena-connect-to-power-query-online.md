@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to Amazon Athena data:
 
-1. Select **Amazon Athena** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **Amazon Athena** from the **Power Query - Choose data source** page.
 
 2. In the **Amazon Athena** dialog, enter your **DSN** (Data Source Name) for the Athena ODBC connection.
 

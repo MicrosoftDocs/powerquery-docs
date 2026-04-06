@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to Denodo data:
 
-1. Select **Denodo** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **Denodo** from the **Power Query - Choose data source** page.
 
 2. In the **Denodo** dialog, enter the **DSN or Connection String** for your Denodo instance. For a connection string, you must specify the SERVER, PORT, and DATABASE parameters.
 

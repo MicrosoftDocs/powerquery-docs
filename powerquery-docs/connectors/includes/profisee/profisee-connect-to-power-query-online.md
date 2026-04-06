@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to Profisee data:
 
-1. Select **Profisee** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **Profisee** from the **Power Query - Choose data source** page.
 
 2. In the **Profisee** dialog, enter the **URL** for your Profisee instance.
 

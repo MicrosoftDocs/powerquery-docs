@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to Eduframe Reporting data:
 
-1. Select **Eduframe (Beta)** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **Eduframe (Beta)** from the **Power Query - Choose data source** page.
 
 2. In the **Eduframe** dialog, enter your **Eduframe domain** (your organization name, without `.eduframe.nl`). Optionally, select the **Exclude personal info** toggle to exclude personal information from the data.
 

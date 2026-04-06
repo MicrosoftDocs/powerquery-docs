@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to Google Sheets data:
 
-1. Select **Google Sheets** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **Google Sheets** from the **Power Query - Choose data source** page.
 
 2. In the **Google Sheets** dialog, enter the **URL** of the Google Sheet you want to connect to. You can copy this URL from your browser address bar when viewing the sheet.
 

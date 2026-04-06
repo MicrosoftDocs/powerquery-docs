@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to Adobe Analytics data:
 
-1. Select **Adobe Analytics** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **Adobe Analytics** from the **Power Query - Choose data source** page.
 
 2. Select **Sign in** to sign in to your Adobe Analytics account.
 

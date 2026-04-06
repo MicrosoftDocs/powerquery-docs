@@ -7,7 +7,7 @@ ms.topic: include
 
 To connect to OneStream data:
 
-1. Select **OneStream** from the **Power Query - Choose data source** page. More information: [Where to get data](/power-query/where-to-get-data)
+1. Select **OneStream** from the **Power Query - Choose data source** page.
 
 2. In the **OneStream** dialog, enter the **Environment URL** for your OneStream instance. Include the `https://` prefix.
 
