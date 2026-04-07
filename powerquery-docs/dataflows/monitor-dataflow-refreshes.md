@@ -4,7 +4,7 @@ description: How to monitor dataflow refreshes with Power BI.
 author: luitwieler
 ms.reviewer: whhender
 ms.topic: concept-article
-ms.date: 12/1/2025
+ms.date: 04/07/2026
 ms.author: jeluitwi
 ms.subservice: dataflows
 ---
@@ -13,7 +13,7 @@ ms.subservice: dataflows
 
 When working with any kind dataflows other than Power BI dataflows, you have the ability to monitor dataflow refreshes using Power BI. This article includes step by step instructions on how to set up your own dashboard to share with everyone on your team. This dashboard provides insights into the success rate of refreshes, duration, and much more.
 
-:::image type="content" source="media/monitor-dataflow-refreshes/dashboard-preview.png" alt-text="Screenshot of the dashboard with dataflow duration, refresh count, and refresh success rate graphs." lightbox="media/monitor-dataflow-refreshes/dashboard-preview.png":::
+:::image type="content" source="media/monitor-dataflow-refreshes/dashboard-preview.png" alt-text="Screenshot of the dashboard with dataflow duration, refresh count, refresh success rate, percentage refresh type, and duration by dataflow graphs." lightbox="media/monitor-dataflow-refreshes/dashboard-preview.png":::
 
 ## Set up your dashboard
 
@@ -40,15 +40,15 @@ To set up your monitoring dashboard for dataflow refresh history:
 The new tables are available in your environment right away. To find the tables in your environment, do the following steps:
 
 1. Navigate to [Power Apps](https://make.powerapps.com/).
-1. Open the Dataverse tables overview.
+1. Open the Dataverse tables overview by selecting **Dataverse** > **Tables** from the left-hand navigation pane.
 
    :::image type="content" source="media/monitor-dataflow-refreshes/tables-tab.png" alt-text="Screenshot of the Power Apps where you open the Dataverse tables overview section.":::
 
-1. Navigate to the managed tables section.
+1. Navigate to the managed tables section by selecting the list dropdown (which might be set to **Default**) and selecting **Managed** from the dropdown.
 
    :::image type="content" source="media/monitor-dataflow-refreshes/managed-tables.png" alt-text="Screenshot indicating how to select the managed table section.":::
 
-1. Scroll down to the dataflow refresh history tables.
+1. Now that the managed tables are selected, scroll down to the dataflow refresh history tables, which should be named `DataflowRefreshHistory` and `EntityRefreshHistory`.
 
    :::image type="content" source="media/monitor-dataflow-refreshes/refresh-history-tables.png" lightbox="media/monitor-dataflow-refreshes/refresh-history-tables.png" alt-text="Screenshot of the two Dataverse tables containing refresh history.":::
 
