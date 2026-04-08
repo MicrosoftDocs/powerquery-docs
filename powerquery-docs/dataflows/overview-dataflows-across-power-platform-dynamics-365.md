@@ -22,7 +22,7 @@ Dataflows are featured in multiple Microsoft products and don't require a datafl
 
 ### How does the dataflow function?
 
-:::image type="content" source="media/overview-dataflows/dataflow-function.png" alt-text="Screenshot of Image of how dataflows function, from the source data, to the transformation process, and then to storage." lightbox="media/overview-dataflows/dataflow-function.png":::
+:::image type="content" source="media/overview-dataflows/dataflow-function.png" alt-text="Diagram of how dataflows function, from the source data, to the transformation process, and then to storage." lightbox="media/overview-dataflows/dataflow-function.png":::
 
 The previous image shows an overall view of how a dataflow is defined. A dataflow gets data from different data sources (more than 80 data sources are supported already). Then, based on the transformations configured with the Power Query authoring experience, the dataflow transforms the data by using the dataflow engine. Finally, the data is loaded to the output destination, which can be a Microsoft Power Platform environment, a Power BI workspace, or the organization's Azure Data Lake Storage account.
 
@@ -30,7 +30,7 @@ The previous image shows an overall view of how a dataflow is defined. A dataflo
 
 Dataflows are cloud-based. When a dataflow is authored and saved, its definition is stored in the cloud. A dataflow also runs in the cloud. However, if a data source is on-premises, an on-premises data gateway can be used to extract the data to the cloud. When a dataflow run is triggered, the data transformation and computation happens in the cloud, and the destination is always in the cloud.
 
-:::image type="content" source="media/overview-dataflows/dataflow-cloud.png" alt-text="Screenshot of Image of how dataflows run in the cloud, from the data source, to the dataflow running in the cloud, and then to storage." lightbox="media/overview-dataflows/dataflow-cloud.png":::
+:::image type="content" source="media/overview-dataflows/dataflow-cloud.png" alt-text="Diagram of how dataflows run in the cloud, from the data source, to the dataflow running in the cloud, and then to storage." lightbox="media/overview-dataflows/dataflow-cloud.png":::
 
 ### Dataflows use a powerful transformation engine
 
@@ -42,7 +42,7 @@ Power Query is the data transformation engine used in the dataflow. This engine 
 
 Because a dataflow stores the resulting tables in cloud-based storage, other services can interact with the data produced by dataflows.
 
-:::image type="content" source="media/overview-dataflows/dataflow-power-platform.png" alt-text="Screenshot of Image of how a dataflow integrates with Microsoft Power Platform and Dynamics 365." lightbox="media/overview-dataflows/dataflow-power-platform.png":::
+:::image type="content" source="media/overview-dataflows/dataflow-power-platform.png" alt-text="Diagram of how a dataflow integrates with Microsoft Power Platform and Dynamics 365." lightbox="media/overview-dataflows/dataflow-power-platform.png":::
 
 For example, Power BI, Power Apps, Power Automate, Power Virtual Agents, and Dynamics 365 applications can get the data produced by the dataflow by connecting to Dataverse, a Power Platform dataflow connector, or directly through the lake, depending on the destination configured at dataflow creation time.
 
@@ -78,19 +78,19 @@ In this scenario, an organization decides to use Power Apps for the new user int
 
 You can use dataflows as a replacement for other extract, transform, load (ETL) tools to build a data warehouse. In this scenario, the data engineers of a company decide to use dataflows to build their star schema&ndash;designed data warehouse, including fact and dimension tables in Data Lake Storage. Then Power BI is used to generate reports and dashboards by getting data from the dataflows.
 
-:::image type="content" source="media/overview-dataflows/dataflows-build-data-warehouse.png" alt-text="Screenshot of Image of how to build a data warehouse using dataflows." lightbox="media/overview-dataflows/dataflows-build-data-warehouse.png":::
+:::image type="content" source="media/overview-dataflows/dataflows-build-data-warehouse.png" alt-text="Diagram of how to build a data warehouse using dataflows." lightbox="media/overview-dataflows/dataflows-build-data-warehouse.png":::
 
 ### Using dataflows to build a dimensional model
 
 You can use dataflows as a replacement for other ETL tools to build a dimensional model. For example, the data engineers of a company decide to use dataflows to build the star-schema designed dimensional model, including fact and dimension tables in Azure Data Lake Storage Gen2. Then Power BI is used to generate reports and dashboards by getting data from the dataflows.
 
-:::image type="content" source="media/overview-dataflows/dataflow-dimensional-model.png" alt-text="Screenshot of Image of how to build a dimensional model using dataflows." lightbox="media/overview-dataflows/dataflow-dimensional-model.png":::
+:::image type="content" source="media/overview-dataflows/dataflow-dimensional-model.png" alt-text="Diagram of how to build a dimensional model using dataflows." lightbox="media/overview-dataflows/dataflow-dimensional-model.png":::Zx
 
 ### Centralize data preparation and reuse of semantic models across multiple Power BI solutions
 
 If multiple Power BI solutions are using the same transformed version of a table, the process to create the table is repeated multiple times. This increases the load on the source system, consumes more resources, and creates duplicate data with multiple points of failure. Instead, a single dataflow can be created to compute the data for all solutions. Power BI can then reuse the result of the transformation in all solutions. The dataflow, if used in such a way, can be part of a robust Power BI implementation architecture that avoids the Power Query code duplicates and reduces the maintenance costs of the data integration layer.
 
-:::image type="content" source="media/overview-dataflows/reuse-tables-in-solutions.png" alt-text="Screenshot of Image of how tables can be reused across multiple solutions." lightbox="media/overview-dataflows/reuse-tables-in-solutions.png":::
+:::image type="content" source="media/overview-dataflows/reuse-tables-in-solutions.png" alt-text="Diagram of how tables can be reused across multiple solutions." lightbox="media/overview-dataflows/reuse-tables-in-solutions.png":::
 
 ## Related content
 
