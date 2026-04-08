@@ -34,7 +34,7 @@ The merge operation requires two tables:
 :::image type="content" source="media/merge-queries-overview/merge-window.png" alt-text="Screenshot of a Merge dialog with no entries for either the left or right table." lightbox="media/merge-queries-overview/merge-window.png":::
 
 > [!NOTE]  
-> The position&mdash;left or right&mdash;of the tables becomes very important when you select the correct join kind to use.
+> The position (left or right) of the tables becomes very important when you select the correct join kind to use.
 
 ### Select column pairs
 
