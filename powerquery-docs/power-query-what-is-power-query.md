@@ -1,10 +1,11 @@
 ---
-title: What is Power Query?
+title: What Is Power Query?
 description: Learn what Power Query is, and how it can help you get and transform data
 author: ptyx507x
-ms.topic: overview
-ms.date: 1/27/2025
 ms.author: miescobar
+ms.reviewer: whhender
+ms.date: 04/08/2026
+ms.topic: overview
 ms.search.form: DataflowGen2 Overview, product-data-integration
 ---
 
@@ -20,13 +21,13 @@ Diagram with symbolized data sources on the left, passing through Power Query fo
 
 Business users spend up to 80&nbsp;percent of their time on data preparation, which delays the work of analysis and decision-making. Several challenges contribute to this situation, and Power Query helps address many of them.
 
-|Existing challenge  |How does Power Query help?  |
-|---------|---------|
-|Finding and connecting to data is too difficult     |Power Query enables connectivity to a wide range of data sources, including data of all sizes and shapes. |
-|Experiences for data connectivity are too fragmented     | Consistency of experience, and parity of query capabilities over all data sources.        |
-|Data often needs to be reshaped before consumption     | Highly interactive and intuitive experience for rapidly and iteratively building queries over any data source, of any size.        |
-|Any shaping is one-off and not repeatable     |  When using Power Query to access and transform data, you define a repeatable process (query) that can be easily refreshed in the future to get up-to-date data. <br/>In the event that you need to modify the process or query to account for underlying data or schema changes, you can use the same interactive and intuitive experience you used when you initially defined the query.     |
-|Volume (data sizes), velocity (rate of change), and variety (breadth of data sources and data shapes)     |  Power Query offers the ability to work against a subset of the entire data set to define the required data transformations, allowing you to easily filter down and transform your data to a manageable size. <br/>Power Query queries can be refreshed manually or by taking advantage of scheduled refresh capabilities in specific products (such as Power BI) or even programmatically (by using the Excel object model). <br/>Because Power Query provides connectivity to hundreds of data sources and over 350 different types of data transformations for each of these sources, you can work with data from any source and in any shape.      |
+| Existing challenge | How does Power Query help? |
+| --- | --- |
+| Finding and connecting to data is too difficult | Power Query enables connectivity to a wide range of data sources, including data of all sizes and shapes. |
+| Experiences for data connectivity are too fragmented | Consistency of experience, and parity of query capabilities over all data sources. |
+| Data often needs to be reshaped before consumption | Highly interactive and intuitive experience for rapidly and iteratively building queries over any data source, of any size. |
+| Any shaping is one-off and not repeatable | When using Power Query to access and transform data, you define a repeatable process (query) that can be easily refreshed in the future to get up-to-date data.<br />In the event that you need to modify the process or query to account for underlying data or schema changes, you can use the same interactive and intuitive experience you used when you initially defined the query. |
+| Volume (data sizes), velocity (rate of change), and variety (breadth of data sources and data shapes) | Power Query offers the ability to work against a subset of the entire data set to define the required data transformations, allowing you to easily filter down and transform your data to a manageable size.<br />Power Query queries can be refreshed manually or by taking advantage of scheduled refresh capabilities in specific products (such as Power BI) or even programmatically (by using the Excel object model).<br />Because Power Query provides connectivity to hundreds of data sources and over 350 different types of data transformations for each of these sources, you can work with data from any source and in any shape. |
 
 ## Power Query experiences
 
@@ -38,11 +39,11 @@ When you create a new transformation step by interacting with the components of 
 
 Currently, two Power Query experiences are available:
 
-* **Power Query Online**&mdash;Found in integrations such as Power BI dataflows, Microsoft Power Platform dataflows, Azure Data Factory wrangling dataflows, and many more that provide the experience through an online webpage.
-* **Power Query for Desktop**&mdash;Found in integrations such as Power Query for Excel and Power BI Desktop.
+- **Power Query Online**&mdash;Found in integrations such as Power BI dataflows, Microsoft Power Platform dataflows, Azure Data Factory wrangling dataflows, and many more that provide the experience through an online webpage.
+- **Power Query for Desktop**&mdash;Found in integrations such as Power Query for Excel and Power BI Desktop.
 
-> [!NOTE]
->Although two Power Query experiences exist, they both provide almost the same user experience in every scenario.
+> [!NOTE]  
+> Although two Power Query experiences exist, they both provide almost the same user experience in every scenario.
 
 ## Transformations
 
@@ -58,7 +59,7 @@ More information: [Quickstart: Using Power Query in Power BI](/power-query/power
 
 Power Query can be used in many products, such as Power BI and Excel. However, using Power Query within a product limits its usage to only that specific product. *Dataflows* are a product-agnostic service version of the Power Query experience that runs in the cloud. Using dataflows, you can get data and transform data in the same way. But instead of sending the output to Power BI or Excel, you can store the output in other storage options such as Dataverse or Azure Data Lake Storage. This way, you can use the output of dataflows in other products and services.
 
-More information: [What are dataflows?](./dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
+More information: [What are dataflows?](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
 
 ## Power Query M formula language
 
@@ -90,31 +91,33 @@ More information: [Power Query M formula language](/powerquery-m/index)
 
 The following table lists Microsoft products and services where Power Query can be found.
 
-|Product|M engine<sup>1</sup>|Power Query<br>Desktop<sup>2</sup>|Power Query<br>Online<sup>3</sup>|Dataflows<sup>4</sup>|
-|-------|---------|-------------------|------------------|---------|
-|Excel for Windows|Yes|Yes|No| No|
-|Excel for Mac|Yes|Yes|No| No|
-|Power BI|Yes|Yes|Yes| Yes|
-|Power Apps| Yes |No|Yes| Yes|
-|Power Automate| Yes |No | Yes |No |
-|Power BI Report Server| Yes| Yes|No|No|
-|Azure Data Factory| Yes |No |Yes |Yes|
-|Data Factory in Microsoft Fabric|Yes|No|Yes|Yes|
-|SQL Server Integration Services| Yes| No|No|No|
-|SQL Server Analysis Services| Yes| Yes|No|No|
-|Dynamics 365 Customer Insights|Yes|No|Yes|Yes|
+| Product | M engine <sup>1</sup> | Power Query<br />Desktop <sup>2</sup> | Power Query<br />Online <sup>3</sup> | Dataflows <sup>4</sup> |
+| --- | --- | --- | --- | --- |
+| Excel for Windows | Yes | Yes | No | No |
+| Excel for Mac | Yes | Yes | No | No |
+| Power BI | Yes | Yes | Yes | Yes |
+| Power Apps | Yes | No | Yes | Yes |
+| Power Automate | Yes | No | Yes | No |
+| Power BI Report Server | Yes | Yes | No | No |
+| Azure Data Factory | Yes | No | Yes | Yes |
+| Data Factory in Microsoft Fabric | Yes | No | Yes | Yes |
+| SQL Server Integration Services | Yes | No | No | No |
+| SQL Server Analysis Services | Yes | Yes | No | No |
+| Dynamics 365 Customer Insights | Yes | No | Yes | Yes |
 
-| <span>| <span>|
+| <span> | <span> |
 | --- | --- |
-|<sup>1</sup>**M engine** |The underlying query execution engine that runs queries expressed in the Power Query formula language ("M"). |
-|<sup>2</sup>**Power&nbsp;Query&nbsp;Desktop** |The Power Query experience found in desktop applications. |
-|<sup>3</sup>**Power Query Online** |The Power Query experience found in web browser applications. |
-|<sup>4</sup>**Dataflows** |Power Query as a service that runs in the cloud and is product-agnostic. The stored result can be used in other applications as services. |
+| <sup>1</sup> **M engine** | The underlying query execution engine that runs queries expressed in the Power Query formula language ("M"). |
+| <sup>2</sup> **Power&nbsp;Query&nbsp;Desktop** | The Power Query experience found in desktop applications. |
+| <sup>3</sup> **Power Query Online** | The Power Query experience found in web browser applications. |
+| <sup>4</sup> **Dataflows** | Power Query as a service that runs in the cloud and is product-agnostic. The stored result can be used in other applications as services. |
 
 ### Related content
 
-* [Data sources in Power Query](connectors/index.md)  
-* [Getting data](get-data-experience.md)  
-* [Power Query quickstart](/power-query/power-query-ui)  
-* [Shape and combine data using Power Query](/power-query/power-query-ui)  
-* [What are dataflows](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
+- [Connectors in Power Query](connectors/index.md)
+- [Getting data overview](get-data-experience.md)
+- [Power Query quickstart](/power-query/power-query-ui)
+- [Shape and combine data using Power Query](/power-query/power-query-ui)
+- [What are dataflows?](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
+
+
