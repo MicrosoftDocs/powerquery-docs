@@ -1,9 +1,10 @@
 ---
-title: Applied steps
+title: Applied Steps
 description: Applied steps show the transformations to the data.
 author: ptyx507x
-ms.date: 12/5/2024
 ms.author: miescobar
+ms.reviewer: whhender
+ms.date: 04/08/2026
 ms.subservice: transform-data
 ---
 
@@ -21,7 +22,7 @@ In most cases, the **Applied steps** list is displayed automatically when you co
 
 If you're using Power Query Desktop (Excel, Power BI Desktop, Analysis Services) and the **Query Settings** pane is closed, select the **View** tab from the ribbon, and then select **Query Settings**.
 
-:::image type="content" source="media/applied-steps/applied-steps-view.png" alt-text="Screenshot of the upper left section of the Power Query editor with the View tab and the Query settings option emphasized.":::
+:::image type="content" source="media/applied-steps/applied-steps-view.png" alt-text="Screenshot of the upper left section of the Power Query editor with the View tab and the Query settings option emphasized." lightbox="media/applied-steps/applied-steps-view.png":::
 
 The **Query Settings** pane then opens on the right side with the **Applied Steps** list.
 
@@ -29,28 +30,28 @@ The **Query Settings** pane then opens on the right side with the **Applied Step
 
 If you're using Power Query Online (Power BI service, Power Apps, Data Factory (preview), Microsoft 365 Customer Insights) and the **Query settings** pane is closed, select the **\<** icon above **Query settings** to open the pane.
 
-:::image type="content" source="media/applied-steps/applied-steps-view-online.png" alt-text="Screenshot of the upper right section of the Power Query editor with the Query settings open icon emphasized.":::
+:::image type="content" source="media/applied-steps/applied-steps-view-online.png" alt-text="Screenshot of the upper right section of the Power Query editor with the Query settings open icon emphasized." lightbox="media/applied-steps/applied-steps-view-online.png":::
 
 The **Query settings** pane then opens on the right side with the **Applied steps** list.
 
-:::image type="content" source="media/applied-steps/applied-steps-query-settings-online.png" alt-text="Screenshot of the online Power Query editor, with the Applied Steps section on the lower right side emphasized.":::
+:::image type="content" source="media/applied-steps/applied-steps-query-settings-online.png" alt-text="Screenshot of the online Power Query editor, with the Applied Steps section on the lower right side emphasized." lightbox="media/applied-steps/applied-steps-query-settings-online.png":::
 
 The following image shows the different parts of the **Applied steps** list. Currently, not all of these parts are found in Power Query Desktop. The **Applied steps** list in Power Query Desktop only contains the delete step, step name, step description, and step settings elements. The step icon and query folding indicator are found only in Power Query Online.
 
-:::image type="content" source="media/applied-steps/applied-steps-details.png" alt-text="Image pointing out the delete step, step icon, step name, step description, step settings, and query folding indicator items in applied steps." lightbox="media/applied-steps/applied-steps-details.png":::
+:::image type="content" source="media/applied-steps/applied-steps-details.png" alt-text="Screenshot of Image pointing out the delete step, step icon, step name, step description, step settings, and query folding indicator items in applied steps." lightbox="media/applied-steps/applied-steps-details.png":::
 
 The full list of the step parts are:
 
-* Delete step: When a step is selected, the delete icon appears on the left side of the **Applied steps** list. If you select the icon, the step is deleted. More information: [Delete step](#delete-step)
-* Step icon: Automatically assigned to the step, based on its type, and can't be changed by the user. The step icon isn't available in Power Query Desktop.
-* Step name: A name automatically assigned to the step. The step name can be changed using the step menu. More information: [Rename step](#rename-step)
-* Step description: A description of the step. Typically, no description is added when the step is created. However, the step description can be added using the step menu. More information: [Edit step names and their descriptions](#edit-step-names-and-their-descriptions)
-* Step settings: Change any settings that are specific to the selected step. Not all steps have settings. More information: [Edit settings](#edit-settings)
-* Query folding indicator: Provides a graphic representation of the query folding status of the selected step. This indicator isn't available in Power Query Desktop. More information: [Query folding indicators](step-folding-indicators.md)
+- Delete step: When a step is selected, the delete icon appears on the left side of the **Applied steps** list. If you select the icon, the step is deleted. More information: [Delete step](#delete-step)
+- Step icon: Automatically assigned to the step, based on its type, and can't be changed by the user. The step icon isn't available in Power Query Desktop.
+- Step name: A name automatically assigned to the step. The step name can be changed using the step menu. More information: [Rename step](#rename-step)
+- Step description: A description of the step. Typically, no description is added when the step is created. However, the step description can be added using the step menu. More information: [Edit step names and their descriptions](#edit-step-names-and-their-descriptions)
+- Step settings: Change any settings that are specific to the selected step. Not all steps have settings. More information: [Edit settings](#edit-settings)
+- Query folding indicator: Provides a graphic representation of the query folding status of the selected step. This indicator isn't available in Power Query Desktop. More information: [Query folding indicators](step-folding-indicators.md)
 
 In Power Query Online, if you hover the mouse cursor over one of the applied steps, an informational display opens, listing the step name, step label, step description, step settings, information about the step query folding, and a learn more link to the [Query folding indicators](step-folding-indicators.md) article. For more information about query folding, go to [Overview of query evaluation and query folding in Power Query](query-folding-basics.md). The step label is automatically generated when the step is created, and indicates the step type, as does the step icon. The step label and the step icon can't be changed.
 
-:::image type="content" source="media/applied-steps/applied-steps-hover.png" alt-text="Image pointing out the description items in the applied steps informational display." lightbox="media/applied-steps/applied-steps-hover.png":::
+:::image type="content" source="media/applied-steps/applied-steps-hover.png" alt-text="Screenshot of Image pointing out the description items in the applied steps informational display." lightbox="media/applied-steps/applied-steps-hover.png":::
 
 ## Step menu selections
 
@@ -64,7 +65,7 @@ The **Edit settings** option lets you change specific settings for each individu
 
 You can also edit the settings for any step that contains the step settings icon. The two places where the icon appears is in the applied settings step, and in the informational display for the step. Just select the icon and the settings page for that particular step is displayed.
 
-:::image type="content" source="media/applied-steps/applied-steps-settings.png" alt-text="Image pointing out the step settings icon in the applied steps list and the step informational display." lightbox="media/applied-steps/applied-steps-settings.png":::
+:::image type="content" source="media/applied-steps/applied-steps-settings.png" alt-text="Screenshot of Image pointing out the step settings icon in the applied steps list and the step informational display." lightbox="media/applied-steps/applied-steps-settings.png":::
 
 ### Rename step
 
@@ -106,7 +107,7 @@ To add a new step, right-click on the last step in the list and select **Insert 
 
 To insert a new intermediate step, right-click on a step and select **Insert step after**. Then select **Insert** on the new window.
 
-:::image type="content" source="media/applied-steps/applied-steps-insert-step-after-warning.png" alt-text="Screeenshot of the insert step warning, with the insert button emphasized." lightbox="media/applied-steps/applied-steps-insert-step-after-warning.png":::
+:::image type="content" source="media/applied-steps/applied-steps-insert-step-after-warning.png" alt-text="Screenshot of Screeenshot of the insert step warning, with the insert button emphasized." lightbox="media/applied-steps/applied-steps-insert-step-after-warning.png":::
 
 To set a transformation for the new step, select the new step in the list and make the change to the data. It automatically links the transformation to the selected step.
 
@@ -122,7 +123,7 @@ To move down a step one position in the list, right-click the step and select **
 
 Alternatively, or to move more than a single position, drag and drop the step to the desired location.
 
-:::image type="content" source="media/applied-steps/applied-steps-drag-and-drop-step.png" alt-text="Screeshot of the Applied steps list with the Rename step being dragged to a new position in the list.":::
+:::image type="content" source="media/applied-steps/applied-steps-drag-and-drop-step.png" alt-text="Screenshot of Screeshot of the Applied steps list with the Rename step being dragged to a new position in the list.":::
 
 ### Extract the previous steps into query
 
@@ -140,7 +141,7 @@ To edit the step, right-click the step and select **Properties**.
 
 In the window, change the step name and description, then select **OK** to save the changes.
 
-:::image type="content" source="media/applied-steps/applied-steps-properties-window.png" alt-text="Screenshot of the Step properties page with a new column name, a changed description, and OK emphasized.":::
+:::image type="content" source="media/applied-steps/applied-steps-properties-window.png" alt-text="Screenshot of the Step properties page with a new column name, a changed description, and OK emphasized." lightbox="media/applied-steps/applied-steps-properties-window.png":::
 
 Adding a description to a step adds a small icon next to the step to denote that the step has a description. In Power Query Desktop, you can hover over this icon to display the description as a tooltip.
 
