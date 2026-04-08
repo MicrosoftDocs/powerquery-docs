@@ -1,11 +1,11 @@
 ---
-title: Power Query Web connector
+title: Power Query Web Connector
 description: Provides basic information and how to connect to your data, along with the supported file types and instructions on using the on-premises data gateway and authentication types.
 author: whhender
-ms.topic: concept-article
-ms.date: 3/21/2025
 ms.author: whhender
+ms.date: 04/08/2026
 ms.subservice: connectors
+ms.topic: concept-article
 ---
 
 # Web
@@ -13,20 +13,20 @@ ms.subservice: connectors
 ## Summary
 
 | Item | Description |
-| ---- | ----------- |
+| --- | --- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents):<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/>Service Principal<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents):<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/><br/>[Web.Page](/powerquery-m/web-page):<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
-| Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>[Web.Page](/powerquery-m/web-page) |
+| Products | Excel<br />Power BI (Semantic models)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2)<br />Power Apps (Dataflows)<br />Dynamics 365 Customer Insights |
+| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents):<br />Anonymous<br />Windows<br />Basic<br />Web API<br />Organizational Account<br />Service Principal<br /><br />[Web.BrowserContents](/powerquery-m/web-browsercontents):<br />Anonymous<br />Windows<br />Basic<br />Web API<br /><br />[Web.Page](/powerquery-m/web-page):<br />Anonymous<br />Windows (current user's credentials only)<br />Web API |
+| Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents)<br />[Web.BrowserContents](/powerquery-m/web-browsercontents)<br />[Web.Page](/powerquery-m/web-page) |
 
-> [!NOTE]
->The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
+> [!NOTE]  
+> The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
 
-> [!NOTE]
+> [!NOTE]  
 > POST requests can only be made anonymously when using `Web.Contents`.
 
-> [!NOTE]
->Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]  
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
@@ -42,40 +42,40 @@ To load data from a web site with Power Query Desktop:
 
 1. Select **Get Data > Web** in Power BI or **From Web** in the **Data** ribbon in Excel. For more information, go to [Where to get data](../../where-to-get-data.md).
 
-2. Choose the **Basic** button and enter a URL address in the text box. For example, enter `https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States`. Then select **OK**.
+1. Choose the **Basic** button and enter a URL address in the text box. For example, enter `https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States`. Then select **OK**.
 
-   :::image type="content" source="web-basic-url.png" alt-text="Screenshot of the connection dialog where you enter the web site URL.":::
+   :::image type="content" source="./web-basic-url.png" alt-text="Screenshot of the connection dialog where you enter the web site URL." lightbox="./web-basic-url.png":::
 
-   If the URL address you enter is invalid, a :::image type="icon" source="web-warning.png"::: warning icon appears next to the **URL** textbox.
+   If the URL address you enter is invalid, a :::image type="icon" source="./web-warning.png" border="false"::: warning icon appears next to the **URL** textbox.
 
    If you need to construct a more advanced URL before you connect to the website, go to [Load Web data using an advanced URL](#load-web-data-using-an-advanced-url).
 
-3. If you're connecting to this web site for the first time, select the authentication method to use for this web site. In this example, select **Anonymous**. Then select the level to you want to apply these settings to&mdash;in this case, **https://en.wikipedia.org/**. Then select **Connect**.
+1. If you're connecting to this web site for the first time, select the authentication method to use for this web site. In this example, select **Anonymous**. Then select the level to you want to apply these settings to&mdash;in this case, **https://en.wikipedia.org/**. Then select **Connect**.
 
-   :::image type="content" source="web-credentials.png" alt-text="Screenshot of the authentication dialog where you select your web credentials.":::
+   :::image type="content" source="./web-credentials.png" alt-text="Screenshot of the authentication dialog where you select your web credentials." lightbox="./web-credentials.png":::
 
    The available authentication methods for this connector are:
 
-   * **Anonymous**: Select this authentication method if the web page doesn't require any credentials.
+   - **Anonymous**: Select this authentication method if the web page doesn't require any credentials.
 
-   * **Windows**: Select this authentication method if the web page requires your Windows credentials.
+   - **Windows**: Select this authentication method if the web page requires your Windows credentials.
 
-   * **Basic**: Select this authentication method if the web page requires a basic user name and password.
+   - **Basic**: Select this authentication method if the web page requires a basic user name and password.
 
-   * **Web API**: Select this method if the web resource that you're connecting to uses an API Key for authentication purposes.
+   - **Web API**: Select this method if the web resource that you're connecting to uses an API Key for authentication purposes.
 
-   * **Organizational account**: Select this authentication method if the web page requires organizational account credentials.
+   - **Organizational account**: Select this authentication method if the web page requires organizational account credentials.
 
    The level you select for the authentication method determines what part of a URL has the authentication method applied to it. If you select the top-level web address, the authentication method you select here is used for that URL address or any subaddress within that address. However, you might not want to set the top URL address to a specific authentication method because different subaddresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
 
-   Once you set the authentication method for a specific web site address, you don't need to select the authentication method for that URL address or any subaddress again. For example, if you select the `https://en.wikipedia.org/` address in this dialog, any web page that begins with this address doesn't require that you select the authentication method again.  
+   Once you set the authentication method for a specific web site address, you don't need to select the authentication method for that URL address or any subaddress again. For example, if you select the `https://en.wikipedia.org/` address in this dialog, any web page that begins with this address doesn't require that you select the authentication method again.
 
-   > [!NOTE]
-   >If you need to change the authentication method later, go to [Changing the authentication method](web-troubleshoot.md#changing-the-authentication-method).
+   > [!NOTE]  
+   > If you need to change the authentication method later, go to [Changing the authentication method](web-troubleshoot.md#changing-the-authentication-method).
 
-4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
+1. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   :::image type="content" source="web-navigator.png" alt-text="Screenshot of the Navigator with the States of the United States of America selected." lightbox="web-navigator.png":::
+   :::image type="content" source="./web-navigator.png" alt-text="Screenshot of the Navigator with the States of the United States of America selected." lightbox="./web-navigator.png":::
 
    The right side of the **Navigator** dialog displays the contents of the table you select to transform or load. If you're uncertain which table contains the data you're interested in, you can select the **Web View** tab. The web view lets you see the entire contents of the web page, and highlights each of the tables that are detected on that site. You can select the check box above the highlighted table to obtain the data from that table.
 
@@ -89,13 +89,13 @@ To load data from a web site with Power Query Desktop:
 
 When you select **Get Data** > **From Web** in Power Query Desktop, in most instances you enter URLs in the Basic setting. However, in some cases you might want to assemble a URL from its separate parts, set a time out for the connection, or provide individualized URL header data. In this case, select the **Advanced** option in the **From Web** dialog box.
 
-:::image type="content" source="web-advanced-url.png" alt-text="Screenshot of the Web connection page with the Web advanced URL assembly option selected.":::
+:::image type="content" source="./web-advanced-url.png" alt-text="Screenshot of the Web connection page with the Web advanced URL assembly option selected." lightbox="./web-advanced-url.png":::
 
 Use the **URL parts** section of the dialog to assemble the URL you want to use to get data. The first part of the URL in the **URL parts** section most likely would consist of the scheme, authority, and path of the URI (for example, `http://contoso.com/products/`). The second text box could include any queries or fragments that you would use to filter the information provided to the web site. If you need to add more than one part, select **Add part** to add another URL fragment text box. As you enter each part of the URL, the complete URL used when you select **OK** is displayed in the **URL preview** box.
 
 Depending on how long the POST request takes to process data, you might need to prolong the time the request continues to stay connected to the web site. The default time out for both POST and GET is 100 seconds. If this time out is too short, you can use the optional **Command timeout in minutes** to extend the number of minutes you stay connected.
 
-You can also add specific request headers to the POST you send to the web site using the optional **HTTP request header parameters** drop-down box. The following table describes the request headers you can select.
+You can also add specific request headers to the POST you send to the web site using the optional **HTTP request header parameters** dropdown list box. The following table describes the request headers you can select.
 
 | Request Header | Description |
 | --- | --- |
@@ -116,36 +116,38 @@ Normally when you import a local on-premises file in Power Query Desktop, you us
 
 The following file types are supported by the Web connector:
 
-* [Access database](../access-database.md)
-* [CSV document](../text-csv.md)
-* [Excel workbook](../excel.md)
-* [JSON](../json.md)
-* [Text file](../text-csv.md)
-* HTML page
-* [XML tables](../xml.md)
-* [PDF](../pdf.md)
+- [Access database](../access-database.md)
+- [Text/CSV](../text-csv.md)
+- [Excel](../excel.md)
+- [JSON](../json.md)
+- [Text/CSV](../text-csv.md)
+- HTML page
+- [XML](../xml.md)
+- [PDF](../pdf.md)
 
 For example, you could use the following steps to import a JSON file on the `https://contoso.com/products` web site:
 
 1. From the **Get Data** dialog box, select the **Web** connector.
 
-2. Choose the **Basic** button and enter the address in the **URL** box, for example:
+1. Choose the **Basic** button and enter the address in the **URL** box, for example:
 
-    `http://contoso.com/products/Example_JSON.json`
+   `http://contoso.com/products/Example_JSON.json`
 
-    :::image type="content" source="web-json.png" alt-text="Screenshot of the Web connection dialog with a JSON file to import from the web.":::
+   :::image type="content" source="./web-json.png" alt-text="Screenshot of the Web connection dialog with a JSON file to import from the web." lightbox="./web-json.png":::
 
-3. Select **OK**.
+1. Select **OK**.
 
-4. If you're visiting this URL for the first time, select **Anonymous** as the authentication type, and then select **Connect**.
+1. If you're visiting this URL for the first time, select **Anonymous** as the authentication type, and then select **Connect**.
 
-5. The Power Query editor now opens with the data imported from the JSON file. If not already on, select the **View** tab in the Power Query editor, then select **Formula Bar** to turn on the formula bar in the editor.
+1. The Power Query editor now opens with the data imported from the JSON file. If not already on, select the **View** tab in the Power Query editor, then select **Formula Bar** to turn on the formula bar in the editor.
 
-    :::image type="content" source="web-formula-bar.png" alt-text="Screenshot of the Power Query editor with the open Formula Bar emphasized." lightbox="web-formula-bar.png":::
+   :::image type="content" source="./web-formula-bar.png" alt-text="Screenshot of the Power Query editor with the open Formula Bar emphasized." lightbox="./web-formula-bar.png":::
 
-    As demonstrated here, the Web connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (`Json.Document` in this example).
+   As demonstrated here, the Web connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (`Json.Document` in this example).
 
 ## Related content
 
-* [Extract data from a Web page by example](web-by-example.md)
-* [Troubleshooting the Power Query Web connector](web-troubleshoot.md)
+- [Get webpage data by providing examples](web-by-example.md)
+- [Troubleshooting the Web connector](web-troubleshoot.md)
+
+
