@@ -1,5 +1,5 @@
 ---
-title: Using Custom Functions in Power Query
+title: Use Custom Functions in Power Query
 description: An article on how to create custom functions in Power Query
 author: ptyx507x
 ms.author: miescobar
