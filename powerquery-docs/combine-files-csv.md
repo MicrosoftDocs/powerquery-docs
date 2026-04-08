@@ -1,18 +1,20 @@
 ---
-title: "Combine CSV files in Power Query" 
+title: "Combine CSV Files in Power Query"
 description: "How to combine CSV files in Power Query and Power Query Online"
 author: ptyx507
-ms.date: 1/27/2025
 ms.author: miescobar
-ms.custom: edited
+ms.reviewer: whhender
+ms.date: 04/08/2026
 ms.subservice: transform-data
+ms.custom:
+  - edited
 ---
 
 # Combine CSV files
 
 In Power Query, you can combine multiple files from a given data source. This article describes how the experience works when the files that you want to combine are CSV files. More information: [Combine files overview](combine-files-overview.md)
 
-> [!TIP]
+> [!TIP]  
 > You can follow along with this example by downloading the sample files used in this article from [this download link](https://aka.ms/PQCombineFilesSample). You can place those files in the data source of your choice, such as a local folder, SharePoint folder, Azure Blob storage, Azure Data Lake Storage, or other data source that provides the file system view.
 
 For simplicity, the example in this article uses the Folder connector. More information: [Folder](connectors/folder.md)
@@ -39,8 +41,8 @@ When connecting to the folder that hosts the files that you want to combine&mdas
 
 For this example, select **Combine**. For Excel or Power Query Desktop, select **Combine & Transform Data**.
 
-> [!NOTE]
->In a different situation, you might select **Transform data** to further filter and transform your data before combining the files. Selecting **Combine** is only recommended when you're certain that the folder contains only the files that you want to combine.
+> [!NOTE]  
+> In a different situation, you might select **Transform data** to further filter and transform your data before combining the files. Selecting **Combine** is only recommended when you're certain that the folder contains only the files that you want to combine.
 
 ## Combine files dialog box
 
@@ -48,8 +50,8 @@ After you select **Combine** in the table preview, the **Combine files** dialog 
 
 :::image type="content" source="media/combine-files-csv/combine-files-csv-combine-files-window.png" alt-text="Screenshot of the Combine files dialog with the file data displayed." lightbox="media/combine-files-csv/combine-files-csv-combine-files-window.png":::
 
-> [!NOTE]
->Power Query automatically detects what connector to use based on the first file found in the list. To learn more about the CSV connector, go to [Text/CSV](connectors/text-csv.md).
+> [!NOTE]  
+> Power Query automatically detects what connector to use based on the first file found in the list. To learn more about the CSV connector, go to [Text/CSV](connectors/text-csv.md).
 
 For this example, leave all the default settings (**Example file** set to **First file**, and the default values for **File origin**, **Delimiter**, and **Data type detection**).
 
@@ -85,13 +87,13 @@ The transformations that need to be added to the **Transform Sample file** query
 
    :::image type="content" source="media/combine-files-csv/combine-files-csv-top-rows-removed.png" alt-text="Screenshot of the Sample query with the top four rows removed." lightbox="media/combine-files-csv/combine-files-csv-top-rows-removed.png":::
 
-2. **Use first row as headers**: Select the table icon again, and then select **Use first row as headers**.
+1. **Use first row as headers**: Select the table icon again, and then select **Use first row as headers**.
 
    :::image type="content" source="media/combine-files-csv/combine-files-csv-promote-headers.png" alt-text="Screenshot of the table icon menu with the Use first row as headers option emphasized.":::
 
    The result of that operation promotes the first row of the table to the new column headers.
 
-   :::image type="content" source="media/combine-files-csv/combine-files-csv-headers-promoted.png" alt-text="Screenshot of the sample table with the headers promoted." lightbox="media/combine-files-csv/combine-files-csv-headers-promoted.png" :::
+   :::image type="content" source="media/combine-files-csv/combine-files-csv-headers-promoted.png" alt-text="Screenshot of the sample table with the headers promoted." lightbox="media/combine-files-csv/combine-files-csv-headers-promoted.png":::
 
 After this operation is completed, Power Query by default tries to automatically detect the data types of the columns and add a new **Changed column type** step.
 
@@ -109,26 +111,28 @@ You can remove this last step of the query from the **Applied steps** pane by se
 
 However, notice that none of the columns derived from the files (Date, Country, Units, Revenue) have a specific data type assigned to them. Assign the correct data type to each column by using the following table.
 
-| Column name | Data type|
-| ------------|----------|
-| Date| Date |
+| Column name | Data type |
+| --- | --- |
+| Date | Date |
 | Country | Text |
-| Units| Whole number |
-| Revenue| Currency |
+| Units | Whole number |
+| Revenue | Currency |
 
 After defining the data types for each column, you're ready to load the table.
 
 :::image type="content" source="media/combine-files-csv/combine-files-csv-final-table.png" alt-text="Screenshot of the final sample combined table." lightbox="media/combine-files-csv/combine-files-csv-final-table.png":::
 
-> [!NOTE]
->To learn how to define or change column data types, go to [Data types](data-types.md).
+> [!NOTE]  
+> To learn how to define or change column data types, go to [Data types in Power Query](data-types.md).
 
 ### Verification
 
-To validate that all files are combined, you can select the filter icon on the **Source.Name** column heading, which displays all the names of the files that are combined. If you get the warning "List may be incomplete," select **Load more** at the bottom of the menu to display more available values in the column.
+To validate that all files are combined, you can select the filter icon on the **Source.Name** column heading, which displays all the names of the files that are combined. If you get the warning "List might be incomplete," select **Load more** at the bottom of the menu to display more available values in the column.
 
 :::image type="content" source="media/combine-files-csv/combine-files-csv-incomplete-list.png" alt-text="Screenshot of the filter dialog with an incomplete list of the files that are combined.":::
 
 After you select **Load more**, all available file names are displayed.
 
 :::image type="content" source="media/combine-files-csv/combine-files-csv-full-combined-files-list.png" alt-text="Screenshot of the filter dialog with the complete list of the files that are combined.":::
+
+
