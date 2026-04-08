@@ -30,6 +30,21 @@ ms.custom: sfi-image-nochange
 
 [!INCLUDE [Includes_sharepoint-folder_capabilities-supported](includes/sharepoint-folder/sharepoint-folder-capabilities-supported.md)]
 
+## Authentication Supported
+>The SharePoint Folder connector supports the following authentication methods, depending on the hosting experience:
+- **Organizational account**  
+  Uses a user’s Microsoft Entra ID to authenticate to SharePoint.
+- **Workspace identity**  
+  In **Microsoft Fabric**, supported experiences (such as **Dataflows Gen2** and **Power BI**) can authenticate to **SharePoint Files** using **workspace identity**.  
+  This enables Fabric to access SharePoint file content using the workspace’s managed identity, without relying on user credentials or legacy ACS-based authentication.
+
+>[!Note]
+> Workspace identity support for **SharePoint Files** is rolling out with recent service updates and is available only in supported Fabric-hosted experiences.  
+> Availability may vary by workload and host (for example, Power BI Desktop is not supported).
+
+
+
+
 ## Determine the site URL
 
 When you're connecting to the document library in a SharePoint site, you're asked to enter the site URL. To find the site URL that contains your SharePoint folder, first open a page in SharePoint. From a page in SharePoint, you can usually get the site address by selecting **Home** in the navigation pane, or the icon for the site at the top. Copy the address from your web browser's address bar and save for later.
