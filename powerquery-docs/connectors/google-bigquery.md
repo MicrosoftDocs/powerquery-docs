@@ -29,6 +29,14 @@ ms.custom: sfi-image-nochange
 >
 > Since May 2025, we introduced a new implementation for the Google BigQuery connector, currently available in preview. Learn more about [this feature](#new-google-bigquery-connector-implementation-preview).
 
+## Google BigQuery connector versions
+Power Query supports two implementations of the Google BigQuery connector:
+- **V1 (ODBC-based)** – Legacy implementation based on ODBC.
+- **V2 (ADBC-based)** – New implementation built on Apache Arrow Database Connectivity (ADBC), designed to deliver improved performance, reliability, and scalability for large analytical workloads.
+
+The V2 connector is the recommended option for new workloads in supported experiences.
+
+
 ## Prerequisites
 
 [!INCLUDE [Includes_google-bigquery_prerequisites](includes/google-bigquery/google-bigquery-prerequisites.md)]
