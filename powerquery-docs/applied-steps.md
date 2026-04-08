@@ -38,7 +38,7 @@ The **Query settings** pane then opens on the right side with the **Applied step
 
 The following image shows the different parts of the **Applied steps** list. Currently, not all of these parts are found in Power Query Desktop. The **Applied steps** list in Power Query Desktop only contains the delete step, step name, step description, and step settings elements. The step icon and query folding indicator are found only in Power Query Online.
 
-:::image type="content" source="media/applied-steps/applied-steps-details.png" alt-text="Screenshot of Image pointing out the delete step, step icon, step name, step description, step settings, and query folding indicator items in applied steps." lightbox="media/applied-steps/applied-steps-details.png":::
+:::image type="content" source="media/applied-steps/applied-steps-details.png" alt-text="Screenshot highlighting the delete step, step icon, step name, step description, step settings, and query folding indicator items in applied steps." lightbox="media/applied-steps/applied-steps-details.png":::
 
 The full list of the step parts are:
 
@@ -51,7 +51,7 @@ The full list of the step parts are:
 
 In Power Query Online, if you hover the mouse cursor over one of the applied steps, an informational display opens, listing the step name, step label, step description, step settings, information about the step query folding, and a learn more link to the [Query folding indicators](step-folding-indicators.md) article. For more information about query folding, go to [Overview of query evaluation and query folding in Power Query](query-folding-basics.md). The step label is automatically generated when the step is created, and indicates the step type, as does the step icon. The step label and the step icon can't be changed.
 
-:::image type="content" source="media/applied-steps/applied-steps-hover.png" alt-text="Screenshot of Image pointing out the description items in the applied steps informational display." lightbox="media/applied-steps/applied-steps-hover.png":::
+:::image type="content" source="media/applied-steps/applied-steps-hover.png" alt-text="Screenshot highlighting the description items in the applied steps informational display." lightbox="media/applied-steps/applied-steps-hover.png":::
 
 ## Step menu selections
 
@@ -65,7 +65,7 @@ The **Edit settings** option lets you change specific settings for each individu
 
 You can also edit the settings for any step that contains the step settings icon. The two places where the icon appears is in the applied settings step, and in the informational display for the step. Just select the icon and the settings page for that particular step is displayed.
 
-:::image type="content" source="media/applied-steps/applied-steps-settings.png" alt-text="Screenshot of Image pointing out the step settings icon in the applied steps list and the step informational display." lightbox="media/applied-steps/applied-steps-settings.png":::
+:::image type="content" source="media/applied-steps/applied-steps-settings.png" alt-text="Screenshot highlighting the step settings icon in the applied steps list and the step informational display." lightbox="media/applied-steps/applied-steps-settings.png":::
 
 ### Rename step
 
@@ -107,7 +107,7 @@ To add a new step, right-click on the last step in the list and select **Insert 
 
 To insert a new intermediate step, right-click on a step and select **Insert step after**. Then select **Insert** on the new window.
 
-:::image type="content" source="media/applied-steps/applied-steps-insert-step-after-warning.png" alt-text="Screenshot of Screeenshot of the insert step warning, with the insert button emphasized." lightbox="media/applied-steps/applied-steps-insert-step-after-warning.png":::
+:::image type="content" source="media/applied-steps/applied-steps-insert-step-after-warning.png" alt-text="Screenshot of the insert step warning, with the insert button emphasized." lightbox="media/applied-steps/applied-steps-insert-step-after-warning.png":::
 
 To set a transformation for the new step, select the new step in the list and make the change to the data. It automatically links the transformation to the selected step.
 
@@ -123,7 +123,7 @@ To move down a step one position in the list, right-click the step and select **
 
 Alternatively, or to move more than a single position, drag and drop the step to the desired location.
 
-:::image type="content" source="media/applied-steps/applied-steps-drag-and-drop-step.png" alt-text="Screenshot of Screeshot of the Applied steps list with the Rename step being dragged to a new position in the list.":::
+:::image type="content" source="media/applied-steps/applied-steps-drag-and-drop-step.png" alt-text="Screenshot of the Applied steps list with the Rename step being dragged to a new position in the list.":::
 
 ### Extract the previous steps into query
 
