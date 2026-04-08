@@ -291,8 +291,8 @@ The options in the help tab include links to:
 - [Power Query documentation](/power-query/): Links to the Power Query documentation
 - [Keyboard shortcuts](/power-query/keyboard-shortcuts): Links to the keyboard shortcuts article in the Power Query documentation.
 - **Support**: Links to the support website of the Microsoft product that Power Query is currently running in.
-- [Power Query website](/power-query/power-query-what-is-power-query): Links to the Power Query website.
-- [Power Query blog](/power-query/power-query-what-is-power-query): Links to the Power Query blog
+- [Power Query website](https://powerquery.microsoft.com/): Links to the Power Query website.
+- [Power Query blog](https://powerquery.microsoft.com/blog/): Links to the Power Query blog
 - [Power Query community](https://community.fabric.microsoft.com/t5/Power-Query/bd-p/power-bi-services): Links to the Power Query community.
 - **Submit an idea**: Links to the ideas website of the Microsoft product that Power Query is currently running in.
 - **Send feedback**: Opens a window in Power Query. The window asks you to rate your experience with Power Query and to provide any additional information you would like to supply.
