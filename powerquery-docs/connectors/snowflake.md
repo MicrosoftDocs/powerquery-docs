@@ -17,7 +17,7 @@ ms.custom: sfi-image-nochange
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
-| Authentication Types Supported | Snowflake (Username/Password), Microsoft account (Microsoft Entra ID), Key Pair Auth (ADBC)|
+| Authentication Types Supported | Snowflake (Username/Password), Microsoft account (Microsoft Entra ID), Key Pair Auth (ADBC), Service Principal (SPN)|
 | Function Reference Documentation | &mdash; |
 
 > [!NOTE]
@@ -38,6 +38,22 @@ ms.custom: sfi-image-nochange
 ## Capabilities Supported
 
 [!INCLUDE [Includes_snowflake_capabilities-supported](includes/snowflake/snowflake-capabilities-supported.md)]
+
+
+## Authentication Types Supported - More Information
+>The Snowflake connector supports the following authentication methods:
+- **Microsoft Entra ID (recommended)**  
+   Enables strong, identity-based authentication without storing usernames or passwords.  
+   In **Microsoft Fabric**, this authentication method can be backed by **workspace identity** in supported experiences (such as **Datasets** and **Dataflows Gen2**), allowing Fabric to authenticate to Snowflake using the workspace’s managed identity.
+
+- **Key pair authentication (ADBC)**  
+  Uses certificate-based authentication for supported scenarios.
+
+- **Service Principal (SPN)**  
+ Service Principal–based authentication is also supported with Snowflake for scenarios where a non-user, application-level identity is required. Support is dependent on Snowflake configuration and the authentication method used.
+
+   -**Workspace Identity**
+Workspace identity is a managed identity associated with a Microsoft Fabric workspace. When using Microsoft Entra ID authentication, supported Fabric experiences (such as Datasets and Dataflows Gen2) can use the workspace identity to authenticate to Snowflake. This allows Fabric to access Snowflake using an identity tied to the workspace, rather than individual user credentials.
 
 ## Connect to Snowflake data warehouse from Power Query Desktop
 
