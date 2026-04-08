@@ -1,5 +1,5 @@
 ---
-title: "Using an On-Premises Data Gateway in Power Platform Dataflows | MicrosoftDocs"
+title: "Using an On-Premises Data Gateway in Power Platform Dataflows"
 description: "Learn how to use an on-premises data gateway in Power Platform dataflows"
 author: Luitwieler
 ms.author: jeluitwi
@@ -35,7 +35,6 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 - Administrative permissions on a gateway. These permissions are provided by default for gateways you install. Administrators can grant other people permissions for gateways.
 
 > [!NOTE]  
->
 > For Power Apps dataflows, only users who have been directly granted Admin access to a gateway are able to create connections using that gateway. Users who inherit Admin access through a group aren't able to create connections.
 
 - A license that supports accessing on-premises data using an on-premises gateway. More information: "Connect to your data" row of the "Explore Power Apps plans" table in the [Power Apps pricing](https://www.microsoft.com/power-platform/products/power-apps/pricing) page.
@@ -55,7 +54,7 @@ To install a gateway from Power BI service:
 
 1. Select the downloads button in the upper right corner of Power BI service, and choose **Data Gateway**.
 
-   :::image type="content" source="media/using-dataflows-with-on-premiese-data/install-gateway-power-bi.png" alt-text="Screenshot of Image showing the data gateway selection in Power Bi service.":::
+   :::image type="content" source="media/using-dataflows-with-on-premiese-data/install-gateway-power-bi.png" alt-text="Screenshot of the data gateway selection in Power BI service.":::
 
 1. Install the gateway using the instructions provided in [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
 
@@ -69,7 +68,7 @@ To install a gateway from Power Apps:
 
 1. Select [New gateway](https://go.microsoft.com/fwlink/?LinkID=820931).
 
-   :::image type="content" source="media/using-dataflows-with-on-premiese-data/install-gateway-power-apps.png" alt-text="Screenshot of Image showing the new gateway button in Power Apps.":::
+   :::image type="content" source="media/using-dataflows-with-on-premiese-data/install-gateway-power-apps.png" alt-text="Screenshot showing the new gateway button in Power Apps.":::
 
 1. In the **On-Premises Data Gateway** section, select **Download**.
 
@@ -81,7 +80,7 @@ To install a gateway from Power Apps:
 
 1. Select an on-premises data source from the data sources list.
 
-   :::image type="content" source="media/using-dataflows-with-on-premiese-data/on-premises-data-sources.png" alt-text="Screenshot of Choose an on-premises data source." lightbox="media/using-dataflows-with-on-premiese-data/on-premises-data-sources.png":::
+   :::image type="content" source="media/using-dataflows-with-on-premiese-data/on-premises-data-sources.png" alt-text="Screenshot of the window to choose an on-premises data source." lightbox="media/using-dataflows-with-on-premiese-data/on-premises-data-sources.png":::
 
 1. Provide the connection details for the enterprise gateway that will be used to access the on-premises data. You must select the gateway itself, and provide credentials for the selected gateway. Only gateways for which you're an administrator appear in the list.
 
@@ -98,7 +97,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 1. Select the setup button in the upper right corner of Power BI service, choose **Manage gateways**, and then select the gateway you want.
 
-   :::image type="content" source="media/using-dataflows-with-on-premiese-data/manage-gateways-power-bi.png" alt-text="Screenshot of Image showing the manage gateways selection in Power BI service.":::
+   :::image type="content" source="media/using-dataflows-with-on-premiese-data/manage-gateways-power-bi.png" alt-text="Screenshot of the manage gateways selection in Power BI service.":::
 
 1. To add a user to the gateway, select the **Administrators** table and enter the email address of the user you would like to add as an administrator. Creating or modifying data sources in dataflows requires Admin permissions to the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
