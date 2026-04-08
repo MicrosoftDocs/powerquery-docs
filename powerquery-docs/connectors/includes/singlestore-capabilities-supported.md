@@ -7,4 +7,5 @@ ms.topic: include
 
 * Import
 * DirectQuery (Power BI semantic models)
-
+* Advanced options
+  * Native SQL statement
