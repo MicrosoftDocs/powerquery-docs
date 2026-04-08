@@ -19,7 +19,7 @@ Diagram with symbolized data sources on the left, passing through Power Query fo
 
 ## How Power Query helps with data acquisition
 
-Business users spend up to 80&nbsp;percent of their time on data preparation, which delays the work of analysis and decision-making. Several challenges contribute to this situation, and Power Query helps address many of them.
+Business users spend up to 80% of their time on data preparation, which delays the work of analysis and decision-making. Several challenges contribute to this situation, and Power Query helps address many of them.
 
 | Existing challenge | How does Power Query help? |
 | --- | --- |
@@ -39,8 +39,8 @@ When you create a new transformation step by interacting with the components of 
 
 Currently, two Power Query experiences are available:
 
-- **Power Query Online**&mdash;Found in integrations such as Power BI dataflows, Microsoft Power Platform dataflows, Azure Data Factory wrangling dataflows, and many more that provide the experience through an online webpage.
-- **Power Query for Desktop**&mdash;Found in integrations such as Power Query for Excel and Power BI Desktop.
+- **Power Query Online** - Found in integrations such as Power BI dataflows, Microsoft Power Platform dataflows, Azure Data Factory wrangling dataflows, and many more that provide the experience through an online webpage.
+- **Power Query for Desktop** - Found in integrations such as Power Query for Excel and Power BI Desktop.
 
 > [!NOTE]  
 > Although two Power Query experiences exist, they both provide almost the same user experience in every scenario.
