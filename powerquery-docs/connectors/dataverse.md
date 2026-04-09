@@ -1,11 +1,11 @@
 ---
-title: Power Query Dataverse connector
+title: Power Query Dataverse Connector
 description: Provides basic information and connection instructions, along with OData API performance information, table retrieval rate, and alternative means of connecting to Dataverse.
 author: whhender
-ms.topic: concept-article
-ms.date: 2/6/2024
 ms.author: whhender
+ms.date: 04/08/2026
 ms.subservice: connectors
+ms.topic: concept-article
 ---
 
 # Dataverse
@@ -13,16 +13,16 @@ ms.subservice: connectors
 ## Summary
 
 | Item | Description |
-| ---- | ----------- |
+| --- | --- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
-| Authentication types | Organizational account<br/>Service principal |
+| Products | Excel<br />Power BI (Semantic models)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2)<br />Power Apps (Dataflows)<br />Dynamics 365 Customer Insights |
+| Authentication types | Organizational account<br />Service principal |
 
-> [!NOTE]
+> [!NOTE]  
 > The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
 
-> [!NOTE]
->Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]  
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
@@ -34,22 +34,22 @@ ms.subservice: connectors
 
 ## Connect to Dataverse from Power Query Desktop
 
-> [!NOTE]
-> The Power Query Dataverse connector is mostly suited towards analytics workloads, not bulk data extraction. More information: [Alternative Dataverse connections](#alternative-dataverse-connections)
+> [!NOTE]  
+> The Power Query Dataverse connector is mostly suited toward analytics workloads, not bulk data extraction. More information: [Alternative Dataverse connections](#alternative-dataverse-connections)
 
 To connect to Dataverse from Power Query Desktop:
 
 1. Select the **Dataverse** option from **Get Data**. More information: [Where to get data](../where-to-get-data.md)
 
-2. If you're connecting to this site for the first time, select **Sign in** and input your credentials. Then select **Connect**.
+1. If you're connecting to this site for the first time, select **Sign in** and input your credentials. Then select **Connect**.
 
-   :::image type="content" source="media/dataverse/sign-in.png" alt-text="Sign in to this site.":::
+   :::image type="content" source="media/dataverse/sign-in.png" alt-text="Screenshot of Sign in to this site." lightbox="media/dataverse/sign-in.png":::
 
-3. In **Navigator**, select the data you require, then either load or transform the data.
+1. In **Navigator**, select the data you require, then either load or transform the data.
 
-   :::image type="content" source="media/dataverse/navigator.png" alt-text="Load or transform from navigator.":::
+   :::image type="content" source="media/dataverse/navigator.png" alt-text="Screenshot of Load or transform from navigator." lightbox="media/dataverse/navigator.png":::
 
-4. If you're using Power Query from Power BI Desktop, you're asked to select either the **Import** or **DirectQuery** data connectivity mode. Then select **OK**.
+1. If you're using Power Query from Power BI Desktop, you're asked to select either the **Import** or **DirectQuery** data connectivity mode. Then select **OK**.
 
    :::image type="content" source="media/dataverse/connection-settings.png" alt-text="Screenshot of Power BI Desktop connection settings with Import selected and DirectQuery not selected.":::
 
@@ -64,8 +64,8 @@ Power Query Online provides advanced options that you can add to your query if n
 The following table lists the advanced options you can set in Power Query Online.
 
 | Advanced option | Description |
-| --------------- | ----------- |
-| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you can’t see those columns. More information: [Performance issues related to relationship columns](#performance-issues-related-to-relationship-columns)|
+| --- | --- |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you can't see those columns. More information: [Performance issues related to relationship columns](#performance-issues-related-to-relationship-columns) |
 
 Once you select the advanced options you require, select **Next** to connect to Dataverse.
 
