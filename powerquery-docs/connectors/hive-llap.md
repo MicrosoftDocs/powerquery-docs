@@ -20,6 +20,9 @@ ms.custom: sfi-image-nochange
 | Authentication Types Supported   | Basic (Username/Password)<br/>Windows                                        |
 | Function Reference Documentation | &mdash;                                                                      |
 
+> [!IMPORTANT] 
+> We're beginning the deprecation process for the Hive LLAP Connector starting April 2026. After the deprecation, connectivity through Hive LLAP will not be supported.
+
 ## Prerequisites
 
 [!INCLUDE [Includes_hive-llap_prerequisites](includes/hive-llap/hive-llap-prerequisites.md)]
