@@ -84,7 +84,7 @@ You can use dataflows as a replacement for other extract, transform, load (ETL) 
 
 You can use dataflows as a replacement for other ETL tools to build a dimensional model. For example, the data engineers of a company decide to use dataflows to build the star-schema designed dimensional model, including fact and dimension tables in Azure Data Lake Storage Gen2. Then Power BI is used to generate reports and dashboards by getting data from the dataflows.
 
-:::image type="content" source="media/overview-dataflows/dataflow-dimensional-model.png" alt-text="Diagram of how to build a dimensional model using dataflows." lightbox="media/overview-dataflows/dataflow-dimensional-model.png":::Zx
+:::image type="content" source="media/overview-dataflows/dataflow-dimensional-model.png" alt-text="Diagram of how to build a dimensional model using dataflows." lightbox="media/overview-dataflows/dataflow-dimensional-model.png":::
 
 ### Centralize data preparation and reuse of semantic models across multiple Power BI solutions
 
