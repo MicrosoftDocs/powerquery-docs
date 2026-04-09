@@ -129,7 +129,7 @@ Once you enable Microsoft Entra ID SSO for all data sources, then enable Microso
 
 In March 2026, we introduced a new implementation for the Amazon Redshift connector to enhance the integration with Redshift. This connector is available as a preview in Power Query desktop.
 
-The Redshift connector implementation 2.0 is built using the open-source [Amazon Redshift 2.x](https://github.com/aws/amazon-redshift-odbc-driver/) driver. To enable this in the desktop, go to **File** > **Options and settings** > **Options** > **Preview features**
+The Redshift connector implementation 2.0 is built using the open-source [Amazon Redshift 2.x](https://github.com/aws/amazon-redshift-odbc-driver/) driver. To enable this in the desktop, go to **File** > **Options and settings** > **Options** > **Preview features**.
 
 Enable the **Use new Amazon Redshift connector implementation** feature:
  
@@ -163,7 +163,7 @@ You can also see which version of the Redshift driver you are using in your Mash
    "DriverName":"Amazon Redshift ODBC Driver",
    "UseV2Features":"True",
    "ProductVersion":"2.153.0.0 (Main)+fdaf4307c2163bd9933182691631ca4d966ba1ac",
-   "ActivityId":"26731f64-bb59-4e1e-ac6d-394dd9e6a5ff",
+   "ActivityId":"dddd3333-ee44-5555-66ff-777777aaaaaa",
    "Process":"Microsoft.Mashup.Container.NetFX45",
    "Pid":37024,
    "Tid":1,
