@@ -11,6 +11,8 @@ ms.custom: sfi-image-nochange
 
 # Connect to data sources for dataflows
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 With Microsoft Power BI and Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new tables to an existing dataflow.
 
 This article describes how to create dataflows by using these data sources. For an overview of how to create and use dataflows, go to [Creating a dataflow](/power-bi/service-dataflows-create-use) for Power BI service and [Create and use dataflows in Power Apps](/powerapps/maker/data-platform/create-and-use-dataflows).

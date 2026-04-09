@@ -10,6 +10,8 @@ ms.subservice: dataflows
 
 # Improve performance and reusability by separating data ingestion from data transformation dataflows
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 One of the best practices for dataflow implementations is separating the responsibilities of dataflows into two layers: data ingestion and data transformation. This pattern is specifically helpful when dealing with multiple queries of slower data sources in one dataflow, or multiple dataflows querying the same data sources. Instead of getting data from a slow data source again and again for each query, the data ingestion process can be done once, and the transformation can be done on top of that process. This article explains the process.
 
 ## On-premises data source

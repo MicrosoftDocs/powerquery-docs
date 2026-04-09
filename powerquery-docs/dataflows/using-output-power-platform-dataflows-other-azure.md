@@ -10,6 +10,8 @@ ms.subservice: dataflows
 
 # Using the output of Microsoft Power Platform dataflows from other Azure data workloads
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 Depending on the storage for the output of the Microsoft Power Platform dataflows, you can use that output in other Azure services.
 
 ## The benefits of working with the output of Power Platform dataflows
