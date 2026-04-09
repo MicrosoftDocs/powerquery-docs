@@ -3,7 +3,7 @@ title: Power Query SharePoint folder connector
 description: Provides basic information, prerequisites, and how to connect to your data, along with troubleshooting tips when combining files and using filename special characters.
 author: whhender
 ms.topic: concept-article
-ms.date: 1/31/2025
+ms.date: 04/09/2026
 ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -17,7 +17,7 @@ ms.custom: sfi-image-nochange
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | Anonymous<br/>Microsoft Account<br/>Windows<br/>Organizational Account |
+| [Authentication Types Supported](#authentication-types-supported) | Anonymous<br/>Microsoft Account<br/>Windows<br/>Organizational Account |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files) |
 
 > [!NOTE]
@@ -30,20 +30,14 @@ ms.custom: sfi-image-nochange
 
 [!INCLUDE [Includes_sharepoint-folder_capabilities-supported](includes/sharepoint-folder/sharepoint-folder-capabilities-supported.md)]
 
-## Authentication Supported
->The SharePoint Folder connector supports the following authentication methods, depending on the hosting experience:
-- **Organizational account**  
-  Uses a user’s Microsoft Entra ID to authenticate to SharePoint.
-- **Workspace identity**  
-  In **Microsoft Fabric**, supported experiences (such as **Dataflows Gen2** and **Power BI**) can authenticate to **SharePoint Files** using **workspace identity**.  
-  This enables Fabric to access SharePoint file content using the workspace’s managed identity, without relying on user credentials or legacy ACS-based authentication.
+## Authentication types supported
 
 >[!Note]
 > Workspace identity support for **SharePoint Files** is rolling out with recent service updates and is available only in supported Fabric-hosted experiences.  
 > Availability may vary by workload and host (for example, Power BI Desktop is not supported).
 
 
-
+[!INCLUDE [Includes_sharepoint-folder_authentication-types-supported](includes/sharepoint-folder/sharepoint-folder-authentication-types.md)]
 
 ## Determine the site URL
 
