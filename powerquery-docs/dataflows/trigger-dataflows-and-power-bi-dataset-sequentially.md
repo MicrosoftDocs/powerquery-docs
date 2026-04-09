@@ -10,8 +10,7 @@ ms.subservice: dataflows
 
 # Trigger dataflows and Power BI semantic models sequentially
 
-> [!IMPORTANT]
-> For new solutions, we recommend [Dataflow Gen2](/fabric/data-factory/dataflows-gen2-overview), which supports [pipeline orchestration](/fabric/data-factory/dataflow-activity) for sequential triggering and conditional logic. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
 
 There are two common scenarios for how you can use this connector to trigger multiple dataflows and Power BI semantic models sequentially.
 

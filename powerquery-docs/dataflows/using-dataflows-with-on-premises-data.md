@@ -11,9 +11,6 @@ ms.topic: how-to
 
 # Using an on-premises data gateway in Power Platform dataflows
 
-> [!IMPORTANT]
-> For new solutions, we recommend [Dataflow Gen2](/fabric/data-factory/dataflows-gen2-overview), which also supports [on-premises data gateways](/data-integration/gateway/service-gateway-onprem) and [virtual network (VNet) data gateways](/data-integration/vnet/overview). To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
-
 Install an on-premises data gateway to transfer data quickly and securely between a Power Platform dataflow and a data source that isn't in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. You can view all gateways for which you have administrative permissions and manage permissions and connections for those gateways.
 
 ## Prerequisites
