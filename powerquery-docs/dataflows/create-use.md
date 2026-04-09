@@ -10,6 +10,9 @@ ms.subservice: dataflows
 
 # Create and use dataflows in Microsoft Power Platform
 
+> [!IMPORTANT]
+> For new data preparation and integration projects, we recommend creating a [Dataflow Gen2 in Data Factory for Microsoft Fabric](/fabric/data-factory/create-first-dataflow-gen2), which uses the same Power Query experience with added support for more data destinations, pipeline orchestration, and built-in AI. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
+
 Using dataflows with Microsoft Power Platform makes data preparation easier, and lets you reuse your data preparation work in subsequent reports, apps, and models.
 
 In the world of ever-expanding data, data preparation can be difficult and expensive. It can consume as much as 60 to 80 percent of the time and cost for a typical analytics project. Such projects can require wrangling fragmented and incomplete data, complex system integration, data with structural inconsistency, and a high skill set barrier.
