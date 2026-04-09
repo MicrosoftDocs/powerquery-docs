@@ -146,7 +146,7 @@ in
     orders1
 ```
 
-This will only be added for new Redshift connections after you enable the option in Power Query desktop. You can add this option to any existing connection by adding the [Implementation="2.0"]) option as well.
+This will only be added for new Redshift connections after you enable the option in Power Query desktop. You can add this option to any existing connection by adding the [Implementation="2.0"] option as well.
 
 Using this new implementation option enables users to trial and preview the Redshift V2 driver. All connections will be automatically migrated to the V2 driver in a future iteration.
 You can also see which version of the Redshift driver you are using in your Mashup logs:
