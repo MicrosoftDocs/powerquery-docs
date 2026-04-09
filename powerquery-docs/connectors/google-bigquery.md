@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: whhender
 ms.topic: concept-article
-ms.date: 10/16/2025
+ms.date: 04/09/2026
 ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -22,19 +22,14 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-> [!NOTE]
-> Effective July 2021, Google discontinued support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 or later to support signing in to Google.
-
-> [!NOTE]
->
-> Since May 2025, we introduced a new implementation for the Google BigQuery connector, currently available in preview. Learn more about [this feature](#new-google-bigquery-connector-implementation-preview).
-
 ## Google BigQuery connector versions
+
 Power Query supports two implementations of the Google BigQuery connector:
+
 - **V1 (ODBC-based)** – Legacy implementation based on ODBC.
 - **V2 (ADBC-based)** – New implementation built on Apache Arrow Database Connectivity (ADBC), designed to deliver improved performance, reliability, and scalability for large analytical workloads.
 
-The V2 connector is the recommended option for new workloads in supported experiences.
+The V2 connector is the recommended option for new workloads in supported experiences. Learn more about [the V2 connector feature](#new-google-bigquery-connector-implementation-preview).
 
 
 ## Prerequisites
@@ -46,6 +41,9 @@ The V2 connector is the recommended option for new workloads in supported experi
 [!INCLUDE [Includes_google-bigquery_capabilities-supported](includes/google-bigquery/google-bigquery-capabilities-supported.md)]
 
 ## Connect to Google BigQuery data from Power Query Desktop
+
+> [!NOTE]
+> Effective July 2021, Google discontinued support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 or later to support signing in to Google.
 
 To connect to Google BigQuery from Power Query Desktop, take the following steps:
 
