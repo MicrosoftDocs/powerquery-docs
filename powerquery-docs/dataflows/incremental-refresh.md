@@ -10,7 +10,7 @@ ms.subservice: dataflows
 
 # Using incremental refresh with dataflows
 
-> [!IMPORTANT]
+> [!TIP]
 > If you're configuring incremental refresh for large datasets, consider [Dataflow Gen2](/fabric/data-factory/dataflows-gen2-overview), which supports a streamlined [incremental refresh experience](/fabric/data-factory/dataflow-gen2-incremental-refresh) with improved performance and additional data destinations. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
 
 With dataflows, you can bring large amounts of data into Power BI or your organization's provided storage. In some cases, however, it's not practical to update a full copy of source data in each refresh. A good alternative is **incremental refresh**, which provides the following benefits for dataflows:

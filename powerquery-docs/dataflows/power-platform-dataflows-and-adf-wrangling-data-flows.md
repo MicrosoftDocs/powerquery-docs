@@ -10,7 +10,7 @@ ms.subservice: dataflows
 
 # How Microsoft Power Platform dataflows and Azure Data Factory wrangling dataflows relate to each other
 
-> [!IMPORTANT]
+> [!TIP]
 > [Dataflow Gen2 in Data Factory for Microsoft Fabric](/fabric/data-factory/dataflows-gen2-overview) brings together the self-service data prep of Power Platform dataflows and the enterprise-scale integration of Azure Data Factory into a single, unified experience with more destinations, pipeline orchestration, and built-in AI. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
 
 Microsoft Power Platform dataflows and Azure Data Factory dataflows are often considered to be doing the same thing: extracting data from source systems, transforming the data, and loading the transformed data into a destination. However, there are differences in these two types of dataflows, and you can have a solution implemented that works with a combination of these technologies. This article describes this relationship in more detail.
