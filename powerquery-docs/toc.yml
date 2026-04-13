@@ -273,7 +273,7 @@ items:
           href: security-best-practices-power-query.md
         - name: "Data exfiltration best practices for dataflows"
           href: dataflows/data-exfiltration-best-practices.md
-    - name: Power Query template (preview)
+    - name: Power Query template
       href: power-query-template.md
     - name: Keyboard shortcuts
       href: keyboard-shortcuts.md
