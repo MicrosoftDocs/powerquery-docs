@@ -1,35 +1,33 @@
 ---
 title: Power Query Amazon OpenSearch Service connector
 description: Provides basic information and prerequisites for the Amazon OpenSearch Service connector, includes descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
-author: bezhan-msft
-ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+author: whhender
+ms.topic: concept-article
+ms.date: 9/27/2025
+ms.author: whhender
+ms.subservice: connectors
 ---
 
 # Amazon OpenSearch Service (Beta)
 
->[!Note]
->The following connector article is provided by Amazon, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the OpenSearch website and use the support channels there.
+> [!NOTE]
+>This connector is owned and provided by Amazon.
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic |
 
 ## Prerequisites
 
-* Microsoft Power BI Desktop
-* [OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/)
-* [OpenSearch SQL ODBC driver](https://opensearch.org/docs/latest/search-plugins/sql/sql/odbc/)
+[!INCLUDE [Includes_amazon-opensearch-service_prerequisites](includes/amazon-opensearch-service/amazon-opensearch-service-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* DirectQuery (Power BI Datasets)
+[!INCLUDE [Includes_amazon-opensearch-service_capabilities-supported](includes/amazon-opensearch-service/amazon-opensearch-service-capabilities-supported.md)]
 
 ## Connect to OpenSearch Project
 

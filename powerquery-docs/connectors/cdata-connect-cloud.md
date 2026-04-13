@@ -1,34 +1,35 @@
 ---
 title: Power Query CData Connect Cloud connector
 description: Provides basic information, prerequisites, and connection steps for CData Connect Cloud.
-author: bezhan-msft
+author: whhender
 
-ms.date: 7/13/2023 
-ms.author: bezhan
+ms.date: 11/11/2025 
+ms.author: whhender
+ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # CData Connect Cloud
 
 > [!NOTE]
-> The following connector article is provided by CData, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the CData website and use the support channels there.
+>This connector is owned and provided by CData.
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products Supported | Power BI (Datasets) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products Supported | Power BI (Semantic models) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | CData account (OAuth) |
 | Function Reference Docs | &mdash; |
 
 ## Prerequisites
 
-* A [CData Connect Cloud](https://cloud.cdata.com/) account
-* At least one [connection](https://cloud.cdata.com/docs/Connections.html) configured in your CData Connect Cloud account
+[!INCLUDE [Includes_cdata-connect-cloud_prerequisites](includes/cdata-connect-cloud/cdata-connect-cloud-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_cdata-connect-cloud_capabilities-supported](includes/cdata-connect-cloud/cdata-connect-cloud-capabilities-supported.md)]
 
 ## Connect to CData Connect Cloud
 
@@ -40,19 +41,19 @@ Follow these steps to connect to your CData Connect Cloud account:
 
 3. Select **CData Connect Cloud** in the list and then select **Connect**.
 
-    ![Select CData Connect Cloud.](./media/cdata-connect-cloud/cdata-1.png)
+    :::image type="content" source="./media/cdata-connect-cloud/cdata-1.png" alt-text="Screenshot of the Get data dialog where you select CData Connect Cloud.":::
 
 4. In the **CData Connect Cloud** connection window, select **Sign in**.
 
-    ![Connection sign in.](./media/cdata-connect-cloud/cdata-2.png)
+    :::image type="content" source="./media/cdata-connect-cloud/cdata-2.png" alt-text="Screenshot of the authentication dialog where you sign in to your CData Connect account.":::
 
 5. In the sign-in window, enter your CData Connect Cloud sign-in information, and then select **Continue**.
 
-    ![Login window.](./media/cdata-connect-cloud/cdata-3.png)
+    :::image type="content" source="./media/cdata-connect-cloud/cdata-3.png" alt-text="Screenshot of the CData sign-in window.":::
 
 6. Select **Connect** in the connection window.
 
-    ![Connection finalize](./media/cdata-connect-cloud/cdata-4.png)
+    :::image type="content" source="./media/cdata-connect-cloud/cdata-4.png" alt-text="Screenshot of the authentication dialog where the connection is finalized.":::
 
 The **Navigator** window appears and allows you to import your data.
 

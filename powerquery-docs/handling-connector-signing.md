@@ -2,9 +2,10 @@
 title: Handling Connector Signing
 description: How to sign custom connectors for trusted use with recommended security levels
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 12/1/2021
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Handling Power Query Connector Signing 

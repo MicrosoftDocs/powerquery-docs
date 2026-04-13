@@ -1,10 +1,11 @@
 ---
-title: Power Query Folder connector
+title: Power Query Folder Connector
 description: Provides basic information and connection instructions, along with tips about combining data from multiple files and subfolders.
-author: bezhan-msft
-ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+author: whhender
+ms.author: whhender
+ms.date: 04/08/2026
+ms.subservice: connectors
+ms.topic: concept-article
 ---
 
 # Folder
@@ -12,21 +13,18 @@ ms.author: bezhan
 ## Summary
 
 | Item | Description |
-| ---- | ----------- |
+| --- | --- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-|Authentication Types Supported | Windows |
+| Products | Excel<br />Power BI (Semantic models)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2)<br />Power Apps (Dataflows)<br />Dynamics 365 Customer Insights<br />Analysis Services |
+| Authentication Types Supported | Windows |
 | Function Reference Documentation | [Folder.Contents](/powerquery-m/folder-contents), [Folder.Files](/powerquery-m/folder-files) |
 
->[!Note]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]  
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
 
-* Folder path
-* Combine
-  * Combine and load
-  * Combine and transform
+[!INCLUDE [Includes_folder_capabilities-supported](includes/folder/folder-capabilities-supported.md)]
 
 ## Connect to a folder from Power Query Desktop
 
@@ -34,40 +32,24 @@ To connect to a folder from Power Query Desktop:
 
 1. Select the **Folder** option in the connector selection.
 
-2. Enter the path to the folder you want to load, or select **Browse** to browse to the folder you want to load. Then select **OK**.
+1. Enter the path to the folder you want to load, or select **Browse** to browse to the folder you want to load. Then select **OK**.
 
-   ![Folder selection.](./media/folder/folder-browse.png)
+   :::image type="content" source="media/folder/folder-browse.png" alt-text="Screenshot of folder selection.":::
 
    When you select the folder you want to use, the file information about all of the files in that folder are displayed. Also, file information about any files in any subfolders is also displayed.
 
-   ![Folder information.](./media/folder/folder-info.png)
+   :::image type="content" source="media/folder/folder-info.png" alt-text="Screenshot of folder information." lightbox="media/folder/folder-info.png":::
 
-3. Select **Combine & Transform Data** to combine the data in the files of the selected folder and load the data in the Power Query Editor for editing. Select **Combine & Load** to load the data from all of the files in the folder directly into your app. Or select **Transform Data** to load the folder data as-is in the Power Query Editor.
+1. Select **Combine & Transform Data** to combine the data in the files of the selected folder and load the data in the Power Query Editor for editing. Select **Combine & Load** to load the data from all of the files in the folder directly into your app. Or select **Transform Data** to load the folder data as-is in the Power Query Editor.
 
-   ![Combine files from folder.](./media/folder/combine-folder-files.png)
+   :::image type="content" source="media/folder/combine-folder-files.png" alt-text="Screenshot of the option to combine files from folders." lightbox="media/folder/combine-folder-files.png":::
 
->[!Note]
->The **Combine & Transform Data** and **Combine & Load** buttons are the easiest ways to combine data found in the files of the folder you specify. You could also use the **Load** button (in Power BI Desktop only) or the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
+> [!NOTE]  
+> The **Combine & Transform Data** and **Combine & Load** buttons are the easiest ways to combine data found in the files of the folder you specify. You could also use the **Load** button (in Power BI Desktop only) or the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
 
 ## Connect to a folder from Power Query Online
 
-To connect to a folder from Power Query Online:
-
-1. Select the **Folder** option in the connector selection.
-
-2. Enter the path to the folder you want to load.
-
-   ![Folder selection online.](./media/folder/folder-browse-online.png)
-
-3. Enter the name of an on-premises data gateway that you'll use to access the folder.
-
-4. Select the authentication kind to connect to the folder. If you select the **Windows** authentication kind, enter your credentials.
-
-5. Select **Next**.
-
-6. In the **Navigator** dialog box, select **Combine** to combine the data in the files of the selected folder and load the data into the Power Query Editor for editing. Or select **Transform data** to load the folder data as-is in the Power Query Editor.
-
-   ![Select what to do with the data displayed in the Navigator.](./media/folder/navigator-online.png)
+[!INCLUDE [Includes_folder_connect-to-power-query-online](includes/folder/folder-connect-to-power-query-online.md)]
 
 ## Troubleshooting
 
@@ -77,4 +59,6 @@ When you combine files using the folder connector, all the files in the folder a
 
 To ensure that combining the files works properly, make sure that all the files in the folder and its subfolders have the same file format and structure. If you need to exclude some of the files, first select **Transform data** instead of **Combine** and filter the table of files in the Power Query Editor before [combining](../combine-files-overview.md).
 
-For more information about combining files, go to [Combine files in Power Query](../combine-files-overview.md).
+For more information about combining files, go to [Combine files overview](../combine-files-overview.md).
+
+

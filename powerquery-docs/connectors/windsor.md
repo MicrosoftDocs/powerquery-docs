@@ -1,0 +1,81 @@
+---
+title: Power Query Windsor connector
+description: Provides basic information and prerequisites for the Windsor connector, supported authentication types, outlines limitations and issues.
+author: lanceris
+ms.author: miescobar
+ms.topic: concept-article
+ms.date: 9/11/2025
+ms.subservice: connectors
+ms.custom: sfi-image-nochange
+---
+
+# Windsor Power Query custom connector
+
+>[!Note]
+>This connector is owned and provided by Windsor.
+
+## Summary
+
+| Item | Description                                                                       |
+| ---- |-----------------------------------------------------------------------------------|
+| Release State | General Availability                                                                    |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/> Fabric (Dataflow Gen2) |
+| Authentication Types Supported | OAuth                                  |
+| Function reference docs | &mdash; |
+
+## Prerequisites
+
+[!INCLUDE [Includes_windsor_prerequisites](includes/windsor/windsor-prerequisites.md)]
+
+## Capabilities supported
+
+[!INCLUDE [Includes_windsor_capabilities-supported](includes/windsor/windsor-capabilities-supported.md)]
+
+## Connection instructions
+
+To connect to Windsor:
+
+1. Open Power Query.
+
+2. Go to the **Home** ribbon and select **Get Data**.
+
+3. Search for Windsor. Select it, and then select **Connect**.
+
+   :::image type="content" source="media/windsor/windsor-pbi-connector-list.png" alt-text="Screenshot of the Get data dialog where you select the connector from the list.":::
+
+4. Select **Sign in** to sign in to your Windsor account.  
+
+   :::image type="content" source="media/windsor/windsor-pbi-signin.png" alt-text="Screenshot of the authentication dialog where you sign in to Windsor.":::
+
+5. Sign in to Windsor Onboard in the window that appears. Enter your email and password or select **Sign in with Microsoft** / **Sign in with Google** and choose the account that you used to sign in to the Windsor Onboard in step 1 in [Prerequisites](#prerequisites).
+
+   :::image type="content" source="media/windsor/windsor-signin.png" alt-text="Screenshot showing the connection selector.":::
+
+6. Select **Connect**.  
+
+   :::image type="content" source="media/windsor/windsor-pbi-connect.png" alt-text="Screenshot of the sign-in confirmation in the authentication dialog.":::
+
+7. Once the Navigator dialog box loads, you can preview all the queries you saved in your Windsor account on the onboard. Select the checkboxes next to any queries with data you’d like to use for your report.
+
+   :::image type="content" source="media/windsor/windsor-pbi-navigator.png" alt-text="Screenshot of the navigator view with the list of teams, groups and queries.":::
+
+   The preview loads with the saved query settings. However, you can make some changes before loading the data to your report by using the settings above the preview:
+
+   * Under **Accounts** you can choose a different set of accounts for the same query settings. Select **Ok** and **Apply** to load the preview with the changes.
+   * You can choose a new set of fields using the **Fields** dropdown. Remember to select **Ok** and **Apply** the changes.
+   * You can append selected fields to existing ones by setting **Append fields to existing** to **TRUE**
+   * If you want to check the data for a different time period than the one specified in the saved query, select the necessary option in the **Date range type** or **Start date**/**End date** field and select **Apply**. When you select options like **This month** or **Year to date**, the refreshes always bring the latest data to your report. When you leave **End date** empty and it isn't set in the query. Todays date is used internally and refreshes bring the latest data to your report.
+
+    If you make changes to only one of the fields, other settings remain the same as you saved them on the Windsor Onboard.
+
+    Once you see the dataset you’d like to use, select **Load** to use it in Power Query, or **Transform Data** to refine it in the Power Query editor first.
+
+## Limitations and considerations
+
+[!INCLUDE [Includes_windsor_limitations-and-considerations](includes/windsor/windsor-limitations-and-considerations.md)]
+
+## Related content
+
+You might also find the following Windsor help page useful:
+
+* [Windsor: Power BI Desktop Connector](https://windsor.ai/power-bi-desktop-connector-installation-guide/)

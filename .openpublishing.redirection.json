@@ -1,6 +1,61 @@
 {
   "redirections": [
     {
+      "source_path": "powerquery-docs/connectors/azure-hdinsight-on-aks-trino.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/emplifi-metrics.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/factset-rms.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/mailchimp.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/microsoft-azure-consumption-insights.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/microsoft-graph-security.md",
+      "redirect_url": "/power-query/connecting-to-graph",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/socialbakers.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/stripe.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/twilio.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/zendesk.md",
+      "redirect_url": "/power-query/connectors/zendesk-data",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/workforce-dimensions.md",
+      "redirect_url": "/power-query/connectors/connector-end-of-support",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerquery-docs/Connectors/CommonDataService.md",
       "redirect_url": "/power-query/connectors/dataverse",
       "redirect_document_id": "false"
@@ -27,7 +82,7 @@
     },
     {
       "source_path": "powerquery-docs/HandlingQueryFolding.md",
-      "redirect_url": "/power-query/power-query-folding",
+      "redirect_url": "/power-query/query-folding-basics",
       "redirect_document_id": "false"
     },
     {
@@ -449,6 +504,31 @@
       "source_path": "powerquery-docs/dataflows/linked-entities.md",
       "redirect_url": "/power-query/dataflows/linked-tables",
       "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/power-query-folding.md",
+      "redirect_url": "/power-query/query-folding-basics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs//connector-certification.md",
+      "redirect_url": "/fabric/data-factory/connector-certification",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/certification-submission.md",
+      "redirect_url": "/fabric/data-factory/certification-submission",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/providing-user-documentation.md",
+      "redirect_url": "/fabric/data-factory/providing-user-documentation",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/quickbooks-online.md",
+      "redirect_url": "/power-query/connectors/",
+      "redirect_document_id": "false"
     }
-      ]
+  ]
 }

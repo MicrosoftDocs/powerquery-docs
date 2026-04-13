@@ -1,10 +1,12 @@
 ---
 title: FHIR Power Query Relationships
 description: Power Query connector for FHIR table relationships
-author: hansenms
-ms.topic: conceptual
+author: whhender
+ms.topic: concept-article
 ms.date: 7/25/2023
-ms.author: mihansen
+ms.author: whhender
+ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # FHIR Relationships
@@ -67,7 +69,7 @@ In this section, we'll show an example of establishing a relationship between th
 
    :::image type="content" source="fhir-editrelationship.png" alt-text="Screenshot of the Edit relationships dialog, with the Observation and Patient columns selected." lightbox="fhir-editrelationship.png":::
 
-    ![Edit relationship.](fhir-editrelationship.png)
+    :::image type="content" source="fhir-editrelationship.png" alt-text="Edit relationship.":::
 
 ## Summary
 

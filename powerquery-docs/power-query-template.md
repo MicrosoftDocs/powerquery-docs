@@ -2,10 +2,10 @@
 title: Power Query template
 description: Learn how to import and export a Power Query template that helps you move entire Power Query projects across environments that support the template functionality.
 author: ptyx507x
-
 ms.topic: overview
 ms.date: 4/13/2026
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Power Query template

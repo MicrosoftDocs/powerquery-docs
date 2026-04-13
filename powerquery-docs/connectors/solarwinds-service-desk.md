@@ -1,74 +1,162 @@
 ---
-title: SolarWinds Service Desktop (Beta)
+title: SolarWinds Service Desktop
 description: Provides basic information, prerequisites, and instructions on how to connect to the SolarWinds Service Desktop connector.
 author: giladsmg
-ms.author: bezhan
-ms.topic: conceptual
-ms.date: 7/14/2023
+ms.author: whhender
+ms.topic: concept-article
+ms.date: 9/11/2025
+ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
-# SolarWinds Service Desk (Beta)
+# SolarWinds Service Desk
 
-This connector lets you import incident records from SolarWinds Service Desk to Microsoft Power BI. You can import records from the past two years. You'll have raw data on the topics
-most relevant to your organization, which you can then analyze and review by viewing it in a
-variety of formats, such as tables, graphs, and charts.
+>[!Note]
+>This connector is owned and provided by SolarWinds.
 
-> [!NOTE]
-> The following connector article is provided by SolarWinds, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or want to request change to it, visit the [SolarWinds Service Desk](https://documentation.solarwinds.com/en/success_center/swsd/default.htm#powerbi.htm?cshid=swsd_powerbi) documentation website and provide feedback at the bottom of the page.
+This connector lets you incrementally import incidents and different asset records from SolarWinds Service Desk (SWSD) to Microsoft Power BI. The import provides raw data on the topics most relevant to your organization. You can then review and analyze the data by viewing it in various formats, such as tables, graphs, and charts.
+
 
 ## Summary
 
 | Item                           | Description                                  |
 |--------------------------------|----------------------------------------------|
-| Release state                  | Beta                                         |
-| Products                       | Power BI (Datasets)<br/>Power BI (Dataflows)<br/> Fabric (Dataflow Gen2) |
+| Release state                  | General Availability                                         |
+| Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/> Fabric (Dataflow Gen2) |
 | Authentication Types Supported | SolarWinds Service Desk JSON Web Token (JWT) |
 
 ## Prerequisites
 
-Before you can use this connector to get SolarWinds Service Desk data, you must have a SolarWinds Service Desk user who has set up [Token authentication for API integration](https://documentation.solarwinds.com/en/success_center/swsd/content/completeguidetoswsd/token-authentication-for-api-integration.htm).
+[!INCLUDE [Includes_solarwinds-service-desk_prerequisites](includes/solarwinds-service-desk/solarwinds-service-desk-prerequisites.md)]
 
-## Capabilities Supported
+## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_solarwinds-service-desk_capabilities-supported](includes/solarwinds-service-desk/solarwinds-service-desk-capabilities-supported.md)]
 
 ## Connect to SolarWinds Service Desk
 
-To connect to SolarWinds Service Desk:
+> [!IMPORTANT]
+> SolarWinds expanded the Power BI connector to pull data based on the `updated_at` column instead of `created_at`.
 
-1. In Power BI Desktop, select **Get Data** from **Home**. Select **Other** from the categories on the left, select **SolarWinds Service Desk**, and then select **Connect**.
+> Customers can now follow new records in SolarWinds Service Desk and their progress.
 
-   ![Screenshot of Get Data from SolarWinds Service Desk.](./media/solarwinds-service-desk/get-data.png)
+> **Customer effects**: Every refresh you perform will pull all records changes, including new records or records where their data was changed during the date range you set. This may change your reports in Power BI Desktop and the Power BI Service.
 
-2. Sign in with the JSON web token you generated as described in prerequisites, and then select **Connect** to verify your access to SolarWinds Service Desk.
+The following instructions contain special steps for customers who previously used the BETA SWSD Power BI connector to create reports and want to connect those reports with the new out-of-the-box version.
 
-   ![Screenshot of Auth Key Dialog.](./media/solarwinds-service-desk/auth-key.png)
+1. In Power BI Desktop, select **Get Data** from **Home**. Select **SolarWinds Service Desk**, and then select **Connect**.
 
-3. In the **Navigator** dialog box, select the table you want to import. You can then either load or transform the data.
+   :::image type="content" source="./media/solarwinds-service-desk/get-data.png" alt-text="Screenshot of Get Data from SolarWinds Service Desk.":::
 
-   ![Screenshot of Get Data from SolarWinds Service Desk Navigator.](./media/solarwinds-service-desk/nav-data.png)
+2. Sign in with the JSON web token you generated as described in prerequisites, and then select **Connect** to verify your access to SWSD.
+   > [!IMPORTANT]
+   > If you have an ESM account, the JSON token you use for the connector must be generated by a Service Provider Administrator.
 
-## Limitations and issues
+   :::image type="content" source="./media/solarwinds-service-desk/auth-key.png" alt-text="Screenshot of Auth Key Dialog.":::
 
-Users should be aware of the following limitations and issues associated with accessing SolarWinds Service Desk:
+3. In the **Navigator** dialog box, select the tables you want to import. Then select **Load**.
 
-* You can import only once per day; that is, once every 24 hours. If you attempt to refresh prior to the allowed 24-hour cycle, you'll receive an error message.
+   :::image type="content" source="./media/solarwinds-service-desk/nav-data.png" alt-text="Screenshot of SolarWinds Service Desk Navigator." lightbox="./media/solarwinds-service-desk/nav-data.png":::
 
-  ![Screenshot of Error_message.](./media/solarwinds-service-desk/error-message.png)
+4. After you complete the previous steps, you should see your chosen models load under Data view. The records you have just imported were created in SWSD during the last month.
 
-* There's no limit on the number of users who can pull data, but each user can refresh only once every 24 hours.
+### Extra steps for previous users of the BETA connector
 
-* Only incident data is imported, providing historical details from January 1, 2020 to date.
-  The incident fields that are imported are limited. If you need to import a field that's not available, you can request that it be added.
-  If you have any questions about what can be imported or issues with the Power BI integration, email Rinat.Gil@solarwinds.com.
+If you previously used the BETA SWSD Power BI Connector to create reports, and you already have model name incidents and reports based on it, and you want to connect those reports with the new out-of-the-box version, follow these steps:
 
-### Credential error in the Navigator
+1. Go to the **Incidents** model, and right-click **Edit query**. A Power Query editor opens.
 
-If a credential error occurs in the Navigator, clear your recent data source settings.
+   :::image type="content" source="./media/solarwinds-service-desk/open-query-editor.png" alt-text="Screenshot Open Query editor.":::
 
-1. In Power BI Desktop, select **File** > **Data source settings**.
+2. Select the **Incidents** query and open the advanced editor.
 
-   ![Screenshot of Select SolarWinds Service Desk datasource.](./media/solarwinds-service-desk/data-source-clear.png)
+   :::image type="content" source="./media/solarwinds-service-desk/open-advanced-editor.png" alt-text="Screenshot Open Advanced Editor.":::
 
-2. Select the SolarWinds Service Desk data source, and then select **Clear permissions**. 
-3. Establish the connection to the Navigator again.
+   You should see the following lines:
+
+   ````powerquery-m
+       Source = SolarWindsServiceDesk.Contents(),
+       Incidents1 = Source{[Name="Incidents"]}[Data] 
+   ````
+
+3. Replace those lines with the following lines:
+
+   ````powerquery-m
+       Source = SolarWindsServiceDesk.ContentsV110(null, null),
+       #"All Objects" = Source{[Name="All Objects"]}[Data], 
+       Incidents1 = #"All Objects"{[Name="Incidents"]}[Data] `
+   ````
+
+4. Select **Done**.
+5. Select **Close & Apply**.
+
+The reports display data from the past month instead of the last two years. Going forward, those reports are connected to the new SWSD Power BI connector.
+
+## Incremental refresh setting
+
+Incremental refresh saves download time after your initial download is performed. To set up incremental refresh, follow these steps:
+
+1. On the **Home** menu bar, select **Transform Data**. A Power Query editor opens.
+2. Open **Manage Parameters** > **Create parameters**. 
+3. Create two new DateTime parameters named `RangeEnd` and `RangeStart`.
+   
+   The new parameters set the filtering range of the pulled data, based on the `updated_at` column. This reduces download time and filters your data based on the range you set.
+   
+   > [!NOTE]
+   > Set enough time between the parameters to allow you to pull sufficient records for your reports, but not too large. Select a range that won't cause you to wait a long time for every refresh. See [Microsoft's instructions: create-parameters](/power-bi/connect-data/incremental-refresh-configure#create-parameters).
+
+   :::image type="content" source="./media/solarwinds-service-desk/create-parameters.png" alt-text="Screenshot create parameters.":::
+
+4. For each query you want to set with incremental refresh, open the advanced editor.
+
+   The following line displays:
+
+   ````powerquery-m
+       Source = SolarWindsServiceDesk.ContentsV110(null, null),
+   ````
+
+5. Replace the line with the following code:
+
+   ````powerquery-m
+       Source = SolarWindsServiceDesk.ContentsV110(RangeStart, RangeEnd),
+   ````
+
+6. Select **Done**.
+7. Select **Close & Apply**.
+8. Go to Data view.
+9. For each model you’re downloading, define the policy for incremental refresh and real-time data as shown in the following image.
+
+   :::image type="content" source="./media/solarwinds-service-desk/open-incremental-refresh.png" alt-text="Screenshot open incremental refresh.":::
+
+   a. Set the option for archiving data to meet your reporting needs. Enter a number in the first field and use the dropdown to select a time frame.
+
+   b. Incrementally refresh data starting 1 Days before the refresh date. See [define-policy](/power-bi/connect-data/incremental-refresh-configure#define-policy) for instructions.
+
+   :::image type="content" source="./media/solarwinds-service-desk/set-incremental-refresh.png" alt-text="Screenshot set incremental refresh.":::
+
+## Publishing reports
+
+All customers publishing to the Power BI service (cloud) need to perform the following steps. These steps apply to both first-time publishers and those who have published in the past.
+
+1. Publish the report to Power BI service workspace, based on the out-of-the-box connector.
+2. Establish settings for each published semantic model in the Power BI service.
+
+   :::image type="content" source="./media/solarwinds-service-desk/semantic-model.png" alt-text="Screenshot set semantic model.":::
+
+3. For each semantic model, open the **Data Source Credentials** section and edit the credentials with the key and token you used when you established the connection with the connector in desktop Power BI.
+
+   :::image type="content" source="./media/solarwinds-service-desk/data-source-credentails.png" alt-text="Screenshot set data source credentials.":::
+
+Your reports in desktop and cloud are now connected to and using the new version of SolarWinds Service Desk connector.
+
+You can refresh each semantic model for the first time. The refresh downloads the archived data you defined in the incremental refresh policy (records from a maximum of two years ago).
+
+SolarWinds suggests setting the first large download with a scheduled refresh. Optionally, you can run it manually by selecting **Refresh the semantic model**.
+
+For instructions on configuring a scheduled refresh, go to [scheduled-refresh](/power-bi/connect-data/refresh-scheduled-refresh).
+
+After the first refresh, future refreshes are much quicker and download only the new records from SWSD.
+
+## Limitations and considerations
+
+[!INCLUDE [Includes_solarwinds-service-desk_limitations-and-considerations](includes/solarwinds-service-desk/solarwinds-service-desk-limitations-and-considerations-include.md)]

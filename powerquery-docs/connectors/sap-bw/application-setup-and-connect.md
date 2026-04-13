@@ -1,15 +1,17 @@
 ---
 title: Power Query SAP Business Warehouse Application Server connector
 description: Power Query SAP Business Warehouse Application Server connector reference
-author: dougklopfenstein
-ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+author: whhender
+ms.topic: concept-article
+ms.date: 1/24/2024
+ms.author: whhender
+ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # SAP Business Warehouse Application Server
 
->[!NOTE]
+> [!NOTE]
 >The SAP Business Warehouse (BW) Application Server connector is now certified for SAP BW/4HANA as of June 2020.
 
 ## Summary
@@ -17,42 +19,20 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Windows (desktop)<br/>Database (desktop)<br/>Basic (online) |
 | Function Reference Documentation | [SapBusinessWarehouse.Cubes](/powerquery-m/sapbusinesswarehouse-cubes)<br/>[Sapbusinesswarehouseexecutionmode.DataStream](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXml](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](/powerquery-m/sapbusinesswarehouseexecutionmode-type) |
 
->[!Note]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
->[!IMPORTANT]
-> Version 1.0 of the SAP BW Application Server connector has been deprecated. New connections will use Implementation 2.0 of the SAP BW Application Server connector. All support for version 1.0 will be removed from the connector in the near future.
-
-You'll need an SAP account to sign in to the website and download the drivers. If you're unsure, contact the SAP administrator in your organization. The drivers need to be installed on the gateway machine.
-
-BW 7.3, BW 7.5 and BW/4HANA 2.0 is supported.
-
-To use the SAP BW Application Server connector in Power BI Desktop or Power Query Online, you must install the SAP .NET Connector 3.0 or 3.1. Access to the download requires a valid S-user. Contact your SAP Basis team to get the SAP .NET Connector 3.0 or 3.1. You can download the [SAP .NET Connector 3.0 or 3.1](https://support.sap.com/en/product/connectors/msnet.html) from SAP. The connector comes in 32-bit and 64-bit versions. Choose the version that matches your Power BI Desktop installation. For Power Query Online, choose the 64-bit version.
-
-<a name="app-gac-install"></a>
-When you install, in **Optional setup steps**, make sure you select **Install assemblies to GAC**.
-
-![Select install assemblies to GAC.](install-to-gac.png)
-
->[!NOTE]
->As of late 2023, the SAP BW Application Server connector contains support for SAP .NET Connector 3.1.
+[!INCLUDE [Includes_application-setup-and-connect_prerequisites](../includes/sap-bw-application-server/sap-bw-application-server-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Direct Query (Power BI Datasets)
-* Advanced
-  * Language code
-  * Execution mode
-  * Batch size
-  * MDX statement
-  * Enable characteristic structures
+[!INCLUDE [Includes_application-setup-and-connect_capabilities-supported](../includes/sap-bw-application-server/sap-bw-application-server-capabilities-supported.md)]
 
 ## Connect to an SAP BW Application Server from Power Query Desktop
 
@@ -68,11 +48,11 @@ To connect to an SAP BW Application Server:
 
     When you've finished filling in the relevant information, select **OK**.
 
-   ![Enter the SAP Business Warehouse Application Server information.](get-data-app.png)
+   :::image type="content" source="get-data-app.png" alt-text="Enter the SAP Business Warehouse Application Server information.":::
 
 3. When accessing the database for the first time, the SAP BW Application Server requires database user credentials. Power Query Desktop offers two authentication modes for SAP BW connections&mdash;user name/password authentication (Database), and Windows authentication (single sign-on). SAML authentication isn't currently supported. Select either **Windows** or **Database**. If you select **Database** authentication, enter your user name and password. If you select **Windows** authentication, go to [Windows Authentication and single sign-on](single-sign-on.md) to learn more about the requirements for Windows authentication.
 
-   ![Enter the server credentials.](sign-in-app.png)
+   :::image type="content" source="sign-in-app.png" alt-text="Enter the server credentials.":::
 
    Then select **Connect**.
 
@@ -80,33 +60,12 @@ To connect to an SAP BW Application Server:
 
 4. From the **Navigator** dialog box, select the items you want to use. When you select one or more items from the server, the **Navigator** dialog box creates a preview of the output table. For more information about navigating the SAP BW Application Server query objects in Power Query, go to [Navigate the query objects](navigate-query-objects.md).
 
-   [![Navigator view from Power Query Desktop.](navigator-desktop.png)](navigator-desktop.png#lightbox)
-
+   :::image type="content" source="navigator-desktop.png" lightbox="navigator-desktop.png" alt-text="Navigator view from Power Query Desktop.":::
 5. From the **Navigator** dialog box, you can either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
 ## Connect to an SAP BW Application Server from Power Query Online
 
-To connect to an SAP BW Application Server from Power Query Online:
-
-1. From the **Data sources** page, select **SAP BW Application Server**.
-
-2. Enter the server name, system number, and client ID of the SAP BW Application Server you want to connect to. This example uses `SAPBWTestServer` as the server name, a system number of `00`, and a client ID of `837`.
-
-3. Select the [on-premises data gateway](/data-integration/gateway/service-gateway-onprem) you want to use to connect to the data.
-
-4. Set **Authentication Kind** to **Basic**. Enter your user name and password.
-
-   ![SAP BW Application Server online sign-in.](get-data-online-power-apps-app.png)
-
-5. You can also select from a set of [advanced options](use-advanced-options.md) to fine-tune your query.
-
-6. Select **Next** to connect.
-
-7. From the **Navigator** dialog box, select the items you want to use. When you select one or more items from the server, the **Navigator** dialog box creates a preview of the output table. For more information about navigating the SAP BW Application Server query objects in Power Query, go to [Navigate the query objects](navigate-query-objects.md).
-
-8. From the **Navigator** dialog box, you can transform the data in the Power Query Editor by selecting **Transform Data**.
-
-   [![Navigator view from Power Query Online.](navigator-online.png)](navigator-online.png#lightbox)
+[!INCLUDE [Includes_application-setup-and-connect_connect-to-power-query-online](../includes/sap-bw-application-server/sap-bw-application-server-connect-to-power-query-online.md)]
 
 ## Connect using router strings
 

@@ -2,9 +2,10 @@
 title: Power Query Azure Synapse Analytics workspace connector
 description: Provides basic information and connection instructions for the Azure Synapse Analytics Workspace connector.
 author: miquelladeboer
-ms.topic: conceptual
-ms.date: 7/14/2023
+ms.topic: concept-article
+ms.date: 1/24/2024
 ms.author: mideboer
+ms.subservice: connectors
 ---
 
 # Azure Synapse Analytics workspace (Beta)
@@ -14,22 +15,22 @@ ms.author: mideboer
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 
->[!Note]
+> [!NOTE]
 > This Azure Synapse Analytics workspace connector doesn't replace the Azure Synapse Analytics (SQL DW) connector. This connector makes exploring data in Synapse workspaces more accessible. Some capabilities aren't present in this connector, including native query and DirectQuery support.
 
->[!Note]
+> [!NOTE]
 > This connector supports access to all data in your Synapse workspace, including Synapse Serverless, Synapse on-demand, and Spark tables.
 
 ## Prerequisites
 
-Before you can sign in to Synapse workspaces, you must have access to [Azure Synapse Analytics Workspace](/azure/synapse-analytics/get-started-create-workspace).
+[!INCLUDE [Includes_synapse_prerequisites](includes/synapse/synapse-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
+[!INCLUDE [Includes_synapse_capabilities-supported](includes/synapse/synapse-capabilities-supported.md)]
 
 ## Connect to Synapse workspace data from Power Query Desktop
 
@@ -37,11 +38,11 @@ To connect to Synapse workspace data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Azure Synapse Analytics workspace (Beta)**. Then select **Connect**.
 
-   ![Get Data from Synapse Workspaces.](./media/azure-synpse-analytics-workspace/get-data-synapse.png)
+   :::image type="content" source="./media/azure-synpse-analytics-workspace/get-data-synapse.png" alt-text="Get Data from Synapse Workspaces.":::
 
 2. If this is the first time you are connecting to this workspace, you'll be asked to sign in to your Synapse account. To sign in, select **Sign in**.
 
-   ![Authentication dialog box with sign-in button for your organizational account.](./media/azure-synpse-analytics-workspace/sign-in.png)
+   :::image type="content" source="./media/azure-synpse-analytics-workspace/sign-in.png" alt-text="Authentication dialog box with sign-in button for your organizational account.":::
 
 3. In the **Sign in with Microsoft** window that appears, provide your credentials to sign in to your Synapse account. Then select **Next**.
 

@@ -4,6 +4,7 @@ description: Generic native query support implementation guide for Power Query c
 author: ptyx507
 ms.date: 2/14/2023
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Native query support in Power Query custom connectors

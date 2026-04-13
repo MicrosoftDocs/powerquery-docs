@@ -1,10 +1,11 @@
 ---
 title: What licenses do you need to use dataflows
-description: What licenses do you need to use dataflows
+description: Describes the various licenses you need for various apps for you to use either analytical or standard dataflows.
 author: Luitwieler
-ms.topic: conceptual
-ms.date: 6/14/2023
+ms.topic: concept-article
+ms.date: 7/24/2024
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # What licenses do you need to use dataflows?
@@ -19,7 +20,7 @@ A Power BI Pro account is available on a user-monthly basis. Multiple options ar
 
 ## Creating dataflows in Microsoft Power Platform environments
 
-If you want to create dataflows in the Microsoft Power Platform environment, a Power Apps (per-user or per-app) license is required.
+If you want to create dataflows in the Microsoft Power Platform environment, a Power Apps Premium, Power Apps Per User plan  (P1 legacy license) or Power Apps Per App plan (P2 legacy license) is required. For more information, go to [Purchase Power Apps for your organization](/power-platform/admin/signup-for-powerapps-admin).
 
 If you want to create analytical dataflows that store data in your organization's Azure Data Lake Storage Gen2 account, you or your administrator need access to an Azure subscription and an Azure Data Lake Storage Gen2 account.
 
@@ -64,13 +65,14 @@ The Power Apps per-app plan covers up to a 50-MB database capacity. The Power Ap
 The following limitations are in place in Power Apps:
 
 - A dataflow refresh can run for a maximum of 24 hours.
+- A dataflow can be refreshed up to 48 times per 24 hours (once every 30 minutes).
 - Each query/partition has a maximum run duration of four hours.
 - For each refresh, there's a concurrency limit of four queries/partitions that can refresh simultaneously.
 - Power Query Online refresh limits apply for each user. More information: [Refresh limits](../power-query-online-limits.md#refresh-limits)
 
 ### Power BI Pro
 
-Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed tables, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content. Currently, we don't report the current storage usage of dataflows in the [Power BI portal](/power-bi/admin/service-admin-manage-your-data-storage-in-power-bi). You'll be notified if you've almost reached the limit of the left over capacity.
+Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed tables, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content. Currently, we don't report the current storage usage of dataflows in the [Power BI portal](/power-bi/admin/service-admin-manage-your-data-storage-in-power-bi). You'll be notified if you've almost reached the limit of the left over capacity. When you migrate an existing workspace from Power BI Premium back to Power BI Pro, dataflows may no longer support refresh operations through the UI due to a known limitation. As a workaround, you can re-enable refresh by editing and saving the dataflow.
 
 ### Power BI Premium
 
@@ -78,11 +80,11 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 #### Limitations per premium capacity
 
-Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. [This table](/power-bi/developer/embedded/embedded-capacity#sku-memory-and-computing-power) represents the maximum number of parallel tasks that can be run at a given time by all dataflows in a workspace mapped to the capacity.
+Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. [This table](/power-bi/enterprise/service-premium-what-is#dataflows-gen1) represents the maximum number of parallel tasks that can be run at a given time by all dataflows in a workspace mapped to the capacity.
 
 #### Parallel tasks
 
-A premium capacity can run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consists of 84 tasks. You refresh your dataflow and the first 64 tasks are allocated for the refresh. The 20 left over evaluations for this dataflow are parked in a queue. Once one of the evaluations is finished, it starts with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity while the other is still running, it gets parked in the same queue of the premium capacity and needs to wait on the other dataflows in the workspace to start the refresh of your data.
+A premium capacity can run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consists of 84 tasks. You refresh your dataflow and the first 64 tasks are allocated for the refresh. The 20 left over evaluations for this dataflow are parked in a queue. Once one of the evaluations is finished, it starts with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity while the other is still running, it gets parked in the same queue of the premium capacity. The new dataflow needs to wait on the other dataflows in the workspace to start the refresh of your data.
 
 You can use the following pointers to estimate the number of tasks of your dataflow refresh:
 
@@ -100,9 +102,9 @@ To lower the number of tasks or improve the efficiency of your tasks, you can us
 
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 
-To create dataflows that store data in your organization's Azure Data Lake Storage account, in addition to the product licenses above, you must have an Azure subscription. The amount of storage that can be used isn't limited by the dataflow or the product it was created in.
+To create dataflows that store data in your organization's Azure Data Lake Storage account, in addition to the previously listed product licenses, you must have an Azure subscription. The amount of storage that can be used isn't limited by the dataflow or the product it was created in.
 
-## Next step
+## Related content
 
 If you want to read more details about the concepts discussed in this article, go to any of the following links.
 
@@ -119,3 +121,6 @@ If you want to read more details about the concepts discussed in this article, g
 - [AI capabilities in Power BI dataflows](/power-bi/service-machine-learning-automated)
 - [Standard vs. analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md)
 - [The enhanced compute engine](/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
+
+
+

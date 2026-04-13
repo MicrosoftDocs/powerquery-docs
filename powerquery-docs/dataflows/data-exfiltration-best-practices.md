@@ -1,10 +1,11 @@
 ---
 title: Data exfiltration considerations and best practices for dataflows
 description: Learn the security best practices for protection against data exfiltration when using Dataflows.
-author: nikkiwaghani
-ms.author: nikkiwaghani
-ms.topic: overview
-ms.date: 7/27/2023
+author: whhender
+ms.author: whhender
+ms.topic: concept-article
+ms.date: 6/13/2025
+ms.subservice: dataflows
 ---
 
 # Data exfiltration considerations and best practices for dataflows
@@ -23,7 +24,7 @@ A trusted user who has access to sensitive data can author a program to push the
 * Cross data source filtering and joins: Sensitive data can be used as filtering or join conditions against another untrusted data source. Specifically, data can travel to the untrusted data source in the form of query strings or parameters.
 * Output destinations: By using Fabric [dataflows](/fabric/data-factory/create-first-dataflow-gen2), users can specify output destinations for their queries, thereby transferring data to a list of supported data sinks, which includes Azure SQL databases and data warehouses, Fabric Lakehouses, Warehouses, and KQL databases.
 
-:::image type="content" source="media\service-gateway-dataflow-best-practices\artbitrary-code-execution.png" alt-text="Image of how M Programs that run on the cloud can execute arbitrary code and connect to untrusted data sources" lightbox="media\service-gateway-dataflow-best-practices\artbitrary-code-execution.png":::
+:::image type="content" source="media\service-gateway-dataflow-best-practices\artbitrary-code-execution.png" alt-text="Image of how M Programs that run on the cloud can execute arbitrary code and connect to untrusted data sources." lightbox="media\service-gateway-dataflow-best-practices\artbitrary-code-execution.png":::
 
 ### Cross-tenant data movement
 
@@ -40,7 +41,7 @@ DLP policies can operate at various OSI layers. In general, the more sensitive t
 
 ### Network isolation
 
-We recommend that all data stores containing sensitive data be network isolated to permit access only from selected networks. This isolation restriction must be defined and operated at the network layer or lower. For example, layer 3 firewalls, Network Security Groups (NSGs), and Azure Private Links are good examples of mechanisms that can be used. However, location-based conditional access policies in Azure Active Directory (Azure AD) operate at the application layer and are considered insufficient for this purpose.
+We recommend that all data stores containing sensitive data be network isolated to permit access only from selected networks. This isolation restriction must be defined and operated at the network layer or lower. For example, layer 3 firewalls, Network Security Groups (NSGs), and Azure Private Links are good examples of mechanisms that can be used. However, location-based conditional access policies in Microsoft Entra ID operate at the application layer and are considered insufficient for this purpose.
 
 These network isolation policies must obstruct line of sight from dataflows' cloud execution engine to sensitive data stores (since the cloud engine runs on the public internet). Dataflows' connectivity to these data stores is then forced to originate from within one of the permitted networks by binding connections to an on-premises data gateway or VNet data gateway. An important execution characteristic of dataflows is that cloud-based evaluation and gateway-based evaluation are never blended. If a dataflow needs to access a network isolated data store (and is therefore bound to a gateway), all data access is then required to flow through the gateway. Additionally, since gateways physically reside in networks controlled by the user tenant, they comply with network level restrictions such as firewalls and DLP protection solutions. These restrictions make gateway environments as secure and safe as any corporate managed devices and mitigate risks associated with arbitrary code execution in a cloud environment.
 
@@ -56,18 +57,17 @@ The goal for isolating sensitive data store to selected networks is to force the
 * Power Platform dataflows
 * Azure Data Factory wrangling dataflows
 * Dataflows in Dynamics 365 (Customer Insights, Intelligent Order Management, and so on)
-* Power BI Datamart
 * Power BI Quick Import from SharePoint
 
 After application of the policy, all cloud-based execution fails with the following error: `Cloud evaluation request denied based on tenant policies. Please use a data gateway and try again.` This error effectively forces all query evaluations in the tenant to occur on gateways, without first rolling out a full network isolation solution. Note that the policy is applied to the entire tenant and not a subset of workloads. This policy means existing workloads fail immediately and require manual intervention to convert to run on gateways. Organizations applying this policy should also ensure that they have enough capacity in their gateway clusters to accommodate all their workloads.
 
 ### Tenant isolation
 
-For most software-as-a-service (SaaS) layer data stores, such as Fabric Lakehouse and Power Platform Dataverse, there's usually a multi-tenant endpoint that one communicates with to gain access to the data. These endpoints are common across all users of the service, so they can be difficult to isolate and protect solely using network (Layer 3) isolation techniques. The recommended approach for this kind of data store is to use Layer 7 policies, typically provided by Azure Active Directory:
+For most software-as-a-service (SaaS) layer data stores, such as Fabric Lakehouse and Power Platform Dataverse, there's usually a multi-tenant endpoint that one communicates with to gain access to the data. These endpoints are common across all users of the service, so they can be difficult to isolate and protect solely using network (Layer 3) isolation techniques. The recommended approach for this kind of data store is to use Layer 7 policies, typically provided by Microsoft Entra ID:
 
-* Allow only Azure AD authentication. Remove anonymous and username/password authentication schemes from the data store.
+* Allow only Microsoft Entra ID authentication. Remove anonymous and username/password authentication schemes from the data store.
 * Use location policies to allow sign-in to the secured tenant only from managed devices. [Learn more](/azure/active-directory/conditional-access/location-condition).
-* Disallow unknown tenant sign-ins from managed devices by using Azure AD tenant restrictions. Use tenant restrictions to manage access to SaaS apps. [Learn more](/azure/active-directory/manage-apps/tenant-restrictions).
+* Disallow unknown tenant sign-ins from managed devices by using Microsoft Entra ID tenant restrictions. Use tenant restrictions to manage access to SaaS apps. [Learn more](/entra/identity/enterprise-apps/tenant-restrictions).
 
 This approach restricts access to the tenant’s sensitive data stores to a set of managed devices where signing into another tenant isn't permitted, effectively isolating data movement across the tenant.
 

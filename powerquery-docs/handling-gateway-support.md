@@ -2,9 +2,11 @@
 title: Gateway Support for Power Query connectors
 description: Manage gateway support for Power Query connectors, including test connection
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 1/9/2023
 ms.author: miescobar
+ms.subservice: custom-connectors
+ms.custom: sfi-ropc-blocked
 ---
 
 # Handling Gateway Support

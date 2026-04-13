@@ -1,35 +1,33 @@
 ---
 title: Power Query OpenSearchProject Connector
 description: Provides basic information and prerequisites for the OpenSearchProject connector, includes descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
-author: bezhan-msft
-ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+author: whhender
+ms.topic: concept-article
+ms.date: 9/11/2025
+ms.author: whhender
+ms.subservice: connectors
 ---
 
 # OpenSearch Project (Beta)
 
 >[!Note]
->The following connector article is provided by OpenSearch, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the OpenSearch website and use the support channels there.
+>This connector is owned and provided by OpenSearch Project.
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic |
 
 ## Prerequisites
 
-* Microsoft Power BI Desktop
-* [OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/)
-* [OpenSearch SQL ODBC driver](https://opensearch.org/docs/latest/search-plugins/sql/sql/odbc/)
+[!INCLUDE [Includes_opensearch-project_prerequisites](includes/opensearch-project/opensearch-project-prerequisites.md)]
 
 ## Capabilities supported
 
-* Import
-* DirectQuery (Power BI Datasets)
+[!INCLUDE [Includes_opensearch-project_capabilities-supported](includes/opensearch-project/opensearch-project-capabilities-supported.md)]
 
 ## Connect to OpenSearch Project
 

@@ -1,10 +1,11 @@
 ---
 title: Power Query Hadoop File (HDFS) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Hadoop File (HDFS), along with native query folding instructions and troubleshooting tips.
-author: bezhan-msft
-ms.topic: conceptual
-ms.date: 12/18/2023
-ms.author: bezhan
+author: whhender
+ms.topic: concept-article
+ms.date: 1/24/2024
+ms.author: whhender
+ms.subservice: connectors
 ---
 
 # Hadoop File (HDFS)
@@ -14,16 +15,16 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)|
+| Products | Excel<br/>Power BI (Semantic models)|
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft account |
 | Function Reference Documentation | [Hdfs.Contents](/powerquery-m/hdfs-contents)<br/>[Hdfs.Files](/powerquery-m/hdfs-files) |
 
 > [!NOTE]
-> The Power Query Hadoop File (HDFS) connector doesn't support scheduled refresh of on-premises data sources in Power BI datasets or Excel.
+> The Power Query Hadoop File (HDFS) connector doesn't support scheduled refresh of on-premises data sources in Power BI semantic models or Excel.
 
 ## Capabilities Supported
 
-- Import
+[!INCLUDE [Includes_hadoop-file-system_capabilities-supported](includes/hadoop-file-system-capabilities-supported.md)]
 
 ## Connect to Hadoop Files (HDFS) from Power Query Desktop
 

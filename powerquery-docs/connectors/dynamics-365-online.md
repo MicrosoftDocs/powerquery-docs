@@ -1,10 +1,11 @@
 ---
 title: Power Query Dynamics 365 Online (legacy) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Dynamics 365 Online (legacy).
-author: bezhan-msft
-ms.topic: conceptual
-ms.date: 05/05/2023
-ms.author: bezhan
+author: whhender
+ms.topic: concept-article
+ms.date: 1/24/2024
+ms.author: whhender
+ms.subservice: connectors
 ---
 
 # Dynamics 365 Online (legacy)
@@ -16,12 +17,12 @@ This article provides basic information, prerequisites, and instructions on how 
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel <br/> Power BI (Datasets)<br/> Analysis Services|
+| Products | Excel <br/> Power BI (Semantic models)<br/> Analysis Services|
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational account |
 
 ## Capabilities supported
 
-- Import
+[!INCLUDE [Includes_dynamics-365-online_capabilities-supported](includes/dynamics-365-online-capabilities-supported.md)]
 
 ## Connect to Dynamics 365 Online (legacy) from Power Query Desktop
 
@@ -37,10 +38,10 @@ To make the connection to **Dynamics 365 Online (legacy)**, follow these steps:
 
    :::image type="content" source="./media/dynamics-365/enter-web-api-url.png" alt-text="Screenshot of the Dynamics 365 Online (legacy) dialog, showing an example format web api url.":::
 
-   >[!NOTE]
-   > - The url format will be something like `https://<tenant>.crm.dynamics.com/api/data/v9.0.`
-   > - The exact format of the URL you will use to connect depends on your region. For more information, see: [Web API URL and versions (docs.com)](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#web-api-url-and-versions).
-   > - If you select the **Advanced** option, you can append certain additional parameters to the query to control what data is returned. For more information, see: [Query Data using the Web API (docs.com)](/power-apps/developer/data-platform/webapi/query-data-web-api).
+   > [!NOTE]
+   > - The url format is something like `https://<tenant>.crm.dynamics.com/api/data/v9.0.`
+   > - The exact format of the URL you use to connect depends on your region. For more information, go to [Web API URL and versions (docs.com)](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#web-api-url-and-versions).
+   > - If you select the **Advanced** option, you can append certain additional parameters to the query to control what data is returned. For more information, go to [Query Data using the Web API (docs.com)](/power-apps/developer/data-platform/webapi/query-data-web-api).
 
 1. Select **OK**.
 

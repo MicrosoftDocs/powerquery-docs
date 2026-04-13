@@ -2,9 +2,10 @@
 title: Versioning for Power Query connectors
 description: Manage versioning for Power Query connectors
 author: ptyx507x
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 6/20/2022
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Versioning

@@ -1,10 +1,12 @@
 ---
 title: Power Query Sybase database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Sybase database.
-author: bezhan-msft
-ms.topic: conceptual
-ms.date: 9/2/2022
-ms.author: bezhan
+author: whhender
+ms.topic: concept-article
+ms.date: 1/24/2024
+ms.author: whhender
+ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Sybase database
@@ -14,24 +16,19 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Database<br/>Windows |
 
->[!Note]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
-Before you can connect to a Sybase database, you need the [SAP SQL Anywhere](https://scn.sap.com/docs/DOC-35857?d96a349c52fc4f68eea46a47ccb3d360) driver installed on your computer. Select the driver that matches your Excel installation (32-bit or 64-bit).
+[!INCLUDE [Includes_sybase-database_prerequisites](includes/sybase-database/sybase-database-prerequisites.md)]
 
 ## Capabilities Supported
 
-* Import
-* Advanced options
-  * Command timeout in minutes
-  * SQL statement
-  * Include relationship columns
-  * Navigate using full hierarchy
+[!INCLUDE [Includes_sybase-database_capabilities-supported](includes/sybase-database/sybase-database-capabilities-supported.md)]
 
 ## Connect to a Sybase database from Power Query Desktop
 
@@ -41,42 +38,20 @@ To make the connection, take the following steps:
 
 2. Specify the Sybase server to connect to in **Server** and the database where your data is stored in **Database**.
 
-   ![Enter the Sybase database connection.](./media/sybase-database/connection-settings.png)
+   :::image type="content" source="./media/sybase-database/connection-settings.png" alt-text="Enter the Sybase database connection.":::
 
 3. Select **OK**.
 
 4. If this is the first time you're connecting to this Sybase server and database, select the authentication type you want to use, enter your credentials, and then select **Connect**. For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   ![Enter your Sybase database credentials.](./media/sybase-database/enter-credentials.png)
+   :::image type="content" source="./media/sybase-database/enter-credentials.png" alt-text="Enter your Sybase database credentials.":::
 
 5. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
-   [![Select the data you require from the database](./media/sybase-database/navigator-desktop.png)](./media/sybase-database/navigator-desktop.png#lightbox)
-
+   :::image type="content" source="./media/sybase-database/navigator-desktop.png" lightbox="./media/sybase-database/navigator-desktop.png" alt-text="Select the data you require from the database":::
 ## Connect to a Sybase database from Power Query Online
 
-To make the connection, take the following steps:
-
-1. Select the **Sybase database** option in the **Choose data source** page. More information: [Where to get data](../where-to-get-data.md)
-
-2. Specify the Sybase server to connect to in **Server** and the database where your data is stored in **Database**.
-
-3. Select the name of your on-premises data gateway.
-
-   >[!Note]
-   > You must select an on-premises data gateway for this connector, whether the Sybase database is on your local network or online.
-
-4. If this is the first time you're connecting to this Sybase server and database, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created in the Sybase database instead of Windows authentication.  For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
-
-5. Enter your credentials.
-
-6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
-
-   [![Enter Sybase database online connection.](./media/sybase-database/data-source-online.png)](./media/sybase-database/data-source-online.png#lightbox)
-
-7. Select **Next** to continue.
-
-8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
+[!INCLUDE [Includes_sybase-database_connect-to-power-query-online](includes/sybase-database/sybase-database-connect-to-power-query-online.md)]
 
 ## Connect using advanced options
 

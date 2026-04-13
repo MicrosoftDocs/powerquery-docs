@@ -1,10 +1,12 @@
 ---
 title: Power Query XML connector
 description: Provides basic information and how to connect to your data, along with troubleshooting tips on data shaping and issues with documents containing both text and nodes.
-author: bezhan-msft
-ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+author: whhender
+ms.topic: concept-article
+ms.date: 1/24/2024
+ms.author: whhender
+ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # XML
@@ -14,15 +16,15 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Function Reference Documentation | [Xml.Tables](/powerquery-m/xml-tables)<br/>[Xml.Document](/powerquery-m/xml-document) |
 
->[!Note]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]
+>Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
 
-* Import
+[!INCLUDE [Includes_xml_capabilities-supported](includes/xml-capabilities-supported.md)]
 
 ## Load a local XML file from Power Query Desktop
 
@@ -30,13 +32,13 @@ To load a local XML file:
 
 1. Select the **XML** option in the **Get Data** selection. This action will launch a local file browser and allow you to select your XML file.
 
-   ![XML file selection.](./media/xml/xml-browse.png)
+   :::image type="content" source="./media/xml/xml-browse.png" alt-text="Screenshot of XML file selection.":::
 
 2. Browse to the directory containing the local XMl file you want to load, and then select **Open**.
 
 3. In **Navigator**, select the data you want, and then either select **Load** to load the data, or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Loading data from a XML file in the Navigator.](./media/xml/xml-navigator.png)
+   :::image type="content" source="./media/xml/xml-navigator.png" alt-text="Screenshot of loading data from an XML file in the Navigator.":::
 
 ## Load a local XML file from Power Query Online
 
@@ -46,7 +48,7 @@ To load a local XML file:
 
 2. Enter the path to the local XML file.
 
-   ![XML file selection from an online service.](./media/xml/xml-connection-online.png)
+   :::image type="content" source="./media/xml/xml-connection-online.png" alt-text="Screenshot of XML file selection from an online service.":::
 
 3. Select an on-premises data gateway from **Data gateway**.
 
@@ -56,7 +58,7 @@ To load a local XML file:
 
 Loading the XML file will automatically launch the Power Query Editor. From the editor, you can then transform the data if you want, or you can just save and close to load the data.
 
-![XML file loaded in the Power Query Editor](./media/xml/xml-power-query-online.png)
+:::image type="content" source="./media/xml/xml-power-query-online.png" alt-text="Screenshot of XML file loaded in the Power Query Editor.":::
 
 ## Load an XML file from the web
 
