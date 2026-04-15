@@ -22,7 +22,7 @@ So far, you completed the following steps:
 * Downloaded the test suite
 * Learned various file formats and their functionality
 
-You're finally ready to start verifying your extension connector with the test suite. This section focuses on using the integrated **Test Explorer** in Visual Studio Code, which provides a rich UI for discovering, running, and debugging tests. Under the hood, this integration leverages the [Visual Studio Code Testing API](https://code.visualstudio.com/api/extension-guides/testing) and executes tests using the `PQTest` utility's `run-compare` command (see [PQTest run-compare documentation](placeholder-link)).
+You're finally ready to start verifying your extension connector with the test suite. This section focuses on using the integrated **Test Explorer** in Visual Studio Code, which provides a rich UI for discovering, running, and debugging tests. Under the hood, this integration uses the [Visual Studio Code Testing API](https://code.visualstudio.com/api/extension-guides/testing) and executes tests using the `PQTest` utility's `run-compare` command (see [PQTest run-compare documentation](placeholder-link)).
 
 In this section, you:
 
@@ -35,16 +35,16 @@ In this section, you:
 
 ## Prerequisites
 
-To use the Test Explorer integration, ensure you have the following:
+To use the Test Explorer integration, ensure you have the following prerequisites:
 
 * **Visual Studio Code**: Version 1.100 or later.
-* **Power Query SDK Extension**: Ensure the [Power Query SDK extension](../install-sdk.md) is installed and updated to version 0.7.0 or later. Your connector project must be recognized by the Power Query SDK. This is indicated by the **Power Query SDK** section in the Explorer pane displaying the project tasks.
+* **Power Query SDK Extension**: Ensure the [Power Query SDK extension](../install-sdk.md) is installed and updated to version 0.7.0 or later. Your connector project is recognized by the Power Query SDK as indicated by the **Power Query SDK** section in the Explorer pane displaying the project tasks.
 
    :::image type="content" source="../media/power-query-sdk-vs-code/ui-driven-tasks.jpg" alt-text="Tasks inside the Power Query SDK section.":::
 
 ## Configuration
 
-To enable the Test Explorer to find and run your tests, you need to configure specific test settings file(s) and your VS Code workspace settings.
+To enable the Test Explorer to find and run your tests, you need to configure one or more specific test settings files and your Visual Studio Code workspace settings.
 
 ### 1. Test Settings File (`.testsettings.json`)
 
@@ -69,7 +69,7 @@ You can create a new `.testsettings.json` file, or migrate an existing settings 
 
 You need to configure the Power Query SDK with the location of your test settings, your connector extension file, and the PQTest utility.
 
-1. Open your settings in VS Code.
+1. Open your settings in Visual Studio Code.
     * **Workspace Settings** (for project-specific paths): Open the Command Palette (**Ctrl+Shift+P** or **Cmd+Shift+P**), type **Preferences: Open Workspace Settings (JSON)** and select it.
     * **User Settings** (for global paths): Open the Command Palette, type **Preferences: Open User Settings (JSON)** and select it.
 
@@ -107,8 +107,8 @@ For detailed instructions, refer to the [Set credential](../power-query-sdk-vs-c
 
 Once configured, you can discover your tests in the Test Explorer view.
 
-1. Open the **Testing** view in Visual Studio Code (click the beaker icon in the Activity Bar).
-2. You should see your test settings file(s) listed.
+1. Open the **Testing** view in Visual Studio Code (Select the beaker icon in the Activity Bar).
+2. You should see your test settings files listed.
 3. Expand the nodes to see the discovered tests. The hierarchy mirrors your folder structure.
 
    :::image type="content" source="../connectors/media/test-framework/test-explorer-discovery.gif" alt-text="Animation showing test discovery in the Test Explorer.":::
@@ -117,9 +117,9 @@ Once configured, you can discover your tests in the Test Explorer view.
 
 If you add new tests, change the settings or test discovery fails for some reason, you can refresh the discovery:
 
-* **Refresh All Tests**: Click the **Refresh All Tests** button (circular arrow icon) at the top of the Test Explorer pane to rediscover tests for all settings files.
+* **Refresh All Tests**: Select the **Refresh All Tests** button (circular arrow icon) at the top of the Test Explorer pane to rediscover tests for all settings files.
    :::image type="content" source="../connectors/media/test-framework/test-explorer-refresh-all.gif" alt-text="Discover all tests for all settings files from Test Explorer.":::
-* **Refresh Tests referred by a Test Settings file**: Hover over a specific test settings file and click the **Refresh Tests** button (circular arrow icon) to rediscover tests for just that file.
+* **Refresh Tests referred by a Test Settings file**: Hover over a specific test settings file and select the **Refresh Tests** button (circular arrow icon) to rediscover tests for just that file.
 
    :::image type="content" source="../connectors/media/test-framework/test-explorer-refresh-item.gif" alt-text="Rediscover tests for a settings file from Test Explorer.":::
 
@@ -127,28 +127,28 @@ If you add new tests, change the settings or test discovery fails for some reaso
 
 You can run tests at various levels of granularity directly from the UI:
 
-* **Run All**: Click the **Run Tests** (play icon) at the top of the pane.
+* **Run All**: Select the **Run Tests** (play icon) at the top of the pane.
 
    :::image type="content" source="../connectors/media/test-framework/test-explorer-run-all.png" alt-text="Run all tests from Test Explorer.":::
 
-* **Run Group/Folder**: Hover over a folder or settings item and click the **Run Test** button.
+* **Run Group/Folder**: Hover over a folder or settings item and select the **Run Test** button.
 
    :::image type="content" source="../connectors/media/test-framework/test-explorer-run-group.png" alt-text="Run a group of tests from Test Explorer.":::
 
-* **Run Individual Test**: Hover over a specific test item and click the **Run Test** button.
+* **Run Individual Test**: Hover over a specific test item and select the **Run Test** button.
 
 > [!NOTE]
-> If you run a settings item that hasn't been discovered yet, the extension automatically discovers the tests before running them.
+> If you run a settings item that isn't yet discovered, the extension automatically discovers the tests before running them.
 
 As tests run, the status icons update in real-time to show progress (running, passed, or failed).
 
 ## Viewing Results and Debugging
 
-The **Test Results** pane (located in the bottom panel by default) displays the the raw test results from PQTest or any error messages. It also lists the last run history, showing passed and failed tests.
+The **Test Results** pane (located in the bottom panel by default) displays the raw test results from PQTest or any error messages. It also lists the last run history, showing passed and failed tests.
 
 ### Diff View for Failures
 
-If a test fails because the output didn't match the expected result, the Test Explorer provides a built-in diff view. Click on the failure in the Test Results pane to see a side-by-side comparison of the **Actual** vs. **Expected** output.
+If a test fails because the output didn't match the expected result, the Test Explorer provides a built-in diff view. Select the failure in the Test Results pane to see a side-by-side comparison of the **Actual** vs. **Expected** output.
 
    :::image type="content" source="../connectors/media/test-framework/test-explorer-diff-view.png" alt-text="Diff view in Test Explorer showing actual vs expected output for a failed test.":::
 
@@ -156,20 +156,20 @@ If a test fails because the output didn't match the expected result, the Test Ex
 
 If your test configuration enables query folding validation (by specifying a `DiagnosticsPath`), the extension also compares the generated diagnostics against the expected baseline.
 
-If a test fails due to a diagnostics mismatch, you can view the diff between the **Actual** and **Expected** diagnostics files by clicking on the failure in the Test Results pane.
+If a test fails due to a diagnostics mismatch, you can view the diff between the **Actual** and **Expected** diagnostics files by selecting the failure in the Test Results pane.
 
    :::image type="content" source="../connectors/media/test-framework/test-explorer-diagnostics-failure.png" alt-text="Diff view in Test Explorer showing actual vs expected diagnostics for a failed test.":::
 
 
 ### View Expected Output
 
-You can quickly view the expected output file (`.pqout`) for any test. To do this, either click the **View Expected Test Output** icon (clipboard) that appears when hovering over a test, or right-click the test item and select **View Expected Test Output** from the context menu. This action opens the corresponding `.pqout` file in the editor.
+You can quickly view the expected output file (`.pqout`) for any test. Either select the **View Expected Test Output** icon (clipboard) that appears when hovering over a test, or right-click the test item and select **View Expected Test Output** from the context menu. This action opens the corresponding `.pqout` file in the editor.
 
    :::image type="content" source="../connectors/media/test-framework/test-explorer-view-expected-output.png" alt-text="View Expected Test Output option in Test Explorer inline and context menu.":::
 
 ## Troubleshooting
 
-If you encounter issues, check the **Power Query SDK** output channel for logs. This can help you verify the `PQTest run-compare` command being executed and identify any unexpected behavior.
+If you encounter issues, check the **Power Query SDK** output channel for logs. It can help you verify the `PQTest run-compare` command being executed and identify any unexpected behavior.
 
    :::image type="content" source="../connectors/media/test-framework/test-explorer-output-channel.png" alt-text="Power Query SDK output channel showing PQTest command execution logs.":::
 
