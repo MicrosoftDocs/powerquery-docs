@@ -700,7 +700,11 @@ items:
           - name: "4. Test format specification"
             href: sdk-testframework/4-testformat.md
           - name: "5. Connector testing"
-            href: sdk-testframework/5-connector.md
+            items:
+            - name: "5a. Testing with VS Code"
+              href: sdk-testframework/5a-connector-testing-vscode.md
+            - name: "5b. Testing with PowerShell"
+              href: sdk-testframework/5b-connector-testing-powershell.md
           - name: "6. Adding tests"
             href: sdk-testframework/6-adding.md
           - name: "7. Pipeline setup guide"
