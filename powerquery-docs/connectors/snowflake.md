@@ -112,7 +112,7 @@ To enable you to take advantage of these performance and security enhancements, 
 Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", [Implementation="2.0"])
 ```
 
-To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs like the following example. If you encounter any issue during the transition, contact support. Meanwhile, to self-mitigate, you can remove `Implementation="2.0"` to keep using the ODBC connector to avoid business interruption before the issue is resolved.
+To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs like the following example. If you encounter any issue during the transition, contact support. Meanwhile, to self-mitigate, you can remove `Implementation="2.0"` to keep using the ODBC connector to avoid business interruption before the issue is resolved. However, if you're using Key Pair authentication, the ADBC driver is always used regardless of this setting.
 
 ```json
 {
