@@ -8,6 +8,9 @@ ms.author: whhender
 ms.subservice: custom-connectors
 ---
 
+> [!IMPORTANT]
+> The ***[run-compare](./pqtest-run-compare.md)*** command replaces the ***compare*** command. Please use the ***[run-compare](./pqtest-run-compare.md)*** command for any future regression testing of the Power Query connectors.
+
 # Regression testing with the compare command
 
 The PQTest ***compare*** command is a powerful tool for regression testing, enabling you to thoroughly evaluate the functions of the connector and the generation of command text. To illustrate its versatility, the subsequent sections will provide a variety of examples tailored to different scenarios.

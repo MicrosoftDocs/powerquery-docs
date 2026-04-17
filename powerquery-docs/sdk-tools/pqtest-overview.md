@@ -14,9 +14,9 @@ PQTest is the test harness that contains the commands and options to run tests, 
 
 The following articles describe the PQTest test harness and how it is used.
 
-|Part|Title                                                   |Details                                                    |
+|Part|Title                                                    |Details                                                   |
 |----|:--------------------------------------------------------|:---------------------------------------------------------|
-|1   |[Commands and Options](pqtest-commands-options.md)   | List of commands and options in the test harness.        |
+|1   |[Commands and Options](pqtest-commands-options.md)       | List of commands and options in the test harness.        |
 |2   |[General usage](pqtest-general-usage.md)                 | Using PQTest with your extension.                        |
 |3   |[Credentials](pqtest-credentials.md)                     | Understanding credential commands in PQTest.             |
-|4   |[Compare command](pqtest-compare.md)                     | Regression testing with the compare command.             |
+|4   |[Run-compare command](pqtest-run-compare.md)             | Regression testing with the run-compare command.         |
