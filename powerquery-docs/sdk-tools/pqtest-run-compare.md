@@ -10,7 +10,7 @@ ms.subservice: custom-connectors
 
 # Regression testing with the run-compare command
 
-The PQTest ***run-compare*** command is a powerful tool for regression testing, enabling you to thoroughly evaluate the functions of the connector and the generation of command text. To illustrate its versatility, the subsequent sections will provide a variety of examples tailored to different scenarios.
+The PQTest ***run-compare*** command is a powerful tool for regression testing, enabling you to thoroughly evaluate the functions of the connector and the generation of command text. To illustrate its versatility, the subsequent sections provide various examples tailored to different scenarios.
 
 > [!NOTE]
 > The ***run-compare*** command replaces the previous ***compare*** command.
@@ -19,7 +19,7 @@ The PQTest ***run-compare*** command is a powerful tool for regression testing, 
 
 The **run-compare** command supports two test input formats:
 
-- **Expression format**: A single M expression (for example, a `let` expression or function invocation). This is the simplest format and is suitable for most test scenarios.
+- **Expression format**: A single M expression (for example, a `let` expression or function invocation). This format is the simplest format and is suitable for most test scenarios.
 - **Section document format**: An M [section document](/powerquery-m/m-spec-sections) that contains one or more section members. This format is useful for tests that require helper functions, shared values, or more complex setups.
 
 When a test file uses the expression format, PQTest automatically converts it into a section document internally before evaluation. You can also write your test input directly as a section document.
@@ -47,13 +47,13 @@ in
     Result;
 ```
 
-When a parameter query is provided, it's appended to the section document as an additional section member. This means the parameter query is evaluated as part of the same section, enabling the test query to reference it directly.
+When a parameter query is provided, the parameter query is added as a section member to the section document. The parameter query is evaluated as part of the same section, enabling the test query to reference it directly.
 
 ## Basic queries
 
-The simplest form of testing is to add a single query expression to a .query.pq file, which you can execute using the
-***run-compare*** command. PQTest evaluates the expression and generates a .pqout (output) file with the same name. For any
-subsequent runs, it compares the output generated from evaluation of .query.pq file with the pqout (output) file with
+The simplest form of testing is to add a single query expression to a `.query.pq` file, which you can execute using the
+***run-compare*** command. PQTest evaluates the expression and generates a `.pqout` (output) file with the same name. For any
+subsequent runs, it compares the output generated from evaluation of `.query.pq` file with the `.pqout` (output) file with
 the same name and returns the output of the evaluation.
 
 ### Example 1 - Running run-compare command for a query file when an output file doesn't exist
@@ -154,15 +154,15 @@ the output file and returns the result.
 
 ## Testing with parameter query
 
-Parameter query is a query that is combined with a test query at runtime, with the parameter query running first. This functionality lets you split the PQ/test query file into two parts: the parameter query file, and the test query file.
+Parameter query is a query that is combined with a test query at runtime, with the parameter query running first. This functionality lets you split the ".query.pq" file into two parts: the parameter query file, and the test query file.
 
 ### Agnostic data source testing with parameter and test query format
 
-An example of a use case where this functionality would be useful is to create a data source agnostic test suite. The you can use your parameter query to retrieve data from the data source, and have the test query be generic M. If you would like to run the tests for another connector, you only need to add/update the parameter query to point to that specific data source.
+An example of a use case where this functionality would be useful is to create a data source agnostic test suite. You can use your parameter query to retrieve data from the data source, and have the test query be generic M. If you would like to run the tests for another connector, you only need to add/update the parameter query to point to that specific data source.
 
 A key difference when using a parameter query is that the test query follows a different format. Instead of being a formula expression, it must be an M function that takes one input parameter, which represents the table returned from the parameter query.
 
-When a parameter query is provided, it's appended to the end of the test's section document as an additional section member. The test and parameter inputs are then evaluated together as a single Mashup section document.
+When a parameter query is provided, the parameter query is added as a section member to the end of the test's section document. The test and parameter inputs are then evaluated together as a single Mashup section document.
 
 > [!NOTE]
 > If the parameter query file contains errors (for example, syntax errors or evaluation errors), PQTest reports a descriptive error indicating the issue with the parameter file rather than producing an unclear failure.
@@ -233,8 +233,8 @@ in
 
 ## Comparing diagnostics
 
-Extra diagnostic information can be evaluated when using the **run-compare** command by subscribing to a diagnostic channel. When the **run-compare** command is run, PQTest outputs a .diagnostics file for each subscribed channel that had an event. For any subsequent runs, it compares the diagnostic event with its .diagnostics file, similar to .pqout.
-
+Extra diagnostic information can be evaluated when using the **run-compare** command by subscribing to a diagnostic channel. When the **run-compare** command is run, PQTest outputs a `.diagnostics` file for each subscribed channel that had an event. For any subsequent runs, it compares the diagnostic event with its `.diagnostics` file, similar to `.pqout`.
+    
 ### Example 5 - Subscribing to the ODBC (Open Database Connectivity) diagnostic channel to validate query folding
 
 The following example shows how to subscribe to the ODBC channel, which captures any SQL generated by the ODBC driver when query folding is used.
@@ -255,7 +255,7 @@ in
     FirstN
 ```
 
-The query now folds and generates the following ODBC command text in the .diagnostics file:
+The query now folds and generates the following ODBC command text in the `.diagnostics` file:
 
 ```json
 [
@@ -278,9 +278,9 @@ Any command line input parameter for the **run-compare** command can also be pas
 | FailOnMissingOutputFile         | bool   | Run-compare doesn't generate a PQOut file and fails if it doesn't exist.                                                                                                                                                            |
 | FailOnFoldingFailure            | bool   | Run-compare fails if a query doesn't completely fold. When enabled, queries that can't be fully folded to the data source raise an error instead of falling back to local evaluation.                                                |
 | ParameterQueryFilePath          | string | Query file that contains M expressions, which is combined at runtime with the test query file. A common use case is to have a single parameter query file to specify an M expression to retrieve the data for multiple test queries. |
-| QueryFilePath                   | string | Query file that contains M expression (.pq) to be tested.                                                                                                                                                                           |
-| TrxReportPath                   | string | Generates a TRX (Visual Studio Test Results File) results file and separate JSON files for each test in a given path.                                                                                                               |
-| DiagnosticChannels              | array  | Name of diagnostic channels to be attached to the test run (for example, Odbc for capturing query folding statements).                                                                                                              |
+| QueryFilePath                   | string | Query file that contains M expression (`.pq`) to be tested.                                                                                                                                                                           |
+| TrxReportPath                   | string | Generates a `TRX` (Visual Studio Test Results File) results file and separate JSON files for each test in a given path.                                                                                                               |
+| DiagnosticChannels              | array  | Name of diagnostic channels to be attached to the test run (for example, `Odbc` for capturing query folding statements).                                                                                                              |
 | IntermediateTestResultsFolder   | string | Custom folder path for storing intermediate test results.                                                                                                                                                                           |
 | PersistIntermediateTestResults  | bool   | Keeps intermediate test results after test execution completes.                                                                                                                                                                     |
 
@@ -292,7 +292,7 @@ In the case that both command line input and settings option are provided, the c
 <Path to PQTest.exe>.\PQTest.exe run-compare -e contoso.mez -q contoso.query.pq -fomof
 ```
 
-The above command is equivalent to the following command:
+The command is equivalent to the following command:
 
 ```PowerShell
 <Path to PQTest.exe>.\PQTest.exe run-compare -sf settings.json
@@ -383,12 +383,12 @@ Multiple `--testFilter` options can be combined to create complex filtering logi
 
 | Pattern | Description |
 |---------|-------------|
-| `**/*.pq` | All .pq files in any directory |
-| `**/*.query.pq` | All .query.pq files in any directory |
-| `Suite1/**/*.pq` | All .pq files under Suite1 directory |
-| `**/test*.pq` | All .pq files starting with "test" |
+| `**/*.pq` | All `.pq` files in any directory |
+| `**/*.query.pq` | All `.query.pq` files in any directory |
+| `Suite1/**/*.pq` | All `.pq` files under Suite1 directory |
+| `**/test*.pq` | All `.pq` files starting with "test" |
 | `!BrokenTests/*` | Exclude all files in BrokenTests directory |
-| `!**/*temp*.pq` | Exclude all .pq files containing "temp" |
+| `!**/*temp*.pq` | Exclude all `.pq` files containing "temp" |
 | `SpecificTest.pq` | Include only the specific file |
 
 > [!NOTE]
@@ -396,7 +396,7 @@ Multiple `--testFilter` options can be combined to create complex filtering logi
 
 ## Listing test files without execution
 
-The `--listOnly` option allows you to preview which test files would be executed by the **run-compare** command without actually running the tests. This is useful for verifying test discovery and filter behavior.
+The `--listOnly` option allows you to preview which test files would be executed by the **run-compare** command without actually running the tests. This Option is useful for verifying test discovery and filter behavior.
 
 ### Example 9 - Listing test files
 
