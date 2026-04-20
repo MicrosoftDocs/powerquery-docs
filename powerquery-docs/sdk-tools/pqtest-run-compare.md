@@ -167,7 +167,7 @@ When a parameter query is provided, the parameter query is added as a section me
 > [!NOTE]
 > If the parameter query file contains errors (for example, syntax errors or evaluation errors), PQTest reports a descriptive error indicating the issue with the parameter file rather than producing an unclear failure.
 
-Let say you have the following test query:
+Let's say you have the following test query:
 
 ```powerquery-m
 let
@@ -187,7 +187,7 @@ let
     Source = Snowflake.Databases("...", "..."),
     Database = Source{[Name="...",Kind="Database"]}[Data],
     Schema = Database{[Name="...",Kind="Schema"]}[Data],
-    Taxi_Table = Schema{[Name="...",Kind="Table"]}[Data],
+    Taxi_Table = Schema{[Name="...",Kind="Table"]}[Data]
 in
     Taxi_Table
 ```
@@ -247,7 +247,7 @@ The ODBC diagnostic channel can be used to verify that a query is folding and th
 
 ```powerquery-m
 let
-    Source = AzureSpark.Tables("...")
+    Source = AzureSpark.Tables("..."),
     T1 = Source{[Schema="default",Item="DATABASE"]}[Data],
     SelectColumns = Table.Group(T1, {}, {{"Maximum", each List.Max([number_column]), type number}}),
     FirstN = Table.FirstN(SelectColumns, 1)
@@ -396,7 +396,7 @@ Multiple `--testFilter` options can be combined to create complex filtering logi
 
 ## Listing test files without execution
 
-The `--listOnly` option allows you to preview which test files would be executed by the **run-compare** command without actually running the tests. This Option is useful for verifying test discovery and filter behavior.
+The `--listOnly` option allows you to preview which test files would be executed by the **run-compare** command without actually running the tests. This option is useful for verifying test discovery and filter behavior.
 
 ### Example 9 - Listing test files
 
