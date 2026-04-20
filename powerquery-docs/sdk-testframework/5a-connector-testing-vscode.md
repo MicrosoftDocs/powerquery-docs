@@ -22,7 +22,7 @@ So far, you completed the following steps:
 * Downloaded the test suite
 * Learned various file formats and their functionality
 
-You're finally ready to start verifying your extension connector with the test suite. This section focuses on using the integrated **Test Explorer** in Visual Studio Code, which provides a rich UI for discovering, running, and debugging tests. Under the hood, this integration uses the [Visual Studio Code Testing API](https://code.visualstudio.com/api/extension-guides/testing) and executes tests using the `PQTest` utility's `run-compare` command (see [PQTest run-compare documentation](./sdk-tools/pqtest-run-compare.md)).
+You're finally ready to start verifying your extension connector with the test suite. This section focuses on using the integrated **Test Explorer** in Visual Studio Code, which provides a rich UI for discovering, running, and debugging tests. Under the hood, this integration uses the [Visual Studio Code Testing API](https://code.visualstudio.com/api/extension-guides/testing) and executes tests using the `PQTest` utility's `run-compare` command (see [PQTest run-compare documentation](./../sdk-tools/pqtest-run-compare.md)).
 
 In this section, you:
 
@@ -187,4 +187,4 @@ In the next section, you learn how to add your own custom tests to the framework
 
 ## Next steps
 
-[Power Query SDK test framework part 6 - Adding your tests](6-adding.md)
+[Power Query SDK test framework part 6 - Adding your tests](./6-adding.md)
