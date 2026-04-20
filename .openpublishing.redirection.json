@@ -531,9 +531,9 @@
       "redirect_document_id": "false"
     },
     {
-    "source_path": "powerquery-docs/sdk-testframework/5-connector.md",
-    "redirect_url": "powerquery-docs/sdk-testframework/5a-connector-testing-vscode.md",
-    "redirect_document_id": true
+      "source_path": "powerquery-docs/sdk-testframework/5-connector.md",
+      "redirect_url": "powerquery-docs/sdk-testframework/5a-connector-testing-vscode.md",
+      "redirect_document_id": "false"
     }
   ]
 }
