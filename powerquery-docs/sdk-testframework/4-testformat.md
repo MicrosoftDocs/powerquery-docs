@@ -126,4 +126,5 @@ In the next section, you create queries and settings to work with your data sour
 
 ## Next steps
 
-[Power Query SDK test framework part 5 - Testing your extension connector](./5-connector.md)
+[Power Query SDK test framework part 5a -  Testing your extension connector with Visual Studio Code](./5a-connector-testing-vscode.md)
+[Power Query SDK test framework part 5b -  Testing your extension connector with PowerShell](./5b-connector-testing-powershell.md)
