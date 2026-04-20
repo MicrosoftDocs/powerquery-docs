@@ -12,7 +12,7 @@ ms.custom: sfi-ropc-blocked
 # Power Query SDK test framework part 5b - Testing your extension connector with PowerShell
 
 > [!NOTE]
-> This article covers testing using the PowerShell utility. For testing using the Visual Studio Code Test Explorer, see [Power Query SDK test framework part 5a - Testing in Visual Studio Code](5a-connector-testing-vscode.md).
+> This article covers testing using the PowerShell utility. For testing using the Visual Studio Code Test Explorer, see [Power Query SDK test framework part 5a - Testing your extension connector with Visual Studio Code](./5a-connector-testing-vscode.md).
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. This reference is meant to be done sequentially to ensure that your environment is set up for testing your custom connector.
 

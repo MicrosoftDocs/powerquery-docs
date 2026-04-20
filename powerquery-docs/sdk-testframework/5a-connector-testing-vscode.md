@@ -1,10 +1,10 @@
 ---
 title: Testing your extension connector with Visual Studio Code
 description: Test your extension connector with Visual Studio Code Test Explorer using the provided test suite in the Power Query SDK test framework.
-author: gaganjot-kaur
+author: KazimMir
 ms.topic: reference
 ms.date: 01/07/2026
-ms.author: v-nfng
+ms.author: v-kmir
 ms.subservice: custom-connectors
 ---
 
@@ -13,7 +13,7 @@ ms.subservice: custom-connectors
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. This reference is meant to be done sequentially to ensure that your environment is set up for testing your custom connector.
 
 > [!NOTE]
-> This article covers testing using the **Visual Studio Code Test Explorer**. For the PowerShell utility method, see [Power Query SDK test framework part 5b - Testing your extension connector with PowerShell](5b-connector-testing-powershell.md).
+> This article covers testing using the **Visual Studio Code Test Explorer**. For the PowerShell utility method, see [Power Query SDK test framework part 5b - Testing your extension connector with PowerShell](./5b-connector-testing-powershell.md).
 
 So far, you completed the following steps:
 
@@ -22,7 +22,7 @@ So far, you completed the following steps:
 * Downloaded the test suite
 * Learned various file formats and their functionality
 
-You're finally ready to start verifying your extension connector with the test suite. This section focuses on using the integrated **Test Explorer** in Visual Studio Code, which provides a rich UI for discovering, running, and debugging tests. Under the hood, this integration uses the [Visual Studio Code Testing API](https://code.visualstudio.com/api/extension-guides/testing) and executes tests using the `PQTest` utility's `run-compare` command (see [PQTest run-compare documentation](placeholder-link)).
+You're finally ready to start verifying your extension connector with the test suite. This section focuses on using the integrated **Test Explorer** in Visual Studio Code, which provides a rich UI for discovering, running, and debugging tests. Under the hood, this integration uses the [Visual Studio Code Testing API](https://code.visualstudio.com/api/extension-guides/testing) and executes tests using the `PQTest` utility's `run-compare` command (see [PQTest run-compare documentation](./sdk-tools/pqtest-run-compare.md)).
 
 In this section, you:
 
