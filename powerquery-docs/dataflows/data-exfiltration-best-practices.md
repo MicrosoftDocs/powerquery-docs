@@ -10,6 +10,8 @@ ms.subservice: dataflows
 
 # Data exfiltration considerations and best practices for dataflows
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 [Fabric dataflows](/fabric/data-factory/data-factory-overview#dataflows) and [Power Platform dataflows](overview-dataflows-across-power-platform-dynamics-365.md) are Microsoft 365 services that enable users to easily connect to, extract, move, and transform data across hundreds of supported data sources. Dataflows build upon an underlying service called [Power Query Online](../power-query-what-is-power-query.md), which hosts the data movement engine (Mashup Engine) as a cloud service. By default, connectivity originates from this cloud location and has unrestricted access to the internet. Therefore, when using dataflows to access and move sensitive data, organizations should consider strategies to deter insiders from accidental or malicious data exfiltration. This article outlines known risk factors and best practices for safeguards.
 
 ## Considerations

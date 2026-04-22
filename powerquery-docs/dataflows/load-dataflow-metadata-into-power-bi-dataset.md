@@ -11,6 +11,8 @@ ms.custom: sfi-image-nochange
 
 # Load data in a Power BI streaming dataset and build a dataflows monitoring report with Power BI
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 > [!NOTE]
 > Microsoft has announced the retirement of real-time streaming in Power BI. Beginning October 31, 2024, creation of new real time semantic models is no longer supported. This includes Push semantic model, Streaming semantic model, PubNub streaming semantic model, and Streaming data tile. Beginning October 31, 2027, existing real-time semantic models will be retired and no longer supported. We are working with existing customers on migration, and this date is subject to change. For more information, go to [Announcing the retirement of real-time streaming in Power BI](https://powerbi.microsoft.com/blog/announcing-the-retirement-of-real-time-streaming-in-power-bi/).
 

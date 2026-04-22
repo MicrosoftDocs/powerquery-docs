@@ -11,6 +11,8 @@ ms.custom: sfi-image-nochange
 
 # Best practices for reusing dataflows across environments and workspaces
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 This article discusses a collection of best practices for reusing dataflows effectively and efficiently. Read this article to avoid design pitfalls and potential performance issues as you develop dataflows for reuse.
 
 ## Separate data transformation dataflows from staging/extraction dataflows

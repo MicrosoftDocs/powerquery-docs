@@ -11,6 +11,9 @@ ms.subservice: dataflows
 
 # Monitor your dataflow refreshes with Power BI
 
+> [!TIP]
+> Power BI Dataflows Gen1 is now in a legacy state. Rather than building a custom monitoring dashboard, [Dataflow Gen2](/fabric/data-factory/dataflows-gen2-overview) provides built-in refresh tracking through the [Monitoring hub](/fabric/data-factory/dataflows-gen2-monitor) in Microsoft Fabric, with real-time status, duration, and error details. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
+
 When working with any kind dataflows other than Power BI dataflows, you have the ability to monitor dataflow refreshes using Power BI. This article includes step by step instructions on how to set up your own dashboard to share with everyone on your team. This dashboard provides insights into the success rate of refreshes, duration, and much more.
 
 :::image type="content" source="media/monitor-dataflow-refreshes/dashboard-preview.png" alt-text="Screenshot of the dashboard with dataflow duration, refresh count, refresh success rate, percentage refresh type, and duration by dataflow graphs." lightbox="media/monitor-dataflow-refreshes/dashboard-preview.png":::

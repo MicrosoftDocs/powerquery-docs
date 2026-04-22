@@ -11,6 +11,9 @@ ms.subservice: dataflows
 
 # Automatically retry a dataflow on failure
 
+> [!TIP]
+> Power BI Dataflows Gen1 is now in a legacy state. Rather than configuring Power Automate flows for retry logic, [Dataflow Gen2](/fabric/data-factory/dataflows-gen2-overview) integrates directly with [Data Factory pipelines](/fabric/data-factory/dataflow-activity), which provide built-in retry policies, scheduling, and conditional execution. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
+
 In the scenario where you want to automatically retry a dataflow when the refresh fails, the Power Automate Connector is probably the way to go. In this tutorial, we'll guide you step by step in setting up your Power Automate flow.
 
 To automatically retry a dataflow on failure:

@@ -11,6 +11,8 @@ ms.custom: sfi-image-nochange
 
 # Load data in Excel Online and build a dataflows monitoring report with Power BI
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 This tutorial demonstrates how to use an Excel file and the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI.
 
 :::image type="content" source="media/load-dataflow-metadata-into-excel-online/dashboard.png" alt-text="Screenshot of an example Power BI monitoring dashboard.":::

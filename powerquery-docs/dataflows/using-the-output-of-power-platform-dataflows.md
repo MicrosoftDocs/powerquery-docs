@@ -10,6 +10,8 @@ ms.subservice: dataflows
 
 # Consume data from dataflows
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 The ways you can consume data from Microsoft dataflows depends on several factors, like storage and type of dataflow. In this article, you learn how to choose the right dataflow for your needs.
 
 ## Type of dataflow
