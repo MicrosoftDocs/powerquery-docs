@@ -10,6 +10,8 @@ ms.subservice: dataflows
 
 # Best practices for creating a dimensional model using dataflows
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 Designing a dimensional model is one of the most common tasks you can do with a dataflow. This article highlights some of the best practices for creating a dimensional model using a dataflow.
 
 ## Staging dataflows

@@ -10,6 +10,8 @@ ms.subservice: dataflows
 
 # Trigger dataflows and Power BI semantic models sequentially
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 There are two common scenarios for how you can use this connector to trigger multiple dataflows and Power BI semantic models sequentially.
 
 * Trigger the refresh of a standard dataflow after the successful completion of an analytical dataflow refresh.

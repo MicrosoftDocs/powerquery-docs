@@ -9,6 +9,8 @@ ms.subservice: dataflows
 ---
 # How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows
 
+[!INCLUDE [dataflow-gen2-recommendation](includes/dataflow-gen2-recommendation.md)]
+
 If you already have queries in Power Query, either in Power BI Desktop or in Excel, you might want to migrate the queries into dataflows. The migration process is simple and straightforward. In this article, you'll learn the steps to do so.
 
 To learn how to create a dataflow in Microsoft Power Platform, go to [Create and use dataflows in Power Platform](/data-integration/dataflows/dataflows-integration-overview). To learn how to create a dataflow in Power BI, go to [Creating and using dataflows in Power BI](/power-bi/service-dataflows-create-use).
