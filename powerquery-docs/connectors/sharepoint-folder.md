@@ -18,7 +18,7 @@ ms.custom:
 | --- | --- |
 | Release State | General Availability |
 | Products | Excel<br />Power BI (Semantic models)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2)<br />Power Apps (Dataflows)<br />Dynamics 365 Customer Insights |
-| Authentication Types Supported | Anonymous<br />Microsoft Account<br />Windows<br />Organizational Account |
+| [Authentication Types Supported](#authentication-types-supported) | Anonymous<br />Microsoft Account<br />Windows<br />Organizational Account |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br />[SharePoint.Files](/powerquery-m/sharepoint-files) |
 
 > [!NOTE]  
@@ -30,6 +30,15 @@ ms.custom:
 ## Capabilities supported
 
 [!INCLUDE [Includes_sharepoint-folder_capabilities-supported](includes/sharepoint-folder/sharepoint-folder-capabilities-supported.md)]
+
+## Authentication types supported
+
+>[!Note]
+> Workspace identity support for **SharePoint Files** is rolling out with recent service updates and is available only in supported Fabric-hosted experiences.  
+> Availability may vary by workload and host (for example, Power BI Desktop is not supported).
+
+
+[!INCLUDE [Includes_sharepoint-folder_authentication-types-supported](includes/sharepoint-folder/sharepoint-folder-authentication-types.md)]
 
 ## Determine the site URL
 

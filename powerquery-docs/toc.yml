@@ -717,6 +717,8 @@ items:
                 href: sdk-tools/pqtest-general-usage.md
               - name: Credentials
                 href: sdk-tools/pqtest-credentials.md
+              - name: Run-compare
+                href: sdk-tools/pqtest-run-compare.md
               - name: Compare
                 href: sdk-tools/pqtest-compare.md
       - name: Connector Samples & Walkthroughs
