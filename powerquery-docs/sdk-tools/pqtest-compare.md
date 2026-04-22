@@ -10,18 +10,21 @@ ms.subservice: custom-connectors
 
 # Regression testing with the compare command
 
-The PQTest ***compare*** command is a powerful tool for regression testing, enabling you to thoroughly evaluate the functions of the connector and the generation of command text. To illustrate its versatility, the subsequent sections will provide a variety of examples tailored to different scenarios.
+The PQTest ***compare*** command is a powerful tool for regression testing, enabling you to thoroughly evaluate the functions of the connector and the generation of command text. To illustrate its versatility, the subsequent sections provide various examples tailored to different scenarios.
+
+> [!IMPORTANT]
+> The ***[run-compare](./pqtest-run-compare.md)*** command replaces the ***compare*** command. Use the ***[run-compare](./pqtest-run-compare.md)*** command for any future regression testing of the Power Query connectors.
 
 ## Basic queries
 
-The simplest form of testing is to add a single query expression to a .query.pq file, which you can execute using the
-***compare*** command. PQTest evaluates the expression and generate a .pqout (output) file with the same name. For any
-subsequent runs, it compares the output generated from evaluation of .query.pq file with the pqout (output) file with
+The simplest form of testing is to add a single query expression to a `.query.pq` file, which you can execute using the
+***compare*** command. PQTest evaluates the expression and generate a `.pqout` (output) file with the same name. For any
+subsequent runs, it compares the output generated from evaluation of `.query.pq` file with the `.pqout` (output) file with
 the same name and returns the output of the evaluation.
 
 ### Example 1 - Running compare command for a query file when an output file doesn't exist
 
-The following example executes a single query test file using the specified Power Query extension and generates output
+The following example executes a single query test `.query.pq` file using the specified Power Query extension and generates output
 file to compare.
 
 ```PowerShell
@@ -121,7 +124,7 @@ Parameter query is a query that is combined with a test query at runtime, with t
 
 ### Agnostic data source testing with parameter and test query format
 
-An example of a use case where this functionality would be useful is to create a data source agnostic test suite. The you can use your parameter query to retrieve data from the data source, and have the test query be generic M. If you would like to run the tests for another connector, you only need to add/update the parameter query to point to that specific data source.
+An example of a use case where this functionality would be useful is to create a data source agnostic test suite. You can use your parameter query to retrieve data from the data source, and have the test query be generic M. If you would like to run the tests for another connector, you only need to add/update the parameter query to point to that specific data source.
 
 A key difference when using a parameter query is that the test query follows a different format. Instead of being a formula expression, it must be an M function that takes one input parameter, which represents the table returned from the parameter query.
 
@@ -191,7 +194,7 @@ in
 
 ## Comparing diagnostics
 
-Extra diagnostic information can be evaluated when using the **compare** command by subscribing to a diagnostic channel. When the **compare** command is run, PQTest outputs a .diagnostics file for each subscribed channel that had an event. For any subsequent runs, it compares the diagnostic event with its .diagnostics file, similar to .pqout.
+Extra diagnostic information can be evaluated when using the **compare** command by subscribing to a diagnostic channel. When the **compare** command is run, PQTest outputs a `.diagnostics` file for each subscribed channel that had an event. For any subsequent runs, it compares the diagnostic event with its `.diagnostics` file, similar to `.pqout`.
 
 ### Example 5 - Subscribing to the ODBC (Open Database Connectivity) diagnostic channel to validate query folding
 
@@ -213,7 +216,7 @@ in
     FirstN
 ```
 
-The query now folds and generates the following ODBC command text in the .diagnostics file:
+The query now folds and generates the following ODBC command text in the `.diagnostics` file:
 
 ```json
 [
@@ -233,12 +236,12 @@ Any command line input parameter for the **compare** command can also be passed 
 | Option                  | Type   | Description                                                                                                                                                                                                                         |
 | :---------------------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ExtensionPaths          | array  | Array of paths that point to connector file (mez/pqx).                                                                                                                                                                              |
-| FailOnMissingOutputFile | bool   | Compare doesn't generate a PQOut file and fails if it doesn't exist.                                                                                                                                                                |
+| FailOnMissingOutputFile | bool   | Compare doesn't generate a `.pqout` file and fails if it doesn't exist.                                                                                                                                                                |
 | FailOnFoldingFailure    | bool   | Compare fails if a query folding error is thrown.                                                                                                                                                                                   |
 | ParameterQueryFilePath  | string | Query file that contains M expressions, which is combined at runtime with the test query file. A common use case is to have a single parameter query file to specify an M expression to retrieve the data for multiple test queries.|
-| QueryFilePath           | string | Query file that contains M expression (.pq) to be tested.                                                                                                                                                                           |
-| TrxReportPath           | string | Generates a TRX (Visual Studio Test Results File) results file and separate JSON files for each test in a given path.                                                                                                               |
-| DiagnosticChannels      | array  | Name of diagnostic channels to be attached to the test run (for example, Odbc for capturing query folding statements).                                                                                                              |
+| QueryFilePath           | string | Query file that contains M expression (`.pq`) to be tested.                                                                                                                                                                           |
+| TrxReportPath           | string | Generates a `TRX` (Visual Studio Test Results File) results file and separate JSON files for each test in a given path.                                                                                                               |
+| DiagnosticChannels      | array  | Name of diagnostic channels to be attached to the test run (for example, `Odbc` for capturing query folding statements).                                                                                                              |
 
 In the case that both command line input and settings option are provided, the command line input is prioritized.
 
@@ -248,7 +251,7 @@ In the case that both command line input and settings option are provided, the c
 <Path to PQTest.exe>.\PQTest.exe compare -e contoso.mez -q contoso.query.pq -fomof
 ```
 
-The above command is equivalent to the following command:
+The command is equivalent to the following command:
 
 ```PowerShell
 <Path to PQTest.exe>.\PQTest.exe compare -sf settings.json

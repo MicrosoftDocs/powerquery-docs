@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: whhender
 ms.topic: concept-article
-ms.date: 11/24/2025
+ms.date: 04/08/2026
 ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -17,11 +17,8 @@ ms.custom: sfi-image-nochange
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
-| Authentication Types Supported | Snowflake (Username/Password), Microsoft account (Microsoft Entra ID), Key Pair Auth (ADBC)|
+| [Authentication Types Supported](#authentication-types-supported) | Snowflake (Username/Password), Microsoft account (Microsoft Entra ID), Key Pair Auth (ADBC), Service Principal (SPN)|
 | Function Reference Documentation | &mdash; |
-
-> [!NOTE]
-> The Snowflake connector implementation 2.0 is generally available since July 2025. Learn more about [this feature](#snowflake-connector-implementation-20).
 
 > [!NOTE]
 > The passphrase input field automatically appears only if necessary, based on the type of certificate uploaded. After the user uploads a certificate, the system detects whether it's encrypted or unencrypted and conditionally displays the passphrase dialog. Both encrypted and unencrypted keys are supported.
@@ -29,21 +26,21 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-> [!NOTE]
-> Username/password authentication mode will be deprecated by Snowflake (read [more here](https://www.snowflake.com/en/blog/blocking-single-factor-password-authentification/)). More information can be found under Connectivity on our [Fabric roadmap](https://roadmap.fabric.microsoft.com/?product=datafactory).
-
-> [!NOTE]
-> Key Pair Auth is not supported for Dataflows Gen1, and there are no plans to change this in the future.
-
 ## Capabilities Supported
 
 [!INCLUDE [Includes_snowflake_capabilities-supported](includes/snowflake/snowflake-capabilities-supported.md)]
 
+
+## Authentication types supported
+
+[!INCLUDE [includes-snowflake-authentication-types-supported](includes/snowflake/snowflake-authentication-types-supported.md)]
+
 ## Connect to Snowflake data warehouse from Power Query Desktop
 
 > [!NOTE]
->
-> Since the March 2025 version of Power BI Desktop, the [**Snowflake connector implementation 2.0**](#snowflake-connector-implementation-20) option is enabled by default.
+> All new connections use the [**Snowflake connector implementation 2.0**](#snowflake-connector-implementation-20) by default.
+> 
+> We recommend you update any connections created before March 2025 to [this new implementation.](#snowflake-connector-implementation-20)
 
 To make the connection to a **Snowflake** computing warehouse, take the following steps:
 
