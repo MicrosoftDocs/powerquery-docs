@@ -171,8 +171,6 @@ You can quickly view the expected output file (`.pqout`) for any test. Either se
 
 If you encounter issues, check the **Power Query SDK** output channel for logs. It can help you verify the `PQTest run-compare` command being executed and identify any unexpected behavior.
 
-   :::image type="content" source="../connectors/media/test-framework/test-explorer-output-channel.png" alt-text="Power Query SDK output channel showing PQTest command execution logs.":::
-
 ### Common Issues
 
 * **PQTest.exe not found**: Ensure the `powerquery.sdk.tools.location` setting points to the correct absolute path of the PQTest installation folder.
