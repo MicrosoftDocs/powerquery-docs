@@ -11,7 +11,7 @@ ms.subservice: dataflows
 # Create and use dataflows in Microsoft Power Platform
 
 > [!TIP]
-> Power BI Dataflows Gen1 is now in a legacy state. For new data preparation and integration projects, we recommend creating a [Dataflow Gen2 in Data Factory for Microsoft Fabric](/fabric/data-factory/create-first-dataflow-gen2), which uses the same Power Query experience with added support for more data destinations, pipeline orchestration, and built-in AI. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
+> Power BI Dataflow Gen1 is now in a legacy state and won't receive new feature investment. For new data preparation and integration projects, we recommend creating a [Dataflow Gen2 in Data Factory for Microsoft Fabric](/fabric/data-factory/create-first-dataflow-gen2), which uses the same Power Query experience with added support for more data destinations, pipeline orchestration, and built-in AI. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
 
 Using dataflows with Microsoft Power Platform makes data preparation easier, and lets you reuse your data preparation work in subsequent reports, apps, and models.
 

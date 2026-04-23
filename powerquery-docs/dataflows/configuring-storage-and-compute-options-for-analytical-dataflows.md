@@ -11,7 +11,7 @@ ms.subservice: dataflows
 # Dataflow storage options
 
 > [!TIP]
-> Power BI Dataflows Gen1 is now in a legacy state. Rather than choosing between Dataverse and Azure Data Lake Storage, [Dataflow Gen2](/fabric/data-factory/dataflows-gen2-overview) supports a wider range of [data destinations](/fabric/data-factory/dataflow-gen2-data-destinations-and-managed-settings) including Fabric Lakehouse, Warehouse, Azure SQL Database, and more — all configurable directly in the dataflow editor. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
+> Power BI Dataflow Gen1 is now in a legacy state and won't receive new feature investment. Rather than choosing between Dataverse and Azure Data Lake Storage, [Dataflow Gen2](/fabric/data-factory/dataflows-gen2-overview) supports a wider range of [data destinations](/fabric/data-factory/dataflow-gen2-data-destinations-and-managed-settings) including Fabric Lakehouse, Warehouse, Azure SQL Database, and more — all configurable directly in the dataflow editor. To learn about upgrading existing dataflows, see [Upgrade from Dataflow Gen1 to Dataflow Gen2](/fabric/data-factory/dataflow-gen2-migrate-from-dataflow-gen1).
 
 [Standard dataflows](understanding-differences-between-analytical-standard-dataflows.md) always load data into Dataverse tables in an environment. [Analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md) always load data into Azure Data Lake Storage accounts. For both dataflow types, there's no need to provision or manage the storage. Dataflow storage, by default, is provided and managed by products the dataflow is created in.
 
