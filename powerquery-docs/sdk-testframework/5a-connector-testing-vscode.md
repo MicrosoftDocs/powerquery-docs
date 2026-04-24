@@ -40,7 +40,7 @@ To use the Test Explorer integration, ensure you have the following prerequisite
 * **Visual Studio Code**: Version 1.100 or later.
 * **Power Query SDK Extension**: Ensure the [Power Query SDK extension](../install-sdk.md) is installed and updated to version 0.7.0 or later. Your connector project is recognized by the Power Query SDK as indicated by the **Power Query SDK** section in the Explorer pane displaying the project tasks.
 
-   :::image type="content" source="../media/power-query-sdk-vs-code/ui-driven-tasks.jpg" alt-text="Tasks inside the Power Query SDK section.":::
+   :::image type="content" source="../media/power-query-sdk-vs-code/ui-driven-tasks.jpg" alt-text="Screenshot of Tasks inside the Power Query SDK section.":::
 
 ## Configuration
 
@@ -111,17 +111,17 @@ Once configured, you can discover your tests in the Test Explorer view.
 2. You should see your test settings files listed.
 3. Expand the nodes to see the discovered tests. The hierarchy mirrors your folder structure.
 
-   :::image type="content" source="../connectors/media/test-framework/test-explorer-discovery.gif" alt-text="Animation showing test discovery in the Test Explorer.":::
+   :::image type="content" source="../connectors/media/test-framework/test-explorer-discovery.gif" alt-text="Screenshot of animation showing test discovery in the Test Explorer.":::
 
 ### Refreshing Tests
 
 If you add new tests, change the settings or test discovery fails for some reason, you can refresh the discovery:
 
 * **Refresh All Tests**: Select the **Refresh All Tests** button (circular arrow icon) at the top of the Test Explorer pane to rediscover tests for all settings files.
-   :::image type="content" source="../connectors/media/test-framework/test-explorer-refresh-all.gif" alt-text="Discover all tests for all settings files from Test Explorer.":::
+   :::image type="content" source="../connectors/media/test-framework/test-explorer-refresh-all.gif" alt-text="Screenshot of animation showing how to discover all tests for all settings files from Test Explorer.":::
 * **Refresh Tests referred by a Test Settings file**: Hover over a specific test settings file and select the **Refresh Tests** button (circular arrow icon) to rediscover tests for just that file.
 
-   :::image type="content" source="../connectors/media/test-framework/test-explorer-refresh-item.gif" alt-text="Rediscover tests for a settings file from Test Explorer.":::
+   :::image type="content" source="../connectors/media/test-framework/test-explorer-refresh-item.gif" alt-text="Screenshot of animation showing how to rediscover tests for a settings file from Test Explorer.":::
 
 ## Running Tests
 
@@ -129,11 +129,11 @@ You can run tests at various levels of granularity directly from the UI:
 
 * **Run All**: Select the **Run Tests** (play icon) at the top of the pane.
 
-   :::image type="content" source="../connectors/media/test-framework/test-explorer-run-all.png" alt-text="Run all tests from Test Explorer.":::
+   :::image type="content" source="../connectors/media/test-framework/test-explorer-run-all.png" alt-text="Screenshot of running all tests from Test Explorer.":::
 
 * **Run Group/Folder**: Hover over a folder or settings item and select the **Run Test** button.
 
-   :::image type="content" source="../connectors/media/test-framework/test-explorer-run-group.png" alt-text="Run a group of tests from Test Explorer.":::
+   :::image type="content" source="../connectors/media/test-framework/test-explorer-run-group.png" alt-text="Screenshot of running a group of tests from Test Explorer.":::
 
 * **Run Individual Test**: Hover over a specific test item and select the **Run Test** button.
 
@@ -150,7 +150,7 @@ The **Test Results** pane (located in the bottom panel by default) displays the 
 
 If a test fails because the output didn't match the expected result, the Test Explorer provides a built-in diff view. Select the failure in the Test Results pane to see a side-by-side comparison of the **Actual** vs. **Expected** output.
 
-   :::image type="content" source="../connectors/media/test-framework/test-explorer-diff-view.png" alt-text="Diff view in Test Explorer showing actual vs expected output for a failed test.":::
+   :::image type="content" source="../connectors/media/test-framework/test-explorer-diff-view.png" alt-text="Screenshot of diff view in Test Explorer showing actual vs expected output for a failed test.":::
 
 ### Query Folding Diagnostics
 
@@ -158,14 +158,13 @@ If your test configuration enables query folding validation (by specifying a `Di
 
 If a test fails due to a diagnostics mismatch, you can view the diff between the **Actual** and **Expected** diagnostics files by selecting the failure in the Test Results pane.
 
-   :::image type="content" source="../connectors/media/test-framework/test-explorer-diagnostics-failure.png" alt-text="Diff view in Test Explorer showing actual vs expected diagnostics for a failed test.":::
-
+   :::image type="content" source="../connectors/media/test-framework/test-explorer-diagnostics-failure.png" alt-text="Screenshot of diff view in Test Explorer showing actual vs expected diagnostics for a failed test.":::
 
 ### View Expected Output
 
 You can quickly view the expected output file (`.pqout`) for any test. Either select the **View Expected Test Output** icon (clipboard) that appears when hovering over a test, or right-click the test item and select **View Expected Test Output** from the context menu. This action opens the corresponding `.pqout` file in the editor.
 
-   :::image type="content" source="../connectors/media/test-framework/test-explorer-view-expected-output.png" alt-text="View Expected Test Output option in Test Explorer inline and context menu.":::
+   :::image type="content" source="../connectors/media/test-framework/test-explorer-view-expected-output.png" alt-text="Screenshot of View Expected Test Output option in Test Explorer inline and context menu.":::
 
 ## Troubleshooting
 
