@@ -21,5 +21,5 @@ To make the connection from Power Query Online:
 
 5. In **Navigator**, select the workbook information you want, and then  **Transform Data** to continue transforming the data in Power Query Editor.
 
-   :::image type="content" source="/power-query/connectors/media/excel/online-navigator-view.png" alt-text="Screenshot of the Excel workbook imported into the Power Query online Navigator." lightbox="../../media/excel/online-navigator-view.png":::
+   :::image type="content" source="/power-query/connectors/media/excel/online-navigator-view.png" alt-text="Screenshot of the Excel workbook imported into the Power Query online Navigator." lightbox="/power-query/connectors/media/excel/online-navigator-view.png":::
 

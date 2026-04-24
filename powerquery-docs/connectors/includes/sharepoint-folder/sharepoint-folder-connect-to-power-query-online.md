@@ -21,7 +21,7 @@ To connect to a SharePoint folder:
 
 1. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
-   :::image type="content" source="/power-query/connectors/media/sharepoint-folder/folder-info-online.png" alt-text="Screenshot of the online Navigator showing the folder information." lightbox="../../media/sharepoint-folder/folder-info-online.png":::
+   :::image type="content" source="/power-query/connectors/media/sharepoint-folder/folder-info-online.png" alt-text="Screenshot of the online Navigator showing the folder information." lightbox="/power-query/connectors/media/sharepoint-folder/folder-info-online.png":::
 
 1. Select **Combine** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query editor for editing.
 
