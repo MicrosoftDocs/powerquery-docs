@@ -23,5 +23,5 @@ ms.topic: include
 
 7. The **Choose data** page shows all files under the URL you provided. Verify the information and then select **Transform Data** to transform the data in Power Query.
 
-   :::image type="content" source="/power-query/connectors/media/azure-data-lake-storage-gen2/file-systems-online.png" alt-text="Screenshot of the Choose data page, containing the data from the Drivers.txt file." lightbox="../../media/azure-data-lake-storage-gen2/file-systems-online.png":::
+   :::image type="content" source="/power-query/connectors/media/azure-data-lake-storage-gen2/file-systems-online.png" alt-text="Screenshot of the Choose data page, containing the data from the Drivers.txt file." lightbox="/power-query/connectors/media/azure-data-lake-storage-gen2/file-systems-online.png":::
 

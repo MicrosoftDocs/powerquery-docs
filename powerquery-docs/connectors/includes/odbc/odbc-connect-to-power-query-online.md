@@ -21,5 +21,5 @@ To make the connection, take the following steps:
 
 6. In the **Navigator**, select the database information you want, and then select **Transform data** to continue transforming the data in the Power Query editor.
 
-   :::image type="content" source="/power-query/connectors/media/odbc/odbc-online-navigator.png" alt-text="Screenshot of the online navigator with employee information selected." lightbox="../../media/odbc/odbc-online-navigator.png":::
+   :::image type="content" source="/power-query/connectors/media/odbc/odbc-online-navigator.png" alt-text="Screenshot of the online navigator with employee information selected." lightbox="/power-query/connectors/media/odbc/odbc-online-navigator.png":::
 

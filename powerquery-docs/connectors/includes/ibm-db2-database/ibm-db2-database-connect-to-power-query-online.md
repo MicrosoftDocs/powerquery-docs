@@ -28,5 +28,5 @@ To make the connection, take the following steps:
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
 
-   :::image type="content" source="/power-query/connectors/media/ibm-db2/navigator-online.png" alt-text="Screenshot of the online navigator where you select the data you want to transform." lightbox="../../media/ibm-db2/navigator-online.png":::
+   :::image type="content" source="/power-query/connectors/media/ibm-db2/navigator-online.png" alt-text="Screenshot of the online navigator where you select the data you want to transform." lightbox="/power-query/connectors/media/ibm-db2/navigator-online.png":::
 

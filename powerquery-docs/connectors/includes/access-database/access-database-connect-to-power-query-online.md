@@ -11,7 +11,7 @@ To make the connection from Power Query desktop:
 
 2. In the **Access database** dialog that appears, enter the file path or URL address to the Access database. Or select **Upload file (Preview)** to upload the database.
 
-   :::image type="content" source="/power-query/connectors/media/access-database/online-select-database.png" alt-text="Screenshot of the online Connect to data source window where you enter the Access database information." lightbox="../../media/access-database/online-select-database.png":::
+   :::image type="content" source="/power-query/connectors/media/access-database/online-select-database.png" alt-text="Screenshot of the online Connect to data source window where you enter the Access database information." lightbox="/power-query/connectors/media/access-database/online-select-database.png":::
 
 3. Select the name of your on-premises data gateway.
 
@@ -26,5 +26,5 @@ To make the connection from Power Query desktop:
 
 7. In **Navigator**, select the data you require, and then select **Transform data** to continue transforming the data in Power Query Editor.
 
-   :::image type="content" source="/power-query/connectors/media/access-database/navigator-online.png" alt-text="Screenshot of the online Navigator where you select the data you want." lightbox="../../media/access-database/navigator-online.png":::
+   :::image type="content" source="/power-query/connectors/media/access-database/navigator-online.png" alt-text="Screenshot of the online Navigator where you select the data you want." lightbox="/power-query/connectors/media/access-database/navigator-online.png":::
 

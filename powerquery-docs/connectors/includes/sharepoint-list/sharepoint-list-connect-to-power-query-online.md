@@ -21,5 +21,5 @@ To connect to a SharePoint list:
 
 1. From the **Navigator**, you can select a location, then transform the data in the Power Query editor by selecting **Next**.
 
-   :::image type="content" source="/power-query/connectors/media/sharepoint-list/sharepoint-list-navigator-online.png" alt-text="Screenshot of the online Navigator where you select the items you want to use." lightbox="../../media/sharepoint-list/sharepoint-list-navigator-online.png":::
+   :::image type="content" source="/power-query/connectors/media/sharepoint-list/sharepoint-list-navigator-online.png" alt-text="Screenshot of the online Navigator where you select the items you want to use." lightbox="/power-query/connectors/media/sharepoint-list/sharepoint-list-navigator-online.png":::
 

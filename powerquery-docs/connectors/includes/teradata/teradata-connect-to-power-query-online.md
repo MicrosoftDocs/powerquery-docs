@@ -28,4 +28,4 @@ To make the connection, take the following steps:
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
 
-   :::image type="content" source="/power-query/connectors/media/teradata-database/navigator-online.png" lightbox="../../media/teradata-database/navigator-online.png" alt-text="Screenshot of the navigator, with a table selected as an example.":::
+   :::image type="content" source="/power-query/connectors/media/teradata-database/navigator-online.png" lightbox="/power-query/connectors/media/teradata-database/navigator-online.png" alt-text="Screenshot of the navigator, with a table selected as an example.":::
