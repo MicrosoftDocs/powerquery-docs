@@ -21,5 +21,5 @@ To load a local text or CSV file:
 
 6. From the **Navigator**, select **Transform Data** to begin transforming the data in the Power Query editor.
 
-   :::image type="content" source="/power-query/connectors/media/text-csv/csv-navigator-online.png" alt-text="Screenshot of the online navigator window where you select Transform data." lightbox="../../media/text-csv/csv-navigator-online.png":::
+   :::image type="content" source="/power-query/connectors/media/text-csv/csv-navigator-online.png" alt-text="Screenshot of the online navigator window where you select Transform data." lightbox="/power-query/connectors/media/text-csv/csv-navigator-online.png":::
 
