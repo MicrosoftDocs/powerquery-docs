@@ -529,6 +529,11 @@
       "source_path": "powerquery-docs/connectors/quickbooks-online.md",
       "redirect_url": "/power-query/connectors/",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/sdk-testframework/5-connector.md",
+      "redirect_url": "/power-query/sdk-testframework/5a-connector-testing-vscode",
+      "redirect_document_id": "false"
     }
   ]
 }
