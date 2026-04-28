@@ -70,6 +70,10 @@ To connect to Athena data:
 
     :::image type="content" source="./media/amazon-athena/amazon-athena-5.png" alt-text="Screenshot of a sample Amazon Athena data visualization.":::
 
+## Connect to Amazon Athena from Power Query Online
+
+[!INCLUDE [Includes_amazon-athena_connect-to-power-query-online](includes/amazon-athena/amazon-athena-connect-to-power-query-online.md)]
+
 ## Limitations and considerations
 
 [!INCLUDE [Includes_amazon-athena_limitations-and-considerations](includes/amazon-athena/amazon-athena-limitations-and-considerations.md)]

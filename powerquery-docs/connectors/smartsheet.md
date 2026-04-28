@@ -66,6 +66,10 @@ Once the connection is established, you see the folders and workspaces you have 
 
    :::image type="content" source="./media/smartsheet/navigator-view.png" alt-text="Screenshot of the navigator where you select the data you want to use." lightbox="./media/smartsheet/navigator-view.png":::
 
+## Connect to Smartsheet from Power Query Online
+
+[!INCLUDE [Includes_smartsheet_connect-to-power-query-online](includes/smartsheet/smartsheet-connect-to-power-query-online.md)]
+
 ## Getting Help
 
 If you run into problems when connecting to your data, [Contact Support](https://help.smartsheet.com/contact).

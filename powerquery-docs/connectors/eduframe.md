@@ -58,6 +58,10 @@ To connect to Eduframe Reporting data:
 
 8. In **Navigator**, select the information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
+## Connect to Eduframe Reporting from Power Query Online
+
+[!INCLUDE [Includes_eduframe_connect-to-power-query-online](includes/eduframe/eduframe-connect-to-power-query-online.md)]
+
 ## Limitations and considerations
 
 [!INCLUDE [Includes_eduframe_limitations-and-considerations](includes/eduframe/eduframe-limitations-and-considerations-include.md)]

@@ -54,6 +54,10 @@ To connect to Databricks using the Delta Sharing connector, use the following st
 
 8. Select **Connect**.
 
+## Connect to Delta Sharing from Power Query Online
+
+[!INCLUDE [Includes_delta-sharing_connect-to-power-query-online](includes/delta-sharing/delta-sharing-connect-to-power-query-online.md)]
+
 ## Limitations and considerations
 
 [!INCLUDE [Includes_delta-sharing_limitations-and-considerations](includes/delta-sharing/delta-sharing-limitations-and-considerations-include.md)]

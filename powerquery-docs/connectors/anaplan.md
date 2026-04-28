@@ -189,6 +189,10 @@ Once you create a scheduled refresh in Power BI service:
 * We recommend a refresh frequency that's less than every 15 days.
 * Apart from data refreshes, you need to reenter your sign-in credentials every 90 days.
 
+## Connect to Anaplan from Power Query Online
+
+[!INCLUDE [Includes_anaplan_connect-to-power-query-online](includes/anaplan/anaplan-connect-to-power-query-online.md)]
+
 ## Limitations and considerations
 
 [!INCLUDE [Includes_anaplan_limitations-and-considerations](includes/anaplan/anaplan-limitations-and-considerations-include.md)]
