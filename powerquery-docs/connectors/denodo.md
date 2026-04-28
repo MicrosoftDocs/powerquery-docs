@@ -141,6 +141,10 @@ To make the connection, take the following steps:
 
    :::image type="content" source="./media/denodo/denodo-navigator.png" alt-text="Screenshot of the Denodo navigator.":::
 
+## Connect to Denodo from Power Query Online
+
+[!INCLUDE [Includes_denodo_connect-to-power-query-online](includes/denodo/denodo-connect-to-power-query-online.md)]
+
 ## Connect to an ODBC data source from the Power BI service
 
 For this connection method, you use the on-premises data gateway. Follow these steps:
