@@ -70,5 +70,9 @@ To use the Profisee connector:
 
    :::image type="content" source="media/profisee/pconnector8.png" alt-text="Screenshot of the fields pane in Power BI Desktop.":::
 
+## Connect to Profisee from Power Query Online
+
+[!INCLUDE [Includes_profisee_connect-to-power-query-online](includes/profisee/profisee-connect-to-power-query-online.md)]
+
 > [!NOTE]
  >Relationships in Profisee aren't created in the model in Power BI. After the entities are loaded, you can view the model and create or modify relationships as desired.

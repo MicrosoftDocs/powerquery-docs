@@ -14,7 +14,7 @@ This multi-part reference covers the setup and running of a standard suite of te
 
 This reference uses the Power Query SDK test framework, a standardized test suite, and a modified version of the [NewYork City Taxi & Limousine Commission (TLC)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) green trip record data. The subsequent sections walk through the steps to get your environment set-up to validate your extension connector.
 
-The test framework allows Power Query SDK developers to have access to standard tests and a test harness to verify the DirectQuery (DQ) capabilities of an extension connector. With this new capability, developers have a standard way of verifying connectors and a platform for adding custom tests. We envision this as the first step in enhancing the productivity of the testing workflow provided by the Power Query SDK.
+The test framework allows Power Query SDK developers to have access to standard tests and a test harness to verify the DirectQuery (DQ) capabilities of an extension connector. With this new capability, developers have a standard way of verifying connectors and a platform for adding custom tests, enhancing the productivity of the testing workflow provided by the Power Query SDK.
 
 ## What is the Power Query SDK test framework?
 
@@ -29,7 +29,7 @@ The following list is the typical Power Query SDK developer workflow with the te
 1. **Install the Power Query SDK Visual Studio Code extension:** A connector developer has to [install the PowerQuery SDK](./../install-sdk.md#installing-the-power-query-sdk) Visual Studio Code extension for developing an extension connector. The Visual Studio Code extension wraps the Microsoft.PowerQuery.SdkTools NuGet package, which also contains test harness PQTest.exe. The PQTest test harness contains the new [compare](/power-query/sdk-tools/pqtest-compare) command to execute the tests present in the test framework.
 2. **Clone the DataConnectors GitHub Repo:** Clone the [DataConnectors GitHub](https://github.com/microsoft/DataConnectors/tree/master) repo to access the [test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/) and [tests](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/) contained in the test framework. For more details about these tests, go to [PowerQuery SDK test framework part 3 - Test suite](./3-tests.md).
 3. **Load the test data to the data source:** The connector developer has to load the test data, consisting of two CSV files, as tables to their data source, which ensures the schema matches the SQL schema file provided. For more details, go to [Power Query SDK test framework part 2 - Test data](./2-data.md).
-4. **Configure and run the tests:** The connector developer has to then run the tests using the provided RunPQSDKTestSuites PowerShell utility, which uses the PQTest **compare** command to run the tests. For more details, go to [Power Query SDK test framework part 5 - Testing your extension connector](./5-connector.md).
+4. **Configure and run the tests:** The connector developer can run tests using either the **Visual Studio Code Test Explorer** or the **RunPQSDKTestSuites PowerShell utility**. For more information about these options, see [Part 5a - Testing in Visual Studio Code](./5a-connector-testing-vscode.md) or [Part 5b - Testing with PowerShell](./5b-connector-testing-powershell.md).
 5. **Reporting & CI/CD:** The default test report is generated in console and there are also options to generate the report in summary, detailed, TRX, and JSON formats. The TRX (Visual Studio test results file) format is useful to view the results when they're run as part of a pipeline. For more details, go to [Power Query SDK test framework part 7 - Pipeline guide](./7-pipeline.md).
 
 ## Goals of the test framework
@@ -64,6 +64,7 @@ In this guide, you:
 |2   |[Preparing data](2-data.md)                              | Preparing the test data.                                                                               |
 |3   |[Test suite](3-tests.md)                                 | Fetching and understanding the test suite.                                                             |
 |4   |[Test format spec](4-testformat.md)                      | Understanding various file formats used in the test framework.                                         |
-|5   |[Connector testing](5-connector.md)                      | Testing your extension connector.                                                                      |
+|5a  |[Connector testing - Visual Studio Code](5a-connector-testing-vscode.md)     | Testing your extension connector with Visual Studio Code.                                              |
+|5b  |[Connector testing - PowerShell](5b-connector-testing-powershell.md)| Testing your extension connector with PowerShell.                                            |
 |6   |[Adding tests](6-adding.md)                              | Adding your own tests and understanding various options and configurations in the test framework.      |
-|7   |[Pipeline setup guide](7-pipeline.md)                    | Running the tests in a pipeline.                                                                         |
+|7   |[Pipeline setup guide](7-pipeline.md)                    | Running the tests in a pipeline.                                                                       |

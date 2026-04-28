@@ -124,6 +124,10 @@ The OneStream connector has a limitation of 2 million rows per call. Executing a
 
    :::image type="content" source="./media/onestream/pbi-publish-access.png" alt-text="Screenshot of the refresh data model on the service with the refresh icon emphasized." lightbox="./media/onestream/pbi-publish-access.png":::
 
+## Connect to OneStream from Power Query Online
+
+[!INCLUDE [Includes_onestream_connect-to-power-query-online](includes/onestream/onestream-connect-to-power-query-online.md)]
+
 ## Best practices and functions help
 
 ### General best practices
