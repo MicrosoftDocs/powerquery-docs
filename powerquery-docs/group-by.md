@@ -192,7 +192,7 @@ The similarity score is also shown in the table value next to the person column,
 
 For more information about how transformation tables work, go to [Transformation table precepts](cluster-values.md#transformation-table-precepts).
 
-### Related content
+## Related content
 
 - [Add a custom column](add-custom-column.md)
 - [Working with duplicate values](working-with-duplicates.md)

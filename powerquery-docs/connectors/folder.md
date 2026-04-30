@@ -36,7 +36,7 @@ To connect to a folder from Power Query Desktop:
 
    :::image type="content" source="media/folder/folder-browse.png" alt-text="Screenshot of folder selection.":::
 
-   When you select the folder you want to use, the file information about all of the files in that folder are displayed. Also, file information about any files in any subfolders is also displayed.
+   When you select the folder you want to use, file information about all of the files in that folder is displayed. File information about any files in subfolders is also displayed.
 
    :::image type="content" source="media/folder/folder-info.png" alt-text="Screenshot of folder information." lightbox="media/folder/folder-info.png":::
 
