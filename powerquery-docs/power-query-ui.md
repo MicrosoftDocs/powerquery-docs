@@ -117,7 +117,7 @@ The right side of the status bar also contains icons for the diagram, data, and 
 The schema view offers you a quick and straightforward way to interact only with the components of the schema for your table, such as the column names and data types. We recommend the schema view when you want to do schema-related actions. These actions could be removing columns, renaming columns, changing column data types, reordering columns, or duplicating columns.
 
 > [!NOTE]  
-> To learn more about schema view, go to [Using Schema view (Preview)](schema-view.md).
+> To learn more about schema view, go to [Using Schema view](schema-view.md).
 
 For example, in schema view, select the check mark next to the **Orders** and **CustomerDemographics** columns, and from the ribbon select the **Remove columns** action. This selection applies a transformation to remove these columns from your data.
 
