@@ -61,7 +61,7 @@ items:
         href: queries-pane.md
       - name: "Diagram view"
         href: diagram-view.md
-      - name: "Using Schema view (Preview)"
+      - name: "Using Schema view"
         href: schema-view.md
       - name: "Share a query"
         href: share-query.md
