@@ -1,13 +1,13 @@
 ---
-title: "Using Schema view (Preview)"
+title: "Using Schema view"
 description: Schema view optimizes the experience when working on schema-related data operations
 author: ptyx507x
 ms.author: miescobar
-ms.date: 11/7/2025
+ms.date: 05/01/2026
 ms.subservice: transform-data
 ---
 
-# Using Schema view (Preview)
+# Using Schema view
 
 Schema view is designed to optimize your flow when working on schema level operations by putting your query's column information front and center. Schema view provides contextual interactions to shape your data structure, and lower latency operations as it only requires the column metadata to be computed and not the complete data results.
 
