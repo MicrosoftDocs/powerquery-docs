@@ -48,6 +48,15 @@ Users should select **Transform Data** and then use the JSON parsing capabilitie
 
 For more information on setting up or using Google service accounts, go to [Creating and managing service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) in the Google docs.
 
+### Navigator doesn't show all projects or datasets
+
+The **Navigator** window only displays projects and datasets for which the authenticated user has sufficient Google Cloud Platform (GCP) permissions. If you can access data through native queries but certain projects or datasets don't appear in Navigator, check the following:
+
+- **Connect to your billing project**, not the data project, when establishing the connection.
+- The user needs the **Browser** role (or equivalent) at the project level to see projects listed in Navigator. Without this role, the driver can't enumerate the project even if the user has dataset-level access.
+- After selecting the data project, only datasets to which the user has been granted access are displayed.
+- Granting the **BigQuery Metadata Viewer** role at only the dataset level isn't sufficient for projects to appear in Navigator. The role must be granted at the project level, or the project-level **Browser** role must be assigned instead.
+
 ### Authenticating through a Google service account
 
 When you authenticate through a Google service account in Power BI Desktop, there's a specific credential format required by the connector.
