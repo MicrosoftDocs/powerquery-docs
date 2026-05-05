@@ -60,6 +60,10 @@ There is no maximum size limit for a single dataflow table. However, when a tabl
 
 We suggest not having more than 100 dataflows (Gen1 or Gen2) per workspace.
 
+## Evaluation container limits
+
+Each evaluation container is limited to 1 GB of working set memory and 6 GB of commit memory. The 6 GB commit limit is a system-level evaluation limit, not a quota, and it applies regardless of user quota or environment. This limit can't be increased.
+
 ## Mashup script limits
 
 The size limit for the mashup script is 512KB. An error might occur when trying to open or edit dataflows with queries that exceed this size limit.
