@@ -7,4 +7,5 @@ ms.topic: include
 
 * Power Query Online is unable to access encrypted Excel files. Since Excel files labeled with sensitivity types other than "Public" or "Non-Business" are encrypted, they aren't accessible through Power Query Online.
 * Power Query Online doesn't support password-protected Excel files.
+* When connecting to an Excel workbook on a network share, use the fully qualified domain name (FQDN) path (for example, `\\ServerName.domain.com\FolderName\File.xlsx`) instead of a short server name. Using a short name can cause refresh failures after publishing to the Power BI service.
 * The [Excel.Workbook](/powerquery-m/excel-workbook) `useHeaders` option converts numbers and dates to text using the current culture, and thus behaves differently when run in environments with different operating system cultures set. We recommend using [Table.PromoteHeaders](/powerquery-m/table-promoteheaders) instead.

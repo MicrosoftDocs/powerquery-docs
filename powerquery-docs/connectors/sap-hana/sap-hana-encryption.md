@@ -100,6 +100,9 @@ Test the connection in Power BI Desktop or the Power BI service.
 
 1. In Power BI Desktop or in the **Data Source Settings** page of the Power BI service, ensure that **Validate server certificate** is enabled before attempting to establish a connection to your SAP HANA server. For **SSL crypto provider**, select commoncrypto. Leave the SSL key store and SSL trust store fields blank.
 
+    > [!NOTE]
+    > The option to leave the SSL key store and SSL trust store fields blank applies only to legacy encryption providers such as mscrypto or OpenSSL, which are not recommended by SAP. When using the recommended SAP CommonCryptoLib (sapcrypto), you must provide the PSE-based key store and the corresponding trust store required by CommonCryptoLib. These fields can't be left blank with CommonCryptoLib.
+
     - Power BI Desktop
 
         :::image type="content" source="validate-server-certificate-service.png" alt-text="Screenshot of the Power BI Desktop validate server certificate information.":::
