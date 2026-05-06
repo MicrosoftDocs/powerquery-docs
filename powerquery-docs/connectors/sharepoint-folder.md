@@ -33,7 +33,7 @@ ms.custom:
 
 ## Authentication types supported
 
->[!Note]
+> [!NOTE]
 > Workspace identity support for **SharePoint Files** is rolling out with recent service updates and is available only in supported Fabric-hosted experiences.  
 > Availability may vary by workload and host (for example, Power BI Desktop is not supported).
 
@@ -47,7 +47,7 @@ When you're connecting to the document library in a SharePoint site, you're aske
 :::image type="content" source="media/sharepoint-list/sharepoint-address.png" alt-text="Screenshot emphasizing the locations of Home in the navigation pane, the icon at the top of the site, and the resulting URL address." lightbox="media/sharepoint-list/sharepoint-address.png":::
 
 > [!NOTE]  
-> A classic SharePoint URL page isn't supported and will fail to connect. Only a modern Sharepoint home page is supported.
+> A classic SharePoint URL page isn't supported and will fail to connect. Only a modern SharePoint home page is supported.
 
 ## SharePoint site picker
 
@@ -69,9 +69,9 @@ To connect to a SharePoint folder:
 
    :::image type="content" source="media/sharepoint-folder/signin.png" alt-text="Screenshot of SharePoint folder desktop authentication." lightbox="media/sharepoint-folder/signin.png":::
 
-   For more information about authentication methods and level settings, go to [Authentication in desktop apps](../connectorauthentication.md).
+   For more information about authentication methods and level settings, go to [Authentication in desktop apps](../connector-authentication.md).
 
-1. Once you have connected, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
+1. After you connect, file information about all of the files in that SharePoint folder is displayed. In addition, file information about any files in subfolders is also displayed.
 
    :::image type="content" source="media/sharepoint-folder/folder-info.png" alt-text="Screenshot of the Navigator showing the folder information." lightbox="media/sharepoint-folder/folder-info.png":::
 

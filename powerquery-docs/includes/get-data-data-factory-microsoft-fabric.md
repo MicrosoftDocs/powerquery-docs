@@ -19,7 +19,7 @@ To get data in Data Factory:
 
    :::image type="content" source="/power-query/media/where-to-get-data/get-data.png" alt-text="Screenshot showing the Power Query workspace with the Get data option emphasized." lightbox="/power-query/media/where-to-get-data/get-data.png":::
 
-1. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
+1. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** to the right of the connector list to see all the connectors available in Data Factory.
 
    :::image type="content" source="/power-query/media/where-to-get-data/data-factory-search-view-more.png" alt-text="Screenshot of the Data Factory Choose data source page with the search box and the view more selection emphasized." lightbox="/power-query/media/where-to-get-data/data-factory-search-view-more.png":::
 

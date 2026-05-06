@@ -1,5 +1,5 @@
 ---
-title: Authentication in Desktop Apps
+title: Authentication in desktop apps
 description: How to select credentials for a connector in Power Query Desktop to authenticate a connection with a data source, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: ptyx507x
 ms.author: miescobar
@@ -109,7 +109,7 @@ When you select **Sign-in** in Step 2 above, Power Query sends a request to the 
 GET https://contoso.crm.dynamics.com/api/data/v8.2 HTTP/1.1
 Authorization: Bearer
 User-Agent: Microsoft.Data.Mashup (https://go.microsoft.com/fwlink/?LinkID=304225)
-Host: pbi.crm.dynamics.com
+Host: contoso.crm.dynamics.com
 Connection: Keep-Alive
 ```
 
@@ -120,7 +120,7 @@ HTTP/1.1 401 Unauthorized
 Cache-Control: private
 Content-Type: text/html
 Server:
-WWW-Authenticate: Bearer authorization_uri=https://login.microsoftonline.com/3df2eaf6-33d0-4a10-8ce8-7e596000ebe7/oauth2/authorize
+WWW-Authenticate: Bearer authorization_uri=https://login.microsoftonline.com/aaaabbbb-0000-cccc-1111-dddd2222eeee/oauth2/authorize
 Date: Wed, 15 Aug 2018 15:02:04 GMT
 Content-Length: 49
 ```
@@ -131,7 +131,7 @@ If you need more control over the OAuth flow (for example, if your service must 
 
 ### Microsoft Entra ID client IDs
 
-The following Microsoft Entra ID client IDs are used by Power Query. You might need to explicitly allow these client IDs to access your service and API, depending on your overall Microsoft Entra ID settings. Go to step 6 of [Add a scope](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope) for more details.
+The following Microsoft Entra ID client IDs are used by Power Query. You might need to explicitly allow these client IDs to access your service and API, depending on your overall Microsoft Entra ID settings. Go to step 6 of [Add a scope](/entra/identity-platform/quickstart-configure-app-expose-web-apis#add-a-scope) for more details.
 
 | Client ID | Title | Description |
 | --- | --- | --- |

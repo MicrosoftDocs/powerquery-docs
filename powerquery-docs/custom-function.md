@@ -1,5 +1,5 @@
 ---
-title: Use Custom Functions in Power Query
+title: Use custom functions in Power Query
 description: An article on how to create custom functions in Power Query
 author: ptyx507x
 ms.author: miescobar
@@ -10,7 +10,7 @@ ms.custom:
   - intro-internal
 ---
 
-# Using custom functions
+# Use custom functions
 
 If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators.
 
@@ -85,7 +85,7 @@ Right-click this new **Transform Sample file** query and select the **Create Fun
 
 This operation effectively creates a new function that links with the **Transform Sample file** query. Any changes that you make to the **Transform Sample file** query are automatically replicated to your custom function. During the creation of this new function, use **Transform file** as the **Function name**.
 
-:::image type="content" source="media/custom-function/transform-sample-file-function-window.png" alt-text="Screenshot fo the Create function window for the Transform file." lightbox="media/custom-function/transform-sample-file-function-window.png":::
+:::image type="content" source="media/custom-function/transform-sample-file-function-window.png" alt-text="Screenshot of the Create function window for the Transform file." lightbox="media/custom-function/transform-sample-file-function-window.png":::
 
 After you create the function, notice that a new group is created for you with the name of your function. This new group contains:
 
