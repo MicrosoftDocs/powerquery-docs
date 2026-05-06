@@ -1,5 +1,5 @@
 ---
-title: "Using Schema view"
+title: "Use Schema View"
 description: Schema view optimizes the experience when working on schema-related data operations
 author: ptyx507x
 ms.author: miescobar
