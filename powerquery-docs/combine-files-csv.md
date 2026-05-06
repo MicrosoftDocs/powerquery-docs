@@ -109,7 +109,7 @@ You can remove this last step of the query from the **Applied steps** pane by se
 
 :::image type="content" source="media/combine-files-csv/combine-files-csv-expanded-table-step.png" alt-text="Screenshot of the combine files without the error step." lightbox="media/combine-files-csv/combine-files-csv-expanded-table-step.png":::
 
-However, notice that none of the columns derived from the files (Date, Country, Units, Revenue) have a specific data type assigned to them. Assign the correct data type to each column by using the following table.
+However, notice that none of the columns derived from the files (Date, Country, Units, Revenue) has a specific data type assigned to them. Assign the correct data type to each column by using the following table.
 
 | Column name | Data type |
 | --- | --- |
