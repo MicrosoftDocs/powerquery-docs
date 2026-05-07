@@ -2,17 +2,15 @@
 
 
 title: Power Query documentation
-summary: Power Query is the data connectivity and data preparation technology that enables end users to seamlessly import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analysis Services, Dataverse, and more.
+summary: Power Query is the data connectivity and data preparation technology that enables end users to import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analysis Services, Dataverse, and more.
 
 metadata: 
   title: Power Query documentation
   description: Power Query is used to filter, combine, and mash up data from one or more supported data sources.  
   
   ms.topic: landing-page
-  ms.collection: 
   author: whhender
   ms.author: whhender
-  ms.custom: 
   ms.date: 1/23/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
@@ -31,7 +29,7 @@ landingContent:
             url: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
 
   # Card
-  - title: Using Power Query
+  - title: Use Power Query
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -39,11 +37,9 @@ landingContent:
             url: /power-query/power-query-ui
           - text: Get data
             url: get-data-experience.md
-          - text: Transform data
-            url: /power-query/power-query-ui
 
   # Card
-  - title: Working with dataflows
+  - title: Work with dataflows
     linkLists:
       - linkListType: concept
         links:
@@ -62,7 +58,7 @@ landingContent:
           - text: Query folding
             url: query-folding-basics.md
           - text: Query diagnostics
-            url: querydiagnostics.md
+            url: query-diagnostics.md
           - text: Error handling
             url: error-handling.md
 
@@ -72,7 +68,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Custom connector development
-            url: installingsdk.md
+            url: install-sdk.md
             
   # Card
   - title: Reference content

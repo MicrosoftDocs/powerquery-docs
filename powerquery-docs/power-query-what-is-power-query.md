@@ -39,7 +39,7 @@ When you create a new transformation step by interacting with the components of 
 
 Currently, two Power Query experiences are available:
 
-- **Power Query Online** - Found in integrations such as Power BI dataflows, Microsoft Power Platform dataflows, Azure Data Factory wrangling dataflows, and many more that provide the experience through an online webpage.
+- **Power Query Online** - Found in integrations such as Power BI dataflows, Microsoft Power Platform dataflows, and many more that provide the experience through an online webpage.
 - **Power Query for Desktop** - Found in integrations such as Power Query for Excel and Power BI Desktop.
 
 > [!NOTE]  
@@ -53,7 +53,7 @@ All these transformations are made possible by choosing the transformation optio
 
 :::image type="content" source="media/power-query-what-is-power-query/power-query-transformations-list.png" alt-text="Screenshot of the transformation commands under the Transform, Home, and Add Column tabs of the Power Query editor." lightbox="media/power-query-what-is-power-query/power-query-transformations-list.png":::
 
-More information: [Quickstart: Using Power Query in Power BI](/power-query/power-query-ui)
+More information: [The Power Query user interface](/power-query/power-query-ui)
 
 ## Dataflows
 
@@ -116,8 +116,7 @@ The following table lists Microsoft products and services where Power Query can 
 
 - [Connectors in Power Query](connectors/index.md)
 - [Getting data overview](get-data-experience.md)
-- [Power Query quickstart](/power-query/power-query-ui)
-- [Shape and combine data using Power Query](/power-query/power-query-ui)
+- [The Power Query user interface](/power-query/power-query-ui)
 - [What are dataflows?](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
 
 

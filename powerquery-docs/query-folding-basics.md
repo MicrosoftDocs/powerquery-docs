@@ -74,7 +74,7 @@ This optimization process is called *query folding*, where Power Query tries to 
 > [!IMPORTANT]  
 > All rules from the [Power Query M formula language (also known as the M language)](/powerquery-m/) are followed. Most notably, *lazy evaluation* plays an important role during the optimization process. In this process, Power Query understands what specific transforms from your query need to be evaluated. Power Query also understands what other transforms don't need to be evaluated because they're not needed in the output of your query.
 >
-> Furthermore, when multiple sources are involved, the data privacy level of each data source is taken into consideration when evaluating the query. More information: [Behind the scenes of the Data Privacy Firewall](dataprivacyfirewall.md)
+> Furthermore, when multiple sources are involved, the data privacy level of each data source is taken into consideration when evaluating the query. More information: [Behind the scenes of the Data Privacy Firewall](data-privacy-firewall.md)
 
 The following diagram demonstrates the steps that take place in this optimization process.
 

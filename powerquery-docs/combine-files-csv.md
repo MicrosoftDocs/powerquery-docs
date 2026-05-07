@@ -69,7 +69,7 @@ However, the data isn't in the correct shape. You need to remove the top four ro
 
 In this **Transform Sample file** query, the values in the **Date** column indicate that the data is for the month of April, which has the year-month-day (YYYY-MM-DD) format. April 2019.csv is the first file displayed in the table preview.
 
-:::image type="content" source="media/combine-files-csv/combine-files-csv-transform-sample-file.png" alt-text="Screenshot of the transform sample file with the dat columns from April 2019 and the header section." lightbox="media/combine-files-csv/combine-files-csv-transform-sample-file.png":::
+:::image type="content" source="media/combine-files-csv/combine-files-csv-transform-sample-file.png" alt-text="Screenshot of the transform sample file with the date columns from April 2019 and the header section." lightbox="media/combine-files-csv/combine-files-csv-transform-sample-file.png":::
 
 You now need to apply a new set of transformations to clean the data. Each transformation is automatically converted to a function inside the **Helper queries** group that is applied to every file in the folder before combining the data from each file.
 
@@ -99,7 +99,7 @@ After this operation is completed, Power Query by default tries to automatically
 
 ### Revising the output query
 
-When you go back to the **CSV Files** query in Power Query Desktop, the last step is giving you an error that reads "The column 'Column1' of the table wasn't found." When you go back to the **CSV Files** query in Power Query Online, the changes you previously made to remove the first four rows and use the first row as headers isn't applied to the table. In Power Query Online, select **Refresh** from the **Home** tab. Once the screen is refreshed, the same error message is displayed.
+When you go back to the **CSV Files** query in Power Query Desktop, the last step is giving you an error that reads "The column 'Column1' of the table wasn't found." When you go back to the **CSV Files** query in Power Query Online, the changes you previously made to remove the first four rows and use the first row as headers aren't applied to the table. In Power Query Online, select **Refresh** from the **Home** tab. After the screen is refreshed, the same error message is displayed.
 
 The reason behind this error is that the previous state of the query was doing an operation against a column named **Column1**. But because of the changes made to the **Transform Sample file** query, this column no longer exists. More information: [Dealing with errors in Power Query](dealing-with-errors.md)
 
@@ -109,7 +109,7 @@ You can remove this last step of the query from the **Applied steps** pane by se
 
 :::image type="content" source="media/combine-files-csv/combine-files-csv-expanded-table-step.png" alt-text="Screenshot of the combine files without the error step." lightbox="media/combine-files-csv/combine-files-csv-expanded-table-step.png":::
 
-However, notice that none of the columns derived from the files (Date, Country, Units, Revenue) have a specific data type assigned to them. Assign the correct data type to each column by using the following table.
+However, notice that none of the columns derived from the files (Date, Country, Units, Revenue) has a specific data type assigned to them. Assign the correct data type to each column by using the following table.
 
 | Column name | Data type |
 | --- | --- |
