@@ -10,6 +10,8 @@ ms.topic: concept-article
 
 # Dataverse
 
+The Dataverse connector lets you connect to data in Microsoft Dataverse environments from Power Query. Use this connector for analytics workloads involving Dataverse tables.
+
 ## Summary
 
 | Item | Description |
@@ -75,7 +77,7 @@ Once you select the advanced options you require, select **Next** to connect to 
 
 ## When to use the Common Data Service (Legacy) connector
 
-Dataverse is the direct replacement for the Common Data Service connector. However, there might be times when it's necessary to choose the Common Data Service (Legacy) connector instead of the [Dataverse](dataverse.md) connector:
+Dataverse is the direct replacement for the Common Data Service connector. However, there might be times when it's necessary to choose the Common Data Service (Legacy) connector instead of the Dataverse connector:
 
 There are certain Tabular Data Stream (TDS) data types that are supported in OData when using Common Data Service (Legacy) that aren't supported in Dataverse. The supported and unsupported data types are listed in [How Dataverse SQL differs from Transact-SQL](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported).
 

@@ -1,16 +1,16 @@
 ---
-title: The Power Query User Interface
-description: Learn about and how to use the various elements of the Power Query user interface
+title: Use Power Query to transform data
+description: Learn how to connect to data, transform it, and navigate the Power Query editor user interface.
 author: ptyx507x
 ms.author: miescobar
 ms.reviewer: whhender
 ms.date: 04/08/2026
 ms.subservice: transform-data
-ms.topic: overview
+ms.topic: how-to
 ms.search.form: DataflowGen2 Overview
 ---
 
-# The Power Query user interface
+# Use Power Query to transform data
 
 With Power Query, you can connect to many different data sources and transform the data into the shape you want.
 
@@ -117,7 +117,7 @@ The right side of the status bar also contains icons for the diagram, data, and 
 The schema view offers you a quick and straightforward way to interact only with the components of the schema for your table, such as the column names and data types. We recommend the schema view when you want to do schema-related actions. These actions could be removing columns, renaming columns, changing column data types, reordering columns, or duplicating columns.
 
 > [!NOTE]  
-> To learn more about schema view, go to [Using Schema view (Preview)](schema-view.md).
+> To learn more about schema view, go to [Using Schema view](schema-view.md).
 
 For example, in schema view, select the check mark next to the **Orders** and **CustomerDemographics** columns, and from the ribbon select the **Remove columns** action. This selection applies a transformation to remove these columns from your data.
 

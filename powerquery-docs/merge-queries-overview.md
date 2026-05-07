@@ -87,8 +87,7 @@ From here, you can choose to expand or aggregate the fields from this new table 
 :::image-end:::
 
 > [!NOTE]  
-> Currently, Power Query Online only provides the expand operation in its interface. The option to aggregate will be added later this year.
-
+> Currently, Power Query Online only provides the expand operation in its interface. The option to aggregate isn't available yet in Power Query Online.
 ## Join kinds
 
 A *join kind* specifies how a merge operation is performed. The following table describes the available join kinds in Power Query.

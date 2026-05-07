@@ -61,7 +61,7 @@ To get data in Power BI service:
    1. In the **New Dataflow Gen2** dialog, enter the name of your new dataflow and then select **Create**.
    1. In the Power Query editor, under the **Home** tab, select **Get data**.
 
-1. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
+1. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** to the right of the connector list to see all the connectors available in Power BI service.
 
    :::image type="content" source="media/where-to-get-data/power-bi-service-search-view-more.png" alt-text="Screenshot of the Choose data source page with the search box and the view more selection emphasized." lightbox="media/where-to-get-data/power-bi-service-search-view-more.png":::
 
@@ -85,7 +85,7 @@ To import data to a new table in Power Apps:
 
    :::image type="content" source="media/where-to-get-data/get-data-excel-powerapps.png" alt-text="Screenshot of Image with Dataverse tables open, the import context menu open, with the import data from Excel option emphasized." lightbox="media/where-to-get-data/get-data-excel-powerapps.png":::
 
-1. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
+1. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** to the right of the connector list to see all the connectors available in Power Apps.
 
    :::image type="content" source="media/where-to-get-data/power-apps-search-view-more.png" alt-text="Screenshot of the Power Apps Choose data source page with the search box and the view more selection emphasized." lightbox="media/where-to-get-data/power-apps-search-view-more.png":::
 
@@ -150,7 +150,7 @@ To get data in Customer Insights:
 
 1. Select **Next**.
 
-1. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
+1. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** to the right of the connector list to see all the connectors available in Customer Insights.
 
    :::image type="content" source="media/where-to-get-data/customer-insights-search-view-more.png" alt-text="Screenshot of the Customer Insights Choose data source page with the search box and the view more selection emphasized." lightbox="media/where-to-get-data/customer-insights-search-view-more.png":::
 
@@ -174,7 +174,7 @@ The Analysis Services documentation contains the following information that desc
 
 ## Get data in Power Automate
 
-There are a couple of places in Power Automate where you can get data, either by importing tables or in process adviser.
+There are a couple of places in Power Automate where you can get data, either by importing tables or in process mining.
 
 To get data by importing tables:
 
@@ -182,7 +182,7 @@ To get data by importing tables:
 
 1. In the Power Apps tab, follow the instructions for importing data to either a new table or to an existing table in the [Power Apps](#get-data-in-power-apps) section.
 
-For information about how to get data in process advisor, go to [Connect to a data source](/power-automate/process-mining-processes-and-data#connect-to-a-data-source).
+For information about how to get data in process mining, go to [Connect to a data source](/power-automate/process-mining-processes-and-data#connect-to-a-data-source).
 
 ## Get data in Azure Data Factory
 

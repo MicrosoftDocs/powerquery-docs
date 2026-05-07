@@ -28,7 +28,7 @@ The **Query Settings** pane then opens on the right side with the **Applied Step
 
 :::image type="content" source="media/applied-steps/applied-steps-query-settings.png" alt-text="Screenshot of the Power Query editor, with the Applied Steps section on the lower right side emphasized." lightbox="media/applied-steps/applied-steps-query-settings.png":::
 
-If you're using Power Query Online (Power BI service, Power Apps, Data Factory (preview), Microsoft 365 Customer Insights) and the **Query settings** pane is closed, select the **\<** icon above **Query settings** to open the pane.
+If you're using Power Query Online (Power BI service, Power Apps, Data Factory, Microsoft 365 Customer Insights) and the **Query settings** pane is closed, select the **\<** icon above **Query settings** to open the pane.
 
 :::image type="content" source="media/applied-steps/applied-steps-view-online.png" alt-text="Screenshot of the upper right section of the Power Query editor with the Query settings open icon emphasized." lightbox="media/applied-steps/applied-steps-view-online.png":::
 
@@ -59,11 +59,11 @@ When you right-click on a step in the applied steps list, a step menu pops up. T
 
 ### Edit settings
 
-The **Edit settings** option lets you change specific settings for each individual step in the **Applied settings** list. Not all steps have settings that can be changed. If no settings are available, this option is grayed out in the step menu. For the steps that do have settings that can be changed, selecting the **Edit settings** option brings up the settings page for that particular step. For example, if the step is for an OData source, the **OData** source page is displayed, where you can enter the OData source URL. As another example, if the step is for a fuzzy cluster column, the **Cluster values** page is displayed, where you can change the column to create the fuzzy clusters from.
+The **Edit settings** option lets you change specific settings for each individual step in the **Applied steps** list. Not all steps have settings that can be changed. If no settings are available, this option is grayed out in the step menu. For the steps that do have settings that can be changed, selecting the **Edit settings** option brings up the settings page for that particular step. For example, if the step is for an OData source, the **OData** source page is displayed, where you can enter the OData source URL. As another example, if the step is for a fuzzy cluster column, the **Cluster values** page is displayed, where you can change the column to create the fuzzy clusters from.
 
 :::image type="content" source="media/applied-steps/applied-steps-edit-settings.png" alt-text="Screenshot of the step menu with the edit settings option emphasized.":::
 
-You can also edit the settings for any step that contains the step settings icon. The two places where the icon appears is in the applied settings step, and in the informational display for the step. Just select the icon and the settings page for that particular step is displayed.
+You can also edit the settings for any step that contains the step settings icon. The two places where the icon appears are in the applied steps list and in the informational display for the step. Just select the icon and the settings page for that particular step is displayed.
 
 :::image type="content" source="media/applied-steps/applied-steps-settings.png" alt-text="Screenshot highlighting the step settings icon in the applied steps list and the step informational display." lightbox="media/applied-steps/applied-steps-settings.png":::
 
@@ -73,7 +73,7 @@ To rename a step, right-click the step and select **Rename**.
 
 :::image type="content" source="media/applied-steps/applied-steps-rename.png" alt-text="Screenshot of the step menu with the rename option emphasized.":::
 
-Enter in the name you want, and then either select **Enter** or select away from the step.
+Enter the name you want, and then either press **Enter** or select away from the step.
 
 ### Delete step
 
