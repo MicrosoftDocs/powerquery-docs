@@ -79,9 +79,6 @@ Before you start to follow this article:
 
     :::image type="content" source="./media/add-data-power-query/entity-list.png" alt-text="Screenshot of the list of standard and custom tables with the Customers table emphasized." lightbox="./media/add-data-power-query/entity-list.png":::
 
-> [!WARNING]
-> Existing data might be altered or deleted when loading data to a Dataverse table while having the **Delete rows that no longer exist in the query output** enabled or a primary key column defined.
-
 ## Load to existing table (Preview)
 
 If you select **Load to existing table**, you can specify an existing Dataverse table to load data to.
@@ -90,13 +87,14 @@ When you select the table dropdown, there can be up to three recommended Dataver
 
 :::image type="content" source="./media/add-data-power-query/recommended-tables.png" alt-text="Screenshot of the Choose destination settings dialog with the recommended tables." lightbox="./media/add-data-power-query/recommended-tables.png":::
 
-After selecting which Dataverse table to load data into, you then choose the import method. Append is selected by default and adds the data as more rows to the previously selected Dataverse table. Merge updates existing rows within your Dataverse table. If **Merge** is selected, there's an option to select the primary key column that you want to use.
-
-:::image type="content" source="./media/add-data-power-query/import-method-selection.png" alt-text="Screenshot of the Choose destination settings dialog with the import method choice displayed." lightbox="./media/add-data-power-query/import-method-selection.png":::
+> [!WARNING]
+> Existing data might be altered or deleted when loading data to a Dataverse table while having the **Delete rows that no longer exist in the query output** enabled or a primary key column defined.
 
 ## Column mapping (Preview)
 
-After you select a destination Dataverse table and specify the import method, the columns are grouped into mapped, possible match, and unmapped. You can toggle between these groupings by selecting the **Mapped**, **Possible match**, or **Unmapped** tabs at the top or stay in the default **Show all** tab that lists all mappings.  
+After you select a destination Dataverse table, you will be able to specify a **Primary key**. If a primary key is not selected, as noted by the placeholder text, "Please select a key", then all incoming records will be appended to the destination Dataverse table. Please be aware that duplicate records may be created in the destination Dataverse table every time the dataflow runs in this configuration. Alternatively, if a primary key is selected, then all incoming records will be checked against existing records in the destination Dataverse table and the last incoming record in the query result will replace the existing record with a matching primary key in the destination Dataverse table. All other incoming records without a matching primary key will be appended as new records in the destination Dataverse table.
+
+Furthermore, once a destination Dataverse table is selected, the columns are grouped into mapped, possible match, and unmapped. You can toggle between these groupings by selecting the **Mapped**, **Possible match**, or **Unmapped** tabs at the top or stay in the default **Show all** tab that lists all mappings.  
 
 :::image type="content" source="./media/add-data-power-query/column-mapping.png" alt-text="Screenshot of the Choose destination settings dialog with the column mapping choices displayed." lightbox="./media/add-data-power-query/column-mapping.png":::
 
@@ -112,7 +110,7 @@ When manual changes are made to the mapping the source column, the status change
 
 ## Known Limitations
 
-Currently, AI Assisted mapping can only detect type mismatches between columns. Other column mapping challenges in the following list aren't detected as they require previewing the records of incoming data:
+Currently, assisted mapping can only detect type mismatches between columns. Other column mapping challenges in the following list aren't detected as they require previewing the records of incoming data:
 
 * **Truncation**: High confidence in semantic match between source and destination, but at least one record in the source has more characters than the character limit of the destination column.
 
