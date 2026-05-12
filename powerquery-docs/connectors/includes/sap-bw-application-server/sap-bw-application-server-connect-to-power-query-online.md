@@ -25,4 +25,4 @@ To connect to an SAP BW Application Server from Power Query Online:
 
 8. From the **Navigator** dialog box, you can transform the data in the Power Query Editor by selecting **Transform Data**.
 
-   :::image type="content" source="/power-query/connectors/sap-bw/navigator-online.png" lightbox="../../sap-bw/navigator-online.png" alt-text="Screenshot that shows the navigator view from Power Query Online.":::
+   :::image type="content" source="/power-query/connectors/sap-bw/navigator-online.png" lightbox="/power-query/connectors/sap-bw/navigator-online.png" alt-text="Screenshot that shows the navigator view from Power Query Online.":::
