@@ -22,8 +22,8 @@ ms.custom: sfi-image-nochange
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Azure Active Directory<br/>Personal Access Token<br/>Username / Password |
 
-> [!NOTE]
->The Azure Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver. This feature is available in preview. Learn more [here](#arrow-database-connectivity-driver-connector-implementation-preview).
+> [!IMPORTANT]
+> The Azure Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver (preview). This connector is transitioning from the embedded Simba Spark ODBC driver to the Databricks ADBC driver. For migration guidance, key dates, and admin controls, see [Transition from ODBC to ADBC drivers in Power BI and Fabric](../transition-to-adbc.md).
 
 ## Network prerequisites
 
