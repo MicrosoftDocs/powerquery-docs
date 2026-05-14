@@ -1,6 +1,6 @@
 ---
-title: Transition from ODBC to ADBC drivers in Power BI and Fabric
-description: Learn how Power BI and Fabric are transitioning supported data source connections from legacy embedded ODBC drivers to Apache Arrow Database Connectivity (ADBC) drivers, and how to migrate.
+title: Transition from ODBC to ADBC drivers in Power BI and Microsoft Fabric
+description: Learn how Power BI and Microsoft Fabric are transitioning supported data source connections from legacy embedded ODBC drivers to Apache Arrow Database Connectivity (ADBC) drivers, and how to migrate.
 author: whhender
 ms.author: whhender
 ms.topic: concept-article
@@ -9,16 +9,16 @@ ms.date: 05/14/2026
 
 # Transition from ODBC to ADBC drivers in Power BI and Fabric
 
-Power BI and Fabric are transitioning supported data source connections from legacy embedded ODBC drivers to [Apache Arrow Database Connectivity (ADBC)](https://arrow.apache.org/docs/format/ADBC.html) drivers. ADBC provides a set of standard interfaces for interacting with Arrow data, which is especially efficient at fetching large datasets with minimal overhead and no serialization or copying. The ADBC drivers also incorporate security enhancements, such as memory safety and garbage collection.
+Power BI and Microsoft Fabric are transitioning supported data source connections from legacy embedded ODBC drivers to [Apache Arrow Database Connectivity (ADBC)](https://arrow.apache.org/docs/format/ADBC.html) drivers. ADBC provides a set of standard interfaces for interacting with Arrow data, which is especially efficient at fetching large datasets with minimal overhead and no serialization or copying. The ADBC drivers also incorporate security enhancements, such as memory safety and garbage collection.
 
-You can adopt ADBC today per-connection, and administrators can control the default behavior at scale using a tenant setting that can be overridden at the workspace level for testing and validation.
+You can adopt ADBC today per-connection, and administrators can control the default behavior at scale using a tenant setting that workspace admins can override for testing and validation.
 
 ## Connectors and driver changes
 
 The following table lists the connectors that are transitioning from embedded ODBC drivers to replacement drivers. In most cases, the replacement driver is an ADBC driver.
 
 | Connector | Current driver | Replacement driver |
-|---|---|---|
+| --- | --- | --- |
 | [Databricks](/power-query/connectors/databricks) | Simba Spark ODBC | Databricks ADBC |
 | [Azure Databricks](/power-query/connectors/databricks-azure) | Simba Spark ODBC | Databricks ADBC |
 | Dremio | Simba Drill ODBC | FlightSQL ADBC |
@@ -28,18 +28,18 @@ The following table lists the connectors that are transitioning from embedded OD
 | [Snowflake](/power-query/connectors/snowflake) | Simba Snowflake ODBC | Snowflake ADBC |
 | Spark | Simba Spark ODBC | HiveServer2 ADBC |
 
-## Who is impacted
+## Who is affected
 
-You're impacted if you use any of the connectors listed above and:
+You're affected if you use any of the [connectors transitioning to ADBC](#connectors-and-driver-changes) (such as Databricks, Snowflake, or Google BigQuery) and:
 
 - You haven't explicitly chosen an implementation in the connection (the `Implementation` parameter isn't specified), or
 - Your organization wants centralized control over whether ADBC or ODBC is the default for supported connectors.
 
-This default behavior is intended to apply anywhere a connection is created, including semantic models, Dataflows Gen2, DMTS, and paginated reports.
+This default applies wherever you create a connection, including semantic models, Dataflows Gen2, and paginated reports.
 
 ## How to migrate
 
-There are three ways to migrate, in order of how much control you want:
+You can migrate in three ways, ordered by how much control you want:
 
 - [Per-connection opt-in](#per-connection-opt-in): Add `Implementation="2.0"` to individual connections to validate ADBC at your own pace.
 - [Tenant setting](#tenant-setting): Set the organization-wide default through the Admin portal.
@@ -64,16 +64,16 @@ This setting also controls the **Test Connection** behavior for each connection 
 
 ### Workspace override
 
-The tenant setting is delegated to workspaces, so workspace admins can override the default and compare behaviors without modifying each individual connection. This approach allows side-by-side validation. For example, you can use one workspace to test ADBC defaults while keeping another workspace on ODBC defaults.
+The tenant setting delegates to workspaces, so workspace admins can override the default and compare behaviors without modifying each individual connection. This approach allows side-by-side validation. For example, you can use one workspace to test ADBC defaults while keeping another workspace on ODBC defaults.
 
 ## How the implementation is chosen
 
-If the `Implementation` parameter is explicitly specified in the connection, that value is always used regardless of the tenant or workspace defaults.
+If you explicitly specify the `Implementation` parameter in the connection, that value always takes precedence over the tenant or workspace defaults.
 
-When `Implementation` isn't specified, the tenant and workspace settings determine the default behavior:
+The following table shows how the driver is selected:
 
 | Condition | Driver used |
-|---|---|
+| --- | --- |
 | `Implementation="2.0"` | ADBC |
 | `Implementation` not specified and workspace setting is **On** | ADBC |
 | `Implementation="1.0"` | ODBC |
@@ -87,8 +87,8 @@ When `Implementation` isn't specified, the tenant and workspace settings determi
 
 ## Key dates
 
-- **September 2026**: ODBC drivers begin to be removed from the service. If you need to stay on ODBC (`Implementation="1.0"` or workspace setting **Off**), you need to use a gateway to continue running queries with ODBC.
-- **March 2027**: The ODBC drivers referenced in this article no longer ship with Power BI Desktop or the gateway. Users who want to retain ODBC functionality need to stay on the February 2027 release or earlier.
+- **September 2026**: Microsoft begins removing ODBC drivers from the service. If you need to stay on ODBC (`Implementation="1.0"` or workspace setting **Off**), you must use a gateway to continue running queries with ODBC.
+- **March 2027**: The ODBC drivers referenced in this article no longer ship with Power BI Desktop or the gateway. If you want to retain ODBC functionality, you must use the February 2027 release or earlier.
 
 ## Related content
 
