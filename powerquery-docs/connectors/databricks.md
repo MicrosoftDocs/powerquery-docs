@@ -24,10 +24,10 @@ ms.custom: sfi-image-nochange
 | Authentication Types Supported | Username/Password<br/>Personal Access Token<br/> OAuth (OIDC) |
 
 > [!NOTE]
->Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-> [!NOTE]
->The Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver. This feature is available in preview. Learn more [here](#arrow-database-connectivity-driver-connector-implementation-preview).
+> [!IMPORTANT]
+> The Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver (preview). This connector is transitioning from the embedded Simba Spark ODBC driver to the Databricks ADBC driver. For migration guidance, key dates, and admin controls, see [Transition from ODBC to ADBC drivers in Power BI and Fabric](../transition-to-adbc.md).
 
 ## Prerequisites
 
