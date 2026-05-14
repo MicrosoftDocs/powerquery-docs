@@ -1,8 +1,6 @@
 ---
 title: Transition from ODBC to ADBC drivers in Power BI and Microsoft Fabric
 description: Learn how Power BI and Microsoft Fabric are transitioning supported data source connections from legacy embedded ODBC drivers to Apache Arrow Database Connectivity (ADBC) drivers, and how to migrate.
-author: whhender
-ms.author: whhender
 ms.topic: concept-article
 ms.date: 05/14/2026
 ---
@@ -22,8 +20,8 @@ The following table lists the connectors that are transitioning from embedded OD
 | [Databricks](/power-query/connectors/databricks) | Simba Spark ODBC | Databricks ADBC |
 | [Azure Databricks](/power-query/connectors/databricks-azure) | Simba Spark ODBC | Databricks ADBC |
 | Dremio | Simba Drill ODBC | FlightSQL ADBC |
-| [Google BigQuery](/power-query/connectors/google-bigquery) | Simba Google BigQuery ODBC | BigQuery ADBC |
-| Hive | Simba Hive ODBC | *Deprecated* |
+| [Google BigQuery](/power-query/connectors/google-bigquery) and [Google BigQuery (Microsoft Entra ID)](/power-query/connectors/google-bigquery-aad) | Simba Google BigQuery ODBC | BigQuery ADBC |
+| [Hive](/power-query/connectors/hive-llap) | Simba Hive ODBC | *Deprecated* |
 | [Impala](/power-query/connectors/impala-database) | Simba Impala ODBC | HiveServer2 ADBC |
 | [Snowflake](/power-query/connectors/snowflake) | Simba Snowflake ODBC | Snowflake ADBC |
 | Spark | Simba Spark ODBC | HiveServer2 ADBC |
