@@ -11,6 +11,9 @@ ms.custom: sfi-image-nochange
 
 # Snowflake
 
+> [!NOTE]
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
+
 ## Summary
 
 | Item | Description |
@@ -23,8 +26,8 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 > The passphrase input field automatically appears only if necessary, based on the type of certificate uploaded. After the user uploads a certificate, the system detects whether it's encrypted or unencrypted and conditionally displays the passphrase dialog. Both encrypted and unencrypted keys are supported.
 
-> [!NOTE]
-> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!IMPORTANT]
+> This connector is transitioning from the embedded Simba Snowflake ODBC driver to the Snowflake ADBC driver. For migration guidance, key dates, and admin controls, see [Transition from ODBC to ADBC drivers in Power BI and Fabric](../transition-to-adbc.md).
 
 ## Capabilities Supported
 

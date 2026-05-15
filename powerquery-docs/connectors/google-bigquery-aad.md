@@ -21,9 +21,8 @@ ms.subservice: connectors
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-> [!NOTE]
->
-> Since July 2025, we introduced a new implementation for the Google BigQuery (Microsoft Entra ID) connector, currently available in preview. Learn more about [this feature](#new-google-bigquery-connector-implementation-preview).
+> [!IMPORTANT]
+> Since July 2025, this connector supports a new implementation based on the BigQuery ADBC driver (preview). Learn more about [this feature](#new-google-bigquery-connector-implementation-preview). This connector is transitioning from the embedded Simba Google BigQuery ODBC driver to the BigQuery ADBC driver. For migration guidance, key dates, and admin controls, see [Transition from ODBC to ADBC drivers in Power BI and Fabric](../transition-to-adbc.md).
 
 ## Prerequisites
 

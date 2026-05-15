@@ -23,6 +23,9 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+> [!IMPORTANT]
+> This connector is transitioning from the embedded Simba Impala ODBC driver to the HiveServer2 ADBC driver. For migration guidance, key dates, and admin controls, see [Transition from ODBC to ADBC drivers in Power BI and Fabric](../transition-to-adbc.md).
+
 > [!NOTE]
 > The Impala connector implementation 2.0 is in preview since July 2025.  
 
