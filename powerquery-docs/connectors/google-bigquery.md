@@ -22,6 +22,9 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+> [!IMPORTANT]
+> This connector is transitioning from the embedded Simba Google BigQuery ODBC driver to the BigQuery ADBC driver. For migration guidance, key dates, and admin controls, see [Transition from ODBC to ADBC drivers in Power BI and Fabric](../transition-to-adbc.md).
+
 ## Google BigQuery connector versions
 
 Power Query supports two implementations of the Google BigQuery connector:

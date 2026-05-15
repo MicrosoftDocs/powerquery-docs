@@ -18,7 +18,7 @@ ms.custom:
 | --- | --- |
 | Release State | General Availability |
 | Products | Excel<br />Power BI (Semantic models)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2)<br />Power Apps (Dataflows)<br />Dynamics 365 Customer Insights |
-| [Authentication Types Supported](#authentication-types-supported) | Anonymous<br />Microsoft Account<br />Windows<br />Organizational Account |
+| [Authentication Types Supported](#authentication-types-supported) | Anonymous<br />Microsoft Account<br />Windows<br />Organizational Account<br />Workspace identity |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br />[SharePoint.Files](/powerquery-m/sharepoint-files) |
 
 > [!NOTE]  
