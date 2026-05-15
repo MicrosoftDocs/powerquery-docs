@@ -33,6 +33,8 @@ items:
         href: connect-using-generic-interfaces.md
       - name: "Manage connections"
         href: manage-connections.md
+      - name: "Transition from ODBC to ADBC drivers"
+        href: transition-to-adbc.md
       - name: "Change a dataflow gateway"
         href: change-gateway-dataflow.md
     - name: Transform data
