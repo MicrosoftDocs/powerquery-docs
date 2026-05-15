@@ -5,7 +5,7 @@ ms.date: 03/06/2026
 ms.topic: include
 ---
 
-* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
+* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 * A storage account that has a hierarchical namespace. To create one, follow the instructions at [Create a storage account](/azure/storage/common/storage-account-create). This article assumes that you created a storage account named `myadlsg2`.
 
