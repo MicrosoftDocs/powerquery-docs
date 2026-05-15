@@ -5,7 +5,7 @@ ms.date: 03/06/2026
 ms.topic: include
 ---
 
-* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
+* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 * An organizational email account that is a member of Microsoft Entra ID. This article uses this account to connect to the [Azure Data Explorer help cluster](https://dataexplorer.azure.com/clusters/help/databases/Samples) samples.
 

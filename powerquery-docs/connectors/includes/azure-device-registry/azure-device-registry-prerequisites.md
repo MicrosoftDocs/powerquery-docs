@@ -5,7 +5,7 @@ ms.date: 03/06/2026
 ms.topic: include
 ---
 
-* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
+* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 * You must have appropriate rights in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) with at least read access to the Azure Device Registry resources you want to query.
 
 > [!NOTE]
