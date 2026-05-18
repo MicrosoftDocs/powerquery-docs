@@ -32,7 +32,7 @@ Power Query supports two implementations of the Google BigQuery connector:
 - **V1 (ODBC-based)** – Legacy implementation based on ODBC.
 - **V2 (ADBC-based)** – New implementation built on Apache Arrow Database Connectivity (ADBC), designed to deliver improved performance, reliability, and scalability for large analytical workloads.
 
-The V2 connector is the recommended option for new workloads in supported experiences. Learn more about [the V2 connector feature](#new-google-bigquery-connector-implementation-preview).
+The V2 connector is the recommended option for new workloads in supported experiences. Learn more about [the V2 connector feature](#new-google-bigquery-connector-implementation).
 
 
 ## Prerequisites
@@ -95,9 +95,9 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Google BigQuery data.
 
-## New Google BigQuery connector implementation (Preview)
+## New Google BigQuery connector implementation
 
-Since May 2025, we introduced a new implementation for the Google BigQuery connector to enhance the integration with Google BigQuery, currently available in preview. It uses [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) instead of ODBC to connect to and retrieve data from Google BigQuery which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/gbq-connector-feedback).
+Since May 2025, we introduced a new implementation for the Google BigQuery connector to enhance the integration with Google BigQuery. It uses [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) instead of ODBC to connect to and retrieve data from Google BigQuery which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/gbq-connector-feedback).
 
 > [!NOTE]
 > This feature is supported in the 64-bit version of Power BI Desktop and doesn't work in the 32-bit version.
