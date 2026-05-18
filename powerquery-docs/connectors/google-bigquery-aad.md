@@ -22,7 +22,7 @@ ms.subservice: connectors
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!IMPORTANT]
-> Since July 2025, this connector supports a new implementation based on the BigQuery ADBC driver (preview). Learn more about [this feature](#new-google-bigquery-connector-implementation-preview). This connector is transitioning from the embedded Simba Google BigQuery ODBC driver to the BigQuery ADBC driver. For migration guidance, key dates, and admin controls, see [Transition from ODBC to ADBC drivers in Power BI and Fabric](../transition-to-adbc.md).
+> Since July 2025, this connector supports a new implementation based on the BigQuery ADBC driver. Learn more about [this feature](#new-google-bigquery-connector-implementation). This connector is transitioning from the embedded Simba Google BigQuery ODBC driver to the BigQuery ADBC driver. For migration guidance, key dates, and admin controls, see [Transition from ODBC to ADBC drivers in Power BI and Fabric](../transition-to-adbc.md).
 
 ## Prerequisites
 
@@ -75,9 +75,9 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Google BigQuery data.
 
-## New Google BigQuery connector implementation (Preview)
+## New Google BigQuery connector implementation
 
-Since July 2025, we introduced a new implementation for the Google BigQuery (Microsoft Entra ID) connector to enhance the integration with Google BigQuery, currently available in preview. It uses [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) instead of ODBC to connect to and retrieve data from Google BigQuery which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/gbq-connector-feedback).
+Since July 2025, we introduced a new implementation for the Google BigQuery (Microsoft Entra ID) connector to enhance the integration with Google BigQuery. It uses [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) instead of ODBC to connect to and retrieve data from Google BigQuery which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/gbq-connector-feedback).
 
 > [!NOTE]
 >
