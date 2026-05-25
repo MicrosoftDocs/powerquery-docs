@@ -5,9 +5,10 @@ author: denodo-research-labs
 ms.author: whhender
 ms.service: powerquery
 ms.topic: concept-article
-ms.date: 1/6/2026
+ms.date: 5/25/2026
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Denodo
@@ -180,21 +181,41 @@ For this connection method, you use the on-premises data gateway. Follow these s
         > [!NOTE]
         > To access Virtual DataPort databases, you must create a user in Denodo whose name is the same as the email used in Power BI when signing in to the organizational account. When you create the user in Denodo, you must select **EXTERNAL** as the authentication type. The permissions given to this user on the Denodo databases determine which databases can be accessed from Power BI.
 
-1. If you use Windows authentication, under **Advanced settings** for the data source, you can enable the single sign-on (SSO) authentication schema. You can then use the same credentials of the user accessing your reports in Power BI for accessing the required data in Denodo.
+1. If you use Windows authentication, under **Advanced settings** for the data source, you can enable single sign-on (SSO) so report viewers query Denodo with their own identity. The Denodo connector supports two SSO paths: Kerberos and Microsoft Entra ID.
+
+   **Kerberos SSO**
 
    :::image type="content" source="./media/denodo/denodo-sso.png" alt-text="Screenshot of the Data Source Settings dialog where you set Denodo SSO using Kerberos.":::
 
-   There are two options for enabling SSO: **Use SSO via Kerberos for DirectQuery queries** and **Use SSO via Kerberos for DirectQuery And Import queries**. If you're working with reports based on DirectQuery, both options use the SSO credentials of the user that signs in to the Power BI service. If you're working with reports based on Import, the former option uses the credentials entered in the data source page (**Username** and **Password** fields), while the latter uses the credentials of the dataset owner.
+   There are two options for enabling Kerberos SSO: **Use SSO via Kerberos for DirectQuery queries** and **Use SSO via Kerberos for DirectQuery And Import queries**. If you're working with reports based on DirectQuery, both options use the SSO credentials of the user that signs in to the Power BI service. If you're working with reports based on Import, the former option uses the credentials entered in the data source page (**Username** and **Password** fields), while the latter uses the credentials of the semantic model owner.
 
-   There are particular prerequisites and considerations that you must take into account in order to use the Kerberos-based SSO. Some of these requirements are:
+   There are particular prerequisites and considerations that you must take into account in order to use Kerberos-based SSO. Some of these requirements are:
 
    * You must enable Kerberos constrained delegation for the Windows user running the Power BI gateway. Also, configure both the local Active Directory and Microsoft Entra ID environments according to the instructions offered by Microsoft for this purpose.
 
-     By default, the Power BI gateway sends the user principal name (UPN) when it performs an SSO authentication operation. You need to review the attribute that you use as a login identifier in Denodo Kerberos authentication. If it's different from `userPrincipalName`, adjust the gateway settings according to this value.
+     By default, the Power BI gateway sends the user principal name (UPN) when it performs an SSO authentication operation. Review the attribute that you use as a login identifier in Denodo Kerberos authentication. If it's different from `userPrincipalName`, adjust the gateway settings to match.
 
-   * The Power BI gateway configuration file is `Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config`, located in `\Program Files\On-premises data gateway`. This file has two properties, called `ADUserNameLookupProperty` and `ADUserNameReplacementProperty`, that allow the gateway to perform local Microsoft Entra ID lookups at runtime. `ADUserNameLookupProperty` must specify against which attribute of the local Active Directory it must map the user principal name that comes from Microsoft Entra ID. So, in this scenario, `ADUserNameLookupProperty` should be `userPrincipalName`. Then, when the user is found, the `ADUserNameReplacementProperty` value indicates the attribute that should be used to authenticate the impersonated user (the attribute that you use as the login identifier in Denodo).
+   * The Power BI gateway configuration file is `Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config`, located in `\Program Files\On-premises data gateway`. This file has two properties, `ADUserNameLookupProperty` and `ADUserNameReplacementProperty`, that let the gateway perform local Microsoft Entra ID lookups at runtime. `ADUserNameLookupProperty` specifies which attribute of the local Active Directory the gateway maps the user principal name to from Microsoft Entra ID. In this scenario, `ADUserNameLookupProperty` should be `userPrincipalName`. When the user is found, the `ADUserNameReplacementProperty` value indicates the attribute that authenticates the impersonated user (the attribute that you use as the login identifier in Denodo).
 
-     Changes in this configuration file are at the gateway level, and these changes affect any source with which SSO authentication is done through the Power BI gateway.
+     Changes to this configuration file apply at the gateway level and affect any source that uses SSO authentication through the Power BI gateway.
+
+   **Microsoft Entra ID SSO (preview)**
+
+   Microsoft Entra ID SSO for the Denodo connector is in preview. When you enable it, viewers of a DirectQuery semantic model query Denodo with their own Microsoft Entra ID identity. Entra ID SSO removes the on-premises Active Directory and Kerberos constrained delegation dependencies that Kerberos SSO requires.
+
+   Entra ID SSO has the following prerequisites:
+
+   * A Power BI tenant admin enables **Denodo SSO** and **Microsoft Entra ID SSO for data gateway** in the tenant settings.
+   * The on-premises data gateway runs a release that supports Entra ID SSO.
+   * The Denodo server runs a version that supports Microsoft Entra ID token validation.
+
+   :::image type="content" source="./media/denodo/denodo-sso-entra-id-tenant-settings.png" alt-text="Screenshot of the Power BI tenant admin settings with Denodo SSO and Microsoft Entra ID SSO for data gateway enabled.":::
+
+   After Denodo SSO is enabled in the tenant, the **Single sign-on** options on the data source page include a **Use SSO via Azure AD for DirectQuery queries** checkbox. Select this checkbox to enable Entra ID SSO for any DirectQuery semantic model bound to the data connection.
+
+   :::image type="content" source="./media/denodo/denodo-sso-entra-id-data-source.png" alt-text="Screenshot of the Denodo data source settings with the Use SSO via Azure AD for DirectQuery queries checkbox selected.":::
+
+   Entra ID SSO applies only to DirectQuery semantic models. Import models answer queries from imported data and don't relay user identities to the data source.
 
 1. After you create a data source for the Denodo connector, you can refresh Power BI reports. To publish a report on powerbi.com:
    * Open the report in Power BI Desktop.
