@@ -91,7 +91,7 @@ The Starburst connectors support several authentication types. Choose the type t
 - [Kerberos](#kerberos)
 -[Password](#password)
 -[Access token](#access-token)
--[Oauth 2.0](#oauth-2-0)
+-[Oauth 2.0](#oauth-20)
 -[Microsoft Entra ID (preview)](#microsoft-entra-id-preview)
 
 
