@@ -45,20 +45,21 @@ ai-usage: ai-assisted
   * Connection string
   * Native query
 
-## Two Starburst connectors
+## Choose which Starburst connector to use
 
 Two Starburst connectors appear in the **Get Data** dialog:
 
 * **Starburst**. The original Starburst connector. Use this connector unless you need Entra ID SSO for DirectQuery.
-* **Starburst secured by Entra ID** (preview). A separate connector that adds Microsoft Entra ID as an authentication option for DirectQuery SSO. Use this connector for new reports where you want each viewer's Entra ID identity to flow end-to-end to Starburst.
+* **Starburst secured by Entra ID** (preview). A separate connector that adds Microsoft Entra ID as an authentication option for DirectQuery SSO. Use this connector for new reports where you want each viewer's Entra ID identity to flow end-to-end to Starburst. To enable, see [Enable Microsoft Entra ID single sign-on for DirectQuery](#enable-microsoft-entra-id-single-sign-on-for-directquery-preview)
 
 :::image type="content" source="./media/starburst/get-data-picker.png" alt-text="Screenshot of the Get Data dialog showing both the Starburst connector and the Starburst secured by Entra ID connector.":::
 
-Existing reports that use the original Starburst connector don't need to migrate. Switch to **Starburst secured by Entra ID** only if you need Entra ID SSO.
+>[!TIP]
+>Existing reports that use the original Starburst connector don't need to migrate. Switch to **Starburst secured by Entra ID** only if you need Entra ID SSO.
 
 ## Connect to Starburst from Power Query Desktop
 
-1. From the **Home** ribbon, select **Get Data**. In the **Database** category, search for `Starburst`, select **Starburst** or **Starburst secured by Entra ID**, and then select **Connect**.
+1. From the **Home** ribbon, select **Get Data**. In the **Database** category, search for `Starburst`, select **Starburst** or **Starburst secured by Entra ID**, and then select **Connect**. (See [choose which Starburst connector to use for more information](#choose-which-starburst-connector-to-use).
 
 1. In the connection dialog, enter your Starburst cluster **Host**. For Starburst Galaxy, append the OAuth reference string to the host name as documented by Starburst.
 
@@ -86,7 +87,13 @@ For Power Query Online, you connect through the on-premises data gateway.
 
 ## Authentication
 
-The Starburst connectors support several authentication types. Choose the type that matches how your Starburst cluster is configured.
+The Starburst connectors support several authentication types. Choose the type that matches how your Starburst cluster is configured:
+- [Kerberos](#kerberos)
+-[Password](#password)
+-[Access token](#access-token)
+-[Oauth 2.0](#oauth-2-0)
+-[Microsoft Entra ID (preview)](#microsoft-entra-id-preview)
+
 
 ### Kerberos
 

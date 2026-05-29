@@ -183,7 +183,7 @@ For this connection method, you use the on-premises data gateway. Follow these s
 
 1. If you use Windows authentication, under **Advanced settings** for the data source, you can enable single sign-on (SSO) so report viewers query Denodo with their own identity. The Denodo connector supports two SSO paths: Kerberos and Microsoft Entra ID.
 
-   **Kerberos SSO**
+   **Kerberos SSO:**
 
    :::image type="content" source="./media/denodo/denodo-sso.png" alt-text="Screenshot of the Data Source Settings dialog where you set Denodo SSO using Kerberos.":::
 
@@ -199,7 +199,7 @@ For this connection method, you use the on-premises data gateway. Follow these s
 
      Changes to this configuration file apply at the gateway level and affect any source that uses SSO authentication through the Power BI gateway.
 
-   **Microsoft Entra ID SSO (preview)**
+   **Microsoft Entra ID SSO (preview):**
 
    Microsoft Entra ID SSO for the Denodo connector is in preview. When you enable it, viewers of a DirectQuery semantic model query Denodo with their own Microsoft Entra ID identity. Entra ID SSO removes the on-premises Active Directory and Kerberos constrained delegation dependencies that Kerberos SSO requires.
 
