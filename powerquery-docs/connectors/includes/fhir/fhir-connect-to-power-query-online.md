@@ -24,17 +24,17 @@ To make a connection to a FHIR server, take the following steps:
 
 6. Select the resources you're interested in.
 
-   :::image type="content" source="/power-query/connectors/fhir/fhir-navigator-online.png" alt-text="Screenshot of the Navigator with the FHIR Patient box filled in, and the patient records shown on the right hand side." lightbox="../../fhir/fhir-navigator-online.png":::
+   :::image type="content" source="/power-query/connectors/fhir/fhir-navigator-online.png" alt-text="Screenshot of the Navigator with the FHIR Patient box filled in, and the patient records shown on the right hand side." lightbox="/power-query/connectors/fhir/fhir-navigator-online.png":::
 
    Select **Transform data** to shape the data.
 
 7. Shape the data as needed, for example, expand the postal code.
 
-   :::image type="content" source="/power-query/connectors/fhir/fhir-shapedata-online.png" alt-text="Screenshot of the Power Query editor with the address column selected, and the postal code selected for expansion." lightbox="../../fhir/fhir-shapedata-online.png":::
+   :::image type="content" source="/power-query/connectors/fhir/fhir-shapedata-online.png" alt-text="Screenshot of the Power Query editor with the address column selected, and the postal code selected for expansion." lightbox="/power-query/connectors/fhir/fhir-shapedata-online.png":::
 
 8. Save the query when shaping is complete.
 
-   :::image type="content" source="/power-query/connectors/fhir/fhir-savequery-online.png" alt-text="Screenshot of the Power Query editor with the Save & Close button emphasized." lightbox="../../fhir/fhir-savequery-online.png":::
+   :::image type="content" source="/power-query/connectors/fhir/fhir-savequery-online.png" alt-text="Screenshot of the Power Query editor with the Save & Close button emphasized." lightbox="/power-query/connectors/fhir/fhir-savequery-online.png":::
 
    > [!NOTE]
    > In some cases, query folding can't be obtained purely through data shaping with the graphical user interface (GUI), as shown in the previous image. To learn more about query folding when using the FHIR connector, see [FHIR query folding](/power-query/connectors/fhir/fhir-query-folding).
