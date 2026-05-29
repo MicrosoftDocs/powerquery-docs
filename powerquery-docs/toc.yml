@@ -579,6 +579,8 @@ items:
         href: connectors/sql-server-analysis-services.md
       - name: "SQL Server database"
         href: connectors/sql-server.md
+      - name: "Starburst"
+        href: connectors/starburst.md
       - name: "SumTotal"
         href: connectors/sumtotal.md
       - name: "Supermetrics"
