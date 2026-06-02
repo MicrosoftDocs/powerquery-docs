@@ -23,7 +23,7 @@ ms.custom: sfi-image-nochange
 >Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> The Redshift connector implementation 2.0 is available in Desktop and Gateway since March 2026. Learn more about [this feature](#redshift-connector-implementation-20).
+> The Redshift connector implementation 2.0 is now generally available. Learn more about [this feature](#redshift-connector-implementation-20).
 
 ## Prerequisites
 
@@ -127,9 +127,7 @@ Once you enable Microsoft Entra ID SSO for all data sources, then enable Microso
 
 ## Redshift connector implementation 2.0
 
-In March 2026, we introduced a new implementation for the Amazon Redshift connector to enhance the integration with Redshift. This connector is available as a preview in Power Query desktop.
-
-The Redshift connector implementation 2.0 is built using the open-source [Amazon Redshift 2.x](https://github.com/aws/amazon-redshift-odbc-driver/) driver. To enable this in the desktop, go to **File** > **Options and settings** > **Options** > **Preview features**.
+The Amazon Redshift connector has a new implementation built on the open-source [Amazon Redshift 2.x](https://github.com/aws/amazon-redshift-odbc-driver/) driver. To enable this in the desktop, go to **File** > **Options and settings** > **Options** > **Preview features**.
 
 Enable the **Use new Amazon Redshift connector implementation** feature:
  
@@ -148,7 +146,7 @@ in
 
 This will only be added for new Redshift connections after you enable the option in Power Query desktop. You can add this option to any existing connection by adding the [Implementation="2.0"] option as well.
 
-Using this new implementation option enables users to trial and preview the Redshift V2 driver. All connections will be automatically migrated to the V2 driver in a future iteration.
+All connections will be automatically migrated to the V2 driver in a future iteration.
 You can also see which version of the Redshift driver you are using in your Mashup logs:
 
 ```json
@@ -170,5 +168,3 @@ You can also see which version of the Redshift driver you are using in your Mash
    "Duration":"00:00:00.0000192"
 }
 ```
-
-This will continue to roll out to all services where the connector is used and we will update this document as those products come online.
