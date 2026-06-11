@@ -23,9 +23,6 @@ ms.custom: sfi-image-nochange
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-> [!NOTE]
-> If you select Service Principal as the authentication type in Power BI service, you need to grant it app-only permissions through Azure Access Control Services (ACS). For more information, go to [Granting access using SharePoint App-Only](/sharepoint/dev/solution-guidance/security-apponly-azureacs).
-
 ## Capabilities supported
 
 [!INCLUDE [Includes_sharepoint-online-list_capabilities-supported](includes/sharepoint-online-list/sharepoint-online-list-capabilities-supported.md)]
