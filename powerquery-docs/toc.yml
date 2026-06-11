@@ -7,12 +7,10 @@ items:
       href: power-query-what-is-power-query.md
     - name: Get data
       items:
-      - name: "Getting data overview"
+      - name: "Get data overview"
         href: get-data-experience.md
-      - name: "Where to get data"
+      - name: "Get data by product"
         href: where-to-get-data.md
-      - name: "Get data experience"
-        href: get-data-ui.md
       - name: Authentication
         items:
         - name: "Authentication in Desktop apps"

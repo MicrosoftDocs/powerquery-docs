@@ -246,6 +246,11 @@
       "redirect_document_id": "true"
     },
     {
+      "source_path": "powerquery-docs/get-data-ui.md",
+      "redirect_url": "/power-query/get-data-experience",
+      "redirect_document_id": "true"
+    },
+    {
       "source_path": "powerquery-docs/Connectors/AccessDatabase.md",
       "redirect_url": "/power-query/connectors/access-database",
       "redirect_document_id": "true"

@@ -11,7 +11,7 @@ To get data in Data Factory:
 
 1. On the left side of Data Factory, select **Workspaces**.
 
-1. From your Data Factory workspace, select **New** > **Dataflow Gen2** to create a new dataflow.
+1. From your Data Factory workspace, select **New** > then select your data factory item: a dataflow, pipeline, copy job, or mirroring job.
 
    :::image type="content" source="/power-query/media/where-to-get-data/select-open-dataflow.png" alt-text="Screenshot showing the workspace where you choose to create a new dataflow." lightbox="/power-query/media/where-to-get-data/select-open-dataflow.png":::
 

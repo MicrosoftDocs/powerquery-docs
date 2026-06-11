@@ -6,13 +6,13 @@ ms.date: 10/16/2025
 ms.author: whhender
 ---
 
-# Dynatrace Grail (Beta)
+# Dynatrace Grail
 
 ## Summary
 
 |Item|                                Description|
 |------|----------------------------------------------------------------|
-|Release State|                       Beta|
+|Release State|                       General Availability|
 |Products|                            Power BI (Semantic Models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)|
 |Authentication Types Supported|      Windows (Power BI Desktop)<br/>Organizational account|
 |Function Reference Documentation|    Source|
