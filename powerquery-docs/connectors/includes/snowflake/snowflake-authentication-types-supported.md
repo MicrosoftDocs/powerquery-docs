@@ -8,7 +8,7 @@ ms.topic: include
 > [!NOTE]
 > - Username/password authentication mode will be deprecated. [Read more here](https://www.snowflake.com/en/blog/blocking-single-factor-password-authentification/). More information can be found under Connectivity on our [Fabric roadmap](https://roadmap.fabric.microsoft.com/?product=datafactory).
 >
-> - Key Pair Auth isn't supported for Dataflows Gen1.
+> - Key Pair Auth isn't supported for Dataflows Gen1 and Power Apps (Dataflows).
 
 The Snowflake connector supports the following authentication methods:
 
