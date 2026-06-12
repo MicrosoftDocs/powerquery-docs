@@ -6,6 +6,6 @@ ms.topic: include
 ---
 
 * A running ClickHouse setup.
-* Customers must install the [ClickHouse ODBC driver](https://github.com/ClickHouse/clickhouse-odbc) before using the
+* Customers must install the [ClickHouse ODBC driver](https://github.com/ClickHouse/clickhouse-odbc/releases) before using the
   connector.
 
