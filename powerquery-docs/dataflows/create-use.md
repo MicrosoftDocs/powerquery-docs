@@ -3,7 +3,7 @@ title: "Create and use dataflows in Microsoft Power Platform"
 description: Learn how to use dataflows in Microsoft Power Platform.
 author: Luitwieler
 ms.topic: concept-article
-ms.date: 8/26/2025
+ms.date: 06/15/2026
 ms.author: jeluitwi
 ms.subservice: dataflows
 ---
@@ -62,6 +62,7 @@ Most dataflow capabilities are available in both Power Apps and Power BI. Datafl
 * Copying dataflows as part of a [Back up and restore environments](/power-platform/admin/backup-restore-environments) operation isn't supported.
 * Copying dataflows as part of a [Power Platform environments copy](/power-platform/admin/copy-environment) operation don't preserve their email notification setting.
 * Change owner for a Dataflow with a connection and a query parameter would also change the parameter value to a previous value (if such value was set).
+* [Incremental refresh](incremental-refresh.md) is limited to a maximum of 50 partitions for a single query and 150 partitions for the whole dataflow. This limit is checked when you publish the dataflow. If a dataflow exceeds 150 partitions, the publish is blocked and you need to reduce the number of partitions (by increasing the partition size or using incremental refresh on fewer queries) before you can publish again.
 
 ## Next steps
 
