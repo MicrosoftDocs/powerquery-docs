@@ -95,7 +95,7 @@ When the connection can't be established successfully, the generic error message
 
 You might also find the following information useful:
 
-- [Query with Atlas SQL](https://www.mongodb.com/docs/atlas/data-federation/query/query-with-sql/)
+- [Query with Atlas SQL](https://www.mongodb.com/docs/sql-interface/query-with-sql/)
 - [Set Up and Query Data Federation](https://www.mongodb.com/docs/atlas/data-federation/)
 - [Schema Management](https://www.mongodb.com/docs/atlas/data-federation/query/sql/schema-management/)
 - [SQL Reference](https://www.mongodb.com/docs/atlas/data-federation/query/sql/powerbi/connect/)
