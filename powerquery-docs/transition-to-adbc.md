@@ -9,7 +9,10 @@ ms.date: 05/14/2026
 
 Power BI and Microsoft Fabric are transitioning supported data source connections from legacy embedded ODBC drivers to [Apache Arrow Database Connectivity (ADBC)](https://arrow.apache.org/docs/format/ADBC.html) drivers. ADBC provides a set of standard interfaces for interacting with Arrow data, which is especially efficient at fetching large datasets with minimal overhead and no serialization or copying. The ADBC drivers also incorporate security enhancements, such as memory safety and garbage collection.
 
-You can adopt ADBC today per-connection, and administrators can control the default behavior at scale using a tenant setting that workspace admins can override for testing and validation. The tenant and workspace controls are currently available in some tenants and continue to roll out to others.
+> [!NOTE]
+> The tenant and workspace controls described in this article are being enabled in phases and might not yet be available in all tenants.
+
+You can adopt ADBC today per-connection, and administrators can control the default behavior at scale using a tenant setting that workspace admins can override for testing and validation.
 
 ## Connectors and driver changes
 
@@ -51,7 +54,7 @@ For detailed instructions on opting in per-connection for a specific connector, 
 
 ### Tenant setting
 
-Tenant admins can set the organization's default using the Admin portal setting. This setting is currently available in some tenants and continues to roll out to others:
+Tenant admins can set the organization's default using the Admin portal setting:
 
 **Users can connect to data sources by using Apache Arrow database connectivity (ADBC)**
 
@@ -62,7 +65,7 @@ This setting also controls the **Test Connection** behavior for each connection 
 
 ### Workspace override
 
-When available in your tenant, the tenant setting delegates to workspaces, so workspace admins can override the default and compare behaviors without modifying each individual connection. This approach allows side-by-side validation. For example, you can use one workspace to test ADBC defaults while keeping another workspace on ODBC defaults.
+The tenant setting delegates to workspaces, so workspace admins can override the default and compare behaviors without modifying each individual connection. This approach allows side-by-side validation. For example, you can use one workspace to test ADBC defaults while keeping another workspace on ODBC defaults.
 
 ## How the implementation is chosen
 
@@ -85,6 +88,8 @@ The following table shows how the driver is selected:
 
 ## Key dates
 
+- **July 2026 (planned)**: Broad rollout of the tenant setting begins. Workspace behavior inherits this setting and can be overridden by workspace admins where supported.
+- **August 2026 (planned)**: Microsoft plans to begin enabling the tenant setting by default in phases, subject to rollout readiness.
 - **Late Q3 to early Q4 2026 (planned)**: Microsoft plans to begin removing ODBC drivers from the service, subject to rollout readiness. If you need to stay on ODBC (`Implementation="1.0"` or workspace setting **Off**), you must use a gateway to continue running queries with ODBC.
 - **Spring 2027 (planned)**: The ODBC drivers referenced in this article are planned to no longer ship with Power BI Desktop or the gateway.
 
