@@ -9,6 +9,10 @@ ms.date: 05/14/2026
 
 Power BI and Microsoft Fabric are transitioning supported data source connections from legacy embedded ODBC drivers to [Apache Arrow Database Connectivity (ADBC)](https://arrow.apache.org/docs/format/ADBC.html) drivers. ADBC provides a set of standard interfaces for interacting with Arrow data, which is especially efficient at fetching large datasets with minimal overhead and no serialization or copying. The ADBC drivers also incorporate security enhancements, such as memory safety and garbage collection.
 
+> [!NOTE]
+> The tenant and workspace controls described in this article are being enabled in phases and might not yet be available in all tenants.
+> This transition applies only to the connectors listed in this article and doesn't change behavior for the ODBC connector when you use a separately installed ODBC driver. The change in this article is the transition away from embedded drivers that ship with Power BI.
+
 You can adopt ADBC today per-connection, and administrators can control the default behavior at scale using a tenant setting that workspace admins can override for testing and validation.
 
 ## Connectors and driver changes
@@ -85,8 +89,12 @@ The following table shows how the driver is selected:
 
 ## Key dates
 
-- **September 2026**: Microsoft begins removing ODBC drivers from the service. If you need to stay on ODBC (`Implementation="1.0"` or workspace setting **Off**), you must use a gateway to continue running queries with ODBC.
-- **March 2027**: The ODBC drivers referenced in this article no longer ship with Power BI Desktop or the gateway. If you want to retain ODBC functionality, you must use the February 2027 release or earlier.
+- **July 2026 (planned)**: Broad rollout of the tenant setting begins. Workspace behavior inherits this setting and can be overridden by workspace admins where supported.
+- **August 2026 (planned)**: Microsoft plans to begin enabling the tenant setting by default in phases, subject to rollout readiness.
+- **Late Q3 to early Q4 2026 (planned)**: Microsoft plans to begin removing ODBC drivers from the service, subject to rollout readiness. If you need to stay on ODBC (`Implementation="1.0"` or workspace setting **Off**), you must use a gateway to continue running queries with ODBC.
+- **Spring 2027 (planned)**: The ODBC drivers referenced in this article are planned to no longer ship with Power BI Desktop or the gateway.
+
+Before enforcement milestones, Microsoft plans to provide advance notice so customers can complete migration and validation activities.
 
 ## Related content
 
