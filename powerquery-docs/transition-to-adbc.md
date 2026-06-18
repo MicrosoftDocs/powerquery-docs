@@ -11,6 +11,7 @@ Power BI and Microsoft Fabric are transitioning supported data source connection
 
 > [!NOTE]
 > The tenant and workspace controls described in this article are being enabled in phases and might not yet be available in all tenants.
+> This transition applies only to the connectors listed in this article and doesn't change behavior for the ODBC connector when you use a separately installed ODBC driver. The change in this article is the transition away from embedded drivers that ship with Power BI.
 
 You can adopt ADBC today per-connection, and administrators can control the default behavior at scale using a tenant setting that workspace admins can override for testing and validation.
 
