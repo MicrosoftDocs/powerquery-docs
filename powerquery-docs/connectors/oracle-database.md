@@ -197,32 +197,47 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Oracle database.
 
-## Use the built-in Oracle driver (Preview)
+## Use the built-in Oracle driver 
 
-Since the April 2025 version of Power BI Desktop and May 2025 version of on-premises data gateway, the Oracle connector includes a built-in Oracle managed ODP.NET driver for connectivity. This feature removes the necessity for users to install and manage the driver. You can enable this feature by using the following instructions.
+### For Import Mode In Power BI Desktop
 
-To use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider for Import Mode** option.
+For the June 2026 version of Power BI Desktop or on-premises data gateway, it's default to use a built-in Oracle managed ODP.NET driver for connectivity. This feature removes the necessity for users to install and manage the driver. You can still opt out to not use this feature by using the following instructions.
+
+To not use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then unselect the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider for Import Mode** option.
 
 :::image type="content" source="./media/oracle-database/option-for-bundled-driver.png" alt-text="Screenshot of option to enable using bundled Oracle Managed ODP Provider in Power BI Desktop.":::
 
-To use this built-in driver in the on-premises data gateway, change the gateway configurations to update the `MashupFlight_EnableOracleBundledOdacProviderV2` setting using the following steps:
+### For DirectQuery Mode In Power BI Desktop (Preview)
+
+For DirectQuery Mode, using built-in Oracle managed ODP.NET driver is still in preview.  You can opt in by using the following instructions.
+
+To use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then unselect the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider for DirectQuery Mode** option.
+
+### For Import Mode In On-premise Gateway
+
+It's default to use a built-in Oracle managed ODP.NET driver for connectivity starting from the June 2026 version.  To not use this built-in driver in the on-premises data gateway for Import Mode, change the gateway configurations to update the `MashupFlight_DisableOracleBundledOdacProviderV2` setting using the following steps:
 
 1. On the local machine where the on-premises data gateway is installed, navigate to **C:\Program Files\On-premises data gateway**.
 2. Make a backup of the configuration file named **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config**.
-3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `MashupFlight_EnableOracleBundledOdacProviderV2` entry.
-4. Update the `MashupFlight_EnableOracleBundledOdacProviderV2` value as `True`.
+3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `MashupFlight_DisableOracleBundledOdacProviderV2` entry.
+4. Update the `MashupFlight_DisableOracleBundledOdacProviderV2` value as `True`.
 5. Restart your gateway.
 
 ```xml
 <Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>
    ...
-   <setting name="MashupFlight_EnableOracleBundledOdacProviderV2" serializeAs="String">
+   <setting name="MashupFlight_DisableOracleBundledOdacProviderV2" serializeAs="String">
       <value>True</value>
    </setting>
    ...
 </Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>    
 ```
-### Supported ways to specify TNS_ADMIN with the built-in Oracle driver (March 2026 version and later)
+
+### For DirectQuery Mode In On-premise Gateway (Preview)
+
+It's controled by service and you will need to contact support team to ask to be excluded for the tenant.
+
+### Supported ways to specify TNS_ADMIN with the built-in Oracle driver
 There are three options to specify TNS_ADMIN:
 
 - [Configure the TNS_ADMIN in OADC.config](#configure-tns_admin-in-odacconfig)
@@ -260,9 +275,34 @@ If ODAC is installed previously and TNS_ADMIN is configured, Power BI will autom
 
 The remaining configurations to connect to an Oracle database from Power Query Desktop are the same as described in the previous sections.
 
+### Allowed Property List
+Users can specify Oracle server names using connect descriptors such as (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=host_name)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=service_name))).
+We enforce which properties can be used in Desktop and Gateway.  The default allowed properties in ODAC.config is listed below:
+
+```xml
+<configuration>
+ ...
+  <AllowLists>
+    <!--
+      Oracle connection strings can contain connection properties, for example  CONNECT_TIMEOUT.   Only connection properties explicitly set to true in the list below will
+      be allowed with Power BI Desktop and the On Premises Data Gateway. Using our example, you can add "CONNECT_TIMEOUT":true to the list to enable it. To disable it you
+      can remove it from the list, or set the value to false. This list will be enforced on all connection string types including connect descriptors and aliases
+      referencing a tnsnames.ora entry. The use of any disallowed property in a connection string will result in a ORA-50122 error. Restart Power BI Desktop or the On-premises
+      Data Gateway service after applying ODAC.config changes.
+      For the more information see https://docs.oracle.com/en/database/oracle/oracle-database/26/odpnt/InstallConnectionConfigurationRestriction.html
+    -->
+    <OnPremAllowList>{"DataSource":{"HOST":true,"PORT":true,"PROTOCOL":true,"HTTPS_PROXY":true,"HTTPS_PROXY_PORT":true,"ENABLE":true,"EXPIRE_TIME":true,"FAILOVER":true,"LOAD_BALANCE":true,"RECV_BUF_SIZE":true,"SDU":true,"SEND_BUF_SIZE":true,"SOURCE_ROUTE":true,"TYPE_OF_SERVICE":true,"COLOCATION_TAG":true,"CONNECTION_ID_PREFIX":true,"FAILOVER_MODE":true,"GLOBAL_NAME":true,"HS":true,"INSTANCE_NAME":true,"POOL_BOUNDARY":true,"POOL_CONNECTION_CLASS":true,"POOL_NAME":true,"POOL_PURITY":true,"RDB_DATABASE":true,"SHARDING_KEY":true,"SHARDING_KEY_ID":true,"SUPER_SHARDING_KEY":true,"SERVER":true,"SERVICE_NAME":true,"SID":true,"TUNNEL_SERVICE_NAME":true,"SSL_CLIENT_AUTHENTICATION":true,"SSL_CERTIFICATE_ALIAS":true,"SSL_CERTIFICATE_THUMBPRINT":true,"SSL_VERSION":true,"SSL_SERVER_DN_MATCH":true,"SSL_SERVER_CERT_DN":true,"WALLET_LOCATION":true,"CONNECT_TIMEOUT":true,"RETRY_COUNT":true,"RETRY_DELAY":true,"TRANSPORT_CONNECT_TIMEOUT":true,"RECV_TIMEOUT":true,"COMPRESSION":true,"COMPRESSION_LEVELS":true,"USE_SNI":true,"AUTHENTICATION_SERVICE":true,"IGNORE_ANO_ENCRYPTION_FOR_TCPS":true,"OCI_CONFIG_FILE":true,"OCI_DATABASE":true,"OCI_IAM_URL":true,"OCI_PROFILE":true,"OCI_TENANCY":true,"PASSWORD_AUTH":true,"REDIRECT_URI":true,"TENANT_ID":true,"TLS_VERSION":true,"TOKEN_AUTH":true,"TOKEN_LOCATION":true}}
+    </OnPremAllowList>
+  </AllowLists>
+ ...
+</configuration>
+```
+
+Users can modify this allowed propertity list if they need to add any new properties or remove properties from the list to enforce stricter rules.
+
 > [!NOTE]
 > Important limitations  
-> - Semantic model DirectQuery can't use the built-in Oracle managed ODP.NET driver for connectivity. `MashupFlight_EnableOracleBundledOdacProviderV2` isn't applicable on semantic model DirectQuery.  
+> - Semantic model DirectQuery can't use the built-in Oracle managed ODP.NET driver for connectivity. `MashupFlight_DisableOracleBundledOdacProviderV2` isn't applicable on semantic model DirectQuery.  
 > - The file ODAC.config may require administrator rights to edit and Power BI Store app doesn't allow modifying this file.
 > - For the On-Premises Data Gateway to work properly, make sure that the user under which the gateway service is running has access to the folder pointed to by TNS_ADMIN.
 > - Restart Power BI Desktop or the On-premises Data Gateway service after applying config changes.
