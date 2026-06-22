@@ -55,6 +55,9 @@ To connect to Salesforce Objects data:
 
    :::image type="content" source="media/salesforce-objects/sf-objects-sign-in.png" alt-text="Screenshot of the sign in dialog for your Salesforce account.":::
 
+   >[!Note]
+   >Salesforce Objects connector does not support authentication with Proof Key for Code Exchange (PKCE) Extension enabled.
+
    Once you successfully sign in, select **Connect**.
 
 5. If you're signing in for the first time using a specific app, you're asked to verify your authenticity by entering a code sent to your email address. You're then asked whether you want the app you're using to access the data. For example, you're asked if you want to allow Power BI Desktop to access your Salesforce data. Select **Allow**.
