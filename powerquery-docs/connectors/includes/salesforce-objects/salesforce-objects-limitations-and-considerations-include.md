@@ -25,6 +25,8 @@ ms.topic: include
 
 * Custom URLs only support the salesforce.com and cloudforce.com domains. The use of other domains results in an "Invalid Arguments" error.
 
+* Salesforce Objects connector does not support authentication with Proof Key for Code Exchange (PKCE) Extension enabled.
+
 * Salesforce limits the number of concurrent queries that a single account can execute. ['INVALID_QUERY_LOCATOR ' error](https://help.salesforce.com/s/articleView?id=000323582&type=1) This is a Salesforce limit, and can be encountered when there are multiple concurrent queries against Salesforce using the same account. This limit includes all client applications (not just the PowerQuery connector) using the Salesforce API. To reduce the likelihood of this error:
   * Ensure that the number of Salesforce queries are kept to a minimum.
   * Use available options (such as dataflows) to stage the data from Salesforce.
