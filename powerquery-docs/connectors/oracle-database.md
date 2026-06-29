@@ -213,7 +213,7 @@ For DirectQuery Mode, using built-in Oracle managed ODP.NET driver is still in p
 
 To use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then unselect the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider for DirectQuery Mode** option.
 
-### For Import Mode In On-premise Gateway
+### For Import Mode In On-premises Gateway
 
 It's default to use a built-in Oracle managed ODP.NET driver for connectivity starting from the June 2026 version.  To not use this built-in driver in the on-premises data gateway for Import Mode, change the gateway configurations to update the `MashupFlight_DisableOracleBundledOdacProviderV2` setting using the following steps:
 
@@ -233,9 +233,9 @@ It's default to use a built-in Oracle managed ODP.NET driver for connectivity st
 </Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>    
 ```
 
-### For DirectQuery Mode In On-premise Gateway (Preview)
+### For DirectQuery Mode In On-premises Gateway (Preview)
 
-It's controled by service and you will need to contact support team to ask to be excluded for the tenant.
+This is controlled by the Power BI service. Contact support to request tenant access.
 
 ### Supported ways to specify TNS_ADMIN with the built-in Oracle driver
 There are three options to specify TNS_ADMIN:
@@ -277,7 +277,7 @@ The remaining configurations to connect to an Oracle database from Power Query D
 
 ### Allowed Property List
 Users can specify Oracle server names using connect descriptors such as (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=host_name)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=service_name))).
-We enforce which properties can be used in Desktop and Gateway.  The default allowed properties in ODAC.config is listed below:
+We enforce which properties can be used in Desktop and Gateway. The default allowed properties in ODAC.config are listed below:
 
 ```xml
 <configuration>
@@ -287,9 +287,9 @@ We enforce which properties can be used in Desktop and Gateway.  The default all
       Oracle connection strings can contain connection properties, for example  CONNECT_TIMEOUT.   Only connection properties explicitly set to true in the list below will
       be allowed with Power BI Desktop and the On Premises Data Gateway. Using our example, you can add "CONNECT_TIMEOUT":true to the list to enable it. To disable it you
       can remove it from the list, or set the value to false. This list will be enforced on all connection string types including connect descriptors and aliases
-      referencing a tnsnames.ora entry. The use of any disallowed property in a connection string will result in a ORA-50122 error. Restart Power BI Desktop or the On-premises
+      referencing a tnsnames.ora entry. The use of any disallowed property in a connection string will result in an ORA-50122 error. Restart Power BI Desktop or the On-premises
       Data Gateway service after applying ODAC.config changes.
-      For the more information see https://docs.oracle.com/en/database/oracle/oracle-database/26/odpnt/InstallConnectionConfigurationRestriction.html
+      For more information see https://docs.oracle.com/en/database/oracle/oracle-database/26/odpnt/InstallConnectionConfigurationRestriction.html
     -->
     <OnPremAllowList>{"DataSource":{"HOST":true,"PORT":true,"PROTOCOL":true,"HTTPS_PROXY":true,"HTTPS_PROXY_PORT":true,"ENABLE":true,"EXPIRE_TIME":true,"FAILOVER":true,"LOAD_BALANCE":true,"RECV_BUF_SIZE":true,"SDU":true,"SEND_BUF_SIZE":true,"SOURCE_ROUTE":true,"TYPE_OF_SERVICE":true,"COLOCATION_TAG":true,"CONNECTION_ID_PREFIX":true,"FAILOVER_MODE":true,"GLOBAL_NAME":true,"HS":true,"INSTANCE_NAME":true,"POOL_BOUNDARY":true,"POOL_CONNECTION_CLASS":true,"POOL_NAME":true,"POOL_PURITY":true,"RDB_DATABASE":true,"SHARDING_KEY":true,"SHARDING_KEY_ID":true,"SUPER_SHARDING_KEY":true,"SERVER":true,"SERVICE_NAME":true,"SID":true,"TUNNEL_SERVICE_NAME":true,"SSL_CLIENT_AUTHENTICATION":true,"SSL_CERTIFICATE_ALIAS":true,"SSL_CERTIFICATE_THUMBPRINT":true,"SSL_VERSION":true,"SSL_SERVER_DN_MATCH":true,"SSL_SERVER_CERT_DN":true,"WALLET_LOCATION":true,"CONNECT_TIMEOUT":true,"RETRY_COUNT":true,"RETRY_DELAY":true,"TRANSPORT_CONNECT_TIMEOUT":true,"RECV_TIMEOUT":true,"COMPRESSION":true,"COMPRESSION_LEVELS":true,"USE_SNI":true,"AUTHENTICATION_SERVICE":true,"IGNORE_ANO_ENCRYPTION_FOR_TCPS":true,"OCI_CONFIG_FILE":true,"OCI_DATABASE":true,"OCI_IAM_URL":true,"OCI_PROFILE":true,"OCI_TENANCY":true,"PASSWORD_AUTH":true,"REDIRECT_URI":true,"TENANT_ID":true,"TLS_VERSION":true,"TOKEN_AUTH":true,"TOKEN_LOCATION":true}}
     </OnPremAllowList>
@@ -298,7 +298,7 @@ We enforce which properties can be used in Desktop and Gateway.  The default all
 </configuration>
 ```
 
-Users can modify this allowed propertity list if they need to add any new properties or remove properties from the list to enforce stricter rules.
+Users can modify this allowed property list if they need to add new properties or remove properties from the list to enforce stricter rules.
 
 > [!NOTE]
 > Important limitations  
