@@ -199,28 +199,28 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 ## Use the built-in Oracle driver 
 
-### For Import Mode In Power BI Desktop
+### For Import Mode in Power BI Desktop
 
-For the June 2026 version of Power BI Desktop or on-premises data gateway, it's default to use a built-in Oracle managed ODP.NET driver for connectivity. This feature removes the necessity for users to install and manage the driver. You can still opt out to not use this feature by using the following instructions.
+For the June 2026 version of Power BI Desktop or on-premises data gateway, the default is to use a built-in Oracle managed ODP.NET driver for connectivity. This feature removes the necessity for users to install and manage the driver. You can still opt out of this feature by using the following instructions.
 
-To not use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then unselect the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider for Import Mode** option.
+To not use this built-in driver in Power BI Desktop, go to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then clear the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider for Import Mode** option.
 
 :::image type="content" source="./media/oracle-database/option-for-bundled-driver.png" alt-text="Screenshot of option to enable using bundled Oracle Managed ODP Provider in Power BI Desktop.":::
 
-### For DirectQuery Mode In Power BI Desktop (Preview)
+### For DirectQuery mode in Power BI Desktop (Preview)
 
-For DirectQuery Mode, using built-in Oracle managed ODP.NET driver is still in preview.  You can opt in by using the following instructions.
+For DirectQuery mode, using the built-in Oracle managed ODP.NET driver is still in preview.  To opt in, use the following instructions.
 
-To use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then unselect the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider for DirectQuery Mode** option.
+To use this built-in driver in Power BI Desktop, go to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then clear the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider for DirectQuery Mode** option.
 
-### For Import Mode In On-premises Gateway
+### For Import mode in on-premises gateway
 
-It's default to use a built-in Oracle managed ODP.NET driver for connectivity starting from the June 2026 version.  To not use this built-in driver in the on-premises data gateway for Import Mode, change the gateway configurations to update the `MashupFlight_DisableOracleBundledOdacProviderV2` setting using the following steps:
+Starting with the June 2026 version, the on-premises data gateway uses the built-in Oracle managed ODP.NET driver for connectivity by default.  To not use this built-in driver in the on-premises data gateway for Import mode, change the gateway configurations to update the `MashupFlight_DisableOracleBundledOdacProviderV2` setting by using the following steps:
 
 1. On the local machine where the on-premises data gateway is installed, navigate to **C:\Program Files\On-premises data gateway**.
 2. Make a backup of the configuration file named **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config**.
-3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `MashupFlight_DisableOracleBundledOdacProviderV2` entry.
-4. Update the `MashupFlight_DisableOracleBundledOdacProviderV2` value as `True`.
+1. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `MashupFlight_DisableOracleBundledOdacProviderV2` entry.
+1. Update the `MashupFlight_DisableOracleBundledOdacProviderV2` value to `True`.
 5. Restart your gateway.
 
 ```xml
@@ -233,9 +233,9 @@ It's default to use a built-in Oracle managed ODP.NET driver for connectivity st
 </Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>    
 ```
 
-### For DirectQuery Mode In On-premises Gateway (Preview)
+### For DirectQuery mode in on-premises gateway (Preview)
 
-This is controlled by the Power BI service. Contact support to request tenant access.
+The Power BI service controls this feature. Contact support to request tenant access.
 
 ### Supported ways to specify TNS_ADMIN with the built-in Oracle driver
 There are three options to specify TNS_ADMIN:
@@ -275,9 +275,9 @@ If ODAC is installed previously and TNS_ADMIN is configured, Power BI will autom
 
 The remaining configurations to connect to an Oracle database from Power Query Desktop are the same as described in the previous sections.
 
-### Allowed Property List
-Users can specify Oracle server names using connect descriptors such as (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=host_name)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=service_name))).
-We enforce which properties can be used in Desktop and Gateway. The default allowed properties in ODAC.config are listed below:
+### Allowed property list
+Users can specify Oracle server names by using connect descriptors such as `(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=host_name)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=service_name)))`.
+The system enforces which properties can be used in Desktop and Gateway. The default allowed properties in `ODAC.config` are listed in the following section.
 
 ```xml
 <configuration>
