@@ -4,14 +4,14 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: ptyx507x
 ms.author: miescobar
 ms.reviewer: whhender
-ms.date: 04/08/2026
+ms.date: 06/29/2026
 ms.topic: overview
 ms.search.form: DataflowGen2 Overview, product-data-integration
 ---
 
 # What is Power Query?
 
-Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query editor for applying transformations. Because the engine is available in many products and services, the destination where the data is stored depends on where Power Query is used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.
+Power Query is a data transformation and data preparation engine. It includes a graphical interface for getting data from sources and a Power Query editor for applying transformations. Because many products and services provide the engine, the destination for storing data depends on where you use Power Query. By using Power Query, you can perform the extract, transform, and load (ETL) processing of data.
 
 :::image type="complex" source="media/power-query-what-is-power-query/what-is-power-query.png" alt-text="Power Query input, transformation, and destination.":::
 Diagram with symbolized data sources on the left, passing through Power Query for transformation in the center, and then going to four destinations on the right: Microsoft Azure Data Lake Storage, Microsoft Dataverse, Microsoft Excel, and Microsoft Power BI.
@@ -26,12 +26,12 @@ Business users spend up to 80% of their time on data preparation, which delays t
 | Finding and connecting to data is too difficult | Power Query enables connectivity to a wide range of data sources, including data of all sizes and shapes. |
 | Experiences for data connectivity are too fragmented | Consistency of experience, and parity of query capabilities over all data sources. |
 | Data often needs to be reshaped before consumption | Highly interactive and intuitive experience for rapidly and iteratively building queries over any data source, of any size. |
-| Any shaping is one-off and not repeatable | When using Power Query to access and transform data, you define a repeatable process (query) that can be easily refreshed in the future to get up-to-date data.<br />In the event that you need to modify the process or query to account for underlying data or schema changes, you can use the same interactive and intuitive experience you used when you initially defined the query. |
-| Volume (data sizes), velocity (rate of change), and variety (breadth of data sources and data shapes) | Power Query offers the ability to work against a subset of the entire data set to define the required data transformations, allowing you to easily filter down and transform your data to a manageable size.<br />Power Query queries can be refreshed manually or by taking advantage of scheduled refresh capabilities in specific products (such as Power BI) or even programmatically (by using the Excel object model).<br />Because Power Query provides connectivity to hundreds of data sources and over 350 different types of data transformations for each of these sources, you can work with data from any source and in any shape. |
+| Any shaping is one-off and not repeatable | When you use Power Query to access and transform data, you define a repeatable process (query) that you can easily refresh in the future to get up-to-date data.<br />In the event that you need to modify the process or query to account for underlying data or schema changes, you can use the same interactive and intuitive experience you used when you initially defined the query. |
+| Volume (data sizes), velocity (rate of change), and variety (breadth of data sources and data shapes) | Power Query offers the ability to work against a subset of the entire data set to define the required data transformations, so you can easily filter down and transform your data to a manageable size.<br />You can refresh Power Query queries manually or by taking advantage of scheduled refresh capabilities in specific products (such as Power BI) or even programmatically (by using the Excel object model).<br />Because Power Query provides connectivity to hundreds of data sources and over 350 different types of data transformations for each of these sources, you can work with data from any source and in any shape. |
 
 ## Power Query experiences
 
-The Power Query user experience is provided through the Power Query editor user interface. The goal of this interface is to help you apply the transformations you need simply by interacting with a user-friendly set of ribbons, menus, buttons, and other interactive components.
+The Power Query user experience comes through the Power Query editor user interface. This interface helps you apply the transformations you need by interacting with a user-friendly set of ribbons, menus, buttons, and other interactive components.
 
 The Power Query editor is the primary data preparation experience. In the editor, you can connect to a wide range of data sources and apply hundreds of different data transformations by previewing data and selecting transformations from the UI. These data transformation capabilities are common across all data sources, whatever the underlying data source limitations.
 
@@ -47,9 +47,9 @@ Currently, two Power Query experiences are available:
 
 ## Transformations
 
-The transformation engine in Power Query includes many prebuilt transformation functions that can be used through the graphical interface of the Power Query editor. These transformations can be as simple as removing a column or filtering rows, or as common as using the first row as a table header. There are also advanced transformation options such as merge, append, group by, pivot, and unpivot.
+The transformation engine in Power Query includes many prebuilt transformation functions that you can use through the graphical interface of the Power Query editor. These transformations can be as simple as removing a column or filtering rows, or as common as using the first row as a table header. There are also advanced transformation options such as merge, append, group by, pivot, and unpivot.
 
-All these transformations are made possible by choosing the transformation option in the menu, and then applying the options required for that transformation. The following illustration shows a few of the transformations available in the Power Query editor.
+All these transformations are possible by choosing the transformation option in the menu, and then applying the options required for that transformation. The following illustration shows a few of the transformations available in the Power Query editor.
 
 :::image type="content" source="media/power-query-what-is-power-query/power-query-transformations-list.png" alt-text="Screenshot of the transformation commands under the Transform, Home, and Add Column tabs of the Power Query editor." lightbox="media/power-query-what-is-power-query/power-query-transformations-list.png":::
 
@@ -57,15 +57,15 @@ More information: [The Power Query user interface](/power-query/power-query-ui)
 
 ## Dataflows
 
-Power Query can be used in many products, such as Power BI and Excel. However, using Power Query within a product limits its usage to only that specific product. *Dataflows* are a product-agnostic service version of the Power Query experience that runs in the cloud. Using dataflows, you can get data and transform data in the same way. But instead of sending the output to Power BI or Excel, you can store the output in other storage options such as Dataverse or Azure Data Lake Storage. This way, you can use the output of dataflows in other products and services.
+You can use Power Query in many products, such as Power BI and Excel. However, using Power Query within a product limits its usage to only that specific product. *Dataflows* are a product-agnostic service version of the Power Query experience that runs in the cloud. By using dataflows, you can get and transform data in the same way. But instead of sending the output to Power BI or Excel, you can store the output in other storage options such as Dataverse or Azure Data Lake Storage. By using this approach, you can use the output of dataflows in other products and services.
 
 More information: [What are dataflows?](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
 
 ## Power Query M formula language
 
-In any data transformation scenario, there are some transformations that can't be done in the best way by using the graphical editor. Some of these transformations might require special configurations and settings that the graphical interface doesn't currently support. The Power Query engine uses a scripting language behind the scenes for all Power Query transformations: the Power Query M formula language, also known as M.
+Some data transformations require special configurations and settings that the graphical interface doesn't currently support. The Power Query engine uses a scripting language behind the scenes for all Power Query transformations: the Power Query M formula language, also known as M.
 
-The M language is the data transformation language of Power Query. Anything that happens in the query is ultimately written in M. If you want to do advanced transformations using the Power Query engine, you can use the advanced editor to access the script of the query and modify it as you want. If you find that the user interface functions and transformations can't perform the exact changes you need, use the advanced editor and the M language to fine-tune your functions and transformations.
+The M language is the data transformation language of Power Query. Anything that happens in the query is ultimately written in M. If you want to do advanced transformations by using the Power Query engine, use the advanced editor to access the script of the query and modify it as needed. If you find that the user interface functions and transformations can't perform the exact changes you need, use the advanced editor and the M language to fine-tune your functions and transformations.
 
 ```powerquery-m
 let
@@ -89,7 +89,7 @@ More information: [Power Query M formula language](/powerquery-m/index)
 
 ## Where can you use Power Query?
 
-The following table lists Microsoft products and services where Power Query can be found.
+The following table lists Microsoft products and services where you can find Power Query.
 
 | Product | M engine <sup>1</sup> | Power Query<br />Desktop <sup>2</sup> | Power Query<br />Online <sup>3</sup> | Dataflows <sup>4</sup> |
 | --- | --- | --- | --- | --- |
