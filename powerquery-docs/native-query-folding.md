@@ -2,7 +2,7 @@
 title: Query folding on native queries
 description: This article provides information on how to enable query folding against queries that use the Value.NativeQuery function.
 author: ptyx507x
-ms.date: 7/19/2024
+ms.date: 06/29/2026
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -14,7 +14,7 @@ In Power Query, you can define a native query and run it against your data sourc
 This article showcases an alternative method to create native queries against your data source using the [Value.NativeQuery](/powerquery-m/value-nativequery) function and keep the query folding mechanism active for subsequent steps of your query.
 
 > [!NOTE]
->We recommend that you read the documentation on [query folding](query-folding-basics.md) and the [query folding indicators](query-folding-basics.md) to better understand the concepts used throughout this article.
+> Read the documentation on [query folding](query-folding-basics.md) and the [query folding indicators](query-folding-basics.md) to better understand the concepts used throughout this article.
 
 ## Supported data connectors
 
@@ -38,7 +38,7 @@ When connecting to the data source, it's important that you connect to the node 
 
 :::image type="content" source="media/native-query-folding/connection-settings.png" alt-text="Screenshot of the connection settings dialog for the connection to the AdventureWorks2019 database on a local instance of SQL Server.":::
 
-After you define the connection settings and supplying the credentials for your connection, the navigation dialog for your data source opens. The navigation dialog contains all the available objects that you can connect to.
+After you define the connection settings and supply the credentials for your connection, the navigation dialog for your data source opens. The navigation dialog contains all the available objects that you can connect to.
 
 From this list, you need to select the object where the native query is run (also known as the target). For this example, that object is the database level.
 
@@ -46,7 +46,7 @@ At the navigator window in Power Query, select and hold (or right-click) the dat
 
 :::image type="content" source="media/native-query-folding/pq-desktop-navigator-window.png" alt-text="Screenshot of choose data where the user right clicked the database node in the navigator, with Transform Data emphasized.":::
 
-Once your query lands in the Power Query editor, only the **Source** step should show in the Applied steps pane. This step contains a table with all the available objects in your database, similar to how they were displayed in the Navigator window.
+After your query lands in the Power Query editor, only the **Source** step shows in the Applied steps pane. This step contains a table with all the available objects in your database, similar to how they were displayed in the Navigator window.
 
 :::image type="content" source="media/native-query-folding/pqo-sample-query-navigation-deleted.png" alt-text="Screenshot of the query with only the source step." lightbox="media/native-query-folding/pqo-sample-query-navigation-deleted.png":::
 
@@ -59,7 +59,7 @@ SELECT DepartmentID, Name FROM HumanResources.Department WHERE GroupName = 'Rese
 ```
 
 The first step was to define the correct target, which in this case is the database where the SQL code is run.
-Once a step has the correct target, you can select that step&mdash;in this case, **Source** in **Applied Steps**&mdash;and then select the **fx** button in the formula bar to add a custom step. In this example, replace the `Source` formula with the following formula:
+After a step has the correct target, select that step&mdash;in this case, **Source** in **Applied Steps**&mdash;and then select the **fx** button in the formula bar to add a custom step. In this example, replace the `Source` formula with the following formula:
 
 ```powerquery-m
 Value.NativeQuery(Source, "SELECT DepartmentID, Name FROM HumanResources.Department WHERE GroupName = 'Research and Development'  ", null, [EnableFolding = true])
@@ -97,4 +97,4 @@ The native query is wrapped around another SELECT statement to create a subquery
 :::image type="content" source="media/native-query-folding/query-plan.png" alt-text="Screenshot of the query plan for the Filtered rows step.":::
 
 > [!TIP]
->For scenarios where you get errors because query folding wasn't possible, we recommend that you try validating your steps as a subquery of your original native query to check if there might be any syntax or context conflicts.
+> For scenarios where you get errors because query folding isn't possible, try validating your steps as a subquery of your original native query to check if there might be any syntax or context conflicts.
