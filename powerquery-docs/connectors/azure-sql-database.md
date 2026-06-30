@@ -3,7 +3,7 @@ title: Power Query Azure SQL database connector
 description: Includes basic information and prerequisites, instructions on how to connect to your database, and information about advanced connection options.
 author: whhender
 ms.topic: concept-article
-ms.date: 2/16/2024
+ms.date: 06/29/2026
 ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -57,7 +57,7 @@ To connect to an Azure SQL database from Power Query Desktop, take the following
    For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
    > [!NOTE]
-   >  If the connection is not encrypted, you'll be prompted with the following message.
+   >  If the connection isn't encrypted, you see the following message.
 
    :::image type="content" source="./media/azure-sql-database/encryption-warning.png" alt-text="Azure SQL database encryption support.":::
 

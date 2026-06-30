@@ -3,7 +3,7 @@ title: Power Query Dataflow connector
 description: Provides basic information and connection instructions for connecting to a Dataflow.
 author: Luitwieler
 ms.topic: concept-article
-ms.date: 2/6/2024
+ms.date: 06/29/2026
 ms.author: jeluitwi
 ms.subservice: connectors
 ---
@@ -19,7 +19,7 @@ ms.subservice: connectors
 | Authentication types | Organizational account |
 
 > [!NOTE]
->Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ To get data from Dataflows in Power Query Desktop:
 
 ## Frequently asked questions
 
-_**DirectQuery is not working for me in Power BI&mdash;what should I do?**_
+_**DirectQuery isn't working for me in Power BI&mdash;what should I do?**_
 
 To get DirectQuery to run, you need to have Power BI Premium and adjust a few configuration items in your Power BI workspace. These actions are explained in the [dataflows premium features](/power-bi/transform-model/dataflows/dataflows-premium-features) article.
 
@@ -63,7 +63,7 @@ You're probably using a Dataverse table as the destination for your standard dat
 
 _**There's a difference in the data when I remove duplicates in dataflows&mdash;how can I resolve this?**_
 
-There could be a difference in data between design-time and refresh-time. We don't guarantee which instance is being kept during refresh time. For information on how to avoid inconsistencies in your data, go to [Working with duplicates](../working-with-duplicates.md).
+There could be a difference in data between design-time and refresh-time. The instance kept during refresh time isn't guaranteed. For information on how to avoid inconsistencies in your data, see [Working with duplicates](../working-with-duplicates.md).
 
 _**I'm using the Dataflow connector in DirectQuery mode&mdash;is case insensitive search supported?**_
 
@@ -71,7 +71,7 @@ No, case insensitive search on columns isn't supported in DirectQuery mode. If y
 
 _**I'm getting data via the dataflow connector, but I'm receiving a 429 error code&mdash;how can I resolve this?**_
 
-When you're receiving an error code 429, it's possibly due to exceeding the limit of 1,000 requests per minute. This error typically resolves by itself if you wait a minute or two after the cooldown period ended. This limit is in place to prevent dataflows and other Power BI functionality from having a degraded performance. Consequences due to the continued high load on the service might result in degraded performance, so we ask users to significantly reduce the number of requests to less than 1000 (limit) or fix your script/model to this specific limit (1000) to efficiently mitigate impact and avoid further issues. You should also avoid nested joins that re-request dataflow data; instead, stage data and perform merges within your dataflow instead of your semantic model.
+When you receive an error code 429, you possibly exceeded the limit of 1,000 requests per minute. This error typically resolves by itself if you wait a minute or two after the cooldown period ended. This limit is in place to prevent dataflows and other Power BI functionality from having degraded performance. Continued high load on the service might result in degraded performance, so reduce the number of requests to fewer than 1,000 or fix your script/model to this specific limit (1,000) to avoid further issues. You should also avoid nested joins that re-request dataflow data. Instead, stage data and perform merges within your dataflow instead of your semantic model.
 
 ### See also
 

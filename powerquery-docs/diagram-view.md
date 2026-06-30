@@ -2,7 +2,7 @@
 title: Diagram view
 description: Diagram view offers a visual way to prepare data in the Power Query editor, where you can easily create queries and visualize the data preparation process.
 author: ptyx507
-ms.date: 11/11/2024
+ms.date: 06/29/2026
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -22,9 +22,9 @@ This feature is enabled by selecting **Diagram view** in the **View** tab on the
 :::image type="content" source="media/diagram-view/enabling-diagram-view-icon.png" alt-text="Screenshot of the diagram view icon in the lower right portion of the Power Query editor.":::
 
 > [!NOTE]
->Currently, diagram view is only available in Power Query Online.
+> Diagram view is only available in Power Query Online.
 
-## Authoring queries using diagram view
+## Author queries using diagram view
 
 Diagram view provides you with a visual interface to create, view, or modify your queries. In diagram view, you can connect to many different types of data sources using the [get data experience](get-data-experience.md).
 
@@ -34,7 +34,7 @@ You can add a new step within a query, after the currently selected step, by sel
 
 :::image type="content" source="media/diagram-view/diagram-view-plus-sign.png" alt-text="Screenshot showing an example of using the plus icon in a query to add a new step in the query.":::
 
-When you search and select the transform from the shortcut menu, the step gets added to the query.
+When you search and select the transform from the shortcut menu, Power Query adds the step to the query.
 
 :::image type="content" source="media/diagram-view/step-added-from-diagram-view.png" alt-text="Screenshot of the Remove duplicates transform added through the use of the plus icon in the query when in the diagram view.":::
 
@@ -43,11 +43,11 @@ When you search and select the transform from the shortcut menu, the step gets a
 
 ## Query level actions
 
-You can perform two quick actions on a query&mdash;*expand/collapse* a query and *highlight related queries*. These quick actions show up on an active selected query or when hovering over a query.
+You can perform two quick actions on a query&mdash;*expand/collapse* a query and *highlight related queries*. These quick actions appear on an active selected query or when you point to a query.
 
 :::image type="content" source="media/diagram-view/diagram-view-query-quick-actions.png" alt-text="Screenshot of quick action buttons in a query as shown in the diagram view." lightbox="media/diagram-view/diagram-view-query-quick-actions.png":::
 
-You can perform more query level actions, such as duplicate, reference, and so on, by selecting the query level context menu (the three vertical dots). You can also right-click in the query and get to the same context menu.
+You can perform more query level actions, such as duplicate and reference, by selecting the query level context menu (the three vertical dots). You can also right-click in the query and get to the same context menu.
 
  :::image type="content" source="media/diagram-view/diagram-view-query-more-actions.png" alt-text="Screenshot of the query contextual menu with more query level actions provided." lightbox="media/diagram-view/diagram-view-query-more-actions.png":::
 
@@ -69,7 +69,7 @@ For example, if you select the highlight related queries button in the **Top US 
 
 ### Delete query
 
-To delete a query, right-click in a query and select **Delete** from the context menu. Another pop-up asks you to confirm the deletion.
+To delete a query, right-click in a query and select **Delete** from the context menu. A dialog box asks you to confirm the deletion.
 
 :::image type="content" source="media/diagram-view/diagram-view-delete-query.png" alt-text="Screenshot of the delete option inside the query contextual menu emphasized.":::
 
@@ -81,7 +81,7 @@ To rename a query, right-click in a query and select **Rename** from the context
 
 ### Enable load
 
-To ensure that the results provided by the query are available for downstream use such as report building, by default **Enable load** is set to true. In case you need to disable load for a given query, right-click in a query and select **Enable load**. The queries where **Enable load** is set to false are displayed with a grey outline.
+To make query results available for downstream use, such as report building, **Enable load** is set to true by default. If you need to disable load for a query, right-click the query and select **Enable load**. Queries where **Enable load** is set to false display with a gray outline.
 
 :::image type="content" source="media/diagram-view/diagram-view-query-enable-load.png" alt-text="Screenshot of the enable load option inside the query contextual menu emphasized.":::
 
@@ -93,7 +93,7 @@ To create a copy of a given query, right-click in the query and select **Duplica
 
 ### Reference
 
-Referencing a query creates a new query. The new query uses the steps of the previous query without having to duplicate the query. Additionally, any changes in the original query transfers down to the referenced query. To reference a query, right-click in the query and select **Reference**.
+Referencing a query creates a new query. The new query uses the steps of the previous query without duplicating the query. Also, any changes in the original query transfer to the referenced query. To reference a query, right-click the query and select **Reference**.
 
 :::image type="content" source="media/diagram-view/diagram-view-reference-query.png" alt-text="Screenshot of the reference option inside the query contextual menu emphasized.":::
 
@@ -115,7 +115,7 @@ When you need to apply the same set of transformations in different queries or v
 
 ### Convert to parameter
 
-A parameter provides the flexibility to dynamically change the output of your queries depending on their value and promotes reusability. To convert a nonstructured value such as date, text, number, and so on, right-click in the query and select **Convert to Parameter**.
+A parameter provides the flexibility to dynamically change the output of your queries depending on their value and promotes reusability. To convert a nonstructured value such as a date, text, or number, right-click in the query and select **Convert to Parameter**.
 
 :::image type="content" source="media/diagram-view/diagram-view-convert-to-parameter.png" alt-text="Convert to parameter option inside the query contextual menu.":::
 
@@ -141,13 +141,13 @@ This action opens a dialog box where you can edit the name of the query or add t
 
 :::image type="content" source="media/diagram-view/diagram-view-query-properties-window.png" alt-text="Screenshot of the query properties window for the Top Employees by Customers query with a custom Description.":::
 
-Queries with a query description have an affordance (***i*** icon). You can view the query description by hovering near the query name.
+Queries with a description display an information icon (***i***). To view the description, point to the query name.
 
 :::image type="content" source="media/diagram-view/diagram-view-description-icon.png" alt-text="Screenshot of the affordance or ***i*** icon next to the name of the query that when hovered displays the description of the query.":::
 
 ### Append queries/Append queries as new
 
-To append or perform a UNION of queries, right-click in a query and select **Append queries**. This action displays the **Append** dialog box where you can add more tables to the current query. **Append queries as new** also displays the **Append** dialog box, but allows you to append multiple tables into a new query.
+To append or perform a UNION of queries, right-click a query and select **Append queries**. This action displays the **Append** dialog box where you can add more tables to the current query. **Append queries as new** also displays the **Append** dialog box, but lets you append multiple tables into a new query.
 
 :::image type="content" source="media/diagram-view/diagram-view-append-queries.png" alt-text="Screenshot of the append queries options inside the query contextual menu emphasized." lightbox="media/diagram-view/diagram-view-append-queries.png":::
 
@@ -156,7 +156,7 @@ To append or perform a UNION of queries, right-click in a query and select **App
 
 ### Merge queries/Merge queries as new
 
-To merge or JOIN queries, right-click in a query and select **Merge queries**. This action displays the **Merge** dialog box, with the selected query as the left table of the merge operation. **Merge queries as new** also displays the **Merge** dialog box, but allows you to merge two tables into a new query.
+To merge or join queries, right-click a query and select **Merge queries**. This action displays the **Merge** dialog box, with the selected query as the left table of the merge operation. **Merge queries as new** also displays the **Merge** dialog box, but lets you merge two tables into a new query.
 
 :::image type="content" source="media/diagram-view/diagram-view-merge-queries.png" alt-text="Screenshot of the merge queries options inside the query contextual menu emphasized." lightbox="media/diagram-view/diagram-view-merge-queries.png":::
 
@@ -165,7 +165,7 @@ To merge or JOIN queries, right-click in a query and select **Merge queries**. T
 
 ## Step level actions
 
-By right-clicking a step, you can perform step level actions such as *Edit settings*, *Rename*, and so on.
+By right-clicking a step, you can perform step level actions such as *Edit settings*, *Rename*, *Delete*, *Move before*, and *Move after*.
 
 :::image type="content" source="media/diagram-view/diagram-view-step-settings.png" alt-text="Screenshot of the step level actions displaying in the contextual menu after right clicking a step." lightbox="media/diagram-view/diagram-view-step-settings.png":::
 
@@ -193,7 +193,7 @@ To move a step one position before, right-click a step and select **Move before*
 
 :::image type="content" source="media/diagram-view/diagram-view-move-step.png" alt-text="Screenshot of the Move before and Move after options inside the step level contextual menu after right-clicking a step.":::
 
-### Extract previous  
+### Extract previous
 
 To extract all previous steps into a new query, right-click the first step that you *don't* want to include in the query, and then select **Extract previous**.
 
@@ -209,7 +209,7 @@ This action opens a dialog box where you can add the step description. This step
 
 :::image type="content" source="media/diagram-view/diagram-view-steps-properties-window.png" alt-text="Screenshot of the Step properties window for the step with the name 'Filtered rows' and a description that reads 'Filter by USA'.":::
 
-By hovering over each step, you can view a call out that shows the step label, step name, and step descriptions (that were added).
+By pointing to each step, you can view a callout that shows the step label, step name, and step description.
 
 :::image type="content" source="media/diagram-view/diagram-view-step-descriptions.gif" alt-text="Animated GIF showing the descriptions at the step level for the steps with the names 'Choose columns' and 'Filter rows' in the Customers query." lightbox="media/diagram-view/diagram-view-step-descriptions.gif":::
 
@@ -233,13 +233,13 @@ You can also right-click any empty space in the diagram view pane to display a c
 
 :::image type="content" source="media/diagram-view/diagram-view-right-click.png" alt-text="Screenshot of the Contextual menu that showcases the Expand all and Collapse all queries options." lightbox="media/diagram-view/diagram-view-right-click.png":::
 
-In the collapsed mode, you can quickly look at the steps in the query by hovering over the number of steps in the query. You can select these steps to navigate to that specific step within the query.  
+In the collapsed mode, you can quickly look at the steps in the query by pointing to the number of steps in the query. You can select these steps to navigate to that specific step within the query.  
 
 :::image type="content" source="media/diagram-view/diagram-view-collapsed-queries.png" alt-text="Callout showing the available steps in the Customers query after hovering over the number of steps label in the query." lightbox="media/diagram-view/diagram-view-collapsed-queries.png":::
 
-## Layout Options
+## Layout options
 
-There are five layout options available in the diagram view: zoom out, zoom in, mini-map, full screen, fit to view, and reset.
+The diagram view has six layout options: zoom out, zoom in, mini-map, full screen, fit to view, and reset.
 
 ### Zoom out and zoom in
 
@@ -273,7 +273,7 @@ With this option, you can reset the zoom level back to 100% and also reset the p
 
 ## View query relationships
 
-To view all the related queries for a given query, select the **Highlight related queries** button. For instance, by selecting the highlight related queries button in the **Top US Customers** query, the **Customers** and **Orders** queries are highlighted.  
+To view all the related queries for a given query, select the **Highlight related queries** button. For example, by selecting the highlight related queries button in the **Top US Customers** query, the **Customers** and **Orders** queries are highlighted.  
 
 :::image type="content" source="media/diagram-view/diagram-view-highlight-related-queries-sample.png" alt-text="Screenshot of the highlighted queries related to the Top US Customers (Orders and Customers) after selecting the Highlight related queries button." lightbox="media/diagram-view/diagram-view-highlight-related-queries-sample.png":::
 
@@ -285,7 +285,7 @@ Similarly, you can select the right dongle to view direct and indirect dependent
 
 :::image type="content" source="media/diagram-view/diagram-view-highlight-related-queries-direct-indirect-dependent-queries.png" alt-text="Screenshot of the callout that displays the direct dependent and indirect dependent queries after selecting the right dongle of the Customers query." lightbox="media/diagram-view/diagram-view-highlight-related-queries-direct-indirect-dependent-queries.png":::
 
-You can also hover on the link icon below a step to view a callout that shows the query relationships.
+You can also point to the link icon below a step to view a callout that shows the query relationships.
 
 :::image type="content" source="media/diagram-view/diagram-view-hover-link-icon.png" alt-text="Referenced queries are listed in a callout after hovering over the link icon below a step.":::
 
@@ -335,7 +335,7 @@ To enable this view, navigate to diagram view settings and select **Compact view
 
 ### Show mini-map
 
-Once the number of queries begin to overflow the diagram view, you can use the scroll bars at the bottom and right side of the diagram view to scroll through the queries. One other method of scrolling is to use the diagram view mini-map control. The mini-map control lets you keep track of the overall dataflow "map," and quickly navigate, while looking at a specific area of the map in the main diagram view area.
+When the number of queries overflows the diagram view, you can use the scroll bars at the bottom and right side of the diagram view to scroll through the queries. Another method of scrolling is to use the diagram view mini-map control. The mini-map control lets you keep track of the overall dataflow "map" and quickly navigate while looking at a specific area of the map in the main diagram view area.
 
 To open the mini-map, either select **Show mini-map** from the diagram view menu or select the mini-map button in the layout options.
 
@@ -367,7 +367,7 @@ You can also expand or collapse related queries from the query level context men
 
 ## Multi-select queries
 
-You select multiple queries within the diagram view by holding down the Ctrl key and selecting queries. Once you multi-select, right-clicking shows a context menu that allows performing operations such as merge, append, move to group, expand and collapse, and more.
+Select multiple queries within the diagram view by holding down the Ctrl key and selecting queries. After you select multiple queries, right-clicking shows a context menu that you can use to perform operations such as merge, append, move to group, and expand and collapse.
 
 :::image type="content" source="media/diagram-view/diagram-view-multi-select.png" alt-text="Screenshot of the diagram view with two queries multi-selected and a context menu displaying different operations." lightbox="media/diagram-view/diagram-view-multi-select.png":::
 
