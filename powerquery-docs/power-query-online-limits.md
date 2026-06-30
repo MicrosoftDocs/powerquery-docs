@@ -39,11 +39,15 @@ Per Query Timeout: 10 minutes
 
 During refresh (either scheduled or on-demand), query evaluations return complete results. Data is typically persisted in storage.
 
+Refresh limits are enforced per user, not at the environment level. For Power Platform (PowerApps) dataflows, the limit a user receives is driven by that user's Power Apps license tier (the user's SKUs are mapped to a tier, keyed on their user object ID). The Power Platform environment kind (Trial, Sandbox, or Production) doesn't affect which evaluation limits apply.
+
+In the following table, the **Trial** and **Production** rows for Power Apps refer to the user's *license* type, not the environment kind. For details on how license type is determined, see [What licenses do you need to use dataflows](dataflows/what-licenses-do-you-need-in-order-to-use-dataflows#creating-dataflows-in-microsoft-power-platform-environments).
+
 | Product Integration | Hourly Evaluation Count (#) | Daily Evaluation Time (Hours) | Concurrent Query Evaluations (#) |
 |--|--|--|--|
 | Microsoft Flow (SQL Connector&mdash;Transform Data Using Power Query) | 500 | 2 | 5 |
-| Dataflows in PowerApps.com (Trial)| 500 | 2 | 8 |
-| Dataflows in PowerApps.com (Production) | 1000 | 8 | 20 |
+| Dataflows in PowerApps.com (Trial license)| 500 | 2 | 8 |
+| Dataflows in PowerApps.com (Production license) | 1000 | 8 | 20 |
 | Data Integration in PowerApps.com Admin Portal | 1000 | 24 | 20 |
 | Power BI Pro Dataflow Gen1 in PowerBI.com | 1000 | 8 | 20 |
 | Power BI Premium Dataflow Gen1 in PowerBI.com | 1000 | 100 | 20 |
