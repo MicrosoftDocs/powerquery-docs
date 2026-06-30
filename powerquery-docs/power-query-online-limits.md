@@ -39,7 +39,7 @@ Per Query Timeout: 10 minutes
 
 During refresh (either scheduled or on-demand), query evaluations return complete results. Data is typically persisted in storage.
 
-In the following table, the **Trial** and **Production** rows for Power Apps refer to the user's *license* type, not the environment kind. For details on how license type is determined, see [What licenses do you need to use dataflows](/dataflows/what-licenses-do-you-need-in-order-to-use-dataflows#creating-dataflows-in-microsoft-power-platform-environments).
+In the following table, the **Trial** and **Production** rows for Power Apps refer to the user's *license* type, not the environment kind. For details on how license type is determined, see [What licenses do you need to use dataflows](./dataflows/what-licenses-do-you-need-in-order-to-use-dataflows#creating-dataflows-in-microsoft-power-platform-environments).
 
 | Product Integration | Hourly Evaluation Count (#) | Daily Evaluation Time (Hours) | Concurrent Query Evaluations (#) |
 |--|--|--|--|
