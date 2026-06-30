@@ -4,7 +4,7 @@ description: Step-by-step instructions for how to use Power Query to add data to
 author: Luitwieler
 ms.reviewer: whhender
 ms.topic: how-to
-ms.date: 10/3/2024
+ms.date: 06/29/2026
 ms.author: jeluitwi
 ms.subservice: dataflows
 ---
@@ -28,7 +28,7 @@ If you don't have a license for Power Apps, you can [sign up for free](/powerapp
 
 ## Prerequisites
 
-Before you start to follow this article:
+Before you start following this article:
 
 * Switch to an [environment](/power-platform/admin/working-with-environments) in which you can create tables.
 * You must have a Power Apps per user plan or Power Apps per app plan.
@@ -59,7 +59,7 @@ Before you start to follow this article:
 
 1. In the lower-right corner, select **Next**.
 
-## Specify the target table (Preview)
+## Specify the target table (preview)
 
 1. Under **Load settings**, select **Load to new table**.
 
@@ -82,7 +82,7 @@ Before you start to follow this article:
 > [!WARNING]
 > Existing data might be altered or deleted when loading data to a Dataverse table while having the **Delete rows that no longer exist in the query output** enabled or a primary key column defined.
 
-## Load to existing table (Preview)
+## Load to existing table (preview)
 
 If you select **Load to existing table**, you can specify an existing Dataverse table to load data to.
 
@@ -94,7 +94,7 @@ After selecting which Dataverse table to load data into, you then choose the imp
 
 :::image type="content" source="./media/add-data-power-query/import-method-selection.png" alt-text="Screenshot of the Choose destination settings dialog with the import method choice displayed." lightbox="./media/add-data-power-query/import-method-selection.png":::
 
-## Column mapping (Preview)
+## Column mapping (preview)
 
 After you select a destination Dataverse table and specify the import method, the columns are grouped into mapped, possible match, and unmapped. You can toggle between these groupings by selecting the **Mapped**, **Possible match**, or **Unmapped** tabs at the top or stay in the default **Show all** tab that lists all mappings.  
 
@@ -110,9 +110,9 @@ The source and destination column mappings are grouped as follows:
 
 When manual changes are made to the mapping the source column, the status changes to **Mapped** unless the column data types are different. In that case, the status updates to **Possible match**. As with all possible matches, a recommended action message recommends that you go back one step in the dataflow and change the source column type to match the destination column type in the Dataverse table.  
 
-## Known Limitations
+## Known limitations
 
-Currently, AI Assisted mapping can only detect type mismatches between columns. Other column mapping challenges in the following list aren't detected as they require previewing the records of incoming data:
+AI Assisted mapping can only detect type mismatches between columns. It can't detect other column mapping challenges in the following list because these challenges require previewing the records of incoming data:
 
 * **Truncation**: High confidence in semantic match between source and destination, but at least one record in the source has more characters than the character limit of the destination column.
 

@@ -3,7 +3,7 @@ title: Power Query Google Sheets connector
 description: Provides basic information and prerequisites for the Google Sheets connector, descriptions of the optional input parameters, and discusses limitations and issues you might come across.
 author: whhender
 ms.topic: concept-article
-ms.date: 1/24/2024
+ms.date: 06/29/2026
 ms.author: whhender
 ms.subservice: connectors
 ---
@@ -45,11 +45,11 @@ To connect to Google Sheets from Power Query Desktop, take the following steps:
 
     :::image type="content" source="./media/google-sheets/sign-into-google.png" alt-text="Sign in to Google.":::
 
-5. Once signed in, select **Connect** to continue.
+1. After you sign in, select **Connect** to continue.
 
     :::image type="content" source="./media/google-sheets/connect-online-to-data.png" alt-text="Connect to Google Sheets Data.":::
 
-6. Once you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
+1. After you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
 
 ## Connect to Google Sheets from Power Query Online
 

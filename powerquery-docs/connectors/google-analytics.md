@@ -3,7 +3,7 @@ title: Power Query Google Analytics connector
 description: Provides basic information and connection instructions, along with a list of quota limits for Power BI and instructions on validating unexpected data.
 author: whhender
 ms.topic: concept-article
-ms.date: 2/18/2025
+ms.date: 06/29/2026
 ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -65,11 +65,11 @@ To connect to Google Analytics data:
 
    :::image type="content" source="./media/google-analytics/access-account.png" alt-text="Screenshot of the sign in process where you allow access to your Google account.":::
 
-8. Once you successfully sign in, select **Connect**.
+8. After you successfully sign in, select **Connect**.
 
    :::image type="content" source="./media/google-analytics/signed-in.png" alt-text="Screenshot of the authentication dialog where you're signed in and ready to connect.":::
 
-Once the connection is established, a list of the accounts you have access to is displayed. Drill through the account, properties, and views to see a selection of values, categorized in display folders.
+After the connection is established, a list of the accounts you have access to is displayed. Drill through the account, properties, and views to see a selection of values, categorized in display folders.
 
 You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
@@ -85,13 +85,13 @@ You can **Load** the selected table, which brings the entire table into Power BI
 
 ## Troubleshooting
 
-### Validating Unexpected Data
+### Validate unexpected data
 
 When date ranges are very large, Google Analytics returns only a subset of values. You can use the process described in this section to understand what dates are being retrieved, and manually edit them. If you need more data, you can append multiple queries with different date ranges. If you're not sure you're getting back the data you expect, you can also use [Data Profiling](../data-profiling-tools.md) to get a quick look at what's being returned.
 
 To make sure that the data you're seeing is the same as you would get from Google Analytics, you can execute the query yourself in Google's interactive tool. To understand what data Power Query is retrieving, you can use [Query Diagnostics](../RecordingQueryDiagnostics.md#diagnose-step) to understand what query parameters are being sent to Google Analytics.
 
-If you follow the instructions for Query Diagnostics and run **Diagnose Step** on any **Added Items**, you can see the generated results in the Diagnostics **Data Source Query** column. We recommend running this diagnostic with as few extra operations as possible on top of your initial connection to Google Analytics. This method ensures you're not losing data in a Power Query transform rather than what's being retrieved from Google Analytics.
+If you follow the instructions for Query Diagnostics and run **Diagnose Step** on any **Added Items**, you can see the generated results in the Diagnostics **Data Source Query** column. Run this diagnostic with as few extra operations as possible on top of your initial connection to Google Analytics. This method ensures you're not losing data in a Power Query transform rather than what's being retrieved from Google Analytics.
 
 Depending on your query, the row containing the emitted API call to Google Analytics might not be in the same place. But for a simple Google Analytics only query, you generally see it as the last row that has content in that column.
 

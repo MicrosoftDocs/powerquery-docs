@@ -2,20 +2,20 @@
 title: Query diagnostics
 description: Using Query Diagnostics to diagnose what operations and data source queries are being performed
 author: ptyx507x
-ms.date: 7/22/2024
+ms.date: 06/29/2026
 ms.author: miescobar
 ms.subservice: transform-data
 ---
 
 # Query diagnostics
 
-With Query Diagnostics, you can achieve a better understanding of what Power Query is doing at authoring and at refresh time in Power BI Desktop. While we'll be expanding on this feature in the future, including adding the ability to use it during full refreshes, at this time you can use it to understand what kind of queries you're emitting, what slowdowns you might run into during authoring refresh, and what kind of background events are happening.
+By using Query Diagnostics, you can better understand what Power Query is doing during authoring and at refresh time in Power BI Desktop. While this feature is expanding in the future, including adding the ability to use it during full refreshes, you can currently use it to understand what kind of queries you're emitting, what slowdowns you might run into during authoring refresh, and what kind of background events are happening.
 
 To use Query Diagnostics, go to the **Tools** tab in the Power Query editor ribbon.
 
 :::image type="content" source="media/query-diagnostics/diagnostics-toolbar.png" alt-text="Screenshot of the query diagnostics features under the Power Query Tools ribbon.":::
 
-By default, Query Diagnostics might require administrative rights to run (depending on IT policy). If you find yourself unable to run Query Diagnostics, open the Power BI Desktop options page, and in the **Diagnostics** tab, select **Enable in Query Editor (does not require running as admin)**. This selection constrains you from being able to trace diagnostics when doing a full refresh into Power BI rather than the Power Query editor. But does allow you to still use it when previewing, authoring, and so on.
+By default, Query Diagnostics might require administrative rights to run (depending on IT policy). If you find yourself unable to run Query Diagnostics, open the Power BI Desktop options page. In the **Diagnostics** tab, select **Enable in Query Editor (doesn't require running as admin)**. This selection constrains you from being able to trace diagnostics when doing a full refresh into Power BI rather than the Power Query editor, but it does allow you to still use it when previewing and authoring.
 
 :::image type="content" source="media/query-diagnostics/diagnostics-options.png" alt-text="Screenshot of the Query Diagnostics options with Enable in Query Editor option emphasized." lightbox="media/query-diagnostics/diagnostics-options.png":::
 
@@ -27,16 +27,16 @@ It's important that if you're recording all traces from **Start Diagnostics** th
 
 ## Types of diagnostics
 
-We currently provide three types of diagnostics, one of which has two levels of detail.
+There are three types of diagnostics, one of which has two levels of detail.
 
 The first of these diagnostics are the primary diagnostics, which have a detailed view and a summarized view. The summarized view is aimed to give you an immediate insight into where time is being spent in your query. The detailed view is much deeper, line by line, and is, in general, only needed for serious diagnosing by power users.
 
-For this view, some capabilities, like the Data Source Query column, are currently available only on certain connectors. We'll be working to extend the breadth of this coverage in the future.
+For this view, some capabilities, like the Data Source Query column, are currently available only on certain connectors.
 
 Data privacy partitions provide you with a better understanding of the logical partitions used for data privacy.
 
 > [!NOTE]
-> Power Query might perform evaluations that you might not have directly triggered. Some of these evaluations are performed in order to retrieve metadata so we can best optimize our queries or to provide a better user experience (such as retrieving the list of distinct values within a column that are displayed in the Filter Rows experience). Others might be related to how a connector handles parallel evaluations. At the same time, if you see in your query diagnostics repeated queries that you don't believe make sense, feel free to reach out through normal support channels&mdash;your feedback is how we improve our product.
+> Power Query might perform evaluations that you didn't directly trigger. Some of these evaluations retrieve metadata to optimize queries or provide a better user experience (such as retrieving the list of distinct values within a column that are displayed in the Filter Rows experience). Others might be related to how a connector handles parallel evaluations. If you see repeated queries in your diagnostics that don't make sense, reach out through normal support channels.
 
 ## Summarized vs. detailed view
 
@@ -46,7 +46,7 @@ The summarized view provides an overview of what occurred during an evaluation f
 
 ## Explaining multiple evaluations
 
-When a refresh occurs in the Power Query editor, there's a lot done behind the scenes to attempt to give you a fluent user experience. As an example, when you **Refresh Preview**, the evaluator executes the final step of each given Query. But then in the background it sequentially runs n-1 steps, n-2, steps, and so on. So if you step back through your steps, it's already available.
+When a refresh occurs in the Power Query editor, Power Query performs a lot of work behind the scenes to give you a fluent user experience. For example, when you **Refresh Preview**, the evaluator executes the final step of each given query. Then in the background, it sequentially runs n-1 steps, n-2 steps, n-3 steps, and each subsequent step. So if you step back through your steps, the result is already available.
 
 To provide higher performance, currently some caching happens so that it doesn't have to rerun every part of the final query plan as it goes back through the steps. While this caching is useful for normal authoring, it means that you don't always get correct step comparison information because of later evaluations pulling on cached data.
 
@@ -114,7 +114,7 @@ The resource you're accessing for data. The exact format of this resource depend
 
 Power Query does something called *folding*, which is the act of running as many parts of the query against the back-end data source as possible. In DirectQuery mode (over Power Query), where enabled, only transforms that fold run. In import mode, transforms that can't fold are instead run locally.
 
-The Data Source Query column allows you to see the query or HTTP request/response sent against the back-end data source. As you author your Query in the editor, many Data Source Queries are emitted. Some of these queries are the actual final Data Source Query to render the preview. But others might be for data profiling, filter dropdowns, information on joins, retrieving metadata for schemas, and any number of other small queries.
+The Data Source Query column shows the query or HTTP request and response that Power Query sends to the back-end data source. As you author your query in the editor, many Data Source Queries are emitted. Some of these queries are the actual final Data Source Query that renders the preview. But other queries might support data profiling, filter dropdowns, information on joins, or retrieving metadata for schemas.
 
 In general, you shouldn't be concerned by the number of Data Source Queries emitted unless there are specific reasons to be concerned. Instead, you should focus on making sure the proper content is being retrieved. This column might also help determine if the Power Query evaluation was fully folded.
 

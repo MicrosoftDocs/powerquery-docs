@@ -4,18 +4,18 @@ description: This article provides information about global keyboard shortcuts i
 author: ptyx507x
 ms.author: miescobar
 ms.topic: concept-article
-ms.date: 8/16/2024
+ms.date: 06/29/2026
 ms.subservice: transform-data
 ---
 
 # Keyboard shortcuts in Power Query Online
 
-Keyboard shortcuts provide a quick way to navigate and allow users to work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen, and are an essential alternative to using the mouse. The table in this article lists all the shortcuts available in Power Query Online.
+Keyboard shortcuts provide a quick way to navigate and help you work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen, and they're an essential alternative to using the mouse. The following table lists all the shortcuts available in Power Query Online.
 
 When using the Query Editor in Power Query Online, you can navigate to the **Keyboard shortcuts** button in the **Help** tab to view the list of keyboard shortcuts.
 
 > [!NOTE]
->These shortcuts have been tested with Microsoft Edge on Windows and macOS. While we try to provide support for all browsers, other browsers can make or implement their own shortcuts. Because we can't control how other browsers behave, we can't guarantee that all the shortcuts in this list work on all browsers.
+> Microsoft tested these shortcuts with Microsoft Edge on Windows and macOS. Other browsers might implement their own shortcuts that override these defaults. Because you can't control browser behavior externally, not all the shortcuts in this list are guaranteed to work on all browsers.
 
 ## Query Editor
 
