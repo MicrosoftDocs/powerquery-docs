@@ -74,7 +74,7 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 | Enable cross database folding | This option is only available in Power Query Online. |
 
 > [!NOTE]
-> **SQL Server failover support** is not supported on the on-premises data gateway or on the VNet Data Gateway.
+> **SQL Server failover support** isn't supported on the on-premises data gateway or on the VNet Data Gateway.
 > When you use a gateway to connect to SQL Server, failover doesn't occur. The service attempts to connect to the primary SQL node, and if it isn't available, the connection fails.
 
 
