@@ -70,8 +70,13 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you can't see those columns. |
 | Navigate using full hierarchy | If checked, the Navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, Navigator displays only the tables whose columns and rows contain data. |
-| Enable SQL Server failover support | If checked, when a node in the SQL Server [failover group](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover occurs. This option is only available in Power Query Online.|
+| Enable SQL Server failover support | If checked, when a node in the SQL Server [failover group](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover occurs. This option is only available in Power BI Desktop.|
 | Enable cross database folding | This option is only available in Power Query Online. |
+
+> [!NOTE]
+> **SQL Server failover support** isn't supported on the on-premises data gateway or on the VNet Data Gateway.
+> When you use a gateway to connect to SQL Server, failover doesn't occur. The service attempts to connect to the primary SQL node, and if it isn't available, the connection fails.
+
 
 Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
 
