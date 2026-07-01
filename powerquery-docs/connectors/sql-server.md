@@ -75,7 +75,7 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 
 > [!NOTE]
 > **SQL Server failover support** is not supported on the on-premises data gateway or on the VNet Data Gateway.
-> When using a gateway to connect to SQL Server, failover does not occur, the service will attempt to connect to the primary SQL node, and if it isn't available the connection will fail.
+> When you use a gateway to connect to SQL Server, failover doesn't occur. The service attempts to connect to the primary SQL node, and if it isn't available, the connection fails.
 
 
 Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
