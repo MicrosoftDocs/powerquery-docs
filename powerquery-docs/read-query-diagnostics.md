@@ -1,75 +1,73 @@
 ---
-title: Visualizing and Interpreting Query Diagnostics in Power BI
-description: How to read and interpret Query Diagnostics, and how to properly build visuals that can give insight on performance
+title: Visualize and Interpret Query Diagnostics in Power BI
+description: Learn how to read and interpret Query Diagnostics, and how to properly build visuals that can give insight on performance.
 author: ptyx507x
 ms.topic: concept-article
-ms.date: 1/9/2023
+ms.date: 07/01/2026
 ms.author: miescobar
 ms.subservice: transform-data
 ---
 
-# Visualizing and Interpreting Query Diagnostics in Power BI
+# Visualize and interpret Query Diagnostics in Power BI
 
-## Introduction
+After you [record](record-query-diagnostics.md) the diagnostics you want to use, the next step is to understand what they say.
 
-Once you've [recorded](RecordingQueryDiagnostics.md) the diagnostics you want to use, the next step is being able to understand what they say.
+It's helpful to have a good understanding of what each column in the query diagnostics schema means. This tutorial doesn't cover that information. For a full description, see [Query diagnostics](query-diagnostics.md).
 
-It's helpful to have a good understanding of what exactly each column in the query diagnostics schema means, which we're not going to repeat in this short tutorial. There's a full write up of that [here](QueryDiagnostics.md).
+In general, when you build visualizations, use the full detailed table. Regardless of how many rows it contains, you're probably looking at some kind of depiction of how the time spent in different resources adds up, or what the native query emitted was.
 
-In general, when building visualizations, it's better to use the full detailed table. Because regardless of how many rows it is, what you're probably looking at is some kind of depiction of how the time spent in different resources adds up, or what the native query emitted was.
+As mentioned in the article on recording the diagnostics, this example works with the OData and SQL traces for the Customers table from Northwind. In particular, the focus is on a common ask from customers, and on one of the easier-to-interpret sets of traces: full refresh of the data model.
 
-As mentioned in our article on recording the diagnostics, I'm working with the OData and SQL traces for the same table (or nearly so)&mdash;the Customers table from Northwind. In particular, I'm going to focus on common ask from our customers, and one of the easier to interpret sets of traces: full refresh of the data model.
+## Build the visualizations
 
-## Building the visualizations
+When you review traces, you can evaluate them in many ways. This article describes two visualizations. The first visualization shows the details you care about, and the other shows the time contributions of various factors. For the first visualization, use a table. You can pick any fields you like, but for an easy, high-level look at what's going on, use the following fields:
 
-When you're going through traces, there are many ways you can evaluate them. In this article, we're going to focus on a two visualization split--one to show the details you care about, and the other to easily look at time contributions of various factors. For the first visualization, a table is used. You can pick any fields you like, but the ones recommended for an easy, high level look at what's going on are:
+* [Id](query-diagnostics.md#id)
+* [Start time](query-diagnostics.md#start-time)
+* [Query](query-diagnostics.md#query)
+* [Step](query-diagnostics.md#step)
+* [Data source query](query-diagnostics.md#data-source-query)
+* [Exclusive duration (%)](query-diagnostics.md#exclusive-duration-)
+* [Row count](query-diagnostics.md#row-count)
+* [Category](query-diagnostics.md#category)
+* [Is user query](query-diagnostics.md#is-user-query)
+* [Path](query-diagnostics.md#path)
 
-* [Id](QueryDiagnostics.md#id)
-* [Start Time](QueryDiagnostics.md#start-time)
-* [Query](QueryDiagnostics.md#query)
-* [Step](QueryDiagnostics.md#step)
-* [Data Source Query](QueryDiagnostics.md#data-source-query)
-* [Exclusive Duration (%)](QueryDiagnostics.md#exclusive-duration-)
-* [Row Count](QueryDiagnostics.md#row-count)
-* [Category](QueryDiagnostics.md#category)
-* [Is User Query](QueryDiagnostics.md#is-user-query)
-* [Path](QueryDiagnostics.md#path)
+For the second visualization, use a stacked column chart. In the **Axis** parameter, use **Id** or [Step](query-diagnostics.md#step). If you're looking at the Refresh, because it doesn't have anything to do with steps in the Editor itself, you probably just want to look at [Id](query-diagnostics.md#id). For the **Legend** parameter, set [Category](query-diagnostics.md#category) or [Operation](query-diagnostics.md#operation) (depending on the granularity you want). For the **Value** parameter, set [Exclusive Duration](query-diagnostics.md#exclusive-duration) and make sure it's not the %, so that you get the raw duration value. Finally, for the **Tooltip** parameter, set earliest [Start Time](query-diagnostics.md#start-time).
 
-For the second visualization, one choice is to use a Stacked Column Chart. In the 'Axis' parameter, you might want to use 'Id' or '[Step](QueryDiagnostics.md#step)'. If we're looking at the Refresh, because it doesn't have anything to do with steps in the Editor itself, we probably just want to look at '[Id](QueryDiagnostics.md#id)'. For the 'Legend' parameter, you should set '[Category](QueryDiagnostics.md#category)' or '[Operation](QueryDiagnostics.md#operation)' (depending on the granularity you want). For the 'Value', set '[Exclusive Duration](QueryDiagnostics.md#exclusive-duration)' (and make sure it's not the %, so that you get the raw duration value). Finally, for the Tooltip, set 'Earliest [Start Time](QueryDiagnostics.md#start-time)'.
+After you build your visualization, make sure you sort by **Earliest [Start Time](query-diagnostics.md#start-time)** ascending so you can see the order in which events occur.
 
-Once your visualization is built, make sure you sort by 'Earliest [Start Time](QueryDiagnostics.md#start-time)' ascending so you can see the order things happen in.
+:::image type="content" source="media/read-query-diagnostics/query-diagnostics-odata-high-level.png" alt-text="Screenshot of query diagnostics with traces table and stacked bar chart of duration by category and ID.":::
 
-:::image type="content" source="media/read-query-diagnostics/query-diagnostics-odata-high-level.png" alt-text="Visualization of details and time aggregation.":::
+While your exact needs might differ, this combination of charts is a good place to start for looking at numerous diagnostics files and for many purposes.
 
-While your exact needs might differ, this combination of charts is a good place to start for looking at numerous diagnostics files and for a number of purposes.
+## Interpret the visualizations
 
-## Interpreting the visualizations
+As mentioned earlier, query diagnostics can help you answer many questions. The two most common questions are how time is spent and what query is sent to the source.
 
-As mentioned above, there's many questions you can try to answer with query diagnostics, but the two that we see the most often are asking how time is spent, and asking what the query sent to the source is.
+Understanding how time is spent is straightforward and is similar for most connectors. However, as mentioned elsewhere, you see drastically different capabilities depending on the connector. For example, many ODBC-based connectors don't provide an accurate record of the query that Power Query sends to the ODBC driver.
 
-Asking how the time is spent is easy, and will be similar for most connectors. A warning with query diagnostics, as mentioned elsewhere, is that you'll see drastically different capabilities depending on the connector. For example, many ODBC based connectors won't have an accurate recording of what query is sent to the actual back-end system, as Power Query only sees what it sends to the ODBC driver.
+To see how time is spent, review the visualizations you built earlier.
 
-If we want to see how the time is spent, we can just look at the visualizations we built above.
+Because the time values for the sample queries used here are so small, if you want to work with how Power BI reports time, it's better to convert the [Exclusive Duration](query-diagnostics.md#exclusive-duration) column to seconds in the Power Query editor. After you make this conversion, you can look at your chart and get a clear idea of where time is spent.
 
-Now, because the time values for the sample queries we're using here are so small, if we want to work with how Power BI reports time it's better if we convert the [Exclusive Duration](QueryDiagnostics.md#exclusive-duration) column to 'Seconds' in the Power Query editor. Once we do this this conversion, we can look at our chart and get a decent idea of where time is spent.
+For the OData results, the following image shows that most of the time is spent retrieving the data from the source. If you select the **Data Source** item on the legend, it shows all of the different operations related to sending a query to the data source.
 
-For my OData results, I see in the image that the vast majority of the time was spent retrieving the data from source&mdash;if I select the 'Data Source' item on the legend, it shows me all of the different operations related to sending a query to the Data Source.
+:::image type="content" source="media/read-query-diagnostics/query-diagnostics-odata-emitted.png" alt-text="Screenshot of OData query diagnostics with Detailed Traces Table and duration chart highlighting Data Source time.":::
 
-:::image type="content" source="media/read-query-diagnostics/query-diagnostics-odata-emitted.png" alt-text="OData Northwind Query Diagnostics Summary.":::
+If you perform all the same operations and build similar visualizations, but use the SQL traces instead of the ODATA ones, you can see how the two data sources compare.
 
-If we perform all the same operations and build similar visualizations, but with the SQL traces instead of the ODATA ones, we can see how the two data sources compare!
+:::image type="content" source="media/read-query-diagnostics/query-diagnostics-sql-high-level.png" alt-text="Screenshot of Detailed Traces Table showing SQL evaluations and a chart comparing exclusive duration by Id and category.":::
 
-:::image type="content" source="media/read-query-diagnostics/query-diagnostics-sql-high-level.png" alt-text="OData Northwind Query Diagnostics Summary with SQL traces.":::
+If you select the data source table, like with the ODATA diagnostics, you see that the first evaluation (2.3 in this image) sends metadata queries, and the second evaluation retrieves the data you care about. This example retrieves small amounts of data, so the data retrieval takes a small amount of time (less than a tenth of a second for the entire second evaluation, with less than a twentieth of a second for data retrieval itself), but that speed isn't true in all cases.
 
-If we select the Data Source table, like with the ODATA diagnostics we can see the first evaluation (2.3 in this image) emits metadata queries, with the second evaluation actually retrieving the data we care about. Because we're retrieving small amounts of data in this case, the data pulled back takes a small amount of time (less than a tenth of a second for the entire second evaluation to happen, with less than a twentieth of a second for data retrieval itself), but that won't be true in all cases.
+As earlier, select the **Data Source** category on the legend to see the emitted queries.
 
-As above, we can select the 'Data Source' category on the legend to see the emitted queries.
-
-### Digging into the data
+### Dig into the data
 
 **Looking at paths**
 
-When you're looking at this, if it seems like time spent is strange&mdash;for example, on the OData query you might see that there's a Data Source Query with the following value:
+When you examine this data, you might notice that the time spent seems unusual. For example, on the OData query, you might see that there's a data source query with the following value:
 
 ```
 Request:
@@ -85,7 +83,7 @@ Content-Length: 435
 <Content placeholder>
 ```
 
-This Data Source Query is associated with an operation that only takes up, say, 1% of the Exclusive Duration. Meanwhile, there's a similar one:
+This data source query is associated with an operation that only takes up, for example, 1% of the exclusive duration. Meanwhile, there's a similar one:
 
 ```
 Request:
@@ -96,6 +94,6 @@ https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$filter=ContactT
 HTTP/1.1 200 OK
 ```
 
-This Data Source Query is associated with an operation that takes up nearly 75% of the Exclusive Duration. If you turn on the [Path](QueryDiagnostics.md#path), you discover the latter is actually a child of the former. This means that the first query basically added a small amount of time on its own, with the actual data retrieval being tracked by the 'inner' query.
+This data source query is associated with an operation that takes up nearly 75% of the exclusive duration. If you turn on the [Path](query-diagnostics.md#path), you discover the latter is actually a child of the former. This finding means that the first query basically adds a small amount of time on its own, with the actual data retrieval being tracked by the *inner* query.
 
-These are extreme values, but they're within the bounds of what might be seen.
+These values are extreme, but they're within the bounds of what you might see.

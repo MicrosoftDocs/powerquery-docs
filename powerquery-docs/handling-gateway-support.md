@@ -1,26 +1,27 @@
 ---
 title: Gateway Support for Power Query connectors
-description: Manage gateway support for Power Query connectors, including test connection
+description: Handle gateway support in Power Query connectors effectively. Learn TestConnection requirements, function signatures, and practical examples for enabling scheduled data refresh.
 author: ptyx507x
 ms.topic: concept-article
-ms.date: 1/9/2023
+ms.date: 07/01/2026
 ms.author: miescobar
 ms.subservice: custom-connectors
 ms.custom: sfi-ropc-blocked
 ---
 
-# Handling Gateway Support
+# Handling gateway support
 
-## Test Connection
+## Test connection
 
-> Custom Connector support is available in both Personal and Standard modes of the [on-premises data gateway](https://powerbi.microsoft.com/blog/on-premises-data-gateway-july-update-is-now-available/).
-> Both gateway modes support **Import**. **Direct Query** is only supported in Standard mode. OAuth for custom connectors via gateways is currently supported only for gateway admins but not other data source users.
+Both Personal and Standard modes of the [on-premises data gateway](https://powerbi.microsoft.com/blog/on-premises-data-gateway-july-update-is-now-available/) support custom connectors.
 
-> The method for implementing TestConnection functionality is likely to change while the Power BI Custom Data Connector functionality is in preview.
+Both gateway modes support **Import**. **Direct Query** is only supported in Standard mode. OAuth for custom connectors through gateways currently supports only gateway admins, not other data source users.
+
+The method for implementing TestConnection functionality might change while the Power BI Custom Data Connector functionality is in preview.
 
 To support scheduled refresh through the on-premises data gateway, your connector **must** implement a TestConnection handler.
-The function is called when the user is configuring credentials for your source, and used to ensure they are valid.
-The TestConnection handler is set in the [Data Source Kind](HandlingDataAccess.md#data-source-kind) record, and has the following signature:
+The function is called when the user is configuring credentials for your source, and used to ensure they're valid.
+The [Data Source Kind](HandlingDataAccess.md#data-source-kind) sets the TestConnection handler in  record. It has the following signature:
 
 ```
 (dataSourcePath) as list => ...
@@ -31,15 +32,16 @@ Where `dataSourcePath` is the [Data Source Path](HandlingAuthentication.md#data-
 * The name of the function to call (this function must be marked as `#shared`, and is usually your primary data source function).
 * One or more arguments to pass to your function.
 
-If the invocation of the function results in an error, TestConnection is considered to have failed, and the credential won't be persisted.
+If the invocation of the function results in an error, TestConnection fails, and the credential isn't persisted.
 
->[!Note]
-> As stated above, the function name provided by TestConnection must be a `shared` member.
+> [!Note]
+> As stated earlier, the function name provided by TestConnection must be a `shared` member.
 
 #### Example: Connector with no required arguments
 
-The code snippet below implements TestConnection for a data source with no required parameters (such as the one found in the [TripPin tutorial](samples/trippin/readme.md)). Connectors with no required parameters (referred to as 'Singletons') do not need any user provided input to test a connection (other than credentials). In this case, the `dataSourcePath` value would be equal to the name of the Data Source Kind, and can be ignored.
-The `TripPin.Contents` function is invoked with no additional parameters.
+The following code snippet implements TestConnection for a data source with no required parameters (such as the one found in the [TripPin tutorial](samples/trippin/readme.md)). Connectors with no required parameters (referred to as *Singletons*) don't need any user-provided input to test a connection (other than credentials). In this case, the `dataSourcePath` value is equal to the name of the Data Source Kind, and you can ignore it.
+
+The `TripPin.Contents` function is invoked with no other parameters.
 
 ```powerquery-m
 TripPin = [
@@ -53,7 +55,7 @@ TripPin = [
 
 #### Example: Connector with a URL parameter
 
-If your data source function has a single required parameter of the type `Uri.Type`, its `dataSourcePath` will be equal to the URL provided by the user. The snippet below shows the TestConnection implementation from the [Github Sample](samples/github/readme.md).
+If your data source function has a single required parameter of the type `Uri.Type`, its `dataSourcePath` is equal to the URL provided by the user. The following snippet shows the TestConnection implementation from the [GitHub Sample](samples/github/readme.md).
 
 ```powerquery-m
 GithubSample = [
@@ -71,8 +73,8 @@ GithubSample = [
 #### Example: Connector with required parameters
 
 If your data source function has multiple parameters, or a single non-URL parameter,
-then the `dataSourcePath` value will be a JSON string containing the parameters. The snippet
-below comes from the [DirectQueryForSQL](https://github.com/Microsoft/DataConnectors/tree/master/samples/DirectQueryForSQL) sample.
+then the `dataSourcePath` value is a JSON string containing the parameters. The following snippet
+comes from the [DirectQueryForSQL](https://github.com/Microsoft/DataConnectors/tree/master/samples/DirectQueryForSQL) sample.
 
 ```powerquery-m
 DirectSQL = [

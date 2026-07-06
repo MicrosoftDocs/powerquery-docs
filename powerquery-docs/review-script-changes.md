@@ -1,39 +1,36 @@
 ---
-title: Review script changes in Power Query Online
-description: Understanding the 'Review Script Changes' modal in Power Query Online
+title: Review Script Changes in Power Query Online
+description: Learn why Power Query Online changes your M script and how the Review Script Changes dialog helps. Accept modifications or rewrite queries to preserve comments.
 author: ptyx507x
 ms.topic: concept-article
-ms.date: 1/9/2023
+ms.date: 07/01/2026
 ms.author: miescobar
 ms.subservice: user-assistance
 ---
 
-
 # Review script changes in Power Query Online
 
-## Background
+Because of how Power Query Online stores queries, you might lose manually entered M script (usually comments) in some cases. The **Review Script Changes** pane provides a *diff* experience that highlights the changes. This feature helps you understand what changes are made. You can accept the changes or rearrange your script to fix it.
 
-Due to the way that queries are stored in Power Query Online, there are cases where manually entered M script (generally comments) is lost. The **Review Script Changes** pane provides a "diff" experience highlighting the changes, which allows users to understand what changes are being made. Users can then accept the changes or rearrange their script to fix it.
-
-There are three notable cases that may cause this experience.
+Three notable cases can cause this experience.
 
 ### Script for ribbon transforms
 
-Ribbon transforms always generate the same M script, which may be different than the way they are manually entered. This should always be equivalent script. Contact support if this is not the case.
+Ribbon transforms always generate the same M script, which might differ from the way you manually enter it. This script should always be equivalent. Contact support if it's not.
 
 ### Comments
 
-Comments always have to be inside the ```Let .. in``` expression, and above a step. This will be shown in the user interface as a 'Step property'. We lose all other comments. Comments that are written on the same line as one step, but above another step (for example, after the comma that trails every step) will be moved down.
+You must place comments inside the `Let .. in` expression and above a step. The user interface shows this location as a `Step` property. All other comments are lost. Comments that you write on the same line as one step but above another step (for example, after the comma that trails every step) move down.
 
 ### Removing script errors
 
-In certain cases, your script will be updated if it results in a syntax error by escaping your script (for example, when using the formula bar).
+In certain cases, Power Query Online updates your script if it results in a syntax error by escaping your script (for example, when using the formula bar).
 
 ## Experience
 
-When you commit a query, Power Query Online will evaluate it to see if the 'stored' version of the script differs at all from what you have submitted. If it does, it will present you with a **Review script changes** dialog box that will allow you to accept or cancel.
+When you commit a query, Power Query Online evaluates it to see if the *stored* version of the script differs from what you submitted. If it does, it presents you with a **Review script changes** dialog box that you can accept or cancel.
 
-- If you accept, the changes will be made to your query.
+- If you accept, Power Query Online makes the changes to your query.
 - If you cancel, you might rewrite your query to make sure that you move your comments properly, or rearrange however else you want.
 
-:::image type="content" source="media/review-script-changes/review-script-changes.png" alt-text="Review Script Changes pane depicting a diff between what is committed and what is saved.":::
+:::image type="content" source="media/review-script-changes/review-script-changes.png" alt-text="Screenshot that shows the Review Script Changes pane depicting differences between what is committed and what is saved.":::
