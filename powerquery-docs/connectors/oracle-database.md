@@ -3,10 +3,11 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: whhender
 ms.topic: concept-article
-ms.date: 11/13/2025
+ms.date: 07/10/2026
 ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Oracle database
@@ -235,7 +236,9 @@ Starting with the June 2026 version, the on-premises data gateway uses the built
 
 ### For DirectQuery mode in on-premises gateway (Preview)
 
-The Power BI service controls this feature. Contact support to request tenant access.
+The on-premises data gateway can use the built-in Oracle managed ODP.NET driver for DirectQuery. This feature is in preview.
+
+To resolve a TNS alias for DirectQuery, use an environment variable. The gateway service account can't access user-scoped variables, so set `TNS_ADMIN` at the system (machine) scope, and then restart the on-premises data gateway service.
 
 ### Supported ways to specify TNS_ADMIN with the built-in Oracle driver
 There are three options to specify TNS_ADMIN:
@@ -302,7 +305,7 @@ Users can modify this allowed property list if they need to add new properties o
 
 > [!NOTE]
 > Important limitations  
-> - Semantic model DirectQuery can't use the built-in Oracle managed ODP.NET driver for connectivity. `MashupFlight_DisableOracleBundledOdacProviderV2` isn't applicable on semantic model DirectQuery.  
+> - Using the built-in Oracle managed ODP.NET driver for DirectQuery is in preview. For more information, see the preceding DirectQuery sections.  
 > - The file ODAC.config may require administrator rights to edit and Power BI Store app doesn't allow modifying this file.
 > - For the On-Premises Data Gateway to work properly, make sure that the user under which the gateway service is running has access to the folder pointed to by TNS_ADMIN.
 > - Restart Power BI Desktop or the On-premises Data Gateway service after applying config changes.
