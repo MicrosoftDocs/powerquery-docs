@@ -3,7 +3,8 @@ title: Record Query Diagnostics in Power BI
 description: Learn how to record Query Diagnostics in Power BI using Diagnose Step, Start, and Stop commands. Understand what to expect from different refresh workflows.
 author: ptyx507x
 ms.topic: concept-article
-ms.date: 07/01/2026
+ms.date: 07/13/2026
+ms.update-cycle: 1095-days
 ms.author: miescobar
 ms.subservice: transform-data
 ms.custom: sfi-image-nochange

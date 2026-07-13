@@ -2,7 +2,8 @@
 title: Auto sign-in for Microsoft Entra ID sources
 description: Power Query enables you to automatically sign in to a select set of data sources that use the Microsoft Entra ID as its authentication kind based on the current authenticated user.
 author: ptyx507x
-ms.date: 1/17/2024
+ms.date: 07/13/2026
+ms.update-cycle: 1095-days
 ms.author: miescobar
 ms.subservice: get-data
 ---
@@ -26,4 +27,4 @@ When selecting a connector that has this capability, it automatically signs you 
 ## Further reading
 
 * [Authentication in Power Query Online](connection-authentication-pqo.md)
-* [Microsoft identity platform and OAuth 2.0 On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
+* [Microsoft identity platform and OAuth 2.0 On-Behalf-Of flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow)
