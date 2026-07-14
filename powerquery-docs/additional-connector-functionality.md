@@ -3,8 +3,7 @@ title: Additional connector functionality
 description: Provides information to custom and certified connector developers on adding more connector functionality
 author: ptyx507x
 ms.topic: concept-article
-ms.date: 07/13/2026
-ms.update-cycle: 1095-days
+ms.date: 2/13/2024
 ms.author: miescobar
 ms.subservice: custom-connectors
 ---
