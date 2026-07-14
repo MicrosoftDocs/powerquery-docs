@@ -3,7 +3,7 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: whhender
 ms.topic: concept-article
-ms.date: 07/10/2026
+ms.date: 07/14/2026
 ms.author: whhender
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -327,6 +327,13 @@ You might come across any of several errors from Oracle when the naming syntax i
 These errors might occur if the Oracle tnsnames.ora database connect descriptor is misconfigured, the net service name provided is misspelled, or the Oracle database listener isn't running or not reachable, such as a firewall blocking the listener or database port. Be sure you're meeting the minimum installation prerequisites. More information: [Prerequisites](#prerequisites)
 
 Visit the [Oracle Database Error Help Portal](https://docs.oracle.com/en/error-help/db/) to review common causes and resolutions for the specific Oracle error you encounter. Enter your Oracle error in the portal search bar.
+
+When you use DirectQuery through the on-premises data gateway with the built-in Oracle driver, errors such as the following might indicate that a TNS alias can't be resolved:
+
+* `ORA-12154: TNS name resolution failure`
+* `ORA-50201: Failed to connect to server`
+
+If you encounter these errors, verify that `TNS_ADMIN` is set at the system (machine) scope and that the gateway service account can access the folder it points to, then restart the on-premises data gateway service. For more information, see [Supported ways to specify TNS_ADMIN with the built-in Oracle driver](#supported-ways-to-specify-tns_admin-with-the-built-in-oracle-driver) and Oracle's [Troubleshooting Oracle Net Services](https://docs.oracle.com/en/database/oracle/oracle-database/19/netag/troubleshooting-oracle-net-services.html) guide.
 
 If you downloaded Power BI Desktop from the Microsoft Store, you might be unable to connect to Oracle databases because of an Oracle driver issue. If you come across this issue, the error message returned is: *Object reference not set.* To address the issue, download Power BI Desktop from the Download Center instead of Microsoft Store.
 
