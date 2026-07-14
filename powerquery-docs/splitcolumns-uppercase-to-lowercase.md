@@ -3,7 +3,8 @@ title: Split columns by uppercase to lowercase
 description: Split columns by uppercase to lowercase
 author: ptyx507x
 ms.topic: concept-article
-ms.date: 11/10/2025
+ms.date: 07/13/2026
+ms.update-cycle: 1095-days
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -30,7 +31,7 @@ You can find the **Split Columns > By Uppercase to Lowercase** option in three p
 
 ## Split columns by uppercase to lowercase into columns
 
-Your initial table in this example is the one shown in the following image, with only one column for **Column1**.
+Your initial table in this example is the one shown in the following image, with only one column for **Products/Brands**.
 
 :::image type="content" source="media/splitcolumns-uppercase-to-lowercase/sc-before-ul.png" alt-text="Screenshot showing a table with Products/Brands column, containing five rows, with the Word column containing the first and second half of the word.":::
 

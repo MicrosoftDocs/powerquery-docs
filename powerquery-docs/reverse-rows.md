@@ -2,7 +2,9 @@
 title: Reverse rows
 description: An article that demonstrates how to reverse rows from a table in Power Query.
 author: ptyx507
-ms.date: 12/12/2022
+ms.topic: concept-article
+ms.date: 07/13/2026
+ms.update-cycle: 1095-days
 ms.author: miescobar
 ms.custom: edited
 ms.subservice: transform-data
