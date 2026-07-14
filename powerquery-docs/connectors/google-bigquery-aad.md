@@ -107,6 +107,10 @@ Currently, this connector has the following known limitations:
 
 [!INCLUDE [Includes_google-bigquery-aad_limitations-and-considerations](includes/google-bigquery-aad/google-bigquery-aad-limitations-and-considerations-include.md)]
 
+### Optional parameter Audience Uri is Not Supported in Schematic Models
+
+Audience URI as an optional parameter is currently not supported in Semantic Models. As a workaround, users can use the default Audience URI: //iam.googleapis.com/locations/global/workforcePools/powerquery-<TenantId>/providers/azuread.
+
 ## Enable Microsoft Entra ID single sign-on (SSO) for Google BigQuery
 
 We support Microsoft Entra ID SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Microsoft Entra ID SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview). Confirm directly with your Google contact that your system and accounts are set up correctly for Microsoft Entra ID SSO prior to attempting to connect in Power BI.
