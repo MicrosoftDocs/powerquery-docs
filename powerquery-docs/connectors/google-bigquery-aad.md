@@ -109,7 +109,7 @@ Currently, this connector has the following known limitations:
 
 ### Optional parameter Audience Uri is Not Supported in Schematic Models
 
-Audience URI as an optional parameter is currently not supported in Semantic Models. As a workaround, users can use the default Audience URI: //iam.googleapis.com/locations/global/workforcePools/powerquery-<TenantId>/providers/azuread.
+Semantic Models don't currently support Audience URI as an optional parameter. As a workaround, use the default Audience URI: `//iam.googleapis.com/locations/global/workforcePools/powerquery-<TenantId>/providers/azuread`.
 
 ## Enable Microsoft Entra ID single sign-on (SSO) for Google BigQuery
 
