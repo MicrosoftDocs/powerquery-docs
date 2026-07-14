@@ -3,7 +3,8 @@ title: Understand Folding by using Query Diagnostics
 description: Use Query Diagnostics to see what operations Power Query pushes down to your data source. Discover how folding works with ODATA and SQL endpoints.
 author: ptyx507x
 ms.topic: concept-article
-ms.date: 07/01/2026
+ms.date: 07/13/2026
+ms.update-cycle: 1095-days
 ms.author: miescobar
 ms.subservice: transform-data
 ---
