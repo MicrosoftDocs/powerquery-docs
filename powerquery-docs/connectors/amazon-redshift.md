@@ -57,6 +57,9 @@ To connect to Amazon Redshift data:
 
    :::image type="content" source="./media/amazon-redshift/navigator.png" alt-text="Screenshot of the Navigator with the customers element selected, and the data from that element displayed on the right side.":::
 
+   > [!NOTE]
+   > Navigator displays the following Amazon Redshift object types: **Table**, **View**, **External Table**, **External View**, **System Table**, and **System View**. Other object types, such as *consumer-database objects*, aren't shown in Navigator but might still be queryable directly by referencing them by name in your query, depending on your permissions.
+
 5. Once you select the elements you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
 6. Select either the **Import** or **DirectQuery** data connectivity mode, and then select **OK**.
