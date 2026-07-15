@@ -107,10 +107,10 @@ Currently, this connector has the following known limitations:
 
 [!INCLUDE [Includes_google-bigquery-aad_limitations-and-considerations](includes/google-bigquery-aad/google-bigquery-aad-limitations-and-considerations-include.md)]
 
-### Optional parameter Audience Uri isn't supported in Cloud
+### Cloud doesn't support optional parameter Audience Uri
 
-Cloud connections currently do not support the Audience Uri optional parameter. To use Workforce Identity Federation, customers should configure their workforce identity provider with the default Audience Uri: 
- `//iam.googleapis.com/locations/global/workforcePools/powerquery-<TenantId>/providers/azuread`. Custom values provided through the Audience Uri optional parameter are not currently supported and will be ignored by cloud connections.
+Cloud connections currently don't support the optional parameter Audience Uri. To use Workforce Identity Federation, configure your workforce identity provider with the default Audience Uri: 
+ `//iam.googleapis.com/locations/global/workforcePools/powerquery-<TenantId>/providers/azuread`. Cloud connections ignore custom values you provide through the optional parameter Audience Uri.
 
 ## Enable Microsoft Entra ID single sign-on (SSO) for Google BigQuery
 
