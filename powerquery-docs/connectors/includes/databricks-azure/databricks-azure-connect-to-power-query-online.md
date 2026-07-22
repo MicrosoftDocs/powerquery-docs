@@ -17,7 +17,7 @@ To connect to Databricks from Power Query Online, take the following steps:
 
     :::image type="content" source="/power-query/connectors/media/databricksazure/azconnect-setting-cred.png" alt-text="Screenshot of the connection settings and credentials for Azure Databricks.":::
 
-3. Provide your credentials to authenticate with your Databricks SQL Warehouse. There are three options for credentials:
+3. Provide your credentials to authenticate with your Databricks SQL Warehouse. There are four options for credentials:
 
     * Databricks Client Credentials. Refer to [Databricks OAuth M2M](/azure/databricks/dev-tools/auth/oauth-m2m) for instructions on generating Databricks OAuth M2M Client Credentials.
     * Personal Access Token (useable for AWS, Azure or GCP). Refer to [Personal access tokens](/azure/databricks/sql/user/security/personal-access-tokens) for instructions on generating a Personal Access Token (PAT).
