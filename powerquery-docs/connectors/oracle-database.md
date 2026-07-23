@@ -319,7 +319,7 @@ Users can modify this allowed property list if they need to add new properties o
 
 You might come across any of several errors from Oracle when the naming syntax is either incorrect or not configured properly:
 
-* `ORA-12154: TNS: could not resolve the connect identifier specified.
+* `ORA-12154: TNS: could not resolve the connect identifier specified.`
 * `ORA-12514: TNS: listener does not currently know of service requested in connect descriptor.`
 * `ORA-12541: TNS: no listener.`
 * `ORA-12170: TNS: connect timeout occurred.`
