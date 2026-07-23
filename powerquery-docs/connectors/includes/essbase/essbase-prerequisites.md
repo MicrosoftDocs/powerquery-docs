@@ -5,5 +5,5 @@ ms.date: 03/06/2026
 ms.topic: include
 ---
 
-Essbase 11.1.2.x version is supported.
+Essbase versions from 11.1.2.x to 21.x are supported.
 
