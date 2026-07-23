@@ -307,6 +307,7 @@ Users can modify this allowed property list if they need to add new properties o
 > Important limitations  
 > - Using the built-in Oracle managed ODP.NET driver for DirectQuery is in preview. For more information, see the preceding DirectQuery sections.  
 > - The file ODAC.config may require administrator rights to edit and Power BI Store app doesn't allow modifying this file.
+> - The changes made to ODAC.config will be overwritten during upgrade and it needs to be saved to another location before upgrade.
 > - For the On-Premises Data Gateway to work properly, make sure that the user under which the gateway service is running has access to the folder pointed to by TNS_ADMIN.
 > - Restart Power BI Desktop or the On-premises Data Gateway service after applying config changes.
 
